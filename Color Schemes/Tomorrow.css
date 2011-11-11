@@ -201,16 +201,6 @@
 		background-color: #282a2e !important;
 	}
 
-/*[[TransparentReplies]]*/	td.reply {
-		background-color: rgba(40,42,46,0.5) !important;
-		text-shadow: #282a2e 1px 0 2px, #282a2e -1px 0 2px, #282a2e 0 -1px 2px, #282a2e 0 1px 2px;
-	}
-
-	td.replyhl {
-		background-color: rgba(55,59,65,0.5) !important;
-		text-shadow: #282a2e 1px 0 2px, #282a2e -1px 0 2px, #282a2e 0 -1px 2px, #282a2e 0 1px 2px;
-	}/**/
-
 	.qphl {
 		outline-color: #81a2be !important;
 	}

@@ -230,16 +230,6 @@ background-image: none !important;
 		border-radius: 6px 6px 0 0;
 	}
 
-/*[[TransparentReplies]]*/	td.reply,
-		background-color: rgba(55,55,55,0.5) !important;
-		text-shadow: #313c36 1px 0 2px, #313c36 -1px 0 2px, #313c36 0 -1px 2px, #313c36 0 1px 2px;
-	}
-
-	td.replyhl {
-		background-color: rgba(25,25,25,0.5) !important;
-		text-shadow: #262626 1px 0 2px, #262626 -1px 0 2px, #262626 0 -1px 2px, #262626 0 1px 2px;
-	}/**/
-
 	.qphl {
 		outline-color: #627c8d !important;
 	}

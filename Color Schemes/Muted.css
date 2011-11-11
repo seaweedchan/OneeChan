@@ -224,16 +224,6 @@ background-image: none !important;
 		background-color: #f6f6f6 !important;
 	}
 
-//	td.reply {
-///*[[TransparentReplies]]*/		background-color: rgba(186,186,186,0.5) !important;
-//*[[TransparentReplies]]*/		text-shadow: #efefef 1px 0 2px, #efefef -1px 0 2px, #efefef 0 -1px 2px, #efefef 0 1px 2px;
-//	}
-//
-//	td.replyhl {
-//*[[TransparentReplies]]*/		background-color: rgba(212,212,212,0.5) !important;
-//*[[TransparentReplies]]*/		text-shadow: #f6f6f6 1px 0 2px, #f6f6f6 -1px 0 2px, #f6f6f6 0 -1px 2px, #f6f6f6 0 1px 2px;
-//	}
-
 	.qphl {
 		outline-color: #627c8d !important;
 	}

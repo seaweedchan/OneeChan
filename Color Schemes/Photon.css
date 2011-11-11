@@ -244,19 +244,6 @@
 	input[type='submit'] {
 		background-color: #FFFFEE !important;
 	}
-/*[[TransparentReplies]]*/	.op > blockquote,
-	.thread > blockquote,
-	form[name='delform'] > blockquote {
-		text-shadow: #FFFFEE 1px 0 2px, #FFFFEE -1px 0 2px, #FFFFEE 0 -1px 2px, #FFFFEE 0 1px 2px;
-	} /**/
-/*[[TransparentReplies]]*/	td.reply {
-		background-color: rgba(193,196,217,0.5) !important;
-		text-shadow: #F0E0D6 1px 0 2px, #F0E0D6 -1px 0 2px, #F0E0D6 0 -1px 2px, #F0E0D6 0 1px 2px;
-	}
-	td.replyhl {
-		background-color: rgba(179,155,155,0.5) !important;
-		text-shadow: #F0E0D6 1px 0 2px, #F0E0D6 -1px 0 2px, #F0E0D6 0 -1px 2px, #F0E0D6 0 1px 2px;
-	}/**/
 
 	* {
 		outline: none !important;

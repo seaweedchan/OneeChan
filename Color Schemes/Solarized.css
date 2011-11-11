@@ -59,9 +59,6 @@ background-image: none !important;
 		color: #93a1a1 !important;
 	}
 
-/*	.op > blockquote,
-	.thread > blockquote,
-	form[name='delform'] > blockquote, /**/
 	div.logo font {
 		text-shadow: #2c2c2c 1px 0 2px, #2c2c2c -1px 0 2px, #2c2c2c 0 -1px 2px, #2c2c2c 0 1px 2px;
 	}
@@ -215,16 +212,6 @@ background-image: none !important;
 	textarea:hover {
 		background-color: #073642 !important;
 	}
-
-/*	td.reply {
-		background-color: rgba(56,56,56,0.5) !important;
-		text-shadow: #333 1px 0 2px, #333 -1px 0 2px, #333 0 -1px 2px, #333 0 1px 2px;
-	}
-
-	td.replyhl {
-		background-color: rgba(70,70,70,0.5) !important;
-		text-shadow: #393939 1px 0 2px, #393939 -1px 0 2px, #393939 0 -1px 2px, #393939 0 1px 2px;
-	}/**/
 
 	.qphl {
 		outline-color: #627c8d !important;
