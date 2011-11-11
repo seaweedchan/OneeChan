@@ -1,0 +1,10 @@
+OneeChan changelog
+
+v0.2:
+-Removed Majics Mode
+-Removed Transparent Replies option
+-Moved Sage/Noko/Sega identifiers (from Majics Mode and Sage Identifier) into new option: Sage/Noko/Sega Identifiers
+-Moved custom board names into new option: Custom Board Names
+
+v0.1:
+-OneChan is created!
