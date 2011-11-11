@@ -48,7 +48,7 @@
 	#qr a#attach::after {
 		background-color: #DDD !important;
 	}
-	td.reply, td.replyhl {
+	td.reply, td.replyhl, #watcher {
 	-moz-appearance: none !important;
 		border:1px solid #CCC !important;
 	}
@@ -218,10 +218,6 @@
 	}
 	#crntBoard {
 		border-right-color: #FFFFEE !important;
-	}
-	#watcher .move,
-	#twi_table_div .postblock {
-		border-bottom: 1px #FFFFEE solid !important;
 	}
 	div[id^='4chan_ext_iqr'],
 	div[id^='4chan_ext_iqr'] > *,
