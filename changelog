@@ -1,5 +1,9 @@
 OneeChan changelog
 
+v0.4:
+-Thread watcher redone
+-Positioning changes to eliminate awkward empty space
+
 v0.3:
 -Removed risque mascots to make OneeChan appropriate for Userstyles.org
 -Fixed #navbot positioning issue

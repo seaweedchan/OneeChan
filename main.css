@@ -1213,7 +1213,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#watcher /* 4chan x thread watcher */ {
 		position: fixed !important;
-		top: 17px !important;
+		top: -300px !important;
 		right: auto !important;
 		left: 2px !important;
 /*[[ChangeAlign]]*/
@@ -1221,11 +1221,32 @@ This style is designed for the following browsers, ordered alphabetically:
 		left: auto !important;/**/
 		bottom: auto !important;
 		width: 248px !important;
+		padding-bottom: 3px !important;
 	}
 	#watcher .move {
 		font-size: 0px !important;
-		height: 15px !important;
+		height: 0px !important;
 	}
+	.op .favicon {
+		position: fixed !important;
+		top: 17px !important;
+		right: 233px !important;
+		margin-left: -10px !important;
+	}
+	#watcher::before {
+		content: "Watcher" !important;
+		font-size: 12px !important;
+		position: fixed !important;
+		right: 200px !important;
+		top: 20px !important;
+		min-width: 30px !important;
+		max-width: 30px !important;
+	}
+	#watcher:hover {
+		position: fixed !important;
+		top: 34px !important;
+	}
+
 
 	#backwash_tooltip,
 	#qp,
