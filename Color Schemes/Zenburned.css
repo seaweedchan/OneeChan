@@ -381,11 +381,6 @@ background-image: none !important;
 		border-color: #464646 !important;
 	}
 
-	#watcher .move,
-	#twi_table_div .postblock {
-		border-bottom: 1px #464646 solid !important;
-	}
-
 	hr {
 		border-top: 1px solid #313c36 !important;
 /*[[PostSeparationHR]]*/

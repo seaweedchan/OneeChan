@@ -350,10 +350,6 @@ background-image: none !important;
 		border-color: #2c2c2c !important;
 	}
 
-	#watcher .move,
-	#twi_table_div .postblock {
-		border-bottom: 1px #2c2c2c solid !important;
-	}
 
 	hr {
 		border-top: 1px solid #333 !important;

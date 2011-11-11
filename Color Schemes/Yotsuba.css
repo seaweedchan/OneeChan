@@ -229,10 +229,6 @@
 	#crntBoard {
 		border-right-color: #FFFFEE !important;
 	}
-	#watcher .move,
-	#twi_table_div .postblock {
-		border-bottom: 1px #FFFFEE solid !important;
-	}
 	div[id^='4chan_ext_iqr'],
 	div[id^='4chan_ext_iqr'] > *,
 	#filter input,
@@ -488,10 +484,6 @@
 	}
 	#crntBoard {
 		border-right-color: #eef2ff !important;
-	}
-	#watcher .move,
-	#twi_table_div .postblock {
-		border-bottom: 1px #eef2ff solid !important;
 	}
 	div[id^='4chan_ext_iqr'],
 	div[id^='4chan_ext_iqr'] > *,

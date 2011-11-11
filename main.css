@@ -1153,7 +1153,65 @@ This style is designed for the following browsers, ordered alphabetically:
 		padding: 0 3px !important;
 	}
 /* End of 4chan x options */
-/*[[fixedFilter]]*/
+	#filter,
+	#thread_filter {
+		position: fixed !important;
+		top: 17px !important;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		bottom: auto !important;
+	}
+
+	#filter > div:first-child,
+	#thread_filter > div:first-child {
+		cursor: default !important;
+	}
+
+	#filter.autohide:not(:hover),
+	#thread_filter.autohide:not(:hover) {
+		width: 248px !important;
+		text-align: right;
+	}
+
+	#filter.autohide:hover,
+	#thread_filter.autohide:hover {
+		width: 248px !important;
+		left: 2px !important;
+		/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+	}
+
+	#filter:not(.autohide) a[title='Auto-hide dialog box']::after,
+		#thread_filter:not(.autohide) a[title='Auto-hide dialog box']::after {
+		content: ' - SET THIS!!';
+	}
+		#thread_filter::before {
+		content: "Filter";
+		font-size: 13px;
+		position: fixed;
+		left: 130px;
+/*[[ChangeAlign]]*/
+		left: auto;
+		right: 130px;/**/
+		top: 20px;
+		min-width: 30px;
+		max-width: 30px;
+	}
+	#thread_filter span:first-of-type {
+		font-size: 0 !important;
+	}
+	#thread_filter {
+		position: fixed !important;
+		top: -20px !important;
+	}
+	#thread_filter:hover {
+		position: fixed !important;
+		top: 20px !important;
+	}
 	#filter,
 	#thread_filter,
 	#stats {
