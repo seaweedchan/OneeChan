@@ -883,11 +883,9 @@ This style is designed for the following browsers, ordered alphabetically:
 		border: 0 !important;
 	}
 
-	.commentpostername a.linkmail[href*='sage']::after,
-	.commentpostername a.linkmail[href*='Sage']::after,
-	.commentpostername a.linkmail[href*='SAGE']::after {
-/*[[sageidentifier]]*/
-	}
+
+/*[[snsidentifier]]*/
+
 /* Fixes text spoilers */
 	.spoiler:not(:hover),
 	.spoiler:not(:hover) .unkfunc,
@@ -1312,8 +1310,9 @@ This style is designed for the following browsers, ordered alphabetically:
 	img[src^='http://static.4chan.org/support/'] {
 		display: none;
 	}
-/*[[MagicMode]]*/
 }
+
+/*[[CustomBoardNames]]*/
 
 /*[[QuickReply]]*/
 
