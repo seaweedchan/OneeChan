@@ -781,7 +781,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	form[name^='post'] input[name='email'] + label {
 		position: absolute;
 		top: auto;
-		font-size: /*[[FontSize]]*/ !important;
 		bottom: 21px;
 		right: 70px;
 		vertical-align: bottom;
@@ -932,7 +931,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		left: 150px !important;
 		right: auto !important;
 /*[[ChangeAlign]]*/
-		right: 40px !important;
+		right: 60px !important;
 		left: auto !important;/**/
 		top: 0 !important;
 		bottom: auto !important;
@@ -971,7 +970,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		top: 0;
 		bottom: auto !important;
 		width: 150px;
-		font-size: 13px !important;
 		z-index: 2;
 	}
 
@@ -1166,11 +1164,11 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#stats {
 		position: fixed !important;
-		top: 17px !important;
+		top: -3px !important;
 		right: auto !important;
 		left: 150px !important;
 /*[[ChangeAlign]]*/
-		right: 190px !important;
+		right: 2px !important;
 		left: auto !important;/**/
 		width: 96px !important;
 		text-align: right !important;
@@ -1184,7 +1182,7 @@ This style is designed for the following browsers, ordered alphabetically:
 /*[[ChangeAlign]]*/
 		right: 2px !important;
 		left: auto !important;/**/
-		top: 0 !important;
+		top: 20px !important;
 		bottom: auto !important;
 		width: 58px !important;
 		border: 0 !important;
