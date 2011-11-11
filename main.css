@@ -1211,6 +1211,15 @@ This style is designed for the following browsers, ordered alphabetically:
 		content: '+0';
 	}
 
+	.reportbutton {
+		font-size: 0px !important;
+	}
+	.reportbutton::after {
+		font-size: 12px !important;
+		content: "!" !important;
+		font-weight: bold !important;
+	}
+
 	#watcher /* 4chan x thread watcher */ {
 		position: fixed !important;
 		top: -300px !important;
