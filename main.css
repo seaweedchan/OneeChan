@@ -933,7 +933,7 @@ This style is designed for the following browsers, ordered alphabetically:
 /*[[ChangeAlign]]*/
 		right: 60px !important;
 		left: auto !important;/**/
-		top: 0 !important;
+		top: 1px !important;
 		bottom: auto !important;
 		font-size: 0 !important;
 		color: transparent !important;
@@ -967,7 +967,7 @@ This style is designed for the following browsers, ordered alphabetically:
 /*[[ChangeAlign]]*/
 		left: auto !important;
 		right: 101px !important;/**/
-		top: 0;
+		top: 1px !important;
 		bottom: auto !important;
 		width: 150px;
 		z-index: 2;
@@ -1169,7 +1169,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#stats {
 		position: fixed !important;
-		top: -3px !important;
+		top: -2px !important;
 		right: auto !important;
 		left: 150px !important;
 /*[[ChangeAlign]]*/
