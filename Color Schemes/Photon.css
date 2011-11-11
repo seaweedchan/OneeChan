@@ -96,11 +96,6 @@
 	.pages b {
 		background: #DDD !important;
 	}
-	#header a:hover,
-	.pages input:hover {
-	/* URL bubbles */
-		background: #F0E0D6 !important;
-	}
 	a {
 		color: #FF6600 !important;
 	}
@@ -276,7 +271,12 @@
 	.replyhider a:hover {
 		color: #555 !important;
 	}
-	a:hover {
+	a:hover,
+	postername a:hover,
+	.commentpostername a:hover,
+	.postertrip a:hover,
+	#header a:hover,
+	.pages input:hover {
 		color: #FF3300 !important;
 	}
 	.postername,
@@ -287,11 +287,6 @@
 	.postertrip,
 	.trip {
 		color: #FF3300 !important;
-	}
-	.postername a:hover,
-	.commentpostername a:hover,
-	a:hover .postertrip {
-		color: #117743 !important;
 	}
 	a.backlink,
 	a.forwardlink {
