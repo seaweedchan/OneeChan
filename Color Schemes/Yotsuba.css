@@ -65,7 +65,10 @@
 		border: 1px solid #ba9dbf !important;
 	}
 	#header {
-		background-color: #FED7B1 !important;
+		background-color: #FFFFEE !important;
+	}
+	#navbot::after, #navbot {
+		background-color: #D9BFB7 !important;
 	}
 	.doubledash,
 	.replyhider a {
@@ -321,8 +324,11 @@
 	td.replyhl {
 		border: 1px solid #ba9dbf !important;
 	}
-	#header, #navbot::after, #navbot {
-		background-color: #D2D6EF !important;
+	#header {
+		background-color: #EEF2FF !important;
+	}
+	#navbot::after, #navbot {
+		background-color: #d6daf0 !important;
 	}
 	.doubledash,
 	.replyhider a {

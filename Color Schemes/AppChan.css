@@ -151,8 +151,6 @@ background-image: none !important;
 	#filter input,
 	#filter textarea,
 	#header,
-	#navbot,
-	#navbot::after,
 	#options input,
 	#options textarea,
 	#qr,
@@ -175,6 +173,11 @@ background-image: none !important;
 	table[width='100%']~#qr a#attach::after,
 	table.reply[style^='clear: both'] {
 		background-color: #2c2c2c !important;
+	}
+
+	#navbot,
+	#navbot::after {
+		background-color: #393939 !important;
 	}
 
 	#backwash_tooltip,

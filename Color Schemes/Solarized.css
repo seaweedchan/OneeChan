@@ -162,8 +162,6 @@ background-image: none !important;
 	#filter input,
 	#filter textarea,
 	#header,
-	#navbot,
-	#navbot::after,
 	#options input,
 	#options textarea,
 	#qr,
@@ -185,6 +183,11 @@ background-image: none !important;
 	div[id^=qr],
 	table[width='100%']~#qr a[name='attach']::after,
 	table.reply[style^='clear: both'] {
+		background-color: #073642 !important;
+	}
+
+	#navbot,
+	#navbot::after {
 		background-color: #073642 !important;
 	}
 

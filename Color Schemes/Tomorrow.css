@@ -150,8 +150,6 @@
 	#filter input,
 	#filter textarea,
 	#header,
-	#navbot,
-	#navbot::after,
 	#options input,
 	#options textarea,
 	#qr,
@@ -174,6 +172,11 @@
 	#qr a#attach::after,
 	table.reply[style^='clear: both'] {
 		background-color: #1d1f21 !important;
+	}
+
+	#navbot,
+	#navbot::after {
+		background-color: #282a2e !important;
 	}
 
 	#backwash_tooltip,

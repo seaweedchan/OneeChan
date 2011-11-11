@@ -1,5 +1,10 @@
 OneeChan changelog
 
+v0.3:
+-Removed risque mascots to make OneeChan appropriate for Userstyles.org
+-Fixed #navbot positioning issue
+-Modified #header and #navbot colors in every color scheme
+
 v0.2:
 -Removed Majics Mode
 -Removed Transparent Replies option

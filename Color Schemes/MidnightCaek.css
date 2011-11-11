@@ -168,8 +168,6 @@ background-image: none !important;
 	#filter input,
 	#filter textarea,
 	#header,
-	#navbot,
-	#navbot::after,
 	#options input,
 	#options textarea,
 	#qr,
@@ -192,6 +190,11 @@ background-image: none !important;
 	#qr a#attach::after,
 	table.reply[style^='clear: both'] {
 		background-color: #101010 !important;
+	}
+
+	#navbot,
+	#navbot::after {
+		background-color: #181818 !important;
 	}
 
 	html body span[style='left: 5px; position: absolute;'] a:hover,
