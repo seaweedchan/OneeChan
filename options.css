@@ -338,24 +338,6 @@ none
 	}
 /* End */
 
-/*[[CompactNavigation]]*/
-/* Yes: */
-	#header a,
-	.pages a,
-	.pages b,
-	.pages input {
-		margin: 0 1px 0 2px;
-	}
-/* No: */
-	#header a,
-	.pages a,
-	.pages b,
-	.pages input {
-		margin: 0 1px;
-		min-width: 14px;
-	}
-/* End */
-
 /*[[PagesPosition]]*/
 /* Side */
 	.pages {

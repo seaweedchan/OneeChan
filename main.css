@@ -262,7 +262,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	#header > #navtop {
 	/* cripple the positioning of the top navigation */
 		position: static !important;
-		width: 100% !important;
+		width: 110% !important;
 	}
 /*[[StickyNavigation]]*/
 	#header {
@@ -318,6 +318,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		text-align: center;
 		border: none !important;
 		text-align: center;
+		margin: 0 1px 0 2px;
 	}
 /* moot's announcements */
 	font[color="red"] {
@@ -325,7 +326,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: relative !important;
 		top: 20px !important;
 	}
-/*[[CompactNavigation]]*/
 	.pages input {
 		margin-bottom: 2px !important;
 	}
