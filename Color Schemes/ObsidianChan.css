@@ -1,0 +1,451 @@
+/* Obsidian Chan: */
+/*[[CustomScrollbars]]*/
+	scrollbarbutton {
+		display: none !important;
+	}
+	::-webkit-scrollbar {
+		width: 12px !important;
+		height: 10px !important;
+	}
+	::-webkit-scrollbar-thumb {
+		border: 1px solid;
+	}
+	::-webkit-scrollbar-track-piece:vertical {
+		border-left: 0;
+	}
+	::-webkit-scrollbar-track-piece:horizontal {
+		border-top: 0;
+	}
+	scrollbar, scrollcorner {
+		-moz-appearance: none !important;
+		-o-appearance: none !important;
+		width: 12px !important;
+		height: 10px !important;
+	}
+	scrollbar[orient='vertical'] { border-left: 0; }
+	scrollbar[orient='horizontal'] { border-top: 0; }
+	thumb {
+		-moz-appearance: none !important;
+		-o-appearance: none !important;
+		border: 1px solid;
+	}
+	::-webkit-scrollbar-thumb {
+		border: 1px solid #333 !important;
+		background: #000;
+		border-radius: 2px !important;
+	}
+	::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-resizer {
+		background: #111;
+	}
+	scrollbar, scrollcorner {
+		background: #111 !important;
+	}
+	thumb {
+		border: 1px solid #333 !important;
+		background: #000; border-radius: 2px !important;
+	}
+/**/
+	::-webkit-selection {
+		background: #fff;
+		color: #000;
+	}
+
+	::-moz-selection {
+		background: #fff;
+		color: #000;
+	}
+
+	::selection {
+		background: #fff;
+		color: #000;
+	}
+	body {
+		background: url("http://i.imgur.com/sbi8u.png") !important;
+		background-attachment: fixed !important;
+	}
+	body,
+	body > form,
+	html body span[style='left: 5px; position: absolute;'] a,
+	div.postarea,
+	input,
+	select,
+	td.deletebuttons,
+	textarea,
+	.abbr,
+	.boxbar,
+	.boxcontent,
+	.commentpostername,
+	.filetitle,
+	.logo,
+	.omittedposts,
+	.pages b,
+	.postblock,
+	.postername,
+		.pages td,
+	.reply,
+	.replyhl,
+	.trip
+	#backwash_tooltip,
+	#header .title,
+	#imgControls label::after,
+	#navbot::after,
+	#qp,
+	#twi_table_div,
+	#updater #count:not(.new)::after,
+	font[color="red"] {
+		color: #FDFEFF !important;
+	}
+
+/*[[TransparentReplies]]*/	.op > blockquote,
+	.thread > blockquote,
+	form[name='delform'] > blockquote, /**/
+	div.logo font {
+		text-shadow: #2c2c2c 1px 0 2px, #2c2c2c -1px 0 2px, #2c2c2c 0 -1px 2px, #2c2c2c 0 1px 2px;
+	}
+
+	div.postarea > form td:nth-of-type(3) > label,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
+	#autonoko {
+		color: #888;
+	}
+
+	input[type='file']::-webkit-file-upload-button {
+		color: #666 !important;
+	}
+
+	.replyhider a {
+		color: #222 !important;
+	}
+
+	.replyhider a:hover {
+		color: #555 !important;
+	}
+
+	a,
+	.postername a,
+	.commentpostername a,
+	a .postertrip {
+		color: #00FFFF !important;
+	}
+
+	a:hover,
+	.postername a:hover,
+	.commentpostername a:hover,
+	a:hover .postertrip {
+		color: #00FFFF !important;
+	}
+
+	a.backlink,
+	a.forwardlink {
+		color: #00FFFF !important;
+	}
+	.postertrip, .linkmail .postertrip {
+		color: #FF52CB !important;
+	}
+	body > form {
+		padding-bottom: 10px !important;
+		border: 1px solid #333 !important;
+		background: rgba(0, 0, 0, 0.3) none !important;
+	}
+
+	a.forwardlink {
+		font-weight: 800 !important;
+	}
+
+	.span.filetitle,
+	.replytitle {
+		color: #909090 !important;
+	}
+
+	.unkfunc {
+		color: #65FF65 !important;
+	}
+
+	#boards h3,
+	#boardsMenu,
+	#ft li,
+	#ft ul,
+	#navbar,
+	#options .dialog,
+	#popup,
+	#threadwatcher,
+	#threadwatcher .postblock,
+	#watcher,
+	.box-outer,
+	.boxbar,
+	.deletebuttons input[value=Delete],
+	.top-box,
+	.yuimenuitem-selected,
+	h2 {
+		background-color: rgba(0,0,0,0.4) !important;
+	}
+	.recaptchatable #recaptcha_response_field,
+	input,
+	input[type='file'] > input[type='button'],
+	input[type='submit'],
+	select,
+	td.postblock,
+	td.reply,
+	textarea {
+				background-color: rgba(0,0,0,0.6) !important;
+	}
+
+	div[id^='4chan_ext_iqr'],
+	div[id^='4chan_ext_iqr'] *,
+	#filter input,
+	#filter textarea,
+	#header,
+	#navbot,
+	#navbot::after,
+	#options input,
+	#options textarea,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#quickrep,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#qr label input,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input:not([type='checkbox']),
+	.bd,
+	.boxcontent > hr,
+	.boxcontent input,
+	.boxcontent textarea,
+	.pages,
+	div.postarea > form td:nth-of-type(3) > label input,
+	div[id^=qr],
+	#qr a#attach::after,
+	table.reply[style^='clear: both'] {
+		background-color: rgba(0,0,0,0.7) !important;
+	}
+
+	#backwash_tooltip,
+	#cc-showpostarea,
+	#filter.autohide:hover,
+	#filter:not(.autohide),
+	#twi_table_div,
+	#twi_table_div *,
+	#updater:hover,
+	#thread_filter.autohide:hover,
+	#thread_filter:not(.autohide),
+	#popup,
+	.chanchimp,
+	.chanchimp > div,
+	.recaptchatable #recaptcha_response_field:hover,
+	.deletebuttons input[type='password']:hover,
+	div[id^=ref],
+	input:hover,
+	input[type='file'] > input[type='button']
+	input[type='submit']:hover,
+	td.replyhl,
+	tr.replyhl,
+	textarea:hover {
+		background-color: rgba(0,0,0,0.4) !important;
+	}
+
+/*[[TransparentReplies]]*/	td.reply {
+		background-color: rgba(56,56,56,0.5) !important;
+		text-shadow: #333 1px 0 2px, #333 -1px 0 2px, #333 0 -1px 2px, #333 0 1px 2px;
+	}
+
+	td.replyhl {
+		background-color: rgba(70,70,70,0.5) !important;
+		text-shadow: #393939 1px 0 2px, #393939 -1px 0 2px, #393939 0 -1px 2px, #393939 0 1px 2px;
+	}/**/
+
+	.qphl {
+		outline-color: #627c8d !important;
+	}
+	#qp {
+		 background-color: rgba(0,0,0,0.8) !important;
+		 border-radius: 4px !important;
+		 border: 1px solid #333 !important;
+	}
+	.inline {
+		 border: 1px solid #333 !important;
+		 border-radius: 4px !important;
+	}
+
+	.recaptchatable #recaptcha_response_field:focus,
+	.deletebuttons input[type='password']:focus,
+	input:focus,
+	input[type='submit']:focus,
+	textarea:focus {
+		background-color: rgba(0,0,0,0.4) !important;
+	}
+
+	input[type=checkbox],
+	#options input[type=checkbox],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input {
+		border-radius: 2px !important;
+		-o-border-radius: 2px !important;
+		background: #444 !important;
+	}
+
+	input[type=checkbox]:active,
+	#options input[type=checkbox]:active,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:active,
+	#qr label input:active {
+		background: #aaa !important;
+	}
+
+	input[type=checkbox]:checked,
+	#options input[type=checkbox]:checked,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
+	#qr label input:checked {
+		background: #FF007F !important;
+	}
+
+	#crntBoard {
+		border-right-color: #393939 !important;
+	}
+
+	html body span[style='left: 5px; position: absolute;'] a,
+	input[type='submit'],
+	#com_submit,
+	input[type='file'] > input[type='button'] {
+		background: rgba(0, 0, 0) !important;
+	}
+
+	html body span[style='left: 5px; position: absolute;'] a:hover,
+	#com_submit:hover,
+	input[type='submit']:hover,
+	input[type='file'] > input[type='button']:hover {
+		background-color: #363636 !important;
+	}
+
+	td[style='border: 1px dashed;'],
+	td.reply > tr > td.reply,
+	.inline td.reply {
+		/* Inline Quotes */
+		background-color: rgba(0,0,0,0.1) !important;
+		border: none !important;
+	}
+
+	.pages b {
+		background: rgba(0,0,0,0.3) !important;
+		color: #ccc !important;
+	}
+
+	#header a:hover,
+	.pages input:hover,
+	a:hover {
+	/* URL bubbles */
+		background: rgba(0,0,0,.2) !important;
+	}
+
+	.new {
+		background-color: rgba(255,255,255,.5) !important;
+		color: #000 !important;
+	}
+
+	form[name^='post'] .postblock b,
+	.postarea tr:nth-child(4) .postblock b::after,
+	.postarea form[name^='post']::before,
+	#maxchars {
+		color: rgba(255,255,255,0.2) !important;
+	}
+
+	#qr input:-moz-placeholder,
+	#qr textarea:-moz-placeholder {
+		color: rgba(255,255,255,0.1) !important;
+	}
+
+	#qr input::-webkit-input-placeholder,
+	#qr textarea::-webkit-input-placeholder {
+		color: rgba(255,255,255,0.1) !important;
+	}
+
+	#qr input:placeholder,
+	#qr textarea:placeholder {
+		color: rgba(255,255,255,0.1) !important;
+	}
+
+	#cc-showpostarea,
+	#ft li,
+	#ft ul,
+	#options input:not([type='checkbox']),
+	#updater input:not([type='checkbox']),
+	#twi_table_div,
+	#twi_table_div *,
+	.box-outer,
+	.boxbar,
+	.chanchimp,
+	.chanchimp > div,
+	.inputtext,
+	.deletebuttons input[value=Delete],
+	.recaptchatable #recaptcha_response_field,
+	.top-box,
+	h2,
+	input:not([type='checkbox']),
+	#qr_captcha input,
+	input[type='file'] > input[type='button'],
+	input[type='submit'],
+	select,
+	textarea {
+		border: none !important;
+	}
+
+	#qr input[type='checkbox'],
+	input[type='checkbox'] {
+		border: none !important;
+	}
+
+	.boxcontent dd,
+	#options ul,
+	#threadwatcher .postblock,
+	.chanchimp * {
+		border-color: #2c2c2c !important;
+	}
+
+	#watcher .move,
+	#twi_table_div .postblock {
+		border-bottom: 1px #2c2c2c solid !important;
+	}
+
+	hr {
+		border-top: 1px solid #333 !important;
+/*[[PostSeparationHR]]*/
+	}
+
+	form[name^='post']::before,
+	#qr::before {
+		background-color: #000 !important;
+		border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0;
+	}
+
+	#filter input,
+	#filter textarea,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input,
+	#options input,
+	#qr,
+	#quickrep,
+	div[id^=qr],
+	table.reply[style^='clear: both'] {
+		border: none !important;
+	}
+
+	form[name='delform'] > div:not(.thread) select {
+		margin: 1px 0 0 0 !important;
+	}
+
+	form[name='delform'] > div:not(.thread) select,
+	.pages input[type='submit'] {
+		height: 15px !important;
+	}
+	#qr {
+		background-color: rgba(0,0,0,0.7) !important;
+		border: 1px solid #333 !important;
+		border-left: none !important;
+		border-bottom: none !important;
+	}
+	.postarea form[name^='post'] {
+		width: 252px !important;
+		right: 1px !important;
+		padding-top: 1px !important;
+		border-top: 1px solid #333 !important;
+	}

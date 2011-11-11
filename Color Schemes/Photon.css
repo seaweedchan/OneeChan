@@ -1,0 +1,414 @@
+/* Photon */
+/*[[CustomScrollbars]]*/
+	::-webkit-scrollbar-thumb { border: 1px solid #D9BFB7; background: #eef2ff; }
+	::-webkit-scrollbar-thumb:hover { background: -webkit-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
+	::-webkit-scrollbar-thumb:active { background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
+	::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-resizer {background: #DDD; }
+	scrollbar, scrollcorner { background: #DDD !important; }
+	thumb { -moz-appearance: none !important; border: 1px solid #D9BFB7; background: #fff; }
+	thumb:hover { background: -moz-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
+	thumb:active { background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
+/**/
+	body {
+		background: #EEEEEE none !important;
+	}
+	.logo b span {
+		text-shadow: 1px 1px 1px #222 !important;
+	}
+	#boards h3,
+	#boardsMenu,
+	#filter.autohide:hover,
+	#filter:not(.autohide),
+	#ft li,
+	#ft ul,
+	#navbar,
+	#options .dialog,
+	#popup,
+	#qr::before,
+	#threadwatcher,
+	#threadwatcher .postblock,
+	#watcher,
+	#thread_filter.autohide:hover,
+	#thread_filter:not(.autohide),
+	#updater:hover,
+	.box-outer,
+	.boxbar,
+	.deletebuttons input[value=Delete],
+	.top-box,
+	.yuimenuitem-selected,
+	form[name^='post']::before,
+	h2,
+	select,
+	td.postblock,
+	td.reply,
+	html body span[style='left: 5px; position: absolute;'] a,
+	input[type='submit'],
+	#com_submit,
+	input[type='file'] > input[type='button'],
+	#qr a#attach::after {
+		background-color: #DDD !important;
+	}
+	td.reply, td.replyhl {
+	-moz-appearance: none !important;
+		border:1px solid #CCC !important;
+	}
+	#header, #navbot, #navbot::after {
+		background-color: #DDD !important;
+	}
+	.doubledash,
+	.replyhider a {
+		color: #D9BFB7 !important;
+	}
+	td[style='border: 1px dashed;'],
+	td.reply > tr > td.reply,
+	.inline td.reply,
+	.inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+		/* Inline Quotes */
+		background-color: rgba(255,255,255,0.2) !important;
+		border: 1px solid rgba(128,128,128,0.5) !important;
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
+	.inline .inline td.reply,
+	.inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+		background-color: #DDD !important;
+	}
+	.pages b {
+		background: #DDD !important;
+	}
+	#header a:hover,
+	.pages input:hover {
+	/* URL bubbles */
+		background: #F0E0D6 !important;
+	}
+	a {
+		color: #FF6600 !important;
+	}
+	#header a, #navbot a {
+	color: #111 !important;
+	}
+	.quotejs {
+	color: #333 !important;
+	}
+	.filesize {
+	color: #666 !important;
+	}
+	hr {
+		border-top: 1px solid #D9BFB7 !important;
+	}
+	#cc-showpostarea,
+	#ft li,
+	#ft ul,
+	#options input:not([type='checkbox']),
+	#updater input:not([type='checkbox']),
+	#twi_table_div,
+	#twi_table_div *,
+	.box-outer,
+	.boxbar,
+	.chanchimp,
+	.chanchimp > div,
+	.inputtext,
+	.deletebuttons input[value=Delete],
+	.recaptchatable #recaptcha_response_field,
+	.top-box,
+	h2,
+	input:not([type='checkbox']),
+	#qr_captcha input,
+	input[type='file'] > input[type='button'],
+	input[type='submit'],
+	select,
+	textarea,
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'],
+	html body span[style='left: 5px; position: absolute;'] a {
+		border: 1px solid #CCC !important;
+	}
+	.recaptchatable #recaptcha_response_field:focus,
+	.deletebuttons input[type='password']:focus,
+	input:focus,
+	input.inputtext:focus,
+	input[type='submit']:focus,
+	textarea:focus {
+		border: 1px solid #004A99 !important;
+	}
+	.filetitle,
+	.replytitle {
+		color: #111 !important;
+		font-weight: 800 !important;
+	}
+	input, textarea {
+		color: #000 !important;
+	}
+	body,
+	body > form,
+	html body span[style='left: 5px; position: absolute;'] a,
+	div.postarea,
+	form[name^='post']::before,
+	select,
+	#navbot::after,
+	td.deletebuttons,
+	.abbr,
+	.boxbar,
+	.boxcontent,
+	.omittedposts,
+	.pages b,
+	.postblock,
+	.reply,
+	.replyhl,
+	#backwash_tooltip,
+	#header .title,
+	#imgControls label::after,
+	#qp,
+	#twi_table_div,
+	#updater #count:not(.new)::after,
+	font[color="red"] {
+		color: #333 !important;
+	}
+	a.quotelink {
+		color: #FF6600 !important;
+	}
+	html body span[style='left: 5px; position: absolute;'] a:hover,
+	#com_submit:hover,
+	#cc-showpostarea,
+	#twi_table_div,
+	#twi_table_div *,
+	#backwash_tooltip,
+	#popup,
+	.chanchimp,
+	.chanchimp > div,
+	.deletebuttons input:hover,
+	.recaptchatable #recaptcha_response_field:hover,
+	div[id^=ref],
+	input:hover,
+	input[type='submit']:hover,
+	input[type='file'] > input[type='button']:hover,
+	td.replyhl,
+	tr.replyhl,
+	textarea:hover {
+		background-color: #CCC !important;
+	}
+	#qp {
+		background-color: #CCC !important;
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'] {
+		background-color: #FFFFEE !important;
+	}
+	#crntBoard {
+		border-right-color: #FFFFEE !important;
+	}
+	#watcher .move,
+	#twi_table_div .postblock {
+		border-bottom: 1px #FFFFEE solid !important;
+	}
+	div[id^='4chan_ext_iqr'],
+	div[id^='4chan_ext_iqr'] > *,
+	#filter input,
+	#filter textarea,
+	#options input,
+	#options textarea,
+	#qr,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#quickrep,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#qr label input,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input:not([type='checkbox']),
+	.bd,
+		.pages,
+	input[type='submit'] {
+		background-color: #FFFFEE !important;
+	}
+/*[[TransparentReplies]]*/	.op > blockquote,
+	.thread > blockquote,
+	form[name='delform'] > blockquote {
+		text-shadow: #FFFFEE 1px 0 2px, #FFFFEE -1px 0 2px, #FFFFEE 0 -1px 2px, #FFFFEE 0 1px 2px;
+	} /**/
+/*[[TransparentReplies]]*/	td.reply {
+		background-color: rgba(193,196,217,0.5) !important;
+		text-shadow: #F0E0D6 1px 0 2px, #F0E0D6 -1px 0 2px, #F0E0D6 0 -1px 2px, #F0E0D6 0 1px 2px;
+	}
+	td.replyhl {
+		background-color: rgba(179,155,155,0.5) !important;
+		text-shadow: #F0E0D6 1px 0 2px, #F0E0D6 -1px 0 2px, #F0E0D6 0 -1px 2px, #F0E0D6 0 1px 2px;
+	}/**/
+
+	* {
+		outline: none !important;
+	}
+	.logo b span {
+		color: #004A99 !important;
+	}
+	.logo {
+	color: #333 !important;
+	}
+	input[type=checkbox]:checked,
+	#options input[type=checkbox]:checked,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
+	#qr label input[type='checkbox']:checked {
+		background: #bcc0d4 !important;
+	}
+
+	div.postarea > form td:nth-of-type(3) > label,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
+	#autonoko {
+		color: #444;
+	}
+	input[type='file']::-webkit-file-upload-button {
+		color: #444 !important;
+	}
+	.replyhider a:hover {
+		color: #555 !important;
+	}
+	a:hover {
+		color: #FF3300 !important;
+	}
+	.postername,
+	.commentpostername {
+		color: #004A99 !important;
+		font-weight: 800 !important;
+	}
+	.postertrip,
+	.trip {
+		color: #FF3300 !important;
+	}
+	.postername a:hover,
+	.commentpostername a:hover,
+	a:hover .postertrip {
+		color: #117743 !important;
+	}
+	a.backlink,
+	a.forwardlink {
+		color: #111 !important;
+	}
+	a.forwardlink {
+		font-weight: 800 !important;
+	}
+	.unkfunc {
+		color: #789922 !important;
+	}
+	.boxcontent > hr,
+	.boxcontent input,
+	.boxcontent textarea,
+	div.postarea > form td:nth-of-type(3) > label input,
+	div[id^=qr],
+	table.reply[style^='clear: both'],
+	input,
+	textarea,
+	.recaptchatable #recaptcha_response_field,
+	.recaptchatable #recaptcha_response_field:focus,
+	.deletebuttons input[type='password']:focus,
+	input:focus,
+	input[type='submit']:focus,
+	textarea:focus {
+		background-color: #fff !important;
+	}
+	#qr::before,
+	form[name^='post']::before {
+		border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0;
+	}
+	.qphl {
+		outline-color: #627c8d !important;
+	}
+	input[type=checkbox]:active,
+	#options input[type=checkbox]:active,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:active,
+	#qr label input[type='checkbox']:active {
+		background: #000 !important;
+	}
+	.new {
+		background-color: lime !important;
+		color: #000 !important;
+	}
+	form[name^='post'] .postblock b,
+	form[name^='post']::before,
+	.postarea tr:nth-child(4) .postblock b,
+	#maxchars,
+	#qr::before {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	#qr input:-moz-placeholder,
+	#qr textarea:-moz-placeholder {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	#qr input::-webkit-input-placeholder,
+	#qr textarea::-webkit-input-placeholder {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	#qr input:placeholder,
+	#qr textarea:placeholder {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	html body span[style='left: 5px; position: absolute;'] a {
+		height: 14px !important;
+		padding-top: 3px !important;
+		width: 56px !important;
+	}
+	form[name^='post'] input[type='file'][name='upfile'],
+	#qr input[type='file'][name='upfile'] {
+		margin: 0 -1px -1px !important;
+		height: 21px !important;
+	}
+	.fake input[type='file']::-webkit-file-upload-button,
+	form[name^='post'] input[type='file'][name='upfile'],
+	#qr input[type='file'][name='upfile'] {
+		margin: 1px 0 0 !important;
+		height: 19px !important;
+	}
+	#recaptcha_image img,
+	#quick_recaptcha_image img,
+	#qr img {
+		opacity: 1 !important;
+	}
+	.boxcontent dd,
+	#options ul,
+	#threadwatcher .postblock,
+	.chanchimp * {
+		border-color: #eef2ff !important;
+
+	}
+/*[[PostSeparationHR]]*/
+	#filter input,
+	#filter textarea,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input,
+	#options input,
+	#qr,
+	#quickrep,
+	div[id^=qr],
+	table.reply[style^='clear: both'] {
+		border: none !important;
+	}
+	form[name='delform'] > div:not(.thread) select,
+	.pages input[type='submit'] {
+		margin: 0 !important;
+		height: 17px !important;
+	}

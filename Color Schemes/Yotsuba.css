@@ -1,0 +1,682 @@
+/* Yotsuba A + B */
+}
+/* Yotsuba A */
+@-moz-document regexp(".*\.4chan\.org/(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|y|pol|soc)/.*") {
+/*[[CustomScrollbars]]*/
+	::-webkit-scrollbar-thumb { border: 1px solid #D9BFB7; background: #eef2ff; }
+	::-webkit-scrollbar-thumb:hover { background: -webkit-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
+	::-webkit-scrollbar-thumb:active { background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
+	::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-resizer {background: #F0E0D6; }
+	scrollbar, scrollcorner { background: #F0E0D6 !important; }
+	thumb { -moz-appearance: none !important; border: 1px solid #D9BFB7; background: #fff; }
+	thumb:hover { background: -moz-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
+	thumb:active { background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
+/**/
+	body {
+		background: url("http://static.4chan.org/image/fade.png") repeat-x scroll center top #FFFFEE !important;
+	}
+	.logo {
+		text-shadow: 1px 1px 1px #222 !important;
+	}
+	.logo b span {
+		text-shadow: 1px 1px 1px #222 !important;
+	}
+	a.backlink,
+	a.forwardlink {
+		color: #dc0000 !important;
+	}
+	#boards h3,
+	#boardsMenu,
+	#filter.autohide:hover,
+	#filter:not(.autohide),
+	#ft li,
+	#ft ul,
+	#navbar,
+	#options .dialog,
+	#popup,
+	#qr::before,
+	#threadwatcher,
+	#threadwatcher .postblock,
+	#watcher,
+	#thread_filter.autohide:hover,
+	#thread_filter:not(.autohide),
+	#updater:hover,
+	.box-outer,
+	.boxbar,
+	.deletebuttons input[value=Delete],
+	.top-box,
+	.yuimenuitem-selected,
+	form[name^='post']::before,
+	h2,
+	select,
+	td.postblock,
+	td.reply,
+	html body span[style='left: 5px; position: absolute;'] a,
+	input[type='submit'],
+	#com_submit,
+	input[type='file'] > input[type='button'],
+	#qr a#attach::after {
+		background-color: #F0E0D6 !important;
+	}
+	td.reply {
+		border:1px solid #D9BFB7 !important;
+	}
+	td.replyhl {
+		border: 1px solid #ba9dbf !important;
+	}
+	#header {
+		background-color: #FED7B1 !important;
+	}
+	.doubledash,
+	.replyhider a {
+		color: #D9BFB7 !important;
+	}
+	td[style='border: 1px dashed;'],
+	td.reply > tr > td.reply,
+	.inline td.reply,
+	.inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+		/* Inline Quotes */
+		background-color: rgba(255,255,255,0.2) !important;
+		border: 1px solid rgba(128,128,128,0.5) !important;
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
+	.inline .inline td.reply,
+	.inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+		background-color: #F0E0D6 !important;
+	}
+	.pages b {
+		background: #F0E0D6 !important;
+	}
+	#header a:hover,
+	.pages input:hover,
+	a:hover {
+	/* URL bubbles */
+		background: #F0E0D6 !important;
+	}
+	a {
+		color: #800000 !important;
+	}
+	hr {
+		border-top: 1px solid #D9BFB7 !important;
+	}
+	#cc-showpostarea,
+	#ft li,
+	#ft ul,
+	#options input:not([type='checkbox']),
+	#updater input:not([type='checkbox']),
+	#twi_table_div,
+	#twi_table_div *,
+	.box-outer,
+	.boxbar,
+	.chanchimp,
+	.chanchimp > div,
+	.inputtext,
+	.deletebuttons input[value=Delete],
+	.recaptcha_image_cell > center > #recaptcha_image,
+	.recaptchatable #recaptcha_response_field,
+	.top-box,
+	h2,
+	input:not([type='checkbox']),
+	#qr_captcha input,
+	input[type='file'] > input[type='button'],
+	input[type='submit'],
+	select,
+	textarea,
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'],
+	html body span[style='left: 5px; position: absolute;'] a {
+		border: 1px solid #D9BFB7 !important;
+	}
+	.recaptchatable #recaptcha_response_field:focus,
+	.deletebuttons input[type='password']:focus,
+	input:focus,
+	input.inputtext:focus,
+	input[type='submit']:focus,
+	textarea:focus {
+		border: 1px solid #800000 !important;
+	}
+	.filetitle,
+	.replytitle {
+		color: #CC1105 !important;
+		font-weight: 800 !important;
+	}
+	input, textarea {
+		color: #000 !important;
+	}
+	body,
+	body > form,
+	html body span[style='left: 5px; position: absolute;'] a,
+	div.postarea,
+	form[name^='post']::before,
+	select,
+	#navbot::after,
+	td.deletebuttons,
+	.abbr,
+	.boxbar,
+	.boxcontent,
+	.omittedposts,
+	.pages b,
+	.postblock,
+	.reply,
+	.replyhl,
+	#backwash_tooltip,
+	#header .title,
+	#imgControls label::after,
+	#qp,
+	#twi_table_div,
+	#updater #count:not(.new)::after,
+	font[color="red"] {
+		color: #800000 !important;
+	}
+	a.quotelink {
+		color: #000080 !important;
+	}
+	html body span[style='left: 5px; position: absolute;'] a:hover,
+	#com_submit:hover,
+	#cc-showpostarea,
+	#twi_table_div,
+	#twi_table_div *,
+	#backwash_tooltip,
+	#popup,
+	.chanchimp,
+	.chanchimp > div,
+	.deletebuttons input:hover,
+	.recaptchatable #recaptcha_response_field:hover,
+	div[id^=ref],
+	input:hover,
+	input[type='submit']:hover,
+	input[type='file'] > input[type='button']:hover,
+	td.replyhl,
+	tr.replyhl,
+	textarea:hover {
+		background-color: #F0E0D6 !important;
+	}
+	#qp {
+		background-color: #d6bad0 !important;
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'] {
+		background-color: #FFFFEE !important;
+	}
+	#crntBoard {
+		border-right-color: #FFFFEE !important;
+	}
+	#watcher .move,
+	#twi_table_div .postblock {
+		border-bottom: 1px #FFFFEE solid !important;
+	}
+	div[id^='4chan_ext_iqr'],
+	div[id^='4chan_ext_iqr'] > *,
+	#filter input,
+	#filter textarea,
+	#options input,
+	#options textarea,
+	#qr,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#quickrep,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#qr label input,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input:not([type='checkbox']),
+	.bd,
+		.pages,
+	input[type='submit'] {
+		background-color: #FFFFEE !important;
+	}
+/*[[TransparentReplies]]*/	.op > blockquote,
+	.thread > blockquote,
+	form[name='delform'] > blockquote, /**/
+	div.logo font {
+		text-shadow: #FFFFEE 1px 0 2px, #FFFFEE -1px 0 2px, #FFFFEE 0 -1px 2px, #FFFFEE 0 1px 2px;
+	}
+/*[[TransparentReplies]]*/	td.reply {
+		background-color: rgba(193,196,217,0.5) !important;
+		text-shadow: #F0E0D6 1px 0 2px, #F0E0D6 -1px 0 2px, #F0E0D6 0 -1px 2px, #F0E0D6 0 1px 2px;
+	}
+	td.replyhl {
+		background-color: rgba(179,155,155,0.5) !important;
+		text-shadow: #F0E0D6 1px 0 2px, #F0E0D6 -1px 0 2px, #F0E0D6 0 -1px 2px, #F0E0D6 0 1px 2px;
+	}/**/
+}
+/* Yotsuba B */
+
+@-moz-document regexp(".*\.4chan\.org/(v|g|a|c|g|k|m|o|p|w|cm|3|adv|an|cgl|ck|co|diy|fa|fit|int|jp|lit|mu|n|po|sci|sp|tg|toy|trv|tv|vp|s)/.*") {
+/*[[CustomScrollbars]]*/
+	::-webkit-scrollbar-thumb { border: 1px solid #b7c5d9; background: #eef2ff; }
+	::-webkit-scrollbar-thumb:hover { background: -webkit-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
+	::-webkit-scrollbar-thumb:active { background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
+	::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-resizer {background: #d6daf0; }
+	scrollbar, scrollcorner { background: #d6daf0 !important; }
+	thumb { -moz-appearance: none !important; border: 1px solid #b7c5d9; background: #fff; }
+	thumb:hover { background: -moz-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
+	thumb:active { background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
+/**/
+	body {
+		background: url("http://static.4chan.org/image/fade-blue.png") repeat-x scroll center top #EEF2FF !important;
+	}
+	td.reply, td.replyhl {
+		border: 1px solid #5765B5 !important;
+	}
+	td.replyhl {
+		border: 1px solid #5765B5 !important;
+	}
+	.logo {
+		text-shadow: 1px 1px 1px #222 !important;
+	}
+	.logo b span {
+		text-shadow: 1px 1px 1px #222 !important;
+	}
+	a.backlink,
+	a.forwardlink {
+		color: #0000aa !important;
+	}
+	#boards h3,
+	#boardsMenu,
+	#filter.autohide:hover,
+	#filter:not(.autohide),
+	#ft li,
+	#ft ul,
+	#navbar,
+	#options .dialog,
+	#popup,
+	#qr::before,
+	#threadwatcher,
+	#threadwatcher .postblock,
+	#watcher,
+	#thread_filter.autohide:hover,
+	#thread_filter:not(.autohide),
+	#updater:hover,
+	.box-outer,
+	.boxbar,
+	.deletebuttons input[value=Delete],
+	.top-box,
+	.yuimenuitem-selected,
+	form[name^='post']::before,
+	h2,
+	select,
+	td.postblock,
+	td.reply,
+	html body span[style='left: 5px; position: absolute;'] a,
+	input[type='submit'],
+	#com_submit,
+	input[type='file'] > input[type='button'],
+	#qr a#attach::after {
+		background-color: #d6daf0 !important;
+	}
+	td.reply {
+		border:1px solid #B7C5D9 !important;
+	}
+	td.replyhl {
+		border: 1px solid #ba9dbf !important;
+	}
+	#header, #navbot::after, #navbot {
+		background-color: #D2D6EF !important;
+	}
+	.doubledash,
+	.replyhider a {
+		color: #B7C5D9 !important;
+	}
+	td[style='border: 1px dashed;'],
+	td.reply > tr > td.reply,
+	.inline td.reply,
+	.inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+		/* Inline Quotes */
+		background-color: rgba(255,255,255,0.2) !important;
+		border: 1px solid rgba(128,128,128,0.5) !important;
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
+	.inline .inline td.reply,
+	.inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
+	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+		background-color: #d6daf0 !important;
+	}
+	.pages b {
+		background: #d6daf0 !important;
+	}
+	#header a:hover,
+	.pages input:hover,
+	a:hover {
+	/* URL bubbles */
+		background: #d6daf0 !important;
+	}
+	a {
+		color: #57577b !important;
+	}
+	hr {
+		border-top: 1px solid #b7c5d9 !important;
+	}
+	#cc-showpostarea,
+	#ft li,
+	#ft ul,
+	#options input:not([type='checkbox']),
+	#qr table .recaptchatable #recaptcha_image,
+	#updater input:not([type='checkbox']),
+	#twi_table_div,
+	#twi_table_div *,
+	.box-outer,
+	.boxbar,
+	.chanchimp,
+	.chanchimp > div,
+	.inputtext,
+	.deletebuttons input[value=Delete],
+	.recaptcha_image_cell > center > #recaptcha_image,
+	.recaptchatable #recaptcha_response_field,
+	.top-box,
+	h2,
+	input:not([type='checkbox']),
+	#qr_captcha input,
+	input[type='file'] > input[type='button'],
+	input[type='submit'],
+	select,
+	textarea,
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'],
+	html body span[style='left: 5px; position: absolute;'] a {
+		border: 1px solid #b7c5d9 !important;
+	}
+	.recaptchatable #recaptcha_response_field:focus,
+	.deletebuttons input[type='password']:focus,
+	input:focus,
+	input.inputtext:focus,
+	input[type='submit']:focus,
+	textarea:focus {
+		border: 1px solid #98e !important;
+	}
+	.filetitle,
+	.replytitle {
+		color: #0f0c5d !important;
+		font-weight: 800 !important;
+	}
+	body,
+	body > form,
+	html body span[style='left: 5px; position: absolute;'] a,
+	input,
+	div.postarea,
+	form[name^='post']::before,
+	select,
+	td.deletebuttons,
+	textarea,
+	.abbr,
+	.boxbar,
+	.boxcontent,
+	.omittedposts,
+	.pages b,
+	.postblock,
+	.reply,
+	.replyhl,
+	#backwash_tooltip,
+	#header .title,
+	#imgControls label::after,
+	#navbot::after,
+	#qp,
+	#twi_table_div,
+	#updater #count:not(.new)::after,
+	font[color="red"] {
+		color: #000 !important;
+	}
+	a.quotelink {
+		color: #d00 !important;
+	}
+	html body span[style='left: 5px; position: absolute;'] a:hover,
+	#com_submit:hover,
+	#cc-showpostarea,
+	#twi_table_div,
+	#twi_table_div *,
+	#backwash_tooltip,
+	#popup,
+	.chanchimp,
+	.chanchimp > div,
+	.deletebuttons input:hover,
+	.recaptchatable #recaptcha_response_field:hover,
+	div[id^=ref],
+	input:hover,
+	input[type='submit']:hover,
+	input[type='file'] > input[type='button']:hover,
+	td.replyhl,
+	tr.replyhl,
+	textarea:hover {
+		background-color: #d6bad0 !important;
+	}
+	#qp {
+	    background-color: #d6bad0 !important;
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'] {
+		background-color: #eef2ff !important;
+	}
+	#crntBoard {
+		border-right-color: #eef2ff !important;
+	}
+	#watcher .move,
+	#twi_table_div .postblock {
+		border-bottom: 1px #eef2ff solid !important;
+	}
+	div[id^='4chan_ext_iqr'],
+	div[id^='4chan_ext_iqr'] > *,
+	#filter input,
+	#filter textarea,
+	#options input,
+	#options textarea,
+	#qr,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#quickrep,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+	#qr label input,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input:not([type='checkbox']),
+	.bd,
+	.pages,
+	input[type='submit'] {
+		background-color: #eef2ff !important;
+	}
+/*[[TransparentReplies]]*/	.op > blockquote,
+	.thread > blockquote,
+	form[name='delform'] > blockquote, /**/
+	div.logo font {
+		text-shadow: #eef2ff 1px 0 2px, #eef2ff -1px 0 2px, #eef2ff 0 -1px 2px, #eef2ff 0 1px 2px;
+	}
+/*[[TransparentReplies]]*/	td.reply {
+		background-color: rgba(193,196,217,0.5) !important;
+		text-shadow: #d6daf0 1px 0 2px, #d6daf0 -1px 0 2px, #d6daf0 0 -1px 2px, #d6daf0 0 1px 2px;
+	}
+	td.replyhl {
+		background-color: rgba(179,155,155,0.5) !important;
+		text-shadow: #d6bad0 1px 0 2px, #d6bad0 -1px 0 2px, #d6bad0 0 -1px 2px, #d6bad0 0 1px 2px;
+	}/**/
+}
+
+@-moz-document domain(4chan.org) {
+	* {
+		outline: none !important;
+	}
+	.logo {
+		color: #af0a0f !important;
+	}
+	input[type=checkbox]:checked,
+	#options input[type=checkbox]:checked,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
+	#qr label input[type='checkbox']:checked {
+		background: #bcc0d4 !important;
+	}
+
+	div.postarea > form td:nth-of-type(3) > label,
+	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
+	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
+	#autonoko {
+		color: #444;
+	}
+	input[type='file']::-webkit-file-upload-button {
+		color: #444 !important;
+	}
+	.replyhider a:hover {
+		color: #555 !important;
+	}
+	a:hover {
+		color: #d00 !important;
+	}
+	.postername,
+	.commentpostername {
+		color: #117743 !important;
+		font-weight: 800 !important;
+	}
+	.postertrip,
+	.trip {
+		color: #228854 !important;
+	}
+	.postername a:hover,
+	.commentpostername a:hover,
+	a:hover .postertrip {
+		color: #117743 !important;
+	}
+	a.forwardlink {
+		font-weight: 800 !important;
+	}
+	.unkfunc {
+		color: #789922 !important;
+	}
+	.boxcontent > hr,
+	.boxcontent input,
+	.boxcontent textarea,
+	div.postarea > form td:nth-of-type(3) > label input,
+	div[id^=qr],
+	table.reply[style^='clear: both'],
+	input,
+	textarea,
+	.recaptchatable #recaptcha_response_field,
+	.recaptchatable #recaptcha_response_field:focus,
+	.deletebuttons input[type='password']:focus,
+	input:focus,
+	input[type='submit']:focus,
+	textarea:focus {
+		background-color: #fff !important;
+	}
+	#qr::before,
+	form[name^='post']::before {
+		border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0;
+	}
+	.qphl {
+		outline-color: #627c8d !important;
+	}
+	td.reply {
+		border-left: none !important;
+		border-top: none !important;
+	}
+	td.replyhl {
+		border-left: none !important;
+		border-top: none !important;
+	}
+	input[type=checkbox]:active,
+	#options input[type=checkbox]:active,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:active,
+	#qr label input[type='checkbox']:active {
+		background: #000 !important;
+	}
+	.new {
+		background-color: lime !important;
+		color: #000 !important;
+	}
+	form[name^='post'] .postblock b,
+	form[name^='post']::before,
+	.postarea tr:nth-child(4) .postblock b,
+	#maxchars,
+	#qr::before {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	#qr input:-moz-placeholder,
+	#qr textarea:-moz-placeholder {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	#qr input::-webkit-input-placeholder,
+	#qr textarea::-webkit-input-placeholder {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	#qr input:placeholder,
+	#qr textarea:placeholder {
+		color: rgba(0,0,0,0.5) !important;
+	}
+	html body span[style='left: 5px; position: absolute;'] a {
+		height: 14px !important;
+		padding-top: 3px !important;
+		width: 56px !important;
+	}
+	#recaptcha_image img,
+	#quick_recaptcha_image img,
+	#qr img {
+		opacity: 1 !important;
+	}
+	.boxcontent dd,
+	#options ul,
+	#threadwatcher .postblock,
+	.chanchimp * {
+		border-color: #eef2ff !important;
+/*[[PostSeparationHR]]*/
+	}
+	#filter input,
+	#filter textarea,
+	#thread_filter input,
+	#thread_filter textarea,
+	#updater input,
+	#options input,
+	#qr,
+	#quickrep,
+	div[id^=qr],
+	table.reply[style^='clear: both'] {
+		border: none !important;
+	}
+	form[name='delform'] > div:not(.thread) select,
+	.pages input[type='submit'] {
+		margin: 0 !important;
+		height: 17px !important;
+	}

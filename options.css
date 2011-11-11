@@ -1,0 +1,1552 @@
+/*[[ColorScheme]]*/
+/* See './Color Schemes/' */
+/* End */
+
+/*[[background]]*/
+/* Furudo Erika: */
+		content: url('http://i.imgur.com/zLsPY.png');
+		bottom: 269px;
+/* Hakase: */
+		content: url('http://i.imgur.com/TBHI6.png');
+		bottom: 269px;
+/* Kagamine Rin: */
+		content: url('http://i.imgur.com/fXXd2.png');
+		bottom: 269px;
+/* Kinomoto Sakura: */
+		content: url('http://i.imgur.com/Ve0hl.png');
+		bottom: 269px;
+/* Shana: */
+		content: url('http://i.imgur.com/k3fgX.png');
+		left: 0;
+/* Ika Musume: */
+		content: url('http://i.imgur.com/uUhGG.png');
+		bottom: 269px;
+/* Iwakura Lain: */
+		content: url('http://i.imgur.com/AfjG9.png');
+		bottom: 269px;
+/* Samus Aran: */
+		content: url('http://i.imgur.com/34viJ.png');
+		bottom: 269px;
+/* Hatsune Miku: */
+		content: url('http://i.imgur.com/vE3FJ.png');
+		bottom: 269px;
+/* Li Syaoran: */
+		content: url('http://i.imgur.com/GySuy.png');
+		bottom: 269px;
+/* Koiwai Yotsuba: */
+		content: url('http://i.imgur.com/1MyDM.png');
+		bottom: 269px;
+/* BLACK ROCK SHOOTER: */
+		content: url('http://i.imgur.com/VidKo.png');
+		bottom: 269px;
+/* George Costanza: */
+		content: url('http://i.imgur.com/Nnsrf.png');
+		bottom: 269px;
+/* Nagato Yuki: */
+		content: url('http://i.imgur.com/VAWnW.png');
+		bottom: 269px;
+/* Golden Darkness: */
+		content: url('http://i.imgur.com/lYGo4.png');
+		bottom: 0;
+/* None: */
+none
+/* End */
+
+/*[[Font]]*/
+/* Don't Care: */
+/* Common Linux font, web font, common Windows font 1, commont WIndows font 2, common OS X font, common font */
+'Ubuntu', 'Droid Sans', 'Terminus', 'Segoe UI', 'Calibri', 'Lucida Grande', 'Helvetica'
+/* Ubuntu: */
+'Ubuntu'
+/* Droid Sans: */
+'Droid Sans'
+/* Monospace */
+'Terminus', 'monospace'
+/* Segoe UI */
+'Segoe UI'
+/* Calibri: */
+'Calibri'
+/* Lucidia Grande */
+'Lucida Grande'
+/* Helvetica */
+'Helvetica'
+/* Futura Lt*/
+'Futura Lt'
+/* Profont */
+'Profont', 'monospace'
+/* END */
+
+/*[[FontSize]]*/
+/* Small */
+12px
+/* Normal */
+13px
+/* Medium */
+14px
+/* Large */
+16px
+/* END */
+
+/*[[Margin]]*/
+/* Enabled: */
+	/*[[MarginCenter]]*/
+	 .replyhider a {
+		z-index: 1;
+		position: absolute;
+		right: 5px;
+	/*[[ChangeAlign]]*/	right: 255px;/**/
+	}
+
+	.replyhider {
+		width: 0 !important;
+		padding: 0 !important;
+/* Disabled: */
+		padding: 0 2px 0 2px !important;
+	}
+
+	.replyhider a {
+		z-index: 1;
+		position: absolute;
+		right: 5px;
+	}
+
+	.replyhider {
+		width: 0 !important;
+		padding: 0 !important;
+/* End */
+
+/*[[StickyNavigation]]*/
+/* Yes: */
+	#header,
+	.pages {
+		position: fixed !important;
+	}
+
+	.pages {
+		padding: 0 0 0 250px !important;
+		/*[[ChangeAlign]]*/padding: 0 250px 0 0 !important;/**/
+	}
+
+	#navbot {
+		position: fixed !important;
+		top: -101px !important;
+	}
+
+	.navlinks {
+		padding-top: 14px
+	}
+
+	#header {
+		top: 0 !important;
+	}
+
+	.pages {
+		top: auto !important;
+		bottom: 1px !important;
+	}
+
+	#navbar {
+		margin-left: auto !important;
+		margin-right: -265px !important;
+/*[[ChangeAlign]]*/
+		margin-right: auto !important;
+		margin-left: -265px !important;
+/**/
+		bottom: 16px !important;
+		height: 26px !important;
+	}
+
+	#navbar {
+		bottom: 1px !important;
+	}
+
+	#boardsMenu {
+		bottom: 46px !important;
+	}
+
+	#navbar #boardsMenu {
+		bottom: 26px !important;
+	}
+/* No: */
+	#header {
+		position: absolute !important;
+	}
+
+	.pages {
+		padding: 0 !important;
+	}
+	#navbot {
+		position: fixed !important;
+		top: -101px !important;
+	}
+/* Invert */
+	#header,
+	.pages {
+		position: fixed !important;
+	}
+
+	.navlinks {
+		padding-top: 14px;
+	}
+
+	.navlinks {
+		padding-top: 0;
+	}
+
+	#header {
+		top: auto !important;
+		bottom: 1px !important;
+	}
+
+	.pages {
+		bottom: auto !important;
+		top: 0 !important;
+	}
+
+	#navbar {
+		margin-left: auto !important;
+		margin-right: -265px !important;
+/*[[ChangeAlign]]*/
+		margin-right: auto !important;
+		margin-left: -265px !important;
+/**/
+		bottom: 16px !important;
+		height: 26px !important;
+	}
+
+	#boardsMenu {
+		bottom: 46px !important;
+	}
+	#navbot {
+		position: fixed !important;
+		top: -101px !important;
+	}
+/* Slideout */
+	#header {
+		position: absolute !important;
+	}
+
+	.pages {
+		padding: 0 !important;
+	}
+
+	#navbot::after {
+		cursor: default;
+		position: fixed !important;
+		display: block !important;
+		left: auto !important;
+		right: 0 !important;
+		z-index: 97 !important;
+/*[[ChangeAlign]]*/	right: auto !important;/**/
+		top: 0 !important;
+		height: 15px !important;
+		width: 80px;
+		border-width: 0 1px 1px 0 !important;
+		font-size: 10px !important;
+		vertical-align: bottom !important;
+		text-align: center !important;
+		opacity: 0.5 !important;
+		content: '-Navigation-';
+	}
+	#navbot:hover::after {
+		top: 51px !important;
+		border: none !important;
+		opacity: 1 !important;
+		background: none !important;
+		z-index: 98 !important;
+	}
+
+	#navbot:hover {
+		top: 0 !important;
+		z-index: 98 !important;
+	}
+
+	#navbot {
+		visibility: visible !important;
+		position: fixed !important;
+		top: -61px !important;
+		left: auto !important;
+		right: 0 !important;
+/*[[ChangeAlign]]*/		left: 0 !important;
+		right: auto !important;/**/
+		color: transparent !important;
+		padding: 0 10px 30px 10px !important;
+		border-width: 0 1px 1px 0 !important;
+		word-spacing: -2px !important;
+		width: 310px !important;
+		height: 40px !important;
+		text-align: center !important;
+	}
+/* Slideout Invert */
+	.pages {
+		position: fixed !important;
+		bottom: auto !important;
+		top: 0 !important;
+	}
+
+	#navtop {
+		display: none !important;
+	}
+
+	#navbot::after {
+		cursor: default;
+		position: fixed !important;
+		display: block !important;
+		left: auto !important;
+		right: 0 !important;
+		z-index: 98 !important;
+/*[[ChangeAlign]]*/right: auto !important;/**/
+		bottom: 1px !important;
+		height: 15px !important;
+		width: 80px;
+		border-width: 0 1px 1px 0 !important;
+		font-size: 10px !important;
+		vertical-align: bottom !important;
+		text-align: center !important;
+		opacity: 0.5 !important;
+		content: '-Navigation-';
+		z-index: 98;
+	}
+
+	#navbot:hover::after {
+		z-index: 98 !important;
+		border: none !important;
+		opacity: 1 !important;
+		background: none !important;
+	}
+
+	#navbot:hover {
+		bottom: 1px !important;
+		z-index: 98 !important;
+	}
+
+	#navbot {
+		visibility: visible !important;
+		position: fixed !important;
+		bottom: -101px !important;
+		left: auto !important;
+		right: 0 !important;
+/*[[ChangeAlign]]*/		left: 0 !important;
+		right: auto !important;/**/
+		color: transparent !important;
+		padding: 0 10px 30px 10px !important;
+		border-width: 0 1px 1px 0 !important;
+		width: 310px !important;
+		height: 40px !important;
+		word-spacing: -2px !important;
+		text-align: center !important;
+	}
+/* End */
+
+/*[[CompactNavigation]]*/
+/* Yes: */
+	#header a,
+	.pages a,
+	.pages b,
+	.pages input {
+		margin: 0 1px 0 2px;
+	}
+/* No: */
+	#header a,
+	.pages a,
+	.pages b,
+	.pages input {
+		margin: 0 1px;
+		min-width: 14px;
+	}
+/* End */
+
+/*[[PagesPosition]]*/
+/* Side */
+	.pages {
+		padding: 0 !important;
+		visibility: hidden;
+		top: auto !important;
+		bottom: 311px !important;
+		width: auto !important;
+		left: -1px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/		left: auto !important;
+		right: 251px !important;/**/
+		position: fixed;
+		-webkit-transform: rotate(90deg);
+		-webkit-transform-origin: bottom right;
+		-moz-transform: rotate(90deg);
+		-moz-transform-origin: bottom right;
+		-o-transform: rotate(90deg);
+		-o-transform-origin: bottom right;
+		letter-spacing: -1px;
+		word-spacing: -6px;
+		z-index: 6 !important;
+	}
+
+	.pages a, .pages b, .pages input {
+		visibility: visible;
+		min-width: 0;
+	}
+/* Normal: */
+
+/* End */
+
+/*[[boardlogo]]*/
+/* Board Name */
+	div.logo {
+		position: fixed !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		bottom: 327px !important;
+		width: 248px !important;
+		z-index: 1;
+		text-align: center;
+	}
+
+	div.logo img {
+		display: none;
+	}
+/* Logo */
+	div.logo > *:not(img) {
+		display: none;
+	}
+/* Board Name + Logo */
+	div.logo {
+		position: fixed !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		top: 140px !important;
+		width: 248px !important;
+		z-index: 1;
+		text-align: center;
+	}
+/* Hide Both */
+	div.logo {
+		display: none;
+	}
+/* End */
+
+/*[[PostForm]]*/
+/* Fixed: */
+	.postarea form[name^='post'] {
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+	}
+/* Slideout: */
+	.postarea form[name^='post'] {
+		right: auto !important;
+		left: -233px !important;
+/*[[ChangeAlign]]*/
+		right: -233px !important;
+		left: auto !important;/**/
+		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+	}
+
+	.postarea form[name^='post']:hover {
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		-webkit-transition: right .3s linear, left .3s linear;
+		-moz-transition: right .3s linear, left .3s linear;
+		-o-transition: right .3s linear, left .3s linear;
+	}
+
+	.postarea form[name='post'] tr:nth-child(4) {
+		height: 79px !important;
+	}
+/* Tabbed Slideout: Transitions only in Firefox > 4 */
+	.postarea form[name^='post'] {
+		right: auto !important;
+		left: -248px !important;
+/*[[ChangeAlign]]*/
+		right: -248px !important;
+		left: auto !important;/**/
+		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+	}
+
+	.postarea form[name^='post']:hover {
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		-webkit-transition: right .3s linear, left .3s linear;
+		-moz-transition: right .3s linear, left .3s linear;
+		-o-transition: right .3s linear, left .3s linear;
+	}
+
+	.postarea form[name='post']::before {
+		-webkit-transform: rotate(90deg);
+		-webkit-transform-origin: bottom left;
+		-moz-transform: rotate(90deg);
+		-moz-transform-origin: bottom left;
+		-o-transform: rotate(90deg);
+		-o-transform-origin: bottom left;
+		margin-left: 250px;
+		margin-right: 264px;
+		margin-bottom: -20px;
+/*[[ChangeAlign]]*/
+		-webkit-transform: rotate(-90deg);
+		-webkit-transform-origin: bottom right;
+		-moz-transform: rotate(-90deg);
+		-moz-transform-origin: bottom right;
+		-o-transform: rotate(-90deg);
+		-o-transform-origin: bottom right;
+		margin-left: -212px; /* I have no idea why Firefox halves this. */
+		margin-right: 264px; /* I have no idea why Firefox halves this and Chrome ignores it. */
+		margin-bottom: -20px;/**/
+		width: 210px;
+		display: inline-block; /* I have no idea why this is the only one that rotates and obeys margins in Chrome? */
+		font-size: 10px !important;
+		opacity: 1;
+		text-align: center;
+		content: 'POST FORM - POST FORM - POST FORM';
+		-webkit-transition: opacity .3s ease-in-out 3s;
+		-moz-transition: opacity .3s ease-in-out 3s;
+		-o-transition:  opacity .3s ease-in-out 3s;
+	}
+
+	.postarea form[name='post']:hover::before {
+		opacity: 0;
+		-webkit-transition: opacity .3s linear;
+		-moz-transition: opacity .3s linear;
+		-o-transition: opacity .3s linear;
+	}
+
+	.postarea form[name='post'] tr:nth-child(4) {
+		height: 79px !important;
+	}
+/* Transparent to Opaque: */
+	.postarea form[name^='post'] {
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		opacity: 0.2;
+		-webkit-transition: opacity .3s ease-in-out 3s;
+		-moz-transition: opacity .3s ease-in-out 3s;
+		-o-transition: opacity .3s ease-in-out 3s;
+	}
+
+	.postarea form[name='post']:hover {
+		opacity: 1;
+		-webkit-transition: opacity .3s linear;
+		-moz-transition: opacity .3s linear;
+		-o-transition: opacity .3s linear;
+	}
+/* End */
+
+/*[[QuickReply]]*/
+/* Yes: */
+@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
+/* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
+	.postarea,
+	#qr > input,
+	#qr > a:not(.error) {
+		display: none;
+	}
+/* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
+	#qr .move {
+		color: transparent !important;
+		font-size: 0 !important;
+		height: 20px !important;
+	}
+/* Disable the behavior of #autohide */
+	#qr:not(:hover) > #autohide:checked ~ .autohide,
+	#qr > #autohide:checked ~ .autohide,
+	#qr > #autohide ~ .autohide	{
+		overflow: visible !important;
+		height: auto !important;
+	}
+/* Position and Dimensions of the #qr */
+	#qr {
+		overflow: visible !important;
+		position: fixed;
+		top: auto !important;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		bottom: 21px !important;
+		width: 248px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	#qr_form {
+		height: auto !important;
+		position: static !important;
+	}
+
+	#qr .move .inputtext,
+	#qr .inputtext[type='password'] {
+		width: 248px !important;
+	}
+/* Width and height of all #qr elements (excluding some captcha elements) */
+	#qr textarea {
+		min-height: 0 !important;
+		height: 78px !important;
+	}
+
+	#qr form[name^='post'] .inputtext,
+	#qr #files input[type=file][name='upfile'] {
+		width: 248px !important;
+	}
+
+	#qr form[name^='post'] .inputtext[name='sub'],
+	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
+	#files input[type='file'][name='upfile'] > input[type='text'] {
+		width: 185px !important;
+	}
+
+	#qr img {
+		height: 47px !important;
+		width: 248px !important;
+	}
+/* Positioning "+" for files */
+	#qr a#attach {
+		bottom: 21px;
+		right: 80px;
+	}
+/* Errors */
+	[id^='q'] .error {
+		visibility: visible !important;
+		position: fixed !important;
+		bottom: 270px !important;
+		height: 19px !important;
+		width: 248px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		top: auto !important;
+		background-color: #aaa !important;
+		color: #000 !important;
+		font-size: 11px !important;
+		z-index: 1;
+	}
+/* Webkit Hax */
+	.fake input[type='file']::-webkit-file-upload-button,
+	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
+		width: 248px !important;
+	}
+}
+/* ...and slideout: */
+@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
+/* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
+	.postarea,
+	#qr > input,
+	#qr > a:not(.error) {
+		display: none;
+	}
+/* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
+	#qr .move {
+		color: transparent !important;
+		font-size: 0 !important;
+		height: 20px !important;
+	}
+/* Disable the behavior of #autohide */
+	#qr:not(:hover) > #autohide:checked ~ .autohide,
+	#qr > #autohide:checked ~ .autohide,
+	#qr > #autohide ~ .autohide	{
+		overflow: visible !important;
+		height: auto !important;
+	}
+/* Position and Dimensions of the #qr */
+	#qr {
+		overflow: visible !important;
+		position: fixed;
+		left: -233px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: -233px !important;/**/
+		top: auto !important;
+		bottom: 21px !important;
+		width: 248px !important;
+		margin: 0 !important;
+		padding: 0;
+		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+	}
+
+	#qr:hover {
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		-webkit-transition: right .3s linear, left .3s linear;
+		-moz-transition: right .3s linear, left .3s linear;
+		-o-transition: right .3s linear, left .3s linear;
+	}
+
+	#qr_form {
+		height: auto !important;
+		position: static !important;
+	}
+
+	#qr .move .inputtext,
+	#qr .inputtext[type='password'] {
+		width: 248px !important;
+	}
+/* Width and height of all #qr elements (excluding some captcha elements) */
+	#qr textarea {
+		min-height: 0 !important;
+		height: 78px !important;
+	}
+
+	#qr form[name^='post'] .inputtext,
+	#qr #files input[type=file][name='upfile'] {
+		width: 248px !important;
+	}
+
+	#qr form[name^='post'] .inputtext[name='sub'],
+	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
+	#files input[type='file'][name='upfile'] > input[type='text'] {
+		width: 185px !important;
+	}
+
+	#qr img {
+		height: 47px !important;
+		width: 248px !important;
+	}
+/* Positioning "+" for files */
+	#qr a#attach {
+		bottom: 21px;
+		right: 80px;
+	}
+/* Errors */
+	[id^='q'] .error {
+		visibility: visible !important;
+		position: fixed !important;
+		bottom: 270px !important;
+		height: 19px !important;
+		width: 248px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		top: auto !important;
+		background-color: #aaa !important;
+		color: #000 !important;
+		font-size: 11px !important;
+		z-index: 1;
+	}
+/* Webkit Hax */
+	.fake input[type='file']::-webkit-file-upload-button,
+	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
+		width: 248px !important;
+	}
+}
+/* ...and tabbed slideout (No transitions in Chrome) */
+@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
+/* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
+	.postarea,
+	#qr > input,
+	#qr > a:not(.error) {
+		display: none;
+	}
+/* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
+	#qr .move {
+		color: transparent !important;
+		font-size: 0 !important;
+		height: 20px !important;
+	}
+/* Disable the behavior of #autohide */
+	#qr:not(:hover) > #autohide:checked ~ .autohide,
+	#qr > #autohide:checked ~ .autohide,
+	#qr > #autohide ~ .autohide	{
+		overflow: visible !important;
+		height: auto !important;
+	}
+/* Position and Dimensions of the #qr */
+	#qr {
+		overflow: visible !important;
+		position: fixed;
+		left: -248px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: -248px !important;/**/
+		top: auto !important;
+		bottom: 21px !important;
+		width: 248px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+	}
+
+	#qr:hover {
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		-webkit-transition: right .3s linear, left .3s linear;
+		-moz-transition: right .3s linear, left .3s linear;
+		-o-transition: right .3s linear, left .3s linear;
+	}
+/* Tabbed Text. I'm not exactly sure about the mechanics behind how this works. */
+	#qr::before {
+		-webkit-transform: rotate(90deg);
+		-webkit-transform-origin: bottom left;
+		-moz-transform: rotate(90deg);
+		-moz-transform-origin: bottom left;
+		-o-transform: rotate(90deg);
+		-o-transform-origin: bottom left;
+		margin-left: 250px;
+		margin-right: -232px;
+/*[[ChangeAlign]]*/
+		-webkit-transform: rotate(-90deg);
+		-webkit-transform-origin: bottom right;
+		-moz-transform: rotate(-90deg);
+		-moz-transform-origin: bottom right;
+		-o-transform: rotate(-90deg);
+		-o-transform-origin: bottom right;
+		margin-left: -212px;
+		margin-right: 264px;/**/
+		margin-bottom: -20px;
+		width: 210px;
+		display: block;
+		font-size: 10px !important;
+		opacity: 1;
+		text-align: center;
+		content: 'POST FORM - POST FORM - POST FORM';
+		-webkit-transition: opacity .3s ease-in-out 3s;
+		-moz-transition: opacity .3s ease-in-out 3s;
+		-o-transition: opacity .3s ease-in-out 3s;
+	}
+
+	#qr:hover::before {
+		opacity: 0;
+		-webkit-transition: opacity .3s linear;
+		-moz-transition: opacity .3s linear;
+		-o-transition: opacity .3s linear;
+	}
+
+	#qr_form {
+		height: auto !important;
+		position: static !important;
+	}
+
+	#qr .move .inputtext,
+	#qr .inputtext[type='password'] {
+		width: 248px !important;
+	}
+/* Width and height of all #qr elements (excluding some captcha elements) */
+	#qr textarea {
+		min-height: 0 !important;
+		height: 78px !important;
+	}
+
+	#qr form[name^='post'] .inputtext,
+	#qr #files input[type=file][name='upfile'] {
+		width: 248px !important;
+	}
+
+	#qr form[name^='post'] .inputtext[name='sub'],
+	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
+	#files input[type='file'][name='upfile'] > input[type='text'] {
+		width: 185px !important;
+	}
+
+	#qr img {
+		height: 47px !important;
+		width: 248px !important;
+	}
+/* Positioning "+" for files */
+	#qr a#attach {
+		bottom: 21px;
+		right: 80px;
+	}
+/* Errors */
+	[id^='q'] .error {
+		visibility: visible !important;
+		position: fixed !important;
+		bottom: 270px !important;
+		height: 19px !important;
+		width: 248px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		top: auto !important;
+		background-color: #aaa !important;
+		color: #000 !important;
+		font-size: 11px !important;
+		z-index: 1;
+	}
+/* Webkit Hax */
+	.fake input[type='file']::-webkit-file-upload-button,
+	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
+		width: 248px !important;
+	}
+}
+/* ...and fade: */
+@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
+	.postarea,
+	#qr > input,
+	#qr > a:not(.error) {
+		display: none;
+	}
+
+	#qr .move {
+		color: transparent !important;
+		font-size: 0 !important;
+		height: 20px !important;
+	}
+
+	#qr:not(:hover) > #autohide:checked ~ .autohide,
+	#qr > #autohide:checked ~ .autohide,
+	#qr > #autohide ~ .autohide	{
+		overflow: visible !important;
+		height: auto !important;
+	}
+
+	#qr {
+		overflow: visible !important;
+		position: fixed;
+		top: auto !important;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		bottom: 21px !important;
+		width: 248px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		opacity: 0.2;
+		-webkit-transition: opacity .3s ease-in-out 3s;
+		-moz-transition: opacity .3s ease-in-out 3s;
+		-o-transition: opacity .3s ease-in-out 3s;
+	}
+
+	#qr:hover {
+		opacity: 1;
+		-webkit-transition: opacity .3s linear;
+		-moz-transition: opacity .3s linear;
+		-o-transition: opacity .3s linear;
+	}
+
+	#qr_form {
+		height: auto !important;
+		position: static !important;
+	}
+
+	#qr .move .inputtext,
+	#qr .inputtext[type='password'] {
+		width: 248px !important;
+	}
+/* Width and height of all #qr elements (excluding some captcha elements) */
+	#qr textarea {
+		min-height: 0 !important;
+		height: 78px !important;
+	}
+
+	#qr form[name^='post'] .inputtext,
+	#qr #files input[type=file][name='upfile'] {
+		width: 248px !important;
+	}
+
+	#qr form[name^='post'] .inputtext[name='sub'],
+	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
+	#files input[type='file'][name='upfile'] > input[type='text'] {
+		width: 185px !important;
+	}
+
+	#qr img {
+		height: 47px !important;
+		width: 248px !important;
+	}
+/* Positioning "+" for files */
+	#qr a#attach {
+		bottom: 21px;
+		right: 80px;
+	}
+/* Errors */
+	[id^='q'] .error {
+		visibility: visible !important;
+		position: fixed !important;
+		bottom: 270px !important;
+		height: 19px !important;
+		width: 248px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		top: auto !important;
+		background-color: #aaa !important;
+		color: #000 !important;
+		font-size: 11px !important;
+		z-index: 1;
+	}
+/* Webkit Hax */
+	.fake input[type='file']::-webkit-file-upload-button,
+	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
+		width: 248px !important;
+	}
+}
+/* No: */
+
+/* End */
+
+/*[[helpertext]]*/
+/* Yes: */
+
+/* No: */
+	#qr div input:-moz-placeholder,
+	#qr form input:-moz-placeholder,
+	#qr form textarea:-moz-placeholder {
+		color: transparent !important;
+	}
+
+	#qr div input::-webkit-input-placeholder,
+	#qr form input::-webkit-input-placeholder,
+	#qr form textarea::-webkit-input-placeholder {
+		color: transparent !important;
+	}
+
+	#qr div input:placeholder,
+	#qr form input:placeholder,
+	#qr form textarea:placeholder {
+		color: transparent !important;
+	}
+
+	.postblock,
+/* End */
+
+/*[[PostSeparationHR]]*/
+/* Yes: */
+
+/* No: */
+		border: none !important;
+/* End */
+
+/*[[CaptchaReload]]*/
+/* Custom Captcha Reload Image: */
+	#quickrep .refreshBtn,
+	#recaptcha_reload_btn,
+	.refreshBtn {
+		position: absolute !important;
+		height: 0 !important;
+		width: 0 !important;
+		padding: 12px 0 0 12px !important;
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAZ0lEQVR4XgXAsQ0BUQCA4c8kSrOo70KntAgxgkl05CV2sMOVEo2ofgEAYAIAdp6SRQBwkSQJgL3kbJYEwPC1BgArIFcAwAvIFgAcBQwAQAawQZK7g0UmAJKPt+QEAPlJHmYA4AYA8AeJKy3vtXoiawAAAABJRU5ErkJggg==') no-repeat !important;
+		overflow: hidden;
+		z-index: 1 !important;
+	}
+/* None: */
+	#quickrep .refreshBtn,
+	#recaptcha_reload_btn,
+	.refreshBtn {
+		display: none;
+	}
+/* End */
+
+/*[[ReturnButton]]*/
+/* Yes: */
+	html body > span[style='left: 5px; position: absolute;']:nth-of-type(0) {
+		display: none;
+	}
+
+	html body span[style='left: 5px; position: absolute;'] {
+		font-size: 0 !important;
+		visibility: hidden;
+	}
+
+	html body span[style='left: 5px; position: absolute;'] a {
+		cursor: default !important;
+		position: fixed !important;
+		top: auto;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 192px !important;/**/
+		bottom: 1px;
+		visibility: visible !important;
+		height: 14px !important;
+		width: 58px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		font-size: 9px !important;
+		text-transform: uppercase;
+		vertical-align: bottom !important;
+		padding-top: 5px !important;
+		border-radius: 0 !important;
+		text-align: center;
+	}
+/* No: */
+	html body span[style='left: 5px; position: absolute;'] {
+		display: none;
+	}
+/* End */
+
+/*[[DeleteButtons]]*/
+/* Show: */
+/* ...And Hide Password Field: */
+	.deletebuttons input[name="pwd"] {
+		display: none !important;
+	}
+/* Hide: */
+	input[type='checkbox'][value='delete'],
+	.deletebuttons *,
+	.deletebuttons::after {
+		display: none;
+	}
+
+	form[name^='post'] input[type='password'].inputtext,
+	form[name^='post'] tr:nth-of-type(7) td.postblock {
+		visibility: hidden;
+	}
+/* End */
+
+/*[[ReplyWidth]]*/
+/* Fit Width: */
+	form[name='delform'] > table:not(.pages), /* Reply are tables. */
+	div.thread > table, /* Replies are tables. A script like 4chan X is present */
+	.insertedPosts > table, /* 4chanplus inserts new posts in a new div */
+	td.reply, /* Reply cell */
+	td.replyhl /* Highlighted Reply cell */ {
+		width: 100% !important;
+	}
+
+	.omittedposts /* X posts and Y image replies omitted. Click Reply to view. */ {
+		clear: both;
+		padding-left: 20px;
+		display: block !important;
+	}
+/* Fit Content: */
+	.doubledash,
+	.doubledash a,
+	.replyhider a {
+		position: static;
+	}
+/* End */
+
+/*[[TransparentReplies]]*/
+/* Yes: */
+
+/* No: */
+/*
+/* End */
+
+/*[[RoundedCorners]]*/
+/* Yes: */
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'] {
+		border-radius: 2px !important;
+		-o-border-radius: 2px !important;
+	}
+
+	td.reply,
+	td.replyhl,
+	#filter,
+	#options,
+	#options ul,
+	#watcher,
+	#thread_filter,
+	#qp,
+	#backwash_tooltip,
+	#twi_table_div
+	td[style='border: 1px dashed;'],
+	td.reply > tr > td.reply,
+	.inline td.reply {
+		border-radius: 3px !important;
+		-o-border-radius: 3px !important;
+	}
+
+	.pages b,
+	.pages input,
+	a,
+	.new,
+	#qr a#attach::after {
+		border-radius: 9px;
+	}
+
+	form[name^='post']::after {
+		border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0 !important;
+	}
+
+	.qphl {
+		-webkit-outline-radius: 3px;
+		-moz-outline-radius: 3px;
+		-o-outline-radius: 3px;
+	}
+/* ...and circle checkboxes */
+	input[type='checkbox'],
+	#options input[type='checkbox'],
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+	#qr label input[type='checkbox'] {
+		border-radius: 6px !important;
+		-o-border-radius: 6px !important;
+	}
+
+	td.reply,
+	td.replyhl,
+	#filter,
+	#options,
+	#options ul,
+	#watcher,
+	#thread_filter,
+	#qp,
+	#backwash_tooltip,
+	#twi_table_div
+	td[style='border: 1px dashed;'],
+	td.reply > tr > td.reply,
+	.inline td.reply {
+		border-radius: 3px !important;
+		-o-border-radius: 3px !important;
+	}
+
+	.pages b,
+	.pages input,
+	a,
+	.new,
+	#qr a#attach::after {
+		border-radius: 9px;
+	}
+
+	form[name^='post']::after {
+		border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0 !important;
+	}
+
+	.qphl {
+		-webkit-outline-radius: 3px;
+		-moz-outline-radius: 3px;
+		-o-outline-radius: 3px;
+	}
+/* No: */
+
+/* End */
+
+/*[[sageidentifier]]*/
+/* Sage Image: */
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAABa1BMVEUAAACqrKiCgYIAAAAAAAAAAACHmX5pgl5NUEx/hnx4hXRSUVMiIyKwrbFzn19SbkZ1d3OvtqtpaWhcX1ooMyRsd2aWkZddkEV8vWGcpZl+kHd7jHNdYFuRmI4bHRthaV5WhUFsfGZReUBFZjdJazpGVUBnamYfHB9TeUMzSSpHgS1cY1k1NDUyOC8yWiFywVBoh1lDSEAZHBpucW0ICQgUHhBjfFhCRUA+QTtEQUUBAQFyo1praWspKigWFRZHU0F6j3E9Oz5VWFN0j2hncWONk4sAAABASDxJWkJKTUgAAAAvNC0fJR0DAwMAAAA9QzoWGhQAAAA8YytvrFOJsnlqyT9oqExqtkdrsExpsUsqQx9rpVJDbzBBbi5utk9jiFRuk11iqUR64k5Wf0JIZTpadk5om1BkyjmF1GRNY0FheFdXpjVXhz86XSp2yFJwslR3w1NbxitbtDWW5nNnilhFXTtYqDRwp1dSijiJ7H99AAAAUnRSTlMAJTgNGQml71ypu3cPEN/RDh8HBbOwQN7wVg4CAQZ28vs9EDluXjo58Ge8xwMy0P3+rV8cT73sawEdTv63NAa3rQwo4cUdAl3hWQSWvS8qqYsjEDiCzAAAAIVJREFUeNpFx7GKAQAYAOD/A7GbZVAWZTBZFGQw6LyCF/MIkiTdcOmWSzYbJVE2u1KX0J1v+8QDv/EkyS0yXF/NgeEILiHfyc74mICTQltqYXBeAWU9HGxU09YqqEvAElGjyZYjPyLqitjzHSEiGkrsfMWr0VLe+oy/djGP//YwfbeP8bN3Or0bkqEVblAAAAAASUVORK5CYII=');
+/* Sage Text: */
+		content: ' (sage) ';
+		color: #e42217 !important;
+/* None: */
+
+/* End */
+
+/*[[expandfile]]*/
+/* Yes: */
+	.filesize span {
+		font-size: 0 !important;
+		visibility: hidden;
+	}
+
+	.filesize span::after {
+		content: attr(title);
+		visibility: visible;
+	}
+/* No: */
+
+/* End */
+
+/*[[fixedFilter]]*/
+/* Locked in Thread Watcher / Top */
+	#filter,
+	#thread_filter {
+		position: fixed !important;
+		top: 17px !important;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		bottom: auto !important;
+	}
+
+	#filter > div:first-child,
+	#thread_filter > div:first-child {
+		cursor: default !important;
+	}
+
+	#filter.autohide:not(:hover),
+	#thread_filter.autohide:not(:hover) {
+		width: 248px !important;
+		text-align: right;
+	}
+
+	#filter.autohide:hover,
+	#thread_filter.autohide:hover {
+		width: 248px !important;
+		left: 2px !important;
+		/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+	}
+
+	#filter:not(.autohide) a[title='Auto-hide dialog box']::after,
+		#thread_filter:not(.autohide) a[title='Auto-hide dialog box']::after {
+		content: ' - SET THIS!!';
+	}
+		#thread_filter::before {
+		content: "Filter";
+		font-size: 13px;
+		position: fixed;
+		left: 130px;
+/*[[ChangeAlign]]*/
+		left: auto;
+		right: 130px;/**/
+		top: 20px;
+		min-width: 30px;
+		max-width: 30px;
+	}
+	#thread_filter span:first-of-type {
+		font-size: 0 !important;
+	}
+	#thread_filter {
+		position: fixed !important;
+		top: -20px !important;
+	}
+	#thread_filter:hover {
+		position: fixed !important;
+		top: 20px !important;
+	}
+/* Locked Bottom: */
+	#filter,
+	#thread_filter {
+		position: fixed !important;
+		top: auto !important;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 300px !important;/**/
+		bottom: 1px !important;
+		width: 248px;
+	}
+
+	#filter > div:first-child ,
+	#thread_filter > div:first-child {
+		cursor: default !important;
+	}
+
+	#filter:not(.autohide) a[title='Auto-hide dialog box']::after
+	#thread_filter:not(.autohide) a[title='Auto-hide dialog box']::after {
+		content: ' - SET THIS!!';
+	}
+/* Moveable */
+	#filter,
+	#thread_filter {
+		margin: 2px !important;
+		width: 248px;
+	}
+/* End */
+
+/*[[CenteredImages]]*/
+/* Yes: */
+domain('images.4chan.org'),
+
+/* No: */
+
+/* End */
+
+/*[[CustomScrollbars]]*/
+/* Yes: */
+
+/* No: */
+/*
+/* End */
+
+/*[[MagicMode]]*/
+/* Yes: */
+	.commentpostername a.linkmail[href$='neko']::after {
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAMAAAAIRmf1AAACoFBMVEUAAABnUFZoUVddU1T6+PvFwLzn4eFXVlT/+vZpZGCgm5dKU1Cfnpz//flbWljr5uLp5OCalpNZWFb//f3r6+n28ff9+PRaVVH59Pr//vr38vj57/Dp7eyjn5zq8O5aVVJbYV9nVFhjUFRiWFlZVlFgZGOboJzm5uZhamfz9/bt8fDw6+drb26bl5j/8/lkX1z06uldWFS5r61UT0tfWlbDwr3Ew76moqNRTU7Mx8P75OpeY19pWl1XW1qzr6x5eHaLiojv7+1UT0xIU0uzqadVS0nV0MxkZGT5+PPk497///ra29Xq5eFtY2H28e2hnJignJlUUE1dXV2vrqxkY2FkYF/m3d5vZmfDuruhl5aZlJHx8O75+PZWVVP29vT/9fTj3trv6ubh5eRdXFqTkpBOTUtqZmX88/RMQ0T78vPEvr7HwcHDwsDq6ef///3Gx8H++fXEv7tZWVedmZZXXVudnJp0c3FZU1f79fnb1dlXUVVjXWFrZmy8t7359/qLj455e3q4s69vamZjX1zy4+avpaReWFz/+f1NR0vu6Ozp4+f48/lnYmi8ur3Iw7/69fHz7+xbV1SZmJZVUk1ZV1zq5ez++f/c196uqbDn4uj9+P7z7vRVVVXt6ORiXl/OycXHw8CPi4ihoJ5aWF3/+v/k3+axrLOsp67LzMZYU1m2sq9dWF5WUU1WUk/Au7eYlJGqpqObmphYVV749f7p5Or38fPu6OpiXFz38fH79vLz7urv6+hhYF5cWWKal6D//f/Z09Xg29exraqbl5RqaW6kpKTq5uPv7Of/+PDj29D//vP18Ozs5+OloJymoZ1ZVVJZWVlkYF2hnpmblIyspJmVjYKQi4enop5STUlRTUpcWUhqY1BgWT9ZUjhcV1NiXVkkhke3AAAABHRSTlMA5vjapJ+a9wAAAP9JREFUGBk9wA1EAwEAhuHv3dTQAkLiUlJFJWF0QDLFYDRXIMkomBgxNIYxhOk4wwCqQhQjxgxSGIsALFA5BiYbMZHajz1oJlx51sBJpf6Gd3zONcrqm/r1W8ByK0r+XV1LXyOLLnjW6hMGpu0u1IzPSdO17DgrGC6AadrVodGcDQYbhguP6wAvAaC0BRZQalkUQ8UQDz5tAof0XbejOFcV5xiUoCfjj3O/nf0ZbqAMPYmzU18KSDaRQ08qnfw+B2JNdAEQt2O5vctUGjhoIBU4ygPsj2Vh5zYopDK73hsirdkPTwGCbSHpiYFwYVVC/17pCFSBeUmoqwYQuZtWxx+BVEz0LeVKIQAAAABJRU5ErkJggg==');
+	}
+
+	.commentpostername a.linkmail[href$='sega']::after {
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAALBAMAAAD2A3K8AAAAMFBMVEUAAACMjpOChImytLmdnqMrKzDIyM55dnkODQ94foQ7PkXm5Olsb3VUUVVhZmw8Sl6klHLxAAAAAXRSTlMAQObYZgAAANFJREFUGJVjYIACRiUlJUUGDHBk4syTkxQwhO3/rQ/4ZYsuymi3YEFUqAhC4LCJZJGIi1uimKKjk3KysbOxsaMnAwNLyqoopaXhttf2it1anrJqke1pr1DlBAZhicLnM5YXZ4RWlIYoezx0zrjYqG6czCDsYRzxIko6Q/qFaKy0690Ij0MxN8K2MIhJXF+hsfxJxuwdpYGVaUU3Mm5bqgKFOZOFit3Vp23J3pgsqLxFUXpLtlD5bgcGBs45794dn6mkOVFQUOjNmXPPz8ysOcAAANw6SHLtrqolAAAAAElFTkSuQmCC');
+	}
+}
+
+@-moz-document url-prefix('http://boards.4chan.org/g/') {
+
+	body div.logo font[size="5"] span,
+	div.logo font[size="1"],
+	div.logo font[size="1"] a {
+	font-size: 0 !important;
+		visibility: hidden !important;
+	}
+
+	div.logo font[size="5"] span:after {
+		font-size: 26px !important;
+		visibility: visible !important;
+		content: "/g/ - !IoliconhOo VS Jordan";
+	}
+
+	div.logo font[size="1"]:after {
+		font-size: 12px !important;
+		visibility: visible !important;
+		content: "HEAVEN OR HELL -- LET'S ROCK";
+	}
+}
+
+@-moz-document url-prefix('http://boards.4chan.org/b/') {
+
+	body div.logo font[size="5"] span,
+	div.logo font[size="1"],
+	div.logo font[size="1"] a {
+	font-size: 0 !important;
+		visibility: hidden !important;
+	}
+
+	div.logo font[size="5"] span:after {
+		font-size: 26px !important;
+		visibility: visible !important;
+		content: "/b/ - Cancer";
+	}
+
+	div.logo font[size="1"]:after {
+		font-size: 12px !important;
+		visibility: visible !important;
+		content: "These be the waters of faggots and strumpets. Be wary, traveller.";
+	}
+/* No: */
+
+/* End */
+
+/*[[ChangeAlign]]*/
+/* Right: */
+
+/* Left: */
+/*
+/* End */
+
+/*[[ihover]]*/
+/* Fit to Screen Width */
+	#iHover {
+		max-width:85% !important;
+		max-height:85% !important;
+	}
+/* Keep Above URL bar */
+	#iHover {
+		padding-bottom: 20px !important;
+	}
+/* Both */
+	#iHover {
+		max-width:85% !important;
+		max-height:85% !important;
+		padding-bottom: 20px !important;
+	}
+/* None */
+
+/* End */
+
+/*[[redtext]]*/
+/* Show */
+
+/* Hide */
+	display: none !important;
+/* End */
+
+/*[[MarginCenter]]*/
+/* No */
+	padding: 0 2px 0 252px !important;
+	/*[[ChangeAlign]]*/padding: 0 252px 0 2px !important;/**/
+ }
+/* Completely Centered */
+	padding: 0 25% 0 25% !important;
+ }
+/* Slightly, retain Sidebar alignment */
+	padding: 0 150px 0 252px !important;
+	/*[[ChangeAlign]]*/padding: 0 252px 0 150px !important;/**/
+ }
+/* End */
+
+/*[[BackLinks]]*/
+/* Top: */
+
+/* Bottom Right: */
+	form[name='delform'] td.reply,
+	form[name='delform'] td.replyhl {
+		display: inline-block;
+		position: relative !important;
+	}
+
+	td .container,
+	#qp .container {
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+	}
+
+	.op .container {
+		display: block;
+	}
+
+	.container::before {
+		content: "Quoted by: ";
+		font-size: inherit;
+	}
+
+	.op .container::before {
+		margin-left: 50px;
+	}
+
+	.reply .container ~ blockquote,
+	.replyhl .container ~ blockquote {
+		margin: 12px 40px 20px;
+	}
+/* Bottom Left: */
+	form[name='delform'] td.reply,
+	form[name='delform'] td.replyhl {
+		display: inline-block;
+		position: relative !important;
+	}
+
+	td .container,
+	#qp .container {
+		position: absolute;
+		bottom: 5px;
+		left: 5px;
+	}
+
+	.op .container {
+		display: block;
+	}
+
+	.container::before {
+		content: "Quoted by: ";
+		font-size: inherit;
+	}
+
+	.op .container::before {
+		margin-left: 50px;
+	}
+
+	.reply .container ~ blockquote,
+	.replyhl .container ~ blockquote {
+		margin: 12px 40px 20px;
+	}
+/* End */

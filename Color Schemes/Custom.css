@@ -1,0 +1,26 @@
+/* Custom: */
+body {
+background-image: none !important;
+}
+
+#filter input,
+#filter textarea,
+#thread_filter input,
+#thread_filter textarea,
+#updater input,
+#options input,
+#qr,
+#quickrep,
+div[id^=qr],
+table.reply[style^='clear: both'] {
+border: none !important;
+}
+
+form[name='delform'] > div:not(.thread) select {
+margin: 1px 0 0 0 !important;
+}
+
+form[name='delform'] > div:not(.thread) select,
+.pages input[type='submit'] {
+height: 15px !important;
+}
