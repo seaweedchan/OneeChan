@@ -276,6 +276,7 @@ none
 		width: 310px !important;
 		height: 40px !important;
 		text-align: center !important;
+		word-spacing: -3px !important;
 	}
 /* Slideout Invert */
 	.pages {
@@ -333,7 +334,7 @@ none
 		border-width: 0 1px 1px 0 !important;
 		width: 310px !important;
 		height: 40px !important;
-		word-spacing: -2px !important;
+		word-spacing: -3px !important;
 		text-align: center !important;
 	}
 /* End */
