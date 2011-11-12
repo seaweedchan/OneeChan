@@ -48,7 +48,7 @@
 	#qr a#attach::after {
 		background-color: #DDD !important;
 	}
-	td.reply, td.replyhl, #watcher {
+	td.reply, td.replyhl, #watcher, #navbot:after, #navbot {
 	-moz-appearance: none !important;
 		border:1px solid #CCC !important;
 	}

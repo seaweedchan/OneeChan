@@ -258,6 +258,7 @@ none
 
 	#navbot:hover {
 		top: 0 !important;
+		left: 11px !important;
 		z-index: 98 !important;
 	}
 
@@ -318,6 +319,7 @@ none
 
 	#navbot:hover {
 		bottom: 1px !important;
+		left: 11px !important;
 		z-index: 98 !important;
 	}
 
@@ -1165,6 +1167,10 @@ none
 		border-radius: 3px !important;
 		-o-border-radius: 3px !important;
 	}
+	#navbot::after, #navbot {
+        	border-radius: 0 0 3px 3px !important;
+        	-0-border-radius: 0 0 3px 3px !important; 
+        }
 
 	.pages b,
 	.pages input,
