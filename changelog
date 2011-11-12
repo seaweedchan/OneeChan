@@ -1,5 +1,10 @@
 OneeChan changelog
 
+v0.5:
+-New option: Textarea height
+-Redesigned report button
+-Slideout navigation word spacing fix
+
 v0.4:
 -Thread watcher redone
 -Positioning changes to eliminate awkward empty space
