@@ -532,6 +532,15 @@ none
 	}
 /* End */
 
+/*[[TextareaHeight]]*/
+/* Normal */
+78px
+/* Medium */
+138px
+/* Large */
+168px
+/* End */
+
 /*[[QuickReply]]*/
 /* Yes: */
 @-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
@@ -582,7 +591,7 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: 78px !important;
+		height: /*[[TextareaHeight]]*/ !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
@@ -692,7 +701,7 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: 78px !important;
+		height: /*[[TextareaHeight]]*/ !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
@@ -839,7 +848,7 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: 78px !important;
+		height: /*[[TextareaHeight]]*/ !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
@@ -945,7 +954,7 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: 78px !important;
+		height: /*[[TextareaHeight]]*/ !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
