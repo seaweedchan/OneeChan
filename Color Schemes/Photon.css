@@ -93,6 +93,11 @@
 	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
 		background-color: #DDD !important;
 	}
+	#navbot:hover {
+		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+	}
 	.pages b {
 		background: #DDD !important;
 	}
