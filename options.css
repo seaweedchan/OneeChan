@@ -39,9 +39,6 @@
 /* BLACK ROCK SHOOTER: */
 		content: url('http://i.imgur.com/VidKo.png');
 		bottom: 269px;
-/* George Costanza: */
-		content: url('http://i.imgur.com/Nnsrf.png');
-		bottom: 269px;
 /* Nagato Yuki: */
 		content: url('http://i.imgur.com/VAWnW.png');
 		bottom: 269px;
@@ -68,8 +65,8 @@ none
 'Calibri'
 /* Lucidia Grande */
 'Lucida Grande'
-/* Helvetica */
-'Helvetica Neue', 'Helvetica', 'Arial'
+/* Sans-Serif */
+'sans-serif'
 /* Futura Lt*/
 'Futura Lt'
 /* Profont */
