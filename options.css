@@ -677,6 +677,10 @@ none
 		-moz-transition: opacity .3s linear;
 		-o-transition: opacity .3s linear;
 	}
+/* Disabled */
+	.postarea {
+		display: none;
+	}
 /* End */
 
 /*[[TextareaHeight]]*/
@@ -1278,7 +1282,7 @@ none
 		padding-left: 20px;
 		display: block !important;
 	}
-/* Fit Content: */
+/* Normal (4chan default) */
 	.doubledash,
 	.doubledash a,
 	.replyhider a {
@@ -1384,7 +1388,7 @@ none
 /* End */
 
 /*[[snsidentifier]]*/
-/* Image: */
+/* Images: */
 	.commentpostername a.linkmail[href*='sage']::after,
 	.commentpostername a.linkmail[href*='Sage']::after,
 	.commentpostername a.linkmail[href*='SAGE']::after {
@@ -1525,9 +1529,9 @@ domain('images.4chan.org'),
 /* End */
 
 /*[[BackLinks]]*/
-/* Top: */
+/* Normal (4chan default): */
 
-/* Bottom Right: */
+/* Move to Bottom Right: */
 	form[name='delform'] td.reply,
 	form[name='delform'] td.replyhl {
 		display: inline-block;
@@ -1558,7 +1562,7 @@ domain('images.4chan.org'),
 	.replyhl .container ~ blockquote {
 		margin: 12px 40px 20px;
 	}
-/* Bottom Left: */
+/* Move to Bottom Left: */
 	form[name='delform'] td.reply,
 	form[name='delform'] td.replyhl {
 		display: inline-block;
