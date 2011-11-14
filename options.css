@@ -113,7 +113,7 @@ none
 /* End */
 
 /*[[StickyNavigation]]*/
-/* Yes: */
+/* Stickied Header / Pages */
 	#header,
 	.pages {
 		position: fixed !important;
@@ -164,7 +164,7 @@ none
 	#navbar #boardsMenu {
 		bottom: 26px !important;
 	}
-/* No: */
+/* Normal (4chan default) */
 	#header {
 		position: absolute !important;
 	}
@@ -176,7 +176,7 @@ none
 		position: fixed !important;
 		top: -101px !important;
 	}
-/* Invert */
+/* Inverted Stickied Header / Pages */
 	#header,
 	.pages {
 		position: fixed !important;
@@ -218,7 +218,7 @@ none
 		position: fixed !important;
 		top: -101px !important;
 	}
-/* Slideout */
+/* Slideout (with non-stickied header/pages) */
 	#header {
 		position: absolute !important;
 	}
@@ -276,7 +276,155 @@ none
 		text-align: center !important;
 		word-spacing: -3px !important;
 	}
-/* Slideout Invert */
+/* Slideout ONLY (entirely removed regular header) */
+	#header {
+		display: none !important;
+	}
+
+	.pages {
+		padding: 0 !important;
+	}
+
+	#navbot::after {
+		cursor: default;
+		position: fixed !important;
+		display: block !important;
+		left: auto !important;
+		right: 0 !important;
+		z-index: 97 !important;
+/*[[ChangeAlign]]*/	right: auto !important;/**/
+		top: 0 !important;
+		height: 15px !important;
+		width: 80px;
+		border-width: 0 1px 1px 0 !important;
+		font-size: 10px !important;
+		vertical-align: bottom !important;
+		text-align: center !important;
+		opacity: 0.5 !important;
+		content: '-Navigation-';
+	}
+	#navbot:hover::after {
+		top: 51px !important;
+		border: none !important;
+		opacity: 1 !important;
+		background: none !important;
+		z-index: 98 !important;
+	}
+
+	#navbot:hover {
+		top: 0 !important;
+		left: 11px !important;
+		z-index: 98 !important;
+	}
+
+	#navbot {
+		visibility: visible !important;
+		position: fixed !important;
+		top: -61px !important;
+		left: auto !important;
+		right: 0 !important;
+/*[[ChangeAlign]]*/		left: 0 !important;
+		right: auto !important;/**/
+		color: transparent !important;
+		padding: 0 10px 30px 10px !important;
+		border-width: 0 1px 1px 0 !important;
+		word-spacing: -2px !important;
+		width: 310px !important;
+		height: 40px !important;
+		text-align: center !important;
+		word-spacing: -3px !important;
+	}
+/* Bottom Slideout (non-stickied header/pages) */
+	#navtop {
+		display: none !important;
+	}
+
+	#navbot::after {
+		cursor: default;
+		position: fixed !important;
+		display: block !important;
+		left: auto !important;
+		right: 0 !important;
+		z-index: 98 !important;
+/*[[ChangeAlign]]*/right: auto !important;/**/
+		bottom: 1px !important;
+		height: 15px !important;
+		width: 80px;
+		border-width: 0 1px 1px 0 !important;
+		font-size: 10px !important;
+		vertical-align: bottom !important;
+		text-align: center !important;
+		opacity: 0.5 !important;
+		content: '-Navigation-';
+		z-index: 98;
+	}
+
+	#navbot:hover::after {
+		z-index: 98 !important;
+		border: none !important;
+		opacity: 1 !important;
+		background: none !important;
+	}
+
+	#navbot:hover {
+		bottom: 1px !important;
+		left: 11px !important;
+		z-index: 98 !important;
+	}
+
+	#navbot {
+		visibility: visible !important;
+		position: fixed !important;
+		bottom: -101px !important;
+		left: auto !important;
+		right: 0 !important;
+/*[[ChangeAlign]]*/		left: 0 !important;
+		right: auto !important;/**/
+		color: transparent !important;
+		padding: 0 10px 30px 10px !important;
+		border-width: 0 1px 1px 0 !important;
+		width: 310px !important;
+		height: 40px !important;
+		word-spacing: -3px !important;
+		text-align: center !important;
+	}
+/* Bottom Stickied Header (non-stickied pages) */
+	#header {
+		position: fixed !important;
+	}
+
+	.navlinks {
+		padding-top: 14px;
+	}
+
+	.navlinks {
+		padding-top: 0;
+	}
+
+	#header {
+		top: auto !important;
+		bottom: 1px !important;
+	}
+
+	#navbar {
+		margin-left: auto !important;
+		margin-right: -265px !important;
+/*[[ChangeAlign]]*/
+		margin-right: auto !important;
+		margin-left: -265px !important;
+/**/
+		bottom: 16px !important;
+		height: 26px !important;
+	}
+
+	#boardsMenu {
+		bottom: 46px !important;
+	}
+	#navbot {
+		position: fixed !important;
+		top: -101px !important;
+	}
+/* Bottom Slideout + Top Stickied Pages */
 	.pages {
 		position: fixed !important;
 		bottom: auto !important;
