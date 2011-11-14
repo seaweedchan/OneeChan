@@ -262,7 +262,7 @@ none
 	#navbot {
 		visibility: visible !important;
 		position: fixed !important;
-		top: -61px !important;
+		top: -101px !important;
 		left: auto !important;
 		right: 0 !important;
 /*[[ChangeAlign]]*/		left: 0 !important;
@@ -320,7 +320,7 @@ none
 	#navbot {
 		visibility: visible !important;
 		position: fixed !important;
-		top: -61px !important;
+		top: -101px !important;
 		left: auto !important;
 		right: 0 !important;
 /*[[ChangeAlign]]*/		left: 0 !important;
