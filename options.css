@@ -139,7 +139,8 @@ none
 
 	.pages {
 		top: auto !important;
-		bottom: 1px !important;
+		bottom: 0px !important;
+		padding-bottom: 1px !important;
 	}
 
 	#navbar {
