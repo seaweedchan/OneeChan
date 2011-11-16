@@ -120,8 +120,8 @@ none
 	}
 
 	.pages {
-		padding: 0 0 0 250px !important;
-		/*[[ChangeAlign]]*/padding: 0 250px 0 0 !important;/**/
+		margin: 0 0 0 250px !important;
+		/*[[ChangeAlign]]*/margin: 0 250px 0 0 !important;/**/
 	}
 
 	#navbot {
@@ -181,6 +181,7 @@ none
 	.pages {
 		position: fixed !important;
 	}
+
 
 	.navlinks {
 		padding-top: 14px;
