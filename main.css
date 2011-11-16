@@ -1046,7 +1046,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	.deletebuttons {
 		position: fixed !important;
 		top: auto !important;
-		left: 61px !important;
+		left: 200px !important;
 		right: auto !important;
 /*[[ChangeAlign]]*/
 		left: auto !important;
@@ -1299,15 +1299,24 @@ This style is designed for the following browsers, ordered alphabetically:
 	.op .favicon {
 		position: fixed !important;
 		top: 17px !important;
+		left: 12px !important;
+		right: auto !important;
+		/*[[ChangeAlign]]*/
 		right: 233px !important;
+		left: auto !important;/**/
 		margin-left: -10px !important;
 	}
 	#watcher::before {
 		content: "Watcher" !important;
 		font-size: 12px !important;
 		position: fixed !important;
-		right: 200px !important;
+
 		top: 20px !important;
+        	left: 20px !important;
+        	right: auto !important;
+		/*[[ChangeAlign]]*/
+        	right: 200px !important;
+		left: auto !important; /**/
 		min-width: 30px !important;
 		max-width: 30px !important;
 	}
