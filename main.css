@@ -556,36 +556,21 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	form[name^='post'] .postblock b {
 		position: absolute;
-		font-size: 75% !important;
-		text-transform: uppercase;
+		font-size: 12px !important;
 		z-index: 2;
 	}
 
 	form[name^='post'] tr:nth-of-type(1) .postblock b::after {
-		content: '#TRIPCODE##SECURETRIP';
+		content: ' #Tripcode';
 	}
 
-	form[name^='post'] tr:nth-of-type(2) .postblock b::after {
-		content: ' | NOKO | SAGE';
-	}
-
-	.postarea tbody > tr:nth-child(4) .postblock b {
+	.postarea tbody > tr:nth-child(4) .postblock b, .postarea tbody > tr:nth-child(5) .postblock b, .postarea tbody > tr:nth-child(6) .postblock b {
 		font-size: 0 !important;
 		color: transparent !important;
 	}
 
-	.postarea tr:nth-child(4) .postblock b::after {
-		font-size: 75% !important;
-		content: 'NEW THREAD' !important;
-	}
-
-	table[width='100%']~.postarea tr:nth-child(4) .postblock b::after {
-		content: 'REPLY' !important;
-	}
-
 	.postarea form[name^='post'] tr .postblock b {
 		right: 3px;
-		margin-top: -1px;
 	}
 
 	.fake input[type='file']::-webkit-file-upload-button,
