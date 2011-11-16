@@ -55,10 +55,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		-webkit-transform: scaleX(1);
 		transform: scaleX(1);/**/
 	}
-
-	body {
-/*[[Margin]]*/
-	}
 }
 
 @-moz-document domain('4chan.org') {
@@ -264,6 +260,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: static !important;
 		width: 110% !important;
 	}
+
 /*[[StickyNavigation]]*/
 	#header {
 		left: 250px !important;
@@ -319,6 +316,9 @@ This style is designed for the following browsers, ordered alphabetically:
 		border: none !important;
 		text-align: center;
 		margin: 0 1px 0 2px;
+	}
+	body {
+/*[[Margin]]*/
 	}
 /* moot's announcements */
 	h3 {
