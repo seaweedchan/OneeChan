@@ -1312,7 +1312,8 @@ none
 	#twi_table_div
 	td[style='border: 1px dashed;'],
 	td.reply > tr > td.reply,
-	.inline td.reply {
+	.inline td.reply,
+	h2 {
 		border-radius: 3px !important;
 		-o-border-radius: 3px !important;
 	}
