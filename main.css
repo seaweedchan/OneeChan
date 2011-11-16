@@ -318,7 +318,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	h3, font[color="red"] {
 		font-weight: 200 !important;
 	}
-	font[color="red"] {
+	font[color="red"], h2 {
 		/*[[redtext]]*/
 		position: relative !important;
 		top: 10px !important;
