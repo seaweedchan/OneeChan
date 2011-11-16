@@ -258,7 +258,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	#header > #navtop {
 	/* cripple the positioning of the top navigation */
 		position: static !important;
-		width: 110% !important;
+		width: 100% !important;
 	}
 
 /*[[StickyNavigation]]*/
@@ -317,9 +317,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		text-align: center;
 		margin: 0 1px 0 2px;
 	}
-	body {
-/*[[Margin]]*/
-	}
+
 /* moot's announcements */
 	h3 {
 		font-size: 14px !important; 
