@@ -540,6 +540,18 @@ none
 	div.logo > *:not(img) {
 		display: none;
 	}
+	div.logo {
+		position: fixed !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important;/**/
+		top: 140px !important;
+		width: 248px !important;
+		z-index: 1;
+		text-align: center;
+	}
 /* Board Name + Logo */
 	div.logo {
 		position: fixed !important;
