@@ -55,6 +55,9 @@ This style is designed for the following browsers, ordered alphabetically:
 		-webkit-transform: scaleX(1);
 		transform: scaleX(1);/**/
 	}
+	body {
+/*[[Margin]]*/
+	}
 }
 
 @-moz-document domain('4chan.org') {
