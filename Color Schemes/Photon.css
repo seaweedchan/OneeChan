@@ -230,7 +230,6 @@
 	#filter textarea,
 	#options input,
 	#options textarea,
-	#qr,
 	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
 	#quickrep,
 	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
@@ -242,6 +241,9 @@
 		.pages,
 	input[type='submit'] {
 		background-color: #FFFFEE !important;
+	}
+	#qr {
+		background-color: #EEE !important;
 	}
 
 	* {
@@ -303,7 +305,6 @@
 	.boxcontent input,
 	.boxcontent textarea,
 	div.postarea > form td:nth-of-type(3) > label input,
-	div[id^=qr],
 	table.reply[style^='clear: both'],
 	input,
 	textarea,
@@ -359,8 +360,13 @@
 	}
 	form[name^='post'] input[type='file'][name='upfile'],
 	#qr input[type='file'][name='upfile'] {
-		margin: 0 -1px -1px !important;
 		height: 21px !important;
+		margin: 0 0px -1px -1px !important;
+	}
+		body > table ~ form[name^='post'] input[type='file'][name='upfile'],
+	body > table ~ #qr input[type='file'][name='upfile'] {
+		height: 21px !important;
+		margin: 0 0px 0px !important;
 	}
 	.fake input[type='file']::-webkit-file-upload-button,
 	form[name^='post'] input[type='file'][name='upfile'],
