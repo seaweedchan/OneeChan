@@ -276,12 +276,12 @@ This style is designed for the following browsers, ordered alphabetically:
 		border-spacing: 0 !important;
 		left: 2px !important;
 		right: auto !important;
-		padding-right: 250px !important;
+		padding-right: 400px !important;
 /*[[ChangeAlign]]*/
 		left: auto !important;
 		right: 2px !important;
 		padding-right: 0 !important;
-		padding-left: 250px !important;/**/
+		padding-left: 400px !important;/**/
 		z-index: 1;
 	}
 

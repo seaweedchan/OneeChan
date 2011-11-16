@@ -52,8 +52,8 @@
 	-moz-appearance: none !important;
 		border:1px solid #CCC !important;
 	}
-	#header {
-		background-color: #EEE !important;
+	#header, .pages {
+		background-color: rgba(238,238,238,0.9) !important;
 	}
 	#navbot, #navbot::after {
 		background-color: #DDD !important;
@@ -238,7 +238,6 @@
 	#thread_filter textarea,
 	#updater input:not([type='checkbox']),
 	.bd,
-		.pages,
 	input[type='submit'] {
 		background-color: #FFFFEE !important;
 	}
