@@ -312,7 +312,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 /* moot's announcements */
-	h3 {
+	h3, h2 {
 		font-size: 14px !important; 
 	}
 	h3, font[color="red"] {
