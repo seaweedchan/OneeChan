@@ -1495,6 +1495,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	body {
 		height: 100% !important;
 		min-width: 101% !important;
+		width: 101% !important;
 		overflow-y:scroll;
 	}
 
