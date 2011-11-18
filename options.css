@@ -1372,8 +1372,7 @@ none
 	.pages b,
 	.pages input,
 	a,
-	.new,
-	#qr a#attach::after {
+	.new {
 		border-radius: 9px;
 	}
 

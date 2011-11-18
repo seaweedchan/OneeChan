@@ -515,8 +515,8 @@ This style is designed for the following browsers, ordered alphabetically:
 	.postarea #com_submit + label {
 		font-size: 12px !important;
 		top: auto !important;
-		bottom: 2px;
-		right: 70px;
+		bottom: 0px;
+		right: 20px;
 		vertical-align: bottom;
 	}
 
@@ -608,7 +608,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	#captchas {
 		position: absolute;
 		right: 7px;
-		margin-top: 2px;
+		margin-top: 4px;
 	}
 
 	#files a {
@@ -623,8 +623,8 @@ This style is designed for the following browsers, ordered alphabetically:
 		font-size: 0 !important;
 		visibility: hidden;
 		position: absolute;
-		bottom: 24px;
-		right: 75px;
+		bottom: 3px;
+		right: 4px;
 	}
 
 	#qr a#attach::after {
@@ -634,6 +634,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		width: 16px;
 		content: "+";
 		text-align: center;
+		font-weight: bold !important;
 	}
 /* Image Hover and Image Expansion */
 /*[[ihover]]*/
@@ -754,12 +755,14 @@ This style is designed for the following browsers, ordered alphabetically:
 		background-image: none !important;
 	}
 /* Post form Checkboxes */
-	form[name^='post'] tr:nth-of-type(3) > td:nth-of-type(3) {
-	/* Removes the brackets around Spoiler Image */
+	#qr_form input[name="email"] + label {
+		/* Removes the brackets around Spoiler Image */
 		font-size: 0 !important;
-		color: transparent;
+	}		
+	#qr_form input[name="email"] + label::after {
+		content: 'Spoiler Image?' !important;
+		font-size: 12px !important;
 	}
-
 	form[name^='post'] input[name='email'] + label {
 		position: absolute;
 		top: auto;
@@ -774,7 +777,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#qr_form input[name='email'] + label {
 		bottom: 1px;
-		right: 4px;
+		right: 20px;
 	}
 
 	#qr > form[name^='post'] #com_submit + label,
