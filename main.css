@@ -779,7 +779,10 @@ This style is designed for the following browsers, ordered alphabetically:
 		bottom: 1px;
 		right: 20px;
 	}
-
+	#qr_form input[name='email'] + label input {
+		position: relative !important;
+		top: 1px !important;
+	}
 	#qr > form[name^='post'] #com_submit + label,
 	#quickrep > form[name^='post'] #com_submit + label {
 		top: auto !important;
