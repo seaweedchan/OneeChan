@@ -187,7 +187,8 @@
 	#qp,
 	#twi_table_div,
 	#updater #count:not(.new)::after,
-	font[color="red"] {
+	font[color="red"],
+	#qr_form input[name="email"] + label::after {
 		color: #800000 !important;
 	}
 	a.quotelink {
@@ -443,7 +444,8 @@
 	#qp,
 	#twi_table_div,
 	#updater #count:not(.new)::after,
-	font[color="red"] {
+	font[color="red"],
+	#qr_form input[name="email"] + label::after {
 		color: #000 !important;
 	}
 	a.quotelink {

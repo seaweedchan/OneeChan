@@ -758,6 +758,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	#qr_form input[name="email"] + label {
 		/* Removes the brackets around Spoiler Image */
 		font-size: 0 !important;
+		color: transparent !important;
 	}		
 	#qr_form input[name="email"] + label::after {
 		content: 'Spoiler Image?' !important;

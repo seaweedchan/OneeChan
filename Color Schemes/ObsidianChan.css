@@ -92,7 +92,8 @@
 	#qp,
 	#twi_table_div,
 	#updater #count:not(.new)::after,
-	font[color="red"] {
+	font[color="red"],
+	#qr_form input[name="email"] + label::after {
 		color: #FDFEFF !important;
 	}
 

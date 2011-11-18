@@ -56,7 +56,8 @@
 	#navbot::after,
 	#qp,
 	#twi_table_div,
-	#updater #count:not(.new)::after {
+	#updater #count:not(.new)::after,
+	#qr_form input[name="email"] + label::after {
 		color: #c5c8c6 !important;
 	}
 
