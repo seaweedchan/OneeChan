@@ -44,8 +44,7 @@
 	html body span[style='left: 5px; position: absolute;'] a,
 	input[type='submit'],
 	#com_submit,
-	input[type='file'] > input[type='button'],
-	#qr a#attach::after {
+	input[type='file'] > input[type='button'] {
 		background-color: #DDD !important;
 	}
 	td.reply, td.replyhl, #watcher, #navbot:after, #navbot {

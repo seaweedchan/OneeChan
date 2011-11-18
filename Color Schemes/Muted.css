@@ -192,7 +192,6 @@ background-image: none !important;
 	body,
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
-	#qr a#attach::after,
 	table.reply[style^='clear: both'] {
 		background-color: #fefefe !important;
 	}

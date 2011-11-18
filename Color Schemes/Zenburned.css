@@ -186,7 +186,6 @@ background-image: none !important;
 	.pages,
 	html,
 	body,
-	#qr a#attach::after,
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
 	table.reply[style^='clear: both'] {
