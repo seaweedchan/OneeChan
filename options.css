@@ -762,11 +762,7 @@ none
 		height: 47px !important;
 		width: 248px !important;
 	}
-/* Positioning "+" for files */
-	#qr a#attach {
-		bottom: 21px;
-		right: 80px;
-	}
+
 /* Errors */
 	[id^='q'] .error {
 		visibility: visible !important;
@@ -872,11 +868,7 @@ none
 		height: 47px !important;
 		width: 248px !important;
 	}
-/* Positioning "+" for files */
-	#qr a#attach {
-		bottom: 21px;
-		right: 80px;
-	}
+
 /* Errors */
 	[id^='q'] .error {
 		visibility: visible !important;
@@ -1019,11 +1011,7 @@ none
 		height: 47px !important;
 		width: 248px !important;
 	}
-/* Positioning "+" for files */
-	#qr a#attach {
-		bottom: 21px;
-		right: 80px;
-	}
+
 /* Errors */
 	[id^='q'] .error {
 		visibility: visible !important;
@@ -1125,11 +1113,7 @@ none
 		height: 47px !important;
 		width: 248px !important;
 	}
-/* Positioning "+" for files */
-	#qr a#attach {
-		bottom: 21px;
-		right: 80px;
-	}
+
 /* Errors */
 	[id^='q'] .error {
 		visibility: visible !important;
