@@ -564,7 +564,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		content: ' #Tripcode';
 	}
 
-	.postarea tbody > tr:nth-child(4) .postblock b, .postarea tbody > tr:nth-child(5) .postblock b, .postarea tbody > tr:nth-child(6) .postblock b {
+	.postarea tbody > tr:nth-child(4) .postblock b, .postarea tbody > tr:nth-child(5) .postblock b, .postarea tbody > tr:nth-child(6) .postblock b, .postarea tbody > tr:nth-child(7) .postblock b {
 		font-size: 0 !important;
 		color: transparent !important;
 	}
