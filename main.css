@@ -312,13 +312,13 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 /* moot's announcements */
-	h3, h2 {
+	h3, h2, h1 {
 		font-size: 14px !important; 
 	}
 	h3, font[color="red"] {
 		font-weight: 200 !important;
 	}
-	font[color="red"], h2 {
+	font[color="red"], h2, h3, h1 {
 		/*[[redtext]]*/
 		position: relative !important;
 		top: 10px !important;
@@ -326,7 +326,9 @@ This style is designed for the following browsers, ordered alphabetically:
 	.pages input {
 		margin-bottom: 2px !important;
 	}
-
+	marquee {
+		display: none !important;
+	}
 	.pages b,
 	.pages input,
 	a,
