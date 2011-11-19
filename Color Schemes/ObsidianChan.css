@@ -174,8 +174,7 @@
 	.boxbar,
 	.deletebuttons input[value=Delete],
 	.top-box,
-	.yuimenuitem-selected,
-	h2 {
+	.yuimenuitem-selected {
 		background-color: rgba(0,0,0,0.4) !important;
 	}
 	.recaptchatable #recaptcha_response_field,
@@ -374,7 +373,6 @@
 	.deletebuttons input[value=Delete],
 	.recaptchatable #recaptcha_response_field,
 	.top-box,
-	h2,
 	input:not([type='checkbox']),
 	#qr_captcha input,
 	input[type='file'] > input[type='button'],
