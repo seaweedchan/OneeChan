@@ -1506,11 +1506,11 @@ domain('images.4chan.org'),
 
 /*[[MarginCenter]]*/
 /* No */
-		padding: 0 2px 0 252px !important;
-		/*[[ChangeAlign]]*/padding: 0 252px 0 2px !important;/**/
+		padding: 20px 2px 0 252px !important;
+		/*[[ChangeAlign]]*/padding: 20px 252px 0 2px !important;/**/
  	}
 /* Completely Centered */
-		padding: 0 25% 0 25% !important;
+		padding: 20px 25% 0 25% !important;
  	}
 	#header {
 		padding-left: 0px !important;
@@ -1519,8 +1519,8 @@ domain('images.4chan.org'),
 		padding-right: 0px !important;/**/
 	}
 /* Slightly, retain Sidebar alignment */
-		padding: 0 150px 0 252px !important;
-		/*[[ChangeAlign]]*/padding: 0 252px 0 150px !important;/**/
+		padding: 20px 150px 0 252px !important;
+		/*[[ChangeAlign]]*/padding: 20px 252px 0 150px !important;/**/
  	}
 	#header {
 		padding-left: 0px !important;
