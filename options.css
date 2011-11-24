@@ -1590,7 +1590,7 @@ none
 	.commentpostername a.linkmail[href*='NEKO']::after {
 		content: ' (neko) ';
 		color: #e42217 !important;
-}	}
+	}
 /* None: */
 
 /* End */
