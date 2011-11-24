@@ -1295,6 +1295,10 @@ This style is designed for the following browsers, ordered alphabetically:
 		height: 0px !important;
 	}
 	.op .favicon {
+		position: relative !important;
+		top: 2px !important;
+	}
+	body > table ~ form .op .favicon {
 		position: fixed !important;
 		top: 17px !important;
 		left: 12px !important;
