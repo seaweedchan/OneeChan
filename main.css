@@ -1113,8 +1113,9 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	#navlinks {
-		top: 0 !important;
-		z-index: 3 !important;
+		position: fixed !important;
+		top: -4px !important;
+		z-index: 99 !important;
 	}
 /*[[ReturnButton]]*/
 /* File Clearer support */
