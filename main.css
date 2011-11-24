@@ -533,6 +533,16 @@ This style is designed for the following browsers, ordered alphabetically:
 		right: 70px;
 		margin-top: 1px;
 	}
+
+	body:nth-of-type(1) #qr #com_submit + label {
+		margin-top: -4px !important;
+	}
+
+	body:nth-of-type(1) #qr #auto {
+		position: relative !important;
+		top: 5px !important;
+	}
+
 /* /mu/ last.fm userscript support */
 	#usernameText {
 		width: 200px !important;
