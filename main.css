@@ -275,20 +275,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		z-index: 98;
 	}
 
-	.pages {
-		width: 100% !important;
-		text-align: center !important;
-		border-spacing: 0 !important;
-		left: 2px !important;
-		right: auto !important;
-		padding-right: 400px !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;
-		padding-right: 0 !important;
-		padding-left: 400px !important;/**/
-		z-index: 1;
-	}
+
 
 	#footer {
 		z-index: -1;

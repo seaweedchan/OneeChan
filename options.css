@@ -165,6 +165,20 @@ none
 	#navbar #boardsMenu {
 		bottom: 26px !important;
 	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 400px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;
+		padding-right: 0 !important;
+		padding-left: 400px !important;/**/
+		z-index: 1;
+	}
 /* Normal (4chan default) */
 	#header {
 		position: absolute !important;
@@ -219,6 +233,20 @@ none
 	#navbot {
 		position: fixed !important;
 		top: -101px !important;
+	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 400px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;
+		padding-right: 0 !important;
+		padding-left: 400px !important;/**/
+		z-index: 1;
 	}
 /* Slideout (with non-stickied header/pages) */
 	#header {
@@ -278,6 +306,20 @@ none
 		text-align: center !important;
 		word-spacing: -3px !important;
 	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 250px !important;
+		padding-left: 250px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		z-index: 1;
+	}
+
 /* Slideout ONLY (entirely removed regular header) */
 	#header {
 		display: none !important;
@@ -336,6 +378,20 @@ none
 		text-align: center !important;
 		word-spacing: -3px !important;
 	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 250px !important;
+		padding-left: 250px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		z-index: 1;
+	}
+
 /* Bottom Slideout (non-stickied header/pages) */
 	#navtop {
 		display: none !important;
@@ -390,6 +446,20 @@ none
 		word-spacing: -3px !important;
 		text-align: center !important;
 	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 250px !important;
+		padding-left: 250px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		z-index: 1;
+	}
+
 /* Bottom Stickied Header (non-stickied pages) */
 	#header {
 		position: fixed !important;
@@ -426,6 +496,20 @@ none
 		position: fixed !important;
 		top: -101px !important;
 	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 250px !important;
+		padding-left: 250px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;/**/
+		z-index: 1;
+	}
+
 /* Bottom Slideout + Top Stickied Pages */
 	.pages {
 		position: fixed !important;
@@ -485,6 +569,20 @@ none
 		height: 40px !important;
 		word-spacing: -3px !important;
 		text-align: center !important;
+	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 400px !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 2px !important;
+		padding-right: 0 !important;
+		padding-left: 400px !important;/**/
+		z-index: 1;
 	}
 /* End */
 
