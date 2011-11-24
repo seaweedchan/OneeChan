@@ -191,6 +191,10 @@ none
 		padding-left: 400px !important;/**/
 		z-index: 1;
 	}
+	form[name='delform'] {
+		padding: 17px 0 0 0 !important;
+		margin: 0 0 0px !important;
+	}
 /* Normal (4chan default) */
 	#header {
 		position: absolute !important;
@@ -202,6 +206,10 @@ none
 	#navbot {
 		position: fixed !important;
 		top: -101px !important;
+	}
+	form[name='delform'] {
+		padding: 17px 0 0 0 !important;
+		margin: 0 0 0px !important;
 	}
 /* Inverted Stickied Header / Pages */
 	#header,
@@ -259,6 +267,16 @@ none
 		padding-right: 0 !important;
 		padding-left: 400px !important;/**/
 		z-index: 1;
+	}
+	body {
+		padding-top: 5px !important;
+	}
+	form[name='delform'] {
+		padding: 17px 0 0 0 !important;
+		margin: 0 0 0px !important;
+	}
+	body > table ~ form[name='delform'] {
+		padding-top: 0px !important;
 	}
 /* Slideout (with non-stickied header/pages) */
 	#header {
@@ -330,6 +348,10 @@ none
 		left: auto !important;
 		right: 2px !important;/**/
 		z-index: 1;
+	}
+	form[name='delform'] {
+		padding: 17px 0 0 0 !important;
+		margin: 0 0 0px !important;
 	}
 
 /* Slideout ONLY (entirely removed regular header) */
@@ -403,7 +425,13 @@ none
 		right: 2px !important;/**/
 		z-index: 1;
 	}
-
+	body {
+		padding-top: 5px !important;
+	}
+	form[name='delform'] {
+		padding: 0px 0 0 0 !important;
+		margin: 0 0 0px !important;
+	}
 /* Bottom Slideout (non-stickied header/pages) */
 	#navtop {
 		display: none !important;
@@ -471,7 +499,13 @@ none
 		right: 2px !important;/**/
 		z-index: 1;
 	}
-
+	body {
+		padding-top: 5px !important;
+	}
+	form[name='delform'] {
+		padding: 17px 0 0 0 !important;
+		margin: 0 0 0px !important;
+	}
 /* Bottom Stickied Header (non-stickied pages) */
 	#header {
 		position: fixed !important;
@@ -520,6 +554,13 @@ none
 		left: auto !important;
 		right: 2px !important;/**/
 		z-index: 1;
+	}
+	body {
+		padding-top: 5px !important;
+	}
+	form[name='delform'] {
+		padding: 0px 0 0 0 !important;
+		margin: 0 0 0px !important;
 	}
 
 /* Bottom Slideout + Top Stickied Pages */
@@ -595,6 +636,16 @@ none
 		padding-right: 0 !important;
 		padding-left: 400px !important;/**/
 		z-index: 1;
+	}
+	body {
+		padding-top: 5px !important;
+	}
+	form[name='delform'] {
+		padding: 17px 0 0 0 !important;
+		margin: 0 0 0px !important;
+	}
+	body > table ~ form[name='delform'] {
+		padding-top: 0px !important;
 	}
 /* End */
 

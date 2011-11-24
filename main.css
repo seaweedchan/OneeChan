@@ -824,10 +824,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		cursor: pointer !important;
 	}
 /* Posts */
-	form[name='delform'] {
-		padding: 17px 0 0 0 !important;
-		margin: 0 0 0px !important;
-	}
 	body > table ~ form[name='delform'] br[clear='left'],
 	form[name='delform'] center {
 		position: fixed;
