@@ -1370,10 +1370,10 @@ This style is designed for the following browsers, ordered alphabetically:
 /* 4sight */
 	body > a[style='cursor: pointer; float: right;'] {
 		position: fixed;
-		top:20px;
-		left: 20px;
+		top:36px;
+		left: 2px;
 		/*[[ChangeAlign]]*/
-		right: 20px !important;
+		right: 2px !important;
 		left: auto !important;/**/
 		z-index: 96;
 	}
