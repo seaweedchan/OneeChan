@@ -1,9 +1,7 @@
--Get input on more things to change
 -Play with different mascots and how they could work with the textarea height option
--Test in Opera and consider changes for it, look into Opera css hacks
 -Port PaisleyChan
--Change slideout nav option to work with rounded corners on slideout invert
--Horizontal slideout postform
+-Horizontal slideout postform, ala Dark Flat
 -Consider better ways to handle the Announcement
--Add webkit box reflect to the logo image for those using a modern browser
--Edit postform labels because they currently just get in the way (set font size, remove uppercase transform, remove pseudo-selectors for saved space, remove "File" entirely because it fucks with Opera)
+-More mascots
+-Return of board highlighting
+-Set up for release, everything above can come after v1.0
