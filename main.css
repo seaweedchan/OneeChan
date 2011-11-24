@@ -1101,7 +1101,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#navlinks {
 		position: fixed !important;
-		top: -4px !important;
+		top: 0px !important;
 		z-index: 99 !important;
 	}
 /*[[ReturnButton]]*/
