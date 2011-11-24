@@ -62,8 +62,8 @@
 	td.replyhl {
 		border: 1px solid #ba9dbf !important;
 	}
-	#header {
-		background-color: #FFFFEE !important;
+	#header, .pages {
+		background-color: rgba(255,255,239,0.9) !important;
 	}
 	#navbot::after, #navbot {
 		background-color: #D9BFB7 !important;
@@ -242,7 +242,6 @@
 	#thread_filter textarea,
 	#updater input:not([type='checkbox']),
 	.bd,
-		.pages,
 	input[type='submit'] {
 		background-color: #FFFFEE !important;
 	}
@@ -317,8 +316,8 @@
 	td.replyhl {
 		border: 1px solid #ba9dbf !important;
 	}
-	#header {
-		background-color: #EEF2FF !important;
+	#header, .pages {
+		background-color: rgba(238,242,255,0.9) !important;
 	}
 	#navbot::after, #navbot {
 		background-color: #d6daf0 !important;
@@ -497,7 +496,6 @@
 	#thread_filter textarea,
 	#updater input:not([type='checkbox']),
 	.bd,
-	.pages,
 	input[type='submit'] {
 		background-color: #eef2ff !important;
 	}

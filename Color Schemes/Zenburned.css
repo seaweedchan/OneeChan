@@ -168,7 +168,6 @@ background-image: none !important;
 	input[type='file'] > input[type='button']:hover,
 	#filter input,
 	#filter textarea,
-	#header,
 	#options input,
 	#options textarea,
 	#qr,
@@ -183,13 +182,16 @@ background-image: none !important;
 	.boxcontent > hr,
 	.boxcontent input,
 	.boxcontent textarea,
-	.pages,
 	html,
 	body,
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
 	table.reply[style^='clear: both'] {
 		background-color: #3f3f3f !important;
+	}
+
+	#header, .pages {
+		background-color: rgba(63,63,63,0.9) !important;
 	}
 
 	#navbot,

@@ -149,7 +149,6 @@
 	div[id^='4chan_ext_iqr'] *,
 	#filter input,
 	#filter textarea,
-	#header,
 	#options input,
 	#options textarea,
 	#qr,
@@ -164,13 +163,16 @@
 	.boxcontent > hr,
 	.boxcontent input,
 	.boxcontent textarea,
-	.pages,
 	html,
 	body,
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
 	table.reply[style^='clear: both'] {
 		background-color: #1d1f21 !important;
+	}
+
+	#header, .pages {
+		background-color: rgba(29,31,33,0.9) !important;
 	}
 
 	#navbot,

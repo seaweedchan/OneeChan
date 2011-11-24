@@ -161,7 +161,6 @@ background-image: none !important;
 	div[id^='4chan_ext_iqr'] *,
 	#filter input,
 	#filter textarea,
-	#header,
 	#options input,
 	#options textarea,
 	#qr,
@@ -176,7 +175,6 @@ background-image: none !important;
 	.boxcontent > hr,
 	.boxcontent input,
 	.boxcontent textarea,
-	.pages,
 	html,
 	body,
 	div.postarea > form td:nth-of-type(3) > label input,
@@ -184,6 +182,10 @@ background-image: none !important;
 	table[width='100%']~#qr a[name='attach']::after,
 	table.reply[style^='clear: both'] {
 		background-color: #073642 !important;
+	}
+
+	#header, .pages {
+		background-color: rgba(7,54,66,0.9) !important;
 	}
 
 	#navbot,
