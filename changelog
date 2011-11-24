@@ -1,5 +1,20 @@
 OneeChan changelog
 
+v1.0:
+-Slideout navigation support for box-shadow and border-radius added
+-Announcement issues from AppChan fixed, font sizes reduced
+-Front page centering issue from AppChan fixed (issue was Firefox only)
+-Header width issue from AppChan fixed
+-Changes to postform labels
+-#attach moved intelligently
+-Positioning of labels and checkboxes being different in Chrome fixed
+-Removed brackets from "Spoiler Image?"
+-Removal of marquee so moot can never have scrolling text again :3
+-Moved redtext option so it only affects boards
+-Padding of .pages fixed, looked odd with different options
+-Reflection added to logo image for Chrome users
+-New mascots added (Mio, Seraphim, Asuka, Patchouli)
+
 v0.5:
 -New option: Textarea height
 -Redesigned report button
