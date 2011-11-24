@@ -195,6 +195,9 @@ none
 		padding: 17px 0 0 0 !important;
 		margin: 0 0 0px !important;
 	}
+	#header {
+		top: 0px !important;
+	}
 /* Normal (4chan default) */
 	#header {
 		position: absolute !important;
@@ -210,6 +213,9 @@ none
 	form[name='delform'] {
 		padding: 17px 0 0 0 !important;
 		margin: 0 0 0px !important;
+	}
+	#header {
+		top: 0px !important;
 	}
 /* Inverted Stickied Header / Pages */
 	#header,
@@ -353,12 +359,10 @@ none
 		padding: 17px 0 0 0 !important;
 		margin: 0 0 0px !important;
 	}
-
-/* Slideout ONLY (entirely removed regular header) */
 	#header {
-		display: none !important;
+		top: 0px !important;
 	}
-
+/* Slideout ONLY (entirely removed regular header) */
 	.pages {
 		padding: 0 !important;
 	}
@@ -431,6 +435,9 @@ none
 	form[name='delform'] {
 		padding: 0px 0 0 0 !important;
 		margin: 0 0 0px !important;
+	}
+	#header {
+		top: -150px !important;
 	}
 /* Bottom Slideout (non-stickied header/pages) */
 	#navtop {
@@ -505,6 +512,9 @@ none
 	form[name='delform'] {
 		padding: 17px 0 0 0 !important;
 		margin: 0 0 0px !important;
+	}
+	#header {
+		top: 0px !important;
 	}
 /* Bottom Stickied Header (non-stickied pages) */
 	#header {
@@ -646,6 +656,9 @@ none
 	}
 	body > table ~ form[name='delform'] {
 		padding-top: 0px !important;
+	}
+	#header {
+		top: -150px !important;
 	}
 /* End */
 
