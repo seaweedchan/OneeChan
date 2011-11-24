@@ -274,21 +274,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		z-index: 98;
 	}
 
-	.pages {
-		width: 100% !important;
-		text-align: center !important;
-		border-spacing: 0 !important;
-		left: 2px !important;
-		right: auto !important;
-		padding-right: 400px !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;
-		padding-right: 0 !important;
-		padding-left: 400px !important;/**/
-		z-index: 1;
-	}
-
 	#footer {
 		z-index: -1;
 		visibility: hidden;
@@ -836,10 +821,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		cursor: pointer !important;
 	}
 /* Posts */
-	form[name='delform'] {
-		padding: 17px 0 0 0 !important;
-		margin: 0 0 0px !important;
-	}
 	body > table ~ form[name='delform'] br[clear='left'],
 	form[name='delform'] center {
 		position: fixed;
@@ -1114,7 +1095,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#navlinks {
 		position: fixed !important;
-		top: -4px !important;
+		top: 0px !important;
 		z-index: 99 !important;
 	}
 /*[[ReturnButton]]*/
@@ -1299,6 +1280,10 @@ This style is designed for the following browsers, ordered alphabetically:
 		height: 0px !important;
 	}
 	.op .favicon {
+		position: relative !important;
+		top: 2px !important;
+	}
+	body > table ~ form .op .favicon {
 		position: fixed !important;
 		top: 17px !important;
 		left: 12px !important;
@@ -1445,24 +1430,26 @@ This style is designed for the following browsers, ordered alphabetically:
 }
 
 @-moz-document url-prefix('http://www.4chan.org/') {
+	html {
+		display: table !important;
+	}
+
+	body {
+		display: table-cell !important;
+		vertical-align: middle !important;
+	}
 	html,
 	body {
-		height: 100%;
-		width: 100%;
+		height: 100% !important;
+		width: 100% !important;
 	}
-
-	body {
-		display: -webkit-box;
-		-webkit-box-pack: center;
-		-webkit-box-align: center;
-		display: -moz-box;
-		-moz-box-pack: center;
-		-moz-box-align: center;
-		display: -o-box;
-		-o-box-pack: center;
-		-o-box-align: center;
+	#bd {
+		width: 630px !important;
+		margin: auto !important;
 	}
-
+	#announce {
+		width: 630px !important;
+	}
 	#doc,
 	#ft ul {
 		min-width: 0 !important;
@@ -1549,9 +1536,6 @@ This style is designed for the following browsers, ordered alphabetically:
 @-moz-document url('http://www.4chan.org/'),
 url('http://www.4chan.org/#'),
 url('http://www.4chan.org') {
-	#announce {
-		max-width: 610px;
-	}
 
 	.yui-g {
 		display: none !important;
