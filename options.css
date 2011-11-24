@@ -58,7 +58,7 @@ none
 /*[[Font]]*/
 /* Don't Care: */
 /* Common Linux font, web font, common Windows font 1, commont WIndows font 2, common OS X font, common font */
-'Ubuntu', 'Droid Sans', 'Terminus', 'Segoe UI', 'Calibri', 'Lucida Grande', 'Helvetica'
+'Ubuntu', 'Droid Sans', 'Terminus', 'Segoe UI', 'Calibri', 'Lucida Grande', 'Arial', 'Helvetica Neue', 'Helvetica'
 /* Ubuntu: */
 'Ubuntu'
 /* Droid Sans: */
@@ -71,8 +71,10 @@ none
 'Calibri'
 /* Lucidia Grande */
 'Lucida Grande'
-/* Sans-Serif */
-'sans-serif'
+/* Arial */
+'Arial'
+/* Helvetica */
+'Helvetica Neue', 'Helvetica'
 /* Futura Lt*/
 'Futura Lt'
 /* Profont */
@@ -80,13 +82,15 @@ none
 /* END */
 
 /*[[FontSize]]*/
-/* Small */
+/* Small (10px) */
+10px
+/* Normal (12px) */
 12px
-/* Normal */
+/* Medium (13px) */
 13px
-/* Medium */
+/* Large (14px) */
 14px
-/* Large */
+/* Extra Large (16px) */
 16px
 /* END */
 
