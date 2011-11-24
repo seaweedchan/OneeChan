@@ -1355,29 +1355,40 @@ This style is designed for the following browsers, ordered alphabetically:
 /* 4sight */
 	body > a[style='cursor: pointer; float: right;'] {
 		position: fixed;
-		top:36px;
-		left: 2px;
+		top:-119px;
+		left: 60px;
 		/*[[ChangeAlign]]*/
-		right: 2px !important;
+		right: 60px !important;
 		left: auto !important;/**/
 		z-index: 96;
+		font-size: 0px !important;
+		
 	}
 
-	table[style='width: 100%; height: 300px; text-align: center; table-layout: fixed; border-collapse: collapse;'] {
-		height: 700px !important;
+	body > a[style='cursor: pointer; float: right;']::after {
+		content: "Search" !important;
+		font-size: 12px !important;
+		position: fixed !important;
+		top: 19px !important;
+		left: 60px;
+		/*[[ChangeAlign]]*/
+		right: 60px !important;
+		left: auto !important;/**/
 	}
 
-	div[style='height: 300px; overflow-y: auto;'] {
-		height: 700px !important;
+	div[style="width: 100%; "] {
+		position: relative !important;
+		top: 60px !important;
 	}
 
 	#fs_preview {
-		height: 700px !important;
+		height: 400px !important;
 	}
 
 	#fs_search {
 		min-width: 138px !important;
 		max-width: 138px !important;
+	}	max-width: 138px !important;
 	}
 /*[[PagesPosition]]*/
 /*[[ColorScheme]]*/
