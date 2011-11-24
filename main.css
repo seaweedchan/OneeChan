@@ -58,6 +58,11 @@ This style is designed for the following browsers, ordered alphabetically:
 	body {
 /*[[Margin]]*/
 	}
+	font[color="red"], h2, h3, h1 {
+		/*[[redtext]]*/
+		position: relative !important;
+		top: 10px !important;
+	}
 }
 
 @-moz-document domain('4chan.org') {
@@ -317,11 +322,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 	h3, font[color="red"] {
 		font-weight: 200 !important;
-	}
-	font[color="red"], h2, h3, h1 {
-		/*[[redtext]]*/
-		position: relative !important;
-		top: 10px !important;
 	}
 	.pages input {
 		margin-bottom: 2px !important;
