@@ -541,7 +541,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
 	#qr #com_submit + label {
-		margin-top: -4px !important;
+		margin-top: -3px !important;
 	}
 	#qr #auto {
 		position: relative !important;
