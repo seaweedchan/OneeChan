@@ -54,6 +54,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		-o-transform: scaleX(1);
 		-webkit-transform: scaleX(1);
 		transform: scaleX(1);/**/
+		z-index: 3 !important;
 	}
 	body {
 /*[[Margin]]*/

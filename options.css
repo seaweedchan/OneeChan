@@ -45,9 +45,9 @@
 /* Asuka Langley Soryu: */
 		content: url('http://i.imgur.com/Wj7s7.png');
 		bottom: 268px;
-/* Mio Akiyama */
-		content: url('http://i.imgur.com/bLMW0.png');
-		bottom: 268px;
+/* Nakano Azusa */
+		content: url('http://i.imgur.com/6c3p3.png');
+		bottom: 198px;
 /* Seraphim */
 		content: url('http://i.imgur.com/PA7pJ.png');
 		bottom: 268px;
@@ -1791,9 +1791,11 @@ domain('images.4chan.org'),
 	#watcher:hover {
 		position: fixed !important;
 		top: 34px !important;
+		z-index: 4 !important;
 	}
 /* Disabled: */
 	#watcher {
 		top: 40px !important;
+		z-index: 4 !important;
 	}
 /* End */
