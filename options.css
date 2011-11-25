@@ -185,10 +185,8 @@ none
 		right: auto !important;
 		padding-right: 400px !important;
 /*[[ChangeAlign]]*/
-		left: auto !important;
 		right: 2px !important;
-		padding-right: 0 !important;
-		padding-left: 400px !important;/**/
+		padding-right: 0 !important;/**/
 		z-index: 1;
 	}
 	form[name='delform'] {
@@ -268,10 +266,8 @@ none
 		right: auto !important;
 		padding-right: 400px !important;
 /*[[ChangeAlign]]*/
-		left: auto !important;
 		right: 2px !important;
-		padding-right: 0 !important;
-		padding-left: 400px !important;/**/
+		padding-right: 0 !important;/**/
 		z-index: 1;
 	}
 	body {
@@ -641,10 +637,8 @@ none
 		right: auto !important;
 		padding-right: 400px !important;
 /*[[ChangeAlign]]*/
-		left: auto !important;
 		right: 2px !important;
-		padding-right: 0 !important;
-		padding-left: 400px !important;/**/
+		padding-right: 0 !important;/**/
 		z-index: 1;
 	}
 	body {
