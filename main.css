@@ -1331,7 +1331,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		-moz-border-radius: 0;
 		-o-border-radius: 0;
 		border-radius: 0;
-		z-index: 2 !important;
 	}
 
 	#threadwatcher .postblock {
