@@ -1,5 +1,16 @@
 OneeChan changelog
 
+v1.1:
+-New option: Slideout Watcher?
+-Noko/Sega Identifiers moved into their own option, separate from Sage Identifier
+-Sans-serif removed, replaced with separate Arial and Helvetica fonts
+-Mascot for Azusa changed, thanks to /w/
+-Two font size options added: Extra Small (10px), Small (11px)
+-Stickied pages padding bug fixed
+-Watch button changed to static position, but only outside of threads
+-Report button redesign removed because it doesn't work with Chrome
+-Fixes for 4sight
+
 v1.0:
 -Slideout navigation support for box-shadow and border-radius added
 -Announcement issues from AppChan fixed, font sizes reduced
@@ -13,7 +24,7 @@ v1.0:
 -Moved redtext option so it only affects boards
 -Padding of .pages fixed, looked odd with different options
 -Reflection added to logo image for Chrome users
--New mascots added (Mio, Seraphim, Asuka, Patchouli)
+-New mascots added (Azusa, Seraphim, Asuka, Patchouli)
 -Made #header slightly transparent
 
 v0.5:
