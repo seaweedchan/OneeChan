@@ -1,7 +1,6 @@
--Play with different mascots and how they could work with the textarea height option
 -Port PaisleyChan
 -Horizontal slideout postform, ala Dark Flat
 -Consider better ways to handle the Announcement
 -More mascots
 -Return of board highlighting
--Set up for release, everything above can come after v1.0
+-Add side slideout option
