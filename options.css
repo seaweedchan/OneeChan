@@ -1553,6 +1553,7 @@ none
 	.commentpostername a.linkmail[href*='sage']::after,
 	.commentpostername a.linkmail[href*='Sage']::after,
 	.commentpostername a.linkmail[href*='SAGE']::after {
+		content: ' (sage) ';
 		color: #e42217 !important;
 	}
 /* None: */
