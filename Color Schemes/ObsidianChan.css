@@ -211,7 +211,8 @@
 	.pages,
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
-	table.reply[style^='clear: both'] {
+	table.reply[style^='clear: both'],
+	#options.reply.dialog {
 		background-color: rgba(0,0,0,0.7) !important;
 	}
 

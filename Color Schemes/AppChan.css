@@ -142,7 +142,8 @@ background-image: none !important;
 	select,
 	td.postblock,
 	td.reply,
-	textarea {
+	textarea,
+	#options.reply.dialog {
 		background-color: #333 !important;
 	}
 

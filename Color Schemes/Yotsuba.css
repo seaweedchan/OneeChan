@@ -53,7 +53,8 @@
 	html body span[style='left: 5px; position: absolute;'] a,
 	input[type='submit'],
 	#com_submit,
-	input[type='file'] > input[type='button'] {
+	input[type='file'] > input[type='button'],
+	#options.reply.dialog {
 		background-color: #F0E0D6 !important;
 	}
 	td.reply {
@@ -307,7 +308,8 @@
 	input[type='submit'],
 	#com_submit,
 	input[type='file'] > input[type='button'],
-	#qr a#attach::after {
+	#qr a#attach::after,
+	#options.reply.dialog {
 		background-color: #d6daf0 !important;
 	}
 	td.reply {

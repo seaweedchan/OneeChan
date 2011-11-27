@@ -158,7 +158,8 @@ background-image: none !important;
 	textarea,
 	#main,
 	#optionsbar,
-	#options .dialog {
+	#options .dialog,
+	#options.reply.dialog {
 		background-color: #575757 !important;
 	}
 
