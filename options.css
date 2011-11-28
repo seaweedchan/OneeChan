@@ -1786,7 +1786,7 @@ domain('images.4chan.org'),
 	#watcher:hover {
 		position: fixed !important;
 		top: 34px !important;
-		z-index: 4 !important;
+		z-index: 6 !important;
 	}
 /* Disabled: */
 	#watcher {
