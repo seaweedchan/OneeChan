@@ -278,6 +278,15 @@ background-image: none !important;
 		background: #111 !important;
 	}
 
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	input[type=checkbox]:checked,
+	#options input[type=checkbox]:checked,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
+	#qr label input:checked {
+                background-image: url('http://i.imgur.com/CAewG.png') !important;
+	}
+	}
+	
 	#crntBoard {
 		border-right-color: #3f3f3f !important;
 	}

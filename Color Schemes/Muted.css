@@ -266,6 +266,15 @@ background-image: none !important;
 		background: #aaa !important;
 	}
 
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	input[type=checkbox]:checked,
+	#options input[type=checkbox]:checked,
+	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
+	#qr label input:checked {
+                background-image: url('http://i.imgur.com/TyFWy.png') !important;
+	}
+	}
+	
 	#crntBoard {
 		border-right-color: #e7e7e7 !important;
 	}
