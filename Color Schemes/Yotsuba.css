@@ -63,7 +63,10 @@
 	td.replyhl {
 		border: 1px solid #ba9dbf !important;
 	}
-	#header, .pages {
+	#header {
+		background-color: rgba(254,216,179,0.9) !important;
+	}	
+	.pages {
 		background-color: rgba(255,255,239,0.9) !important;
 	}
 	#navbot::after, #navbot {
@@ -318,7 +321,10 @@
 	td.replyhl {
 		border: 1px solid #ba9dbf !important;
 	}
-	#header, .pages {
+	#header { 
+		background-color: rgba(211,215,238,0.9) !important;
+	}
+	.pages {
 		background-color: rgba(238,242,255,0.9) !important;
 	}
 	#navbot::after, #navbot {
