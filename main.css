@@ -1378,11 +1378,13 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	div[style="width: 100%; "] {
 		position: relative !important;
-		top: 60px !important;
+		top: 200px !important;
+                max-width: 80% !important;
+		margin: auto !important;
 	}
 
 	#fs_preview {
-		height: 400px !important;
+		height: 100% !important;
 	}
 
 	#fs_search {
