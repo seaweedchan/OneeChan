@@ -1266,7 +1266,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#watcher /* 4chan x thread watcher */ {
 		position: fixed !important;
-		top: -300px !important;
+		top: -1000px !important;
 		right: auto !important;
 		left: 2px !important;
 /*[[ChangeAlign]]*/
