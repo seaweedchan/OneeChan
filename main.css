@@ -1379,8 +1379,13 @@ This style is designed for the following browsers, ordered alphabetically:
 	div[style="width: 100%; "] {
 		position: relative !important;
 		top: 200px !important;
-                max-width: 80% !important;
+                max-width: 90% !important;
+		min-height: 60% !important;
 		margin: auto !important;
+	}
+
+	table[style="width: 100%; height: 450px; table-layout: fixed; border-collapse: collapse;"] {
+		height: 70% !important;
 	}
 
 	#fs_preview {
