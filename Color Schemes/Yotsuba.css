@@ -514,7 +514,7 @@
 	#options input[type=checkbox]:checked,
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input[type='checkbox']:checked {
-		background: #bcc0d4 !important;
+		background-color: #bcc0d4 !important;
 	}
 
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
