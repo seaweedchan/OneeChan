@@ -5,52 +5,52 @@
 /*[[background]]*/
 /* Furudo Erika: */
 		content: url('http://i.imgur.com/zLsPY.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Shinonome Hakase: */
 		content: url('http://i.imgur.com/TBHI6.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Kagamine Rin: */
 		content: url('http://i.imgur.com/fXXd2.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Kinomoto Sakura: */
 		content: url('http://i.imgur.com/Ve0hl.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Shana: */
 		content: url('http://i.imgur.com/k3fgX.png');
 		left: 0;
 /* Ika Musume: */
 		content: url('http://i.imgur.com/uUhGG.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Iwakura Lain: */
 		content: url('http://i.imgur.com/AfjG9.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Hatsune Miku: */
 		content: url('http://i.imgur.com/vE3FJ.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Koiwai Yotsuba: */
 		content: url('http://i.imgur.com/1MyDM.png');
-		bottom: 269px;
+		bottom: 249px;
 /* BLACK ROCK SHOOTER: */
 		content: url('http://i.imgur.com/VidKo.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Nagato Yuki: */
 		content: url('http://i.imgur.com/VAWnW.png');
-		bottom: 269px;
+		bottom: 249px;
 /* Golden Darkness: */
 		content: url('http://i.imgur.com/lYGo4.png');
 		bottom: 0;
 /* Patchouli Knowledge: */
 		content: url('http://i.imgur.com/QoKJb.png');
-		bottom: 268px;
+		bottom: 248px;
 /* Asuka Langley Soryu: */
 		content: url('http://i.imgur.com/Wj7s7.png');
-		bottom: 268px;
+		bottom: 248px;
 /* Nakano Azusa */
 		content: url('http://i.imgur.com/6c3p3.png');
-		bottom: 198px;
+		bottom: 148px;
 /* Seraphim */
 		content: url('http://i.imgur.com/PA7pJ.png');
-		bottom: 268px;
+		bottom: 248px;
 /* None: */
 none
 /* End */
@@ -136,11 +136,6 @@ none
 		/*[[ChangeAlign]]*/margin: 0 250px 0 0 !important;/**/
 	}
 
-	#navbot {
-		position: fixed !important;
-		top: -101px !important;
-	}
-
 	.navlinks {
 		padding-top: 14px
 	}
@@ -204,10 +199,6 @@ none
 	.pages {
 		padding: 0 !important;
 	}
-	#navbot {
-		position: fixed !important;
-		top: -101px !important;
-	}
 	form[name='delform'] {
 		padding: 17px 0 0 0 !important;
 		margin: 0 0 0px !important;
@@ -254,10 +245,6 @@ none
 	#boardsMenu {
 		bottom: 46px !important;
 	}
-	#navbot {
-		position: fixed !important;
-		top: -101px !important;
-	}
 	.pages {
 		width: 100% !important;
 		text-align: center !important;
@@ -280,137 +267,9 @@ none
 	body > table ~ form[name='delform'] {
 		padding-top: 0px !important;
 	}
-/* Slideout (with non-stickied header/pages) */
-	#header {
-		position: absolute !important;
-	}
-
+/* Removed regular header */
 	.pages {
 		padding: 0 !important;
-	}
-
-	#navbot::after {
-		cursor: default;
-		position: fixed !important;
-		display: block !important;
-		left: auto !important;
-		right: 0 !important;
-		z-index: 97 !important;
-/*[[ChangeAlign]]*/	right: auto !important;/**/
-		top: 0 !important;
-		height: 15px !important;
-		width: 80px;
-		border-width: 0 1px 1px 0 !important;
-		font-size: 10px !important;
-		vertical-align: bottom !important;
-		text-align: center !important;
-		opacity: 0.5 !important;
-		content: '-Navigation-';
-	}
-	#navbot:hover::after {
-		top: 51px !important;
-		border: none !important;
-		opacity: 1 !important;
-		background: none !important;
-		z-index: 98 !important;
-	}
-
-	#navbot:hover {
-		top: 0 !important;
-		left: 11px !important;
-		z-index: 98 !important;
-	}
-
-	#navbot {
-		visibility: visible !important;
-		position: fixed !important;
-		top: -101px !important;
-		left: auto !important;
-		right: 0 !important;
-/*[[ChangeAlign]]*/		left: 0 !important;
-		right: auto !important;/**/
-		color: transparent !important;
-		padding: 0 10px 30px 10px !important;
-		border-width: 0 1px 1px 0 !important;
-		word-spacing: -2px !important;
-		width: 310px !important;
-		height: 40px !important;
-		text-align: center !important;
-		word-spacing: -3px !important;
-	}
-	.pages {
-		width: 100% !important;
-		text-align: center !important;
-		border-spacing: 0 !important;
-		left: 2px !important;
-		right: auto !important;
-		padding-right: 250px !important;
-		padding-left: 250px !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		z-index: 1;
-	}
-	form[name='delform'] {
-		padding: 17px 0 0 0 !important;
-		margin: 0 0 0px !important;
-	}
-	#header {
-		top: 0px !important;
-	}
-/* Slideout ONLY (entirely removed regular header) */
-	.pages {
-		padding: 0 !important;
-	}
-
-	#navbot::after {
-		cursor: default;
-		position: fixed !important;
-		display: block !important;
-		left: auto !important;
-		right: 0 !important;
-		z-index: 97 !important;
-/*[[ChangeAlign]]*/	right: auto !important;/**/
-		top: 0 !important;
-		height: 15px !important;
-		width: 80px;
-		border-width: 0 1px 1px 0 !important;
-		font-size: 10px !important;
-		vertical-align: bottom !important;
-		text-align: center !important;
-		opacity: 0.5 !important;
-		content: '-Navigation-';
-	}
-	#navbot:hover::after {
-		top: 51px !important;
-		border: none !important;
-		opacity: 1 !important;
-		background: none !important;
-		z-index: 98 !important;
-	}
-
-	#navbot:hover {
-		top: 0 !important;
-		left: 11px !important;
-		z-index: 98 !important;
-	}
-
-	#navbot {
-		visibility: visible !important;
-		position: fixed !important;
-		top: -101px !important;
-		left: auto !important;
-		right: 0 !important;
-/*[[ChangeAlign]]*/		left: 0 !important;
-		right: auto !important;/**/
-		color: transparent !important;
-		padding: 0 10px 30px 10px !important;
-		border-width: 0 1px 1px 0 !important;
-		word-spacing: -2px !important;
-		width: 310px !important;
-		height: 40px !important;
-		text-align: center !important;
-		word-spacing: -3px !important;
 	}
 	.pages {
 		width: 100% !important;
@@ -434,83 +293,6 @@ none
 	}
 	#header {
 		top: -150px !important;
-	}
-/* Bottom Slideout (non-stickied header/pages) */
-	#navtop {
-		display: none !important;
-	}
-
-	#navbot::after {
-		cursor: default;
-		position: fixed !important;
-		display: block !important;
-		left: auto !important;
-		right: 0 !important;
-		z-index: 98 !important;
-/*[[ChangeAlign]]*/right: auto !important;/**/
-		bottom: 1px !important;
-		height: 15px !important;
-		width: 80px;
-		border-width: 0 1px 1px 0 !important;
-		font-size: 10px !important;
-		vertical-align: bottom !important;
-		text-align: center !important;
-		opacity: 0.5 !important;
-		content: '-Navigation-';
-		z-index: 98;
-	}
-
-	#navbot:hover::after {
-		z-index: 98 !important;
-		border: none !important;
-		opacity: 1 !important;
-		background: none !important;
-	}
-
-	#navbot:hover {
-		bottom: 1px !important;
-		left: 11px !important;
-		z-index: 98 !important;
-	}
-
-	#navbot {
-		visibility: visible !important;
-		position: fixed !important;
-		bottom: -101px !important;
-		left: auto !important;
-		right: 0 !important;
-/*[[ChangeAlign]]*/		left: 0 !important;
-		right: auto !important;/**/
-		color: transparent !important;
-		padding: 0 10px 30px 10px !important;
-		border-width: 0 1px 1px 0 !important;
-		width: 310px !important;
-		height: 40px !important;
-		word-spacing: -3px !important;
-		text-align: center !important;
-	}
-	.pages {
-		width: 100% !important;
-		text-align: center !important;
-		border-spacing: 0 !important;
-		left: 2px !important;
-		right: auto !important;
-		padding-right: 250px !important;
-		padding-left: 250px !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		z-index: 1;
-	}
-	body {
-		padding-top: 5px !important;
-	}
-	form[name='delform'] {
-		padding: 17px 0 0 0 !important;
-		margin: 0 0 0px !important;
-	}
-	#header {
-		top: 0px !important;
 	}
 /* Bottom Stickied Header (non-stickied pages) */
 	#header {
@@ -544,10 +326,6 @@ none
 	#boardsMenu {
 		bottom: 46px !important;
 	}
-	#navbot {
-		position: fixed !important;
-		top: -101px !important;
-	}
 	.pages {
 		width: 100% !important;
 		text-align: center !important;
@@ -569,7 +347,7 @@ none
 		margin: 0 0 0px !important;
 	}
 
-/* Bottom Slideout + Top Stickied Pages */
+/* Top Stickied Pages */
 	.pages {
 		position: fixed !important;
 		bottom: auto !important;
@@ -580,55 +358,6 @@ none
 		display: none !important;
 	}
 
-	#navbot::after {
-		cursor: default;
-		position: fixed !important;
-		display: block !important;
-		left: auto !important;
-		right: 0 !important;
-		z-index: 98 !important;
-/*[[ChangeAlign]]*/right: auto !important;/**/
-		bottom: 1px !important;
-		height: 15px !important;
-		width: 80px;
-		border-width: 0 1px 1px 0 !important;
-		font-size: 10px !important;
-		vertical-align: bottom !important;
-		text-align: center !important;
-		opacity: 0.5 !important;
-		content: '-Navigation-';
-		z-index: 98;
-	}
-
-	#navbot:hover::after {
-		z-index: 98 !important;
-		border: none !important;
-		opacity: 1 !important;
-		background: none !important;
-	}
-
-	#navbot:hover {
-		bottom: 1px !important;
-		left: 11px !important;
-		z-index: 98 !important;
-	}
-
-	#navbot {
-		visibility: visible !important;
-		position: fixed !important;
-		bottom: -101px !important;
-		left: auto !important;
-		right: 0 !important;
-/*[[ChangeAlign]]*/		left: 0 !important;
-		right: auto !important;/**/
-		color: transparent !important;
-		padding: 0 10px 30px 10px !important;
-		border-width: 0 1px 1px 0 !important;
-		width: 310px !important;
-		height: 40px !important;
-		word-spacing: -3px !important;
-		text-align: center !important;
-	}
 	.pages {
 		width: 100% !important;
 		text-align: center !important;
@@ -894,7 +623,7 @@ none
 /*[[ChangeAlign]]*/
 		left: auto !important;
 		right: 2px !important;/**/
-		bottom: 21px !important;
+		bottom: 2px !important;
 		width: 248px !important;
 		margin: 0 !important;
 		padding: 0 !important;
@@ -987,7 +716,7 @@ none
 		left: auto !important;
 		right: -233px !important;/**/
 		top: auto !important;
-		bottom: 21px !important;
+		bottom: 2px !important;
 		width: 248px !important;
 		margin: 0 !important;
 		padding: 0;
@@ -1094,7 +823,7 @@ none
 		left: auto !important;
 		right: -248px !important;/**/
 		top: auto !important;
-		bottom: 21px !important;
+		bottom: 2px !important;
 		width: 248px !important;
 		margin: 0 !important;
 		padding: 0 !important;
@@ -1237,7 +966,7 @@ none
 /*[[ChangeAlign]]*/
 		left: auto !important;
 		right: 2px !important;/**/
-		bottom: 21px !important;
+		bottom: 2px !important;
 		width: 248px !important;
 		margin: 0 !important;
 		padding: 0 !important;
@@ -1367,64 +1096,6 @@ none
 	}
 /* End */
 
-/*[[ReturnButton]]*/
-/* Yes: */
-	html body > span[style='left: 5px; position: absolute;']:nth-of-type(0) {
-		display: none;
-	}
-
-	html body span[style='left: 5px; position: absolute;'] {
-		font-size: 0 !important;
-		visibility: hidden;
-	}
-
-	html body span[style='left: 5px; position: absolute;'] a {
-		cursor: default !important;
-		position: fixed !important;
-		top: auto;
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 192px !important;/**/
-		bottom: 1px;
-		visibility: visible !important;
-		height: 14px !important;
-		width: 58px !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		font-size: 9px !important;
-		text-transform: uppercase;
-		vertical-align: bottom !important;
-		padding-top: 5px !important;
-		border-radius: 0 !important;
-		text-align: center;
-	}
-/* No: */
-	html body span[style='left: 5px; position: absolute;'] {
-		display: none;
-	}
-/* End */
-
-/*[[DeleteButtons]]*/
-/* Show: */
-/* ...And Hide Password Field: */
-	.deletebuttons input[name="pwd"] {
-		display: none !important;
-	}
-/* Hide: */
-	input[type='checkbox'][value='delete'],
-	.deletebuttons *,
-	.deletebuttons::after {
-		display: none;
-	}
-
-	form[name^='post'] input[type='password'].inputtext,
-	form[name^='post'] tr:nth-of-type(7) td.postblock {
-		visibility: hidden;
-	}
-/* End */
-
 /*[[ReplyWidth]]*/
 /* Fit Width: */
 	form[name='delform'] > table:not(.pages), /* Reply are tables. */
@@ -1471,12 +1142,16 @@ none
 	td[style='border: 1px dashed;'],
 	td.reply > tr > td.reply,
 	.inline td.reply,
-	h2 {
+	h2,
+	.deletebuttons,
+	#navbot,
+	font[color="red"] {
 		border-radius: 3px !important;
 		-o-border-radius: 3px !important;
 	}
-	#navbot::after, #navbot {
-        	border-radius: 0 0 3px 3px !important;
+
+	body::before {
+        	border-radius: 0px 0px 3px 3px !important;
         	-0-border-radius: 0 0 3px 3px !important; 
         }
 
@@ -1520,10 +1195,18 @@ none
 	td[style='border: 1px dashed;'],
 	td.reply > tr > td.reply,
 	.inline td.reply,
-	h2 {
+	h2,
+	.deletebuttons,
+	#navbot,
+	font[color="red"] {
 		border-radius: 3px !important;
 		-o-border-radius: 3px !important;
 	}
+
+	body::before {
+        	border-radius: 0px 0px 3px 3px !important;
+        	-0-border-radius: 0 0 3px 3px !important; 
+        }
 
 	.pages b,
 	.pages input,
@@ -1686,13 +1369,6 @@ domain('images.4chan.org'),
 
 /* End */
 
-/*[[redtext]]*/
-/* Show */
-
-/* Hide */
-	display: none !important;
-/* End */
-
 /*[[MarginCenter]]*/
 /* No */
 		padding: 20px 2px 0 252px !important;
@@ -1783,18 +1459,5 @@ domain('images.4chan.org'),
 	.reply .container ~ blockquote,
 	.replyhl .container ~ blockquote {
 		margin: 12px 40px 20px;
-	}
-/* End */
-/*[[watcherslideout]]*/
-/* Enabled: */
-	#watcher:hover {
-		position: fixed !important;
-		top: 34px !important;
-		z-index: 6 !important;
-	}
-/* Disabled: */
-	#watcher {
-		top: 40px !important;
-		z-index: 4 !important;
 	}
 /* End */
