@@ -679,7 +679,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 /* #qr dimensions */
 	#qr {
-		z-index: 5;
+		z-index: 98;
 		height: auto !important;
 		width: 300px;
 		padding: 2px;

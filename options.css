@@ -898,6 +898,7 @@ none
 		width: 248px !important;
 		margin: 0 !important;
 		padding: 0 !important;
+		z-index: 5;
 	}
 
 	#qr_form {
@@ -993,6 +994,7 @@ none
 		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		z-index: 5;
 	}
 
 	#qr:hover {
@@ -1099,6 +1101,7 @@ none
 		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
+		z-index: 5;
 	}
 
 	#qr:hover {
@@ -1242,6 +1245,7 @@ none
 		-webkit-transition: opacity .3s ease-in-out 3s;
 		-moz-transition: opacity .3s ease-in-out 3s;
 		-o-transition: opacity .3s ease-in-out 3s;
+		z-index: 5;
 	}
 
 	#qr:hover {
