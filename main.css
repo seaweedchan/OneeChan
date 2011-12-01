@@ -139,7 +139,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	#recaptcha_reload_btn *,
 	#quickrep tr:nth-of-type(4) b,
 	#qr.auto:not(:hover) #recaptcha_reload_btn,
-	.deletebuttons input[type='button'],
 	.deletebuttons br,
 	.doubledash,
 	.error:empty,
