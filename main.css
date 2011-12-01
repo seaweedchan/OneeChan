@@ -437,7 +437,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: fixed;
 		top: auto;
 		left: auto;
-		bottom: 21px;
+		bottom: 2px;
 		width: 248px !important;
 		margin: 0 !important;
 		z-index: 5;
@@ -857,7 +857,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	form[name^='post'] input[name='email'] + label {
 		position: absolute;
 		top: auto;
-		bottom: 21px;
+		bottom: 2px;
 		right: 70px;
 		vertical-align: bottom;
 	}
