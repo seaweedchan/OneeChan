@@ -1231,6 +1231,10 @@ This style is designed for the following browsers, ordered alphabetically:
 		padding-bottom: 2px;
 	}
 
+	#count.new {
+		background-color: transparent !important;
+	}
+
 	#updater:hover {
 		width: 150px !important;
 		left: 98px !important;
