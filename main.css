@@ -56,13 +56,54 @@ This style is designed for the following browsers, ordered alphabetically:
 		transform: scaleX(1);/**/
 		z-index: 3 !important;
 	}
+	body::before {
+		content: '';
+		width: 246px !important;
+		height: 20px !important;
+		border-top: 0px !important;
+		position: fixed !important;
+		top: 0px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/	
+		right: 2px !important;
+		left: auto !important; /**/
+		opacity: 0.7 !important;
+	}
 	body {
 /*[[Margin]]*/
 	}
-	font[color="red"], h2, h3, h1 {
-		/*[[redtext]]*/
-		position: relative !important;
-		top: 10px !important;
+	font[color="red"]  {
+		position: fixed !important;
+		top: -1000px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/	
+		right: 2px !important;
+		left: auto !important; /**/
+		bottom: auto !important;
+		width: 236px !important;
+		padding: 10px 5px 10px 5px !important;
+	}
+	font[color="red"]::before {
+		content: url('http://i.imgur.com/zJAJk.png') !important;
+		height: 9px !important;
+		position: fixed !important;
+
+		top: 1px !important;
+        left: 20px !important;
+       	right: auto !important;
+/*[[ChangeAlign]]*/		
+       	right: 176px !important;
+		left: auto !important; /**/
+		min-width: 30px !important;
+		max-width: 30px !important;
+		padding-bottom: 5px !important;
+	}
+	font[color="red"]:hover {
+		position: fixed !important;
+		top: 14px !important;
+		z-index: 99 !important;
 	}
 }
 
@@ -261,6 +302,53 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 /*[[StickyNavigation]]*/
+	#navbot::after {
+		border: none !important;
+		position: fixed !important;
+		right: auto !important;
+		left: 0 !important;
+		z-index: 97 !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: 227px !important;
+		top: 1px !important;
+		content: url('http://i.imgur.com/9jrVQ.png');
+	}
+
+	#navbot:hover {
+		top: 14px !important;
+		z-index: 99 !important;
+	}
+
+	#navbot {
+		visibility: visible !important;
+		position: fixed !important;
+		position: fixed !important;
+		top: -1000px !important;
+		right: auto !important;
+		left: 2px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		left: auto !important; /**/
+		bottom: auto !important;
+		width: 226px !important;
+		color: transparent !important;
+		padding: 3px 10px 40px 10px !important;
+		border-width: 0 1px 1px 0 !important;
+		word-spacing: -2px !important;
+		height: 50px !important;
+		text-align: center !important;
+		word-spacing: -3px !important;
+	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#navbot {
+		padding-bottom: 30px !important;
+	}
+		input[value="delete"] {
+		position: relative !important;
+			top: 4px !important;
+	}
+	}
 	#header {
 		left: 250px !important;
 		right: 2px !important;
@@ -302,8 +390,8 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 /* moot's announcements */
-	h3, h2, h1 {
-		font-size: 14px !important; 
+	h3, h2, h1, font[color="red"] {
+		font-size: 12px !important; 
 	}
 	h3, font[color="red"] {
 		font-weight: 200 !important;
@@ -914,20 +1002,26 @@ This style is designed for the following browsers, ordered alphabetically:
 	div[id^='qr'] tr[height='73']:nth-of-type(2) {
 		padding: 0 !important;
 	}
-
 	#navtopr {
 		position: fixed;
 		left: 150px !important;
 		right: auto !important;
 /*[[ChangeAlign]]*/
 		right: 60px !important;
-		left: auto !important;/**/
-		top: 1px !important;
+		left: auto !important;
+		top: -100px !important;
 		bottom: auto !important;
 		font-size: 0 !important;
 		color: transparent !important;
 		z-index: 96 !important;
 	}
+	#navtopr a::after {
+		content: url('http://i.imgur.com/l7m63.png');
+		position: fixed !important;
+		top: 1px !important;
+		right: 7px !important;
+		z-index: -1 !important;
+}
 /* Strip 4chan+ of shadows and rounded edges */
 	#navbar,
 	#boardsMenu,
@@ -1034,18 +1128,47 @@ This style is designed for the following browsers, ordered alphabetically:
 	#popup > img {
 		max-width: 100% !important;
 	}
-/*[[DeleteButtons]]*/
-	.deletebuttons {
+	table[align=right] {
 		position: fixed !important;
-		top: auto !important;
-		left: 200px !important;
+		top: -1000px !important;
+	}
+	form[name='delform'] > table[align=right]:last-of-type  {
+		position: fixed !important;
+		top: -1000px !important;
 		right: auto !important;
+		left: 2px !important;
 /*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		bottom: 1px;
+		right: 2px !important;
+		left: auto !important; /**/
+		bottom: auto !important;
+		width: 248px !important;
+		margin: 0px !important;
+		padding: 0px !important;     
+		font-size: 0px !important;
+	}
+	.deletebuttons {
+		font-size: 0px !important;
+		color: transparent !important;
+		height: 30px !important;
+		margin-top: 0px !important;
+		padding-right: 3px !important;
+	}
+
+	form[name='delform'] > table[align=right]:last-of-type::before {
+		content: url('http://i.imgur.com/c1MGg.png') !important;
 		visibility: visible !important;
-		z-index: 2;
+		position: fixed !important;
+		top: 1px !important;
+        left: 20px !important;
+        right: auto !important;
+/*[[ChangeAlign]]*/
+        right: 95px !important;
+		left: auto !important; /**/
+	}
+	form[name='delform'] > table[align=right]:last-of-type:hover {
+		position: fixed !important;
+		top: 12px !important;
+		z-index: 99 !important;
 	}
 
 	#popup {
@@ -1057,36 +1180,33 @@ This style is designed for the following browsers, ordered alphabetically:
 		bottom: 24px;
 	}
 
-	.deletebuttons {
-		visibility: hidden !important;
-		font-size: 0 !important;
-		padding: 0 !important;
+	form[name='delform'] > table[align=right]:last-of-type:hover input[type='checkbox'] {
+		position: absolute !important;
+		right: 163px !important;
+		top: 44px !important;
 	}
 
-	.deletebuttons * {
+	form[name='delform'] > table[align=right]:last-of-type:hover::after {
 		visibility: visible !important;
-	}
-
-	.deletebuttons input[type='checkbox'] {
-		position: absolute;
-		right: 106px;
-		bottom: 2px;
-	}
-
-	.deletebuttons::after {
-		visibility: visible !important;
-		position: absolute;
-		right: 57px;
-		bottom: 2px;
+		position: absolute !important;
+		right: 115px !important;
+		top: 43px !important;
 		font-size: 12px !important;
 		content: 'File Only';
 	}
-
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	form[name='delform'] > table[align=right]:last-of-type:hover input[type='checkbox'] {
+		top: 10px !important;
+	}
+	form[name='delform'] > table[align=right]:last-of-type:hover::after {
+		top: 10px !important;
+	}
+	}
 	.deletebuttons .inputtext {
 		width: 138px;
 		margin-right: 1px !important;
 	}
-
+	
 	.navlinks,
 	#navlinks,
 	span[id^='4chan_ext_right'] {
@@ -1099,7 +1219,43 @@ This style is designed for the following browsers, ordered alphabetically:
 		top: 0px !important;
 		z-index: 99 !important;
 	}
-/*[[ReturnButton]]*/
+	html body > span[style='left: 5px; position: absolute;']:nth-of-type(0) {
+		display: none;
+	}
+
+	html body span[style='left: 5px; position: absolute;'] {
+		font-size: 0 !important;
+		visibility: hidden;
+	}
+
+	html body span[style='left: 5px; position: absolute;'] a {
+		position: fixed !important;
+		top: auto;
+		left: 2px !important;
+		right: auto !important;
+/*[[ChangeAlign]]*/
+		left: auto !important;
+		right: -192px !important; /**/
+		bottom: -1000px;
+		visibility: visible !important;
+		height: 14px !important;
+		width: 58px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		font-size: 9px !important;
+		text-transform: uppercase;
+		vertical-align: bottom !important;
+		padding-top: 5px !important;
+		border-radius: 0 !important;
+		text-align: center;
+	}
+	html body span[style='left: 5px; position: absolute;'] a::after {
+		content: url('http://i.imgur.com/Dx7wa.png');
+		position: fixed !important;
+		top: 1px !important;
+		right: 117px !important;
+		cursor: pointer !important;
+	}
 /* File Clearer support */
 	.clearbutton {
 		position: fixed !important;
@@ -1203,12 +1359,12 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#stats {
 		position: fixed !important;
-		top: 16px !important;
+		top: 20px !important;
 		right: auto !important;
 		left: 150px !important;
 /*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important;/**/
+		right: 45px !important;
+		left: auto !important; /**/
 		width: 96px !important;
 		text-align: right !important;
 		bottom: auto !important;
@@ -1220,12 +1376,12 @@ This style is designed for the following browsers, ordered alphabetically:
 		left: 190px !important;
 /*[[ChangeAlign]]*/
 		right: 2px !important;
-		left: auto !important;/**/
-		top: 1px !important;
+		left: auto !important; /**/
+		top: 23px !important;
 		bottom: auto !important;
 		width: 58px !important;
 		border: 0 !important;
-		font-size: /*[[FontSize]]*/;
+		font-size: 12px;
 		overflow: hidden;
 		z-index: 5 !important;
 		padding-bottom: 2px;
@@ -1254,17 +1410,20 @@ This style is designed for the following browsers, ordered alphabetically:
 		content: '+0';
 	}
 
-	#watcher /* 4chan x thread watcher */ {
+	#watcher  {
 		position: fixed !important;
 		top: -1000px !important;
 		right: auto !important;
 		left: 2px !important;
 /*[[ChangeAlign]]*/
 		right: 2px !important;
-		left: auto !important;/**/
+		left: auto !important; /**/
 		bottom: auto !important;
 		width: 246px !important;
-		padding-bottom: 3px !important;
+		padding-bottom: 4px !important;
+	}
+	#watcher > div {
+		max-width: 246px !important;
 	}
 	#watcher .move {
 		font-size: 0px !important;
@@ -1274,31 +1433,25 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: relative !important;
 		top: 2px !important;
 	}
-	body > table ~ form .op .favicon {
-		position: fixed !important;
-		top: 17px !important;
-		left: 12px !important;
-		right: auto !important;
-		/*[[ChangeAlign]]*/
-		right: 233px !important;
-		left: auto !important;/**/
-		margin-left: -10px !important;
-	}
 	#watcher::before {
-		content: "Watcher" !important;
+		content: url('http://i.imgur.com/1AtlH.png') !important;
+		height: 9px !important;
 		font-size: 12px !important;
 		position: fixed !important;
-
-		top: 20px !important;
-        	left: 20px !important;
-        	right: auto !important;
-		/*[[ChangeAlign]]*/
-        	right: 200px !important;
+		top: 1px !important;
+        left: 20px !important;
+        right: auto !important;
+/*[[ChangeAlign]]*/		
+        right: 193px !important;
 		left: auto !important; /**/
 		min-width: 30px !important;
 		max-width: 30px !important;
 	}
-/*[[watcherslideout]]*/
+	#watcher:hover {
+		position: fixed !important;
+		top: 14px !important;
+		z-index: 99 !important;
+	}
 	#backwash_tooltip,
 	#qp,
 	#popup,
@@ -1347,29 +1500,29 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: fixed;
 		top:-119px;
 		left: 60px;
-		/*[[ChangeAlign]]*/
+/*[[ChangeAlign]]*/		
 		right: 60px !important;
-		left: auto !important;/**/
+		left: auto !important; /**/
 		z-index: 96;
 		font-size: 0px !important;
 		
 	}
 
 	body > a[style='cursor: pointer; float: right;']::after {
-		content: "Search" !important;
+		content: url('http://i.imgur.com/dgyXC.png') !important;
 		font-size: 12px !important;
 		position: fixed !important;
-		top: 19px !important;
+		top: -1px !important;
 		left: 60px;
-		/*[[ChangeAlign]]*/
-		right: 60px !important;
-		left: auto !important;/**/
+/*[[ChangeAlign]]*/			
+		right: 28px !important;
+		left: auto !important; /**/
 	}
 
 	div[style="width: 100%; "] {
 		position: relative !important;
-		top: 200px !important;
-                max-width: 90% !important;
+		top: 20px !important;
+		max-width: 90% !important;
 		min-height: 60% !important;
 		margin: auto !important;
 	}
