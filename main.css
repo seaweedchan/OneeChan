@@ -1122,25 +1122,11 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	#options ul {
-		margin: 3px 0 !important;
-		overflow: hidden;
-		height: 16px;
-		-webkit-transition: height 500ms ease-in-out 500ms !important;
-		-moz-transition: height 500ms ease-in-out 500ms !important;
-		-o-transition: height 500ms ease-in-out 500ms !important;
-		border: 1px solid;
-	}
-
-	#options ul:hover {
-		height: 180px;
-		overflow: auto;
-		-webkit-transition: height 500ms ease-in-out !important;
-		-moz-transition: height 500ms ease-in-out !important;
-		-o-transition: height 500ms ease-in-out !important;
+		margin: 0 !important;
 	}
 
 	#options ul > li {
-		padding: 0 3px !important;
+		padding: 0 !important;
 	}
 /* End of 4chan x options */
 	#filter,
