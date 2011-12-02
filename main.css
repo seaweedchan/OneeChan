@@ -86,7 +86,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		padding: 10px 5px 10px 5px !important;
 	}
 	font[color="red"]::before {
-		content: url('http://i.imgur.com/zJAJk.png') !important;
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAlZJREFUOE99lE1IVFEYhmdGZ2oEnVQMWySCixA32SJGgxYVREGrVAQZrt65ICFIuggSEg37WSoaLaIQ+9FNK8WNiULgQsGFwahgJFKESKmpqJE/zzuc5HKdGnj4zpzvnPe85zvnXJ/P9Yvb8YBjO2E469Q5V4gxaKR9B27TLoUcCILfPfeoTSIDzsN9+AjfYAv24Q+swjy8gwo4g3jakQAu/BAhUQVjsAE/YNYIfiCOwiQsGvElYqcWZm4wKUbjJB3VMAObMAHtcINcoWVZJbVWbbFxaxFfwhctSP4NFKskErpgVl4nvofrkGnbtj8Wi4VgCRIQYGw6uQK4C59A232kHflodBgn43SUI5DuLiICEzDi7mN8DmObiV9hnnbUR8FUi2Vo0ja9J4FIL/S4++WW8UXMHVbNJCpHvyFB5+VUx4nIPWjw5pgchsfMXSd2SkjHOw2l/xC6hdA1bw5XIQRamPeT2COhNdCxVpAMpNhaBkJhbz87yIMB5u0g1C6hQfgFzyDPU2idXJ+3Row7Abrpc/AdbkqoxhR7gVgvMbczRK7CJc+p6akMqdC4ehuvi5+WUD68AN3oBDyAi9jN/StIzIIIJLdIXq/gs+pjnAXVmaZCw2tYMe70VJ7DQ2iDLuiGJ9DAIq1mUS2uhx1KOsaebmyJcTNF1C3fBZ3onmlvmygXOhwdkvJ9cMr9+uUsF6LgwFPohVfGiVyoBHrA2tYOHIBqGz12dXCnW6tvkr47ql8+fdnECFH/zxHLiJWgevaz1aqU36b/dTLRj5AesD5uWjCiW34IHpyJvx+WYAQAAAAASUVORK5CYII=') !important;
 		height: 9px !important;
 		position: fixed !important;
 
@@ -311,7 +311,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		left: auto !important;
 		right: 227px !important;
 		top: 1px !important;
-		content: url('http://i.imgur.com/9jrVQ.png');
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAZlJREFUGBlVwTFLFAAYANDvThGHs1DkdBAVhRtKETRFxcUguVyc0lwaHqQI1eLk1CQNYouo4A/wphLcalCnJomGvE3k6iYNERRO9IRKb6j3Im4JNdJGLdiwYcGotBrxDwmNpu0puXLu3JWSPdMaJeKOhBaLjp3Zt2nVqk37zhxb1CIREUK9t04dWdKvVr8BtQYsOXLqrXoRqo0rKpjXKCI81BUhqcm8gqJx1eG+nAtr0nFLkya1enVLW3Mh517I+CUvK+7o8cSC99qFrLwTmTDhxifpqPBC3nfPVUVI++zGRJhzbcuQQZ0ee2XavK+e6jRoyJZrc2HGtQ96dKuT8cW6N4Y0qdOlx0fXXoYxZTtaItR47Ztd2ajQYkfZWGjz06FnkjLemdTrQdySNOnQD20hZcWlnA4Zrao0a44/hA45l1akQtKwA8eWdUhE6PMoQlKHZccODEtGhJRZBSdyprTq06fVlJwTBbNS8ZfQYFZeyaFd27btOlSSN6tBVAgpI9YVlZWVlRWtGZES/1GlTrusGTOy2qVURcVvQJjZprgL3IoAAAAASUVORK5CYII=');
 	}
 
 	#navbot:hover {
@@ -1017,7 +1017,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		z-index: 96 !important;
 	}
 	#navtopr a::after {
-		content: url('http://i.imgur.com/l7m63.png');
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAXhJREFUGBltwUtLlGEYANDn+8Zx1FFbRGJTlEEi7ipX0Vlpm0gpIqbaFZQJUVBEYtJFEMrIQdA2Ley2joIUpaAiMl3EvH8ptTt1TmwQitptUZLFL4ratcrFJqHXPfMu2CWPdUKLATX3dctDyCKUVb1RN2VrhFA2aNozy4Y1hQZ7VSK0GvbBV/0RWgx6aMac504rhWYjRu3U5Kz3kksaDZk2Y1bNuC5ZKDnvk0lXvFKXPLbHhJo5NWN6FCJCbp9Fa1bUJcmqCcdMeWBcj0JsEJod9VJdkiTJiknHXdWtED8JRZ36XPZOkiSf3dEpj3/JVC2rS5I1t3XI4m/CNv0uWpIkyaox22Xxm1Bx01O9TnorSZIvbtghi++0OeiueYeVZM5YkiR1H13XIYsIRQNeW3BCc6zT5JQFyQsjZh1RDGG3eWtuqcQmoaxqwah215zTFBpVLRrWpSF+ENpUPTLliUMKIVdxQJv4k1C235A+zSKETB7/IVeUi4hvybaSroCUb0QAAAAASUVORK5CYII=');
 		position: fixed !important;
 		top: 1px !important;
 		right: 7px !important;
@@ -1156,7 +1156,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	table[align=right]::before {
-		content: url('http://i.imgur.com/c1MGg.png') !important;
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAa5JREFUGBkFwc8r3nEAAODn++nTixKltGyEN5SsKLHekzlwcPAfeHnTWsp1ByX7C3ZbucivZbXDtIOLdlA4LOLg5kCU5MJ6Hd43mT57nghQyrIajVo0yDy5c58qay9AhBI1Ok2Y9FaTTNWlPdulU49riUiJeu/NpxG1gDp9eo1b8b10u5Yiary3ZFAAAEGPT+p8nXmIM5lO8wYFFUda5QUPzuS1afYhnduOatKEEUEl+2VZe1r0Olvx02ia0+6NWftRo0m1OErL/jhR1p9W3bnW4qNaBX1Ri7egVbuT9erMrgPllGWv5OVQrxBTgyaQt6g8vbv+rDyd6UoLxgTQEWUyELzW70AZQYcBOUCInlTV4cGKVeViJmy8TB/6bEmvgL/RnUt9OPMz3cl06SgeblSLv7Nh3XKeHcd0b0+vIG/UtVcWDPhc/O1dGhJx4SSq2DauR5s5LfLG5CwZNqQgqNhyEzdfiqdWfNKs3Uc5Ab26RcE/O36oRjz6ri598EYtIMihYif74mozRTbT1K2vzs0qqAc8u7DlR7ryTIRvaerBtn19CjoEfx07caP6LcF/fuCUdisjvxsAAAAASUVORK5CYII=') !important;
 		visibility: visible !important;
 		position: fixed !important;
 		top: 1px !important;
@@ -1244,7 +1244,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		text-align: center;
 	}
 	html body span[style='left: 5px; position: absolute;'] a::after {
-		content: url('http://i.imgur.com/Dx7wa.png');
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUJJREFUOE/Vkj9LglEUh18xC0GkfwS1+hGipcK2hr7DGw0uDRKCQyI0tAQN7U4tfoOGsKkhCAqaai0CQYRQGiwiK59fHPNSr+RbNPTCw/Fez3nuvedez/tXn+/7UUj8atMIRmEFNn4konAEZmEbLqEaSkRBBKYhA0dwD29wN5CIRM92kSbuwy08m0SiFmwaBWIOlmFSi38swiAOWbiCB0cgiXiFhtHUDuEayqAWRN9lJio6R+kKvotP1BxCSqfqymIMFuEAtOqLs7NHfu8Yu7aTG8tpE3XcuHtENXsG8nAB6o2O1XSbzXgY1qFmi1WIY18uxBIXiCVQL+qfk5hbgnMTnREn+t6s/oQ12AsQzTN/aiIJ+4vsIoZISgaI5pg/BjX8BMYHemsBoimK9W3BKvSaHcZIoS5G7y9psfcww4j+NLcD3erbomf70ToAAAAASUVORK5CYII=');
 		position: fixed !important;
 		top: 1px !important;
 		right: 117px !important;
@@ -1428,7 +1428,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		top: 2px !important;
 	}
 	#watcher::before {
-		content: url('http://i.imgur.com/1AtlH.png') !important;
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAASdJREFUGBnFwb1LlAEcAOBf7+U73nlU6Ch42BtOx5koPou7qzrYEvk5pFBDQZanQaByegqu6qSEgi0RKMItNbkdUhE1h63ZHLX5F/g8cW3kFJWUlZUU5eIqibyyh1YdOHXqUM0jFXlJ/CO0uGvcsl3nLv1y4Y8f9q2YkElFaFGx4JVRdV+cWPDMkW92PDCvqlcautQ80YVjDVveKOp34KMhJXPWZKHmtXaJEWc27Tl3Q96sphmJNlWboW5Rm8SIM1UdCkLerKYZiTte2gqZNXNKBhz7YFBRQZ+3PhnS6bEN3SHVa9G8Yes+e++5pw59tWPMC0v6pSGk7pmyYlvTbxd+uvTdnlXTuqXiP4mCHuNqjjQ0vFM36b5WOXGFnFsyFT0yt92M6/IXu052NUrsdDsAAAAASUVORK5CYII=') !important;
 		height: 9px !important;
 		font-size: 12px !important;
 		position: fixed !important;
@@ -1499,7 +1499,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	body > a[style='cursor: pointer; float: right;']::after {
-		content: url('http://i.imgur.com/dgyXC.png') !important;
+		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAVpJREFUKM9jsGEgDjKQo5Dd1tE22Tbe1sCGEY9CO1v7g443nYDQ4ab9MjtZHArtrRyvuF2LXpbTlNkZstXlpsMBO1EsCu1ZHHe7X8/NnS4ynWE603SF2GmuNx3asCh0NHO5GbJgOhtMsEvS57jzOQc2DIXOEa43/WMRgtMZfGa43HSSwVDoGeJ60zkBWdhljsuNAEkMhYk6Ljec1tkxwwTtpZ0ueh7tZcVQOIU1YIXTTbtOG14Qz1bBfqPTzdAqrMFTY+B9wOGm3WnbBbYr7K443nS+6bjbTgqLwukMHUbRs11POVx3uOZ5MKXTZ6/jTbsLNqts5LFE4XS+aUbtnt0u07WmszcZu54FxtBN2wM2CngTxXQGz0UON6FK5fGmnhpjz4MgpXY3bffZcONROJ2h1srjoD3QTLubjgZ40+N0hjpLj/32Nz32VgsRSLjTGSZoV0VN0CYphQMARXWvwMUKKyAAAAAASUVORK5CYII=') !important;
 		font-size: 12px !important;
 		position: fixed !important;
 		top: -1px !important;
