@@ -203,10 +203,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	scrollbar[orient='horizontal'] { border-top: 0; }
 	thumb { -moz-appearance: none !important; -o-appearance: none !important; border: 1px solid; }/**/
 
-	form[name='delform'] > table[align=right]:last-of-type {
-		visibility: hidden;
-	}
-
 	span[id^='4chan_ext_right'],
 	a.yuimenuitemlabel:hover,
 	.replyhider a:hover {
@@ -332,7 +328,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		bottom: auto !important;
 		width: 226px !important;
 		color: transparent !important;
-		padding: 3px 10px 40px 10px !important;
+		padding: 3px 10px 30px 10px !important;
 		border-width: 0 1px 1px 0 !important;
 		word-spacing: -2px !important;
 		height: 50px !important;
@@ -340,9 +336,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		word-spacing: -3px !important;
 	}
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
-	#navbot {
-		padding-bottom: 30px !important;
-	}
 		input[value="delete"] {
 		position: relative !important;
 			top: 4px !important;
@@ -1181,26 +1174,19 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	form[name='delform'] > table[align=right]:last-of-type:hover input[type='checkbox'] {
 		position: absolute !important;
-		right: 163px !important;
-		top: 44px !important;
+		right: 173px !important;
+		top: 10px !important;
 	}
 
 	form[name='delform'] > table[align=right]:last-of-type:hover::after {
 		visibility: visible !important;
 		position: absolute !important;
-		right: 115px !important;
-		top: 43px !important;
+		right: 125px !important;
+		top: 10px !important;
 		font-size: 12px !important;
 		content: 'File Only';
 	}
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
-	form[name='delform'] > table[align=right]:last-of-type:hover input[type='checkbox'] {
-		top: 10px !important;
-	}
-	form[name='delform'] > table[align=right]:last-of-type:hover::after {
-		top: 10px !important;
-	}
-	}
+
 	.deletebuttons .inputtext {
 		width: 138px;
 		margin-right: 1px !important;
