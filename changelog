@@ -9,6 +9,7 @@ v2.0:
 -Issue with pages being out of place when put on the side fixed
 -Postertrip in the quote preview added to what font-size changes
 -Text decorations redone, mostly for Mayhem's 4chan X built-in filter
+-Fixed issue where scrollbar buttons were removed in Firefox
 
 v1.1:
 -New option: Slideout Watcher?
