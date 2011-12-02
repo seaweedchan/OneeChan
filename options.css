@@ -1558,3 +1558,10 @@ domain('images.4chan.org'),
 		z-index: 99 !important;
 	}
 /* Disable entirely */
+	font[color="red"] {
+		display: none !important;
+	}
+	font[color="red"]::before {
+		display: none !important;
+	}
+/* End */
