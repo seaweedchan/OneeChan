@@ -407,6 +407,7 @@ none
 		letter-spacing: -1px;
 		word-spacing: -6px;
 		z-index: 6 !important;
+		margin: 0 !important;
 	}
 
 	.pages a, .pages b, .pages input {
