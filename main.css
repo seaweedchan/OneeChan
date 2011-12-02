@@ -333,7 +333,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		bottom: auto !important;
 		width: 226px !important;
 		color: transparent !important;
-		padding: 3px 10px 30px 10px !important;
+		padding: 3px 10px 25px 10px !important;
 		border-width: 0 1px 1px 0 !important;
 		word-spacing: -2px !important;
 		height: 50px !important;
@@ -341,9 +341,12 @@ This style is designed for the following browsers, ordered alphabetically:
 		word-spacing: -3px !important;
 	}
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
-		input[value="delete"] {
+	#navbot {
+		padding-bottom: 35px !important;
+	}	
+	input[value="delete"] {
 		position: relative !important;
-			top: 4px !important;
+		top: 4px !important;
 	}
 	}
 	#header {
