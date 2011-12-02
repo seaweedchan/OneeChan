@@ -206,6 +206,18 @@ none
 	#header {
 		top: 0px !important;
 	}
+	.pages {
+		width: 100% !important;
+		text-align: center !important;
+		border-spacing: 0 !important;
+		left: 2px !important;
+		right: auto !important;
+		padding-right: 400px !important;
+/*[[ChangeAlign]]*/
+		right: 2px !important;
+		padding-right: 0 !important;/**/
+		z-index: 1;
+	}
 /* Inverted Stickied Header / Pages */
 	#header,
 	.pages {
