@@ -1115,7 +1115,7 @@ none
 
 /*[[ReplyWidth]]*/
 /* Fit Width: */
-	form[name='delform'] > table:not(.pages), /* Reply are tables. */
+	form[name='delform'] > table:not(.pages):not([align="right"]), /* Reply are tables. */
 	div.thread > table, /* Replies are tables. A script like 4chan X is present */
 	.insertedPosts > table, /* 4chanplus inserts new posts in a new div */
 	td.reply, /* Reply cell */

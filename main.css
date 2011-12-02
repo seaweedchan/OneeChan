@@ -918,7 +918,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 /*[[ReplyWidth]]*/
 
-	form[name='delform'] > table:not(.pages):not([align="right"]),
+	form[name='delform'] > table:not(.pages),
 	div.thread > table,
 	.insertedPosts > table {
 		border-spacing: 0 1px !important;
@@ -1182,14 +1182,14 @@ This style is designed for the following browsers, ordered alphabetically:
 	table[align=right]:hover input[type='checkbox'] {
 		position: absolute !important;
 		right: 173px !important;
-		top: 12px !important;
+		top: 11px !important;
 	}
 
 	table[align=right]:hover::after {
 		visibility: visible !important;
 		position: absolute !important;
 		right: 125px !important;
-		top: 12px !important;
+		top: 11px !important;
 		font-size: 12px !important;
 		content: 'File Only';
 	}
