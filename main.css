@@ -1135,7 +1135,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: fixed !important;
 		top: -1000px !important;
 	}
-	form[name='delform'] > table[align=right]:last-of-type  {
+	table[align=right]  {
 		position: fixed !important;
 		top: -1000px !important;
 		right: auto !important;
@@ -1157,7 +1157,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		padding-right: 3px !important;
 	}
 
-	form[name='delform'] > table[align=right]:last-of-type::before {
+	table[align=right]::before {
 		content: url('http://i.imgur.com/c1MGg.png') !important;
 		visibility: visible !important;
 		position: fixed !important;
@@ -1168,7 +1168,7 @@ This style is designed for the following browsers, ordered alphabetically:
         right: 95px !important;
 		left: auto !important; /**/
 	}
-	form[name='delform'] > table[align=right]:last-of-type:hover {
+	table[align=right]:hover {
 		position: fixed !important;
 		top: 12px !important;
 		z-index: 99 !important;
@@ -1183,13 +1183,13 @@ This style is designed for the following browsers, ordered alphabetically:
 		bottom: 24px;
 	}
 
-	form[name='delform'] > table[align=right]:last-of-type:hover input[type='checkbox'] {
+	table[align=right]:hover input[type='checkbox'] {
 		position: absolute !important;
 		right: 173px !important;
 		top: 10px !important;
 	}
 
-	form[name='delform'] > table[align=right]:last-of-type:hover::after {
+	table[align=right]:hover::after {
 		visibility: visible !important;
 		position: absolute !important;
 		right: 125px !important;

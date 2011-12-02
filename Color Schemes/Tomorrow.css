@@ -393,7 +393,7 @@
 		content: url('http://i.imgur.com/PKF1H.png') !important;
 	}
 /* Delete buttons */
-	form[name='delform'] > table[align=right]:last-of-type::before { 
+	table[align=right]::before {  
 		content: url('http://i.imgur.com/fTdb3.png') !important;
 	}
 /* Return button */
