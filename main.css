@@ -199,7 +199,8 @@ This style is designed for the following browsers, ordered alphabetically:
 		text-decoration: none !important;
 	}
 
-	/*[[CustomScrollbars]]*/::-webkit-scrollbar { width: 10px !important; height: 10px !important; }
+	/*[[CustomScrollbars]]*/scrollbarbutton { display: none !important; }
+	::-webkit-scrollbar { width: 10px !important; height: 10px !important; }
 	::-webkit-scrollbar-thumb { border: 1px solid; }
 	::-webkit-scrollbar-track-piece:vertical { border-left: 0; }
 	::-webkit-scrollbar-track-piece:horizontal { border-top: 0; }
