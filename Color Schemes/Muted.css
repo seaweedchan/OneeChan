@@ -162,7 +162,10 @@ background-image: none !important;
 	td.postblock,
 	td.reply,
 	textarea,
-	#options.reply.dialog {
+	#options.reply.dialog,
+	.deletebuttons input[value=Delete],
+	input[value="Report"],
+	body::before {
 		background-color: #efefef !important;
 	}
 
@@ -198,9 +201,8 @@ background-image: none !important;
 		background-color: rgba(254,254,254,0.9) !important;
 	}
 
-	#navbot,
-	#navbot::after {
-		background-color: #f6f6f6 !important;
+	#navbot, #watcher:hover, font[color="red"], .deletebuttons {
+		background-color: rgba(254,254,254,1) !important;
 	}
 
 	html body span[style='left: 5px; position: absolute;'] a:hover,

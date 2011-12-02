@@ -212,7 +212,13 @@
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
 	table.reply[style^='clear: both'],
-	#options.reply.dialog {
+	#options.reply.dialog,
+	.deletebuttons input[value=Delete],
+	input[value="Report"],
+	body::before,
+	#watcher:hover, 
+	font[color="red"], 
+	.deletebuttons  {
 		background-color: rgba(0,0,0,0.7) !important;
 	}
 
@@ -300,6 +306,7 @@
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input:checked {
                 background-image: url('http://i.imgur.com/TyFWy.png') !important;
+		background-repeat: no-repeat !important;
 	}
 	}
 	
@@ -449,3 +456,31 @@
 		padding-top: 1px !important;
 		border-top: 1px solid #333 !important;
 	}
+	/* Toolbox images */
+/* 4chan X options */
+	#navtopr a::after {
+		content: url('http://i.imgur.com/PKF1H.png') !important;
+	}
+/* Delete buttons */
+	form[name='delform'] > table[align=right]:last-of-type::before { 
+		content: url('http://i.imgur.com/fTdb3.png') !important;
+	}
+/* Return button */
+	html body span[style='left: 5px; position: absolute;'] a::after {  
+		content: url('http://i.imgur.com/P0f9k.png') !important;
+	}
+/* Watcher */
+	#watcher::before {  
+		content: url('http://i.imgur.com/M91GN.png') !important;
+	}
+/* Announcement */
+	font[color="red"]::before {  
+		content: url('http://i.imgur.com/GbjoO.png') !important;
+	}
+/* Slideout nav */
+	#navbot::after {  
+		content: url('http://i.imgur.com/FDsvM.png') !important;
+	}
+/* 4sight */
+	body > a[style='cursor: pointer; float: right;']::after { 
+		c

@@ -142,7 +142,10 @@
 	td.postblock,
 	td.reply,
 	textarea,
-	#options.reply.dialog {
+	#options.reply.dialog,
+	.deletebuttons input[value=Delete],
+	input[value="Report"],
+	body::before {
 		background-color: #282a2e !important;
 	}
 
@@ -176,9 +179,8 @@
 		background-color: rgba(29,31,33,0.9) !important;
 	}
 
-	#navbot,
-	#navbot::after {
-		background-color: #282a2e !important;
+	#navbot, #watcher:hover, font[color="red"], .deletebuttons {
+		background-color: rgba(29,31,33,1) !important;
 	}
 
 	#backwash_tooltip,
@@ -247,6 +249,7 @@
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input:checked {
                 background-image: url('http://i.imgur.com/CAewG.png') !important;
+		background-repeat: no-repeat !important;
 	}
 	}
 	
@@ -383,4 +386,33 @@
 	form[name='delform'] > div:not(.thread) select,
 	.pages input[type='submit'] {
 		height: 15px !important;
+	}
+	/* Toolbox images */
+/* 4chan X options */
+	#navtopr a::after {
+		content: url('http://i.imgur.com/PKF1H.png') !important;
+	}
+/* Delete buttons */
+	form[name='delform'] > table[align=right]:last-of-type::before { 
+		content: url('http://i.imgur.com/fTdb3.png') !important;
+	}
+/* Return button */
+	html body span[style='left: 5px; position: absolute;'] a::after {  
+		content: url('http://i.imgur.com/P0f9k.png') !important;
+	}
+/* Watcher */
+	#watcher::before {  
+		content: url('http://i.imgur.com/M91GN.png') !important;
+	}
+/* Announcement */
+	font[color="red"]::before {  
+		content: url('http://i.imgur.com/GbjoO.png') !important;
+	}
+/* Slideout nav */
+	#navbot::after {  
+		content: url('http://i.imgur.com/FDsvM.png') !important;
+	}
+/* 4sight */
+	body > a[style='cursor: pointer; float: right;']::after { 
+		content: url('http://i.imgur.com/oiHPM.png') !important;
 	}
