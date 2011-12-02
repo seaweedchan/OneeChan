@@ -33,7 +33,7 @@ background-image: none !important;
 	div.postarea,
 	form[name^='post']::after,
 	select,
-	td.deletebuttons,
+	.deletebuttons::after,
 	textarea,
 	.abbr,
 	.boxbar,

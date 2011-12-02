@@ -918,7 +918,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 /*[[ReplyWidth]]*/
 
-	form[name='delform'] > table:not(.pages),
+	form[name='delform'] > table:not(.pages):not(align=right),
 	div.thread > table,
 	.insertedPosts > table {
 		border-spacing: 0 1px !important;
@@ -1140,7 +1140,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		left: auto !important; /**/
 		bottom: auto !important;
 		width: 248px !important;
-		max-width: 248px !important;
 		margin: 0px !important;
 		padding: 0px !important;     
 		font-size: 0px !important;
@@ -1151,6 +1150,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		height: 30px !important;
 		margin-top: 0px !important;
 		padding-right: 3px !important;
+		width: 248px !important;
 	}
 
 	table[align=right]::before {

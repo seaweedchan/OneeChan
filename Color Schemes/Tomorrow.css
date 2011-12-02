@@ -34,7 +34,7 @@
 	div.postarea,
 	input,
 	select,
-	td.deletebuttons,
+	.deletebuttons::after,
 	textarea,
 	.abbr,
 	.boxbar,

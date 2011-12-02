@@ -166,7 +166,7 @@
 	div.postarea,
 	form[name^='post']::before,
 	select,
-	td.deletebuttons,
+	.deletebuttons::after,
 	.abbr,
 	.boxbar,
 	.boxcontent,
