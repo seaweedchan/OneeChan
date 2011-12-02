@@ -158,7 +158,12 @@ This style is designed for the following browsers, ordered alphabetically:
 	* {
 	/* Defaults of all elements */
 		font-family: /*[[Font]]*/ !important;
-		text-decoration: none !important;
+	}
+
+	.quotelink:not(.filtered),
+	.backlink:not(.filtered),
+	.filesize a {
+	text-decoration: none !important;
 	}
 
 	td.reply,
