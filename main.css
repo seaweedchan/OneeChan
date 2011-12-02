@@ -58,7 +58,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 	body::before {
 		content: '';
-		width: 246px !important;
+		width: 248px !important;
 		height: 20px !important;
 		border-top: 0px !important;
 		position: fixed !important;
@@ -511,6 +511,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 /* Buttons */
 	input[type='submit'], /* Any lingering buttons */
+	input[value="Report"],
 	#com_submit /* Submit Button */,
 	input[type='file'][name='upfile'] > input[type='button'] ,
 	form[name^='post'] [name='upfile'] > input[type='button'] /* Browse Button (Fx*) */ {
