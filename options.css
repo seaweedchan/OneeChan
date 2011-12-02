@@ -1534,4 +1534,27 @@ domain('images.4chan.org'),
 		top: 40px !important;
 		z-index: 4 !important;
 	}
+	#watcher::before {
+		display: none !important;
+	}
 /* End */
+
+/*[[redtext]]*/
+/* Normal (4chan default) */
+	font[color="red"] {
+		position: static !important;
+	}
+	font[color="red"], h2, h3, h1 {
+		position: relative !important;
+		top: 10px !important;
+	}
+	font[color="red"]::before {
+		display: none !important;
+	}
+/* Button only */
+	font[color="red"]:hover {
+		position: fixed !important;
+		top: 14px !important;
+		z-index: 99 !important;
+	}
+/* Disable entirely */

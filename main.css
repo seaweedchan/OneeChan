@@ -100,11 +100,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		max-width: 30px !important;
 		padding-bottom: 5px !important;
 	}
-	font[color="red"]:hover {
-		position: fixed !important;
-		top: 14px !important;
-		z-index: 99 !important;
-	}
+/*[[redtext]]*/
 }
 
 @-moz-document domain('4chan.org') {
