@@ -37,7 +37,6 @@
 	#qr::before,
 	#threadwatcher,
 	#threadwatcher .postblock,
-	#watcher,
 	#thread_filter.autohide:hover,
 	#thread_filter:not(.autohide),
 	#updater:hover,
@@ -54,13 +53,16 @@
 	input[type='submit'],
 	#com_submit,
 	input[type='file'] > input[type='button'],
-	#options.reply.dialog {
+	#options.reply.dialog,
+	.deletebuttons input[value=Delete],
+	input[value="Report"],
+	body::before {
 		background-color: #F0E0D6 !important;
 	}
 	td.reply {
 		border:1px solid #D9BFB7 !important;
 	}
-	td.replyhl {
+	td.replyhl, #watcher, #navbot, body::before  {
 		border: 1px solid #ba9dbf !important;
 	}
 	#header {
@@ -69,8 +71,8 @@
 	.pages {
 		background-color: rgba(255,255,239,0.9) !important;
 	}
-	#navbot::after, #navbot {
-		background-color: #D9BFB7 !important;
+        #navbot, #watcher:hover, font[color="red"], .deletebuttons {
+		background-color: rgba(255,255,239,1) !important;
 	}
 	.doubledash,
 	.replyhider a {
@@ -122,6 +124,10 @@
 	hr {
 		border-top: 1px solid #D9BFB7 !important;
 	}
+	#watcher, 
+	#updater:hover, 
+	font[color="red"], 
+	td.deletebuttons,
 	#cc-showpostarea,
 	#ft li,
 	#ft ul,
@@ -312,13 +318,16 @@
 	#com_submit,
 	input[type='file'] > input[type='button'],
 	#qr a#attach::after,
-	#options.reply.dialog {
+	#options.reply.dialog,
+	.deletebuttons input[value=Delete],
+	input[value="Report"],
+	body::before {
 		background-color: #d6daf0 !important;
 	}
 	td.reply {
 		border:1px solid #B7C5D9 !important;
 	}
-	td.replyhl {
+	td.replyhl, #watcher, #navbot, body::before {
 		border: 1px solid #ba9dbf !important;
 	}
 	#header { 
@@ -327,8 +336,8 @@
 	.pages {
 		background-color: rgba(238,242,255,0.9) !important;
 	}
-	#navbot::after, #navbot {
-		background-color: #d6daf0 !important;
+	#navbot, #watcher:hover, font[color="red"], .deletebuttons {
+		background-color: rgba(238,242,255,1) !important;
 	}
 	.doubledash,
 	.replyhider a {
@@ -380,6 +389,10 @@
 	hr {
 		border-top: 1px solid #b7c5d9 !important;
 	}
+	#watcher, 
+	#updater:hover, 
+	font[color="red"], 
+	td.deletebuttons,
 	#cc-showpostarea,
 	#ft li,
 	#ft ul,
@@ -529,6 +542,7 @@
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input:checked {
                 background-image: url('http://i.imgur.com/TyFWy.png') !important;
+		background-repeat: no-repeat !important;
 	}
 	}
 	

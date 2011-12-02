@@ -27,7 +27,6 @@
 	#qr::before,
 	#threadwatcher,
 	#threadwatcher .postblock,
-	#watcher,
 	#thread_filter.autohide:hover,
 	#thread_filter:not(.autohide),
 	#updater:hover,
@@ -44,18 +43,21 @@
 	input[type='submit'],
 	#com_submit,
 	input[type='file'] > input[type='button'],
-	#options.reply.dialog {
+	#options.reply.dialog,
+	.deletebuttons input[value=Delete],
+	input[value="Report"],
+	body::before {
 		background-color: #DDD !important;
 	}
-	td.reply, td.replyhl, #watcher, #navbot:after, #navbot {
-	-moz-appearance: none !important;
+	td.reply, td.replyhl, #watcher, #navbot, body::before {
+		-moz-appearance: none !important;
 		border:1px solid #CCC !important;
 	}
 	#header, .pages {
 		background-color: rgba(238,238,238,0.9) !important;
 	}
-	#navbot, #navbot::after {
-		background-color: #DDD !important;
+        #navbot, #watcher:hover, font[color="red"], .deletebuttons {
+		background-color: rgba(238,238,238,1) !important;
 	}
 	.doubledash,
 	.replyhider a {
@@ -92,11 +94,6 @@
 	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
 		background-color: #DDD !important;
 	}
-	#navbot:hover {
-		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
-		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
-		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
-	}
 	.pages b {
 		background: #DDD !important;
 	}
@@ -115,6 +112,10 @@
 	hr {
 		border-top: 1px solid #D9BFB7 !important;
 	}
+	#watcher, 
+	#updater:hover, 
+	font[color="red"], 
+	td.deletebuttons,
 	#cc-showpostarea,
 	#ft li,
 	#ft ul,
@@ -165,7 +166,6 @@
 	div.postarea,
 	form[name^='post']::before,
 	select,
-	#navbot::after,
 	td.deletebuttons,
 	.abbr,
 	.boxbar,
@@ -266,6 +266,7 @@
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input:checked {
                 background-image: url('http://i.imgur.com/TyFWy.png') !important;
+		background-repeat: no-repeat !important;
 	}
 	}
 	
