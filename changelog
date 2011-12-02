@@ -1,5 +1,15 @@
 OneeChan changelog
 
+v2.0:
+-New toolbox! Icons added to replace delete buttons, slideout nav, thread watcher, etc.
+-4chan X option animations nuked because they don't work very well
+-Green background from 4chan X's updater on new count removed
+-Floating QR z-index fix
+-"Centered Posts?" option changed to "Margin Style", "Small Left Margin" added and made default
+-Issue with pages being out of place when put on the side fixed
+-Postertrip in the quote preview added to what font-size changes
+-Text decorations redone, mostly for Mayhem's 4chan X built-in filter
+
 v1.1:
 -New option: Slideout Watcher?
 -Noko/Sega Identifiers moved into their own option, separate from Sage Identifier
