@@ -412,6 +412,3 @@
 		margin: 0 !important;
 		height: 17px !important;
 	}
-	body::before {
-		width: 246px !important;
-	}

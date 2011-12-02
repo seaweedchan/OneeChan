@@ -58,7 +58,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 	body::before {
 		content: '';
-		width: 248px !important;
+		width: 246px !important;
 		height: 20px !important;
 		border-top: 0px !important;
 		position: fixed !important;
@@ -332,17 +332,14 @@ This style is designed for the following browsers, ordered alphabetically:
 		bottom: auto !important;
 		width: 226px !important;
 		color: transparent !important;
-		padding: 3px 10px 25px 10px !important;
+		padding: 3px 10px 35px 10px !important;
 		border-width: 0 1px 1px 0 !important;
 		word-spacing: -2px !important;
 		height: 50px !important;
 		text-align: center !important;
 		word-spacing: -3px !important;
 	}
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
-	#navbot {
-		padding-bottom: 35px !important;
-	}	
+	@media screen and (-webkit-min-device-pixel-ratio:0) {	
 	input[value="delete"] {
 		position: relative !important;
 		top: 4px !important;
@@ -1143,6 +1140,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		left: auto !important; /**/
 		bottom: auto !important;
 		width: 248px !important;
+		max-width: 248px !important;
 		margin: 0px !important;
 		padding: 0px !important;     
 		font-size: 0px !important;
