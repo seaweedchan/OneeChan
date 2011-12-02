@@ -120,7 +120,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	form[name='delform'] > hr:last-of-type,
 	form[name='delform'] > hr:nth-last-of-type(2),
 	html body > a:not([style='cursor: pointer; float: right;']),
-	scrollbarbutton,
 	small,
 	td[style^='padding: ']:not(#backwash_tipcell):not([style='padding: 10px 7px 7px 7px;']):not([style='padding: 10px 7px 7px;']),
 	td.rules,
