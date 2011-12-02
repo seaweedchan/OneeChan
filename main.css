@@ -1049,7 +1049,7 @@ This style is designed for the following browsers, ordered alphabetically:
 /*[[ChangeAlign]]*/
 		left: auto !important;
 		right: 101px !important;/**/
-		top: 1px !important;
+		top: 23px !important;
 		bottom: auto !important;
 		width: 150px;
 		z-index: 2;
