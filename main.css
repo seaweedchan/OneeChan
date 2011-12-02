@@ -1443,11 +1443,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		min-width: 30px !important;
 		max-width: 30px !important;
 	}
-	#watcher:hover {
-		position: fixed !important;
-		top: 14px !important;
-		z-index: 99 !important;
-	}
+/*[[watcherslideout]]*/
 	#backwash_tooltip,
 	#qp,
 	#popup,

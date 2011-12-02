@@ -1520,3 +1520,18 @@ domain('images.4chan.org'),
 		margin: 12px 40px 20px;
 	}
 /* End */
+
+/*[[watcherslideout]]*/
+/* Enabled */
+	#watcher:hover {
+		position: fixed !important;
+		top: 14px !important;
+		z-index: 99 !important;
+	}
+/* Disabled */
+	#watcher {
+		position: fixed !important;
+		top: 40px !important;
+		z-index: 4 !important;
+	}
+/* End */
