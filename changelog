@@ -9,7 +9,9 @@ v2.0:
 -Issue with pages being out of place when put on the side fixed
 -Postertrip in the quote preview added to what font-size changes
 -Text decorations redone, mostly for Mayhem's 4chan X built-in filter
--Fixed issue where scrollbar buttons were removed in Firefox
+-Fixed issue where scrollbar buttons were removed in Firefox with Custom Scrollbars disabled
+-Removed resize grip from textarea since it doesn't do anything
+-Slideout Watcher and Moot's Announcements options redone for toolbox
 
 v1.1:
 -New option: Slideout Watcher?
