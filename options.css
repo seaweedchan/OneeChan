@@ -656,6 +656,7 @@ none
 	#qr textarea {
 		min-height: 0 !important;
 		height: /*[[TextareaHeight]]*/ !important;
+		resize: none !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
@@ -763,6 +764,7 @@ none
 	#qr textarea {
 		min-height: 0 !important;
 		height: /*[[TextareaHeight]]*/ !important;
+		resize: none !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
@@ -907,6 +909,7 @@ none
 	#qr textarea {
 		min-height: 0 !important;
 		height: /*[[TextareaHeight]]*/ !important;
+		resize: none !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
@@ -1010,6 +1013,7 @@ none
 	#qr textarea {
 		min-height: 0 !important;
 		height: /*[[TextareaHeight]]*/ !important;
+		resize: none !important;
 	}
 
 	#qr form[name^='post'] .inputtext,
