@@ -418,4 +418,5 @@ background-image: none !important;
 	}
 /* 4sight */
 	body > a[style='cursor: pointer; float: right;']::after { 
-		c
+		content: url('http://i.imgur.com/oiHPM.png') !important;
+	}
