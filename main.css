@@ -157,7 +157,9 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	.quotelink:not(.filtered),
 	.backlink:not(.filtered),
-	.filesize a {
+	.filesize a,
+	a[href*=res],
+	a[href*="http://dis"] {
 	text-decoration: none !important;
 	}
 
