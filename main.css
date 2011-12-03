@@ -1292,7 +1292,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#stats {
 		position: fixed !important;
-		top: 20px !important;
+		top: 23px !important;
 		right: auto !important;
 		left: 150px !important;
 /*[[ChangeAlign]]*/
