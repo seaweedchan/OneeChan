@@ -217,6 +217,7 @@
 	input[value="Report"],
 	body::before,
 	#watcher:hover, 
+	#watcher,
 	font[color="red"], 
 	.deletebuttons  {
 		background-color: rgba(0,0,0,0.7) !important;

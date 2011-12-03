@@ -179,7 +179,7 @@ background-image: none !important;
 		background-color: rgba(44,44,44,0.9) !important;
 	}
 
-	#navbot, #watcher:hover, font[color="red"], .deletebuttons {
+	#navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
 		background-color: rgba(44,44,44,1) !important;
 	}
 

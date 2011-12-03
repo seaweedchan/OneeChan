@@ -71,7 +71,7 @@
 	.pages {
 		background-color: rgba(255,255,239,0.9) !important;
 	}
-        #navbot, #watcher:hover, font[color="red"], .deletebuttons {
+    #navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
 		background-color: rgba(255,255,239,1) !important;
 	}
 	.doubledash,
@@ -336,7 +336,7 @@
 	.pages {
 		background-color: rgba(238,242,255,0.9) !important;
 	}
-	#navbot, #watcher:hover, font[color="red"], .deletebuttons {
+	#navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
 		background-color: rgba(238,242,255,1) !important;
 	}
 	.doubledash,
