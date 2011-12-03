@@ -10,7 +10,7 @@
 		content: url('http://i.imgur.com/TBHI6.png');
 		bottom: 249px;
 /* Kagamine Rin: */
-		content: url('http://i.imgur.com/fXXd2.png');
+		content: url('http://i.imgur.com/fXXd2.png');z
 		bottom: 249px;
 /* Kinomoto Sakura: */
 		content: url('http://i.imgur.com/Ve0hl.png');
@@ -640,7 +640,7 @@ none
 		width: 248px !important;
 		margin: 0 !important;
 		padding: 0 !important;
-		z-index: 5;
+		z-index: 5 !important;
 	}
 
 	#qr_form {
@@ -737,7 +737,7 @@ none
 		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		z-index: 5;
+		z-index: 5 !important;
 	}
 
 	#qr:hover {
@@ -845,7 +845,7 @@ none
 		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
 		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		z-index: 5;
+		z-index: 5 !important;
 	}
 
 	#qr:hover {
@@ -990,7 +990,7 @@ none
 		-webkit-transition: opacity .3s ease-in-out 3s;
 		-moz-transition: opacity .3s ease-in-out 3s;
 		-o-transition: opacity .3s ease-in-out 3s;
-		z-index: 5;
+		z-index: 5 !important;
 	}
 
 	#qr:hover {
