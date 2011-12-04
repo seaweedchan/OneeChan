@@ -91,16 +91,25 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: fixed !important;
 
 		top: 1px !important;
-        left: 20px !important;
-       	right: auto !important;
+        	left: 20px !important;
+       		right: auto !important;
 /*[[ChangeAlign]]*/		
-       	right: 176px !important;
+       		right: 176px !important;
 		left: auto !important; /**/
 		min-width: 30px !important;
 		max-width: 30px !important;
 		padding-bottom: 5px !important;
 	}
 /*[[redtext]]*/
+	blockquote font[color="red"], blockquote font[color="red"]:hover {
+		position: static !important;
+		border: none !important;
+		font-size: 30px !important;
+		background: none !important;
+	}
+	blockquote font[color="red"]::before {
+		display: none !important;
+	}
 }
 
 @-moz-document domain('4chan.org') {

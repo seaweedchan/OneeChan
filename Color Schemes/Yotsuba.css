@@ -258,7 +258,7 @@
 }
 /* Yotsuba B */
 
-@-moz-document regexp(".*\.4chan\.org/(v|g|a|c|g|k|m|o|p|w|cm|3|adv|an|cgl|ck|co|diy|fa|fit|int|jp|lit|mu|n|po|sci|sp|tg|toy|trv|tv|vp|s)/.*") {
+@-moz-document regexp(".*\.4chan\.org/(v|g|a|c|g|k|m|o|p|w|cm|3|adv|an|cgl|ck|co|diy|fa|fit|int|jp|lit|mu|n|po|sci|sp|tg|toy|trv|tv|vp|x)/.*") {
 /*[[CustomScrollbars]]*/
 	::-webkit-scrollbar-thumb { border: 1px solid #b7c5d9; background: #eef2ff; }
 	::-webkit-scrollbar-thumb:hover { background: -webkit-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }
