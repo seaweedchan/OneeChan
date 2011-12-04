@@ -523,9 +523,7 @@
 }
 
 @-moz-document domain(4chan.org) {
-	* {
-		outline: none !important;
-	}
+
 	.logo {
 		color: #af0a0f !important;
 	}
