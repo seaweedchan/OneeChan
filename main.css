@@ -100,7 +100,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		max-width: 30px !important;
 		padding-bottom: 5px !important;
 	}
-/*[[redtext]]*/
 	blockquote font[color="red"], blockquote font[color="red"]:hover {
 		position: static !important;
 		border: none !important;
@@ -1301,7 +1300,7 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	#stats {
 		position: fixed !important;
-		top: 23px !important;
+		top: 20px !important;
 		right: auto !important;
 		left: 150px !important;
 /*[[ChangeAlign]]*/
@@ -1479,6 +1478,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 /*[[PagesPosition]]*/
 /*[[ColorScheme]]*/
+/*[[redtext]]*/
 /*[[RoundedCorners]]*/
 	.filesize+br+a[target='_blank']:hover {
 		background: none !important;
