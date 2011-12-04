@@ -324,7 +324,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	#navbot:hover {
-		top: 14px !important;
+		top: 18px !important;
 		z-index: 99 !important;
 	}
 

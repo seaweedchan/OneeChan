@@ -1525,7 +1525,7 @@ domain('images.4chan.org'),
 /* Enabled */
 	#watcher:hover {
 		position: fixed !important;
-		top: 14px !important;
+		top: 18px !important;
 		z-index: 99 !important;
 	}
 /* Disabled */
@@ -1554,7 +1554,7 @@ domain('images.4chan.org'),
 /* Button only */
 	font[color="red"]:hover {
 		position: fixed !important;
-		top: 14px !important;
+		top: 18x !important;
 		z-index: 99 !important;
 	}
 /* Disable entirely */
