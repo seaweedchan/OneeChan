@@ -85,7 +85,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		width: 236px !important;
 		padding: 10px 5px 10px 5px !important;
 	}
-	font[color="red" b {
+	font[color="red"] b {
 		font-weight: 100 !important;
 	}
 	font[color="red"]::before {
