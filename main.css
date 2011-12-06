@@ -85,6 +85,9 @@ This style is designed for the following browsers, ordered alphabetically:
 		width: 236px !important;
 		padding: 10px 5px 10px 5px !important;
 	}
+	font[color="red" b {
+		font-weight: 100 !important;
+	}
 	font[color="red"]::before {
 		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAlZJREFUOE99lE1IVFEYhmdGZ2oEnVQMWySCixA32SJGgxYVREGrVAQZrt65ICFIuggSEg37WSoaLaIQ+9FNK8WNiULgQsGFwahgJFKESKmpqJE/zzuc5HKdGnj4zpzvnPe85zvnXJ/P9Yvb8YBjO2E469Q5V4gxaKR9B27TLoUcCILfPfeoTSIDzsN9+AjfYAv24Q+swjy8gwo4g3jakQAu/BAhUQVjsAE/YNYIfiCOwiQsGvElYqcWZm4wKUbjJB3VMAObMAHtcINcoWVZJbVWbbFxaxFfwhctSP4NFKskErpgVl4nvofrkGnbtj8Wi4VgCRIQYGw6uQK4C59A232kHflodBgn43SUI5DuLiICEzDi7mN8DmObiV9hnnbUR8FUi2Vo0ja9J4FIL/S4++WW8UXMHVbNJCpHvyFB5+VUx4nIPWjw5pgchsfMXSd2SkjHOw2l/xC6hdA1bw5XIQRamPeT2COhNdCxVpAMpNhaBkJhbz87yIMB5u0g1C6hQfgFzyDPU2idXJ+3Row7Abrpc/AdbkqoxhR7gVgvMbczRK7CJc+p6akMqdC4ehuvi5+WUD68AN3oBDyAi9jN/StIzIIIJLdIXq/gs+pjnAXVmaZCw2tYMe70VJ7DQ2iDLuiGJ9DAIq1mUS2uhx1KOsaebmyJcTNF1C3fBZ3onmlvmygXOhwdkvJ9cMr9+uUsF6LgwFPohVfGiVyoBHrA2tYOHIBqGz12dXCnW6tvkr47ql8+fdnECFH/zxHLiJWgevaz1aqU36b/dTLRj5AesD5uWjCiW34IHpyJvx+WYAQAAAAASUVORK5CYII=') !important;
 		height: 9px !important;
@@ -589,10 +592,6 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: absolute;
 	}
 
-	form[name^='post'] > table td {
-	   text-align: right;
-	}
-
 	.postarea #com_submit + label {
 		font-size: 12px !important;
 		top: auto !important;
@@ -655,6 +654,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: absolute;
 		font-size: 12px !important;
 		z-index: 2;
+		font-weight: 100 !important;
 	}
 
 	form[name^='post'] tr:nth-of-type(1) .postblock b::after {
