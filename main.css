@@ -789,6 +789,10 @@ This style is designed for the following browsers, ordered alphabetically:
 		width: 300px !important;
 	}
 
+	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	#qr input[type=file][name='upfile'] { width: 250px !important; }
+	}
+
 	#qr .move .inputtext {
 		width: 198px !important;
 	}
@@ -1406,7 +1410,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	#threadwatcher /* 4chan4chrome's threadwatcher */ {
 		border: 0 !important;
 		padding: 1px 0;
-		overflow: hidden;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		-o-border-radius: 0;
