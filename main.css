@@ -790,7 +790,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-	#qr input[type=file][name='upfile'] { width: 250px !important; }
+	.postarea input[type=file][name='upfile'], #qr input[type=file][name='upfile'] { width: 250px !important; }
 	}
 
 	#qr .move .inputtext {
