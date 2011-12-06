@@ -814,6 +814,14 @@ This style is designed for the following browsers, ordered alphabetically:
 		z-index: 0;
 		padding: 0 !important;
 	}
+	
+	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	td.reply,
+	td.replyhl {
+		padding: 5px 0px 12px 0px !important;
+	}
+	}
+	
 /*[[CaptchaReload]]*/
 	.postarea form[name^='post'] #recaptcha_reload_btn {
 		bottom: 62px !important;
@@ -1113,7 +1121,12 @@ This style is designed for the following browsers, ordered alphabetically:
 	#qp {
 		padding: 2px 6px !important;
 	}
-
+	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	#qp {
+		padding: 5px 5px 12px 5px !important;
+	}
+	}
+	
 	#backwash_tooltip,
 	#popup,
 	div[id^='ref'],
