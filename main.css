@@ -705,7 +705,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	#captchas {
 		position: absolute;
 		right: 7px;
-		margin-top: 4px;
+		margin-top: 2px;
 	}
 
 	#files a {
