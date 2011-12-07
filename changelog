@@ -1,5 +1,16 @@
 OneeChan changelog
 
+v2.1:
+-Opera support! Lots of bug fixes and design updates for Opera.
+-Moot's Announcement bug fixes when not button-only
+-Various improvements for the toolbox
+-4chan Filter Fix moved to its default floating state
+-Fixed issue where Announcement button would show up twice on /t/
+-Fixed issue where Yotsuba doesn't style /x/ (creepy!)
+-Moved slideout elements down a few pixels
+-Fixed issue where quote highlighting is disabled despite 4chan X options in a few light color schemes
+-Fix text selecting issue in a few color schemes where selected text would have drop shadows
+
 v2.0:
 -New toolbox! Icons added to replace delete buttons, slideout nav, thread watcher, etc.
 -4chan X option animations nuked because they don't work very well
