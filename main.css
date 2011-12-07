@@ -1654,6 +1654,10 @@ url('http://www.4chan.org') {
 	.yui-g {
 		display: none !important;
 	}
+	font[color="red"], h2, h3, h1 {
+		display: block !important;
+		position: static !important;
+	}
 }
 
 @-moz-document url-prefix('http://boards.4chan.org/f/') {
