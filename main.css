@@ -24,7 +24,7 @@ the following fair use rationale:
 	discern.
 
 In the event where usage of included images is found unwanted by the
-original copyright holders, owned images will be removed from AppChan.
+original copyright holders, owned images will be removed from OneeChan.
 */
 
 /*
@@ -33,9 +33,7 @@ This style is intended to provide integration of 4chan x into 4chan.
 This style is designed for the following browsers, ordered alphabetically:
 	* Chromium / Google Chrome 10 or higher, including the dev and Canary channels.
 	* Mozilla Firefox 6.x or higher, including the Aurora and Nightly channels.
-	
-	Opera is not supported, though it will work as a userscript. OneeChan is designed for use 
-		with the Stylish extension, so quality with Opera cannot be ensured.
+	* Opera 11.5 and higher.
 */
 @-moz-document domain(boards.4chan.org), domain(rs.4chan.org) {
 /* Mascots (More mascots can be found at https://github.com/zixaphir/AppChan/wiki/Mascots) */
