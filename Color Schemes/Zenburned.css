@@ -56,9 +56,6 @@ background-image: none !important;
 		color: #dcdccc !important;
 	}
 
-/*[[TransparentReplies]]*/	.op > blockquote,
-	.thread > blockquote,
-	form[name='delform'] > blockquote, /**/
 	div.logo font {
 		text-shadow: #3f3f3f 1px 0 2px, #3f3f3f -1px 0 2px, #3f3f3f 0 -1px 2px, #3f3f3f 0 1px 2px;
 	}
