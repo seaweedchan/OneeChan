@@ -1423,7 +1423,17 @@ domain('images.4chan.org'),
 		padding: 20px 2px 0 252px !important;
 		/*[[ChangeAlign]]*/padding: 20px 252px 0 2px !important;/**/
  	}
-/* Small Left Margin */
+/* Small Left Margin (4chan default) */
+		padding: 20px 25px 0 252px !important;
+		/*[[ChangeAlign]]*/padding: 20px 252px 0 25px !important;/**/
+ 	}
+	#header {
+		padding-left: 0px !important;
+		padding-right: 70px !important;
+		/*[[ChangeAlign]]*/padding-left: 70px !important;
+		padding-right: 0px !important;/**/
+	}
+/* Medium Left Margin */
 		padding: 20px 50px 0 252px !important;
 		/*[[ChangeAlign]]*/padding: 20px 252px 0 50px !important;/**/
  	}
