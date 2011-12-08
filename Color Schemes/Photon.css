@@ -243,6 +243,9 @@
 	#qp .postername, #qp .commentpostername, #qp .container a, #qp .quotejs {
 		color: #FFF !important;
 	}
+	#qp .postertrip {
+		color: #999 !important;
+	}
 	#qp .filesize {
 		color: #999 !important;
 	}
