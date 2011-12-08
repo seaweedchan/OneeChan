@@ -168,7 +168,8 @@ This style is designed for the following browsers, ordered alphabetically:
 	.backlink:not(.filtered),
 	.filesize a,
 	a[href*=res],
-	a[href*="http://dis"] {
+	a[href*="http://dis"],
+	#credits a {
 	text-decoration: none !important;
 	}
 
