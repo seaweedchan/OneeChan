@@ -206,7 +206,6 @@
 	#backwash_tooltip,
 	#header .title,
 	#imgControls label::after,
-	#qp,
 	#twi_table_div,
 	#updater #count:not(.new)::after,
 	font[color="red"],
@@ -237,10 +236,15 @@
 		background-color: #CCC !important;
 	}
 	#qp {
-		background-color: #CCC !important;
-		-moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
-		-webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
-		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+		background-color: rgba(0,0,0,0.7) !important;
+		color: #FFF !important;
+		border: 5px solid rgba(255,255,255,0.6) !important;
+	}
+	#qp .commentpostername, #qp .container a, #qp .quotejs {
+		color: #FFF !important;
+	}
+	#qp .filesize {
+		color: #999 !important;
 	}
 	input[type='checkbox'],
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
