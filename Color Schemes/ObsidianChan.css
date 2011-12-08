@@ -438,8 +438,6 @@
 	#qr {
 		background-color: rgba(0,0,0,0.7) !important;
 		border: 1px solid #333 !important;
-		border-left: none !important;
-		border-bottom: none !important;
 	}
 	.postarea form[name^='post'] {
 		width: 252px !important;
