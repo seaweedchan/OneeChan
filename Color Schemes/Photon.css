@@ -240,7 +240,7 @@
 		color: #FFF !important;
 		border: 5px solid rgba(255,255,255,0.6) !important;
 	}
-	#qp .commentpostername, #qp .container a, #qp .quotejs {
+	#qp .postername, #qp .commentpostername, #qp .container a, #qp .quotejs {
 		color: #FFF !important;
 	}
 	#qp .filesize {
