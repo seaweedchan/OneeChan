@@ -1300,6 +1300,26 @@ This style is designed for the following browsers, ordered alphabetically:
 	#options ul > li {
 		padding: 0 !important;
 	}
+
+	#options.reply.dialog, #options .dialog {
+		width: 700px !important;
+	}
+
+	#content > * {
+		height: 600px !important;
+	}
+
+	#floaty::after {
+		content: "4chan X Options" !important;
+		position: relative !important;
+		left: 120px !important;
+		font-size: 14px !important;
+	}
+
+	#options hr {
+		display: none !important;
+	}
+
 /* End of 4chan x options */
 	#filter,
 	#thread_filter,

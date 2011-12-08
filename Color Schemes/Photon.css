@@ -238,7 +238,7 @@
 	#qp {
 		background-color: rgba(0,0,0,0.7) !important;
 		color: #FFF !important;
-		border: 5px solid rgba(255,255,255,0.6) !important;
+		border: 2px solid rgba(255,255,255,0.5) !important;
 	}
 	#qp .postername, #qp .commentpostername, #qp .container a, #qp .quotejs {
 		color: #FFF !important;
@@ -304,9 +304,6 @@
 	}
 	#floaty label {
 		color: #FF6600 !important;
-	}
-	#options hr {
-		display: none !important;
 	}
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
 	input:checked,
