@@ -63,7 +63,7 @@
 		border:1px solid #D9BFB7 !important;
 	}
 	td.replyhl, #watcher, #navbot, body::before  {
-		border: 1px solid #ba9dbf !important;
+		border: 1px solid #D9BFB7 !important;
 	}
 	#header {
 		background-color: rgba(254,216,179,0.9) !important;
@@ -328,7 +328,7 @@
 		border:1px solid #B7C5D9 !important;
 	}
 	td.replyhl, #watcher, #navbot, body::before {
-		border: 1px solid #ba9dbf !important;
+		border: 1px solid #B7C5D9 !important;
 	}
 	#header { 
 		background-color: rgba(211,215,238,0.9) !important;
@@ -523,7 +523,11 @@
 }
 
 @-moz-document domain(4chan.org) {
-
+	body::before {
+		opacity: 1 !important;
+		border-left: none !important;
+		border-top: none !Important;
+	}
 	.logo {
 		color: #af0a0f !important;
 	}
