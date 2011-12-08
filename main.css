@@ -1663,3 +1663,14 @@ url('http://www.4chan.org') {
 		position: static !important;
 	}
 }
+
+@-moz-document domain('sys.4chan.org') {
+		font[color="red"], font[color="red"]:hover {
+		position: static !important;
+		border: none !important;
+		background: none !important;
+	}
+	font[color="red"]::before {
+		display: none !important;
+	}
+}
