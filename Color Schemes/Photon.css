@@ -22,7 +22,6 @@
 	#ft li,
 	#ft ul,
 	#navbar,
-	#options .dialog,
 	#popup,
 	#qr::before,
 	#threadwatcher,
@@ -43,11 +42,40 @@
 	input[type='submit'],
 	#com_submit,
 	input[type='file'] > input[type='button'],
-	#options.reply.dialog,
 	.deletebuttons input[value=Delete],
 	input[value="Report"],
 	body::before {
 		background-color: #DDD !important;
+	}
+	#options.reply.dialog, #options .dialog {
+		background-color: rgba(0,0,0,0.5) !important;
+		color: #FFF !important;
+		border: 10px solid rgba(255,255,255,0.4) !important;
+		border-radius: 6px !important;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 6px;
+	}
+	#options button {
+		background: none !important;
+		-moz-appearance: none !important;
+		border: none !important;
+		color: #FF8433 !important;
+		width: auto !important;
+		padding: 0px !important;
+		margin: 0px !important;
+		cursor: pointer !important;
+	}
+	#options ul {
+		border-bottom: 1px solid rgba(255,255,0.2) !important;
+		border-radius: 0px !important;
+		margin-bottom: 5px !important;
+		padding-bottom: 7px !important;
+	}
+	#options ul:first-of-type {
+		padding-top: 5px !important;
+	}
+	#options ul:last-of-type {
+		border: none !important;
 	}
 	td.reply, td.replyhl, #watcher, #navbot, body::before {
 		-moz-appearance: none !important;
@@ -215,7 +243,6 @@
 		box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
 	}
 	input[type='checkbox'],
-	#options input[type='checkbox'],
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input[type='checkbox'] {
 		background-color: #FFFFEE !important;
@@ -251,18 +278,30 @@
 	color: #333 !important;
 	}
 	input[type=checkbox]:checked,
-	#options input[type=checkbox]:checked,
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input[type='checkbox']:checked {
 		background-color: #bcc0d4 !important;
 	}
-
+	#options input[type='checkbox'] {
+		background-color: rgba(255,255,255,0.1) !important;
+		border: none !important;
+	}
+	#options input[type=checkbox]:checked {
+		background-color: rgba(255,255,255,0.1) !important;
+		color: #FF6600 !important;
+	}
+	#floaty label {
+		color: #FF6600 !important;
+	}
+	#options hr {
+		display: none !important;
+	}
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
 	input[type=checkbox]:checked,
 	#options input[type=checkbox]:checked,
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input:checked {
-                background-image: url('http://i.imgur.com/TyFWy.png') !important;
+                background-image: url('http://i.imgur.com/CAewG.png') !important;
 		background-repeat: no-repeat !important;
 	}
 	}

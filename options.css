@@ -1139,7 +1139,6 @@ none
 /*[[RoundedCorners]]*/
 /* Yes: */
 	input[type='checkbox'],
-	#options input[type='checkbox'],
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input[type='checkbox'] {
 		border-radius: 2px !important;
