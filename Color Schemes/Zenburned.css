@@ -278,12 +278,11 @@ background-image: none !important;
 	}
 
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
-	input[type=checkbox]:checked,
-	#options input[type=checkbox]:checked,
-	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
+	input:checked,
+	#options input:checked,
+	form[name^='post'] td:nth-of-type(3) > label input:checked,
 	#qr label input:checked {
-                background-image: url('http://i.imgur.com/CAewG.png') !important;
-		background-repeat: no-repeat !important;
+		content: url('http://i.imgur.com/CAewG.png') !important;
 	}
 	}
 	
