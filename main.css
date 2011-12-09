@@ -774,6 +774,16 @@ This style is designed for the following browsers, ordered alphabetically:
 		right: 0px !important;
 		background: none !important;
 	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#imageType {
+		bottom: 1px !important;
+	}
+	}
+	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	#imageType {
+		bottom: 1px !important;
+	}
+	}
 /* #qr dimensions */
 	#qr {
 		z-index: 98;
