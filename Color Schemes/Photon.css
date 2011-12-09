@@ -236,9 +236,9 @@
 		background-color: #CCC !important;
 	}
 	#qp {
-		background-color: rgba(0,0,0,0.7) !important;
+		background-color: rgba(21,21,21,0.8) !important;
 		color: #FFF !important;
-		border: 2px solid rgba(255,255,255,0.5) !important;
+		border: 2px solid rgba(255,255,255,0.6) !important;
 	}
 	#qp .postername, #qp .commentpostername, #qp .container a, #qp .quotejs {
 		color: #FFF !important;
