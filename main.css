@@ -202,7 +202,8 @@ This style is designed for the following browsers, ordered alphabetically:
 	#header,
 	#header a,
 	#stats,
-	#navbot a {
+	#navbot a,
+	#imageType option {
 		font-size: 12px !important;
 		text-decoration: none !important;
 	}
@@ -766,7 +767,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		border: none !important;
 		width: 90px !important;
 		position: relative !important;
-		bottom: 1px !important;
+		bottom: 2px !important;
 		right: 0px !important;
 		background: none !important;
 	}
