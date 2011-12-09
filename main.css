@@ -203,7 +203,10 @@ This style is designed for the following browsers, ordered alphabetically:
 	#header a,
 	#stats,
 	#navbot a,
-	#imageType option {
+	#imageType option
+	#count,
+	#timer,
+	#postcount {
 		font-size: 12px !important;
 		text-decoration: none !important;
 	}
