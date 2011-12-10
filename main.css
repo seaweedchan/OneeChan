@@ -184,8 +184,9 @@ This style is designed for the following browsers, ordered alphabetically:
 	.postername,
 	.commentpostername,
 	.container::before,
-	#captchas
-	#qp .postertrip {
+	#captchas,
+	#qp .postertrip,
+	.postertrip {
 		font-size: /*[[FontSize]]*/ !important;
 	}
 
