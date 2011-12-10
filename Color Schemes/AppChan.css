@@ -186,6 +186,10 @@ background-image: none !important;
 		background-color: rgba(44,44,44,1) !important;
 	}
 
+	.filetitle {
+		font-weight: 100 !important;
+	}
+
 	#backwash_tooltip,
 	#cc-showpostarea,
 	#filter.autohide:hover,
