@@ -1,5 +1,5 @@
 /* Solarized: */
-/*
+/*[[CustomScrollbars]]*/
 	::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }
 	::-webkit-scrollbar-thumb:active { background: #111; }
 	::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-resizer { background: #002B36; }
