@@ -1,1 +1,2 @@
+Installation Instructions: [![Firefox](http://i.imgur.com/PDev4.jpg)](https://github.com/seaweedchan/OneeChan/wiki/Mozilla-Firefox) [![Google Chrome](http://i.imgur.com/ei1QE.png)](https://github.com/seaweedchan/OneeChan/wiki/Google-Chrome) [![Opera](http://i.imgur.com/4UYub.gif)](https://github.com/seaweedchan/OneeChan/wiki/Opera)    
 ![OneeChan](http://i.imgur.com/dwUAz.png)
