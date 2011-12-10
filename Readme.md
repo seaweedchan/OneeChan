@@ -1,1 +1,1 @@
-![OneeChan](http://i.imgur.com/QMlcf.png)
+![OneeChan](http://i.imgur.com/dwUAz.png)
