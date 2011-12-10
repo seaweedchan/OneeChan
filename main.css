@@ -392,7 +392,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		-moz-appearance: none;
 		-o-appearance: none;
 		display: inline-block;
-		font-size: /*[[FontSize]]*/ !important;
+		font-size: 12px !important;
 		text-align: center;
 		border: none !important;
 		text-align: center;
