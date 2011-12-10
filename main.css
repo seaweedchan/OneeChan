@@ -44,14 +44,12 @@ This style is designed for the following browsers, ordered alphabetically:
 		-moz-transform: scaleX(-1);
 		-o-transform: scaleX(-1);
 		-webkit-transform: scaleX(-1);
-		transform: scaleX(-1);
 /*[[ChangeAlign]]*/
 		right: 0;
 		left: auto;
 		-moz-transform: scaleX(1);
 		-o-transform: scaleX(1);
-		-webkit-transform: scaleX(1);
-		transform: scaleX(1);/**/
+		-webkit-transform: scaleX(1);/**/
 		z-index: 3 !important;
 	}
 	body::before {
@@ -216,10 +214,10 @@ This style is designed for the following browsers, ordered alphabetically:
 	::-webkit-scrollbar-thumb { border: 1px solid; }
 	::-webkit-scrollbar-track-piece:vertical { border-left: 0; }
 	::-webkit-scrollbar-track-piece:horizontal { border-top: 0; }
-	scrollbar, scrollcorner { -moz-appearance: none !important; -o-appearance: none !important; width: 10px !important; height: 10px !important; }
+	scrollbar, scrollcorner { -moz-appearance: none !important; width: 10px !important; height: 10px !important; }
 	scrollbar[orient='vertical'] { border-left: 0; }
 	scrollbar[orient='horizontal'] { border-top: 0; }
-	thumb { -moz-appearance: none !important; -o-appearance: none !important; border: 1px solid; }/**/
+	thumb { -moz-appearance: none !important; border: 1px solid; }/**/
 
 	span[id^='4chan_ext_right'],
 	a.yuimenuitemlabel:hover,
@@ -390,7 +388,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	.pages input {
 		-webkit-appearance: none;
 		-moz-appearance: none;
-		-o-appearance: none;
 		display: inline-block;
 		font-size: 12px !important;
 		text-align: center;
@@ -441,7 +438,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	textarea {
 		-webkit-appearance: none;
 		-moz-appearance: none;
-		-o-appearance: none;
 	}
 /* Positioning and transitions of the post form */
 	.postarea form[name^='post'] {
@@ -926,7 +922,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	.boxcontent textarea {
 		-webkit-appearance: button;
 		-moz-appearance: none;
-		-o-appearance: none;
 		border: 0 !important;
 	}
 
@@ -935,7 +930,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	#options input[type=checkbox] {
 		-webkit-appearance: button !important;
 		-moz-appearance: none;
-		-o-appearance: none;
 		width: 12px !important;
 		height: 12px !important;
 		cursor: pointer !important;
@@ -1372,9 +1366,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	#stats {
 		padding: 3px 0;
 		border: 0 !important;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		-o-border-radius: 0;
 		border-radius: 0;
 		font-size: 12px !important;
 		z-index: 4 !important;
@@ -1488,9 +1479,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	#threadwatcher /* 4chan4chrome's threadwatcher */ {
 		border: 0 !important;
 		padding: 1px 0;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		-o-border-radius: 0;
 		border-radius: 0;
 	}
 

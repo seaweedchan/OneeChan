@@ -1142,7 +1142,6 @@ none
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input[type='checkbox'] {
 		border-radius: 2px !important;
-		-o-border-radius: 2px !important;
 	}
 
 	td.reply,
@@ -1163,12 +1162,10 @@ none
 	#navbot,
 	font[color="red"] {
 		border-radius: 3px !important;
-		-o-border-radius: 3px !important;
 	}
 
 	body::before {
         	border-radius: 0px 0px 3px 3px !important;
-        	-0-border-radius: 0 0 3px 3px !important; 
         }
 
 	.pages b,
@@ -1181,13 +1178,10 @@ none
 
 	form[name^='post']::after {
 		border-radius: 6px 6px 0 0;
-		-o-border-radius: 6px 6px 0 0 !important;
 	}
 
 	.qphl {
-		-webkit-outline-radius: 3px;
 		-moz-outline-radius: 3px;
-		-o-outline-radius: 3px;
 	}
 /* ...and circle checkboxes */
 	input[type='checkbox'],
@@ -1195,7 +1189,6 @@ none
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input[type='checkbox'] {
 		border-radius: 6px !important;
-		-o-border-radius: 6px !important;
 	}
 
 	td.reply,
@@ -1216,12 +1209,10 @@ none
 	#navbot,
 	font[color="red"] {
 		border-radius: 3px !important;
-		-o-border-radius: 3px !important;
 	}
 
 	body::before {
         	border-radius: 0px 0px 3px 3px !important;
-        	-0-border-radius: 0 0 3px 3px !important; 
         }
 
 	.pages b,
@@ -1233,13 +1224,10 @@ none
 
 	form[name^='post']::after {
 		border-radius: 6px 6px 0 0;
-		-o-border-radius: 6px 6px 0 0 !important;
 	}
 
 	.qphl {
-		-webkit-outline-radius: 3px;
 		-moz-outline-radius: 3px;
-		-o-outline-radius: 3px;
 	}
 /* No: */
 
