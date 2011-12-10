@@ -1218,18 +1218,46 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	table[align=right]:hover input[type='checkbox'] {
+		position: fixed !important;
+		right: 168px !important;
+		top: 22px !important;
+	}
+
+	table[align=right]:hover::after {
+		visibility: visible !important;
+		position: fixed !important;
+		right: 120px !important;
+		top: 22px !important;
+		font-size: 12px !important;
+		content: 'File Only';
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	table[align=right]:hover input[type='checkbox'] {
 		position: absolute !important;
 		right: 173px !important;
 		top: 11px !important;
 	}
 
 	table[align=right]:hover::after {
-		visibility: visible !important;
 		position: absolute !important;
 		right: 125px !important;
 		top: 11px !important;
-		font-size: 12px !important;
-		content: 'File Only';
+	}
+	}
+
+	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	table[align=right]:hover input[type='checkbox'] {
+		position: absolute !important;
+		right: 173px !important;
+		top: 10px !important;
+	}
+
+	table[align=right]:hover::after {
+		position: absolute !important;
+		right: 125px !important;
+		top: 10px !important;
+	}
 	}
 
 	.deletebuttons .inputtext {
