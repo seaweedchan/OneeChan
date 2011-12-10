@@ -978,6 +978,10 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 /*[[expandfile]]*/
 	.filesize span::after {
+		font-size: 13px !important;
+	}
+
+	.filesize span::after {
 		font-size: /*[[FontSize]]*/ !important;
 	}
 
