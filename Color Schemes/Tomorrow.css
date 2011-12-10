@@ -222,7 +222,6 @@
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input {
 		border-radius: 2px !important;
-		-o-border-radius: 2px !important;
 		background: #1d1f21 !important;
 	}
 
@@ -359,7 +358,6 @@
 	#qr::before {
 		background-color: #282a2e !important;
 		border-radius: 6px 6px 0 0;
-		-o-border-radius: 6px 6px 0 0;
 	}
 
 	#filter input,

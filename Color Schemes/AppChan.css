@@ -222,7 +222,6 @@ background-image: none !important;
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input {
 		border-radius: 2px !important;
-		-o-border-radius: 2px !important;
 		background: #444 !important;
 	}
 
@@ -368,7 +367,6 @@ background-image: none !important;
 	#qr::before {
 		background-color: #333 !important;
 		border-radius: 6px 6px 0 0;
-		-o-border-radius: 6px 6px 0 0;
 	}
 
 	.postarea textarea:focus {

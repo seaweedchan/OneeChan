@@ -18,7 +18,6 @@
 	}
 	scrollbar, scrollcorner {
 		-moz-appearance: none !important;
-		-o-appearance: none !important;
 		width: 12px !important;
 		height: 10px !important;
 	}
@@ -26,7 +25,6 @@
 	scrollbar[orient='horizontal'] { border-top: 0; }
 	thumb {
 		-moz-appearance: none !important;
-		-o-appearance: none !important;
 		border: 1px solid;
 	}
 	::-webkit-scrollbar-thumb {
@@ -273,7 +271,6 @@
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input {
 		border-radius: 2px !important;
-		-o-border-radius: 2px !important;
 		background: #444 !important;
 	}
 
@@ -410,7 +407,6 @@
 	#qr::before {
 		background-color: #000 !important;
 		border-radius: 6px 6px 0 0;
-		-o-border-radius: 6px 6px 0 0;
 	}
 
 	#filter input,

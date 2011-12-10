@@ -601,7 +601,6 @@
 	#qr::before,
 	form[name^='post']::before {
 		border-radius: 6px 6px 0 0;
-		-o-border-radius: 6px 6px 0 0;
 	}
 	.qphl {
 		outline-color: #627c8d !important;
