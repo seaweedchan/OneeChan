@@ -375,6 +375,8 @@ background-image: none !important;
 	}
 
 	hr {
+		position: relative !important;
+		bottom: 8px !important;
 		display: none !important;
 	}
 
