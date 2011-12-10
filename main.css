@@ -1361,6 +1361,15 @@ This style is designed for the following browsers, ordered alphabetically:
 		display: none !important;
 	}
 
+	#options ul {
+		margin-bottom: 5px !important;
+		padding-bottom: 7px !important;
+	}
+
+	#options ul:first-of-type {
+		padding-top: 5px !important;
+	}
+
 /* End of 4chan x options */
 	#filter,
 	#thread_filter,

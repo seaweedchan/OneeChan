@@ -199,6 +199,15 @@
 	#qr_form input[name="email"] + label::after {
 		color: #800000 !important;
 	}
+
+	#options ul {	
+		border-bottom: 1px solid #800000 !important;
+		border-radius: 0px !important;
+	}
+
+	#options ul:last-of-type {
+		border: none !important;
+	}
 	a.quotelink {
 		color: #000080 !important;
 	}
@@ -463,6 +472,15 @@
 	font[color="red"],
 	#qr_form input[name="email"] + label::after {
 		color: #000 !important;
+	}
+
+	#options ul {	
+		border-bottom: 1px solid #000 !important;
+		border-radius: 0px !important;
+	}
+
+	#options ul:last-of-type {
+		border: none !important;
 	}
 	a.quotelink {
 		color: #d00 !important;

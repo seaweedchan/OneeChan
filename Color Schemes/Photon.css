@@ -65,14 +65,9 @@
 		margin: 0px !important;
 		cursor: pointer !important;
 	}
-	#options ul {
+	#options ul {	
 		border-bottom: 1px solid rgba(255,255,0.2) !important;
 		border-radius: 0px !important;
-		margin-bottom: 5px !important;
-		padding-bottom: 7px !important;
-	}
-	#options ul:first-of-type {
-		padding-top: 5px !important;
 	}
 	#options ul:last-of-type {
 		border: none !important;
