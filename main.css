@@ -1105,7 +1105,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	#imgControls label::after {
-		font-size: /*[[FontSize]]*/ !important;
+		font-size: 12px !important;
 		content: 'Expand';
 	}
 
@@ -1344,7 +1344,7 @@ This style is designed for the following browsers, ordered alphabetically:
 		-moz-border-radius: 0;
 		-o-border-radius: 0;
 		border-radius: 0;
-		font-size: /*[[FontSize]]*/ !important;
+		font-size: 12px !important;
 		z-index: 4 !important;
 	}
 
@@ -1397,7 +1397,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	#updater #count:not(.new)::after {
-		font-size: /*[[FontSize]]*/ !important;
+		font-size: 12pximportant;
 		content: '+0';
 	}
 
@@ -1665,12 +1665,6 @@ This style is designed for the following browsers, ordered alphabetically:
 
 	b {
 		font-weight: 800 !important;
-	}
-}
-
-@-moz-document url-prefix('http://www.4chan.org'), domain('rs.4chan.org') {
-	body {
-		background-image: none !important;
 	}
 }
 
