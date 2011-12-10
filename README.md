@@ -1,1 +1,0 @@
-![OneeChan](http://i.imgur.com/QMlcf.png)
