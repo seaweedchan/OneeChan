@@ -1,1 +1,1 @@
-![OneeChan](http://cdn.userstyles![OneeChan](http://cdn.userstyles.org/style_screenshots/56312_after.png?r=1323533850)
+![OneeChan](http://cdn.userstyles![OneeChan](http://i.imgur.com/QMlcf.png)
