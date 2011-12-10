@@ -615,6 +615,7 @@ none
 		color: transparent !important;
 		font-size: 0 !important;
 		height: 20px !important;
+		cursor: default !important;
 	}
 /* Disable the behavior of #autohide */
 	#qr:not(:hover) > #autohide:checked ~ .autohide,
@@ -706,10 +707,12 @@ none
 	}
 /* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
 	#qr .move {
+		cursor: default !important;
 		color: transparent !important;
 		font-size: 0 !important;
 		height: 20px !important;
 	}
+
 /* Disable the behavior of #autohide */
 	#qr:not(:hover) > #autohide:checked ~ .autohide,
 	#qr > #autohide:checked ~ .autohide,
@@ -814,6 +817,7 @@ none
 	}
 /* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
 	#qr .move {
+		cursor: default !important;
 		color: transparent !important;
 		font-size: 0 !important;
 		height: 20px !important;
@@ -958,6 +962,7 @@ none
 	}
 
 	#qr .move {
+		cursor: default !important;
 		color: transparent !important;
 		font-size: 0 !important;
 		height: 20px !important;
