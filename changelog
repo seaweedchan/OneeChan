@@ -1,5 +1,34 @@
 OneeChan changelog
 
+v2.2:
+-Fixed toolbox color looking off in Yotsuba
+-New "Normal (4chan default)" added to Margin Style option
+-Fixed issues with moot's announcements on the error page
+-Slight redesign of the 4chan X settings overlay
+-Photon, Solarized, Tomorrow, and AppChan quote previews redone with border and different colors
+-Changed Chrome checkmarks from background image to content
+-Muted color scheme removed (temporarily until a redesign)
+-Fixed image controls select sometimes having the wrong placement
+-Fixed issue where ObsidianChan lacked background image on /rs/ and the front page
+-Fixed 'File Only' being a few pixels too high up in Firefox
+-Fixed issue where expanded filenames wouldn't appear with "Browser Default" font size
+-General cleanups of non-existing or irrelevant browser prefixes (like -moz-border-radius)
+-Removed Golden Darkness mascot because its NSFW
+-Fixed issue where tripcodes appeared with bigger font sizes in quote preview and the OP
+-Fixed issue where thread separation lines are unevenly positioned between threads
+-Reduce Subject font weight in AppChan to distinguish it from poster name
+-Fixed issue where the move cursor would appear on the name field of a replaced quick reply
+-Solarized color tweaks of tripcodes and subjects thanks to "a million pies"
+-"URL bubbles", which were just background colors when links were hovered, removed
+-Pages brackets removed
+-Fixed issue where currently selected page number would have a grayish background behind it
+-AppChan and Tomorrow links on hover recolored
+-Moved delete buttons down on slideout to match other slideout elements
+-New "Top Stickied Header (non-stickied pages" added to Margin Style option
+-Textarea Height option redone to move the mascots and error messages with it
+-Shana mascot edited to remove bottom padding
+-Fixed issue where pages links were centered for the whole page and not just the posts instead
+
 v2.1:
 -Opera support! Lots of bug fixes and design updates for Opera.
 -Moot's Announcement bug fixes when not button-only
