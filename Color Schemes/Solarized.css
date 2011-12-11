@@ -205,7 +205,6 @@ background-image: none !important;
 	#filter:not(.autohide),
 	#twi_table_div,
 	#twi_table_div *,
-	#qp,
 	#updater:hover,
 	#thread_filter.autohide:hover,
 	#thread_filter:not(.autohide),
@@ -222,6 +221,11 @@ background-image: none !important;
 	tr.replyhl,
 	textarea:hover {
 		background-color: #073642 !important;
+	}
+
+	#qp {
+		background-color: rgba(7,54,66,0.9) !important; 
+		border: 1px solid rgba(79,95,143,0.9) !important;
 	}
 
 	.qphl {
