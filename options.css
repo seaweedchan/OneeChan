@@ -5,49 +5,34 @@
 /*[[background]]*/
 /* Furudo Erika: */
 		content: url('http://i.imgur.com/zLsPY.png');
-		bottom: 249px;
 /* Shinonome Hakase: */
 		content: url('http://i.imgur.com/TBHI6.png');
-		bottom: 249px;
 /* Kagamine Rin: */
 		content: url('http://i.imgur.com/fXXd2.png');z
-		bottom: 249px;
 /* Kinomoto Sakura: */
 		content: url('http://i.imgur.com/Ve0hl.png');
-		bottom: 249px;
 /* Shana: */
-		content: url('http://i.imgur.com/k3fgX.png');
-		left: 0;
+		content: url('http://i.imgur.com/itIIw.png');;
 /* Ika Musume: */
 		content: url('http://i.imgur.com/uUhGG.png');
-		bottom: 249px;
 /* Iwakura Lain: */
 		content: url('http://i.imgur.com/AfjG9.png');
-		bottom: 249px;
 /* Hatsune Miku: */
 		content: url('http://i.imgur.com/vE3FJ.png');
-		bottom: 249px;
 /* Koiwai Yotsuba: */
 		content: url('http://i.imgur.com/1MyDM.png');
-		bottom: 249px;
 /* BLACK ROCK SHOOTER: */
 		content: url('http://i.imgur.com/VidKo.png');
-		bottom: 249px;
 /* Nagato Yuki: */
 		content: url('http://i.imgur.com/VAWnW.png');
-		bottom: 249px;
 /* Patchouli Knowledge: */
 		content: url('http://i.imgur.com/QoKJb.png');
-		bottom: 248px;
 /* Asuka Langley Soryu: */
 		content: url('http://i.imgur.com/Wj7s7.png');
-		bottom: 248px;
 /* Nakano Azusa */
 		content: url('http://i.imgur.com/6c3p3.png');
-		bottom: 148px;
 /* Seraphim */
 		content: url('http://i.imgur.com/PA7pJ.png');
-		bottom: 248px;
 /* None: */
 none
 /* End */
@@ -658,11 +643,41 @@ none
 
 /*[[TextareaHeight]]*/
 /* Normal */
-78px
+	.postarea form[name^='post'] textarea {
+		height: 78px !important;
+	}
+	#qr textarea {
+		height: 78px !important;
+	}
+	body::after {
+		bottom: 248px !important;
+	}
 /* Medium */
-138px
+	.postarea form[name^='post'] textarea {
+		height: 138px !important;
+	}
+	#qr textarea {
+		height: 138px !important;
+	}
+	[id^='q'] .error {
+		bottom: 310px !important;
+	}
+	body::after {
+		bottom: 308px !important;
+	}
 /* Large */
-168px
+	.postarea form[name^='post'] textarea {
+		height: 168px !important;
+	}
+	#qr textarea {
+		height: 168px !important;
+	}
+	[id^='q'] .error {
+		bottom: 340px !important;
+	}
+	body::after {
+		bottom: 338px !important;
+	}
 /* End */
 
 /*[[QuickReply]]*/
@@ -717,7 +732,6 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: /*[[TextareaHeight]]*/ !important;
 		resize: none !important;
 	}
 
@@ -741,7 +755,7 @@ none
 	[id^='q'] .error {
 		visibility: visible !important;
 		position: fixed !important;
-		bottom: 270px !important;
+		bottom: 250px !important;
 		height: 19px !important;
 		width: 248px !important;
 		right: auto !important;
@@ -760,6 +774,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+/*[[TextareaHeight]]*/
 }
 /* ...and slideout: */
 @-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
@@ -827,7 +842,6 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: /*[[TextareaHeight]]*/ !important;
 		resize: none !important;
 	}
 
@@ -851,7 +865,7 @@ none
 	[id^='q'] .error {
 		visibility: visible !important;
 		position: fixed !important;
-		bottom: 270px !important;
+		bottom: 250px !important;
 		height: 19px !important;
 		width: 248px !important;
 		right: auto !important;
@@ -870,6 +884,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+/*[[TextareaHeight]]*/
 }
 /* ...and tabbed slideout (No transitions in Chrome) */
 @-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
@@ -973,7 +988,6 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: /*[[TextareaHeight]]*/ !important;
 		resize: none !important;
 	}
 
@@ -997,7 +1011,7 @@ none
 	[id^='q'] .error {
 		visibility: visible !important;
 		position: fixed !important;
-		bottom: 270px !important;
+		bottom: 250px !important;
 		height: 19px !important;
 		width: 248px !important;
 		right: auto !important;
@@ -1016,6 +1030,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+/*[[TextareaHeight]]*/
 }
 /* ...and fade: */
 @-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
@@ -1078,7 +1093,6 @@ none
 /* Width and height of all #qr elements (excluding some captcha elements) */
 	#qr textarea {
 		min-height: 0 !important;
-		height: /*[[TextareaHeight]]*/ !important;
 		resize: none !important;
 	}
 
@@ -1102,7 +1116,7 @@ none
 	[id^='q'] .error {
 		visibility: visible !important;
 		position: fixed !important;
-		bottom: 270px !important;
+		bottom: 250px !important;
 		height: 19px !important;
 		width: 248px !important;
 		right: auto !important;
@@ -1121,6 +1135,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+/*[[TextareaHeight]]*/
 }
 /* No: */
 

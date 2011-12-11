@@ -502,7 +502,6 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 /* Width and height of all postarea elements (excluding some captcha elements) */
 	.postarea form[name^='post'] textarea {
-		height: /*[[TextareaHeight]]*/ !important;
 		resize: none !important;
 		font-size: /*[[FontSize]]*/ !important;
 	}
