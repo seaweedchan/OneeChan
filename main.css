@@ -1430,7 +1430,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	#updater #count:not(.new)::after {
-		font-size: 12pximportant;
+		font-size: 12px !important;
 		content: '+0';
 	}
 
