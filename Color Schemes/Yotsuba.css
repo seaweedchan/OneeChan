@@ -112,12 +112,7 @@
 	.pages b {
 		background: #F0E0D6 !important;
 	}
-	#header a:hover,
-	.pages input:hover,
-	a:hover {
-	/* URL bubbles */
-		background: #F0E0D6 !important;
-	}
+
 	a {
 		color: #800000 !important;
 	}
