@@ -639,10 +639,6 @@
 	#qr label input[type='checkbox']:active {
 		background: #000 !important;
 	}
-	.new {
-		background-color: lime !important;
-		color: #000 !important;
-	}
 	form[name^='post'] .postblock b,
 	form[name^='post']::before,
 	.postarea tr:nth-child(4) .postblock b,

@@ -318,11 +318,6 @@ background-image: none !important;
 		background: rgba(0,0,0,.2) !important;
 	}
 
-	.new {
-		background-color: rgba(255,255,255,.5) !important;
-		color: #000 !important;
-	}
-
 	form[name^='post'] .postblock b,
 	form[name^='post']::before,
 	.postarea tr:nth-child(4) .postblock b,
