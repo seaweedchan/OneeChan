@@ -38,7 +38,6 @@ background-image: none !important;
 	.boxbar,
 	.boxcontent,
 	.commentpostername,
-	.filetitle,
 	.logo,
 	.omittedposts,
 	.pages b,
@@ -125,13 +124,8 @@ background-image: none !important;
 		font-weight: 800 !important;
 	}
 
-	.span.filetitle,
+	.filetitle,
 	.replytitle {
-		color: #909090 !important;
-	}
-
-	a .postertrip,
-	a .trip {
 		color: #cb4b16 !important;
 	}
 
