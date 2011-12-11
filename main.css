@@ -383,6 +383,10 @@ This style is designed for the following browsers, ordered alphabetically:
 		text-transform: uppercase;
 	}
 
+	.pages td { 
+		color: transparent !important;
+	}
+
 	#header a,
 	.pages a,
 	.pages b,
