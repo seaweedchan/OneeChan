@@ -104,7 +104,7 @@
 	.postername a:hover,
 	.commentpostername a:hover,
 	a:hover .postertrip {
-		color: #c5c8c6 !important;
+		color: #5F89AC !important;
 	}
 
 	a.backlink,
@@ -112,11 +112,16 @@
 		color: #b294bb !important;
 	}
 
+	a.backlink:hover,
+	a.forwardlink:hover {
+		color: #9B74A7 !important;
+	}
+
 	a.forwardlink {
 		font-weight: 800 !important;
 	}
 
-	.span.filetitle,
+	.filetitle,
 	.replytitle {
 		color: #969896 !important;
 	}
@@ -286,13 +291,6 @@
 	.pages b {
 		background: rgba(0,0,0,0.3) !important;
 		color: #c5c8c6 !important;
-	}
-
-	#header a:hover,
-	.pages input:hover,
-	a:hover {
-	/* URL bubbles */
-		background: rgba(0,0,0,.2) !important;
 	}
 
 	form[name^='post'] .postblock b,
