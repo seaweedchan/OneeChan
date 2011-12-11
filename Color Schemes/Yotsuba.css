@@ -109,9 +109,6 @@
 	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
 		background-color: #F0E0D6 !important;
 	}
-	.pages b {
-		background: #F0E0D6 !important;
-	}
 
 	a {
 		color: #800000 !important;
@@ -380,9 +377,7 @@
 	.inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
 		background-color: #d6daf0 !important;
 	}
-	.pages b {
-		background: #d6daf0 !important;
-	}
+
 	#header a:hover,
 	.pages input:hover,
 	a:hover {

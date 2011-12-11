@@ -298,10 +298,6 @@ background-image: none !important;
 		border: none !important;
 	}
 
-	.pages b {
-		background: rgba(0,0,0,0.3) !important;
-	}
-
 	form[name^='post'] .postblock b,
 	form[name^='post']::before,
 	.postarea tr:nth-child(4) .postblock b,
