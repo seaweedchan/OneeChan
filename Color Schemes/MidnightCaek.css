@@ -302,13 +302,6 @@ background-image: none !important;
 		background: rgba(0,0,0,0.3) !important;
 	}
 
-	#header a:hover,
-	.pages input:hover,
-	a:hover {
-	/* URL bubbles */
-		background: rgba(255,255,255,.02) !important;
-	}
-
 	form[name^='post'] .postblock b,
 	form[name^='post']::before,
 	.postarea tr:nth-child(4) .postblock b,

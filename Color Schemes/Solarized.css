@@ -298,13 +298,6 @@ background-image: none !important;
 		color: #ccc !important;
 	}
 
-	#header a:hover,
-	.pages input:hover,
-	a:hover {
-	/* URL bubbles */
-		background: rgba(0,0,0,.2) !important;
-	}
-
 	form[name^='post'] .postblock b,
 	.postarea tr:nth-child(4) .postblock b::after,
 	.postarea form[name^='post']::before,
