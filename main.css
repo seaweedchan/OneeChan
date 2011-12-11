@@ -1203,7 +1203,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 	table[align=right]:hover {
 		position: fixed !important;
-		top: 12px !important;
+		top: 16px !important;
 		z-index: 99 !important;
 	}
 
@@ -1219,14 +1219,14 @@ This style is designed for the following browsers, ordered alphabetically:
 	table[align=right]:hover input[type='checkbox'] {
 		position: fixed !important;
 		right: 168px !important;
-		top: 22px !important;
+		top: 26px !important;
 	}
 
 	table[align=right]:hover::after {
 		visibility: visible !important;
 		position: fixed !important;
 		right: 120px !important;
-		top: 22px !important;
+		top: 26px !important;
 		font-size: 12px !important;
 		content: 'File Only';
 	}
