@@ -101,7 +101,7 @@ background-image: none !important;
 	.postername a:hover,
 	.commentpostername a:hover,
 	a:hover .postertrip {
-		color: #444 !important;
+		color: #4E6E8E !important;
 	}
 
 	a.backlink,
@@ -287,18 +287,6 @@ background-image: none !important;
 	.pages b {
 		background: rgba(0,0,0,0.3) !important;
 		color: #ccc !important;
-	}
-
-	#header a:hover,
-	.pages input:hover,
-	a:hover {
-	/* URL bubbles */
-		background: rgba(0,0,0,.2) !important;
-	}
-
-	.new {
-		background-color: rgba(255,255,255,.5) !important;
-		color: #000 !important;
 	}
 
 	form[name^='post'] .postblock b,
