@@ -635,7 +635,7 @@ none
 	#qr textarea {
 		height: 78px !important;
 	}
-	[id^='q'] .error {
+	body > table ~ form [id^='q'] .error {
 		bottom: 310px !important;
 	}
 	body::after {
@@ -650,7 +650,7 @@ none
 	#qr textarea {
 		height: 138px !important;
 	}
-	[id^='q'] .error {
+	body > table ~ form [id^='q'] .error {
 		bottom: 310px !important;
 	}
 	body::after {
@@ -664,7 +664,7 @@ none
 	#qr textarea {
 		height: 168px !important;
 	}
-	[id^='q'] .error {
+	body > table ~ form [id^='q'] .error {
 		bottom: 340px !important;
 	}
 	body::after {
