@@ -1,4 +1,4 @@
-/* Minimalistic Mayhem -- Thank you, MayhemYDG! */
+/* Minimalistic Mayhem -- by MayhemYDG */
 /*[[CustomScrollbars]]*/
 	::-webkit-scrollbar-thumb { border: #101010 !important; background: #262626; }
 	::-webkit-scrollbar-thumb:hover { background: #3f3f3f; }
@@ -10,22 +10,20 @@
 	thumb:hover { background: -moz-linear-gradient(top, rgba(255,255,255,.4), rgba(255,255,255,0.2)) !important; }
 /**/
 	::-webkit-selection {
-		background: #aaa;
-		color: #101010;
+	       background-color: rgba(198, 23, 230, .15) !important;
 	}
 
 	::-moz-selection {
-		background: #aaa;
-		color: #101010;
+        background-color: rgba(198, 23, 230, .15) !important;
 	}
 
 	::selection {
-		background: #aaa;
-		color: #101010;
+        background-color: rgba(198, 23, 230, .15) !important;
 	}
 	body {
-background-image: none !important;
+		background-image: none !important;
 	}
+	
 	body,
 	body > form,
 	html body span[style='left: 5px; position: absolute;'] a,
@@ -55,7 +53,7 @@ background-image: none !important;
 	#qr_form input[name="email"] + label::after {
 		color: #BBBBBB !important;
 	}
-
+	
 	#options ul {	
 		border-bottom: 1px solid #909090 !important;
 		border-radius: 0px !important;
@@ -89,14 +87,21 @@ background-image: none !important;
 	}
 
 	a {
-		color:  #897399 !important;
+		color: #897399 !important;
 	}
 
 	a:hover {
 		color: #C617E6 !important;
 		font-weight: 100 !important;
 	}
+	.backlink {
+		color: #897399 !important;
+	}
 
+	.backlink:hover {
+		color: #C617E6 !important;
+		font-weight: 100 !important;
+	}
 	.postername,
 	.commentpostername {
 		color: #A34443 !important;
@@ -105,11 +110,11 @@ background-image: none !important;
 
 	.postertrip,
 	.trip {
-		color: #96562C  !important;
+		color: #96562C!important;
 	}
-
+	
 	.linkmail {
-		color: #AE2B29 !important;
+	color: #AE2B29 !important;
 	}
 
 	a.forwardlink {
@@ -118,12 +123,24 @@ background-image: none !important;
 
 	.filetitle,
 	.replytitle {
-		color: #aaa !important;
+		color: #987D3E !important;
 		font-weight: 700 !important;
 	}
 
 	.unkfunc {
-		color: #71793e !important;
+		color: #6E6E6E !important;
+	}
+
+	.reply:target, .replyhl:target {
+		background: #25262A; !important;
+	}
+	
+	[alt="sticky"] + a {
+		color: #F28D00 !important;
+	}
+	
+	[alt="closed"] + a {
+		color: #B2AB82 !important;
 	}
 
 	#boards h3,
@@ -158,7 +175,12 @@ background-image: none !important;
 	.deletebuttons input[value=Delete],
 	input[value="Report"],
 	body::before {
-		background-color: #1c1c1c !important;
+		background-color: #222 !important;
+	}
+
+	input,
+	input[type='submit'] {
+		border: 1px solid #151515 !important;
 	}
 
 	div[id^='4chan_ext_iqr'],
@@ -169,7 +191,6 @@ background-image: none !important;
 	#filter textarea,
 	#options input,
 	#options textarea,
-	#qr,
 	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
 	#quickrep,
 	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
@@ -186,15 +207,20 @@ background-image: none !important;
 	div.postarea > form td:nth-of-type(3) > label input,
 	div[id^=qr],
 	table.reply[style^='clear: both'] {
-		background-color: #101010 !important;
+		background-color: #191919 !important;
 	}
 
 	#header, .pages {
-		background-color: rgba(16,16,16,0.9) !important;
+		background-color: rgba(26,26,26,0.9) !important;
 	}
-
+	
+    td.reply {
+		border: 1px solid #292929 !important;
+	}
+	
 	#navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
-		background-color: rgba(16,16,16,1) !important;
+		background-color: #222 !important;
+		border: 1px solid #292929 !important;
 	}
 
 	html body span[style='left: 5px; position: absolute;'] a:hover,
@@ -229,10 +255,6 @@ background-image: none !important;
 		border-radius: 6px 6px 0 0;
 	}
 
-	.qphl {
-		outline-color: #627c8d !important;
-	}
-
 	html body span[style='left: 5px; position: absolute;'] a,
 	input[type='submit'],
 	#com_submit,
@@ -249,22 +271,16 @@ background-image: none !important;
 	#options input[type='checkbox'],
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
 	#qr label input[type='checkbox'] {
-		border: 1px solid #3c3c3c !important;
-		background: #000 !important;
-	}
-
-	input[type=checkbox]:active,
-	#options input[type=checkbox]:active,
-	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:active,
-	#qr label input[type='checkbox']:active {
-		background: #000 !important;
+		background-color: #393939 !important;
+		border: 1px solid #191919 !important;
 	}
 
 	input[type=checkbox]:checked,
 	#options input[type=checkbox]:checked,
 	form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input[type='checkbox']:checked {
-		background-color: #3c3c3c !important;
+		background: #393939 !important;
+		border: 1px solid #151515 !important;
 	}
 
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -293,22 +309,22 @@ background-image: none !important;
 	.postarea tr:nth-child(4) .postblock b,
 	#maxchars,
 	#qr::before {
-		color: rgba(255,255,255,0.3) !important;
+		color: rgba(255,255,255,0.4) !important;
 	}
 
 	#qr input:-moz-placeholder,
 	#qr textarea:-moz-placeholder {
-		color: rgba(255,255,255,0.3) !important;
+		color: rgba(255,255,255,0.4) !important;
 	}
 
 	#qr input::-webkit-input-placeholder,
 	#qr textarea::-webkit-input-placeholder {
-		color: rgba(255,255,255,0.3) !important;
+		color: rgba(255,255,255,0.4) !important;
 	}
 
 	#qr input:placeholder,
 	#qr textarea:placeholder {
-		color: rgba(255,255,255,0.3) !important;
+		color: rgba(255,255,255,0.4) !important;
 	}
 
 	#cc-showpostarea,
@@ -333,7 +349,23 @@ background-image: none !important;
 	input[type='submit'],
 	select,
 	textarea {
-		border: none !important;
+		border: 1px solid #151515 !important;
+	}
+
+	#options input:not([type='checkbox']):focus,
+	#updater input:not([type='checkbox']):focus,
+	.inputtext:focus,
+	.recaptchatable #recaptcha_response_field:focus,
+	input:not([type='checkbox']):focus,
+	#qr_captcha input:focus,
+	input[type='submit']:focus,
+	select:focus,
+	textarea:focus {	
+		border: 1px solid #666 !important;
+	}
+	
+	#options .dialog {
+		border: 1px solid #292929 !important;
 	}
 
 	.boxcontent dd,
@@ -363,18 +395,36 @@ background-image: none !important;
 		border: none !important;
 	}
 
-	form[name='delform'] > div:not(.thread) select {
-		margin: 1px 0 0 0 !important;
+	input[type="submit"], input[type="button"], button {
+		background: -webkit-linear-gradient(#393939, #292929) !important; -moz-linear-gradient(#393939, #292929) !important; 
+		border: 1px solid #191919 !important;
+		color: #AAA !important;
+		text-shadow: 0 1px 1px #191919 !important;
+	}
+	
+	input[type="checkbox"], input[type="radio"] {
+		background-color: #393939 !important;
+		border: 1px solid #191919 !important;
 	}
 
-	td.reply {
-		border: 1px solid #292929 !important;
+	input[type="checkbox"]:checked, input[type="radio"]:checked {
+		background: -webkit-linear-gradient(#595959, #393939) !important; -moz-linear-gradient(#595959, #393939) !important;
+		border: 1px solid #151515 !important;
+	}
+
+	#qr, .postarea form {
+		background-color: #222 !important;
+	}
+	
+	form[name='delform'] > div:not(.thread) select {
+		margin: 1px 0 0 0 !important;
 	}
 
 	form[name='delform'] > div:not(.thread) select,
 	.pages input[type='submit'] {
 		height: 15px !important;
 	}
+	
 	/* Toolbox images */
 /* 4chan X options */
 	#navtopr a::after {
