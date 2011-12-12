@@ -163,6 +163,7 @@ This style is designed for the following browsers, ordered alphabetically:
 	}
 
 	.quotelink:not(.filtered),
+	.quotelink:not(.filtered),
 	.backlink:not(.filtered),
 	.filesize a,
 	a[href*=res],
@@ -1568,6 +1569,19 @@ This style is designed for the following browsers, ordered alphabetically:
 		min-width: 138px !important;
 		max-width: 138px !important;
 	}
+
+	[alt="sticky"] + a::before {
+		content: "Sticky | ";
+	}
+
+	[alt="closed"] + a::before {
+		content: "Closed | ";
+	}
+
+	[alt="closed"] + a {
+		text-decoration: line-through !important;
+	}
+
 /*[[PagesPosition]]*/
 /*[[ColorScheme]]*/
 /*[[redtext]]*/
