@@ -108,15 +108,8 @@ background-image: none !important;
 		color: #96562C  !important;
 	}
 
-	.postername a:hover,
-	.commentpostername a:hover,
-	a:hover .postertrip {
-		color: #444 !important;
-	}
-
-	a.backlink,
-	a.forwardlink {
-		color: #424247 !important;
+	.linkmail {
+		color: #AE2B29 !important;
 	}
 
 	a.forwardlink {
@@ -131,10 +124,6 @@ background-image: none !important;
 
 	.unkfunc {
 		color: #71793e !important;
-	}
-
-	a.quotelink {
-		color: #47475b !important;
 	}
 
 	#boards h3,
