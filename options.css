@@ -627,7 +627,6 @@ none
 
 /*[[TextareaHeight]]*/
 /* Normal */
-}
 @-moz-document domain('4chan.org') {
 	.postarea form[name^='post'] textarea {
 		height: 78px !important;
@@ -642,7 +641,6 @@ none
 		bottom: 248px !important;
 	}
 /* Medium */
-}
 @-moz-document domain('4chan.org') {
 	.postarea form[name^='post'] textarea {
 		height: 138px !important;
