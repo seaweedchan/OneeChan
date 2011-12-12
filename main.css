@@ -167,7 +167,9 @@ This style is designed for the following browsers, ordered alphabetically:
 	.filesize a,
 	a[href*=res],
 	a[href*="http://dis"],
-	#credits a {
+	#credits a,
+	.pages a,
+	.pages {
 	text-decoration: none !important;
 	}
 
@@ -186,7 +188,9 @@ This style is designed for the following browsers, ordered alphabetically:
 	.container::before,
 	#captchas,
 	#qp .postertrip,
-	.postertrip {
+	.postertrip,
+	.omittedposts,
+	time + span {
 		font-size: /*[[FontSize]]*/ !important;
 	}
 
