@@ -627,16 +627,23 @@ none
 
 /*[[TextareaHeight]]*/
 /* Normal */
+}
+@-moz-document domain('4chan.org') {
 	.postarea form[name^='post'] textarea {
 		height: 78px !important;
 	}
 	#qr textarea {
 		height: 78px !important;
 	}
+	[id^='q'] .error {
+		bottom: 310px !important;
+	}
 	body::after {
 		bottom: 248px !important;
 	}
 /* Medium */
+}
+@-moz-document domain('4chan.org') {
 	.postarea form[name^='post'] textarea {
 		height: 138px !important;
 	}
@@ -650,6 +657,7 @@ none
 		bottom: 308px !important;
 	}
 /* Large */
+@-moz-document domain('4chan.org') {
 	.postarea form[name^='post'] textarea {
 		height: 168px !important;
 	}
@@ -758,6 +766,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+}
 /*[[TextareaHeight]]*/
 }
 /* ...and slideout: */
@@ -868,6 +877,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+}
 /*[[TextareaHeight]]*/
 }
 /* ...and tabbed slideout (No transitions in Chrome) */
@@ -1014,6 +1024,7 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+}
 /*[[TextareaHeight]]*/
 }
 /* ...and fade: */
@@ -1119,10 +1130,15 @@ none
 	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
 		width: 248px !important;
 	}
+}
 /*[[TextareaHeight]]*/
 }
 /* No: */
-
+/*[[TextareaHeight]]*/
+	body > table ~ form [id^='q'] .error {
+		position: static !important;
+	} 
+}
 /* End */
 
 /*[[helpertext]]*/
