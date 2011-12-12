@@ -105,7 +105,7 @@ background-image: none !important;
 
 	.postertrip,
 	.trip {
-		color: #3e7157 !important;
+		color: #96562C  !important;
 	}
 
 	.postername a:hover,
@@ -376,6 +376,10 @@ background-image: none !important;
 
 	form[name='delform'] > div:not(.thread) select {
 		margin: 1px 0 0 0 !important;
+	}
+
+	td.reply {
+		border: 1px solid #292929 !important;
 	}
 
 	form[name='delform'] > div:not(.thread) select,
