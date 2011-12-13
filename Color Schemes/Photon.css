@@ -233,7 +233,9 @@
 	#qp {
 		background-color: rgba(21,21,21,0.8) !important;
 		color: #FFF !important;
-		border: 2px solid rgba(255,255,255,0.6) !important;
+		border: 1px solid rgba(255,255,255,1) !important;
+		outline: 1px solid black !important;
+		-moz-outline-radius: 3px !important;
 	}
 	#qp .postername, #qp .commentpostername, #qp .container a, #qp .quotejs {
 		color: #FFF !important;
