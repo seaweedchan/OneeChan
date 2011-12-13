@@ -171,7 +171,8 @@ This style is designed for the following browsers, ordered alphabetically:
 	#credits a,
 	.pages a,
 	.pages,
-	.quotejs {
+	.quotejs,
+	.chanklinkify {
 	text-decoration: none !important;
 	}
 
