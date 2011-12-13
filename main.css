@@ -170,7 +170,8 @@ This style is designed for the following browsers, ordered alphabetically:
 	a[href*="http://dis"],
 	#credits a,
 	.pages a,
-	.pages {
+	.pages,
+	.quotejs {
 	text-decoration: none !important;
 	}
 
