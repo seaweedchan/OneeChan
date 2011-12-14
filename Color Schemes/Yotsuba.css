@@ -387,6 +387,9 @@
 	a {
 		color: #57577b !important;
 	}
+	.quotejs, a.backlink {
+		color: #000 !important;
+	}
 	hr {
 		border-top: 1px solid #b7c5d9 !important;
 	}
