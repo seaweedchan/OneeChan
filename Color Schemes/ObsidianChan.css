@@ -1,0 +1,131 @@
+h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: transparent;
+  color: #FDFEFF;
+}
+
+body {
+  background: url("http://i.imgur.com/sbi8u.png") !important;
+  background-attachment: fixed !important;
+  background-color: transparent;
+}
+
+input, textarea {
+  color: #FDFEFF;
+}
+
+::-webkit-selection {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+::-moz-selection {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+::selection {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+a {
+  color: #00FFFF !important;
+}
+
+a:hover {
+  color: #00FFFF !important;
+}
+
+.backlink {
+  color: #00FFFF !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #FDFEFF !important;
+}
+
+b {
+  color: #FDFEFF !important;
+}
+
+input:not([name="file"]), textarea {
+  background-color: rgba(0,0,0,0.6) !important;
+}
+
+#para, .reply {
+  background-color: rgba(0,0,0,0.6) !important;
+}
+
+.reply, #para {
+  border: 1px solid rgba(0,0,0,0.6) !important;
+}
+
+.postertrip {
+  color: #FF52CB !important;
+}
+
+.greentext {
+  color: #65FF65 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: rgba(0,0,0,0.4) !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(0,0,0,0.4) !important;
+}
+
+input[type="checkbox"] {
+  background-color: #444 !important;
+  border: 1px solid #444 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #FF007F !important;
+  border: 1px solid #FF007F !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/TyFWy.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(0,0,0,0.6) !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid rgba(0,0,0,0.4) !important;
+}
+
+input[type="submit"] {
+  color: #FDFEFF !important;
+  background-color: rgba(0,0,0,0.6) !important;
+  border-color: rgba(0,0,0,0.6) !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

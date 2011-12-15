@@ -1,0 +1,126 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: #3f3f3f;
+  color: #dcdccc;
+}
+
+input, textarea {
+  color: #dcdccc;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #93a1a1 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #93a1a1 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #93a1a1 !important;
+}
+
+a {
+  color: #efdcbc !important;
+}
+
+a:hover {
+  color: #f8f893  !important;
+}
+
+.backlink {
+  color: #dca3a3 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #93a1a1 !important;
+}
+
+b {
+  color: #c0bed1 !important;
+}
+
+input, textarea, #para, .reply {
+  background-color: #575757 !important;
+}
+
+.reply, #para {
+  border: 1px solid #575757 !important;
+}
+
+.postertrip {
+  color: #8cd0d3 !important;
+}
+
+.greentext {
+  color: #7f9f7f !important;
+}
+
+.quotelink {
+  color: #efdcbc !important;
+}
+
+
+input:hover, textarea:hover {
+  background-color: #262626 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #262626 !important;
+}
+
+input[type="checkbox"] {
+  background-color: #3f3f3f !important;
+  border: 1px solid #888 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #111 !important;
+  border: 1px solid #586e75 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #575757 !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #98e !important;
+}
+
+input[type="submit"] {
+  color: #dcdccc !important;
+  background-color: #313c36 !important;
+  border-color: #888 !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

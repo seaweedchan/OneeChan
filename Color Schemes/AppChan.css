@@ -1,0 +1,121 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: #2c2c2c;
+  color: #aaa;
+}
+
+input, textarea {
+  color: #aaa;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #68a !important;
+}
+
+a:hover {
+  color: #4E6E8E !important;
+}
+
+.backlink {
+  color: #4f5f8f !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #aaa !important;
+}
+
+b {
+  color: #AAA !important;
+}
+
+input, textarea, #para, .reply {
+  background-color: #333 !important;
+}
+
+.reply, #para {
+  border: 1px solid #333 !important;
+}
+
+.postertrip {
+  color: #aaa !important;
+}
+
+.greentext {
+  color: #789922 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #393939 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #3f3f3f !important;
+}
+
+input[type="checkbox"] {
+  background-color: #444 !important;
+  border: 1px solid #444 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #111 !important;
+  border: 1px solid #111 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #333 !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #3f3f3f !important;
+}
+
+input[type="submit"] {
+  color: #AAA !important;
+  background-color: #303030 !important;
+  border-color: #303030 !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

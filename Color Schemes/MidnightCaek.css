@@ -1,0 +1,126 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: #101010;
+  color: #909090;
+}
+
+input, textarea {
+  color: #909090;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #57577b !important;
+}
+
+a:hover {
+  color: #47475b !important;
+}
+
+.backlink {
+  color: #424247 !important;
+}
+
+.quotejs {
+  color: #47475b !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #909090 !important;
+}
+
+b {
+  color: #7c2d2d !important;
+}
+
+input, textarea, #para, .reply {
+  background-color: #1c1c1c !important;
+}
+
+.postertrip {
+  color: #3e7157 !important;
+}
+
+.greentext {
+  color: #71793e !important;
+}
+
+.reply, #para {
+  border: 1px solid #1c1c1c !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #181818 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #202020 !important;
+}
+
+input[type="checkbox"] {
+  background-color: #3c3c3c !important;
+  border: 1px solid #000 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3c3c3c !important;
+  border: 1px solid #000 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #1c1c1c !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #202020 !important;
+  outline: none !important;
+}
+
+input[type="submit"] {
+  color: #909090 !important;
+  background-color: #1c1c1c !important;
+  border-color: #1c1c1c !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

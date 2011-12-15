@@ -1,88 +1,951 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset='utf-8'>
+<script>
+function get_cookie(name)
+{
+	with(document.cookie)
+	{
+		var regexp=new RegExp("(^|;\\s+)"+name+"=([^;]*)(;|$)");
+		var hit=regexp.exec(document.cookie);
+		if(hit&&hit.length>2) return unescape(hit[2]);
+		else return '';
+	}
+}
 
-  <title>seaweedchan/OneeChan @ GitHub</title>
+function show(id) {
+	var s = document.getElementById(id).style;
+	s.display = (s.display) ? "" : "none";
+	return false;
+}
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #c8c02b;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #373fd4; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #373fd4; }
-    h3 { text-align: center; color: #373fd4; }
-    a { color: #373fd4; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+function set_stylesheet(styletitle)
+{
+	var links=document.getElementsByTagName("link");
+	var found=false;
+	for(var i=0;i<links.length;i++)
+	{
+		var rel=links[i].getAttribute("rel");
+		var title=links[i].getAttribute("title");
+		if(rel.indexOf("style")!=-1&&title)
+		{
+			links[i].disabled=true; 
+			if(styletitle==title) { links[i].disabled=false; found=true; }
+		}
+	}
+	if (found) {
+		set_cookie(style_cookie,styletitle,365);
+	} else {
+		set_preferred_stylesheet();
+	}
+}
+
+function set_preferred_stylesheet()
+{
+	var links=document.getElementsByTagName("link");
+	for(var i=0;i<links.length;i++)
+	{
+		var rel=links[i].getAttribute("rel");
+		var title=links[i].getAttribute("title");
+		if(rel.indexOf("style")!=-1&&title) links[i].disabled=(rel.indexOf("alt")!=-1);
+	}
+}
+
+function get_active_stylesheet()
+{
+	var links=document.getElementsByTagName("link");
+	for(var i=0;i<links.length;i++)
+	{
+		var rel=links[i].getAttribute("rel");
+		var title=links[i].getAttribute("title");
+		if(rel.indexOf("style")!=-1&&title&&!links[i].disabled) return title;
+	}
+}
+
+function get_preferred_stylesheet()
+{
+	var links=document.getElementsByTagName("link");
+	for(var i=0;i<links.length;i++)
+	{
+		var rel=links[i].getAttribute("rel");
+		var title=links[i].getAttribute("title");
+		if(rel.indexOf("style")!=-1&&rel.indexOf("alt")==-1&&title) return title;
+	}
+	return null;
+}
+
+function clearSelection()
+{
+	if (window.getSelection)
+	window.getSelection().removeAllRanges();
+	else if (document.selection)
+	document.selection.empty();
+}
+
+var style_cookie = document.getElementsByTagName("html")[0].getAttribute("class");
+style_cookie += "style";
+
+var cookie=get_cookie(style_cookie);
+var title=cookie?cookie:get_preferred_stylesheet();
+set_stylesheet(title);
+
+function toggle(togglediv) {
+	var show = document.getElementsByTagName("div");
+	for(var x=0; x<show.length; x++) {
+		name = show[x].getAttribute("name");
+		if (name == 'showdiv') {
+			if (show[x].id == togglediv) {
+				if (show[x].style.display == 'block') {
+					show[x].style.display = 'none';
+				}
+				else {
+					show[x].style.display = 'block';
+				}
+			}else {
+				show[x].style.display = 'none';
+			}
+		}
+	}
+}
+</script>
+<meta charset="UTF-8">
+<title>OneeChan</title>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/AppChan.css" title="AppChan"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/Yotsuba.css" title="Yotsuba"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/YotsubaB.css" title="YotsubaB"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/Tomorrow.css" title="Tomorrow"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/Solarized.css" title="Solarized"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/Zenburned.css" title="Zenburned"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/ObsidianChan.css" title="ObsidianChan"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/MidnightCaek.css" title="MidnightCaek"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/MinimalisticMayhem.css" title="MinimalisticMayhem"/>
+<style>
+/* inb4 Zixaphir magically has a page as well */
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Cedarville+Cursive);
+body {
+	background-color: #FFE;
+	color: #000;
+	font-family: Ubuntu, serif;
+	margin: auto;
+	position: static !important;
+	text-align: justify;
+	width: 700px;
+
+}
+::-moz-selection {
+	background: #FA0;
+	color: #FFF;
+	text-shadow: none;
+}
+::selection {
+	background: #FA0;
+	color: #FFF;
+	text-shadow: none;
+}
+h1, h2, h3, h4 {
+	color: #004a99;
+	text-transform: capitalize;
+	margin: 0;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+}
+b {
+	color: #004a99;
+}
+h1 {
+	font-size: 90px;
+}
+h2 {
+	background-color: whiteSmoke;
+	border: 1px solid whiteSmoke;
+	border-radius: 4px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, .2) inset;
+	font-size: 100px;
+	margin: 5px -5px;
+	text-transform: uppercase;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+h2:hover {
+	background-color:      rgba(255, 170, 0, .1);
+	border-color:          rgba(255, 170, 0, .25);
+	box-shadow: 0 4px 20px rgba(255, 170, 0, .6) inset;
+}
+h1 {
+	text-shadow:  3px 3px 1px #999;
+}
+h2 {
+	text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #FFF, 3px 3px 1px #999, 4px 4px 10px #999;
+}
+h2:hover a {
+	color: #E69900;
+	text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #FFF, 3px 3px 1px #FA0, 4px 4px 10px #FA0;
+}
+h3 > a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 33%;
+}
+label {
+	cursor: pointer;
+}
+#features, #main {
+	position: absolute;
+	left: 0; right: 0;
+
+}
+#para { 
+	border-radius: 3px; 
+	background-color: #ddd; 
+	border: solid 1px #ccc; 
+	padding-top: 10px; 
+	padding-right: 25px; 
+	font-size: 14px;
+}
+
+
+.reply {
+	text-align: left; !important; 
+	width: 680px;
+	border-radius: 3px; 
+	background-color: #ddd; 
+	border: solid 1px #ccc; 
+	padding-left: 2px;
+	padding-top: 4px;
+	padding-right: 20px;
+	font-size: 12px;
+	font-family: "Arial", "Helvetica", "sans-serif";
+	margin-bottom: 2px;
+}
+
+input, textarea, .auto {
+	font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+textarea {
+	resize: none !important;
+}
+
+.postertrip {
+	color: #ff3300;
+}
+
+.greentext {
+	color: #789922 !important;
+}
+
+.quotejs, .backlink {
+	color: #000;
+}
+
+.backlink:hover {
+	color: #000;
+	cursor: pointer;
+}
+
+.quotejs:hover {
+	color: #ff6600;
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	border: 1px solid #CCC;
+	background-color: #FFFFEE;
+	border-radius: 2px;
+	-webkit-appearance: button !important;
+	/* -moz-appearance: none !important; */
+	width: 12px !important;
+	height: 12px !important;
+	cursor: pointer !important;
+}
+input[type=checkbox]:checked {
+	background-color: #bcc0d4;
+}
+
+select {
+	display: none !important;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+	/* Hide checkboxes in Firefox because it wont let me style them */
+	input[type='checkbox'], .auto {
+		display: none !important;
+	}
+	/* Make up for lack of checkboxes */
+	.reply {
+		padding-left: 10px !important;
+	}
+	/* Submit button too high up */
+	input[type="Submit"] {
+		position: static !important;
+	}
+	/* Subject input has space underneath, and its too wide in Firefox */
+	input[name="subject"] {
+		margin-bottom: -1px !important;
+		width: 183px !important;
+	}
+	/* Color scheme reply padding */
+	.reply {
+		padding-top: 8px !important;
+	}
+	textarea {
+		height: 70px !important;
+	}
+} 
+
+/* Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Chrome checkmark */	
+	input:checked {
+		content: url('http://i.imgur.com/CAewG.png');
+	}
+	.auto {
+		bottom: 186px !important;
+	}
+	.auto input {
+		top: 5px !important;
+	}
+	input[name="name"], input[name="verification"], input[name="password"], input[name="email"] {
+		width: 247px !important;
+	}
+	input[type="submit"] {
+		bottom: 2px !important;
+	}
+	input[name="subject"] {
+		width: 192px !important;
+	}
+	textarea {
+		margin-top: -1px !important;
+		height: 64px !important;
+	}
+	.reply input {
+		position: relative !important;
+		top: 4px !important;
+	}
+	.reply {
+		padding-top: 2px !important;
+	}
+}
+
+#main {
+	position: relative;
+	left: 4px;
+}
+
+input:focus,
+textarea:focus {	
+	outline: none !important;
+}
+
+
+#faq:target ~ #main, 
+#firefox:target ~ #main,
+#chrome:target ~ #main,
+#opera:target ~ #main,
+#mascots:target ~ #main,
+#options:target ~ #main,
+#colorschemes:target ~ #main,
+#faq:not(:target) ~ #faq-list, 
+#firefox:not(:target) ~ #firefoxinst,
+#chrome:not(:target) ~ #chromeinst,
+#opera:not(:target) ~ #operainst,
+#colorschemes:not(:target) ~ #colors,
+#mascots:not(:target) ~ #mascotsp,
+#options:not(:target) ~ #optionsp {
+	display: none;
+}
+header {
+
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 1em;
+	padding: 5px 5px 0;
+	text-align: center;
+}
+a {
+	color: #ff6600;
+	text-decoration: none;
+}
+a:hover {
+	color: #dd0000;
+}
+
+#optionsp blockquote {
+	text-align:center;
+	position: relative;
+	right: 10px;
+	bottom: 3px;
+}
+
+code, pre {
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	text-shadow: 0 1px 1px white;
+	padding: 0 1px;
+}
+#mascotlink:hover {
+	cursor: pointer;
+}
+.faqanswer {
+	font-size: 13px;
+	text-align: center;
+	position: relative;
+	right: 20px;
+}
+.faqquestion {
+	position: relative;
+	left: 20px;
+}
+.faqpost {
+	margin-bottom: 4px;
+}
+.erika:hover::after {
+	content: url('http://i.imgur.com/zLsPY.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.hakase:hover::after {
+	content: url('http://i.imgur.com/TBHI6.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.miku:hover::after {
+	content: url('http://i.imgur.com/vE3FJ.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.yotsuba:hover::after {
+	content: url('http://i.imgur.com/1MyDM.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.patchouli:hover::after {
+	content: url('http://i.imgur.com/QoKJb.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.asuka:hover::after {
+	content: url('http://i.imgur.com/Wj7s7.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.azusa:hover::after {
+	content: url('http://i.imgur.com/6c3p3.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.seraphim:hover::after {
+	content: url('http://i.imgur.com/PA7pJ.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.musume:hover::after {
+	content: url('http://i.imgur.com/rKT7L.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.nagato:hover::after {
+	content: url('http://i.imgur.com/ucnzg.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.brs:hover::after {
+	content: url('http://i.imgur.com/VidKo.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.shana:hover::after {
+	content: url('http://i.imgur.com/JNS1z.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.rin:hover::after {
+	content: url('http://i.imgur.com/fXXd2.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+.lain:hover::after {
+	content: url('http://i.imgur.com/AfjG9.png');
+	position: fixed;
+	bottom: 244px;
+	right: 0px;
+}
+</style>
 </head>
+<body class='unloaded'>
+<a href="https://github.com/seaweedchan/OneeChan"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/6429057dfef9e98189338d22e7f6646c6694f032/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+<h1 class='logo'><img src="http://i.imgur.com/L0YzO.png"></h1>
+<a id='faq' hidden></a>
+<a id='firefox' hidden></a>
+<a id='chrome' hidden></a>
+<a id='opera' hidden></a>
+<a id='colorschemes' hidden></a>
+<a id='mascots' hidden></a>
+<a id='options' hidden></a>
+<h3>
+<a href='#faq'>FAQ</a>
+<a href="https://github.com/seaweedchan/OneeChan/raw/master/changelog">changelog</a><span class='version' style="position: relative; top: 3px; right: 10px; text-transform: none;">v2.2</span>
+<a href="http://userstyles.org/styles/56312/oneechan" style="position: relative; right: 45px;">install</a>
+<br>
+<hr style="color: #999; opacity: 0.2; position: relative; top: 3px;">
+<a href='#colorschemes'>color schemes</a>
+<a href='#mascots'>mascots</a>
+<a href='#options'>options</a>
+</h3>
+<div id='main'>
+<header>Instructions</header>
+<p style="text-align: center; position: relative; top: 8px;"><a href='#firefox'><img src="http://i.imgur.com/pR0cZ.png"></a>  <a href='#chrome'><img src="http://i.imgur.com/HUzng.png"></a>  <a href='#opera'><img src="http://i.imgur.com/wMvRh.png" style="position: relative; bottom: 1px;"></a>
+</p><br><br><br>
+<h4>
+<a href="https://github.com/seaweedchan/OneeChan/issues">Report an Issue</a>
+</h4>
+</div>
+<div id='faq-list'>
+<header>Frequently Asked Questions</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a></h3>
+<ul><br>
+<div id='para' class='faqpost'><b class='faqquestion'>What is OneeChan?</b>
+<ul>
+<blockquote class='faqanswer'>OneeChan is a userstyle for 4chan.org, made by myself, seaweed (!Seaweed9zY). It features many options to customize 4chan to your liking, including many different color schemes. The main change to 4chan you'd notice is the rearranged layout of 4chan, with a sidebar for easy access to the post form. It can of course be arranged to look almost identical to the default 4chan, so you won't miss out on benefits just because you prefer the regular look.</blockquote> 
+</ul>
+</div>
+<div id='para' class='faqpost'><b class='faqquestion'>That just sounds like AppChan. What's the difference?</b>
+<ul>
+<blockquote class='faqanswer'>OneeChan was actually made as a fork of AppChan. I was a developer for AppChan for a few months and the main person fixing bugs and making commits during that time, and I left the project due to disputes about controversial options that just added in more bugs. About a month later, AppChan was untouched, as well as the bugs related to my departure, and AppChan's creator, Zixaphir, decided that its hiatus was better than my return. I was disheartened as a former AppChan developer and as an AppChan user, so I took matters into my own hands and forked the project instead of waiting any longer (it was licensed as WTFPL at the time). OneeChan's creation and gaining popularity has led to Zixaphir's return to the AppChan project, so now both exist with similar goals but different directions.<br><br>Specifically, what sets OneeChan apart are some new color schemes, new mascots, new options, and a "toolbox" of icons at the top to save screen real estate. For specifics, see the changelog.</blockquote>
+</ul>
+</div>
+<div id='para' class='faqpost'><b class='faqquestion'>What does "OneeChan" mean?</b>
+<ul>
+<blockquote class='faqanswer'>Its Japanese for "older sister." Take from that what you will. In Japanese its pronounced oh-nay-chahn (ay as in neigh, ah as in gah!), but some who don't know Japanese pronounce it oh-nee-chan (ee as in knee, a as in hat).</blockquote>
+</ul>
+</div>
+<div id='para' class='faqpost'><b class='faqquestion'>AppChan has <i>y. </i>Why doesn't OneeChan?</b>
+<ul>
+<blockquote class='faqanswer'>I do not look at AppChan, and I never intend to use anything in AppChan aside from what existed at the time of the fork. I intend to keep it this way, because while AppChan may borrow from OneeChan, I feel that the projects should be keep separated to maintain separate identities, and -- for you, the user -- provide two very different options, instead of making you think, "...They're the exact same thing. Which one do I pick?" If there's something AppChan does differently that you as an OneeChan user would like me to implement, feel free to let me know.</blockquote>
+</ul>
+</div>
+<div id='para' class='faqpost'><b class='faqquestion'>I posted <i>x</i> issue on 4chan, why won't you fix it?</b>
+<ul>
+<blockquote class='faqanswer'>I can't be monitoring 4chan all the time for people who might post an issue there. If you want to report an issue, you should do it on the <a href="https://github.com/seaweedchan/OneeChan/issues?sort=created&direction=desc&state=open">issues tracker</a> so that I can be easily notified of it whenever I sign on, and you can be notified of responses to it and when its resolved. Registering for Github does not require an email address, and myself and the Github team will not know who you are so it is not a risk to your anonymity.</blockquote>
+</ul>
+</div>
+<div id='para' class='faqpost'><b class='faqquestion'>I made a mascot / color scheme! How do I send it to you to put on OneeChan?</b>
+<ul>
+<blockquote class='faqanswer'>You can send it to me as a private message on Github ("Notifications" -> "Compose Message"), or through the email function on Github ("Message" button on my profile). Use a site like imgur to upload mascots, and gist or pastebin to upload color schemes. Just note that nothing is of course guaranteed to be put into OneeChan, but I am pretty open-minded and more options are never a bad thing.</blockquote>
+</ul>
+</div><br><br>
+</ul>
+</div>
+<div id='firefoxinst' class='instruct'>
+<header>OneeChan on Firefox</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a><br><br><img src="http://i.imgur.com/pR0cZ.png"></h3>
+<ul id="para">
+<li>Install <a href="https://addons.mozilla.org/en-US/firefox/addon/stylish/">Stylish</a> OR <a href="https://addons.mozilla.org/en-Us/firefox/addon/scriptish/">Scriptish</a> if you don't have either already. You only need one of them.</li>
+<li>Go to the <a href="http://userstyles.org/styles/56312/oneechan">official OneeChan page</a>.</li>
+<li>Read through the different options and select all the options you'd like to have, or alternatively let OneeChan choose the defaults for you.</li>
+<li><b>Stylish:</b> Click the "Install with Stylish" button in the green box underneath the options.</li>
+<li><b>Scriptish:</b> Left click (<i>don't right click</i>) the "Install as UserJS" link in the green box underneath the options. When the new page loads, a Scriptish dialog should prompt you to install.
+<p>That's all! You should now have a working OneeChan installation. <br><br>
+Enjoy.</p></ul>
+</div>
+<div id='chromeinst' class='instruct'>
+<header>OneeChan on Google Chrome</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a><br><br><img src="http://i.imgur.com/HUzng.png"></h3>
+<ul id="para">
+<li>(<i>Optional, see "Userscript"</i> ) Install <a href="https://chrome.google.com/webstore/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe">Stylish</a> if you don't already have it.</li>
+<li>Go to the <a href="http://userstyles.org/styles/56312/oneechan">official OneeChan page</a>.</li>
+<li>Read through the different options and select all the options you'd like to have, or alternatively let OneeChan choose the defaults for you.</li>
+<li><b>Userstyle:</b> Click the "Install with Stylish" button in the green box underneath the options.</li>
+<li><b>Userscript:</b> Left click ( <i>don't right click</i> ) the "Install as UserJS" link in the green box underneath the options. Google Chrome should prompt you to install in your Downloads bar.
+<p>That's all! You should now have a working OneeChan installation. <br><br>
+Enjoy.</p></ul>
+</div>
+<div id='operainst' class='instruct'>
+<header>OneeChan on Opera</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a><br><br><img src="http://i.imgur.com/wMvRh.png"></h3>
+<ul id="para"><b>Notice:</b> It's recommended that you disable 'smooth scrolling' in your Opera preferences. The option doesn't work very well with userscripts that add a lot of CSS.
+<br><br>
+<li>Go to the <a href="http://userstyles.org/styles/56312/oneechan">official OneeChan page</a>.</li>
+<li>Read through the different options and select all the options you'd like to have, or alternatively let OneeChan choose the defaults for you.</li>
+<li>Left click (<i>don't right click</i>) the "Install as User JS" link in the green box underneath the options.</li>
+<li><pre style="display: inline-block;">Opera -> Save Page As...</pre> Now put the file into the same folder you put 4chan X in. If you don't have that, make a new folder, name it anything you want like "UserJS", and save the OneeChan file there.</li>
+<li>Now you just need to make sure that your UserJS folder is properly loaded by Opera:<pre style="display: inline-block; ">Opera -> Settings -> Preferences -> Advanced -> Content -> JavaScript Options</pre></li>
+<li>Under the window that pops up, choose the folder you put OneeChan into under "User JavaScript folder". Setting it as a site specific preference will not work properly as OneeChan uses very specific website rules for different 4chan regexps, domains, and url-prefixes.</li>
+<p>That's all! You should now have a working OneeChan installation. <br><br>
+Enjoy.</p></ul>
+</div>
+<div id='mascotsp' style="position: relative; left: 2px;">
+<header>Mascots</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a></h3><br>
+<ul style="text-align: center; font-size: 14px; position: relative; right: 20px;">Hover over one of the below to see it on the right side of the page, like you would on 4chan!<br>Note the size of the mascot relative to your screen space.<br><br>
+<a id="mascotlink" class="erika">Furudo Erika</a><br>
+<a id="mascotlink" class="hakase">Shinonome Hakase</a><br>
+<a id="mascotlink" class="miku">Hatsune Miku</a><br>
+<a id="mascotlink" class="yotsuba">Kowai Yotsuba</a><br>
+<a id="mascotlink" class="patchouli">Patchouli Knowledge</a><br>
+<a id="mascotlink" class="asuka">Asuka Langley Soryu</a><br>
+<a id="mascotlink" class="azusa">Nakano Azusa</a><br>
+<a id="mascotlink" class="seraphim">Seraphim</a><br>
+<a id="mascotlink" class="musume">Ika Musume</a><br>
+<a id="mascotlink" class="nagato">Nagato Yuki</a><br>
+<a id="mascotlink" class="brs">BLACK ROCK SHOOTER</a><br>
+<a id="mascotlink" class="shana">Shana</a><br>
+<a id="mascotlink" class="rin">Kagamine Rin</a><br>
+<a id="mascotlink" class="lain">Iwakura Lain</a><br><br><br>
+</ul><ul style="position: fixed; bottom: -10px; right: 2px; font-size: 12px;" class='postarea'>
+<input name="name" placeholder="Name" style="width:244px; height: 16px; border: 1px solid #CCC; margin-bottom: 1px; font-size: 12px;">
+<br>
+<input name="email" placeholder="Email" style="width:244px; height: 16px; border: 1px solid #CCC;margin-bottom: 1px; font-size: 12px;">
+<br>
+<input name="subject" placeholder="Subject" style="width:185px; height: 16px; border: 1px solid #CCC;margin-bottom: 1px; margin-right: 1px; font-size: 12px;"><input type="submit" value="Submit" id="com_submit" style="background-color: #DDD; border: 1px solid #CCC; text-transform: uppercase; font-size: 10px; height: 20px; position: relative; bottom: 1px;"/>
+<br>
+<textarea placeholder="Comment" style="width:244px; height: 69px; border: 1px solid #CCC; font-size: 12px;"></textarea>
+<br>
+<img src="http://i.imgur.com/t7ghB.png" style="margin-bottom: -2px;">
+<br>
+<input name="Verification" placeholder="Verification" style="width:244px; height: 16px; border: 1px solid #CCC;margin-bottom: 0px; font-size: 12px;">
+<br>
+<img src="http://i.imgur.com/qS6VC.png" style="margin-bottom: -4px; border-radius: 2px;"><input name="file" placeholder="No file selected." style="width:164px; height: 16px; border: 0px solid #CCC; margin-bottom: 1px;">
+<br>
+<input name="password" placeholder="Password" style="width:244px; height: 16px; border: 1px solid #CCC; font-size: 12px; margin-bottom: -1px;">
+<a style="position: absolute; bottom: 2px; right: 10px; font-weight: 500; font-size: 15px;">+</a>
+<span style="position: absolute; bottom: 185px; right: 80px;" class='auto'><input type="checkbox" style="position: relative; top: 1px;">auto</span>
+</ul>
+</div>
+<div id='colors' style="position: relative; left: 2px;">
+<header>Color Schemes</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a></h3><br>
+<ul style="text-align: center; font-size: 14px; position: relative; right: 19px;">Click the name of a color scheme below to preview it!<br>See the below replies for testing, and you can switch to the "Mascots" page to test the post form and mascots with your chosen scheme.<br><br>
+<a href="javascript:set_stylesheet('')">Photon (Default)</a><br>
+<a href="javascript:set_stylesheet('AppChan')">AppChan</a><br>
+<a href="javascript:set_stylesheet('Yotsuba')">Yotsuba</a><br>
+<a href="javascript:set_stylesheet('YotsubaB')">Yotsuba B</a><br>
+<a href="javascript:set_stylesheet('Tomorrow')">Tomorrow</a><br>
+<a href="javascript:set_stylesheet('Solarized')">Solarized</a><br>
+<a href="javascript:set_stylesheet('Zenburned')">Zenburned</a><br>
+<a href="javascript:set_stylesheet('ObsidianChan')">ObsidianChan</a><br>
+<a href="javascript:set_stylesheet('MidnightCaek')">Midnight Caek</a><br>
+<a href="javascript:set_stylesheet('MinimalisticMayhem')">Minimalistic Mayhem</a><br><br></ul>
+<div class='reply'><input type="checkbox"> <b style="font-weight: 800;">Anonymous</b> 12/14/11(Wed)03:02 <a class='quotejs'>No.</a><a class='quotejs'>21613335</a> <a class='backlink'>>>21613419</a>
+<blockquote><span class='greentext'>>still no image preloading</span><br>Come on, Mayhem.</blockquote>
+</div>
+<div class='reply'><input type="checkbox"> <span class='postertrip'>!MayhemxaEo</span> 12/14/11(Wed)03:04 <a class='quotejs'>No.</a><a class='quotejs'>21613419</a>
+<br><span class='filesize'>&nbsp;&nbsp;&nbsp;File<a style="cursor: pointer;">1323836204.jpg</a>-(28 KB, 400x259, Yanderika.jpg) <a style="cursor: pointer;">iqdb</a> <a style="cursor: pointer;">google</a></span>
+<br><a href="http://i.imgur.com/thz1S.jpg" style="cursor: pointer;"><img src="http://i.imgur.com/m28l2.jpg" border="0" align="left" hspace="20" style="margin-bottom: 15px;"></a>
+<blockquote style="display: block;"><a class='quotelink' style="cursor: pointer;">>>21613335</a><br>I'm so glad you bumped my thread, anon! I knew you loved me the most! I saw you posting in those other threads and I started wondering why you were doing that when I was always right here, but of course anon loves me the most! And you won't browse those other threads any more, will you? Why would you need to when you have me? And I have you. Forever and ever! We don't need any other threads, do we? Do we? Tell me that you don't need them! Tell me that I'm the only one for you! Well, you don't even have to say it, because I know. I've always known, since the moment you first started lurking here that we were made for each other. So now we can be together forever and ever! I love you anon! And I know you love me, don't you? Say that you love me, anon. I want to hear you say it. Hey, why won't you say it? Anon? Can you hear me? Hey, are you there? Anon? Are you OK? You're not looking at those other threads again are you? Those threads are bad. They keep trying to take anon away from me. Well I won't let them. Anon should stay here with me so we can be together forever. Even if anon gets hurt. Even if I have to make sure that anon can't see those other bad threads ever again. Don't worry, anon, I would never hurt you, you know that! I just have to protect anon from those bad threads! Can't you see this is so we can be together forever! I love you anon! Now, hold still...</blockquote>
+</div><br><br>
+</div>
+<div id='optionsp' style="position: relative; left: 2px;">
+<header>Options</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a></h3><br>
+<div style="text-align: center; font-size: 14px;">
+<td>
+<div>
+<a id="myHeader-click" href="javascript:toggle('show-click');" ></a>
+</div>
+<div name="showdiv" id="show-click">Click an option name to read more.<br><br></div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-font');" >Font</a>
+</div>
+<div name="showdiv" id="show-font" class='reply' style="display: none;"><blockquote>This option has various font families. You can see them below. If you don't have one installed, it will appear <span style="font-family: 'Cedarville Cursive'">cursive</span>, with the exception of the Ubuntu font, this site's default. You can actually click the text to see what the font is supposed to look like.<br><br>
+<a style="font-family: 'Ubuntu','Cedarville Cursive'; font-size: 14px;" href="http://4.bp.blogspot.com/_5bdO0FMWXa8/TKGuVGCOZII/AAAAAAAAASg/qiE4l9UHAHw/s1600/C:%5Cfakepath%5CScreenshot.png">Ubuntu</a><br>
+<a style="font-family: 'Droid Sans','Cedarville Cursive'; font-size: 14px;" href="http://cdn.tripwiremagazine.com/wp-content/uploads/images/stories/Articles/prof-font-alt/droid.jpg">Droid Sans</a><br>
+<a style="font-family: 'Terminus', 'monospace','Cedarville Cursive'; font-size: 14px;" href="http://poisonbit.files.wordpress.com/2009/05/gnome-terminal-terminus1.png">Monospace</a><br>
+<a style="font-family: 'Segoe UI','Cedarville Cursive'; font-size: 14px;" href="http://media.smashingmagazine.com/images/freefonts-august/segoeui.png">Segoe UI</a><br>
+<a style="font-family: 'Calibri','Cedarville Cursive'; font-size: 14px;" href="http://www.tvrdek.cz/obrazky/calibri.jpg">Calibri</a><br>
+<a style="font-family: 'Lucida Grande','Cedarville Cursive'; font-size: 14px;" href="http://simoncpage.co.uk/blog/wp-content/uploads/2008/09/lucida.jpg">Lucida Grande</a><br>
+<a style="font-family: 'Arial','Cedarville Cursive'; font-size: 14px;" href="http://upload.wikimedia.org/wikipedia/en/4/43/Arial_sample.png">Arial</a><br>
+<a style="font-family: 'Helvetica Neue', 'Helvetica','Cedarville Cursive'; font-size: 14px;" href="http://media02.hongkiat.com/helvetica-artwork/32_helvetica.jpg">Helvetica</a><br>
+<a style="font-family: 'Futura Lt','Cedarville Cursive'; font-size: 14px;" href="http://www.siena.edu/uploadedImages/Home/About_Siena/SCIM/Branding_Guide/futura.jpg">Futura Lt</a><br>
+<a style="font-family: 'Profont','Cedarville Cursive'; font-size: 14px;" href="http://www.addictivefonts.com/wp-content/uploads/2010/10/ProFont.jpg">Profont</a>
 
-<body>
-  <a href="https://github.com/seaweedchan/OneeChan"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/seaweedchan/OneeChan/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/seaweedchan/OneeChan/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/seaweedchan/OneeChan">OneeChan</a>
-      <span class="small">by <a href="https://github.com/seaweedchan">seaweedchan</a></span></h1>
-
-    <div class="description">
-      A fork of AppChan, for close maintaining, bug fixing, and quality.
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Jordan Bates (saudrapsmann@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>seaweed !Ponyo.2wFE (saudrapsmann@gmail.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/seaweedchan/OneeChan/zipball/master">zip</a> or
-      <a href="https://github.com/seaweedchan/OneeChan/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/seaweedchan/OneeChan</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/seaweedchan/OneeChan">seaweedchan/OneeChan</a>
-    </div>
-
-  </div>
-
+</blockquote></div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-fontsize');" >Font Size</a>
+</div>
+<div name="showdiv" id="show-fontsize" class='reply' style="display: none;"><blockquote>
+<span style="font-size: 10px;">This is a sentence at font size 10px.</span><br>
+<span style="font-size: 11px;">This is a sentence at font size 11px.</span><br>
+<span style="font-size: 12px;">This is a sentence at font size 12px.</span><br>
+<span style="font-size: 13px;">This is a sentence at font size 13px.</span><br>
+<span style="font-size: 14px;">This is a sentence at font size 14px.</span><br>
+<span style="font-size: 15px;">This is a sentence at font size 15px.</span><br>
+<span style="font-size: 16px;">This is a sentence at font size 16px.</span>
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-sidebar');" >Enable Sidebar?</a>
+</div>
+<div name="showdiv" id="show-sidebar" class='reply' style="display: none;">
+<blockquote>
+This one's prety obvious. It enables the sidebar on the right side (or left side) of the screen, where board names, the toolbox, the logo, mascots, etc., all go.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-marginstyle');" >Margin Style</a>
+</div>
+<div name="showdiv" id="show-marginstyle" class='reply' style="display: none;">
+<blockquote>
+This is how big the other side opposite the sidebar is.<br>"No Left Margin" means replies will reach the edge of the window.<br>"Small Left Margin" leaves a little bit of space -- this is what 4chan uses by default.<br>"Medium Left Margin" makes it slightly large than default, but not too much larger.<br>"Large Left Margin" is double the margin space.<br>"Completely Centered" as it says instead centers the replies within the window. This is the only option that changes the side with the sidebar, as it makes it so the margins on both sides are equal instead of aligning it with the sidebar.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-navigation');" >Navigation Type</a>
+</div>
+<div name="showdiv" id="show-navigation" class='reply' style="display: none;">
+<blockquote>
+You probably know on 4chan about the top navigation links and the pages links. This option lets you fix them to the window so that you always have them available as you scroll through threads. The options vary by what's positioned where, and even lets you only have one stickied. If you want you can even disable the header completely and just use the slideout navigation in the toolbox.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-pages');" >Pages Location</a>
+</div>
+<div name="showdiv" id="show-pages" class='reply' style="display: none;">
+<blockquote>
+Instead of displaying page links horizontally, you can display them vertically along the side of the page. This WILL override the "Navigation Type" option's rules for the page links.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-namelogo');" >Board Name + Logo</a>
+</div>
+<div name="showdiv" id="show-namelogo" class='reply' style="display: none;">
+<blockquote>
+"/g/ - Technology" would be the board name, and the logo would be the often animated GIFs that usually say 4chan on them. If you have it set to just "Name", then its positioned over your mascot by the post form. Anything else is positioned towards the top of the window, closer to what it is by default. These are all shown in the sidebar.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-customnames');" >Custom Board Names</a>
+</div>
+<div name="showdiv" id="show-customnames" class='reply' style="display: none;">
+<blockquote>
+This sets pseudo-elements to replace the board names. Instead of, for example, it saying "/g/ - Technology", it could say "/g/entoo". You have to go in and edit this one yourself to get it working the way you want. Search in your userstyle by opening up the userscript file or browsing through Stylish's options and search for "/g/ - Technology." The "content" part, which by default does say "/g/ - Technology," you want to change to whatever you want it to say. You can copy and paste the section and change the board in the link to create new rules for other boards' names as well.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-postform');" >Post Form</a>
+</div>
+<div name="showdiv" id="show-postform" class='reply' style="display: none;">
+<blockquote>
+"Fixed" - The default 4chan post form is fixed in your sidebar and always visible, ready for you to make a new thread or post.<br>
+"Slideout" - Half of the post form is hidden in the side of the window until you hover over it.<br>
+"Tabbed Slideout" - A little prettier than the Slideout option, this makes it so all that's visible until hover is a small tab that says "POST FORM".<br>
+"Fade" - This works similar to "Fixed," except that it makes the post form slightly transparent until you hover over it.<br>
+"Disabled" - For the masochists! And aeosynth X master branch users that let you make threads with the quick reply. This gets rid of the post form all together. Who needs it?
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-quickreply');" >Replace Post Form with 4chan X Quick Reply?</a>
+</div>
+<div name="showdiv" id="show-quickreply" class='reply' style="display: none;">
+<blockquote>
+As the title of the option says, if you use 4chan X, this option replaces the post form with 4chan X's quick reply. It makes them visibly identical, and the options are the same as in the "Post Form" option, so all you get is even more benefits. Set to "No" if you don't use 4chan X at all or you prefer 4chan X's floating quick reply.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-labels');" >Postarea / QR Labels?</a>
+</div>
+<div name="showdiv" id="show-labels" class='reply' style="display: none;">
+<blockquote>
+These are the labels for the input fields and textareas. They say "Name" in the name field, "Email" in the email field, etc.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-textareaheight');" >Postarea / QR Textarea Height</a>
+</div>
+<div name="showdiv" id="show-textareaheight" class='reply' style="display: none;">
+<blockquote>
+This changes the height of the textarea, where you'd type in the actual message of your reply or thread. The mascots and error messages do change positions with this option, so if you use a mascot and have a smaller screen, you should possibly leave it at the default setting.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-hr');" >Post Separation Lines</a>
+</div>
+<div name="showdiv" id="show-hr" class='reply' style="display: none;">
+<blockquote>
+Post separation lines are:
+<hr>
+And they'd just go between threads!
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-captchareload');" >Captcha Reload Button</a>
+</div>
+<div name="showdiv" id="show-captchareload" class='reply' style="display: none;">
+<blockquote>
+This adds a small little icon into your captcha image so that you don't have to backspace to reload the captcha: <img src="http://i.imgur.com/CJKRV.png">
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-replywidth');" >Reply Width</a>
+</div>
+<div name="showdiv" id="show-replywidth" class='reply' style="display: none;">
+<blockquote>
+You can either set this option to Normal so that reply width depends on how much text is in the reply, or you can set it to Fit Width which makes the replies take up all available space.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-roundedcorners');" >Rounded Corners</a>
+</div>
+<div name="showdiv" id="show-roundedcorners" class='reply' style="display: none;">
+<blockquote>
+If you'll notice around this very box you'll see the corners are not sharp but slightly rounded. That's all this option does. You can enable it, enable it with completely circular checkboxes, or keep 'em square and sharp.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-sage');" >Sage Identifier</a>
+</div>
+<div name="showdiv" id="show-sage" class='reply' style="display: none;">
+<blockquote>
+If enabled displays <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAABa1BMVEUAAACqrKiCgYIAAAAAAAAAAACHmX5pgl5NUEx/hnx4hXRSUVMiIyKwrbFzn19SbkZ1d3OvtqtpaWhcX1ooMyRsd2aWkZddkEV8vWGcpZl+kHd7jHNdYFuRmI4bHRthaV5WhUFsfGZReUBFZjdJazpGVUBnamYfHB9TeUMzSSpHgS1cY1k1NDUyOC8yWiFywVBoh1lDSEAZHBpucW0ICQgUHhBjfFhCRUA+QTtEQUUBAQFyo1praWspKigWFRZHU0F6j3E9Oz5VWFN0j2hncWONk4sAAABASDxJWkJKTUgAAAAvNC0fJR0DAwMAAAA9QzoWGhQAAAA8YytvrFOJsnlqyT9oqExqtkdrsExpsUsqQx9rpVJDbzBBbi5utk9jiFRuk11iqUR64k5Wf0JIZTpadk5om1BkyjmF1GRNY0FheFdXpjVXhz86XSp2yFJwslR3w1NbxitbtDWW5nNnilhFXTtYqDRwp1dSijiJ7H99AAAAUnRSTlMAJTgNGQml71ypu3cPEN/RDh8HBbOwQN7wVg4CAQZ28vs9EDluXjo58Ge8xwMy0P3+rV8cT73sawEdTv63NAa3rQwo4cUdAl3hWQSWvS8qqYsjEDiCzAAAAIVJREFUeNpFx7GKAQAYAOD/A7GbZVAWZTBZFGQw6LyCF/MIkiTdcOmWSzYbJVE2u1KX0J1v+8QDv/EkyS0yXF/NgeEILiHfyc74mICTQltqYXBeAWU9HGxU09YqqEvAElGjyZYjPyLqitjzHSEiGkrsfMWr0VLe+oy/djGP//YwfbeP8bN3Or0bkqEVblAAAAAASUVORK5CYII="> next to posts with "sage" in the email field, or you can set it to text only: <span style="font-color: red !important;">(sage)</span>.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-nekosega');" >Neko / Sega Identifiers</a>
+</div>
+<div name="showdiv" id="show-nekosega" class='reply' style="display: none;">
+<blockquote>
+As in the Sage Identifier option, as a fun addition you can change the display of posts with Neko or Sega in the email field.<br><br>Images: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAMAAAAIRmf1AAACoFBMVEUAAABnUFZoUVddU1T6+PvFwLzn4eFXVlT/+vZpZGCgm5dKU1Cfnpz//flbWljr5uLp5OCalpNZWFb//f3r6+n28ff9+PRaVVH59Pr//vr38vj57/Dp7eyjn5zq8O5aVVJbYV9nVFhjUFRiWFlZVlFgZGOboJzm5uZhamfz9/bt8fDw6+drb26bl5j/8/lkX1z06uldWFS5r61UT0tfWlbDwr3Ew76moqNRTU7Mx8P75OpeY19pWl1XW1qzr6x5eHaLiojv7+1UT0xIU0uzqadVS0nV0MxkZGT5+PPk497///ra29Xq5eFtY2H28e2hnJignJlUUE1dXV2vrqxkY2FkYF/m3d5vZmfDuruhl5aZlJHx8O75+PZWVVP29vT/9fTj3trv6ubh5eRdXFqTkpBOTUtqZmX88/RMQ0T78vPEvr7HwcHDwsDq6ef///3Gx8H++fXEv7tZWVedmZZXXVudnJp0c3FZU1f79fnb1dlXUVVjXWFrZmy8t7359/qLj455e3q4s69vamZjX1zy4+avpaReWFz/+f1NR0vu6Ozp4+f48/lnYmi8ur3Iw7/69fHz7+xbV1SZmJZVUk1ZV1zq5ez++f/c196uqbDn4uj9+P7z7vRVVVXt6ORiXl/OycXHw8CPi4ihoJ5aWF3/+v/k3+axrLOsp67LzMZYU1m2sq9dWF5WUU1WUk/Au7eYlJGqpqObmphYVV749f7p5Or38fPu6OpiXFz38fH79vLz7urv6+hhYF5cWWKal6D//f/Z09Xg29exraqbl5RqaW6kpKTq5uPv7Of/+PDj29D//vP18Ozs5+OloJymoZ1ZVVJZWVlkYF2hnpmblIyspJmVjYKQi4enop5STUlRTUpcWUhqY1BgWT9ZUjhcV1NiXVkkhke3AAAABHRSTlMA5vjapJ+a9wAAAP9JREFUGBk9wA1EAwEAhuHv3dTQAkLiUlJFJWF0QDLFYDRXIMkomBgxNIYxhOk4wwCqQhQjxgxSGIsALFA5BiYbMZHajz1oJlx51sBJpf6Gd3zONcrqm/r1W8ByK0r+XV1LXyOLLnjW6hMGpu0u1IzPSdO17DgrGC6AadrVodGcDQYbhguP6wAvAaC0BRZQalkUQ8UQDz5tAof0XbejOFcV5xiUoCfjj3O/nf0ZbqAMPYmzU18KSDaRQ08qnfw+B2JNdAEQt2O5vctUGjhoIBU4ygPsj2Vh5zYopDK73hsirdkPTwGCbSHpiYFwYVVC/17pCFSBeUmoqwYQuZtWxx+BVEz0LeVKIQAAAABJRU5ErkJggg=="> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAALBAMAAAD2A3K8AAAAMFBMVEUAAACMjpOChImytLmdnqMrKzDIyM55dnkODQ94foQ7PkXm5Olsb3VUUVVhZmw8Sl6klHLxAAAAAXRSTlMAQObYZgAAANFJREFUGJVjYIACRiUlJUUGDHBk4syTkxQwhO3/rQ/4ZYsuymi3YEFUqAhC4LCJZJGIi1uimKKjk3KysbOxsaMnAwNLyqoopaXhttf2it1anrJqke1pr1DlBAZhicLnM5YXZ4RWlIYoezx0zrjYqG6czCDsYRzxIko6Q/qFaKy0690Ij0MxN8K2MIhJXF+hsfxJxuwdpYGVaUU3Mm5bqgKFOZOFit3Vp23J3pgsqLxFUXpLtlD5bgcGBs45794dn6mkOVFQUOjNmXPPz8ysOcAAANw6SHLtrqolAAAAAElFTkSuQmCC"> Text: <span style="font-color: red !important;">(neko) (sega)</span>
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-filenames');" >Expanded Filenames</a>
+</div>
+<div name="showdiv" id="show-filenames" class='reply' style="display: none;">
+<blockquote>
+4chan by default cuts off some of the file name to avoid it getting too long. By enabling this option, you'll simply be shown the entire file name.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-centeredimages');" >Centered Images in New Tabs</a>
+</div>
+<div name="showdiv" id="show-centeredimages" class='reply' style="display: none;">
+<blockquote>
+When you open images in a new tab, via clicking them without Image Expanding enabled or right click -> Open in new tab, this will center the image on the page. Normally they appear in the top left corner. To avoid scrollbars hiding entirely, this will have a horizontal scrollbar that's always visible.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-scrollbars');" >Custom Scrollbars</a>
+</div>
+<div name="showdiv" id="show-scrollbars" class='reply' style="display: none;">
+<blockquote>
+This option changes the colors of the scrollbars to match that of your chosen color scheme.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-ihover');" >Image Hover Fixes</a>
+</div>
+<div name="showdiv" id="show-ihover" class='reply' style="display: none;">
+<blockquote>
+When you hover over a link in Firefox or Chrome, a small ~20px popup appears at the bottom that shows the URL of the link you're hovering. Now when image hover is enabled in 4chan X, the images get covered up by that popup. Another issue is that large images get shown off the page. The settings for this option are to provide solutions for both of these issues, just one, or none at all.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-backlinks');" >Quote Backlinks (Quoted By:)</a>
+</div>
+<div name="showdiv" id="show-backlinks" class='reply' style="display: none;">
+<blockquote>
+Backlinks in 4chan X, which come from the /b/ackwash userscript, normally appear next to the post number. You can change the position to other corners of the reply as well as add text that that says "Quoted By:" before the backlinks, with this option. It can look out of place with quote previews, and will have usability issues with inlined replies that are designed with the backlinks placement in their normal state, so use it with caution.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-butts" href="javascript:toggle('show-redtext');" >Moot's Announcements</a>
+</div>
+<div name="showdiv" id="show-redtext" class='reply' style="display: none;">
+<blockquote>
+When moot makes an announcement, without OneeChan, the text is read and it appears at the top of the page. You can move it to a toolbox icon that displays when moot makes an announcement and shows the announcement on hover, or you can disable it entirely.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-slideoutwatcher');" >Slideout Watcher?</a>
+</div>
+<div name="showdiv" id="show-slideoutwatcher" class='reply' style="display: none;">
+<blockquote>
+One criticism of the thread watcher in 4chan X is that its not always needed and can cover up posts when it gets too long. This solves that by placing an icon in the toolbox that shows the thread watcher when you hover over it. You can of course disable it.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-changealign');" >Sidebar Location</a>
+</div>
+<div name="showdiv" id="show-changealign" class='reply' style="display: none;">
+<blockquote>
+Simply put, you can leave your whole sidebar in its default position on the right side, or you can move it to the left side!
+</blockquote>
+</div>
+</td>
+</div>
+</div>
 </body>
 </html>

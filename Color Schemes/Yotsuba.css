@@ -1,0 +1,142 @@
+h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: transparent;
+  color: #800000;
+}
+
+body {
+  background: url("http://static.4chan.org/image/fade.png") repeat-x scroll center top #FFFFEE !important;
+}
+
+input, textarea {
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #800000 !important;
+}
+
+a:hover {
+  color: #d00 !important;
+}
+
+.backlink {
+  color: #dc0000 !important;
+}
+
+.quotejs {
+  color: #800000 !important;
+}
+
+.quotelink {
+  color: #d00 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #AF0A0F !important;
+}
+
+b {
+  color: #117743 !important;
+}
+
+input:not([name="file"]), textarea {
+  background-color: #eef2ff !important;
+}
+
+#para, .reply {
+  background-color: #F0E0D6 !important;
+}
+
+.reply, #para {
+  border: 1px solid #D9BFB7 !important;
+  border-top: 0px solid #d6daf0 !important;
+  border-left: 0px solid #d6daf0 !important;
+}
+
+.postertrip {
+  color: #228854 !important;
+}
+
+.greentext {
+  color: #789922 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #F0E0D6 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #eef2ff !important;
+}
+
+input[type="checkbox"] {
+  background-color: #eef2ff !important;
+  border: 1px solid #D9BFB7 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #bcc0d4 !important;
+  border: 1px solid #D9BFB7 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/TyFWy.png') !important;
+  }
+}
+
+select {
+  display: none !important;
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #D9BFB7 !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #800000 !important;
+}
+
+input[type="submit"] {
+  background-color: #F0E0D6 !important;
+  border-color: #D9BFB7 !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}
