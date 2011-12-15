@@ -1,2 +1,1 @@
-[![Firefox](http://i.imgur.com/pR0cZ.png)](https://github.com/seaweedchan/OneeChan/wiki/Mozilla-Firefox) [![Google Chrome](http://i.imgur.com/HUzng.png)](https://github.com/seaweedchan/OneeChan/wiki/Google-Chrome) [![Opera](http://i.imgur.com/ZJGHF.gif)](https://github.com/seaweedchan/OneeChan/wiki/Opera)    
-![OneeChan](http://i.imgur.com/dwUAz.png)
+  ![OneeChan](http://i.imgur.com/dwUAz.png)
