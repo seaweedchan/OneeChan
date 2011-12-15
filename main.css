@@ -14,14 +14,14 @@ the following fair use rationale:
 
 1.	The purpose of use is not commercial in nature in any conceivable way.
 2.	The included images are already commonly available from various
-	non-commercial sources.
+non-commercial sources.
 3.	Included images are low-resolution and are only a portion of the
-	original artwork.
+original artwork.
 4.	The use of included artwork should not affect the value of the original
-	work or limit the copyright holder's rights or ability to distribute
-	the original.
+work or limit the copyright holder's rights or ability to distribute
+the original.
 5.	The original intent of copyright of included images is difficult to
-	discern.
+discern.
 
 In the event where usage of included images is found unwanted by the
 original copyright holders, owned images will be removed from OneeChan.
@@ -31,609 +31,609 @@ original copyright holders, owned images will be removed from OneeChan.
 This style is intended to provide integration of 4chan x into 4chan.
 
 This style is designed for the following browsers, ordered alphabetically:
-	* Chromium / Google Chrome 10 or higher, including the dev and Canary channels.
-	* Mozilla Firefox 6.x or higher, including the Aurora and Nightly channels.
-	* Opera 11.5 and higher.
+* Chromium / Google Chrome 10 or higher, including the dev and Canary channels.
+* Mozilla Firefox 6.x or higher, including the Aurora and Nightly channels.
+* Opera 11.5 and higher.
 */
 @-moz-document domain(boards.4chan.org), domain(rs.4chan.org) {
-/* Mascots (More mascots can be found at https://github.com/zixaphir/AppChan/wiki/Mascots) */
-	body::after {
-		position: fixed !important;
-		/*[[background]]*/
-		left: 0;
-		-moz-transform: scaleX(-1);
-		-o-transform: scaleX(-1);
-		-webkit-transform: scaleX(-1);
-/*[[ChangeAlign]]*/
-		right: 0;
-		left: auto;
-		-moz-transform: scaleX(1);
-		-o-transform: scaleX(1);
-		-webkit-transform: scaleX(1);/**/
-		z-index: 3 !important;
-	}
-	body::before {
-		content: '';
-		width: 246px !important;
-		height: 20px !important;
-		border-top: 0px !important;
-		position: fixed !important;
-		top: 0px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/	
-		right: 2px !important;
-		left: auto !important; /**/
-		opacity: 0.7 !important;
-	}
-	body {
-/*[[Margin]]*/
-	}
-	font[color="red"]  {
-		position: fixed !important;
-		top: -1000px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/	
-		right: 2px !important;
-		left: auto !important; /**/
-		bottom: auto !important;
-		width: 236px !important;
-		padding: 10px 5px 10px 5px !important;
-	}
-	font[color="red"] b {
-		font-weight: 100 !important;
-	}
-	font[color="red"]::before {
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAlZJREFUOE99lE1IVFEYhmdGZ2oEnVQMWySCixA32SJGgxYVREGrVAQZrt65ICFIuggSEg37WSoaLaIQ+9FNK8WNiULgQsGFwahgJFKESKmpqJE/zzuc5HKdGnj4zpzvnPe85zvnXJ/P9Yvb8YBjO2E469Q5V4gxaKR9B27TLoUcCILfPfeoTSIDzsN9+AjfYAv24Q+swjy8gwo4g3jakQAu/BAhUQVjsAE/YNYIfiCOwiQsGvElYqcWZm4wKUbjJB3VMAObMAHtcINcoWVZJbVWbbFxaxFfwhctSP4NFKskErpgVl4nvofrkGnbtj8Wi4VgCRIQYGw6uQK4C59A232kHflodBgn43SUI5DuLiICEzDi7mN8DmObiV9hnnbUR8FUi2Vo0ja9J4FIL/S4++WW8UXMHVbNJCpHvyFB5+VUx4nIPWjw5pgchsfMXSd2SkjHOw2l/xC6hdA1bw5XIQRamPeT2COhNdCxVpAMpNhaBkJhbz87yIMB5u0g1C6hQfgFzyDPU2idXJ+3Row7Abrpc/AdbkqoxhR7gVgvMbczRK7CJc+p6akMqdC4ehuvi5+WUD68AN3oBDyAi9jN/StIzIIIJLdIXq/gs+pjnAXVmaZCw2tYMe70VJ7DQ2iDLuiGJ9DAIq1mUS2uhx1KOsaebmyJcTNF1C3fBZ3onmlvmygXOhwdkvJ9cMr9+uUsF6LgwFPohVfGiVyoBHrA2tYOHIBqGz12dXCnW6tvkr47ql8+fdnECFH/zxHLiJWgevaz1aqU36b/dTLRj5AesD5uWjCiW34IHpyJvx+WYAQAAAAASUVORK5CYII=') !important;
-		height: 9px !important;
-		position: fixed !important;
+  /* Mascots (More mascots can be found at https://github.com/zixaphir/AppChan/wiki/Mascots) */
+  body::after {
+    position: fixed !important;
+    /*[[background]]*/
+    left: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    /*[[ChangeAlign]]*/
+    right: 0;
+    left: auto;
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -webkit-transform: scaleX(1);/**/
+    z-index: 3 !important;
+  }
+  body::before {
+    content: '';
+    width: 246px !important;
+    height: 20px !important;
+    border-top: 0px !important;
+    position: fixed !important;
+    top: 0px !important;
+    right: auto !important;
+    left: 2px !important;
+    /*[[ChangeAlign]]*/	
+    right: 2px !important;
+    left: auto !important; /**/
+    opacity: 0.7 !important;
+  }
+  body {
+    /*[[Margin]]*/
+  }
+  font[color="red"]  {
+    position: fixed !important;
+    top: -1000px !important;
+    right: auto !important;
+    left: 2px !important;
+    /*[[ChangeAlign]]*/	
+    right: 2px !important;
+    left: auto !important; /**/
+    bottom: auto !important;
+    width: 236px !important;
+    padding: 10px 5px 10px 5px !important;
+  }
+  font[color="red"] b {
+    font-weight: 100 !important;
+  }
+  font[color="red"]::before {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAlZJREFUOE99lE1IVFEYhmdGZ2oEnVQMWySCixA32SJGgxYVREGrVAQZrt65ICFIuggSEg37WSoaLaIQ+9FNK8WNiULgQsGFwahgJFKESKmpqJE/zzuc5HKdGnj4zpzvnPe85zvnXJ/P9Yvb8YBjO2E469Q5V4gxaKR9B27TLoUcCILfPfeoTSIDzsN9+AjfYAv24Q+swjy8gwo4g3jakQAu/BAhUQVjsAE/YNYIfiCOwiQsGvElYqcWZm4wKUbjJB3VMAObMAHtcINcoWVZJbVWbbFxaxFfwhctSP4NFKskErpgVl4nvofrkGnbtj8Wi4VgCRIQYGw6uQK4C59A232kHflodBgn43SUI5DuLiICEzDi7mN8DmObiV9hnnbUR8FUi2Vo0ja9J4FIL/S4++WW8UXMHVbNJCpHvyFB5+VUx4nIPWjw5pgchsfMXSd2SkjHOw2l/xC6hdA1bw5XIQRamPeT2COhNdCxVpAMpNhaBkJhbz87yIMB5u0g1C6hQfgFzyDPU2idXJ+3Row7Abrpc/AdbkqoxhR7gVgvMbczRK7CJc+p6akMqdC4ehuvi5+WUD68AN3oBDyAi9jN/StIzIIIJLdIXq/gs+pjnAXVmaZCw2tYMe70VJ7DQ2iDLuiGJ9DAIq1mUS2uhx1KOsaebmyJcTNF1C3fBZ3onmlvmygXOhwdkvJ9cMr9+uUsF6LgwFPohVfGiVyoBHrA2tYOHIBqGz12dXCnW6tvkr47ql8+fdnECFH/zxHLiJWgevaz1aqU36b/dTLRj5AesD5uWjCiW34IHpyJvx+WYAQAAAAASUVORK5CYII=') !important;
+    height: 9px !important;
+    position: fixed !important;
 
-		top: 1px !important;
-        	left: 20px !important;
-       		right: auto !important;
-/*[[ChangeAlign]]*/		
-       		right: 176px !important;
-		left: auto !important; /**/
-		min-width: 30px !important;
-		max-width: 30px !important;
-		padding-bottom: 5px !important;
-	}
-	blockquote font[color="red"], blockquote font[color="red"]:hover {
-		position: static !important;
-		border: none !important;
-		font-size: 30px !important;
-		background: none !important;
-	}
-	blockquote font[color="red"]::before {
-		display: none !important;
-	}
+    top: 1px !important;
+    left: 20px !important;
+    right: auto !important;
+    /*[[ChangeAlign]]*/		
+    right: 176px !important;
+    left: auto !important; /**/
+    min-width: 30px !important;
+    max-width: 30px !important;
+    padding-bottom: 5px !important;
+  }
+  blockquote font[color="red"], blockquote font[color="red"]:hover {
+    position: static !important;
+    border: none !important;
+    font-size: 30px !important;
+    background: none !important;
+  }
+  blockquote font[color="red"]::before {
+    display: none !important;
+  }
 }
 
 @-moz-document domain('4chan.org') {
-/*[[helpertext]]*/
-	body > br,
-	body > hr,
-	div[lock=off],
-	div[lock=on],
-	div.logo br:nth-of-type(1),
-	div.thread.stub > .omittedposts,
-	div#logo,
-	form table tbody > tr:nth-of-type(2) td[align='right'],
-	form[name='delform'] > hr:last-of-type,
-	form[name='delform'] > hr:nth-last-of-type(2),
-	html body > a:not([style='cursor: pointer; float: right;']),
-	small,
-	td[style^='padding: ']:not(#backwash_tipcell):not([style='padding: 10px 7px 7px 7px;']):not([style='padding: 10px 7px 7px;']),
-	td.rules,
-	th,
-	[id='4chan_ext_nav_top'],
-	#footer > *:not(#navbot):not(center),
-	#ft li.fill,
-	#popular-threads,
-	#recaptcha_logo,
-	#recaptcha_tagline,
-	#recent-images,
-	#recent-threads,
-	#rules,
-	#recaptcha_switch_audio_btn,
-	#recaptcha_whatsthis_btn,
-	#recaptcha_reload_btn *,
-	#quickrep tr:nth-of-type(4) b,
-	#qr.auto:not(:hover) #recaptcha_reload_btn,
-	.deletebuttons br,
-	.doubledash,
-	.error:empty,
-	.fill,
-	.notice,
-	.replymode,
-	.pages td:nth-of-type(2n-1),
-	.postarea form > div,
-	.postarea > form:first-child > table > tbody > tr:last-of-type,
-	.postarea .refreshBtn,
-	.yui-menu-shadow,
-	.warnicon {
-	/* Cleanup */
-		display: none !important;
-	}
+  /*[[helpertext]]*/
+  body > br,
+  body > hr,
+  div[lock=off],
+  div[lock=on],
+  div.logo br:nth-of-type(1),
+  div.thread.stub > .omittedposts,
+  div#logo,
+  form table tbody > tr:nth-of-type(2) td[align='right'],
+  form[name='delform'] > hr:last-of-type,
+  form[name='delform'] > hr:nth-last-of-type(2),
+  html body > a:not([style='cursor: pointer; float: right;']),
+  small,
+  td[style^='padding: ']:not(#backwash_tipcell):not([style='padding: 10px 7px 7px 7px;']):not([style='padding: 10px 7px 7px;']),
+  td.rules,
+  th,
+  [id='4chan_ext_nav_top'],
+  #footer > *:not(#navbot):not(center),
+  #ft li.fill,
+  #popular-threads,
+  #recaptcha_logo,
+  #recaptcha_tagline,
+  #recent-images,
+  #recent-threads,
+  #rules,
+  #recaptcha_switch_audio_btn,
+  #recaptcha_whatsthis_btn,
+  #recaptcha_reload_btn *,
+  #quickrep tr:nth-of-type(4) b,
+  #qr.auto:not(:hover) #recaptcha_reload_btn,
+  .deletebuttons br,
+  .doubledash,
+  .error:empty,
+  .fill,
+  .notice,
+  .replymode,
+  .pages td:nth-of-type(2n-1),
+  .postarea form > div,
+  .postarea > form:first-child > table > tbody > tr:last-of-type,
+  .postarea .refreshBtn,
+  .yui-menu-shadow,
+  .warnicon {
+   /* Cleanup */
+   display: none !important;
+ }
 
-	* {
-	/* Defaults of all elements */
-		font-family: /*[[Font]]*/ !important;
-	}
+ * {
+   /* Defaults of all elements */
+   font-family: /*[[Font]]*/ !important;
+ }
 
-	.quotelink:not(.filtered),
-	.quotelink:not(.filtered),
-	.backlink:not(.filtered),
-	.filesize a,
-	a[href*=res],
-	a[href*="http://dis"],
-	#credits a,
-	.pages a,
-	.pages,
-	.quotejs,
-	.chanlinkify {
-	text-decoration: none !important;
-	}
+ .quotelink:not(.filtered),
+ .quotelink:not(.filtered),
+ .backlink:not(.filtered),
+ .filesize a,
+ a[href*=res],
+ a[href*="http://dis"],
+ #credits a,
+ .pages a,
+ .pages,
+ .quotejs,
+ .chanlinkify {
+   text-decoration: none !important;
+ }
 
-	td.reply,
-	a,
-	td,
-	.filetitle,
-	.filesize,
-	fieldset,
-	blockquote,
-	.rules,
-	textarea,
-	time,
-	.postername,
-	.commentpostername,
-	.container::before,
-	#captchas,
-	#qp .postertrip,
-	.postertrip,
-	.omittedposts,
-	time + span {
-		font-size: /*[[FontSize]]*/ !important;
-	}
+ td.reply,
+ a,
+ td,
+ .filetitle,
+ .filesize,
+ fieldset,
+ blockquote,
+ .rules,
+ textarea,
+ time,
+ .postername,
+ .commentpostername,
+ .container::before,
+ #captchas,
+ #qp .postertrip,
+ .postertrip,
+ .omittedposts,
+ time + span {
+  font-size: /*[[FontSize]]*/ !important;
+}
 
-	input,
-	#imgControls,
-	#stats,
-	#updater,
-	#navtopr a,
-	label,
-	.filetitle,
-	#imageType,
-	#header,
-	#header a,
-	#stats,
-	#navbot a,
-	#imageType option
-	#count,
-	#timer,
-	#postcount {
-		font-size: 12px !important;
-		text-decoration: none !important;
-	}
+input,
+#imgControls,
+#stats,
+#updater,
+#navtopr a,
+label,
+.filetitle,
+#imageType,
+#header,
+#header a,
+#stats,
+#navbot a,
+#imageType option
+#count,
+#timer,
+#postcount {
+  font-size: 12px !important;
+  text-decoration: none !important;
+}
 
-	/*[[CustomScrollbars]]*/scrollbarbutton { display: none !important; }
-	::-webkit-scrollbar { width: 10px !important; height: 10px !important; }
-	::-webkit-scrollbar-thumb { border: 1px solid; }
-	::-webkit-scrollbar-track-piece:vertical { border-left: 0; }
-	::-webkit-scrollbar-track-piece:horizontal { border-top: 0; }
-	scrollbar, scrollcorner { -moz-appearance: none !important; width: 10px !important; height: 10px !important; }
-	scrollbar[orient='vertical'] { border-left: 0; }
-	scrollbar[orient='horizontal'] { border-top: 0; }
-	thumb { -moz-appearance: none !important; border: 1px solid; }/**/
+/*[[CustomScrollbars]]*/scrollbarbutton { display: none !important; }
+::-webkit-scrollbar { width: 10px !important; height: 10px !important; }
+::-webkit-scrollbar-thumb { border: 1px solid; }
+::-webkit-scrollbar-track-piece:vertical { border-left: 0; }
+::-webkit-scrollbar-track-piece:horizontal { border-top: 0; }
+scrollbar, scrollcorner { -moz-appearance: none !important; width: 10px !important; height: 10px !important; }
+scrollbar[orient='vertical'] { border-left: 0; }
+scrollbar[orient='horizontal'] { border-top: 0; }
+thumb { -moz-appearance: none !important; border: 1px solid; }/**/
 
-	span[id^='4chan_ext_right'],
-	a.yuimenuitemlabel:hover,
-	.replyhider a:hover {
-		background-color: transparent !important;
-	}
+span[id^='4chan_ext_right'],
+a.yuimenuitemlabel:hover,
+.replyhider a:hover {
+  background-color: transparent !important;
+}
 /*[[boardlogo]]*/
-	div.logo img {
-		position: fixed !important;
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		top: 40px !important;
-		width: 248px !important;
-		height: 83px !important;
-		margin: 0 !important;
-		z-index: 1;
-		-webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, .1)), color-stop(21.01%, transparent) );
-	}
+div.logo img {
+  position: fixed !important;
+  left: 2px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 2px !important;/**/
+  top: 40px !important;
+  width: 248px !important;
+  height: 83px !important;
+  margin: 0 !important;
+  z-index: 1;
+  -webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, .1)), color-stop(21.01%, transparent) );
+}
 
-	div.logo font[size='5'] span {
-		font-size: 30px !important;
-				font-weight: 400 !important;
-	}
+div.logo font[size='5'] span {
+  font-size: 30px !important;
+  font-weight: 400 !important;
+}
 
-	div.logo font[size='1'] {
-		font-size: 13px !important;
+div.logo font[size='1'] {
+  font-size: 13px !important;
 
-	}
+}
 
-	body > span > div {
-	 /* 4watch */
-		position: fixed !important;
-		top: auto !important;
-		bottom: 440px !important;
-		left: 0 !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 0 !important;/**/
-		width: 248px;
-	}
+body > span > div {
+  /* 4watch */
+  position: fixed !important;
+  top: auto !important;
+  bottom: 440px !important;
+  left: 0 !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 0 !important;/**/
+  width: 248px;
+}
 
-	hr {
-		padding: 0 !important;
-		height: 0;
-		width: 100% !important;
-		clear: both;
-		border: none !important;
-	}
+hr {
+  padding: 0 !important;
+  height: 0;
+  width: 100% !important;
+  clear: both;
+  border: none !important;
+}
 /* Front Page */
-	.bd,
-	.bd ul,
-	img,
-	.pages,
-	.pages *,
-	#qr,
-	#quickrep,
-	div[id^='qr'],
-	table.reply[style^='clear: both'],
-	td.postblock,
-	span[id^='4chan_ext_right'],
-	.boxcontent > hr,
-	h3 {
-		border: none !important;
-	}
+.bd,
+.bd ul,
+img,
+.pages,
+.pages *,
+#qr,
+#quickrep,
+div[id^='qr'],
+table.reply[style^='clear: both'],
+td.postblock,
+span[id^='4chan_ext_right'],
+.boxcontent > hr,
+h3 {
+  border: none !important;
+}
 
-	.boxcontent input {
-		height: 18px !important;
-		vertical-align: bottom;
-		margin-right: 1px !important;
-	}
+.boxcontent input {
+  height: 18px !important;
+  vertical-align: bottom;
+  margin-right: 1px !important;
+}
 
-	a.yuimenuitemlabel {
-		padding: 0 20px !important;
-	}
+a.yuimenuitemlabel {
+  padding: 0 20px !important;
+}
 /* Navigation */
-	#header,
-	#header > #navtop, /* Top Navigation */
-	.pages /* Bottom Navigation */ {
-		text-align: center !important;
-		font-size: 0 !important;
-		color: transparent !important;
-		width: auto !important;
-	}
+#header,
+#header > #navtop, /* Top Navigation */
+.pages /* Bottom Navigation */ {
+  text-align: center !important;
+  font-size: 0 !important;
+  color: transparent !important;
+  width: auto !important;
+}
 
-	#header > #navtop {
+#header > #navtop {
 	/* cripple the positioning of the top navigation */
-		position: static !important;
-		width: 100% !important;
-	}
+  position: static !important;
+  width: 100% !important;
+}
 
 /*[[StickyNavigation]]*/
-	#navbot::after {
-		border: none !important;
-		position: fixed !important;
-		right: auto !important;
-		left: 0 !important;
-		z-index: 97 !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 227px !important;
-		top: 1px !important;
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAg1JREFUOE9tlM1LlFEUh+cLcTEaSUwuBo0EFzkRjBoqbQwSazMrszYtBkwGqk2rVq3EhdgmNOgP0FUF7nRRrlxJuKh2EX2sKiIoKCyh5xnPW+8MDTzc8977+533vPeeO5lM6lev1zPQASWYhDvwMDB2zjU1aeu/mIUsHIOrsA0/YB++BcbOuaZGbbYlWyQpMy7AR/gKu7AGK4Gxc66pUavnMJklwlG4C1/gDSzBKHTGeDZiR9fUqNWjt5moAJfgA7yF22DZyYuGiCvx0hzx8dCo1aO3YKIjsA7fYRVKbQegUayuCqfVhFaP3m4TDcJneAXTSSVJMp7PwAXw1O7BCTWh1fPJHE7U4AA226uJz7kWL3nBeAXyMW9VW+GtmagBv+AJjMMYDMB5uAEetfv2HC7Gmhq1evQ2THQ9Hh4x+hnuQRf4yTvwAG6F0b1yrRLax+GdM9EU/IanUI6y7dybsAfPYLq9jdWGR++UifrhPbyGGchFNYuMl6EKp9pOUo1ret6Zw0RFuA8/waM8GYn6GPPQK6lT1KNGrR69RSfNPgEvwdZfDmGz9YmHYSTVkCZRo1aP3lzSvVY1D3arfeHbZsGqTCTGzrmmRq2e4t/P5sE398SCTeYt9/vd6I3A2DnX1JhET+s5RDIrOwceuffIE0njnNdIjdr//yfFPrjB9opXwStjn4mxcyZodnf69weqsKkxD4AckwAAAABJRU5ErkJggg==');
-	}
+#navbot::after {
+  border: none !important;
+  position: fixed !important;
+  right: auto !important;
+  left: 0 !important;
+  z-index: 97 !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 227px !important;
+  top: 1px !important;
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAg1JREFUOE9tlM1LlFEUh+cLcTEaSUwuBo0EFzkRjBoqbQwSazMrszYtBkwGqk2rVq3EhdgmNOgP0FUF7nRRrlxJuKh2EX2sKiIoKCyh5xnPW+8MDTzc8977+533vPeeO5lM6lev1zPQASWYhDvwMDB2zjU1aeu/mIUsHIOrsA0/YB++BcbOuaZGbbYlWyQpMy7AR/gKu7AGK4Gxc66pUavnMJklwlG4C1/gDSzBKHTGeDZiR9fUqNWjt5moAJfgA7yF22DZyYuGiCvx0hzx8dCo1aO3YKIjsA7fYRVKbQegUayuCqfVhFaP3m4TDcJneAXTSSVJMp7PwAXw1O7BCTWh1fPJHE7U4AA226uJz7kWL3nBeAXyMW9VW+GtmagBv+AJjMMYDMB5uAEetfv2HC7Gmhq1evQ2THQ9Hh4x+hnuQRf4yTvwAG6F0b1yrRLax+GdM9EU/IanUI6y7dybsAfPYLq9jdWGR++UifrhPbyGGchFNYuMl6EKp9pOUo1ret6Zw0RFuA8/waM8GYn6GPPQK6lT1KNGrR69RSfNPgEvwdZfDmGz9YmHYSTVkCZRo1aP3lzSvVY1D3arfeHbZsGqTCTGzrmmRq2e4t/P5sE398SCTeYt9/vd6I3A2DnX1JhET+s5RDIrOwceuffIE0njnNdIjdr//yfFPrjB9opXwStjn4mxcyZodnf69weqsKkxD4AckwAAAABJRU5ErkJggg==');
+}
 
-	#navbot:hover {
-		top: 18px !important;
-		z-index: 99 !important;
-	}
+#navbot:hover {
+  top: 18px !important;
+  z-index: 99 !important;
+}
 
-	#navbot {
-		visibility: visible !important;
-		position: fixed !important;
-		position: fixed !important;
-		top: -1000px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important; /**/
-		bottom: auto !important;
-		width: 226px !important;
-		color: transparent !important;
-		padding: 3px 10px 35px 10px !important;
-		border-width: 0 1px 1px 0 !important;
-		word-spacing: -2px !important;
-		height: 50px !important;
-		text-align: center !important;
-		word-spacing: -3px !important;
-	}
-	@media screen and (-webkit-min-device-pixel-ratio:0) {	
+#navbot {
+  visibility: visible !important;
+  position: fixed !important;
+  position: fixed !important;
+  top: -1000px !important;
+  right: auto !important;
+  left: 2px !important;
+  /*[[ChangeAlign]]*/
+  right: 2px !important;
+  left: auto !important; /**/
+  bottom: auto !important;
+  width: 226px !important;
+  color: transparent !important;
+  padding: 3px 10px 35px 10px !important;
+  border-width: 0 1px 1px 0 !important;
+  word-spacing: -2px !important;
+  height: 50px !important;
+  text-align: center !important;
+  word-spacing: -3px !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {	
 	input[value="delete"] {
 		position: relative !important;
 		top: 4px !important;
 	}
-	}
-	#header {
-		left: 250px !important;
-		right: 2px !important;
-		padding-top: 1px !important;
-		padding-bottom: 3px !important;
-/*[[ChangeAlign]]*/
-		left: 2px !important;
-		right: 252px !important;/**/
-	}
-	#header,
-	#navtop {
-		z-index: 98;
-	}
+}
+#header {
+  left: 250px !important;
+  right: 2px !important;
+  padding-top: 1px !important;
+  padding-bottom: 3px !important;
+  /*[[ChangeAlign]]*/
+  left: 2px !important;
+  right: 252px !important;/**/
+}
+#header,
+#navtop {
+  z-index: 98;
+}
 
-	#footer {
-		z-index: -1;
-		visibility: hidden;
-		padding-top: 0 !important;
-	}
+#footer {
+  z-index: -1;
+  visibility: hidden;
+  padding-top: 0 !important;
+}
 
-	.pages td:nth-of-type(1) {
-		font-size: 75% !important;
-		text-transform: uppercase;
-	}
+.pages td:nth-of-type(1) {
+  font-size: 75% !important;
+  text-transform: uppercase;
+}
 
-	.pages td { 
-		color: transparent !important;
-	}
+.pages td { 
+  color: transparent !important;
+}
 
-	#header a,
-	.pages a,
-	.pages b,
-	.pages input {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		display: inline-block;
-		font-size: 12px !important;
-		text-align: center;
-		border: none !important;
-		text-align: center;
-		margin: 0 1px 0 2px;
-	}
+#header a,
+.pages a,
+.pages b,
+.pages input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  font-size: 12px !important;
+  text-align: center;
+  border: none !important;
+  text-align: center;
+  margin: 0 1px 0 2px;
+}
 
 /* moot's announcements */
-	h3, h2, h1, font[color="red"] {
-		font-size: 12px !important; 
-	}
-	h3, font[color="red"] {
-		font-weight: 200 !important;
-	}
-	.pages input {
-		margin-bottom: 2px !important;
-	}
-	marquee {
-		display: none !important;
-	}
-	.pages b,
-	.pages input,
-	a,
-	.new {
-		-webkit-transition: background-color .1s linear;
-		-moz-transition: background-color .1s linear;
-		-o-transition: background-color .1s linear;
-	}
+h3, h2, h1, font[color="red"] {
+  font-size: 12px !important; 
+}
+h3, font[color="red"] {
+  font-weight: 200 !important;
+}
+.pages input {
+  margin-bottom: 2px !important;
+}
+marquee {
+  display: none !important;
+}
+.pages b,
+.pages input,
+a,
+.new {
+  -webkit-transition: background-color .1s linear;
+  -moz-transition: background-color .1s linear;
+  -o-transition: background-color .1s linear;
+}
 /* Post Form */
 /* Override OS-specific UI */
-	#ft li,
-	#ft ul,
-	#options input:not([type='checkbox']):not([type='radio']),
-	#updater input:not([type='checkbox']):not([type='radio']),
-	.box-outer,
-	.boxbar,
-	.deletebuttons input[value=Delete],
-	.recaptcha_image_cell > center > #recaptcha_image,
-	[name='recaptcha_response_field'],
-	.top-box,
-	h2,
-	input:not([type='checkbox']):not([type='radio']),
-	input:not([type='radio']),
-	input[type='file'] > input[type='button'],
-	input[type='submit'],
-	select,
-	textarea {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-	}
+#ft li,
+#ft ul,
+#options input:not([type='checkbox']):not([type='radio']),
+#updater input:not([type='checkbox']):not([type='radio']),
+.box-outer,
+.boxbar,
+.deletebuttons input[value=Delete],
+.recaptcha_image_cell > center > #recaptcha_image,
+[name='recaptcha_response_field'],
+.top-box,
+h2,
+input:not([type='checkbox']):not([type='radio']),
+input:not([type='radio']),
+input[type='file'] > input[type='button'],
+input[type='submit'],
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 /* Positioning and transitions of the post form */
-	.postarea form[name^='post'] {
-		position: fixed;
-		top: auto;
-		left: auto;
-		bottom: 2px;
-		width: 248px !important;
-		margin: 0 !important;
-		z-index: 5;
-	}
+.postarea form[name^='post'] {
+  position: fixed;
+  top: auto;
+  left: auto;
+  bottom: 2px;
+  width: 248px !important;
+  margin: 0 !important;
+  z-index: 5;
+}
 
-	.postarea form[name^='post'] > table,
-	#recaptcha_image {
-		width: 248px !important;
-	}
+.postarea form[name^='post'] > table,
+#recaptcha_image {
+  width: 248px !important;
+}
 /*[[PostForm]]*/
-	.postarea form[name^='post'] > table > tbody > tr > td {
-		padding: 0 !important;
-	}
+.postarea form[name^='post'] > table > tbody > tr > td {
+  padding: 0 !important;
+}
 /* Unfuxor the Captcha layout */
-	#recaptcha_widget_div * {
-		margin: 0 !important;
-		padding: 0 !important;
-		height: auto !important;
-	}
+#recaptcha_widget_div * {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+}
 
-	#recaptcha_table #recaptcha_image {
-		border: none !important;
-	}
+#recaptcha_table #recaptcha_image {
+  border: none !important;
+}
 
-	.postarea #recaptcha_widget_div img {
-		height: auto !important;
-		width: 248px !important;
-	}
+.postarea #recaptcha_widget_div img {
+  height: auto !important;
+  width: 248px !important;
+}
 
-	.postarea #recaptcha_widget_div {
-		height: 68px;
-	}
+.postarea #recaptcha_widget_div {
+  height: 68px;
+}
 /* Collapse the postarea table for better control over the height and width */
-	.postarea form[name^='post'] table {
-		border-collapse: collapse;
-	}
+.postarea form[name^='post'] table {
+  border-collapse: collapse;
+}
 /* Formatting for all postarea elements */
-	.postarea form[name^='post'] input:not([type='checkbox']):not([type='radio']):not([type='file']),
-	#qr .move .inputtext,
-	.postarea form[name^='post'] textarea,
-	.postarea form[name^='post'] [name='upfile'] > input,
-	.postarea #recaptcha_widget_div input,
-	#qr_form img,
-	#qr .inputtext[type='password'],
-	.postarea #recaptcha_widget_div #recaptcha_image img,
-	#qr textarea,
-	#qr .inputtext {
-		margin: 1px 0 0 !important;
-		vertical-align: bottom;
-	}
+.postarea form[name^='post'] input:not([type='checkbox']):not([type='radio']):not([type='file']),
+#qr .move .inputtext,
+.postarea form[name^='post'] textarea,
+.postarea form[name^='post'] [name='upfile'] > input,
+.postarea #recaptcha_widget_div input,
+#qr_form img,
+#qr .inputtext[type='password'],
+.postarea #recaptcha_widget_div #recaptcha_image img,
+#qr textarea,
+#qr .inputtext {
+  margin: 1px 0 0 !important;
+  vertical-align: bottom;
+}
 /* Width and height of all postarea elements (excluding some captcha elements) */
-	.postarea form[name^='post'] textarea {
-		resize: none !important;
-		font-size: /*[[FontSize]]*/ !important;
-	}
+.postarea form[name^='post'] textarea {
+  resize: none !important;
+  font-size: /*[[FontSize]]*/ !important;
+}
 
-	.deletebuttons .inputtext,
-	input[type='password'],
-	#qr form[name^='post'] input.inputtext,
-	#qr form[name^='post'] [name='upfile'] > input,
-	.postarea form[name^='post'] input.inputtext,
-	form[name^='post'] input[name='upfile'] > input,
-	#files input[name='upfile'] > input,
-	.postarea #recaptcha_widget_div input,
-	#com_submit,
-	#usernameText + input {
-		height: 19px !important;
-	}
+.deletebuttons .inputtext,
+input[type='password'],
+#qr form[name^='post'] input.inputtext,
+#qr form[name^='post'] [name='upfile'] > input,
+.postarea form[name^='post'] input.inputtext,
+form[name^='post'] input[name='upfile'] > input,
+#files input[name='upfile'] > input,
+.postarea #recaptcha_widget_div input,
+#com_submit,
+#usernameText + input {
+  height: 19px !important;
+}
 
-	.postarea form[name^='post'] .inputtext,
-	#recaptcha_widget_div input {
-		width: 248px !important;
-	}
+.postarea form[name^='post'] .inputtext,
+#recaptcha_widget_div input {
+  width: 248px !important;
+}
 /* File and Subject inputs */
-	.postarea form[name^='post'] .inputtext[name='sub'],
-	.postarea form[name^='post'] [name='upfile'] > input[type='text'] {
-		width: 185px !important;
-	}
+.postarea form[name^='post'] .inputtext[name='sub'],
+.postarea form[name^='post'] [name='upfile'] > input[type='text'] {
+  width: 185px !important;
+}
 /* Buttons */
-	input[type='submit'], /* Any lingering buttons */
-	input[value="Report"],
-	#com_submit /* Submit Button */,
-	input[type='file'][name='upfile'] > input[type='button'] ,
-	form[name^='post'] [name='upfile'] > input[type='button'] /* Browse Button (Fx*) */ {
-		cursor: default !important;
-		width: 50px;
-		height: 19px;
-		padding: 0 !important;
-		font-size: 9px !important;
-		text-transform: uppercase;
-		vertical-align: bottom;
-	}
+input[type='submit'], /* Any lingering buttons */
+input[value="Report"],
+#com_submit /* Submit Button */,
+input[type='file'][name='upfile'] > input[type='button'] ,
+form[name^='post'] [name='upfile'] > input[type='button'] /* Browse Button (Fx*) */ {
+  cursor: default !important;
+  width: 50px;
+  height: 19px;
+  padding: 0 !important;
+  font-size: 9px !important;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
 
-	#com_submit,
-	#qr #com_submit,
-	#qr #files input[name='upfile'] > input[type='button'],
-	form[name^='post'] input[name='upfile'] > input[type='button'],
-	#qr form[name^='post'] input[name='upfile'] > input[type='button'],
-	.postarea form[name^='post'] input[name='upfile'] > input[type='button'],
-	#usernameText + input /* Last.fm button */ {
-		width: 62px !important;
-		margin: 1px 0 0 1px !important;
-	}
+#com_submit,
+#qr #com_submit,
+#qr #files input[name='upfile'] > input[type='button'],
+form[name^='post'] input[name='upfile'] > input[type='button'],
+#qr form[name^='post'] input[name='upfile'] > input[type='button'],
+.postarea form[name^='post'] input[name='upfile'] > input[type='button'],
+#usernameText + input /* Last.fm button */ {
+  width: 62px !important;
+  margin: 1px 0 0 1px !important;
+}
 /* Uniform padding for postarea inputs */
-	.postarea form[name^='post'] .inputtext,
-	.postarea form[name^='post'] [name='upfile'] > input,
-	#recaptcha_widget_div input {
-		padding: 2px !important;
-	}
+.postarea form[name^='post'] .inputtext,
+.postarea form[name^='post'] [name='upfile'] > input,
+#recaptcha_widget_div input {
+  padding: 2px !important;
+}
 /* Force the file input's CONTAINER to behave as if it were non-existent, e.g. occupies no more space than its contents */
-	input[type='file'][name='upfile'],
-	.postarea input[type='file'][name='upfile'],
-	#qr form[name^='post'] input[type='file'][name='upfile'] {
-		height: auto !important;
-		border: none !important;
-		margin-top: 0 !important;
-		padding: 0 !important;
-	}
+input[type='file'][name='upfile'],
+.postarea input[type='file'][name='upfile'],
+#qr form[name^='post'] input[type='file'][name='upfile'] {
+  height: auto !important;
+  border: none !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
 /* Webkit's file input box has a different syntax */
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > input[type='file'][name='upfile'],
-	* > .postarea input[type='file'][name='upfile'],
-	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
-		background: transparent;
-		border: none !important;
-		height: 19px !important;
-		padding: 0 !important;
-		margin: 1px 0 0 !important;
-		text-transform: uppercase;
-	}
+.fake input[type='file']::-webkit-file-upload-button,
+* > input[type='file'][name='upfile'],
+* > .postarea input[type='file'][name='upfile'],
+* > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  background: transparent;
+  border: none !important;
+  height: 19px !important;
+  padding: 0 !important;
+  margin: 1px 0 0 !important;
+  text-transform: uppercase;
+}
 
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > .postarea input[type='file'][name='upfile'] {
-		width: 248px !important;
-	}
+.fake input[type='file']::-webkit-file-upload-button,
+* > .postarea input[type='file'][name='upfile'] {
+  width: 248px !important;
+}
 
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
-		width: 300px !important;
-	}
+.fake input[type='file']::-webkit-file-upload-button,
+* > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  width: 300px !important;
+}
 
 /* Make QR name height smaller */
-	#qr input[name="name"] {
-		height: 19px !important;
-	}
+#qr input[name="name"] {
+  height: 19px !important;
+}
 
 /* Positioning of various postarea checkboxes */
-	.postarea form[name^='post'] label {
-		position: absolute;
-	}
+.postarea form[name^='post'] label {
+  position: absolute;
+}
 
-	.postarea #com_submit + label {
-		font-size: 12px !important;
-		top: auto !important;
-		bottom: 0px;
-		right: 20px;
-		vertical-align: bottom;
-	}
+.postarea #com_submit + label {
+  font-size: 12px !important;
+  top: auto !important;
+  bottom: 0px;
+  right: 20px;
+  vertical-align: bottom;
+}
 
-	#qr > input[name='email'] + label {
-		bottom: 2px;
-		right: 4px;
-	}
+#qr > input[name='email'] + label {
+  bottom: 2px;
+  right: 4px;
+}
 
-	#qr #com_submit + label {
-		font-size: 12px !important;
-		top: auto !important;
-		right: 70px;
-		margin-top: 1px;
-	}
-	
-	#qr #auto {
-		position: relative !important;
-		top: 1px !important;
-	}
+#qr #com_submit + label {
+  font-size: 12px !important;
+  top: auto !important;
+  right: 70px;
+  margin-top: 1px;
+}
 
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
+#qr #auto {
+  position: relative !important;
+  top: 1px !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 	#qr #com_submit + label {
 		margin-top: -3px !important;
 	}
@@ -641,613 +641,613 @@ This style is designed for the following browsers, ordered alphabetically:
 		position: relative !important;
 		top: 5px !important;
 	}
-	}
+}
 
 /* /mu/ last.fm userscript support */
-	#usernameText {
-		width: 200px !important;
-	}
+#usernameText {
+  width: 200px !important;
+}
 
-	#usernameText + input {
-		width: 101px !important;
-	}
+#usernameText + input {
+  width: 101px !important;
+}
 
-	.postarea form[name^='post'] > table td:not(.postblock) {
-		font-size: 0 !important;
-		color: transparent;
-	}
+.postarea form[name^='post'] > table td:not(.postblock) {
+  font-size: 0 !important;
+  color: transparent;
+}
 /* Postform Labels */
-	.boxcontent .postblock,
-	form[name^='post'] .postblock {
-		border: none !important;
-		background-color: transparent !important;
-		font-weight: 200 !important;
-		text-align: right !important;
-		vertical-align: top;
-	}
+.boxcontent .postblock,
+form[name^='post'] .postblock {
+  border: none !important;
+  background-color: transparent !important;
+  font-weight: 200 !important;
+  text-align: right !important;
+  vertical-align: top;
+}
 
-	form[name^='post'] .postblock b {
-		position: absolute;
-		font-size: 12px !important;
-		z-index: 2;
-		font-weight: 100 !important;
-	}
+form[name^='post'] .postblock b {
+  position: absolute;
+  font-size: 12px !important;
+  z-index: 2;
+  font-weight: 100 !important;
+}
 
-	form[name^='post'] tr:nth-of-type(1) .postblock b::after {
-		content: ' #Tripcode';
-	}
+form[name^='post'] tr:nth-of-type(1) .postblock b::after {
+  content: ' #Tripcode';
+}
 
-	.postarea tbody > tr:nth-child(4) .postblock b, .postarea tbody > tr:nth-child(5) .postblock b, .postarea tbody > tr:nth-child(6) .postblock b, .postarea tbody > tr:nth-child(7) .postblock b {
-		font-size: 0 !important;
-		color: transparent !important;
-	}
+.postarea tbody > tr:nth-child(4) .postblock b, .postarea tbody > tr:nth-child(5) .postblock b, .postarea tbody > tr:nth-child(6) .postblock b, .postarea tbody > tr:nth-child(7) .postblock b {
+  font-size: 0 !important;
+  color: transparent !important;
+}
 
-	.postarea form[name^='post'] tr .postblock b {
-		right: 3px;
-	}
+.postarea form[name^='post'] tr .postblock b {
+  right: 3px;
+}
 
-	.fake input[type='file']::-webkit-file-upload-button,
-	.postarea form[name^='post'] tr .postblock b {
-		margin-top: 0px;
-	}
+.fake input[type='file']::-webkit-file-upload-button,
+.postarea form[name^='post'] tr .postblock b {
+  margin-top: 0px;
+}
 
-	.postarea form[name^='post'] tr:nth-of-type(3n) .postblock b {
-		right: 69px;
-	}
+.postarea form[name^='post'] tr:nth-of-type(3n) .postblock b {
+  right: 69px;
+}
 
-	form[name^='post'] tr .postblock b {
-		right: 16px;
-	}
+form[name^='post'] tr .postblock b {
+  right: 16px;
+}
 
-	form[name^='post'] tr:nth-of-type(3n) .postblock b {
-		right: 82px;
-	}
+form[name^='post'] tr:nth-of-type(3n) .postblock b {
+  right: 82px;
+}
 
-	.fake input[type='file']::-webkit-file-upload-button, /* Cheating. Firefox Stylish will ignore this block */
-	.postarea form[name^='post'] tr:nth-of-type(6) .postblock b {
-		right: 3px !important;
-	}
+.fake input[type='file']::-webkit-file-upload-button, /* Cheating. Firefox Stylish will ignore this block */
+.postarea form[name^='post'] tr:nth-of-type(6) .postblock b {
+  right: 3px !important;
+}
 
-	.fake input[type='file']::-webkit-file-upload-button,
-	form[name^='post'] tr:nth-of-type(6) .postblock b {
-		right: 16px;
-	}
+.fake input[type='file']::-webkit-file-upload-button,
+form[name^='post'] tr:nth-of-type(6) .postblock b {
+  right: 16px;
+}
 /* Quick Reply UI */
-	form[name^='post'] input[name='recaptcha_response_field'] {
-		outline: none !important;
-		box-shadow: none !important;
-	}
+form[name^='post'] input[name='recaptcha_response_field'] {
+  outline: none !important;
+  box-shadow: none !important;
+}
 
-	#captchas {
-		position: absolute;
-		right: 7px;
-		margin-top: 2px;
-	}
+#captchas {
+  position: absolute;
+  right: 7px;
+  margin-top: 2px;
+}
 
-	#files a {
-		position: relative;
-		margin-left: -75px;
-		top: -2px;
-		vertical-align: bottom !important;
-		font-weight: bold;
-	}
+#files a {
+  position: relative;
+  margin-left: -75px;
+  top: -2px;
+  vertical-align: bottom !important;
+  font-weight: bold;
+}
 
-	#qr a#attach {
-		font-size: 0 !important;
-		visibility: hidden;
-		position: absolute;
-		bottom: 3px;
-		right: 4px;
-	}
+#qr a#attach {
+  font-size: 0 !important;
+  visibility: hidden;
+  position: absolute;
+  bottom: 3px;
+  right: 4px;
+}
 
-	#qr a#attach::after {
-		font-size: 12px !important;
-		display: block;
-		visibility: visible !important;
-		width: 16px;
-		content: "+";
-		text-align: center;
-		font-weight: bold !important;
-	}
+#qr a#attach::after {
+  font-size: 12px !important;
+  display: block;
+  visibility: visible !important;
+  width: 16px;
+  content: "+";
+  text-align: center;
+  font-weight: bold !important;
+}
 /* Image Hover and Image Expansion */
 /*[[ihover]]*/
-	#qp {
-		z-index: 99 !important;
-	}
+#qp {
+  z-index: 99 !important;
+}
 
-	.exPopup {
-		z-index: 99 !important;
-	}
+.exPopup {
+  z-index: 99 !important;
+}
 
-	#iHover {
-		z-index: 99 !important;
-	}
+#iHover {
+  z-index: 99 !important;
+}
 
-	body > table ~ form .reply a > img {
-		position: relative !important;
-		top: 0px !important;
-		z-index: 96 !important;
-	}
+body > table ~ form .reply a > img {
+  position: relative !important;
+  top: 0px !important;
+  z-index: 96 !important;
+}
 
-	.filesize ~ a > img + img {
-		position: relative !important;
-		top: 0px !important;
-		z-index: 96 !important;
-	}
+.filesize ~ a > img + img {
+  position: relative !important;
+  top: 0px !important;
+  z-index: 96 !important;
+}
 
-	body > form #imgControls {
-		z-index: 98 !important;
-	}
+body > form #imgControls {
+  z-index: 98 !important;
+}
 
-	#imageType {
-		border: none !important;
-		width: 90px !important;
-		position: relative !important;
-		bottom: 2px !important;
-		right: 0px !important;
-		background: none !important;
-	}
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
-	#imageType {
-		bottom: 1px !important;
-	}
-	}
-	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+#imageType {
+  border: none !important;
+  width: 90px !important;
+  position: relative !important;
+  bottom: 2px !important;
+  right: 0px !important;
+  background: none !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 	#imageType {
 		bottom: 1px !important;
 	}
+}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+	#imageType {
+		bottom: 1px !important;
 	}
+}
 /* #qr dimensions */
-	#qr {
-		z-index: 98;
-		height: auto !important;
-		width: 300px;
-		padding: 2px;
-	}
+#qr {
+  z-index: 98;
+  height: auto !important;
+  width: 300px;
+  padding: 2px;
+}
 
-	#qr input.inputtext,
-	#qr input[type='file'][name='upfile'] > input[type='text'],
-	#qr textarea {
-		width: 300px !important;
-	}
+#qr input.inputtext,
+#qr input[type='file'][name='upfile'] > input[type='text'],
+#qr textarea {
+  width: 300px !important;
+}
 
-	#qr input[type=file][name='upfile'] {
-		width: 300px !important;
-	}
+#qr input[type=file][name='upfile'] {
+  width: 300px !important;
+}
 
-	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 	.postarea input[type=file][name='upfile'], #qr input[type=file][name='upfile'] { width: 250px !important; }
-	}
+}
 
-	#qr .move .inputtext {
-		width: 198px !important;
-	}
+#qr .move .inputtext {
+  width: 198px !important;
+}
 
-	#qr input[name='sub'],
-	#qr input[type='file'][name='upfile'] > input[type='text'],
-	#files input[type='file'][name='upfile'] > input[type='text'] {
-		width: 237px !important;
-		vertical-align: bottom;
-	}
+#qr input[name='sub'],
+#qr input[type='file'][name='upfile'] > input[type='text'],
+#files input[type='file'][name='upfile'] > input[type='text'] {
+  width: 237px !important;
+  vertical-align: bottom;
+}
 
-	#qr textarea {
-		min-height: 100px !important;
-	}
+#qr textarea {
+  min-height: 100px !important;
+}
 
-	.postarea td,
-	td.reply,
-	td.replyhl {
-		z-index: 0;
-		padding: 0 !important;
-	}
-	
-	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+.postarea td,
+td.reply,
+td.replyhl {
+  z-index: 0;
+  padding: 0 !important;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 	td.reply,
 	td.replyhl {
 		padding: 5px 0px 12px 0px !important;
 	}
-	}
-	
+}
+
 /*[[CaptchaReload]]*/
-	.postarea form[name^='post'] #recaptcha_reload_btn {
-		bottom: 62px !important;
-		right: 2px !important;
-	}
+.postarea form[name^='post'] #recaptcha_reload_btn {
+  bottom: 62px !important;
+  right: 2px !important;
+}
 
-	#cc-newpostarea form[name^='post'] #recaptcha_reload_btn,
-	#cc-newpostarea2 form[name^='post'] #recaptcha_reload_btn {
-		bottom: 13px !important;
-		left: 290px !important;
-		right: auto !important;
-	}
+#cc-newpostarea form[name^='post'] #recaptcha_reload_btn,
+#cc-newpostarea2 form[name^='post'] #recaptcha_reload_btn {
+  bottom: 13px !important;
+  left: 290px !important;
+  right: auto !important;
+}
 
-	#cc-newpostarea2 form[name^='post'] #recaptcha_reload_btn {
-		left: 288px !important;
-		bottom: 34px !important;
-	}
+#cc-newpostarea2 form[name^='post'] #recaptcha_reload_btn {
+  left: 288px !important;
+  bottom: 34px !important;
+}
 
-	form[name^='post'] #recaptcha_reload_btn,
-	.refreshBtn {
-		bottom: 76px !important;
-		right: 15px !important;
-	}
+form[name^='post'] #recaptcha_reload_btn,
+.refreshBtn {
+  bottom: 76px !important;
+  right: 15px !important;
+}
 
-	#dragarea > div:nth-of-type(2) {
-		width: 260px !important;
-	}
+#dragarea > div:nth-of-type(2) {
+  width: 260px !important;
+}
 
-	#maxchars {
-		bottom: 131px;
-		right: 12px;
-	}
+#maxchars {
+  bottom: 131px;
+  right: 12px;
+}
 
-	#quickrep td > table {
-		border-spacing: 0;
-	}
+#quickrep td > table {
+  border-spacing: 0;
+}
 
-	.top-box .menubutton,
-	.logo {
-		background-image: none !important;
-	}
+.top-box .menubutton,
+.logo {
+  background-image: none !important;
+}
 /* Post form Checkboxes */
-	#qr_form input[name="email"] + label {
-		/* Removes the brackets around Spoiler Image */
-		font-size: 0 !important;
-		color: transparent !important;
-	}		
-	#qr_form input[name="email"] + label::after {
-		content: 'Spoiler Image?' !important;
-		font-size: 12px !important;
-	}
-	form[name^='post'] input[name='email'] + label {
-		position: absolute;
-		top: auto;
-		bottom: 2px;
-		right: 70px;
-		vertical-align: bottom;
-	}
+#qr_form input[name="email"] + label {
+  /* Removes the brackets around Spoiler Image */
+  font-size: 0 !important;
+  color: transparent !important;
+}		
+#qr_form input[name="email"] + label::after {
+  content: 'Spoiler Image?' !important;
+  font-size: 12px !important;
+}
+form[name^='post'] input[name='email'] + label {
+  position: absolute;
+  top: auto;
+  bottom: 2px;
+  right: 70px;
+  vertical-align: bottom;
+}
 
-	form[name^='post'] #com_submit + label {
-		position: absolute;
-	}
+form[name^='post'] #com_submit + label {
+  position: absolute;
+}
 
-	#qr_form input[name='email'] + label {
-		bottom: 1px;
-		right: 20px;
-	}
-	#qr_form input[name='email'] + label input {
-		position: relative !important;
-		top: 1px !important;
-	}
-	#qr > form[name^='post'] #com_submit + label,
-	#quickrep > form[name^='post'] #com_submit + label {
-		top: auto !important;
-		right: 4px !important;
-	}
+#qr_form input[name='email'] + label {
+  bottom: 1px;
+  right: 20px;
+}
+#qr_form input[name='email'] + label input {
+  position: relative !important;
+  top: 1px !important;
+}
+#qr > form[name^='post'] #com_submit + label,
+#quickrep > form[name^='post'] #com_submit + label {
+  top: auto !important;
+  right: 4px !important;
+}
 
-	div.postarea > form td:nth-of-type(3) > label input,
-	#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
-	#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
-	form[name='delform'] > div:not(.thread) input,
-	.deletebuttons input[type='checkbox'] {
-		vertical-align: middle;
-	}
+div.postarea > form td:nth-of-type(3) > label input,
+#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
+form[name='delform'] > div:not(.thread) input,
+.deletebuttons input[type='checkbox'] {
+  vertical-align: middle;
+}
 
-	form[name^='post'] td:nth-of-type(3) > label input,
-	#qr label input,
-	.boxcontent input,
-	.boxcontent textarea {
-		-webkit-appearance: button;
-		-moz-appearance: none;
-		border: 0 !important;
-	}
+form[name^='post'] td:nth-of-type(3) > label input,
+#qr label input,
+.boxcontent input,
+.boxcontent textarea {
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  border: 0 !important;
+}
 
-	input[type=checkbox],
-	.reply input[type=checkbox],
-	#options input[type=checkbox] {
-		-webkit-appearance: button !important;
-		-moz-appearance: none;
-		width: 12px !important;
-		height: 12px !important;
-		cursor: pointer !important;
-	}
+input[type=checkbox],
+.reply input[type=checkbox],
+#options input[type=checkbox] {
+  -webkit-appearance: button !important;
+  -moz-appearance: none;
+  width: 12px !important;
+  height: 12px !important;
+  cursor: pointer !important;
+}
 /* Posts */
-	body > table ~ form[name='delform'] br[clear='left'],
-	form[name='delform'] center {
-		position: fixed;
-		bottom: -500px;
-	}
+body > table ~ form[name='delform'] br[clear='left'],
+form[name='delform'] center {
+  position: fixed;
+  bottom: -500px;
+}
 
 /*[[BackLinks]]*/
 
 /*[[ReplyWidth]]*/
 
-	form[name='delform'] > table:not(.pages),
-	div.thread > table,
-	.insertedPosts > table {
-		border-spacing: 0 1px !important;
-	}
+form[name='delform'] > table:not(.pages),
+div.thread > table,
+.insertedPosts > table {
+  border-spacing: 0 1px !important;
+}
 
-	form[name='delform'] .filesize + br + a[target='_blank'] img, 
-	#qp .filesize + br + a[target='_blank'] img  {
-		border: 0;
-		float: left;
-		margin: 0 20px 25px !important;
-	}
+form[name='delform'] .filesize + br + a[target='_blank'] img, 
+#qp .filesize + br + a[target='_blank'] img  {
+  border: 0;
+  float: left;
+  margin: 0 20px 25px !important;
+}
 
-	form[name='delform'] .filesize + br + a[target='_blank'] img + img {
-		margin: 0 0 25px !important;
-	}
+form[name='delform'] .filesize + br + a[target='_blank'] img + img {
+  margin: 0 0 25px !important;
+}
 
-	html,
-	body {
-		margin: 0 !important;
-	}
+html,
+body {
+  margin: 0 !important;
+}
 
-	.filesize {
-		margin-top: 17px !important;
-	}
+.filesize {
+  margin-top: 17px !important;
+}
 /*[[expandfile]]*/
-	.filesize span::after {
-		font-size: 13px !important;
-	}
+.filesize span::after {
+  font-size: 13px !important;
+}
 
-	.filesize span::after {
-		font-size: /*[[FontSize]]*/ !important;
-	}
+.filesize span::after {
+  font-size: /*[[FontSize]]*/ !important;
+}
 
-	#filter.autohide:hover,
-	#filter:not(.autohide),
-	#updater:hover,
-	#thread_filter.autohide:hover,
-	#thread_filter:not(.autohide) {
-		border: 0 !important;
-	}
+#filter.autohide:hover,
+#filter:not(.autohide),
+#updater:hover,
+#thread_filter.autohide:hover,
+#thread_filter:not(.autohide) {
+  border: 0 !important;
+}
 
 
 /*[[sageidentifier]]*/
 /*[[nokosega]]*/
 
 /* Fixes text spoilers */
-	.spoiler:not(:hover),
-	.spoiler:not(:hover) .unkfunc,
-	.spoiler:not(:hover) a {
-		color: #000 !important;
-		text-shadow: none !important;
-	}
+.spoiler:not(:hover),
+.spoiler:not(:hover) .unkfunc,
+.spoiler:not(:hover) a {
+  color: #000 !important;
+  text-shadow: none !important;
+}
 /* Remove default 'inherit' background declaration */
-	.span.filetitle,
-	.replytitle,
-	.postername,
-	.commentpostername,
-	.postertrip {
-		background: transparent !important;
-	}
+.span.filetitle,
+.replytitle,
+.postername,
+.commentpostername,
+.postertrip {
+  background: transparent !important;
+}
 
-	.postername,
-	.commentpostername {
-		font-weight: 700 !important;
-	}
+.postername,
+.commentpostername {
+  font-weight: 700 !important;
+}
 /* Addons and such */
-	body > div[style='width: 100%;'] {
-		margin-top: 34px;
-	}
+body > div[style='width: 100%;'] {
+  margin-top: 34px;
+}
 
-	#copyright,
-	#header a,
-	#qr td,
-	#qr tr[height='73']:nth-of-type(2),
-	#quickrep tr[height='73'] td:nth-of-type(2),
-	#quickrep td.postblock,
-	.recaptcha_input_area,
-	.menubutton a,
-	.chanchimp > div,
-	.pages td,
-	.recaptchatable td.recaptcha_image_cell,
-	td[style='padding-left: 7px;'],
-	div[id^='qr'] tr[height='73']:nth-of-type(2) {
-		padding: 0 !important;
-	}
-	#navtopr {
-		position: fixed;
-		left: 150px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		right: 60px !important;
-		left: auto !important;
-		top: -100px !important;
-		bottom: auto !important;
-		font-size: 0 !important;
-		color: transparent !important;
-		z-index: 96 !important;
-	}
-	#navtopr a::after {
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAfRJREFUOE+N1M1LVFEYgPGZ1HTSaiGJWvgBSbQrXUWzGt1ESRFRujPoQ4gEI4oSrSBIRUXINi7Mah0KFUWBitjHQvJf8nmu585cbzPQwI/7cc597znvfd/JZMIvn89nUIMjOIpaZOPx5DExr4HzAz5b/IVApzm+whJuo82JqZcd4l4v5jCJrmhOCBC9mfN6XMcn/MUUGsNYPH6Je7N4h2+4gzoHq3ESreEBl+vgOrZRCPddiUFmMI8FvMcAag2UwzAe44TRMYQ17OAeDqIfrsQgr+HWxtCBrIFM6i1s4iVGsAK3ZqBFdOJFeNiVGOQJTqEqyiEnZv0MvuAPfiaCGOh3CHKZozmbDispBUkk0e1dxMdUEAPJ4K72Ckbhl9pbSaou4hpqZkIP7uNHCBIH2+L6GZxTLIlydZasqSyTLQM/b5wrA7r1CTShbLGmC/MYEwu4i6+plZkzE91SMRgDbrEVT7EMK/0avqeC/eL6EY7/E4wbh3EOz2GL9CHqNwymVuZ2N/Bw3za5sFntn1V8xlXkEj1mkd4IY+bqAyxiC/OCz8e91h5WYTLHEbVLqlnjPvRFdoH/Eg9wE1GvWf5+IQvSHrPkqyuUiNt37htYnG9xHlVxZZvgbjixYmk4Bld2FvaeNWcxRy0iE/p/RVZqK/Na/FPbBYqMCGXIW9SFAAAAAElFTkSuQmCC');
-		position: fixed !important;
-		top: 1px !important;
-		right: 7px !important;
-		z-index: -1 !important;
+#copyright,
+#header a,
+#qr td,
+#qr tr[height='73']:nth-of-type(2),
+#quickrep tr[height='73'] td:nth-of-type(2),
+#quickrep td.postblock,
+.recaptcha_input_area,
+.menubutton a,
+.chanchimp > div,
+.pages td,
+.recaptchatable td.recaptcha_image_cell,
+td[style='padding-left: 7px;'],
+div[id^='qr'] tr[height='73']:nth-of-type(2) {
+  padding: 0 !important;
+}
+#navtopr {
+  position: fixed;
+  left: 150px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  right: 60px !important;
+  left: auto !important;
+  top: -100px !important;
+  bottom: auto !important;
+  font-size: 0 !important;
+  color: transparent !important;
+  z-index: 96 !important;
+}
+#navtopr a::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAfRJREFUOE+N1M1LVFEYgPGZ1HTSaiGJWvgBSbQrXUWzGt1ESRFRujPoQ4gEI4oSrSBIRUXINi7Mah0KFUWBitjHQvJf8nmu585cbzPQwI/7cc597znvfd/JZMIvn89nUIMjOIpaZOPx5DExr4HzAz5b/IVApzm+whJuo82JqZcd4l4v5jCJrmhOCBC9mfN6XMcn/MUUGsNYPH6Je7N4h2+4gzoHq3ESreEBl+vgOrZRCPddiUFmMI8FvMcAag2UwzAe44TRMYQ17OAeDqIfrsQgr+HWxtCBrIFM6i1s4iVGsAK3ZqBFdOJFeNiVGOQJTqEqyiEnZv0MvuAPfiaCGOh3CHKZozmbDispBUkk0e1dxMdUEAPJ4K72Ckbhl9pbSaou4hpqZkIP7uNHCBIH2+L6GZxTLIlydZasqSyTLQM/b5wrA7r1CTShbLGmC/MYEwu4i6+plZkzE91SMRgDbrEVT7EMK/0avqeC/eL6EY7/E4wbh3EOz2GL9CHqNwymVuZ2N/Bw3za5sFntn1V8xlXkEj1mkd4IY+bqAyxiC/OCz8e91h5WYTLHEbVLqlnjPvRFdoH/Eg9wE1GvWf5+IQvSHrPkqyuUiNt37htYnG9xHlVxZZvgbjixYmk4Bld2FvaeNWcxRy0iE/p/RVZqK/Na/FPbBYqMCGXIW9SFAAAAAElFTkSuQmCC');
+  position: fixed !important;
+  top: 1px !important;
+  right: 7px !important;
+  z-index: -1 !important;
 }
 /* Strip 4chan+ of shadows and rounded edges */
-	#navbar,
-	#boardsMenu,
-	#popup,
-	.navbar2, /* 4chanplus - submenus */
-	#crntBoard, /* 4chanplus - 'current board' */
-	#quickrep {
-		-webkit-border-radius: 0 !important;
-		border-radius: 0 !important;
-		-webkit-box-shadow: none !important;
-	}
+#navbar,
+#boardsMenu,
+#popup,
+.navbar2, /* 4chanplus - submenus */
+#crntBoard, /* 4chanplus - 'current board' */
+#quickrep {
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+}
 
-	#navbar {
-		margin-left: -265px !important;
-		height: 26px !important;
-	}
+#navbar {
+  margin-left: -265px !important;
+  height: 26px !important;
+}
 
-	#crntBoard {
-		height: 24px !important;
-	}
+#crntBoard {
+  height: 24px !important;
+}
 /* Expand Images div */
-	#imgControls {
-		position: fixed;
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 101px !important;/**/
-		top: 23px !important;
-		bottom: auto !important;
-		width: 150px;
-		z-index: 2;
-	}
+#imgControls {
+  position: fixed;
+  left: 2px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 101px !important;/**/
+  top: 23px !important;
+  bottom: auto !important;
+  width: 150px;
+  z-index: 2;
+}
 
-	#imgControls input {
-		width: 10px !important;
-		height: 10px !important;
-		margin: 4px 1px !important;
-		vertical-align: top !important;
-	}
+#imgControls input {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 4px 1px !important;
+  vertical-align: top !important;
+}
 
-	#imgControls label input {
-	        position: relative !important;
-	        bottom: 2px !important;
-	}
+#imgControls label input {
+ position: relative !important;
+ bottom: 2px !important;
+}
 
-	#imgControls label {
-		font-size: 0 !important;
-		color: transparent !important;
-	}
+#imgControls label {
+  font-size: 0 !important;
+  color: transparent !important;
+}
 
-	#imgControls label::after {
-		font-size: 12px !important;
-		content: 'Expand';
-	}
+#imgControls label::after {
+  font-size: 12px !important;
+  content: 'Expand';
+}
 
-	#imgControls select {
-		float: right !important;
-	}
+#imgControls select {
+  float: right !important;
+}
 /* Hide UI of the select element */
-	select > button,
-	select > input {
-		opacity: 0;
-	}
+select > button,
+select > input {
+  opacity: 0;
+}
 
-	#imgControls select > option {
-		font-size: 80% !important;
-	}
+#imgControls select > option {
+  font-size: 80% !important;
+}
 /* End of Expand Images div */
 /* Reply Previews */
-	#backwash_tooltip, /* /b/ackwash reloaded */
-	#popup, /* 4chanplus */
-	#qp, /* 4chan x Quote Preview */
-	div[id^=ref] /* 4chan4chrome */ {
-		max-width: 70%;
-		visibility: visible;
-	}
+#backwash_tooltip, /* /b/ackwash reloaded */
+#popup, /* 4chanplus */
+#qp, /* 4chan x Quote Preview */
+div[id^=ref] /* 4chan4chrome */ {
+  max-width: 70%;
+  visibility: visible;
+}
 
-	#qp {
-		padding: 2px 6px !important;
-	}
-	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+#qp {
+  padding: 2px 6px !important;
+}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 	#qp {
 		padding: 5px 5px 12px 5px !important;
 	}
-	}
-	
-	#backwash_tooltip,
-	#popup,
-	div[id^='ref'],
-	#cc-quotedcontainer_t {
-		visibility: visible;
-		z-index: 10 !important;
-	}
+}
 
-	#cc-newpostarea,
-	#cc-newpostarea2 {
-		z-index: 9 !important;
-	}
+#backwash_tooltip,
+#popup,
+div[id^='ref'],
+#cc-quotedcontainer_t {
+  visibility: visible;
+  z-index: 10 !important;
+}
 
-	#backwash_tooltip img,
-	#popup img,
-	#qp img,
-	div[id^='ref'] img {
-		max-width: 300px !important;
-		height: auto !important;
-	}
+#cc-newpostarea,
+#cc-newpostarea2 {
+  z-index: 9 !important;
+}
 
-	#popup > img {
-		max-width: 100% !important;
-	}
-	table[align=right] {
-		position: fixed !important;
-		top: -1000px !important;
-	}
-	table[align=right]  {
-		position: fixed !important;
-		top: -1000px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important; /**/
-		bottom: auto !important;
-		width: 248px !important;
-		margin: 0px !important;
-		padding: 0px !important;     
-		font-size: 0px !important;
-	}
-	.deletebuttons {
-		font-size: 0px !important;
-		color: transparent !important;
-		height: 30px !important;
-		margin-top: 0px !important;
-		padding-right: 3px !important;
-		width: 248px !important;
-	}
+#backwash_tooltip img,
+#popup img,
+#qp img,
+div[id^='ref'] img {
+  max-width: 300px !important;
+  height: auto !important;
+}
 
-	table[align=right]::before {
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAftJREFUOE991M0rRFEYx/E7jYkRTWymycZmZCUrWYgUZTFrkub1T1Cy8LJXkrKWlWRrJZsZW+upSTZkJxbSmIzmXt/feK6O8aI+nnPOc+7vnHnB8zp+isVipFQq9SCJcUxjBpMYRj97op3Pfc1peujGKJtXUcEjfAR4RRUH7JlFQod+C7SQPmoG52gg+EOL9WusYehbmN1EIVfQxr9C3PUH9m1jsFAoeB6/Ino5dpMwpM68jBsn+MnW7qi+HXbP80uIKagHq2gggEKOMYUV5jU8M97BBNaZ39pen3qBlIKSqFhDQWVMoQtxZLChzbq97d93Dn5hPKegcTw6QTeMdZO4PhFqDAl4+XxeQWM4Q8t5ZkvNafgITItaQwax8ONVCNI4QcPZr+cOFTTTsajGMzaQcIKizOftEB0WHqx6pKBJvDqNJ8Y7SMHL5XIRtL/JzONYRBVu2J6aw9YITygzn7AAhaQxj/Z7Rh2gv4s3O7xJXVajHwdoIcAd1pHEGE5Qw6JCsIBLZ796IwqKYhbXFuRTb7GPMzTsoSp110KatrdO3URv+71kkMAaHmyDbhYGaCy68Ztzk3fGp9BL//zj1QBD2M5ms/fwEfyjTk8hei+/viLtMBoRDGIJF3j5JajJWg2bSCOGn/+atGjNFHUOWzjEEfawjBH06mA34QPkk++/bAlEMAAAAABJRU5ErkJggg==') !important;
-		visibility: visible !important;
-		position: fixed !important;
-		top: 1px !important;
-        left: 20px !important;
-        right: auto !important;
-/*[[ChangeAlign]]*/
-        right: 95px !important;
-		left: auto !important; /**/
-	}
-	table[align=right]:hover {
-		position: fixed !important;
-		top: 16px !important;
-		z-index: 99 !important;
-	}
+#popup > img {
+  max-width: 100% !important;
+}
+table[align=right] {
+  position: fixed !important;
+  top: -1000px !important;
+}
+table[align=right]  {
+  position: fixed !important;
+  top: -1000px !important;
+  right: auto !important;
+  left: 2px !important;
+  /*[[ChangeAlign]]*/
+  right: 2px !important;
+  left: auto !important; /**/
+  bottom: auto !important;
+  width: 248px !important;
+  margin: 0px !important;
+  padding: 0px !important;     
+  font-size: 0px !important;
+}
+.deletebuttons {
+  font-size: 0px !important;
+  color: transparent !important;
+  height: 30px !important;
+  margin-top: 0px !important;
+  padding-right: 3px !important;
+  width: 248px !important;
+}
 
-	#popup {
-		position: fixed !important;
-		top: auto !important;
-		left: auto !important;
-		right: 2px !important;
-		visibility: visible !important;
-		bottom: 24px;
-	}
+table[align=right]::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAftJREFUOE991M0rRFEYx/E7jYkRTWymycZmZCUrWYgUZTFrkub1T1Cy8LJXkrKWlWRrJZsZW+upSTZkJxbSmIzmXt/feK6O8aI+nnPOc+7vnHnB8zp+isVipFQq9SCJcUxjBpMYRj97op3Pfc1peujGKJtXUcEjfAR4RRUH7JlFQod+C7SQPmoG52gg+EOL9WusYehbmN1EIVfQxr9C3PUH9m1jsFAoeB6/Ino5dpMwpM68jBsn+MnW7qi+HXbP80uIKagHq2gggEKOMYUV5jU8M97BBNaZ39pen3qBlIKSqFhDQWVMoQtxZLChzbq97d93Dn5hPKegcTw6QTeMdZO4PhFqDAl4+XxeQWM4Q8t5ZkvNafgITItaQwax8ONVCNI4QcPZr+cOFTTTsajGMzaQcIKizOftEB0WHqx6pKBJvDqNJ8Y7SMHL5XIRtL/JzONYRBVu2J6aw9YITygzn7AAhaQxj/Z7Rh2gv4s3O7xJXVajHwdoIcAd1pHEGE5Qw6JCsIBLZ796IwqKYhbXFuRTb7GPMzTsoSp110KatrdO3URv+71kkMAaHmyDbhYGaCy68Ztzk3fGp9BL//zj1QBD2M5ms/fwEfyjTk8hei+/viLtMBoRDGIJF3j5JajJWg2bSCOGn/+atGjNFHUOWzjEEfawjBH06mA34QPkk++/bAlEMAAAAABJRU5ErkJggg==') !important;
+  visibility: visible !important;
+  position: fixed !important;
+  top: 1px !important;
+  left: 20px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  right: 95px !important;
+  left: auto !important; /**/
+}
+table[align=right]:hover {
+  position: fixed !important;
+  top: 16px !important;
+  z-index: 99 !important;
+}
 
-	table[align=right]:hover input[type='checkbox'] {
-		position: fixed !important;
-		right: 168px !important;
-		top: 26px !important;
-	}
+#popup {
+  position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  right: 2px !important;
+  visibility: visible !important;
+  bottom: 24px;
+}
 
-	table[align=right]:hover::after {
-		visibility: visible !important;
-		position: fixed !important;
-		right: 120px !important;
-		top: 26px !important;
-		font-size: 12px !important;
-		content: 'File Only';
-	}
+table[align=right]:hover input[type='checkbox'] {
+  position: fixed !important;
+  right: 168px !important;
+  top: 26px !important;
+}
 
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
+table[align=right]:hover::after {
+  visibility: visible !important;
+  position: fixed !important;
+  right: 120px !important;
+  top: 26px !important;
+  font-size: 12px !important;
+  content: 'File Only';
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 	table[align=right]:hover input[type='checkbox'] {
 		position: absolute !important;
 		right: 173px !important;
@@ -1259,9 +1259,9 @@ This style is designed for the following browsers, ordered alphabetically:
 		right: 125px !important;
 		top: 11px !important;
 	}
-	}
+}
 
-	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 	table[align=right]:hover input[type='checkbox'] {
 		position: absolute !important;
 		right: 173px !important;
@@ -1273,328 +1273,328 @@ This style is designed for the following browsers, ordered alphabetically:
 		right: 125px !important;
 		top: 10px !important;
 	}
-	}
+}
 
-	.deletebuttons .inputtext {
-		width: 138px;
-		margin-right: 1px !important;
-	}
-	
-	.navlinks,
-	#navlinks,
-	span[id^='4chan_ext_right'] {
+.deletebuttons .inputtext {
+  width: 138px;
+  margin-right: 1px !important;
+}
+
+.navlinks,
+#navlinks,
+span[id^='4chan_ext_right'] {
 	right: 5px !important;
-/*[[ChangeAlign]]*/		right: 255px !important;/**/
-	}
+  /*[[ChangeAlign]]*/		right: 255px !important;/**/
+}
 
-	#navlinks {
-		position: fixed !important;
-		top: 0px !important;
-		z-index: 99 !important;
-	}
-	html body > span[style='left: 5px; position: absolute;']:nth-of-type(0) {
-		display: none;
-	}
+#navlinks {
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 99 !important;
+}
+html body > span[style='left: 5px; position: absolute;']:nth-of-type(0) {
+  display: none;
+}
 
-	html body span[style='left: 5px; position: absolute;'] {
-		font-size: 0 !important;
-		visibility: hidden;
-	}
+html body span[style='left: 5px; position: absolute;'] {
+  font-size: 0 !important;
+  visibility: hidden;
+}
 
-	html body span[style='left: 5px; position: absolute;'] a {
-		position: fixed !important;
-		top: auto;
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: -192px !important; /**/
-		bottom: -1000px;
-		visibility: visible !important;
-		height: 14px !important;
-		width: 58px !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		font-size: 9px !important;
-		text-transform: uppercase;
-		vertical-align: bottom !important;
-		padding-top: 5px !important;
-		border-radius: 0 !important;
-		text-align: center;
-	}
-	html body span[style='left: 5px; position: absolute;'] a::after {
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUJJREFUOE/Vkj9LglEUh18xC0GkfwS1+hGipcK2hr7DGw0uDRKCQyI0tAQN7U4tfoOGsKkhCAqaai0CQYRQGiwiK59fHPNSr+RbNPTCw/Fez3nuvedez/tXn+/7UUj8atMIRmEFNn4konAEZmEbLqEaSkRBBKYhA0dwD29wN5CIRM92kSbuwy08m0SiFmwaBWIOlmFSi38swiAOWbiCB0cgiXiFhtHUDuEayqAWRN9lJio6R+kKvotP1BxCSqfqymIMFuEAtOqLs7NHfu8Yu7aTG8tpE3XcuHtENXsG8nAB6o2O1XSbzXgY1qFmi1WIY18uxBIXiCVQL+qfk5hbgnMTnREn+t6s/oQ12AsQzTN/aiIJ+4vsIoZISgaI5pg/BjX8BMYHemsBoimK9W3BKvSaHcZIoS5G7y9psfcww4j+NLcD3erbomf70ToAAAAASUVORK5CYII=');
-		position: fixed !important;
-		top: 1px !important;
-		right: 117px !important;
-		cursor: pointer !important;
-	}
+html body span[style='left: 5px; position: absolute;'] a {
+  position: fixed !important;
+  top: auto;
+  left: 2px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: -192px !important; /**/
+  bottom: -1000px;
+  visibility: visible !important;
+  height: 14px !important;
+  width: 58px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 9px !important;
+  text-transform: uppercase;
+  vertical-align: bottom !important;
+  padding-top: 5px !important;
+  border-radius: 0 !important;
+  text-align: center;
+}
+html body span[style='left: 5px; position: absolute;'] a::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUJJREFUOE/Vkj9LglEUh18xC0GkfwS1+hGipcK2hr7DGw0uDRKCQyI0tAQN7U4tfoOGsKkhCAqaai0CQYRQGiwiK59fHPNSr+RbNPTCw/Fez3nuvedez/tXn+/7UUj8atMIRmEFNn4konAEZmEbLqEaSkRBBKYhA0dwD29wN5CIRM92kSbuwy08m0SiFmwaBWIOlmFSi38swiAOWbiCB0cgiXiFhtHUDuEayqAWRN9lJio6R+kKvotP1BxCSqfqymIMFuEAtOqLs7NHfu8Yu7aTG8tpE3XcuHtENXsG8nAB6o2O1XSbzXgY1qFmi1WIY18uxBIXiCVQL+qfk5hbgnMTnREn+t6s/oQ12AsQzTN/aiIJ+4vsIoZISgaI5pg/BjX8BMYHemsBoimK9W3BKvSaHcZIoS5G7y9psfcww4j+NLcD3erbomf70ToAAAAASUVORK5CYII=');
+  position: fixed !important;
+  top: 1px !important;
+  right: 117px !important;
+  cursor: pointer !important;
+}
 /* File Clearer support */
-	.clearbutton {
-		position: fixed !important;
-		bottom: 45px !important;
-		right: 55px !important;
-	}
+.clearbutton {
+  position: fixed !important;
+  bottom: 45px !important;
+  right: 55px !important;
+}
 /* AutoPager */
-	#autoPagerBorderPaging {
-		position: fixed !important;
-		right: 300px !important;
-		bottom: 0px !important;
-		z-index: 99 !important;
-	}
-	.autoPagerS {
-		display: none !important;
-	}
+#autoPagerBorderPaging {
+  position: fixed !important;
+  right: 300px !important;
+  bottom: 0px !important;
+  z-index: 99 !important;
+}
+.autoPagerS {
+  display: none !important;
+}
 /* 4chan x options */
-	#overlay {
-		z-index: 99 !important;
-	}
+#overlay {
+  z-index: 99 !important;
+}
 
-	#options ul {
-		margin: 0 !important;
-	}
+#options ul {
+  margin: 0 !important;
+}
 
-	#options ul > li {
-		padding: 0 !important;
-	}
+#options ul > li {
+  padding: 0 !important;
+}
 
-	#options.reply.dialog, #options .dialog {
-		width: 700px !important;
-	}
+#options.reply.dialog, #options .dialog {
+  width: 700px !important;
+}
 
-	#content > * {
-		height: 600px !important;
-	}
+#content > * {
+  height: 600px !important;
+}
 
-	#floaty::after {
-		content: "4chan X Options" !important;
-		position: relative !important;
-		left: 120px !important;
-		font-size: 14px !important;
-	}
+#floaty::after {
+  content: "4chan X Options" !important;
+  position: relative !important;
+  left: 120px !important;
+  font-size: 14px !important;
+}
 
-	#options hr {
-		display: none !important;
-	}
+#options hr {
+  display: none !important;
+}
 
-	#options ul {
-		margin-bottom: 5px !important;
-		padding-bottom: 7px !important;
-	}
+#options ul {
+  margin-bottom: 5px !important;
+  padding-bottom: 7px !important;
+}
 
-	#options ul:first-of-type {
-		padding-top: 5px !important;
-	}
+#options ul:first-of-type {
+  padding-top: 5px !important;
+}
 
 /* End of 4chan x options */
-	#filter,
-	#thread_filter,
-	#stats {
-		padding: 3px 0;
-		border: 0 !important;
-		border-radius: 0;
-		font-size: 12px !important;
-		z-index: 4 !important;
-	}
+#filter,
+#thread_filter,
+#stats {
+  padding: 3px 0;
+  border: 0 !important;
+  border-radius: 0;
+  font-size: 12px !important;
+  z-index: 4 !important;
+}
 
-	#stats {
-		position: fixed !important;
-		top: 20px !important;
-		right: auto !important;
-		left: 150px !important;
-/*[[ChangeAlign]]*/
-		right: 45px !important;
-		left: auto !important; /**/
-		width: 96px !important;
-		text-align: right !important;
-		bottom: auto !important;
-		cursor: default !important;
-	}
+#stats {
+  position: fixed !important;
+  top: 20px !important;
+  right: auto !important;
+  left: 150px !important;
+  /*[[ChangeAlign]]*/
+  right: 45px !important;
+  left: auto !important; /**/
+  width: 96px !important;
+  text-align: right !important;
+  bottom: auto !important;
+  cursor: default !important;
+}
 
-	#updater {
-		right: auto !important;
-		left: 190px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important; /**/
-		top: 23px !important;
-		bottom: auto !important;
-		width: 58px !important;
-		border: 0 !important;
-		font-size: 12px;
-		overflow: hidden;
-		z-index: 5 !important;
-		padding-bottom: 2px;
-	}
+#updater {
+  right: auto !important;
+  left: 190px !important;
+  /*[[ChangeAlign]]*/
+  right: 2px !important;
+  left: auto !important; /**/
+  top: 23px !important;
+  bottom: auto !important;
+  width: 58px !important;
+  border: 0 !important;
+  font-size: 12px;
+  overflow: hidden;
+  z-index: 5 !important;
+  padding-bottom: 2px;
+}
 
-	#count.new {
-		background-color: transparent !important;
-	}
+#count.new {
+  background-color: transparent !important;
+}
 
-	#updater:hover {
-		width: 150px !important;
-		left: 98px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important;/**/
-		z-index: 99 !important;
-	}
+#updater:hover {
+  width: 150px !important;
+  left: 98px !important;
+  /*[[ChangeAlign]]*/
+  right: 2px !important;
+  left: auto !important;/**/
+  z-index: 99 !important;
+}
 
-	#updater #count:not(.new) {
-		font-size: 0 !important;
-		color: transparent !important;
-	}
+#updater #count:not(.new) {
+  font-size: 0 !important;
+  color: transparent !important;
+}
 
-	#updater #count:not(.new)::after {
-		font-size: 12px !important;
-		content: '+0';
-	}
+#updater #count:not(.new)::after {
+  font-size: 12px !important;
+  content: '+0';
+}
 
-	#watcher  {
-		position: fixed !important;
-		top: -1000px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important; /**/
-		bottom: auto !important;
-		width: 246px !important;
-		padding-bottom: 4px !important;
-	}
-	#watcher > div {
-		max-width: 246px !important;
-	}
-	#watcher .move {
-		font-size: 0px !important;
-		height: 0px !important;
-	}
-	.op .favicon {
-		position: relative !important;
-		top: 2px !important;
-	}
-	#watcher::before {
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAXFJREFUOE/l1LsrxWEcx/HjuIwuIUZFLpnkEjmL/awYWOQ+oBgox70Ucjt1VkwkikWKlIXJJiExixWz91s/MuAfoF49T09fn/M83+c5JxT6X3+RSCQZWShCRcC5a8l/doOCMNKDf2pjXMAOTgK7jItoR2VQG/4KZSGEVJSgA3PYwBVe8YwnvOEBW5hHJ0qRZsZniJ8wgXE0YwU3OA7Whxn3cId1tCKGSdQYZlAx3PJgMGeIHOEUCczC3tTBo54hCns2gCWUGmTIDPJhn5pwgTg24RGTYP/6cYneoDaP0V3FDfIYU3Dxe5AFBciAdT8F5bI+hoQFNsztuU23Ww+PdogGeCzDarGNc0RRiD6sotwgu27D3FUMjVjGNQ4wgiHs4hY2uwWjmIa9+2j2Z1gZ8254tWuwFy/w6h/hU7iHffON9aDcEDO+vyf74xGq4HvyErxyb0/7sJ9dqEYm/Ab8/tCDgmxG++cbM9x5DlL+1w9G6B0DDc7NMYQGbAAAAABJRU5ErkJggg==') !important;
-		height: 9px !important;
-		font-size: 12px !important;
-		position: fixed !important;
-		top: 1px !important;
-        left: 20px !important;
-        right: auto !important;
-/*[[ChangeAlign]]*/		
-        right: 193px !important;
-		left: auto !important; /**/
-		min-width: 30px !important;
-		max-width: 30px !important;
-	}
+#watcher  {
+  position: fixed !important;
+  top: -1000px !important;
+  right: auto !important;
+  left: 2px !important;
+  /*[[ChangeAlign]]*/
+  right: 2px !important;
+  left: auto !important; /**/
+  bottom: auto !important;
+  width: 246px !important;
+  padding-bottom: 4px !important;
+}
+#watcher > div {
+  max-width: 246px !important;
+}
+#watcher .move {
+  font-size: 0px !important;
+  height: 0px !important;
+}
+.op .favicon {
+  position: relative !important;
+  top: 2px !important;
+}
+#watcher::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAXFJREFUOE/l1LsrxWEcx/HjuIwuIUZFLpnkEjmL/awYWOQ+oBgox70Ucjt1VkwkikWKlIXJJiExixWz91s/MuAfoF49T09fn/M83+c5JxT6X3+RSCQZWShCRcC5a8l/doOCMNKDf2pjXMAOTgK7jItoR2VQG/4KZSGEVJSgA3PYwBVe8YwnvOEBW5hHJ0qRZsZniJ8wgXE0YwU3OA7Whxn3cId1tCKGSdQYZlAx3PJgMGeIHOEUCczC3tTBo54hCns2gCWUGmTIDPJhn5pwgTg24RGTYP/6cYneoDaP0V3FDfIYU3Dxe5AFBciAdT8F5bI+hoQFNsztuU23Ww+PdogGeCzDarGNc0RRiD6sotwgu27D3FUMjVjGNQ4wgiHs4hY2uwWjmIa9+2j2Z1gZ8254tWuwFy/w6h/hU7iHffON9aDcEDO+vyf74xGq4HvyErxyb0/7sJ9dqEYm/Ab8/tCDgmxG++cbM9x5DlL+1w9G6B0DDc7NMYQGbAAAAABJRU5ErkJggg==') !important;
+  height: 9px !important;
+  font-size: 12px !important;
+  position: fixed !important;
+  top: 1px !important;
+  left: 20px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/		
+  right: 193px !important;
+  left: auto !important; /**/
+  min-width: 30px !important;
+  max-width: 30px !important;
+}
 /*[[watcherslideout]]*/
-	#backwash_tooltip,
-	#qp,
-	#popup,
-	div[id^=ref],
-	td.reply,
-	td.replyhl,
-	#options,
-	#navbar,
-	#popup,
-	#boardsMenu {
-		border: 0 !important;
-	}
+#backwash_tooltip,
+#qp,
+#popup,
+div[id^=ref],
+td.reply,
+td.replyhl,
+#options,
+#navbar,
+#popup,
+#boardsMenu {
+  border: 0 !important;
+}
 
-	#watcher,
-	#threadwatcher /* 4chan4chrome's threadwatcher */ {
-		border: 0 !important;
-		padding: 1px 0;
-		border-radius: 0;
-	}
+#watcher,
+#threadwatcher /* 4chan4chrome's threadwatcher */ {
+  border: 0 !important;
+  padding: 1px 0;
+  border-radius: 0;
+}
 
-	#threadwatcher .postblock {
-		margin: 0 !important;
-		padding: 0 !important;
-		border: 0 !important;
-	}
+#threadwatcher .postblock {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
 
-	#watcher .move,
-	#threadwatcher .postblock {
-		padding: 2px 3px !important;
-		margin-bottom: 2px !important;
-		text-decoration: none !important;
-	}
+#watcher .move,
+#threadwatcher .postblock {
+  padding: 2px 3px !important;
+  margin-bottom: 2px !important;
+  text-decoration: none !important;
+}
 
-	#watcher .move,
-	#updater .move,
-	#options .move,
-	#stats .move {
-		cursor: default !important;
-	}
+#watcher .move,
+#updater .move,
+#options .move,
+#stats .move {
+  cursor: default !important;
+}
 /* 4sight */
-	body > a[style='cursor: pointer; float: right;'] {
-		position: fixed;
-		top:-119px;
-		left: 60px;
-/*[[ChangeAlign]]*/		
-		right: 60px !important;
-		left: auto !important; /**/
-		z-index: 96;
-		font-size: 0px !important;
-		
-	}
+body > a[style='cursor: pointer; float: right;'] {
+  position: fixed;
+  top:-119px;
+  left: 60px;
+  /*[[ChangeAlign]]*/		
+  right: 60px !important;
+  left: auto !important; /**/
+  z-index: 96;
+  font-size: 0px !important;
+  
+}
 
-	body > a[style='cursor: pointer; float: right;']::after {
-		content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAgZJREFUOE+tlMtLAlEUxu1hLqIWUQt7kOtqIQpB4vstCroYIRIpyY1g/4CvxSzyheBCNKiFtBBpEbRoFZYuIiiKAtH8b/pOqNToOBYKHzPjPfd3vnvuuVekVqtFk9REYWSMDyjRaDQG6Bg6hOQInhpnJQNArVar0el0DYPB0DEajd/S6/Ud/FfB2IYQ9BcQk1QANa1Wa8vn81XC4TAbCoXSDMPcms1mAtcBXRkF7QMBmwXszmaztU/wK5VKy5AImoZkfr+/aLFYCHo6FhCwXXIBN2UA5riTMpmM1OVyPZlMpjdAB8Z78X2HCNwnB2632z/MAbkF8IySoq7rfC77QIfDwRAQ4CO+YMAuoE+PxyMVBAYCgR0KRvZrFH6GOwE1XsPYBxI/5nI5sSCwUCiIkblKbQJgGhMWepPQhzIAb2jM6/VGxtoUCorFYnKn01mnvgP0BaAyVMV7k/oS5ehQJ+B7VdAhBVDhU6mUAj14jno+A9yGWlhmIxgMprEpNQID+I74K2iTCx569ABeLBaLimQy6chms2Z8b0ESlmWVSPTaPTkduK8DKPsJ/dPlQCuA20sCcqB9p38CduuspBL0oFg+Ob3H2Pyo24Y3EbmMx+Mqu93ewM7TpUE1pc2iG4n3+hrpnKCJRGIP0AcC4lmLRqNL/wb2OiKfz29HIpEDeg6cZaF7btzxLy1thfOK1oK9AAAAAElFTkSuQmCC') !important;
-		font-size: 12px !important;
-		position: fixed !important;
-		top: -1px !important;
-		left: 60px;
-/*[[ChangeAlign]]*/			
-		right: 28px !important;
-		left: auto !important; /**/
-	}
+body > a[style='cursor: pointer; float: right;']::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAgZJREFUOE+tlMtLAlEUxu1hLqIWUQt7kOtqIQpB4vstCroYIRIpyY1g/4CvxSzyheBCNKiFtBBpEbRoFZYuIiiKAtH8b/pOqNToOBYKHzPjPfd3vnvuuVekVqtFk9REYWSMDyjRaDQG6Bg6hOQInhpnJQNArVar0el0DYPB0DEajd/S6/Ud/FfB2IYQ9BcQk1QANa1Wa8vn81XC4TAbCoXSDMPcms1mAtcBXRkF7QMBmwXszmaztU/wK5VKy5AImoZkfr+/aLFYCHo6FhCwXXIBN2UA5riTMpmM1OVyPZlMpjdAB8Z78X2HCNwnB2632z/MAbkF8IySoq7rfC77QIfDwRAQ4CO+YMAuoE+PxyMVBAYCgR0KRvZrFH6GOwE1XsPYBxI/5nI5sSCwUCiIkblKbQJgGhMWepPQhzIAb2jM6/VGxtoUCorFYnKn01mnvgP0BaAyVMV7k/oS5ehQJ+B7VdAhBVDhU6mUAj14jno+A9yGWlhmIxgMprEpNQID+I74K2iTCx569ABeLBaLimQy6chms2Z8b0ESlmWVSPTaPTkduK8DKPsJ/dPlQCuA20sCcqB9p38CduuspBL0oFg+Ob3H2Pyo24Y3EbmMx+Mqu93ewM7TpUE1pc2iG4n3+hrpnKCJRGIP0AcC4lmLRqNL/wb2OiKfz29HIpEDeg6cZaF7btzxLy1thfOK1oK9AAAAAElFTkSuQmCC') !important;
+  font-size: 12px !important;
+  position: fixed !important;
+  top: -1px !important;
+  left: 60px;
+  /*[[ChangeAlign]]*/			
+  right: 28px !important;
+  left: auto !important; /**/
+}
 
-	div[style="width: 100%; "] {
-		position: relative !important;
-		top: 20px !important;
-		max-width: 90% !important;
-		min-height: 60% !important;
-		margin: auto !important;
-	}
+div[style="width: 100%; "] {
+  position: relative !important;
+  top: 20px !important;
+  max-width: 90% !important;
+  min-height: 60% !important;
+  margin: auto !important;
+}
 
-	table[style="width: 100%; height: 450px; table-layout: fixed; border-collapse: collapse;"] {
-		height: 70% !important;
-	}
+table[style="width: 100%; height: 450px; table-layout: fixed; border-collapse: collapse;"] {
+  height: 70% !important;
+}
 
-	#fs_preview {
-		height: 100% !important;
-	}
+#fs_preview {
+  height: 100% !important;
+}
 
-	#fs_search {
-		min-width: 138px !important;
-		max-width: 138px !important;
-	}
+#fs_search {
+  min-width: 138px !important;
+  max-width: 138px !important;
+}
 
-	[alt="sticky"] + a::before {
-		content: "Sticky | ";
-	}
+[alt="sticky"] + a::before {
+  content: "Sticky | ";
+}
 
-	[alt="closed"] + a::before {
-		content: "Closed | ";
-	}
+[alt="closed"] + a::before {
+  content: "Closed | ";
+}
 
-	[alt="closed"] + a {
-		text-decoration: line-through !important;
-	}
+[alt="closed"] + a {
+  text-decoration: line-through !important;
+}
 
 /*[[PagesPosition]]*/
 /*[[ColorScheme]]*/
 /*[[redtext]]*/
 /*[[RoundedCorners]]*/
-	.filesize+br+a[target='_blank']:hover {
-		background: none !important;
-	}
+.filesize+br+a[target='_blank']:hover {
+  background: none !important;
+}
 /* Adblock Minus */
-	img[src^='http://static.4chan.org/support/'] {
-		display: none;
-	}
+img[src^='http://static.4chan.org/support/'] {
+  display: none;
+}
 }
 
 /*[[CustomBoardNames]]*/
@@ -1602,37 +1602,37 @@ This style is designed for the following browsers, ordered alphabetically:
 /*[[QuickReply]]*/
 
 @-moz-document domain(rs.4chan.org) {
-/* /rs/ hacks */
-	table.pages td:nth-of-type(2n-1) {
-		display: table-cell !important;
-	}
+  /* /rs/ hacks */
+  table.pages td:nth-of-type(2n-1) {
+    display: table-cell !important;
+  }
 
-	#footer > center,
-	#footer > center * {
-		visibility: visible !important;
-	}
+  #footer > center,
+  #footer > center * {
+    visibility: visible !important;
+  }
 
-	.postarea {
-		margin-top: 20px !important;
-	}
+  .postarea {
+    margin-top: 20px !important;
+  }
 
-	.postarea form:first-child,
-	.postarea .postblock,
-	.postarea .postblock b {
-		position: static !important;
-	}
+  .postarea form:first-child,
+  .postarea .postblock,
+  .postarea .postblock b {
+    position: static !important;
+  }
 
-	body table table {
-		width: 100% !important;
-	}
+  body table table {
+    width: 100% !important;
+  }
 
-	.postarea tr:nth-of-type(1) .postblock b::after {
-		content: '';
-	}
+  .postarea tr:nth-of-type(1) .postblock b::after {
+    content: '';
+  }
 
-	.postarea tr:nth-of-type(2) .postblock b::after {
-		content: '';
-	}
+  .postarea tr:nth-of-type(2) .postblock b::after {
+    content: '';
+  }
 }
 
 @-moz-document url-prefix('http://www.4chan.org/') {
@@ -1753,12 +1753,12 @@ url('http://www.4chan.org') {
 }
 
 @-moz-document domain('sys.4chan.org') {
-		font[color="red"], font[color="red"]:hover {
-		position: static !important;
-		border: none !important;
-		background: none !important;
-	}
-	font[color="red"]::before {
-		display: none !important;
-	}
+  font[color="red"], font[color="red"]:hover {
+    position: static !important;
+    border: none !important;
+    background: none !important;
+  }
+  font[color="red"]::before {
+    display: none !important;
+  }
 }
