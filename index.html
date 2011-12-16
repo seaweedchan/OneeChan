@@ -351,6 +351,8 @@ textarea:focus {
 #opera:target ~ #main,
 #mascots:target ~ #main,
 #options:target ~ #main,
+#report:target ~ #main,
+#repot:not(:target) ~ #repotp,
 #colorschemes:target ~ #main,
 #faq:not(:target) ~ #faq-list, 
 #firefox:not(:target) ~ #firefoxinst,
@@ -503,6 +505,7 @@ code, pre {
 <a id='colorschemes' hidden></a>
 <a id='mascots' hidden></a>
 <a id='options' hidden></a>
+<a id='report' hidden></a>
 <h3>
 <a href='#faq'>FAQ</a>
 <a href="https://github.com/seaweedchan/OneeChan/raw/master/changelog">changelog</a><span class='version' style="position: relative; top: 3px; right: 10px; text-transform: none;">v2.2</span>
@@ -518,8 +521,18 @@ code, pre {
 <p style="text-align: center; position: relative; top: 8px;"><a href='#firefox'><img src="http://i.imgur.com/pR0cZ.png"></a>  <a href='#chrome'><img src="http://i.imgur.com/HUzng.png"></a>  <a href='#opera'><img src="http://i.imgur.com/wMvRh.png" style="position: relative; bottom: 1px;"></a>
 </p><br><br><br>
 <h4>
-<a href="https://github.com/seaweedchan/OneeChan/issues">Report an Issue</a>
+<a href="#report">Report an Issue Anonymously</a><br>
+<a href="https://github.com/seaweedchan/OneeChan/issues">Github Issues Tracker</a>
 </h4>
+</div>
+<div id='reportp'>
+<header>Anonymous Issue Tracker</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a></h3>
+<!-- begin htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="http://www.htmlcommentbox.com/static/skins/simple/skin.css" />
+ <script type="text/javascript" language="javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={  };} (function(){s=document.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page="+escape((window.hcb_user && hcb_user.PAGE)||(""+window.location)).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dEk1qnvfhGsFyniZbDg5X0"+"&opts=478&num=10");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end htmlcommentbox.com -->
 </div>
 <div id='faq-list'>
 <header>Frequently Asked Questions</header><br>
