@@ -275,7 +275,7 @@ select {
 /* Firefox */
 @-moz-document url-prefix() {
 	/* Hide checkboxes in Firefox because it wont let me style them */
-	input[type='checkbox'], .auto {
+	input[type='checkbox'], .auto:not([name="subscribe"]); {
 		display: none !important;
 	}
 	/* Make up for lack of checkboxes */
