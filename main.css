@@ -175,6 +175,10 @@ This style is designed for the following browsers, ordered alphabetically:
    text-decoration: none !important;
  }
 
+ a {
+   outline: 0 !important;
+ }
+
  td.reply,
  a,
  td,
