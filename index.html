@@ -210,7 +210,7 @@ label {
 }
 
 
-.reply {
+.reply, .comment {
 	text-align: left; !important; 
 	width: 680px;
 	border-radius: 3px; 
@@ -222,6 +222,10 @@ label {
 	font-size: 12px;
 	font-family: "Arial", "Helvetica", "sans-serif";
 	margin-bottom: 2px;
+}
+
+.comment blockquote img {
+	margin-right: 10px !important;
 }
 
 input, textarea, .auto {
@@ -378,6 +382,10 @@ textarea:focus {
 	font-size: 14px !important;
 }
 
+#HCB_comment_box h3 {
+	display: none !important;
+}
+
 #HCB_comment_form_box a {
 	position: relative !important;
 	left: 85px !important;
@@ -427,7 +435,7 @@ code, pre {
 	position: relative;
 	right: 20px;
 }
-small {
+small, img[src="http://www.htmlcommentbox.com/static/images/feed.png"] {
 	display: none;
 }
 a[href="http://www.htmlcommentbox.com"] {display:none !important;}
@@ -555,8 +563,8 @@ a[href="http://www.htmlcommentbox.com"] {display:none !important;}
 </h4>
 </div>
 <div id='reportp'>
-<header>Anonymous Issue Tracker</header><br>
-<h3><a href='#' style="text-decoration: underline;">Return</a></h3><br>
+<header>Comments and Issues</header><br>
+<h3><a href='#' style="text-decoration: underline;">Return</a></h3><div style="text-align: center; font-size: 13px;"><br>Here you can report issues anonymously or leave general feedback.<br>Do note that because I have Github notifications sent to my email and phone, this will not receive responses or notice as frequently but I will keep on top of it.<br>Use Github instead if you'd like to have a more personal issue tracker and don't mind registration.<br>If you'd like, you can leave your email and be notified of replies.<br></div>
 <!-- begin htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
  <script type="text/javascript" language="javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={  };} (function(){s=document.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page="+escape((window.hcb_user && hcb_user.PAGE)||(""+window.location)).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dEk1qnvfhGsFyniZbDg5X0"+"&opts=17115&num=50");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
@@ -588,7 +596,7 @@ a[href="http://www.htmlcommentbox.com"] {display:none !important;}
 </div>
 <div id='para' class='faqpost'><b class='faqquestion'>I posted <i>x</i> issue on 4chan, why won't you fix it?</b>
 <ul>
-<blockquote class='faqanswer'>I can't be monitoring 4chan all the time for people who might post an issue there. If you want to report an issue, you should do it on the <a href="https://github.com/seaweedchan/OneeChan/issues?sort=created&direction=desc&state=open">issues tracker</a> so that I can be easily notified of it whenever I sign on, and you can be notified of responses to it and when its resolved. Registering for Github does not require an email address, and myself and the Github team will not know who you are so it is not a risk to your anonymity.</blockquote>
+<blockquote class='faqanswer'>I can't be monitoring 4chan all the time for people who might post an issue there. If you want to report an issue, you should do it on the <a href="https://github.com/seaweedchan/OneeChan/issues?sort=created&direction=desc&state=open">issues tracker</a> so that I can be easily notified of it whenever I sign on, and you can be notified of responses to it and when its resolved. Registering for Github does not require an email address, but if its still an issue you can report issues to me anonymously <a href="#report">here</a>.</blockquote>
 </ul>
 </div>
 <div id='para' class='faqpost'><b class='faqquestion'>I made a mascot / color scheme! How do I send it to you to put on OneeChan?</b>

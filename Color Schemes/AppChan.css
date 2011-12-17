@@ -57,11 +57,11 @@ b {
   color: #AAA !important;
 }
 
-input, textarea, #para, .reply {
+input, textarea, #para, .reply, .comment {
   background-color: #333 !important;
 }
 
-.reply, #para {
+.reply, #para, .comment {
   border: 1px solid #333 !important;
 }
 

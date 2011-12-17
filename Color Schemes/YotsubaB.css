@@ -74,11 +74,11 @@ input:not([name="file"]), textarea {
   background-color: #eef2ff !important;
 }
 
-#para, .reply {
+#para, .reply, .comment {
   background-color: #d6daf0 !important;
 }
 
-.reply, #para {
+.reply, #para, .comment {
   border: 1px solid #B7C5D9 !important;
   border-top: 0px solid #d6daf0 !important;
   border-left: 0px solid #d6daf0 !important;

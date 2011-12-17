@@ -61,7 +61,7 @@ b {
   color: #7c2d2d !important;
 }
 
-input, textarea, #para, .reply {
+input, textarea, #para, .reply, .comment {
   background-color: #1c1c1c !important;
 }
 
@@ -73,7 +73,7 @@ input, textarea, #para, .reply {
   color: #71793e !important;
 }
 
-.reply, #para {
+.reply, #para, .comment {
   border: 1px solid #1c1c1c !important;
 }
 

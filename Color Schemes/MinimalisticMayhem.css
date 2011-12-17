@@ -61,11 +61,11 @@ pre {
   color: #000 !important;
 }
 
-input, textarea, #para, .reply {
+input, textarea, #para, .reply, .comment {
   background-color: #222 !important;
 }
 
-.reply, #para {
+.reply, #para, .comment {
   border: 1px solid #292929 !important;
 }
 

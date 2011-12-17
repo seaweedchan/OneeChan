@@ -61,11 +61,11 @@ b {
   color: #c5c8c6!important;
 }
 
-input, textarea, #para, .reply {
+input, textarea, #para, .reply, .comment {
   background-color: #282a2e !important;
 }
 
-.reply, #para {
+.reply, #para, .comment {
   border: 1px solid #282a2e !important;
 }
 
