@@ -89,10 +89,10 @@ This style is designed for the following browsers, ordered alphabetically:
     position: fixed !important;
 
     top: 1px !important;
-    left: 20px !important;
+    left: 190px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/		
-    right: 176px !important;
+    right: 185px !important;
     left: auto !important; /**/
     min-width: 30px !important;
     max-width: 30px !important;
@@ -330,7 +330,7 @@ a.yuimenuitemlabel {
   border: none !important;
   position: fixed !important;
   right: auto !important;
-  left: 0 !important;
+  left: 230px !important;
   z-index: 97 !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
@@ -1070,7 +1070,11 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAfRJREFUOE+N1M1LVFEYgPGZ1HTSaiGJWvgBSbQrXUWzGt1ESRFRujPoQ4gEI4oSrSBIRUXINi7Mah0KFUWBitjHQvJf8nmu585cbzPQwI/7cc597znvfd/JZMIvn89nUIMjOIpaZOPx5DExr4HzAz5b/IVApzm+whJuo82JqZcd4l4v5jCJrmhOCBC9mfN6XMcn/MUUGsNYPH6Je7N4h2+4gzoHq3ESreEBl+vgOrZRCPddiUFmMI8FvMcAag2UwzAe44TRMYQ17OAeDqIfrsQgr+HWxtCBrIFM6i1s4iVGsAK3ZqBFdOJFeNiVGOQJTqEqyiEnZv0MvuAPfiaCGOh3CHKZozmbDispBUkk0e1dxMdUEAPJ4K72Ckbhl9pbSaou4hpqZkIP7uNHCBIH2+L6GZxTLIlydZasqSyTLQM/b5wrA7r1CTShbLGmC/MYEwu4i6+plZkzE91SMRgDbrEVT7EMK/0avqeC/eL6EY7/E4wbh3EOz2GL9CHqNwymVuZ2N/Bw3za5sFntn1V8xlXkEj1mkd4IY+bqAyxiC/OCz8e91h5WYTLHEbVLqlnjPvRFdoH/Eg9wE1GvWf5+IQvSHrPkqyuUiNt37htYnG9xHlVxZZvgbjixYmk4Bld2FvaeNWcxRy0iE/p/RVZqK/Na/FPbBYqMCGXIW9SFAAAAAElFTkSuQmCC');
   position: fixed !important;
   top: 1px !important;
-  right: 7px !important;
+  left: 7px !important;
+  right: auto !important;
+ /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 7px !important;/**/
   z-index: -1 !important;
 }
 /* Strip 4chan+ of shadows and rounded edges */
@@ -1216,7 +1220,7 @@ table[align=right]::before {
   visibility: visible !important;
   position: fixed !important;
   top: 1px !important;
-  left: 20px !important;
+  left: 95px !important;
   right: auto !important;
   /*[[ChangeAlign]]*/
   right: 95px !important;
@@ -1331,7 +1335,11 @@ html body span[style='left: 5px; position: absolute;'] a::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUJJREFUOE/Vkj9LglEUh18xC0GkfwS1+hGipcK2hr7DGw0uDRKCQyI0tAQN7U4tfoOGsKkhCAqaai0CQYRQGiwiK59fHPNSr+RbNPTCw/Fez3nuvedez/tXn+/7UUj8atMIRmEFNn4konAEZmEbLqEaSkRBBKYhA0dwD29wN5CIRM92kSbuwy08m0SiFmwaBWIOlmFSi38swiAOWbiCB0cgiXiFhtHUDuEayqAWRN9lJio6R+kKvotP1BxCSqfqymIMFuEAtOqLs7NHfu8Yu7aTG8tpE3XcuHtENXsG8nAB6o2O1XSbzXgY1qFmi1WIY18uxBIXiCVQL+qfk5hbgnMTnREn+t6s/oQ12AsQzTN/aiIJ+4vsIoZISgaI5pg/BjX8BMYHemsBoimK9W3BKvSaHcZIoS5G7y9psfcww4j+NLcD3erbomf70ToAAAAASUVORK5CYII=');
   position: fixed !important;
   top: 1px !important;
-  right: 117px !important;
+  left: 117px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 117px !important;/**/
   cursor: pointer !important;
 }
 /* File Clearer support */
@@ -1406,7 +1414,7 @@ html body span[style='left: 5px; position: absolute;'] a::after {
   position: fixed !important;
   top: 20px !important;
   right: auto !important;
-  left: 150px !important;
+  left: 105px !important;
   /*[[ChangeAlign]]*/
   right: 45px !important;
   left: auto !important; /**/
@@ -1484,7 +1492,7 @@ html body span[style='left: 5px; position: absolute;'] a::after {
   font-size: 12px !important;
   position: fixed !important;
   top: 1px !important;
-  left: 20px !important;
+  left: 205px !important;
   right: auto !important;
   /*[[ChangeAlign]]*/		
   right: 193px !important;
@@ -1550,7 +1558,7 @@ body > a[style='cursor: pointer; float: right;']::after {
   font-size: 12px !important;
   position: fixed !important;
   top: -1px !important;
-  left: 60px;
+  left: 28px;
   /*[[ChangeAlign]]*/			
   right: 28px !important;
   left: auto !important; /**/

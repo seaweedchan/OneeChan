@@ -157,11 +157,8 @@ none
 		text-align: center !important;
 		border-spacing: 0 !important;
 		left: 2px !important;
-		right: auto !important;
-		padding-right: 400px !important;
-/*[[ChangeAlign]]*/
 		right: 250px !important;
-		padding-right: 250px !important;/**/
+		padding-right: 250px !important;
 		z-index: 1;
 	}
 	form[name='delform'] {
@@ -191,11 +188,8 @@ none
 		text-align: center !important;
 		border-spacing: 0 !important;
 		left: 2px !important;
-		right: auto !important;
-		padding-right: 400px !important;
-/*[[ChangeAlign]]*/
 		right: 2px !important;
-		padding-right: 0 !important;/**/
+		padding-right: 0 !important;
 		z-index: 1;
 	}
 /* Inverted Stickied Header / Pages */
@@ -242,11 +236,8 @@ none
 		text-align: center !important;
 		border-spacing: 0 !important;
 		left: 2px !important;
-		right: auto !important;
-		padding-right: 400px !important;
-/*[[ChangeAlign]]*/
 		right: 250px !important;
-		padding-right: 250px !important;/**/
+		padding-right: 250px !important;
 		z-index: 1;
 	}
 	body::before {
@@ -361,11 +352,8 @@ none
 		text-align: center !important;
 		border-spacing: 0 !important;
 		left: 2px !important;
-		right: auto !important;
-		padding-right: 400px !important;
-/*[[ChangeAlign]]*/
 		right: 250px !important;
-		padding-right: 250px !important;/**/
+		padding-right: 250px !important;
 		z-index: 1;
 	}
 	body::before {
