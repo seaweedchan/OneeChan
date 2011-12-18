@@ -1502,32 +1502,32 @@ domain('images.4chan.org'),
 		/*[[ChangeAlign]]*/padding: 20px 252px 0 2px !important;/**/
  	}
 /* Small Left Margin (4chan default) */
-		padding: 20px 2px 0 277px !important;
+		padding: 20px 25px 0 252px !important;
 		/*[[ChangeAlign]]*/padding: 20px 252px 0 25px !important;/**/
  	}
 	#header {
 		padding-left: 0px !important;
-		padding-right: 70px !important;
+		padding-right: 20px !important;
 		/*[[ChangeAlign]]*/padding-left: 70px !important;
 		padding-right: 0px !important;/**/
 	}
 /* Medium Left Margin */
-		padding: 20px 2px 0 302px !important;
+		padding: 20px 50px 0 252px !important;
 		/*[[ChangeAlign]]*/padding: 20px 252px 0 50px !important;/**/
  	}
 	#header {
 		padding-left: 0px !important;
-		padding-right: 70px !important;
+		padding-right: 50px !important;
 		/*[[ChangeAlign]]*/padding-left: 70px !important;
 		padding-right: 0px !important;/**/
 	}
 /* Large Left Margin */
-		padding: 20px 2px 0 402px !important;
+		padding: 20px 150px 0 252px !important;
 		/*[[ChangeAlign]]*/padding: 20px 252px 0 150px !important;/**/
  	}
 	#header {
 		padding-left: 0px !important;
-		padding-right: 170px !important;
+		padding-right: 150px !important;
 		/*[[ChangeAlign]]*/padding-left: 170px !important;
 		padding-right: 0px !important;/**/
 	}
