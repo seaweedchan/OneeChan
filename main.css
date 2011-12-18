@@ -194,6 +194,7 @@ This style is designed for the following browsers, ordered alphabetically:
  .container::before,
  #captchas,
  #qp .postertrip,
+ #qp .filetitle,
  .postertrip,
  .omittedposts,
  time + span {
