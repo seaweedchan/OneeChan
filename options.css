@@ -1530,6 +1530,16 @@ domain('images.4chan.org'),
 		/*[[ChangeAlign]]*/padding-left: 26% !important;
 		padding-right: 0px !important;/**/
 	}
+/* Match Sidebar */
+		padding: 20px 252px 0 252px !important;
+		/*[[ChangeAlign]]*/padding: 20px 252px 0 252px !important;/**/
+ 	}
+	#header {
+		padding-left: 0px !important;
+		padding-right: 252px !important;
+		/*[[ChangeAlign]]*/padding-left: 272px !important;
+		padding-right: 0px !important;/**/
+	}
 /* End */
 
 /*[[BackLinks]]*/
