@@ -632,6 +632,9 @@ none
 /*[[TextareaHeight]]*/
 /* Normal */
 @-moz-document domain('4chan.org') {
+	[id^="q"] .error {
+		bottom: 250px !important;
+	}
 	.postarea form[name^='post'] textarea {
 		height: 78px !important;
 	}
@@ -646,6 +649,9 @@ none
 	}
 /* Medium */
 @-moz-document domain('4chan.org') {
+	[id^="q"] .error {
+		bottom: 308px !important;
+	}
 	.postarea form[name^='post'] textarea {
 		height: 138px !important;
 	}
@@ -660,6 +666,9 @@ none
 	}
 /* Large */
 @-moz-document domain('4chan.org') {
+	[id^="q"] .error {
+		bottom: 338px !important;
+	}
 	.postarea form[name^='post'] textarea {
 		height: 168px !important;
 	}
