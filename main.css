@@ -1614,6 +1614,8 @@ img[src^='http://static.4chan.org/support/'] {
 
 /*[[QuickReply]]*/
 
+/*[[TextareaExpand]]*/
+
 @-moz-document domain(rs.4chan.org) {
   /* /rs/ hacks */
   table.pages td:nth-of-type(2n-1) {
