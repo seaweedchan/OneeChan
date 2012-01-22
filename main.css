@@ -1564,19 +1564,21 @@ body > a[style='cursor: pointer; float: right;']::after {
   left: auto !important; /**/
 }
 
-div[style="width: 100%; "] {
-  position: relative !important;
-  top: 20px !important;
-  max-width: 90% !important;
-  min-height: 60% !important;
-  margin: auto !important;
+body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] {
+  display: block;
+  position: fixed;
+  top: 17px;
+  bottom: 17px;
+  left: 252px;
+  right: 4px;
+  /*[[ChangeAlign]]*/
+  left: 4px;
+  right: 252px;/**/
+  width: auto !important;
+  margin: 0 !important;
 }
 
-table[style="width: 100%; height: 450px; table-layout: fixed; border-collapse: collapse;"] {
-  height: 70% !important;
-}
-
-#fs_preview {
+body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > table {
   height: 100% !important;
 }
 
