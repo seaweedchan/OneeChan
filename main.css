@@ -1256,6 +1256,8 @@ table[align=right]::before {
   right: 20px !important;
   left: auto !important; /**/
   -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  -webkit-transform: scale(.8);
   z-index: 999;
   opacity: 0.4;
 }
