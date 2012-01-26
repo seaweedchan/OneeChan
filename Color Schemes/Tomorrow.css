@@ -58,6 +58,7 @@ textarea,
 #twi_table_div,
 #updater #count:not(.new)::after,
 #qr_form input[name="email"] + label::after,
+.postarea #com_submit + label::after,
 font[color="red"] {
   color: #c5c8c6 !important;
 }
