@@ -1,5 +1,23 @@
 OneeChan changelog
 
+v2.4:
+seaweed:
+-"Toolbox" toolbar redone, icons made smaller and moved to be less intrusive
+-New Margin Style option: "Match Sidebar"
+-New option to expand textarea when it has focus
+-Start adding support for new 4chan X quick reply for whenever its done (a new option will be made so as to not force users to upgrade 4chan X immediately, in case they don't like the new quick reply)
+-Fix error messages not moving with different textarea heights
+-Fixed issue where announcements icon overlapped thanks to SOPA (damn you, SOPA!)
+
+zixaphir:
+-4sight changed to take up window
+
+v2.3:
+-New color scheme: Minimalistic Mayhem
+-Miku mascot changed
+-Gasai Yuno mascot added
+-Stickies and closed threads given better indication
+
 v2.2:
 -Fixed toolbox color looking off in Yotsuba
 -New "Normal (4chan default)" added to Margin Style option
