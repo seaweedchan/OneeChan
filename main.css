@@ -149,6 +149,7 @@ This style is designed for the following browsers, ordered alphabetically:
   .deletebuttons br,
   .doubledash,
   .error:empty,
+  .warning:empty,
   .fill,
   .notice,
   table[style="text-align:center;width:100%;height:300px;"],
@@ -916,7 +917,6 @@ form[name^='post'] #recaptcha_reload_btn,
 #qr_form input[name="email"] + label::after, .postarea #com_submit + label::after {
   content: 'Spoiler?' !important;
   font-size: 12px !important;
-  color: black !important;
 }
 form[name^='post'] input[name='email'] + label {
   position: absolute;

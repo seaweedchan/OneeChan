@@ -724,7 +724,7 @@ none
 /*[[TextareaHeight]]*/
 /* Normal */
 @-moz-document domain('4chan.org') {
-	[id^="q"] .error {
+	[id^="q"] .error, [id^="q"] .warning {
 		bottom: 250px !important;
 	}
 	.postarea form[name^='post'] textarea {
@@ -733,7 +733,7 @@ none
 	#qr textarea {
 		height: 78px !important;
 	}
-	body > table ~ form [id^='q'] .error {
+	body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
 		bottom: 310px !important;
 	}
 	body::after {
@@ -741,7 +741,7 @@ none
 	}
 /* Medium */
 @-moz-document domain('4chan.org') {
-	[id^="q"] .error {
+	[id^="q"] .error, [id^="q"] .warning {
 		bottom: 308px !important;
 	}
 	.postarea form[name^='post'] textarea {
@@ -750,7 +750,7 @@ none
 	#qr textarea {
 		height: 138px !important;
 	}
-	body > table ~ form [id^='q'] .error {
+	body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
 		bottom: 310px !important;
 	}
 	body::after {
@@ -758,7 +758,7 @@ none
 	}
 /* Large */
 @-moz-document domain('4chan.org') {
-	[id^="q"] .error {
+	[id^="q"] .error, [id^="q"] .warning {
 		bottom: 338px !important;
 	}
 	.postarea form[name^='post'] textarea {
@@ -767,7 +767,7 @@ none
 	#qr textarea {
 		height: 168px !important;
 	}
-	body > table ~ form [id^='q'] .error {
+	body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
 		bottom: 340px !important;
 	}
 	body::after {
@@ -797,7 +797,7 @@ none
 /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
 	.postarea,
 	#qr > input,
-	#qr > a:not(.error) {
+	#qr > a:not(.error):not(.warning) {
 		display: none;
 	}
 /* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
@@ -863,7 +863,7 @@ none
 	}
 
 /* Errors */
-	[id^='q'] .error {
+	[id^='q'] .error, [id^='q'] .warning {
 		visibility: visible !important;
 		position: fixed !important;
 		bottom: 250px !important;
@@ -893,7 +893,7 @@ none
 /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
 	.postarea,
 	#qr > input,
-	#qr > a:not(.error) {
+	#qr > a:not(.error):not(.warning) {
 		display: none;
 	}
 /* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
@@ -974,7 +974,7 @@ none
 	}
 
 /* Errors */
-	[id^='q'] .error {
+	[id^='q'] .error, [id^='q'] .warning {
 		visibility: visible !important;
 		position: fixed !important;
 		bottom: 250px !important;
@@ -1004,7 +1004,7 @@ none
 /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
 	.postarea,
 	#qr > input,
-	#qr > a:not(.error) {
+	#qr > a:not(.error):not(.warning) {
 		display: none;
 	}
 /* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
@@ -1121,7 +1121,7 @@ none
 	}
 
 /* Errors */
-	[id^='q'] .error {
+	[id^='q'] .error[id^='q'] .warning {
 		visibility: visible !important;
 		position: fixed !important;
 		bottom: 250px !important;
@@ -1150,7 +1150,7 @@ none
 @-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
 	.postarea,
 	#qr > input,
-	#qr > a:not(.error) {
+	#qr > a:not(.error):not(.warning) {
 		display: none;
 	}
 
@@ -1227,7 +1227,7 @@ none
 	}
 
 /* Errors */
-	[id^='q'] .error {
+	[id^='q'] .error[id^='q'] .warning {
 		visibility: visible !important;
 		position: fixed !important;
 		bottom: 250px !important;
@@ -1254,7 +1254,7 @@ none
 }
 /* No: */
 /*[[TextareaHeight]]*/
-	body > table ~ form [id^='q'] .error {
+	body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
 		position: static !important;
 	} 
 }
