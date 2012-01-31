@@ -1,5 +1,10 @@
 OneeChan changelog
 
+v2.5
+-Post Area and Quick Reply options merged
+-Quick Reply redone for new Quick Reply, which is made optional
+-TextareaHeight removed to keep mascot support in both old and new QR
+
 v2.4:
 seaweed:
 -"Toolbox" toolbar redone, icons made smaller and moved to be less intrusive
