@@ -818,6 +818,9 @@ none
       vertical-align: center !important;
       outline: none !important;
     }
+    .webkit #dump {
+			bottom: 3px !important;
+		}
     #dump:hover {
       background: none !important;
     }
@@ -1008,6 +1011,9 @@ none
       vertical-align: center !important;
       outline: none !important;
     }
+    .webkit #dump {
+			bottom: 3px !important;
+		}
     #dump:hover {
       background: none !important;
     }
@@ -1223,6 +1229,9 @@ none
       vertical-align: center !important;
       outline: none !important;
     }
+    .webkit #dump {
+			bottom: 3px !important;
+		}
     #dump:hover {
       background: none !important;
     }
@@ -1397,6 +1406,9 @@ none
       vertical-align: center !important;
       outline: none !important;
     }
+    .webkit #dump {
+			bottom: 3px !important;
+		}
     #dump:hover {
       background: none !important;
     }
