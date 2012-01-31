@@ -39,6 +39,7 @@ This style is designed for the following browsers, ordered alphabetically:
   body::after {
     position: fixed !important;
     /*[[background]]*/
+    bottom: 248px !important;
     left: 0;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -826,13 +827,6 @@ body > form #imgControls {
 
 #qr .move .inputtext {
   width: 198px !important;
-}
-
-#qr input[name='sub'],
-#qr input[type='file'][name='upfile'] > input[type='text'],
-#files input[type='file'][name='upfile'] > input[type='text'] {
-  width: 237px !important;
-  vertical-align: bottom;
 }
 
 #qr textarea {
