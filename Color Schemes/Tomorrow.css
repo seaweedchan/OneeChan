@@ -98,14 +98,16 @@ input[type='file']::-webkit-file-upload-button {
 a,
 .postername a,
 .commentpostername a,
-a .postertrip {
+a .postertrip,
+#dump {
   color: #81a2be !important;
 }
 
 a:hover,
 .postername a:hover,
 .commentpostername a:hover,
-a:hover .postertrip {
+a:hover .postertrip,
+#dump:hover {
   color: #5F89AC !important;
 }
 

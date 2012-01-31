@@ -89,11 +89,13 @@ input[type='file']::-webkit-file-upload-button {
   color: #555 !important;
 }
 
-a {
+a,
+#dump {
   color: #57577b !important;
 }
 
-a:hover {
+a:hover,
+#dump:hover {
   color: #47475b !important;
 }
 

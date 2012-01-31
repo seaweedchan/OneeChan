@@ -110,7 +110,8 @@
     background-color: #F0E0D6 !important;
   }
 
-  a {
+  a,
+#dump {
     color: #800000 !important;
   }
   hr {
@@ -385,7 +386,8 @@
    /* URL bubbles */
    background: #d6daf0 !important;
  }
- a {
+ a,
+#dump {
   color: #57577b !important;
 }
 .quotejs, a.backlink {
@@ -573,7 +575,8 @@ input[type='file']::-webkit-file-upload-button {
 .replyhider a:hover {
   color: #555 !important;
 }
-a:hover {
+a:hover,
+#dump:hover {
   color: #d00 !important;
 }
 .postername,

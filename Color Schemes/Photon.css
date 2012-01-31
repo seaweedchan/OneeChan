@@ -118,7 +118,8 @@ td.reply > tr > td.reply,
   background-color: #DDD !important;
 }
 
-a {
+a,
+#dump {
   color: #FF6600 !important;
 }
 #header a, #navbot a {
@@ -329,7 +330,8 @@ postername a:hover,
 .commentpostername a:hover,
 .postertrip a:hover,
 #header a:hover,
-.pages input:hover {
+.pages input:hover,
+#dump:hover {
   color: #FF3300 !important;
 }
 .postername,
