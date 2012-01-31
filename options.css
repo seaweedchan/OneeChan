@@ -1477,6 +1477,150 @@ none
 			margin-top: 1px !important;
 		}
     }
+	/* (New QR | 4chan X ≥ 2.25) Floating ONL*/
+    @-moz-document domain('4chan.org') {
+    /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
+    .postarea,
+    #qr > input,
+    #qr > a:not(.error):not(.warning) {
+      display: none;
+    }
+    /* Disable the behavior of #autohide */
+    #qr:not(:hover) > #autohide:checked ~ .autohide,
+    #qr > #autohide:checked ~ .autohide,
+    #qr > #autohide ~ .autohide {
+      overflow: visible !important;
+      height: auto !important;
+    }
+    /* Position and Dimensions of the #qr */
+    #qr {
+      width: 248px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      z-index: 5 !important;
+    }
+
+    #qr_form {
+      height: auto !important;
+      position: static !important;
+    }
+
+    #qr .move .inputtext,
+    #qr .inputtext[type='password'] {
+      width: 248px !important;
+    }
+    /* Width and height of all #qr elements (excluding some captcha elements) */
+    #qr textarea {
+      min-height: 0 !important;
+      resize: none !important;
+    }
+
+    #qr .close {
+    	position: absolute !important;
+    	right: 0px !important;
+    }
+
+    #qr img {
+      height: 47px !important;
+      width: 248px !important;
+    }
+
+    /* Errors */
+    [id^='q'] .error, [id^='q'] .warning {
+      visibility: visible !important;
+      position: fixed !important;
+      bottom: 250px !important;
+      height: 19px !important;
+      width: 248px !important;
+      right: auto !important;
+      left: 2px !important;
+      /*[[ChangeAlign]]*/
+      right: 2px !important;
+      left: auto !important;/**/
+      top: auto !important;
+      background-color: #aaa !important;
+      color: #000 !important;
+      font-size: 11px !important;
+      z-index: 1;
+    }
+    /* Webkit Hax */
+    .fake input[type='file']::-webkit-file-upload-button,
+    * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+      width: 248px !important;
+    }
+    #dump {
+      background: none !important;
+      border: none !important;
+      width: 20px !important;
+      height: 17px !important;
+      margin: 0 !important;
+      position: absolute !important;
+      bottom: 4px !important;
+      right: 0px !important;
+      font-size: 14px !important;
+      color: #F60 !important;
+      vertical-align: center !important;
+      outline: none !important;
+    }
+    .webkit #dump {
+			bottom: 3px !important;
+		}
+    #dump:hover {
+      background: none !important;
+    }
+    #autohide {
+      display: none !important;
+    }
+    #qr select {
+    	position: absolute !important;
+      right: 20px !important;
+      border: none !important;
+      font-size: 12px !important;
+      width: 128px !important;
+    }
+    #qr > form > label {
+      font-size: 0px !important;
+      color: transparent !important;
+    }
+    #qr > form > label::after {
+      content: "Spoiler?";
+      font-size: 12px !important;
+      color: black !important;
+    }
+    .dump > form > label {
+      display: block !important;
+      visibility: hidden !important;
+    }
+    #qr [type="file"] input[type='text'] {
+      width: 104px !important;
+      position: relative !important;
+      right: 1px !important;
+    }
+    #qr [type="file"] {
+      margin-top: 0px !important;
+    }
+    input[title="Verification"], .captcha {
+      margin-top: 1px !important;
+    }
+    [id^='q'] .warning {
+      position: absolute !important;
+      bottom: -2px !important;
+      right: 0px !important;
+      height; 20px !important;
+    }
+    /*[[FieldStyle]]*/
+    .gecko #qr input[type="submit"] {
+    	height: 19px !important;
+    	position: relative !important;
+    	bottom: 1px !important;
+    }
+    .webkit #qr input[type="submit"] {
+    	height: 23px !important;
+    }
+    .webkit #qr [type="file"] {
+			margin-top: 1px !important;
+		}
+    }
   /* (Old QR | 4chan X < 2.25) Fixed: */
     @-moz-document domain('4chan.org') {
       .postarea form[name^='post'] {
@@ -2256,20 +2400,149 @@ none
       position: static !important;
     } 
     }
-  /* Floating QR only (disabled post form) */
+	/* Floating QR ONLY (new QR) */
     @-moz-document domain('4chan.org') {
-    .postarea {
+    /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
+    .postarea,
+    #qr > input,
+    #qr > a:not(.error):not(.warning) {
       display: none;
     }
-    .postarea form[name^='post'] textarea {
-      height: 78px !important;
+    /* Disable the behavior of #autohide */
+    #qr:not(:hover) > #autohide:checked ~ .autohide,
+    #qr > #autohide:checked ~ .autohide,
+    #qr > #autohide ~ .autohide {
+      overflow: visible !important;
+      height: auto !important;
     }
-    #qr textarea {
-      height: 78px !important;
+    /* Position and Dimensions of the #qr */
+    #qr {
+      width: 248px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      z-index: 5 !important;
     }
-    [id^='q'] .error, [id^='q'] .warning {
+
+    #qr_form {
+      height: auto !important;
       position: static !important;
-    } 
+    }
+
+    #qr .move .inputtext,
+    #qr .inputtext[type='password'] {
+      width: 248px !important;
+    }
+    /* Width and height of all #qr elements (excluding some captcha elements) */
+    #qr textarea {
+      min-height: 0 !important;
+      resize: none !important;
+    }
+
+    #qr .close {
+    	position: absolute !important;
+    	right: 0px !important;
+    }
+
+    #qr img {
+      height: 47px !important;
+      width: 248px !important;
+    }
+
+    /* Errors */
+    [id^='q'] .error, [id^='q'] .warning {
+      visibility: visible !important;
+      position: fixed !important;
+      bottom: 250px !important;
+      height: 19px !important;
+      width: 248px !important;
+      right: auto !important;
+      left: 2px !important;
+      /*[[ChangeAlign]]*/
+      right: 2px !important;
+      left: auto !important;/**/
+      top: auto !important;
+      background-color: #aaa !important;
+      color: #000 !important;
+      font-size: 11px !important;
+      z-index: 1;
+    }
+    /* Webkit Hax */
+    .fake input[type='file']::-webkit-file-upload-button,
+    * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+      width: 248px !important;
+    }
+    #dump {
+      background: none !important;
+      border: none !important;
+      width: 20px !important;
+      height: 17px !important;
+      margin: 0 !important;
+      position: absolute !important;
+      bottom: 4px !important;
+      right: 0px !important;
+      font-size: 14px !important;
+      color: #F60 !important;
+      vertical-align: center !important;
+      outline: none !important;
+    }
+    .webkit #dump {
+			bottom: 3px !important;
+		}
+    #dump:hover {
+      background: none !important;
+    }
+    #autohide {
+      display: none !important;
+    }
+    #qr select {
+    	position: absolute !important;
+      right: 20px !important;
+      border: none !important;
+      font-size: 12px !important;
+      width: 128px !important;
+    }
+    #qr > form > label {
+      font-size: 0px !important;
+      color: transparent !important;
+    }
+    #qr > form > label::after {
+      content: "Spoiler?";
+      font-size: 12px !important;
+      color: black !important;
+    }
+    .dump > form > label {
+      display: block !important;
+      visibility: hidden !important;
+    }
+    #qr [type="file"] input[type='text'] {
+      width: 104px !important;
+      position: relative !important;
+      right: 1px !important;
+    }
+    #qr [type="file"] {
+      margin-top: 0px !important;
+    }
+    input[title="Verification"], .captcha {
+      margin-top: 1px !important;
+    }
+    [id^='q'] .warning {
+      position: absolute !important;
+      bottom: -2px !important;
+      right: 0px !important;
+      height; 20px !important;
+    }
+    /*[[FieldStyle]]*/
+    .gecko #qr input[type="submit"] {
+    	height: 19px !important;
+    	position: relative !important;
+    	bottom: 1px !important;
+    }
+    .webkit #qr input[type="submit"] {
+    	height: 23px !important;
+    }
+    .webkit #qr [type="file"] {
+			margin-top: 1px !important;
+		}
     }
 /* End */
 
