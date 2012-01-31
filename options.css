@@ -874,6 +874,17 @@ none
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
+    .gecko #qr input[type="submit"] {
+    	height: 19px !important;
+    	position: relative !important;
+    	bottom: 1px !important;
+    }
+    .webkit #qr input[type="submit"] {
+    	height: 23px !important;
+    }
+    .webkit #qr [type="file"] {
+			margin-top: 1px !important;
+		}
     }
   /* (New QR | 4chan X ≥ 2.25) Slideout: */
     @-moz-document domain('4chan.org') {
@@ -1053,6 +1064,17 @@ none
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
+    .gecko #qr input[type="submit"] {
+    	height: 19px !important;
+    	position: relative !important;
+    	bottom: 1px !important;
+    }
+    .webkit #qr input[type="submit"] {
+    	height: 23px !important;
+    }
+    .webkit #qr [type="file"] {
+			margin-top: 1px !important;
+		}
     }
   /* (New QR | 4chan X ≥ 2.25) Tabbed Slideout: */
     @-moz-document domain('4chan.org') {
@@ -1257,6 +1279,17 @@ none
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
+    .gecko #qr input[type="submit"] {
+    	height: 19px !important;
+    	position: relative !important;
+    	bottom: 1px !important;
+    }
+    .webkit #qr input[type="submit"] {
+    	height: 23px !important;
+    }
+    .webkit #qr [type="file"] {
+			margin-top: 1px !important;
+		}
     }
   /* (New QR | 4chan X ≥ 2.25) Fade: */
     @-moz-document domain('4chan.org') {
@@ -1420,6 +1453,17 @@ none
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
+    .gecko #qr input[type="submit"] {
+    	height: 19px !important;
+    	position: relative !important;
+    	bottom: 1px !important;
+    }
+    .webkit #qr input[type="submit"] {
+    	height: 23px !important;
+    }
+    .webkit #qr [type="file"] {
+			margin-top: 1px !important;
+		}
     }
   /* (Old QR | 4chan X < 2.25) Fixed: */
     @-moz-document domain('4chan.org') {
