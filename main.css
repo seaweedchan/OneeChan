@@ -1317,7 +1317,8 @@ span[id^='4chan_ext_right'] {
 
 #navlinks {
   position: fixed !important;
-  top: 0px !important;
+  bottom: 2px !important;
+  top: auto !important;
   z-index: 99 !important;
 }
 html body > span[style='left: 5px; position: absolute;']:nth-of-type(0) {
