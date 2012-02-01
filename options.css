@@ -821,7 +821,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -1021,7 +1020,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -1246,7 +1244,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -1430,7 +1427,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -1593,7 +1589,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -2405,7 +2400,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -2587,7 +2581,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -2808,7 +2801,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -2984,7 +2976,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -3133,7 +3124,6 @@ none
       bottom: 4px !important;
       right: 0px !important;
       font-size: 14px !important;
-      color: #F60 !important;
       vertical-align: center !important;
       outline: none !important;
     }
@@ -3213,9 +3203,6 @@ none
     .field[name="name"] {
       width: 84px !important;
     }
-    #qr input[name="name"] {
-      height: 22px !important;
-    }
   /* Non-Compact (Old 4chan X default) */
     #qr textarea {
       height: 68px !important;
@@ -3226,9 +3213,6 @@ none
     }
     .field[name="email"], .field[name="sub"] {
       margin-top: 1px !important;
-    }
-    #qr input[name="name"] {
-      height: 22px !important;
     }
 /* End */
 

@@ -604,11 +604,6 @@ input[type='file'][name='upfile'],
   width: 300px !important;
 }
 
-/* Make QR name height smaller */
-#qr input[name="name"] {
-  height: 19px !important;
-}
-
 /* Positioning of various postarea checkboxes */
 .postarea form[name^='post'] label {
   position: absolute;
