@@ -769,12 +769,6 @@ form[name^='post'] input[name='recaptcha_response_field'] {
   z-index: 99 !important;
 }
 
-body > table ~ form .reply a > img {
-  position: relative !important;
-  top: 0px !important;
-  z-index: 96 !important;
-}
-
 .filesize ~ a > img + img {
   position: relative !important;
   top: 0px !important;
