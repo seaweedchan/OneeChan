@@ -776,6 +776,13 @@ none
       resize: none !important;
     }
 
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
+
     #qr img {
       height: 47px !important;
       width: 248px !important;
@@ -968,6 +975,13 @@ none
     #files input[type='file'][name='upfile'] > input[type='text'] {
       width: 185px !important;
     }
+
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
 
     #qr img {
       height: 47px !important;
@@ -1187,6 +1201,13 @@ none
       resize: none !important;
     }
 
+  		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
+
     #qr img {
       height: 47px !important;
       width: 248px !important;
@@ -1364,6 +1385,13 @@ none
       resize: none !important;
     }
 
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
+
     #qr img {
       height: 47px !important;
       width: 248px !important;
@@ -1477,7 +1505,7 @@ none
 			margin-top: 1px !important;
 		}
     }
-	/* (New QR | 4chan X ≥ 2.25) Floating ONL*/
+	/* (New QR | 4chan X ≥ 2.25) Floating ONLY */
     @-moz-document domain('4chan.org') {
     /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
     .postarea,
@@ -1519,6 +1547,13 @@ none
     	position: absolute !important;
     	right: 0px !important;
     }
+
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
 
     #qr img {
       height: 47px !important;
@@ -1695,6 +1730,13 @@ none
       width: 185px !important;
     }
 
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
+
     #qr img {
       height: 47px !important;
       width: 248px !important;
@@ -1842,6 +1884,13 @@ none
     #files input[type='file'][name='upfile'] > input[type='text'] {
       width: 185px !important;
     }
+
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
 
     #qr img {
       height: 47px !important;
@@ -2063,6 +2112,13 @@ none
       width: 185px !important;
     }
 
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
+
     #qr img {
       height: 47px !important;
       width: 248px !important;
@@ -2199,6 +2255,13 @@ none
     #files input[type='file'][name='upfile'] > input[type='text'] {
       width: 185px !important;
     }
+
+		body > table ~ form .reply a > img {
+  		position: relative !important;
+  		top: 0px !important;
+  		/*[[ChangeAlign]]*/
+  		z-index: 96 !important;/**/
+		}
 
     #qr img {
       height: 47px !important;
@@ -2590,480 +2653,12 @@ none
 		width: 400px !important;
 		max-width: 400px !important;
 		position: relative !important;
-		right: 152px !important;
+		/*[[ChangeAlign]]*/
+		right: 152px !important;/**/
 		z-index: 99 !important;
 	}
 /* No */
 /* END */
-
-/*[[QuickReply]]*/
-/* Yes: */
-@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
-/* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
-	.postarea,
-	#qr > input,
-	#qr > a:not(.error):not(.warning) {
-		display: none;
-	}
-/* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
-	#qr .move {
-		color: transparent !important;
-		font-size: 0 !important;
-		height: 20px !important;
-		cursor: default !important;
-	}
-/* Disable the behavior of #autohide */
-	#qr:not(:hover) > #autohide:checked ~ .autohide,
-	#qr > #autohide:checked ~ .autohide,
-	#qr > #autohide ~ .autohide	{
-		overflow: visible !important;
-		height: auto !important;
-	}
-/* Position and Dimensions of the #qr */
-	#qr {
-		overflow: visible !important;
-		position: fixed;
-		top: auto !important;
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		bottom: 2px !important;
-		width: 248px !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		z-index: 5 !important;
-	}
-
-	#qr_form {
-		height: auto !important;
-		position: static !important;
-	}
-
-	#qr .move .inputtext,
-	#qr .inputtext[type='password'] {
-		width: 248px !important;
-	}
-/* Width and height of all #qr elements (excluding some captcha elements) */
-	#qr textarea {
-		min-height: 0 !important;
-		resize: none !important;
-	}
-
-	#qr form[name^='post'] .inputtext,
-	#qr #files input[type=file][name='upfile'] {
-		width: 248px !important;
-	}
-
-	#qr form[name^='post'] .inputtext[name='sub'],
-	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
-	#files input[type='file'][name='upfile'] > input[type='text'] {
-		width: 185px !important;
-	}
-
-	#qr img {
-		height: 47px !important;
-		width: 248px !important;
-	}
-
-/* Errors */
-	[id^='q'] .error, [id^='q'] .warning {
-		visibility: visible !important;
-		position: fixed !important;
-		bottom: 250px !important;
-		height: 19px !important;
-		width: 248px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important;/**/
-		top: auto !important;
-		background-color: #aaa !important;
-		color: #000 !important;
-		font-size: 11px !important;
-		z-index: 1;
-	}
-/* Webkit Hax */
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
-		width: 248px !important;
-	}
-}
-/*[[TextareaHeight]]*/
-}
-/* ...and slideout: */
-@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
-/* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
-	.postarea,
-	#qr > input,
-	#qr > a:not(.error):not(.warning) {
-		display: none;
-	}
-/* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
-	#qr .move {
-		cursor: default !important;
-		color: transparent !important;
-		font-size: 0 !important;
-		height: 20px !important;
-	}
-
-/* Disable the behavior of #autohide */
-	#qr:not(:hover) > #autohide:checked ~ .autohide,
-	#qr > #autohide:checked ~ .autohide,
-	#qr > #autohide ~ .autohide	{
-		overflow: visible !important;
-		height: auto !important;
-	}
-/* Position and Dimensions of the #qr */
-	#qr {
-		overflow: visible !important;
-		position: fixed;
-		left: -233px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: -233px !important;/**/
-		top: auto !important;
-		bottom: 2px !important;
-		width: 248px !important;
-		margin: 0 !important;
-		padding: 0;
-		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		z-index: 5 !important;
-	}
-
-	#qr:hover {
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		-webkit-transition: right .3s linear, left .3s linear;
-		-moz-transition: right .3s linear, left .3s linear;
-		-o-transition: right .3s linear, left .3s linear;
-	}
-
-	#qr_form {
-		height: auto !important;
-		position: static !important;
-	}
-
-	#qr .move .inputtext,
-	#qr .inputtext[type='password'] {
-		width: 248px !important;
-	}
-/* Width and height of all #qr elements (excluding some captcha elements) */
-	#qr textarea {
-		min-height: 0 !important;
-		resize: none !important;
-	}
-
-	#qr form[name^='post'] .inputtext,
-	#qr #files input[type=file][name='upfile'] {
-		width: 248px !important;
-	}
-
-	#qr form[name^='post'] .inputtext[name='sub'],
-	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
-	#files input[type='file'][name='upfile'] > input[type='text'] {
-		width: 185px !important;
-	}
-
-	#qr img {
-		height: 47px !important;
-		width: 248px !important;
-	}
-
-/* Errors */
-	[id^='q'] .error, [id^='q'] .warning {
-		visibility: visible !important;
-		position: fixed !important;
-		bottom: 250px !important;
-		height: 19px !important;
-		width: 248px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important;/**/
-		top: auto !important;
-		background-color: #aaa !important;
-		color: #000 !important;
-		font-size: 11px !important;
-		z-index: 1;
-	}
-/* Webkit Hax */
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
-		width: 248px !important;
-	}
-}
-/*[[TextareaHeight]]*/
-}
-/* ...and tabbed slideout (No transitions in Chrome) */
-@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
-/* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
-	.postarea,
-	#qr > input,
-	#qr > a:not(.error):not(.warning) {
-		display: none;
-	}
-/* .move contains the name field of the #qr. Here we're making it behave like no more than a container. We also hide the "Quick Reply" text with a hack. */
-	#qr .move {
-		cursor: default !important;
-		color: transparent !important;
-		font-size: 0 !important;
-		height: 20px !important;
-	}
-/* Disable the behavior of #autohide */
-	#qr:not(:hover) > #autohide:checked ~ .autohide,
-	#qr > #autohide:checked ~ .autohide,
-	#qr > #autohide ~ .autohide	{
-		overflow: visible !important;
-		height: auto !important;
-	}
-/* Position and Dimensions of the #qr */
-	#qr {
-		overflow: visible !important;
-		position: fixed;
-		left: -248px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: -248px !important;/**/
-		top: auto !important;
-		bottom: 2px !important;
-		width: 248px !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		-webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		-moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		-o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
-		z-index: 5 !important;
-	}
-
-	#qr:hover {
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		-webkit-transition: right .3s linear, left .3s linear;
-		-moz-transition: right .3s linear, left .3s linear;
-		-o-transition: right .3s linear, left .3s linear;
-	}
-/* Tabbed Text. I'm not exactly sure about the mechanics behind how this works. */
-	#qr::before {
-		-webkit-transform: rotate(90deg);
-		-webkit-transform-origin: bottom left;
-		-moz-transform: rotate(90deg);
-		-moz-transform-origin: bottom left;
-		-o-transform: rotate(90deg);
-		-o-transform-origin: bottom left;
-		margin-left: 250px;
-		margin-right: -232px;
-/*[[ChangeAlign]]*/
-		-webkit-transform: rotate(-90deg);
-		-webkit-transform-origin: bottom right;
-		-moz-transform: rotate(-90deg);
-		-moz-transform-origin: bottom right;
-		-o-transform: rotate(-90deg);
-		-o-transform-origin: bottom right;
-		margin-left: -212px;
-		margin-right: 264px;/**/
-		margin-bottom: -20px;
-		width: 210px;
-		display: block;
-		font-size: 10px !important;
-		opacity: 1;
-		text-align: center;
-		content: 'POST FORM - POST FORM - POST FORM';
-		-webkit-transition: opacity .3s ease-in-out 3s;
-		-moz-transition: opacity .3s ease-in-out 3s;
-		-o-transition: opacity .3s ease-in-out 3s;
-	}
-
-	#qr:hover::before {
-		opacity: 0;
-		-webkit-transition: opacity .3s linear;
-		-moz-transition: opacity .3s linear;
-		-o-transition: opacity .3s linear;
-	}
-
-	#qr_form {
-		height: auto !important;
-		position: static !important;
-	}
-
-	#qr .move .inputtext,
-	#qr .inputtext[type='password'] {
-		width: 248px !important;
-	}
-/* Width and height of all #qr elements (excluding some captcha elements) */
-	#qr textarea {
-		min-height: 0 !important;
-		resize: none !important;
-	}
-
-	#qr form[name^='post'] .inputtext,
-	#qr #files input[type=file][name='upfile'] {
-		width: 248px !important;
-	}
-
-	#qr form[name^='post'] .inputtext[name='sub'],
-	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
-	#files input[type='file'][name='upfile'] > input[type='text'] {
-		width: 185px !important;
-	}
-
-	#qr img {
-		height: 47px !important;
-		width: 248px !important;
-	}
-
-/* Errors */
-	[id^='q'] .error[id^='q'] .warning {
-		visibility: visible !important;
-		position: fixed !important;
-		bottom: 250px !important;
-		height: 19px !important;
-		width: 248px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important;/**/
-		top: auto !important;
-		background-color: #aaa !important;
-		color: #000 !important;
-		font-size: 11px !important;
-		z-index: 1;
-	}
-/* Webkit Hax */
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
-		width: 248px !important;
-	}
-}
-/*[[TextareaHeight]]*/
-}
-/* ...and fade: */
-@-moz-document regexp("http://boards\.4chan\.org/.*/res/.*") {
-	.postarea,
-	#qr > input,
-	#qr > a:not(.error):not(.warning) {
-		display: none;
-	}
-
-	#qr .move {
-		cursor: default !important;
-		color: transparent !important;
-		font-size: 0 !important;
-		height: 20px !important;
-	}
-
-	#qr:not(:hover) > #autohide:checked ~ .autohide,
-	#qr > #autohide:checked ~ .autohide,
-	#qr > #autohide ~ .autohide	{
-		overflow: visible !important;
-		height: auto !important;
-	}
-
-	#qr {
-		overflow: visible !important;
-		position: fixed;
-		top: auto !important;
-		left: 2px !important;
-		right: auto !important;
-/*[[ChangeAlign]]*/
-		left: auto !important;
-		right: 2px !important;/**/
-		bottom: 2px !important;
-		width: 248px !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		opacity: 0.2;
-		-webkit-transition: opacity .3s ease-in-out 3s;
-		-moz-transition: opacity .3s ease-in-out 3s;
-		-o-transition: opacity .3s ease-in-out 3s;
-		z-index: 5 !important;
-	}
-
-	#qr:hover {
-		opacity: 1;
-		-webkit-transition: opacity .3s linear;
-		-moz-transition: opacity .3s linear;
-		-o-transition: opacity .3s linear;
-	}
-
-	#qr_form {
-		height: auto !important;
-		position: static !important;
-	}
-
-	#qr .move .inputtext,
-	#qr .inputtext[type='password'] {
-		width: 248px !important;
-	}
-/* Width and height of all #qr elements (excluding some captcha elements) */
-	#qr textarea {
-		min-height: 0 !important;
-		resize: none !important;
-	}
-
-	#qr form[name^='post'] .inputtext,
-	#qr #files input[type=file][name='upfile'] {
-		width: 248px !important;
-	}
-
-	#qr form[name^='post'] .inputtext[name='sub'],
-	#qr form[name^='post'] input[name='upfile'] > input[type='text'],
-	#files input[type='file'][name='upfile'] > input[type='text'] {
-		width: 185px !important;
-	}
-
-	#qr img {
-		height: 47px !important;
-		width: 248px !important;
-	}
-
-/* Errors */
-	[id^='q'] .error[id^='q'] .warning {
-		visibility: visible !important;
-		position: fixed !important;
-		bottom: 250px !important;
-		height: 19px !important;
-		width: 248px !important;
-		right: auto !important;
-		left: 2px !important;
-/*[[ChangeAlign]]*/
-		right: 2px !important;
-		left: auto !important;/**/
-		top: auto !important;
-		background-color: #aaa !important;
-		color: #000 !important;
-		font-size: 11px !important;
-		z-index: 1;
-	}
-/* Webkit Hax */
-	.fake input[type='file']::-webkit-file-upload-button,
-	* > #qr form[name^='post'] input[type='file'][name='upfile'] {
-		width: 248px !important;
-	}
-}
-/*[[TextareaHeight]]*/
-}
-/* No: */
-/*[[TextareaHeight]]*/
-	body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
-		position: static !important;
-	} 
-}
-/* End */
 
 /*[[helpertext]]*/
 /* Yes: */

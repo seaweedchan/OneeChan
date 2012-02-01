@@ -1662,13 +1662,14 @@ body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > 
 img[src^='http://static.4chan.org/support/'] {
   display: none;
 }
+/*[[TextareaExpand]]*/
 }
 
 /*[[CustomBoardNames]]*/
 
 /*[[QuickReply]]*/
 
-/*[[TextareaExpand]]*/
+
 
 @-moz-document domain(rs.4chan.org) {
   /* /rs/ hacks */
