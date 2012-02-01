@@ -23,8 +23,11 @@ thumb:hover { background: -moz-linear-gradient(top, rgba(255,255,255,.4), rgba(2
   background: #aaa;
   color: #101010;
 }
-body {
-  background: #000000 url(http://i.imgur.com/DRaZf.jpg) fixed !important;
+body, html {
+  background-color: #000000 !important;
+  background-image: url(http://i.imgur.com/DRaZf.jpg) !important;
+  background-attachment: fixed !important;
+  background-repeat: repeat !important;
 }
 body,
 body > form,

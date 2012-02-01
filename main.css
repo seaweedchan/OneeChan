@@ -1530,6 +1530,7 @@ html body span[style='left: 5px; position: absolute;'] a:hover::after {
   -webkit-transform: scale(.9);
   -o-transform: scale(.9);
   opacity: 0.4;
+  z-index: 5;
 }
 #watcher:hover::before {
   opacity: 1;
