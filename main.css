@@ -1275,6 +1275,7 @@ table[align=right]:hover::after {
   bottom: 26px !important;
   font-size: 12px !important;
   content: 'File Only';
+  width: 50px !important;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
