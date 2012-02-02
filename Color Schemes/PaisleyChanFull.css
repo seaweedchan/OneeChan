@@ -177,7 +177,8 @@ textarea,
 #options.reply.dialog,
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr .warning {
   background-color: #1c1c1c !important;
 }
 
@@ -220,7 +221,8 @@ html,
 body,
 div.postarea > form td:nth-of-type(3) > label input,
 div[id^=qr],
-table.reply[style^='clear: both'] {
+table.reply[style^='clear: both'],
+ {
   background-color: #101010 !important;
 }
 

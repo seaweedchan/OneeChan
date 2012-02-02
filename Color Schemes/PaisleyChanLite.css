@@ -177,7 +177,8 @@ textarea,
 #options.reply.dialog,
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr .warning {
   background-color: #1c1c1c !important;
 }
 
