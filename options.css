@@ -877,7 +877,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -1074,7 +1077,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -1296,7 +1302,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -1477,7 +1486,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -1625,7 +1637,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -2431,7 +2446,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -2610,7 +2628,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -2828,7 +2849,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -3001,7 +3025,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
@@ -3147,7 +3174,10 @@ none
     [id^='q'] .warning {
       position: absolute !important;
       bottom: -2px !important;
-      right: 0px !important;
+      left: 0px !important;
+      /*[[ChangeAlign]]*/
+      left: auto !important;
+      right: 0px !important;/**/
       height; 20px !important;
     }
     /*[[FieldStyle]]*/
