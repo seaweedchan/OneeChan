@@ -693,3 +693,9 @@ a.forwardlink {
 td.reply {
 background-color: transparent !important;
 }
+#qp .postername, #qp .commentpostername, #qp a.backlink, #qp blockquote {
+background: none !important;
+border: none !important;
+box-shadow: none !important;
+border-radius: 0px !important;
+}
