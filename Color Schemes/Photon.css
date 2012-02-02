@@ -206,7 +206,8 @@ select,
 #updater #count:not(.new)::after,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
-.postarea #com_submit + label::after {
+.postarea #com_submit + label::after,
+#qr > form > label::after {
   color: #333 !important;
 }
 a.quotelink {

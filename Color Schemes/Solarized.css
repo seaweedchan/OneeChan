@@ -56,7 +56,8 @@ textarea,
 #updater #count:not(.new)::after,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
-.postarea #com_submit + label::after {
+.postarea #com_submit + label::after,
+#qr > form > label::after {
   color: #93a1a1 !important;
 }
 
