@@ -3278,6 +3278,12 @@ none
 		color: transparent !important;
 	}
 
+	.field {
+		-moz-transition: 0s !important;
+		-webkit-transition: 0s !important;
+		-o-transition: 0s !important;
+	}
+
 	.postblock,
 /* End */
 
