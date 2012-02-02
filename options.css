@@ -490,6 +490,10 @@ none
 	#watcher:hover {
 		top: 35px !important; 
 	}
+	#watcher {
+		position: fixed !important;
+		top: 35px !important;
+	}
 	#navbot::after {
 		top: 18px !important;
 	}
@@ -517,6 +521,10 @@ none
   }
 	#watcher:hover {
 		top: 120px !important; 
+	}
+	#watcher {
+		position: fixed !important;
+		top: 120px !important;
 	}
 	#navbot::after {
 		top: 103px !important;
@@ -552,6 +560,10 @@ none
 	#watcher:hover {
 		top: 120px !important; 
 	}
+	#watcher {
+		position: fixed !important;
+		top: 120px !important;
+	}
 	#navbot::after {
 		top: 103px !important;
 	}
@@ -579,6 +591,10 @@ none
   }
 	#watcher:hover {
 		top: 35px !important; 
+	}
+	#watcher {
+		position: fixed !important;
+		top: 35px !important;
 	}
 	#navbot::after {
 		top: 18px !important;
@@ -3708,18 +3724,35 @@ domain('images.4chan.org'),
 
 /*[[watcherslideout]]*/
 /* Enabled */
+#watcher  {
+  position: fixed !important;
+  top: -1000px !important;
+  right: auto !important;
+  left: 2px !important;
+  /*[[ChangeAlign]]*/
+  right: 2px !important;
+  left: auto !important; /**/
+  bottom: auto !important;
+  width: 246px !important;
+  padding-bottom: 4px !important;
+}
 	#watcher:hover {
 		position: fixed !important;
 		z-index: 99 !important;
 	}
 /* Disabled */
-	#watcher {
-		position: fixed !important;
-		top: 120px !important;
-		z-index: 4 !important;
-	}
 	#watcher::before {
 		display: none !important;
+	}
+	#watcher  {
+  	right: auto !important;
+  	left: 2px !important;
+  	/*[[ChangeAlign]]*/
+  	right: 2px !important;
+  	left: auto !important; /**/
+  	width: 246px !important;
+  	padding-bottom: 4px !important;
+  	z-index: 96 !important;
 	}
 /* End */
 

@@ -1494,18 +1494,7 @@ html body span[style='left: 5px; position: absolute;'] a:hover::after {
   content: '+0';
 }
 
-#watcher  {
-  position: fixed !important;
-  top: -1000px !important;
-  right: auto !important;
-  left: 2px !important;
-  /*[[ChangeAlign]]*/
-  right: 2px !important;
-  left: auto !important; /**/
-  bottom: auto !important;
-  width: 246px !important;
-  padding-bottom: 4px !important;
-}
+
 #watcher > div {
   max-width: 246px !important;
 }
