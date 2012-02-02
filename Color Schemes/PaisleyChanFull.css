@@ -699,3 +699,7 @@ border: none !important;
 box-shadow: none !important;
 border-radius: 0px !important;
 }
+body > table ~ form .reply a > img{
+position: relative !important;
+top: -15px !important;
+}

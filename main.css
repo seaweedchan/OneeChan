@@ -384,7 +384,9 @@ a.yuimenuitemlabel {
 #navtop {
   z-index: 98;
 }
-
+body > table ~ form .reply a > img {
+  top: 0px !important;
+}
 #footer {
   z-index: -1;
   visibility: hidden;
