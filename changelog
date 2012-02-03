@@ -1,5 +1,12 @@
 OneeChan changelog
 
+v2.7
+-Muted color scheme redone and added in
+-PaisleyChan split into Lite and full versions, the full being closer to the original PaisleyChan, Lite being the colors only.
+-Terminal color scheme added in for pretending to be Viper
+-PaisleyChan given a few bug fixes
+-Issue with thread watcher positioning fixed
+
 v2.6
 -Bugfixes and polish for last update
 -PaisleyChan color scheme added (open to suggestions for it -- sorry, no cool name effects without hurting performance)
