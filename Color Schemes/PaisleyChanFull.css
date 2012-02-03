@@ -507,7 +507,6 @@ span.postertrip {
   border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
   display: block;
-  float: left;
   margin: 0px 10px 0px 0px !important;
   padding: 4px 6px !important;
   padding-top: 2px !important;
@@ -602,7 +601,7 @@ form[name="delform"] a img {
   box-shadow:0px 0px 15px rgba(25,25,25,0.7) !important;
 }
 form[name="delform"] .filesize + br + a[target="_blank"] img, #qp .filesize + br + a[target="_blank"] img {
-margin: 0 0 0 10px !important;
+margin-bottom: 0px !important;
 }
 body > table ~ form .reply a > img{
 position: relative !important;
@@ -665,6 +664,7 @@ form[name="delform"] table blockquote {
 
 table a[href^="http://images.4chan.org"] + blockquote {
   margin-top: -14px !important;
+  padding-left: 150px !important;
 }
 
 a.backlink {
