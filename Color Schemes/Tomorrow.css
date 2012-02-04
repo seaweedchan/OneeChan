@@ -292,7 +292,6 @@ input[type='file'] > input[type='button'] {
 html body span[style='left: 5px; position: absolute;'] a:hover,
 #com_submit:hover,
 input[type='submit']:hover,
-.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover,
 input[type='file'] > input[type='button']:hover {
   background-color: #373b41 !important;
 }
@@ -354,7 +353,6 @@ input:not([type='checkbox']),
 #qr_captcha input,
 input[type='file'] > input[type='button'],
 input[type='submit'],
-.webkit #qr > form input[type="file"]::-webkit-file-upload-button,
 select,
 textarea {
   border: none !important;
