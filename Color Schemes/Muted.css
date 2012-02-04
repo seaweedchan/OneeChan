@@ -47,6 +47,9 @@ input[value="Report"],
 body::before {
   background-color: #F5F2E9 !important;
 }
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  background-color: #F5F2E9 !important;
+}
 #options.reply.dialog, #options .dialog {
   background-color: #F5F2E9 !important;
   color: #000 !important;
@@ -255,7 +258,7 @@ input[type='submit'] {
   background-color: #FFFFEE !important;
 }
 #qr {
-  background-color: #EEE !important;
+  background-color: #FFF !important;
 }
 
 .logo b span {
@@ -420,4 +423,16 @@ form[name='delform'] > div:not(.thread) select,
 .pages input[type='submit'] {
   margin: 0 !important;
   height: 17px !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+background-color: #CCC !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+background-color: #FFF  !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  border: none !important;
+  border-right: 1px solid #CCC !important;
 }

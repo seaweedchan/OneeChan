@@ -261,6 +261,19 @@
   input[type='submit'] {
     background-color: #FFFFEE !important;
   }
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  background-color: #FFFFEE !important;
+  border: none !important;
+    border-right: 1px solid #D9BFB7 !important;
+  color: #000 !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #F0E0D6 !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+  background-color: #fff !important;
+}
 }
 /* Yotsuba B */
 
@@ -537,6 +550,19 @@ div[id^='4chan_ext_iqr'] > *,
 .bd,
 input[type='submit'] {
   background-color: #eef2ff !important;
+}
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  background-color: #eef2ff !important;
+  border: none !important;
+  border-right: 1px solid #b7c5d9 !important;
+  color: #000 !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #d6bad0 !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+  background-color: #fff !important;
 }
 }
 

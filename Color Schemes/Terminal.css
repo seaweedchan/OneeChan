@@ -435,3 +435,17 @@ border: 1px dashed #00FE00 !important;
 #iHover {
 padding-bottom: 0px !important;
 }
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  border: none !important;
+  background-color: #000 !important;
+  border-right: 1px dashed #00FE00 !important;
+  color: #00FE00 !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #000 !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+  background-color: #000 !important;
+}

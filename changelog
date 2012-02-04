@@ -6,6 +6,9 @@ v2.7
 -Terminal color scheme added in for pretending to be Viper
 -PaisleyChan given a few bug fixes
 -Issue with thread watcher positioning fixed
+-New QR file upload button styled in Chrome
+-New QR replies section (after you click the +) moved down near the button
+-Firefox Browse button moved to the left, away from the Submit button
 
 v2.6
 -Bugfixes and polish for last update

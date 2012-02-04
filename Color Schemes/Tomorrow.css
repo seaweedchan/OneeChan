@@ -63,6 +63,10 @@ font[color="red"],
 #qr > form > label::after {
   color: #c5c8c6 !important;
 }
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  color: #c5c8c6 !important;
+}
+
 
 #options ul {	
   border-bottom: 1px solid #c5c8c6 !important;
@@ -162,6 +166,9 @@ textarea,
 .deletebuttons input[value=Delete],
 input[value="Report"],
 body::before {
+  background-color: #282a2e !important;
+}
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
   background-color: #282a2e !important;
 }
 
@@ -285,8 +292,13 @@ input[type='file'] > input[type='button'] {
 html body span[style='left: 5px; position: absolute;'] a:hover,
 #com_submit:hover,
 input[type='submit']:hover,
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover,
 input[type='file'] > input[type='button']:hover {
   background-color: #373b41 !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #373b41 !important;
 }
 
 td[style='border: 1px dashed;'],
@@ -342,9 +354,14 @@ input:not([type='checkbox']),
 #qr_captcha input,
 input[type='file'] > input[type='button'],
 input[type='submit'],
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button,
 select,
 textarea {
   border: none !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+    border: none !important;
 }
 
 #qr input[type='checkbox'],
@@ -425,3 +442,12 @@ body > a[style='cursor: pointer; float: right;']::after {
 input:not([type='checkbox']) {
   border: 1px solid transparent !important;
 }
+
+.webkit #qr > form input[type="file"]:hover {
+background-color: #282a2e !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  border-right: 1px solid #1d1f21 !important;
+}
+

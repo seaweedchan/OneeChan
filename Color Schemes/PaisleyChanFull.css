@@ -697,3 +697,16 @@ body > table ~ form .reply a > img{
 position: relative !important;
 top: -15px !important;
 }
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  background-color: #202020 !important;
+  border: none !important;
+  color: #999 !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #181818 !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+  background-color: #1c1c1c !important;
+}

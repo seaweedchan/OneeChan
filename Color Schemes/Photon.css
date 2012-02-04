@@ -41,11 +41,13 @@ td.reply,
 html body span[style='left: 5px; position: absolute;'] a,
 input[type='submit'],
 #com_submit,
-input[type='file'] > input[type='button'],
 .deletebuttons input[value=Delete],
 input[value="Report"],
 body::before {
   background-color: #DDD !important;
+}
+input[type='file'] > input[type='button'] {
+  background-color: #FFF !important;
 }
 #options.reply.dialog, #options .dialog {
   background-color: rgba(0,0,0,0.5) !important;
@@ -452,4 +454,18 @@ form[name='delform'] > div:not(.thread) select,
 .pages input[type='submit'] {
   margin: 0 !important;
   height: 17px !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  background-color: #FFFFEE !important;
+  border: none !important;
+  border-right: 1px solid #CCC !important;
+  color: #000 !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #CCC !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+  background-color: #FFF !important;
 }

@@ -441,3 +441,17 @@ font[color="red"]::before {
 body > a[style='cursor: pointer; float: right;']::after { 
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAWVJREFUOE+tlE0rhFEUx8frLCYWYjGYWGMhSlEWysbeYlKirH0BSwvlC0ixkIVkoSys5G0hRUTJy/r5In5/nZmu63ketzuz+HWae8/5zblzz51CkiSFZtJUmRrLEhbZnIM1WIFxaAk5SZpwlsJb+PI44nPlP6kvnKHgDd5Bgk3YhnOT3xD78qSusJ3EC/iAdei1wlbiMOyYdCtUOGUFB8TOlKIya/fwnLH/05zbYdWEyzkd7FrOYFaOK1y05NUc4T57n6BuUyfEXRyz5FNiW0rBAGuvcAcdIUIlHVuXutkup0iXcmZ7G6GXom41wBoNzeAj6IL0JRql2lxqEvpDOqwdf4LkPXgAjZBmUoOuri9N/EI8gSFfnPX0ukmUeAHmYQT0HCfhyelWp9HPUffE/DkcOkL9DJLWO40Rqkv/rV+xVlKnMULV6M37Ul1otFDSabi24+uyehoVSjoKSxb/vOXY4/+q+wY/0mz6DPACvwAAAABJRU5ErkJggg==') !important;
 }
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
+  background-color: #313C36 !important;
+  border: none !important;
+  border-right: 1px solid #888 !important;
+  color: #dcdccc !important;
+}
+
+.webkit #qr > form input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #262626 !important;
+}
+.webkit #qr > form input[type="file"]:hover {
+  background-color: #575757 !important;
+}
