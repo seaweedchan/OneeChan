@@ -709,15 +709,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -729,8 +726,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      bottom: 0px !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -759,6 +756,12 @@ none
     #spoilerlabel {
       position: absolute !important;
       bottom: 0px !important;
+      right: 20px !important;
+    }
+    #spoilerlabel input {
+      position: relative !important;
+      top: 4px !important;
+      left: 2px !important;
     }
     #qr [type="file"] {
       margin-top: 0px !important;
@@ -954,15 +957,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -974,8 +974,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      bottom: 0px !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -1004,6 +1004,12 @@ none
     #spoilerlabel {
       position: absolute !important;
       bottom: 0px !important;
+      right: 20px !important;
+    }
+    #spoilerlabel input {
+      position: relative !important;
+      top: 4px !important;
+      left: 2px !important;
     }
     #qr [type="file"] {
       margin-top: 0px !important;
@@ -1224,15 +1230,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -1244,8 +1247,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      bottom: 0px !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -1274,6 +1277,12 @@ none
     #spoilerlabel {
       position: absolute !important;
       bottom: 0px !important;
+      right: 20px !important;
+    }
+    #spoilerlabel input {
+      position: relative !important;
+      top: 4px !important;
+      left: 2px !important;
     }
     #qr [type="file"] {
       margin-top: 0px !important;
@@ -1453,15 +1462,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -1473,8 +1479,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      bottom: 0px !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -1503,202 +1509,12 @@ none
     #spoilerlabel {
       position: absolute !important;
       bottom: 0px !important;
-    }
-    #qr [type="file"] {
-      margin-top: 0px !important;
-    }
-    input[title="Verification"], .captcha {
-      margin-top: 1px !important;
-    }
-    [id^='q'] .warning {
-      position: absolute !important;
-      bottom: -2px !important;
-      left: 0px !important;
-      /*[[ChangeAlign]]*/
-      left: auto !important;
-      right: 0px !important;/**/
-      height; 20px !important;
-    }
-    /*[[FieldStyle]]*/
-    .gecko #qr input[type="submit"] {
-    	height: 19px !important;
-    	position: relative !important;
-    	bottom: 1px !important;
-    }
-    .webkit #qr input[type="submit"] {
-    	height: 23px !important;
-    }
-    .webkit #qr [type="file"] {
-			margin-top: 1px !important;
-		}
-		.webkit #qr > form input[type="file"]::-webkit-file-upload-button {
-   		height: 21px !important;
-  		min-height: 21px !important;
-   		max-height: 21px !important;
-   		font-size: 12px !important;
-  		width: 57px !important;
-  		word-spacing: 5px !important;
-    }
-    .webkit #qr > form input[type="file"] {
-      margin-right: 1px !important;
-    }
-    .dump #replies {
-      position: relative !important;
-      top: 175px !important;
-      height: 90px !important;
-    }
-    .dump textarea {
-      position: relative !important;
-      bottom: 100px !important;
-    }
-    .dump .captcha {
-      position: relative !important;
-      bottom: 100px !important;
-    }
-    .dump input[title="Verification"] {
-      position: relative !important;
-      bottom: 100px !important;
-    }
-    .dump .preview {
-      height: 80px !important;
-      width: 80px !important;
-    }
-    .gecko #qr > form input[type="file"] > input[type="button"] {
-      float: left !important;
-      width: 68px !important;
-      margin-left: -1px !important;
-    }
-    .gecko #qr > form [type="file"] input[type='text'] {
-      float: right !important;
-      margin-right: -1px !important;
-    }
-    .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
-      position: relative !important;
-      bottom: 10px !important;
-    }
-    }
-	/* (New QR | 4chan X ≥ 2.25) Floating ONLY */
-    @-moz-document domain('4chan.org') {
-    /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
-    .postarea,
-    #qr > input,
-    #qr > a:not(.error):not(.warning) {
-      display: none;
-    }
-    /* Disable the behavior of #autohide */
-    #qr:not(:hover) > #autohide:checked ~ .autohide,
-    #qr > #autohide:checked ~ .autohide,
-    #qr > #autohide ~ .autohide {
-      overflow: visible !important;
-      height: auto !important;
-    }
-    /* Position and Dimensions of the #qr */
-    #qr {
-      width: 248px !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      z-index: 5 !important;
-    }
-
-    #qr_form {
-      height: auto !important;
-      position: static !important;
-    }
-
-    #qr .move .inputtext,
-    #qr .inputtext[type='password'] {
-      width: 248px !important;
-    }
-    /* Width and height of all #qr elements (excluding some captcha elements) */
-    #qr textarea {
-      min-height: 0 !important;
-      resize: none !important;
-    }
-
-    #qr .close {
-    	position: absolute !important;
-    	right: 0px !important;
-    }
-
-		body > table ~ form .reply a > img {
-  		position: relative !important;
-  		/*[[ChangeAlign]]*/
-  		z-index: 96 !important;/**/
-		}
-
-    #qr img {
-      height: 47px !important;
-      width: 248px !important;
-    }
-
-    /* Errors */
-    [id^='q'] .error, [id^='q'] .warning {
-      visibility: visible !important;
-      position: fixed !important;
-      bottom: 250px !important;
-      height: 19px !important;
-      width: 248px !important;
-      right: auto !important;
-      left: 2px !important;
-      /*[[ChangeAlign]]*/
-      right: 2px !important;
-      left: auto !important;/**/
-      top: auto !important;
-      background-color: #aaa !important;
-      color: #000 !important;
-      font-size: 11px !important;
-      z-index: 1;
-    }
-    /* Webkit Hax */
-    .fake input[type='file']::-webkit-file-upload-button,
-    * > #qr form[name^='post'] input[type='file'][name='upfile'] {
-      width: 248px !important;
-    }
-    #dump {
-      background: none !important;
-      border: none !important;
-      width: 20px !important;
-      height: 17px !important;
-      margin: 0 !important;
-      position: absolute !important;
-      bottom: 4px !important;
-      right: 0px !important;
-      font-size: 14px !important;
-      vertical-align: center !important;
-      outline: none !important;
-    }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
-    #dump:hover {
-      background: none !important;
-    }
-    #autohide {
-      display: none !important;
-    }
-    #qr select {
-    	position: absolute !important;
       right: 20px !important;
-      border: none !important;
-      font-size: 12px !important;
-      width: 128px !important;
     }
-    #qr > form > label {
-      font-size: 0px !important;
-      color: transparent !important;
-    }
-    #qr > form > label::after {
-      content: "Spoiler?";
-      font-size: 12px !important;
-    }
-    .dump > form > label {
-      display: block !important;
-      visibility: hidden !important;
-    }
-    #qr [type="file"] input[type='text'] {
-      width: 104px !important;
+    #spoilerlabel input {
       position: relative !important;
-      right: 1px !important;
+      top: 4px !important;
+      left: 2px !important;
     }
     #qr [type="file"] {
       margin-top: 0px !important;
@@ -2514,15 +2330,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -2531,7 +2344,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -2696,15 +2510,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -2713,7 +2524,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -2917,15 +2729,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -2934,7 +2743,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -3093,15 +2903,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -3110,7 +2917,8 @@ none
     }
     #qr select {
       position: absolute !important;
-      right: 20px !important;
+      bottom: -1px !important;
+      right: 65px !important;
       background: none !important;
       border: none !important;
       font-size: 12px !important;
@@ -3243,15 +3051,12 @@ none
       height: 17px !important;
       margin: 0 !important;
       position: absolute !important;
-      bottom: 4px !important;
+      bottom: 2px !important;
       right: 0px !important;
       font-size: 14px !important;
       vertical-align: center !important;
       outline: none !important;
     }
-    .webkit #dump {
-			bottom: 3px !important;
-		}
     #dump:hover {
       background: none !important;
     }
@@ -3259,8 +3064,10 @@ none
       display: none !important;
     }
     #qr select {
-    	position: absolute !important;
-      right: 20px !important;
+      position: absolute !important;
+      bottom: -1px !important;
+      right: 65px !important;
+      background: none !important;
       border: none !important;
       font-size: 12px !important;
       width: 128px !important;

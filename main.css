@@ -1219,11 +1219,11 @@ table[align=right]::before {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAftJREFUOE991M0rRFEYx/E7jYkRTWymycZmZCUrWYgUZTFrkub1T1Cy8LJXkrKWlWRrJZsZW+upSTZkJxbSmIzmXt/feK6O8aI+nnPOc+7vnHnB8zp+isVipFQq9SCJcUxjBpMYRj97op3Pfc1peujGKJtXUcEjfAR4RRUH7JlFQod+C7SQPmoG52gg+EOL9WusYehbmN1EIVfQxr9C3PUH9m1jsFAoeB6/Ino5dpMwpM68jBsn+MnW7qi+HXbP80uIKagHq2gggEKOMYUV5jU8M97BBNaZ39pen3qBlIKSqFhDQWVMoQtxZLChzbq97d93Dn5hPKegcTw6QTeMdZO4PhFqDAl4+XxeQWM4Q8t5ZkvNafgITItaQwax8ONVCNI4QcPZr+cOFTTTsajGMzaQcIKizOftEB0WHqx6pKBJvDqNJ8Y7SMHL5XIRtL/JzONYRBVu2J6aw9YITygzn7AAhaQxj/Z7Rh2gv4s3O7xJXVajHwdoIcAd1pHEGE5Qw6JCsIBLZ796IwqKYhbXFuRTb7GPMzTsoSp110KatrdO3URv+71kkMAaHmyDbhYGaCy68Ztzk3fGp9BL//zj1QBD2M5ms/fwEfyjTk8hei+/viLtMBoRDGIJF3j5JajJWg2bSCOGn/+atGjNFHUOWzjEEfawjBH06mA34QPkk++/bAlEMAAAAABJRU5ErkJggg==') !important;
   visibility: visible !important;
   position: fixed !important;
-  bottom: 2px !important;
+  bottom: 1px !important;
   left: 215px !important;
   right: auto !important;
   /*[[ChangeAlign]]*/
-  right: 20px !important;
+  right: 210px !important;
   left: auto !important; /**/
   -moz-transform: scale(.8);
   -o-transform: scale(.8);
@@ -1235,14 +1235,44 @@ table[align=right]::before {
 table[align=right]:hover::before {
   opacity: 1;
   cursor: pointer;
+  bottom: -30px !important;
+}
+
+.deletebuttons:hover {
+  z-index: 99 !important;
 }
 
 table[align=right]:hover {
   position: fixed !important;
   top: auto !important;
-  bottom: 16px !important;
-  z-index: 99 !important;
+  bottom: -4px !important;
+  left: 2px !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 2px !important;/**/
+  z-index: 98 !important;
 }
+
+.deletebuttons {
+  height: 18px !important;
+  width: 248px !important;
+}
+
+.deletebuttons input[value="Delete"], .deletebuttons input[value="Report"] {
+  float: left !important;
+}
+
+.gecko table[align=right], .gecko .deletebuttons {
+  width: 243px !important;
+}
+
+.gecko .deletebuttons .inputtext {
+  position: fixed !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  width: 75px !important;
+}
+
 
 #popup {
   position: fixed !important;
@@ -1258,9 +1288,9 @@ table[align=right]:hover input[type='checkbox'] {
   left: 75px !important;
   /*[[ChangeAlign]]*/
   left: auto !important; 
-  right: 168px !important;/**/
+  right: 130px !important;/**/
   top: auto !important;
-  bottom: 26px !important;
+  bottom: 2px !important;
 }
 
 table[align=right]:hover::after {
@@ -1269,9 +1299,9 @@ table[align=right]:hover::after {
   left: 90px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 120px !important;/**/
+  right: 80px !important;/**/
   top: auto !important;
-  bottom: 26px !important;
+  bottom: 2px !important;
   font-size: 12px !important;
   content: 'File Only';
   width: 50px !important;
@@ -1280,14 +1310,14 @@ table[align=right]:hover::after {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	table[align=right]:hover input[type='checkbox'] {
 		position: absolute !important;
-		right: 173px !important;
-		top: 11px !important;
+		right: 75px !important;
+		top: 6px !important;
 	}
 
 	table[align=right]:hover::after {
 		position: absolute !important;
-		right: 125px !important;
-		top: 11px !important;
+		right: 25px !important;
+		top: 6px !important;
 	}
 }
 
@@ -1358,16 +1388,16 @@ html body span[style='left: 5px; position: absolute;'] a::after {
   position: fixed !important;
   left: 195px !important;
   right: auto !important;
-  bottom: 2px !important;
+  bottom: 1px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 40px !important;/**/
+  right: 230px !important;/**/
   cursor: pointer !important;
   -moz-transform: scale(.8);
   -webkit-transform: scale(.8);
   -o-transform: scale(.8);
   opacity: 0.4;
-  z-index: 999;
+  z-index: 97 !important;
 }
 html body span[style='left: 5px; position: absolute;'] a:hover::after {
   opacity: 1;
