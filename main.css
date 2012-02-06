@@ -246,7 +246,7 @@ div.logo img {
   z-index: 1;
   -webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, .1)), color-stop(21.01%, transparent) );
 }
-
+/*[[boardlogo]]*/
 div.logo font[size='5'] span {
   font-size: 30px !important;
   font-weight: 400 !important;

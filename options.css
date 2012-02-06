@@ -509,6 +509,55 @@ none
 	font[color="red"]::before {
 		top: 18px !important;
 	}
+/* Board Name - No Sidebar */
+  div.logo {
+    position: fixed !important;
+    right: auto !important;
+    left: 2px !important;
+/*[[ChangeAlign]]*/
+    right: 2px !important;
+    left: auto !important;/**/
+    bottom: 327px !important;
+    width: 248px !important;
+    z-index: 4;
+    text-align: center;
+  }
+  div.logo img {
+    display: none;
+  }
+  #watcher:hover {
+    top: 35px !important; 
+  }
+  #watcher::before {
+    top: 18px !important;
+  }
+  #watcher:hover {
+    top: 35px !important; 
+  }
+  #watcher {
+    position: fixed !important;
+    top: 35px !important;
+  }
+  #navbot::after {
+    top: 18px !important;
+  }
+  #navbot:hover {
+    top: 35px !important;
+  }
+  #navtopr a::after {
+    top: 18px !important;
+  }
+  body > a[style='cursor: pointer; float: right;']::after {
+    top: 16px !important;
+  }
+  font[color="red"]::before {
+    top: 18px !important;
+  }
+  div.logo, div.logo img {
+    position: static !important;
+    margin: auto !important;
+    margin-top: 10px !important;
+  }
 /* Logo */
 	div.logo > *:not(img) {
 		display: none;
@@ -541,6 +590,43 @@ none
 	font[color="red"]::before {
 		top: 103px !important;
 	}
+/* Logo - No Sidebar */
+  div.logo > *:not(img) {
+    display: none;
+  }
+  #watcher:hover {
+    top: 35px !important; 
+  }
+  #watcher::before {
+    top: 18px !important;
+  }
+  #watcher:hover {
+    top: 35px !important; 
+  }
+  #watcher {
+    position: fixed !important;
+    top: 35px !important;
+  }
+  #navbot::after {
+    top: 18px !important;
+  }
+  #navbot:hover {
+    top: 35px !important;
+  }
+  #navtopr a::after {
+    top: 18px !important;
+  }
+  body > a[style='cursor: pointer; float: right;']::after {
+    top: 16px !important;
+  }
+  font[color="red"]::before {
+    top: 18px !important;
+  }
+  div.logo, div.logo img {
+    position: static !important;
+    margin: auto !important;
+    margin-top: 10px !important;
+  }
 /* Board Name + Logo */
 	div.logo {
 		position: fixed !important;
@@ -579,6 +665,52 @@ none
 	font[color="red"]::before {
 		top: 103px !important;
 	}
+/* Board Name + Logo - No sidebar */
+  div.logo {
+    position: fixed !important;
+    right: auto !important;
+    left: 2px !important;
+/*[[ChangeAlign]]*/
+    right: 2px !important;
+    left: auto !important;/**/
+    top: 120px !important;
+    width: 248px !important;
+    z-index: 1;
+    text-align: center;
+  }
+  #watcher:hover {
+    top: 35px !important; 
+  }
+  #watcher::before {
+    top: 18px !important;
+  }
+  #watcher:hover {
+    top: 35px !important; 
+  }
+  #watcher {
+    position: fixed !important;
+    top: 35px !important;
+  }
+  #navbot::after {
+    top: 18px !important;
+  }
+  #navbot:hover {
+    top: 35px !important;
+  }
+  #navtopr a::after {
+    top: 18px !important;
+  }
+  body > a[style='cursor: pointer; float: right;']::after {
+    top: 16px !important;
+  }
+  font[color="red"]::before {
+    top: 18px !important;
+  }
+  div.logo, div.logo img {
+    position: static !important;
+    margin: auto !important;
+    margin-top: 10px !important;
+  }
 /* Hide Both */
 	div.logo {
 		display: none;
@@ -611,6 +743,7 @@ none
 	font[color="red"]::before {
 		top: 18px !important;
 	}
+
 /* End */
 
 /*[[QuickReply]]*/
