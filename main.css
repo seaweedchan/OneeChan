@@ -1683,6 +1683,12 @@ input[type="file"]::-webkit-file-upload-button:hover {
 input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
   cursor: pointer !important;
 }
+#recaptcha_image img,
+#quick_recaptcha_image img,
+#qr img,
+.captcha img {
+  opacity: /*[[CaptchaOpacity]]*/ !important;
+}
 }
 
 /*[[CustomBoardNames]]*/
