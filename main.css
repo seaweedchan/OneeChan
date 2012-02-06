@@ -1676,7 +1676,7 @@ img[src^='http://static.4chan.org/support/'] {
 }
 /*[[TextareaExpand]]*/
 /*[[HideTrip]]*/
-/*[[BoardHighlight]]*/
+
 input[type="file"]::-webkit-file-upload-button:hover {
   cursor: pointer !important;
 }
@@ -1689,7 +1689,7 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
 
 /*[[QuickReply]]*/
 
-
+/*[[BoardHighlight]]*/
 
 @-moz-document domain(rs.4chan.org) {
   /* /rs/ hacks */
