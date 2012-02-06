@@ -778,7 +778,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -835,6 +834,7 @@ none
       position: relative !important;
       bottom: 10px !important;
     }
+    /*[[FieldStyle]]*/
     }
   /* (New QR | 4chan X ≥ 2.25) Slideout: */
     @-moz-document domain('4chan.org') {
@@ -1026,7 +1026,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -1083,6 +1082,7 @@ none
       position: relative !important;
       bottom: 10px !important;
     }
+    /*[[FieldStyle]]*/
     }
   /* (New QR | 4chan X ≥ 2.25) Tabbed Slideout: */
     @-moz-document domain('4chan.org') {
@@ -1299,7 +1299,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -1356,6 +1355,7 @@ none
       position: relative !important;
       bottom: 10px !important;
     }
+    /*[[FieldStyle]]*/
     }
   /* (New QR | 4chan X ≥ 2.25) Fade: */
     @-moz-document domain('4chan.org') {
@@ -1531,7 +1531,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -1588,6 +1587,7 @@ none
       position: relative !important;
       bottom: 10px !important;
     }
+    /*[[FieldStyle]]*/
     }
   /* (Old QR | 4chan X < 2.25) Fixed: */
     @-moz-document domain('4chan.org') {
@@ -2383,7 +2383,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -2399,6 +2398,7 @@ none
     	position: absolute !important;
     	right: 0px !important;
     }
+    /*[[FieldStyle]]*/
     }
   /* (No 4chan X / Floating QR) Slideout: */
     @-moz-document domain('4chan.org') {
@@ -2563,7 +2563,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -2579,6 +2578,7 @@ none
     	position: absolute !important;
     	right: 0px !important;
     }
+    /*[[FieldStyle]]*/
     }
   /* (No 4chan X / Floating QR) Tabbed Slideout: */
     @-moz-document domain('4chan.org') {
@@ -2782,7 +2782,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -2797,7 +2796,8 @@ none
     #qr .close {
     	position: absolute !important;
     	right: 0px !important;
-    } 
+    }
+    /*[[FieldStyle]]*/ 
     }
   /* (No 4chan X / Floating QR) Fade: */
     @-moz-document domain('4chan.org') {
@@ -2956,7 +2956,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -2971,7 +2970,8 @@ none
     #qr .close {
     	position: absolute !important;
     	right: 0px !important;
-    } 
+    }
+    /*[[FieldStyle]]*/ 
     }
 	/* Floating QR ONLY (new QR) */
     @-moz-document domain('4chan.org') {
@@ -3104,7 +3104,6 @@ none
       right: 0px !important;/**/
       height; 20px !important;
     }
-    /*[[FieldStyle]]*/
     .gecko #qr input[type="submit"] {
     	height: 19px !important;
     	position: relative !important;
@@ -3116,6 +3115,7 @@ none
     .webkit #qr [type="file"] {
 			margin-top: 1px !important;
 		}
+    /*[[FieldStyle]]*/
     }
 /* End */
 
@@ -3144,6 +3144,9 @@ none
     }
     .field[name="email"], .field[name="sub"] {
       margin-top: 1px !important;
+    }
+    .dump #replies {
+      top: 130px !important;
     }
 /* End */
 
