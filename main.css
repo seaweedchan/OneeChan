@@ -1676,6 +1676,7 @@ img[src^='http://static.4chan.org/support/'] {
 }
 /*[[TextareaExpand]]*/
 /*[[HideTrip]]*/
+/*[[BoardHighlight]]*/
 input[type="file"]::-webkit-file-upload-button:hover {
   cursor: pointer !important;
 }
