@@ -668,7 +668,7 @@ none
       resize: none !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -916,7 +916,7 @@ none
       width: 185px !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -1189,7 +1189,7 @@ none
       resize: none !important;
     }
 
-  		body > table ~ form .reply a > img {
+  		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -1421,7 +1421,7 @@ none
       resize: none !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -1663,7 +1663,7 @@ none
       width: 185px !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -1817,7 +1817,7 @@ none
       width: 185px !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -2043,7 +2043,7 @@ none
       width: 185px !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -2186,7 +2186,7 @@ none
       width: 185px !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -2289,7 +2289,7 @@ none
       resize: none !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -2469,7 +2469,7 @@ none
       resize: none !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -2688,7 +2688,7 @@ none
       resize: none !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
@@ -2862,7 +2862,7 @@ none
       resize: none !important;
     }
 
-		body > table ~ form .reply a > img {
+		body > table ~ form .reply a > img[src^="http://images"]
   		position: relative !important;
   		/*[[ChangeAlign]]*/
   		z-index: 96 !important;/**/
