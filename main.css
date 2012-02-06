@@ -1220,7 +1220,7 @@ table[align=right]::before {
   visibility: visible !important;
   position: fixed !important;
   bottom: 1px !important;
-  left: 215px !important;
+  left: 20px !important;
   right: auto !important;
   /*[[ChangeAlign]]*/
   right: 210px !important;
@@ -1266,10 +1266,13 @@ table[align=right]:hover {
   width: 243px !important;
 }
 
-.gecko .deletebuttons .inputtext {
+.gecko table[align=right]:hover .inputtext {
   position: fixed !important;
   bottom: 0px !important;
-  right: 0px !important;
+  left: 175px !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 0px !important;/**/
   width: 75px !important;
 }
 
@@ -1285,7 +1288,7 @@ table[align=right]:hover {
 
 table[align=right]:hover input[type='checkbox'] {
   position: fixed !important;
-  left: 75px !important;
+  left: 105px !important;
   /*[[ChangeAlign]]*/
   left: auto !important; 
   right: 130px !important;/**/
@@ -1296,7 +1299,7 @@ table[align=right]:hover input[type='checkbox'] {
 table[align=right]:hover::after {
   visibility: visible !important;
   position: fixed !important;
-  left: 90px !important;
+  left: 120px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
   right: 80px !important;/**/
@@ -1386,7 +1389,7 @@ html body span[style='left: 5px; position: absolute;'] a {
 html body span[style='left: 5px; position: absolute;'] a::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUJJREFUOE/Vkj9LglEUh18xC0GkfwS1+hGipcK2hr7DGw0uDRKCQyI0tAQN7U4tfoOGsKkhCAqaai0CQYRQGiwiK59fHPNSr+RbNPTCw/Fez3nuvedez/tXn+/7UUj8atMIRmEFNn4konAEZmEbLqEaSkRBBKYhA0dwD29wN5CIRM92kSbuwy08m0SiFmwaBWIOlmFSi38swiAOWbiCB0cgiXiFhtHUDuEayqAWRN9lJio6R+kKvotP1BxCSqfqymIMFuEAtOqLs7NHfu8Yu7aTG8tpE3XcuHtENXsG8nAB6o2O1XSbzXgY1qFmi1WIY18uxBIXiCVQL+qfk5hbgnMTnREn+t6s/oQ12AsQzTN/aiIJ+4vsIoZISgaI5pg/BjX8BMYHemsBoimK9W3BKvSaHcZIoS5G7y9psfcww4j+NLcD3erbomf70ToAAAAASUVORK5CYII=');
   position: fixed !important;
-  left: 195px !important;
+  left: 2px !important;
   right: auto !important;
   bottom: 1px !important;
   /*[[ChangeAlign]]*/
