@@ -487,3 +487,7 @@ input:not([type='checkbox']) {
 .webkit #qr > form input[type="file"]:hover {
   background-color: rgba(0,0,0,0.6) !important;
 }
+
+.gecko input[type="file"] > input[type="button"] {
+padding-bottom: 2px !important;
+}
