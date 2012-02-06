@@ -1,5 +1,14 @@
 OneeChan changelog
 
+v2.8
+-Non-Compact mode fixed with new QR previews section
+-Delete/Return buttons moved and redone so as to not cover Submit button on hover -- Now hovering delete icon immediately brings up the delete button at the cursor
+-Fix issue where image thumbnails overlap QR
+-New options added for Board Name and Logo, to put each at their static position at the top of the page like normal 4chan.
+-New font: Trebuchet MS, backup of Verdana.
+-New option: Current Board Highlighting. No longer has the color it did when the option existed in AppChan, so that it fits in in all color schemes.
+-New option: reCAPTCHA Opacity. Selections are values from 0.1 til 1.0, letting you choose your own.
+
 v2.7
 -Muted color scheme redone and added in
 -PaisleyChan split into Lite and full versions, the full being closer to the original PaisleyChan, Lite being the colors only.
