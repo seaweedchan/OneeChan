@@ -1692,6 +1692,7 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
 .captcha img {
   opacity: /*[[CaptchaOpacity]]*/ !important;
 }
+/*[[SlideoutNav]]*/
 }
 
 /*[[CustomBoardNames]]*/
