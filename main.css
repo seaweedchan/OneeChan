@@ -1733,6 +1733,35 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
   .postarea tr:nth-of-type(2) .postblock b::after {
     content: '';
   }
+
+  .postarea {
+    display: block !important;
+    position: static !important;
+  }
+
+  a[href^="http://www.megaupload"] { 
+    text-decoration: line-through !important;
+    font-size: 0px !important;
+    color: transparent !important;
+  }
+  a[href^="http://www.megaupload"]::after { 
+    color: red !important;
+    content: "Megaupload" !important;
+    font-size: 12px !important;
+    text-decoration: line-through !important;
+  }
+  .postarea, span {
+    font-size: 12px !important;
+  }
+  input[value="Go"] {
+    position: relative !important;
+    bottom: 2px !important;
+    height: 20px !important;
+  }
+  input[value="Submit"] {
+    height: 22px !important;
+  }
+
 }
 
 @-moz-document url-prefix('http://www.4chan.org/') {
