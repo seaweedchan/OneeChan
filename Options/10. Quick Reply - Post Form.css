@@ -562,14 +562,17 @@
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
     margin-left: -212px;
-    margin-right: 264px;/**/
+    margin-right: 264px;
     margin-bottom: -20px;
     width: 210px;
     display: block;
-    font-size: 10px !important;
+    font-size: 12px !important;
     opacity: 1;
+    height: 18px !important;
     text-align: center;
-    content: 'POST FORM - POST FORM - POST FORM';
+    content: 'Quick Reply';
+    padding-top: 3px !important;
+    vertical-align: middle !important;
     -webkit-transition: opacity .3s ease-in-out 3s;
     -moz-transition: opacity .3s ease-in-out 3s;
     -o-transition: opacity .3s ease-in-out 3s;
@@ -1329,7 +1332,7 @@
     margin-right: 264px;
     margin-bottom: -20px;
     width: 210px;
-    display: block;
+    display: inline-block;
     font-size: 12px !important;
     opacity: 1;
     height: 18px !important;
@@ -2061,7 +2064,7 @@
     margin-right: 264px;
     margin-bottom: -20px;
     width: 210px;
-    display: block;
+    display: inline-block;
     font-size: 12px !important;
     opacity: 1;
     height: 18px !important;
