@@ -166,7 +166,7 @@ This style is designed for the following browsers, ordered alphabetically:
  .pages,
  .quotejs,
  .chanlinkify {
-   text-decoration: none !important;
+   text-decoration: /*[[UnderlineLinks]]*/ !important;
  }
 
  a {
