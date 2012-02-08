@@ -1,0 +1,28 @@
+/*[[CustomBoardNames]]*/
+
+/* Disabled */
+/* Enabled */
+  /* Custom Board Names */
+  /* Start Copy Here */
+  @-moz-document url-prefix('http://boards.4chan.org/g/') { /* Edit this for the board you want */
+  body div.logo font[size="5"] span,
+  div.logo font[size="1"],
+  div.logo font[size="1"] a {
+  font-size: 0 !important;
+    visibility: hidden !important;
+  }
+  div.logo font[size="5"] span:after {
+    font-size: 26px !important;
+    visibility: visible !important;
+    content: "/g/ - Technology"; /* Edit this for the first line */
+  }
+  div.logo font[size="1"]:after {
+    font-size: 12px !important;
+    visibility: visible !important;
+    content: "Text Board: /tech/"; /* Edit this for the second line */
+  }
+  body {
+  /*[[Margin]]*/
+  }
+  }
+  /* End Copy Here */
