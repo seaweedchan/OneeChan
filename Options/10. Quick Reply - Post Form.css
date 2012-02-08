@@ -1325,18 +1325,21 @@
     -moz-transform-origin: bottom right;
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
-    margin-left: -212px; /* I have no idea why Firefox halves this. */
-    margin-right: 264px; /* I have no idea why Firefox halves this and Chrome ignores it. */
-    margin-bottom: -20px;/**/
+    margin-left: -212px;
+    margin-right: 264px;
+    margin-bottom: -20px;
     width: 210px;
-    display: inline-block; /* I have no idea why this is the only one that rotates and obeys margins in Chrome? */
-    font-size: 10px !important;
+    display: block;
+    font-size: 12px !important;
     opacity: 1;
+    height: 18px !important;
     text-align: center;
-    content: 'POST FORM - POST FORM - POST FORM';
+    content: 'Quick Reply';
+    padding-top: 3px !important;
+    vertical-align: middle !important;
     -webkit-transition: opacity .3s ease-in-out 3s;
     -moz-transition: opacity .3s ease-in-out 3s;
-    -o-transition:  opacity .3s ease-in-out 3s;
+    -o-transition: opacity .3s ease-in-out 3s;
   }
   .postarea form[name='post']:hover::before {
     opacity: 0;
@@ -1417,14 +1420,17 @@
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
     margin-left: -212px;
-    margin-right: 264px;/**/
+    margin-right: 264px;
     margin-bottom: -20px;
     width: 210px;
     display: block;
-    font-size: 10px !important;
+    font-size: 12px !important;
     opacity: 1;
+    height: 18px !important;
     text-align: center;
-    content: 'POST FORM - POST FORM - POST FORM';
+    content: 'Quick Reply';
+    padding-top: 3px !important;
+    vertical-align: middle !important;
     -webkit-transition: opacity .3s ease-in-out 3s;
     -moz-transition: opacity .3s ease-in-out 3s;
     -o-transition: opacity .3s ease-in-out 3s;
@@ -2051,18 +2057,21 @@
     -moz-transform-origin: bottom right;
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
-    margin-left: -212px; /* I have no idea why Firefox halves this. */
-    margin-right: 264px; /* I have no idea why Firefox halves this and Chrome ignores it. */
-    margin-bottom: -20px;/**/
+    margin-left: -212px;
+    margin-right: 264px;
+    margin-bottom: -20px;
     width: 210px;
-    display: inline-block; /* I have no idea why this is the only one that rotates and obeys margins in Chrome? */
-    font-size: 10px !important;
+    display: block;
+    font-size: 12px !important;
     opacity: 1;
+    height: 18px !important;
     text-align: center;
-    content: 'POST FORM - POST FORM - POST FORM';
+    content: 'Quick Reply';
+    padding-top: 3px !important;
+    vertical-align: middle !important;
     -webkit-transition: opacity .3s ease-in-out 3s;
     -moz-transition: opacity .3s ease-in-out 3s;
-    -o-transition:  opacity .3s ease-in-out 3s;
+    -o-transition: opacity .3s ease-in-out 3s;
   }
   .postarea form[name='post']:hover::before {
     opacity: 0;
