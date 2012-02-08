@@ -562,7 +562,7 @@
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
     margin-left: -212px;
-    margin-right: 264px;
+    margin-right: 264px;/**/
     margin-bottom: -20px;
     width: 210px;
     display: block;
@@ -1329,7 +1329,7 @@
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
     margin-left: -212px;
-    margin-right: 264px;
+    margin-right: 264px;/**/
     margin-bottom: -20px;
     width: 210px;
     display: inline-block;
@@ -1423,7 +1423,7 @@
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
     margin-left: -212px;
-    margin-right: 264px;
+    margin-right: 264px;/**/
     margin-bottom: -20px;
     width: 210px;
     display: block;
@@ -2061,7 +2061,7 @@
     -o-transform: rotate(-90deg);
     -o-transform-origin: bottom right;
     margin-left: -212px;
-    margin-right: 264px;
+    margin-right: 264px;/**/
     margin-bottom: -20px;
     width: 210px;
     display: inline-block;
