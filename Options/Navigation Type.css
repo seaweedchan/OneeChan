@@ -1,0 +1,319 @@
+/*[[StickyNavigation]]*/
+
+/* Stickied Header / Pages */
+  #header,
+  .pages {
+    position: fixed !important;
+  }
+
+  .pages {
+    margin: 0 0 0 250px !important;
+    /*[[ChangeAlign]]*/margin: 0 250px 0 0 !important;/**/
+  }
+
+  .navlinks {
+    padding-top: 14px
+  }
+
+  #header {
+    top: 0 !important;
+  }
+
+  .pages {
+    top: auto !important;
+    bottom: 0px !important;
+    padding-bottom: 1px !important;
+  }
+
+  #navbar {
+    margin-left: auto !important;
+    margin-right: -265px !important;
+    /*[[ChangeAlign]]*/
+    margin-right: auto !important;
+    margin-left: -265px !important;/**/
+    bottom: 16px !important;
+    height: 26px !important;
+  }
+
+  #navbar {
+    bottom: 1px !important;
+  }
+
+  #boardsMenu {
+    bottom: 46px !important;
+  }
+
+  #navbar #boardsMenu {
+    bottom: 26px !important;
+  }
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: 250px !important;
+    padding-right: 250px !important;
+    z-index: 1;
+  }
+  form[name='delform'] {
+    padding: 17px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+  #header {
+    top: 0px !important;
+  }
+/* Normal (4chan default) */
+  #header {
+    position: absolute !important;
+  }
+
+  .pages {
+    padding: 0 !important;
+  }
+  form[name='delform'] {
+    padding: 17px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+  #header {
+    top: 0px !important;
+  }
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: 2px !important;
+    padding-right: 0 !important;
+    z-index: 1;
+  }
+/* Inverted Stickied Header / Pages */
+  #header,
+  .pages {
+    position: fixed !important;
+  }
+
+
+  .navlinks {
+    padding-top: 14px;
+  }
+
+  .navlinks {
+    padding-top: 0;
+  }
+
+  #header {
+    top: auto !important;
+    bottom: 0px !important;
+  }
+
+  .pages {
+    bottom: auto !important;
+    top: 0 !important;
+  }
+
+  #navbar {
+    margin-left: auto !important;
+    margin-right: -265px !important;
+    /*[[ChangeAlign]]*/
+    margin-right: auto !important;
+    margin-left: -265px !important;/**/
+    bottom: 16px !important;
+    height: 26px !important;
+  }
+
+  #boardsMenu {
+    bottom: 46px !important;
+  }
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: 250px !important;
+    padding-right: 250px !important;
+    z-index: 1;
+  }
+  body::before {
+    z-index: 2 !important;
+  }
+  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a::after {
+    z-index: 3 !important;
+  }
+  body {
+    padding-top: 5px !important;
+  }
+  form[name='delform'] {
+    padding: 17px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+  body > table ~ form[name='delform'] {
+    padding-top: 0px !important;
+  }
+/* Removed regular header */
+  .pages {
+    padding: 0 !important;
+  }
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: auto !important;
+    padding-right: 250px !important;
+    padding-left: 250px !important;
+    /*[[ChangeAlign]]*/
+    left: auto !important;
+    right: 2px !important;/**/
+    z-index: 1;
+  }
+  body {
+    padding-top: 5px !important;
+  }
+  form[name='delform'] {
+    padding: 0px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+  #header {
+    top: -150px !important;
+  }
+/* Bottom Stickied Header (non-stickied pages) */
+  #header {
+    position: fixed !important;
+  }
+
+  .navlinks {
+    padding-top: 14px;
+  }
+
+  .navlinks {
+    padding-top: 0;
+  }
+
+  #header {
+    top: auto !important;
+    bottom: 0px !important;
+  }
+
+  #navbar {
+    margin-left: auto !important;
+    margin-right: -265px !important;
+    /*[[ChangeAlign]]*/
+    margin-right: auto !important;
+    margin-left: -265px !important;/**/
+    bottom: 16px !important;
+    height: 26px !important;
+  }
+
+  #boardsMenu {
+    bottom: 46px !important;
+  }
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: auto !important;
+    padding-right: 250px !important;
+    padding-left: 250px !important;
+    /*[[ChangeAlign]]*/
+    left: auto !important;
+    right: 2px !important;/**/
+    z-index: 1;
+  }
+  body {
+    padding-top: 5px !important;
+  }
+  form[name='delform'] {
+    padding: 0px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+/* Top Stickied Pages */
+  .pages {
+    position: fixed !important;
+    bottom: auto !important;
+    top: 0 !important;
+  }
+
+  #navtop {
+    display: none !important;
+  }
+
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: 250px !important;
+    padding-right: 250px !important;
+    z-index: 1;
+  }
+  body::before {
+    z-index: 2 !important;
+  }
+  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a::after {
+    z-index: 3 !important;
+  }
+  body {
+    padding-top: 5px !important;
+  }
+  form[name='delform'] {
+    padding: 17px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+  body > table ~ form[name='delform'] {
+    padding-top: 0px !important;
+  }
+  #header {
+    top: -150px !important;
+  }
+/* Top Stickied Header / Non-Stickied Pages */
+  #header {
+    position: fixed !important;
+  }
+
+  .navlinks {
+    padding-top: 14px;
+  }
+
+  .navlinks {
+    padding-top: 0;
+  }
+
+  #header {
+    top: 0px !important;
+  }
+
+  #navbar {
+    margin-left: auto !important;
+    margin-right: -265px !important;
+    /*[[ChangeAlign]]*/
+    margin-right: auto !important;
+    margin-left: -265px !important;/**/
+    bottom: 16px !important;
+    height: 26px !important;
+  }
+
+  #boardsMenu {
+    bottom: 46px !important;
+  }
+  .pages {
+    width: 100% !important;
+    text-align: center !important;
+    border-spacing: 0 !important;
+    left: 2px !important;
+    right: auto !important;
+    padding-right: 250px !important;
+    padding-left: 250px !important;
+    /*[[ChangeAlign]]*/
+    left: auto !important;
+    right: 2px !important;/**/
+    z-index: 1;
+  }
+  body {
+    padding-top: 5px !important;
+  }
+  form[name='delform'] {
+    padding: 0px 0 0 0 !important;
+    margin: 0 0 0px !important;
+  }
+  

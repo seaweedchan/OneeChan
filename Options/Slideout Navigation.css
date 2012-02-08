@@ -1,0 +1,7 @@
+/*[[SlideoutNav]]*/
+
+/* Yes */
+/* No */
+  #navbot::after {
+    display: none !important;
+  }
