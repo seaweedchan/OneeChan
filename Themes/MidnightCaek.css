@@ -434,3 +434,8 @@ input:not([type='checkbox']) {
 .gecko input[type="file"] > input[type="button"] {
 padding-bottom: 2px !important;
 }
+
+[id^='q'] .error, [id^='q'] .warning {
+  background: #101010 !important;
+  color: #57577b !important;
+}

@@ -455,3 +455,8 @@ body > a[style='cursor: pointer; float: right;']::after {
 .webkit #qr > form input[type="file"]:hover {
   background-color: #575757 !important;
 }
+
+  [id^='q'] .error, [id^='q'] .warning {
+    background: #3f3f3f !important;
+    color: #efdcbc !important;
+  }

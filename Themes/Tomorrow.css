@@ -453,3 +453,7 @@ background-color: #282a2e !important;
 padding-bottom: 2px !important;
 }
 
+[id^='q'] .error, [id^='q'] .warning {
+  background: #1d1f21 !important;
+  color: #81a2be !important;
+}

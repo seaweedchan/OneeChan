@@ -15,6 +15,12 @@
   body {
     background: url("http://static.4chan.org/image/fade.png") repeat-x scroll center top #FFFFEE !important;
   }
+
+  [id^='q'] .error, [id^='q'] .warning {
+    background: #FFFFEE !important;
+    color: #800000 !important;
+  }
+
   .logo {
     text-shadow: 1px 1px 1px #222 !important;
   }
@@ -400,6 +406,11 @@
    /* URL bubbles */
    background: #d6daf0 !important;
  }
+
+   [id^='q'] .error, [id^='q'] .warning {
+    background: #EEF2FF !important;
+    color: #57577b !important;
+  }
  a,
 #dump {
   color: #57577b !important;

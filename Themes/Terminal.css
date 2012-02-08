@@ -449,3 +449,8 @@ padding-bottom: 0px !important;
 .webkit #qr > form input[type="file"]:hover {
   background-color: #000 !important;
 }
+
+[id^='q'] .error, [id^='q'] .warning {
+  background: #000 !important;
+  color: #00FE00 !important;
+}

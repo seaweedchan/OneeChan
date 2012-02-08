@@ -450,3 +450,8 @@ background-color: #333 !important;
 .gecko input[type="file"] > input[type="button"] {
 padding-bottom: 2px !important;
 }
+
+[id^='q'] .error, [id^='q'] .warning {
+  background: #2c2c2c !important;
+  color: #68a !important;
+}

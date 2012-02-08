@@ -469,3 +469,8 @@ form[name='delform'] > div:not(.thread) select,
 .webkit #qr > form input[type="file"]:hover {
   background-color: #FFF !important;
 }
+
+[id^='q'] .error, [id^='q'] .warning {
+  background: #EEEEEE !important;
+  color: #FF6600 !important;
+}

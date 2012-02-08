@@ -436,3 +436,8 @@ background-color: #FFF  !important;
   border: none !important;
   border-right: 1px solid #CCC !important;
 }
+
+[id^='q'] .error, [id^='q'] .warning {
+  background: #FFFFFF !important;
+  color: #BC312A !important;
+}
