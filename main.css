@@ -1750,6 +1750,9 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
     font-size: 12px !important;
     text-decoration: line-through !important;
   }
+  a[href^="http://www.megaupload"] + b {
+    display: none !important;
+  }
   .postarea, span {
     font-size: 12px !important;
   }
