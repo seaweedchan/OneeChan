@@ -220,6 +220,10 @@
     position: relative !important;
     bottom: 10px !important;
   }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* (New QR | 4chan X ≥ 2.25) Slideout: */
@@ -467,6 +471,10 @@
   .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
     position: relative !important;
     bottom: 10px !important;
+  }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
   }
   /*[[FieldStyle]]*/
   }
@@ -741,6 +749,10 @@
     position: relative !important;
     bottom: 10px !important;
   }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* (New QR | 4chan X ≥ 2.25) Fade: */
@@ -972,6 +984,10 @@
   .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
     position: relative !important;
     bottom: 10px !important;
+  }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
   }
   /*[[FieldStyle]]*/
   }
@@ -1784,6 +1800,10 @@
     position: absolute !important;
     right: 0px !important;
   }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* (No 4chan X / Floating QR) Slideout: */
@@ -1963,6 +1983,10 @@
   #qr .close {
     position: absolute !important;
     right: 0px !important;
+  }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
   }
   /*[[FieldStyle]]*/
   }
@@ -2183,6 +2207,10 @@
     position: absolute !important;
     right: 0px !important;
   }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
+  }
   /*[[FieldStyle]]*/ 
   }
 /* (No 4chan X / Floating QR) Fade: */
@@ -2357,6 +2385,10 @@
     position: absolute !important;
     right: 0px !important;
   }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
+  }
   /*[[FieldStyle]]*/ 
   }
 /* Floating QR ONLY (new QR) */
@@ -2500,6 +2532,10 @@
   }
   .webkit #qr [type="file"] {
     margin-top: 1px !important;
+  }
+  .warning:empty {
+    position: fixed !important;
+    bottom: -20px !important;
   }
   /*[[FieldStyle]]*/
   }
