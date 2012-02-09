@@ -964,7 +964,7 @@ form[name='delform'] center {
 form[name='delform'] > table:not(.pages),
 div.thread > table,
 .insertedPosts > table {
-  border-spacing: 0 1px !important;
+  border-spacing: 0 /*[[BetweenReply]]*/ !important;
 }
 
 form[name='delform'] .filesize + br + a[target='_blank'] img, 
