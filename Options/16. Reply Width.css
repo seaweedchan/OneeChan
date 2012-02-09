@@ -19,3 +19,10 @@
   .replyhider a {
     position: static;
   }
+  td.reply {
+    padding-right: 5px !important;
+  }
+  .replyhider {
+    margin-right: 5px !important;
+    width: 20px !important;
+  }
