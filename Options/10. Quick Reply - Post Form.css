@@ -254,6 +254,10 @@
     top: auto !important;
     bottom: 2px !important;
   }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* (New QR | 4chan X ≥ 2.25) Slideout: */
@@ -1087,6 +1091,10 @@
     top: auto !important;
     bottom: 2px !important;
   }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* (New QR | 4chan X ≥ 2.25) Fade: */
@@ -1347,6 +1355,10 @@
     top: auto !important;
     bottom: 2px !important;
   }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* (Old QR | 4chan X < 2.25) Fixed: */
@@ -1488,6 +1500,10 @@
   table[align=right]:hover::after {
     top: auto !important;
     bottom: 2px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
   }
   }
 /* (Old QR | 4chan X < 2.25) Slideout: */
@@ -2038,6 +2054,10 @@
     top: auto !important;
     bottom: 2px !important;
   }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
+  }
   }
 /* (No 4chan X / Floating QR) Fixed: */
   @-moz-document domain('4chan.org') {
@@ -2229,6 +2249,10 @@
   table[align=right]:hover::after {
     top: auto !important;
     bottom: 2px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
   }
   /*[[FieldStyle]]*/
   }
@@ -2855,6 +2879,10 @@
   table[align=right]:hover::after {
     top: auto !important;
     bottom: 2px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: auto !important;
+    bottom: 1px !important;
   }
   /*[[FieldStyle]]*/ 
   }
