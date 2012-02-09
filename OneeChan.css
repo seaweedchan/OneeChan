@@ -39,7 +39,8 @@ This style is designed for the following browsers, ordered alphabetically:
   body::after {
     position: fixed !important;
     /*[[background]]*/
-    bottom: 248px !important;
+    bottom: 248px !important; 
+    /* Note: The above position is overriden in all slideout QRs, best to use "Custom OneeChan Mascot" and edit the value in that */
     left: 0;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
