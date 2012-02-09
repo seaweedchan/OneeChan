@@ -974,7 +974,7 @@ form[name='delform'] .filesize + br + a[target='_blank'] img,
 #qp .filesize + br + a[target='_blank'] img  {
   border: 0;
   float: left;
-  margin: 0 20px 25px !important;
+  margin: 5px 20px 15px !important;
 }
 
 form[name='delform'] .filesize + br + a[target='_blank'] img + img {
