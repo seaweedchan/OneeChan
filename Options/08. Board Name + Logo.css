@@ -44,6 +44,24 @@
   font[color="red"]::before {
     top: 18px !important;
   }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 18px !important;
+  }
+  table[align=right]::before {
+    top: 18px !important;
+  }
+  table[align=right]:hover {
+    top: 14px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 18px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 20px !important;
+  }
+  table[align=right]:hover::after {
+    top: 20px !important;
+  }
 /* Board Name - No Sidebar */
   div.logo {
     position: fixed !important;
@@ -88,6 +106,24 @@
   font[color="red"]::before {
     top: 18px !important;
   }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 18px !important;
+  }
+  table[align=right]::before {
+    top: 18px !important;
+  }
+  table[align=right]:hover {
+    top: 14px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 18px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 20px !important;
+  }
+  table[align=right]:hover::after {
+    top: 20px !important;
+  }
   div.logo, div.logo img {
     position: static !important;
     margin: auto !important;
@@ -125,6 +161,24 @@
   font[color="red"]::before {
     top: 103px !important;
   }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 103px !important;
+  }
+  table[align=right]::before {
+    top: 103px !important;
+  }
+  table[align=right]:hover {
+    top: 99px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 103px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 105px !important;
+  }
+  table[align=right]:hover::after {
+    top: 105px !important;
+  }
 /* Logo - No Sidebar */
   div.logo > *:not(img) {
     display: none;
@@ -156,6 +210,24 @@
   }
   font[color="red"]::before {
     top: 18px !important;
+  }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 18px !important;
+  }
+  table[align=right]::before {
+    top: 18px !important;
+  }
+  table[align=right]:hover {
+    top: 14px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 18px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 20px !important;
+  }
+  table[align=right]:hover::after {
+    top: 20px !important;
   }
   div.logo, div.logo img {
     position: static !important;
@@ -200,6 +272,24 @@
   font[color="red"]::before {
     top: 103px !important;
   }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 103px !important;
+  }
+  table[align=right]::before {
+    top: 103px !important;
+  }
+  table[align=right]:hover {
+    top: 99px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 103px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 105px !important;
+  }
+  table[align=right]:hover::after {
+    top: 105px !important;
+  }
 /* Board Name + Logo - No sidebar */
   div.logo {
     position: fixed !important;
@@ -241,6 +331,24 @@
   font[color="red"]::before {
     top: 18px !important;
   }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 18px !important;
+  }
+  table[align=right]::before {
+    top: 18px !important;
+  }
+  table[align=right]:hover {
+    top: 14px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 18px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 20px !important;
+  }
+  table[align=right]:hover::after {
+    top: 20px !important;
+  }
   div.logo, div.logo img {
     position: static !important;
     margin: auto !important;
@@ -277,5 +385,23 @@
   }
   font[color="red"]::before {
     top: 18px !important;
+  }
+  html body span[style='left: 5px; position: absolute;'] a::after {
+    top: 18px !important;
+  }
+  table[align=right]::before {
+    top: 18px !important;
+  }
+  table[align=right]:hover {
+    top: 14px !important;
+  }
+  table[align=right]:hover .inputtext {
+    top: 18px !important;
+  }
+  table[align=right]:hover input[type='checkbox'] {
+    top: 20px !important;
+  }
+  table[align=right]:hover::after {
+    top: 20px !important;
   }
   

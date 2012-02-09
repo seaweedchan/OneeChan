@@ -1218,7 +1218,6 @@ table[align=right]::before {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAftJREFUOE991M0rRFEYx/E7jYkRTWymycZmZCUrWYgUZTFrkub1T1Cy8LJXkrKWlWRrJZsZW+upSTZkJxbSmIzmXt/feK6O8aI+nnPOc+7vnHnB8zp+isVipFQq9SCJcUxjBpMYRj97op3Pfc1peujGKJtXUcEjfAR4RRUH7JlFQod+C7SQPmoG52gg+EOL9WusYehbmN1EIVfQxr9C3PUH9m1jsFAoeB6/Ino5dpMwpM68jBsn+MnW7qi+HXbP80uIKagHq2gggEKOMYUV5jU8M97BBNaZ39pen3qBlIKSqFhDQWVMoQtxZLChzbq97d93Dn5hPKegcTw6QTeMdZO4PhFqDAl4+XxeQWM4Q8t5ZkvNafgITItaQwax8ONVCNI4QcPZr+cOFTTTsajGMzaQcIKizOftEB0WHqx6pKBJvDqNJ8Y7SMHL5XIRtL/JzONYRBVu2J6aw9YITygzn7AAhaQxj/Z7Rh2gv4s3O7xJXVajHwdoIcAd1pHEGE5Qw6JCsIBLZ796IwqKYhbXFuRTb7GPMzTsoSp110KatrdO3URv+71kkMAaHmyDbhYGaCy68Ztzk3fGp9BL//zj1QBD2M5ms/fwEfyjTk8hei+/viLtMBoRDGIJF3j5JajJWg2bSCOGn/+atGjNFHUOWzjEEfawjBH06mA34QPkk++/bAlEMAAAAABJRU5ErkJggg==') !important;
   visibility: visible !important;
   position: fixed !important;
-  bottom: 1px !important;
   left: 20px !important;
   right: auto !important;
   /*[[ChangeAlign]]*/
@@ -1235,6 +1234,7 @@ table[align=right]:hover::before {
   opacity: 1;
   cursor: pointer;
   bottom: -30px !important;
+  visibility: hidden !important;
 }
 
 .deletebuttons:hover {
@@ -1265,9 +1265,8 @@ table[align=right]:hover {
   width: 243px !important;
 }
 
-.gecko table[align=right]:hover .inputtext {
+table[align=right]:hover .inputtext {
   position: fixed !important;
-  bottom: 0px !important;
   left: 175px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
@@ -1291,8 +1290,6 @@ table[align=right]:hover input[type='checkbox'] {
   /*[[ChangeAlign]]*/
   left: auto !important; 
   right: 130px !important;/**/
-  top: auto !important;
-  bottom: 2px !important;
 }
 
 table[align=right]:hover::after {
@@ -1302,25 +1299,9 @@ table[align=right]:hover::after {
   /*[[ChangeAlign]]*/
   left: auto !important;
   right: 80px !important;/**/
-  top: auto !important;
-  bottom: 2px !important;
   font-size: 12px !important;
   content: 'File Only';
   width: 50px !important;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	table[align=right]:hover input[type='checkbox'] {
-		position: absolute !important;
-		right: 75px !important;
-		top: 6px !important;
-	}
-
-	table[align=right]:hover::after {
-		position: absolute !important;
-		right: 25px !important;
-		top: 6px !important;
-	}
 }
 
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
@@ -1390,7 +1371,6 @@ html body span[style='left: 5px; position: absolute;'] a::after {
   position: fixed !important;
   left: 2px !important;
   right: auto !important;
-  bottom: 1px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
   right: 230px !important;/**/
