@@ -1,5 +1,17 @@
 OneeChan changelog
 
+v2.9
+-New option: Underline links ([Reply], etc)
+-New option: Slimmer Replies
+-New option: Slideout Navigation (for those who want to remove it)
+-Megaupload.com links on /rs/ now have their text replaced with red "Megaupload" text with line-through text decoration, for better indication
+-Fixed issue where /rs/ search form was missing with new QR
+-Github repository organized to be more accessible
+-Fix issue where in 4chan X 2.25, the error message would sometimes not show up due to a lack of changing from the :empty state
+-Error messages now given better styling in color schemes
+-New QR selection: Horizontal Tabbed Slideout (ala Dark Flat)
+-Mascot, delete button, and return button are now repositioned depending on QR type. Use Custom OneeChan Mascot if you'd like to change your mascot's position rather than editing it from OneeChan itself.
+
 v2.8
 -Non-Compact mode fixed with new QR previews section
 -Delete/Return buttons moved and redone so as to not cover Submit button on hover -- Now hovering delete icon immediately brings up the delete button at the cursor
