@@ -2,7 +2,7 @@
 
 /* Compact (New 4chan X default) */
   #qr textarea {
-    height: 114px !important;
+    height: 111px !important;
     width: 248px !important;
   }
   .field[name="email"], .field[name="sub"] {
