@@ -231,7 +231,6 @@ a.yuimenuitemlabel:hover,
 .replyhider a:hover {
   background-color: transparent !important;
 }
-/*[[boardlogo]]*/
 div.logo img {
   position: fixed !important;
   left: 2px !important;
@@ -961,10 +960,14 @@ form[name='delform'] center {
 
 /*[[ReplyWidth]]*/
 
-form[name='delform'] > table:not(.pages),
+form[name='delform'] > table:not(.pages):not([align=right]),
 div.thread > table,
 .insertedPosts > table {
   border-spacing: 0 /*[[BetweenReply]]*/ !important;
+}
+
+table[align=right] {
+  border-spacing: 0 1px !important;
 }
 
 form[name='delform'] .filesize + br + a[target='_blank'] img, 
