@@ -1244,8 +1244,6 @@ table[align=right]:hover::before {
 
 table[align=right]:hover {
   position: fixed !important;
-  top: auto !important;
-  bottom: -4px !important;
   left: 2px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
