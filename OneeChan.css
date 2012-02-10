@@ -1875,4 +1875,9 @@ url('http://www.4chan.org') {
   font[color="red"]::before {
     display: none !important;
   }
+  table[style="text-align:center;width:100%;height:300px;"] {
+    display: block !important;
+    position: relative !important;
+    right: 100px !important;
+  }
 }
