@@ -400,12 +400,7 @@
     background-color: #d6daf0 !important;
   }
 
-  #header a:hover,
-  .pages input:hover,
-  a:hover {
-   /* URL bubbles */
-   background: #d6daf0 !important;
- }
+
 
    [id^='q'] .error, [id^='q'] .warning {
     background: #EEF2FF !important;
