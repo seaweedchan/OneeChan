@@ -1505,6 +1505,10 @@
     top: auto !important;
     bottom: 1px !important;
   }
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* (Old QR | 4chan X < 2.25) Slideout: */
   @-moz-document domain('4chan.org') {
@@ -1659,6 +1663,10 @@
   }
   body::after {
     bottom: 0px !important; 
+  }
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
   }
   }
 /* (Old QR | 4chan X < 2.25) Tabbed Slideout: */
@@ -1893,6 +1901,10 @@
   body::after {
     bottom: 0px !important; 
   }
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* (Old QR | 4chan X < 2.25) Fade: */
   @-moz-document domain('4chan.org') {
@@ -2057,6 +2069,10 @@
   table[align=right]:hover .inputtext {
     top: auto !important;
     bottom: 1px !important;
+  }
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
   }
   }
 /* (No 4chan X / Floating QR) Fixed: */
@@ -2255,6 +2271,10 @@
     bottom: 1px !important;
   }
   /*[[FieldStyle]]*/
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* (No 4chan X / Floating QR) Slideout: */
   @-moz-document domain('4chan.org') {
@@ -2446,6 +2466,10 @@
     bottom: 0px !important; 
   }
   /*[[FieldStyle]]*/
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* (No 4chan X / Floating QR) Tabbed Slideout: */
   @-moz-document domain('4chan.org') {
@@ -2679,6 +2703,10 @@
     bottom: 0px !important; 
   }
   /*[[FieldStyle]]*/ 
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* (No 4chan X / Floating QR) Fade: */
   @-moz-document domain('4chan.org') {
@@ -2885,6 +2913,10 @@
     bottom: 1px !important;
   }
   /*[[FieldStyle]]*/ 
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* Floating QR ONLY (new QR) */
   @-moz-document domain('4chan.org') {
@@ -3040,5 +3072,9 @@
     bottom: 0px !important; 
   }
   /*[[FieldStyle]]*/
+  .postarea input[type="password"] {
+    text-align: right !important;
+    border: none !important;
+  }
   }
 /* End */
