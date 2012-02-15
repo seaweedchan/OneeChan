@@ -44,6 +44,9 @@
   font[color="red"]::before {
     top: 18px !important;
   }
+  font[color="red"]:hover {
+    top: 35px !important;
+  }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
@@ -106,6 +109,9 @@
   font[color="red"]::before {
     top: 18px !important;
   }
+  font[color="red"]:hover {
+    top: 35px !important;
+  }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
@@ -161,6 +167,9 @@
   font[color="red"]::before {
     top: 103px !important;
   }
+  font[color="red"]:hover {
+    top: 120px !important;
+  }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 103px !important;
   }
@@ -210,6 +219,9 @@
   }
   font[color="red"]::before {
     top: 18px !important;
+  }
+  font[color="red"]:hover {
+    top: 35px !important;
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
@@ -272,6 +284,9 @@
   font[color="red"]::before {
     top: 103px !important;
   }
+  font[color="red"]:hover {
+    top: 120px !important;
+  }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 103px !important;
   }
@@ -331,6 +346,9 @@
   font[color="red"]::before {
     top: 18px !important;
   }
+  font[color="red"]:hover {
+    top: 35px !important;
+  }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
@@ -385,6 +403,9 @@
   }
   font[color="red"]::before {
     top: 18px !important;
+  }
+  font[color="red"]:hover {
+    top: 35px !important;
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;

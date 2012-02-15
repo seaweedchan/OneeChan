@@ -13,10 +13,12 @@
   font[color="red"]::before {
     display: none !important;
   }
+  font[color="red"]:hover {
+    top: 10px !important;
+  }
 /* Button only */
   font[color="red"]:hover {
     position: fixed !important;
-    top: 120px !important;
     z-index: 99 !important;
   }
 /* Disable entirely */
