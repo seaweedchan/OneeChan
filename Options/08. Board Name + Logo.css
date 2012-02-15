@@ -44,7 +44,7 @@
   font[color="red"]::before {
     top: 18px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
   table[align=right]::before {
@@ -106,7 +106,7 @@
   font[color="red"]::before {
     top: 18px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
   table[align=right]::before {
@@ -161,7 +161,7 @@
   font[color="red"]::before {
     top: 103px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 103px !important;
   }
   table[align=right]::before {
@@ -211,7 +211,7 @@
   font[color="red"]::before {
     top: 18px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
   table[align=right]::before {
@@ -272,7 +272,7 @@
   font[color="red"]::before {
     top: 103px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 103px !important;
   }
   table[align=right]::before {
@@ -331,7 +331,7 @@
   font[color="red"]::before {
     top: 18px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
   table[align=right]::before {
@@ -386,7 +386,7 @@
   font[color="red"]::before {
     top: 18px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     top: 18px !important;
   }
   table[align=right]::before {

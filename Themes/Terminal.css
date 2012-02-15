@@ -221,7 +221,7 @@ border-bottom: 1px dashed #00FE00 !important;
   background-color: rgba(16,16,16,1) !important;
 }
 
-html body span[style='left: 5px; position: absolute;'] a:hover,
+html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover,
 #com_submit:hover,
 #cc-showpostarea,
 #twi_table_div,
@@ -392,11 +392,11 @@ table[align=right]::before {
  
 }
 /* Return button */
-html body span[style='left: 5px; position: absolute;'] a::after {  
+html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {  
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAA40lEQVQ4T9WSuwoCMRBFI75YkMUXgrZ+gtioaGfhP0QsbCxEBAvFf1fPLOO6b3ZXLAxcQpK5J8nMGPNXw1pbRa2vHg2gjTboVAqEsYkm5mGevoqQMFfQEO1DEAHmGRiNvmIZA+irOL+qbsxntEZ9udy/g4WDjmmQrH1JgRTEgynoXgYkHvxj+dUbVmexKAPDJ991gl+UZI/QJSvZnDfQIRjDuhOrhwbOs8pPzCoC6qUWluAe2nmGyGB/lhukhahhchNA0wiom6fVkr4/4AKrVduGkl2EKI2obePq/GnMIqCfxr4AXwbdRznQCysAAAAASUVORK5CYII=') !important;
   opacity: 0.2 !important;
 }
-html body span[style='left: 5px; position: absolute;'] a:hover::after {  
+html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover::after {  
 opacity: 1 !important;
 }
 /* Watcher */

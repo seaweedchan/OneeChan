@@ -136,7 +136,7 @@
   body::before {
     z-index: 2 !important;
   }
-  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a::after {
+  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     z-index: 3 !important;
   }
   body {
@@ -250,7 +250,7 @@
   body::before {
     z-index: 2 !important;
   }
-  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a::after {
+  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     z-index: 3 !important;
   }
   body {

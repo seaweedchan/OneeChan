@@ -277,7 +277,7 @@ input[type='file'] > input[type='button'] {
   background-color: #303030 !important;
 }
 
-html body span[style='left: 5px; position: absolute;'] a:hover,
+html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover,
 #com_submit:hover,
 input[type='submit']:hover,
 input[type='file'] > input[type='button']:hover {
@@ -411,7 +411,7 @@ table[align=right]::before {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAeRJREFUOE9tlM0rRFEYh0dMPiKxkWxsyEpWshCpURbWNPkvlCwYe6VJWU+zkmytZIOttZJsaHZioQkhH8+j++p0M/U0Z8597+/83o8zhUajUcjRwu8OGIAJmIFZmIJh6IHW/Ht5kXYCxmAVzuABvuAbXuAS9mAOesFDfzVSoW42FuEYXrOXFcjzyd41rMFQiIWQThS5AAP/E8jv3RO3Bf3hSHumo5MQeWZ9CjfJ3mO2d8d3pMuysQxFHVlYaxLpKLIP07ACV/AE2zAJ63CbuVbwBAYVsjsWNqzrRJE26ART3jAYdG/8bnJwk3VJIVtsd0LIdHSiiM+LYIdcKzQOR5DWsuJD5yRyVswA09GJItEQRUbgIHETh9cMctjyHbEmphNOjGuF+eyQfGfrBjixDluI2R0La00iHUVcm+4SOJipWNWHjr0P0mLbHVOJdHQSNetjvQNv2TvvfJcV8u7sJSc4J7bY7lhYa2LNdKLIApwn8T4bjdy9O469riy8c2KL7Y7zZRq61okiujDWmduEruiIRfXuOPaRYgjEb8VMJ2rzwfoQ7GRL2lovoHfHTzoO/907nShiLX9HJL39FtYL6N1x7JuJuxAzJWtiOjr5m7P8/1FMsq0vQQVqUIcqlGEUukxHJ8EPyeEKDPe5ibUAAAAASUVORK5CYII=') !important;
 }
 /* Return button */
-html body span[style='left: 5px; position: absolute;'] a::after {  
+html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {  
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUNJREFUOE+tkz9Lw1AUR1tqlYJItSLo6kcoLlZ0c/A7KA4uDiKCgyI4dBEcundy6TdwEJ0cBEHBSVdFIohQFIdaiv3j+ckNPCUmjWQ4uU1y73n33bymPM9LJUEiEjUSJcqQNNxPx2GiPIIl2PyvaIjCIpThFp7iitIUTMIanME79KAeR6Qu5uEIHuHTJBI1YMfYJW7BIoyDFv8ejy452IA7+HAEkoguvBpv1uE9sQZFyLiiPW78rfiCqNii5gSmfZG6ysIcHINW7TidNfl9YBxaJw+W0yZquzn382u/U7ANN6DZaFsSu3mD3K/Dsy12ShwNOkdKLEEVNIuXXyLVLMC1ia6IhbADWSBhFSoBolmeXZpIwlCRFhmAkQDRDM/OQQO/gLGo/9pf7ycoXoZ9WIEfw44j1YfR+VO3iuk4xaG5iYm+APYeqMCIGhT5AAAAAElFTkSuQmCC') !important;
 }
 /* Watcher */

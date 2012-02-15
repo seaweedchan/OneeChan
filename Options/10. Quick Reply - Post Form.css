@@ -234,7 +234,7 @@
     padding-top: 2px !important;
     max-height: 16px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }
@@ -1071,7 +1071,7 @@
   body::after {
     bottom: 20px !important; 
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }
@@ -1335,7 +1335,7 @@
     padding-top: 2px !important;
     max-height: 16px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }
@@ -1481,7 +1481,7 @@
   body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
     bottom: 310px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }
@@ -2046,7 +2046,7 @@
   body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
     bottom: 310px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }
@@ -2246,7 +2246,7 @@
     padding-top: 2px !important;
     max-height: 16px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }
@@ -2888,7 +2888,7 @@
     padding-top: 2px !important;
     max-height: 16px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a::after {
+  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
     bottom: 1px !important;
     top: auto !important;
   }

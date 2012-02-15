@@ -1368,7 +1368,7 @@ html body span[style='left: 5px; position: absolute;'] a {
   border-radius: 0 !important;
   text-align: center;
 }
-html body span[style='left: 5px; position: absolute;'] a::after {
+html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAUJJREFUOE/Vkj9LglEUh18xC0GkfwS1+hGipcK2hr7DGw0uDRKCQyI0tAQN7U4tfoOGsKkhCAqaai0CQYRQGiwiK59fHPNSr+RbNPTCw/Fez3nuvedez/tXn+/7UUj8atMIRmEFNn4konAEZmEbLqEaSkRBBKYhA0dwD29wN5CIRM92kSbuwy08m0SiFmwaBWIOlmFSi38swiAOWbiCB0cgiXiFhtHUDuEayqAWRN9lJio6R+kKvotP1BxCSqfqymIMFuEAtOqLs7NHfu8Yu7aTG8tpE3XcuHtENXsG8nAB6o2O1XSbzXgY1qFmi1WIY18uxBIXiCVQL+qfk5hbgnMTnREn+t6s/oQ12AsQzTN/aiIJ+4vsIoZISgaI5pg/BjX8BMYHemsBoimK9W3BKvSaHcZIoS5G7y9psfcww4j+NLcD3erbomf70ToAAAAASUVORK5CYII=');
   position: fixed !important;
   left: 2px !important;
@@ -1383,7 +1383,7 @@ html body span[style='left: 5px; position: absolute;'] a::after {
   opacity: 0.4;
   z-index: 97 !important;
 }
-html body span[style='left: 5px; position: absolute;'] a:hover::after {
+html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover::after {
   opacity: 1;
 }
 /* File Clearer support */

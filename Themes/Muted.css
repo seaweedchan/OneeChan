@@ -206,7 +206,7 @@ font[color="red"],
 a.quotelink {
   color: #BC312A !important;
 }
-html body span[style='left: 5px; position: absolute;'] a:hover,
+html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover,
 #com_submit:hover,
 #cc-showpostarea,
 #twi_table_div,
