@@ -1481,30 +1481,6 @@
   body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
     bottom: 310px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    bottom: 1px !important;
-    top: auto !important;
-  }
-  table[align=right]::before {
-    top: auto !important;
-    bottom: 1px !important;
-  }
-  table[align=right]:hover {
-    top: auto !important;
-    bottom: -4px !important;
-  }
-  table[align=right]:hover input[type='checkbox'] {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover::after {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover .inputtext {
-    top: auto !important;
-    bottom: 1px !important;
-  }
   .postarea input[type="password"] {
     text-align: right !important;
     border: none !important;
@@ -2046,30 +2022,6 @@
   body > table ~ form [id^='q'] .error, body > table ~ form [id^='q'] .warning {
     bottom: 310px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    bottom: 1px !important;
-    top: auto !important;
-  }
-  table[align=right]::before {
-    top: auto !important;
-    bottom: 1px !important;
-  }
-  table[align=right]:hover {
-    top: auto !important;
-    bottom: -4px !important;
-  }
-  table[align=right]:hover input[type='checkbox'] {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover::after {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover .inputtext {
-    top: auto !important;
-    bottom: 1px !important;
-  }
   .postarea input[type="password"] {
     text-align: right !important;
     border: none !important;
@@ -2245,30 +2197,6 @@
     vertical-align: middle !important;
     padding-top: 2px !important;
     max-height: 16px !important;
-  }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    bottom: 1px !important;
-    top: auto !important;
-  }
-  table[align=right]::before {
-    top: auto !important;
-    bottom: 1px !important;
-  }
-  table[align=right]:hover {
-    top: auto !important;
-    bottom: -4px !important;
-  }
-  table[align=right]:hover input[type='checkbox'] {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover::after {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover .inputtext {
-    top: auto !important;
-    bottom: 1px !important;
   }
   /*[[FieldStyle]]*/
   .postarea input[type="password"] {
@@ -2887,30 +2815,6 @@
     vertical-align: middle !important;
     padding-top: 2px !important;
     max-height: 16px !important;
-  }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    bottom: 1px !important;
-    top: auto !important;
-  }
-  table[align=right]::before {
-    top: auto !important;
-    bottom: 1px !important;
-  }
-  table[align=right]:hover {
-    top: auto !important;
-    bottom: -4px !important;
-  }
-  table[align=right]:hover input[type='checkbox'] {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover::after {
-    top: auto !important;
-    bottom: 2px !important;
-  }
-  table[align=right]:hover .inputtext {
-    top: auto !important;
-    bottom: 1px !important;
   }
   /*[[FieldStyle]]*/ 
   .postarea input[type="password"] {
