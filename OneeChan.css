@@ -1101,19 +1101,6 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   height: 24px !important;
 }
 /* Expand Images div */
-#imgControls {
-  position: fixed;
-  left: 2px !important;
-  right: auto !important;
-  /*[[ChangeAlign]]*/
-  left: auto !important;
-  right: 101px !important;/**/
-  top: 2px !important;
-  bottom: auto !important;
-  width: 150px;
-  z-index: 2;
-}
-
 #imgControls input {
   width: 10px !important;
   height: 10px !important;
@@ -1121,7 +1108,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   vertical-align: top !important;
 }
 
-#imgControls label input {
+#imgControls label input:first-of-type {
  position: relative !important;
  bottom: 2px !important;
 }
@@ -1131,9 +1118,39 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   color: transparent !important;
 }
 
-#imgControls label::after {
+#imgControls label:first-of-type {
+  position: fixed;
+  left: 2px !important;
+  right: auto !important;
+  
+  left: auto !important;
+  right: 101px !important;
+  top: 2px !important;
+  bottom: auto !important;
+  width: 150px;
+  z-index: 2;
+}
+
+#imageType {
+ position: fixed !important;
+  left: 2px !important;
+  right: auto !important;
+  
+  left: auto !important;
+  right: 101px !important;
+  top: 0px !important;
+  bottom: auto !important;
+  z-index: 2;
+}
+
+#imgControls label:first-of-type::after {
   font-size: 12px !important;
   content: 'Expand';
+}
+
+#imgControls label:nth-of-type(2)::after {
+  font-size: 12px !important;
+  content: 'Preload?';
 }
 
 #imgControls select {
