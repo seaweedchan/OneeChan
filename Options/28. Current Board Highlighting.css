@@ -73,6 +73,10 @@
   #navtop>a[href*='/v/'] { font-weight: 900 !important; font-size: 13px !important; }
 }
 
+@-moz-document url-prefix(http://boards.4chan.org/vg/) {
+  #navtop>a[href*='/vg/'] { font-weight: 900 !important; font-size: 13px !important; }
+}
+
 @-moz-document url-prefix(http://boards.4chan.org/w/) {
   #navtop>a[href*='/w/'] { font-weight: 900 !important; font-size: 13px !important; }
 }
@@ -151,6 +155,10 @@
 
 @-moz-document url-prefix(http://boards.4chan.org/lit/) {
   #navtop>a[href*='/lit/'] { font-weight: 900 !important; font-size: 13px !important; }
+}
+
+@-moz-document url-prefix(http://boards.4chan.org/mlp/) {
+  #navtop>a[href*='/mlp/'] { font-weight: 900 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/mu/) {
