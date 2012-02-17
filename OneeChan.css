@@ -1871,7 +1871,7 @@ url('http://www.4chan.org') {
     display: none !important;
   }
   table[style="text-align:center;width:100%;height:300px;"] {
-    display: block !important;
+    display: table !important;
     position: relative !important;
     right: 100px !important;
   }
