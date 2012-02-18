@@ -116,7 +116,6 @@ This style is designed for the following browsers, ordered alphabetically:
   form[name='delform'] > hr:last-of-type,
   form[name='delform'] > hr:nth-last-of-type(2),
   html body > a:not([style='cursor: pointer; float: right;']),
-  small,
   td[style^='padding: ']:not(#backwash_tipcell):not([style='padding: 10px 7px 7px 7px;']):not([style='padding: 10px 7px 7px;']),
   td.rules,
   th,
@@ -1127,7 +1126,6 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   right: 101px !important;
   top: 2px !important;
   bottom: auto !important;
-  width: 150px;
   z-index: 2;
 }
 
@@ -1137,7 +1135,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   right: auto !important;
   
   left: auto !important;
-  right: 101px !important;
+  right: 201px !important;
   top: 0px !important;
   bottom: auto !important;
   z-index: 2;
