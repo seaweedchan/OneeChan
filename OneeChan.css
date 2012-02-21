@@ -1123,9 +1123,10 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   right: auto !important;
   
   left: auto !important;
-  right: 101px !important;
+  right: 200px !important;
   top: 2px !important;
   bottom: auto !important;
+
   z-index: 2;
 }
 
@@ -1133,9 +1134,9 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
  position: fixed !important;
   left: 2px !important;
   right: auto !important;
-  
+  /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 201px !important;
+  right: 101px !important;
   top: 0px !important;
   bottom: auto !important;
   z-index: 2;
@@ -1150,6 +1151,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   font-size: 12px !important;
   content: 'Preload?';
 }
+
 
 #imgControls select {
   float: right !important;
