@@ -989,11 +989,11 @@ body {
   margin-top: 17px !important;
 }
 /*[[expandfile]]*/
-.filesize span::after {
+.filesize span:not([class])::after {
   font-size: 13px !important;
 }
 
-.filesize span::after {
+.filesize span:not([class])::after {
   font-size: /*[[FontSize]]*/ !important;
 }
 

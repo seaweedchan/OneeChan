@@ -1,12 +1,12 @@
 /*[[expandfile]]*/
 
 /* Enabled */
-  .filesize span {
+  .filesize span:not([class]) {
     font-size: 0 !important;
     visibility: hidden;
   }
 
-  .filesize span::after {
+  .filesize span:not([class])::after {
     content: attr(title);
     visibility: visible;
   }
