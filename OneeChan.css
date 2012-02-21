@@ -1686,6 +1686,9 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
 /*[[CaptchaOpacity]]*/
 /*[[SlideoutNav]]*/
 }
+#qr input:focus::-webkit-input-placeholder, #qr textarea:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
 
 /*[[CustomBoardNames]]*/
 
