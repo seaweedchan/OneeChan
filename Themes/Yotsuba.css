@@ -1,7 +1,7 @@
 /* Yotsuba A + B */
 }
 /* Yotsuba A */
-@-moz-document regexp(".*\.4chan\.org/(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hc|y|pol|soc)/.*") {
+@-moz-document regexp(".*\.4chan\.org/(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hc|y|hm|pol|soc)/.*") {
   /*[[CustomScrollbars]]*/
   ::-webkit-scrollbar-thumb { border: 1px solid #D9BFB7; background: #eef2ff; }
   ::-webkit-scrollbar-thumb:hover { background: -webkit-linear-gradient(top, rgba(0,0,0,.4), rgba(0,0,0,0.2)) !important; }

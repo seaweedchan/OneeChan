@@ -145,6 +145,10 @@
   #navtop>a[href*='/hc/'] { font-weight: 900 !important; font-size: 13px !important; }
 }
 
+@-moz-document url-prefix(http://boards.4chan.org/hm/) {
+  #navtop>a[href*='/hm/'] { font-weight: 900 !important; font-size: 13px !important; }
+}
+
 @-moz-document url-prefix(http://boards.4chan.org/int/) {
   #navtop>a[href*='/int/'] { font-weight: 900 !important; font-size: 13px !important; }
 }
