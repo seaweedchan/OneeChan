@@ -1685,11 +1685,12 @@ input[type="file"]::-webkit-file-upload-button:hover {
 input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
   cursor: pointer !important;
 }
+/*[[FilteredBacklinks]]*/
 /*[[CaptchaOpacity]]*/
 /*[[SlideoutNav]]*/
-}
 #qr input:focus::-webkit-input-placeholder, #qr textarea:focus::-webkit-input-placeholder {
   color: transparent !important;
+}
 }
 
 /*[[CustomBoardNames]]*/
