@@ -12,13 +12,13 @@
   a.linkmail[href*='NEKO',
   a.linkmail[href*='sega'],
   a.linkmail[href*='Sega'],
-  a.linkmail[href*='SEGA']
+  a.linkmail[href*='SEGA'],
   a.linkmail[href*='Ponyo'],
   a.linkmail[href*='ponyo'],
-  a.linkmail[href*='PONYO'] 
+  a.linkmail[href*='PONYO'], 
   a.linkmail[href*='Sakamoto'],
   a.linkmail[href*='sakamoto'],
-  a.linkmail[href*='Baka'] 
+  a.linkmail[href*='Baka'], 
   a.linkmail[href*='baka'],
   a.linkmail[href*='BAKA'] {
     text-decoration: none !important;
@@ -63,13 +63,13 @@ content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9h
   a.linkmail[href*='NEKO',
   a.linkmail[href*='sega'],
   a.linkmail[href*='Sega'],
-  a.linkmail[href*='SEGA']
+  a.linkmail[href*='SEGA'],
   a.linkmail[href*='Ponyo'],
   a.linkmail[href*='ponyo'],
-  a.linkmail[href*='PONYO'] 
+  a.linkmail[href*='PONYO'], 
   a.linkmail[href*='Sakamoto'],
   a.linkmail[href*='sakamoto'],
-  a.linkmail[href*='Baka'] 
+  a.linkmail[href*='Baka'], 
   a.linkmail[href*='baka'],
   a.linkmail[href*='BAKA'] {
     text-decoration: none !important;
