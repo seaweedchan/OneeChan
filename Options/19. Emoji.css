@@ -1,0 +1,95 @@
+/*[[nokosega]]*/
+
+/* Images: */
+  .commentpostername a.linkmail[href*='neko']::after,
+  .commentpostername a.linkmail[href*='Neko']::after,
+  .commentpostername a.linkmail[href*='NEKO']::after {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAMAAAAIRmf1AAACoFBMVEUAAABnUFZoUVddU1T6+PvFwLzn4eFXVlT/+vZpZGCgm5dKU1Cfnpz//flbWljr5uLp5OCalpNZWFb//f3r6+n28ff9+PRaVVH59Pr//vr38vj57/Dp7eyjn5zq8O5aVVJbYV9nVFhjUFRiWFlZVlFgZGOboJzm5uZhamfz9/bt8fDw6+drb26bl5j/8/lkX1z06uldWFS5r61UT0tfWlbDwr3Ew76moqNRTU7Mx8P75OpeY19pWl1XW1qzr6x5eHaLiojv7+1UT0xIU0uzqadVS0nV0MxkZGT5+PPk497///ra29Xq5eFtY2H28e2hnJignJlUUE1dXV2vrqxkY2FkYF/m3d5vZmfDuruhl5aZlJHx8O75+PZWVVP29vT/9fTj3trv6ubh5eRdXFqTkpBOTUtqZmX88/RMQ0T78vPEvr7HwcHDwsDq6ef///3Gx8H++fXEv7tZWVedmZZXXVudnJp0c3FZU1f79fnb1dlXUVVjXWFrZmy8t7359/qLj455e3q4s69vamZjX1zy4+avpaReWFz/+f1NR0vu6Ozp4+f48/lnYmi8ur3Iw7/69fHz7+xbV1SZmJZVUk1ZV1zq5ez++f/c196uqbDn4uj9+P7z7vRVVVXt6ORiXl/OycXHw8CPi4ihoJ5aWF3/+v/k3+axrLOsp67LzMZYU1m2sq9dWF5WUU1WUk/Au7eYlJGqpqObmphYVV749f7p5Or38fPu6OpiXFz38fH79vLz7urv6+hhYF5cWWKal6D//f/Z09Xg29exraqbl5RqaW6kpKTq5uPv7Of/+PDj29D//vP18Ozs5+OloJymoZ1ZVVJZWVlkYF2hnpmblIyspJmVjYKQi4enop5STUlRTUpcWUhqY1BgWT9ZUjhcV1NiXVkkhke3AAAABHRSTlMA5vjapJ+a9wAAAP9JREFUGBk9wA1EAwEAhuHv3dTQAkLiUlJFJWF0QDLFYDRXIMkomBgxNIYxhOk4wwCqQhQjxgxSGIsALFA5BiYbMZHajz1oJlx51sBJpf6Gd3zONcrqm/r1W8ByK0r+XV1LXyOLLnjW6hMGpu0u1IzPSdO17DgrGC6AadrVodGcDQYbhguP6wAvAaC0BRZQalkUQ8UQDz5tAof0XbejOFcV5xiUoCfjj3O/nf0ZbqAMPYmzU18KSDaRQ08qnfw+B2JNdAEQt2O5vctUGjhoIBU4ygPsj2Vh5zYopDK73hsirdkPTwGCbSHpiYFwYVVC/17pCFSBeUmoqwYQuZtWxx+BVEz0LeVKIQAAAABJRU5ErkJggg==');
+  }
+
+  a.linkmail[href*='neko'],
+  a.linkmail[href*='Neko'],
+  a.linkmail[href*='NEKO',
+  a.linkmail[href*='sega'],
+  a.linkmail[href*='Sega'],
+  a.linkmail[href*='SEGA']
+  a.linkmail[href*='Ponyo'],
+  a.linkmail[href*='ponyo'],
+  a.linkmail[href*='PONYO'] 
+  a.linkmail[href*='Sakamoto'],
+  a.linkmail[href*='sakamoto'],
+  a.linkmail[href*='Baka'] 
+  a.linkmail[href*='baka'],
+  a.linkmail[href*='BAKA'] {
+    text-decoration: none !important;
+  }
+
+  .commentpostername a.linkmail[href*='sega']::after,
+  .commentpostername a.linkmail[href*='Sega']::after,
+  .commentpostername a.linkmail[href*='SEGA']::after {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAALBAMAAAD2A3K8AAAAMFBMVEUAAACMjpOChImytLmdnqMrKzDIyM55dnkODQ94foQ7PkXm5Olsb3VUUVVhZmw8Sl6klHLxAAAAAXRSTlMAQObYZgAAANFJREFUGJVjYIACRiUlJUUGDHBk4syTkxQwhO3/rQ/4ZYsuymi3YEFUqAhC4LCJZJGIi1uimKKjk3KysbOxsaMnAwNLyqoopaXhttf2it1anrJqke1pr1DlBAZhicLnM5YXZ4RWlIYoezx0zrjYqG6czCDsYRzxIko6Q/qFaKy0690Ij0MxN8K2MIhJXF+hsfxJxuwdpYGVaUU3Mm5bqgKFOZOFit3Vp23J3pgsqLxFUXpLtlD5bgcGBs45794dn6mkOVFQUOjNmXPPz8ysOcAAANw6SHLtrqolAAAAAElFTkSuQmCC');
+  }
+
+  .commentpostername a.linkmail[href*='Sakamoto']::after,
+  .commentpostername a.linkmail[href*='sakamoto']::after {
+content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAxVJREFUOE+Nk19IU1EYwK+GQQTVQ39egh6ibKlzw91z7rn3bvfOmddNszl1bjKXc5rJJGmBUr7Yg9qTD0IalFgRBEYg6EDQQB+GovQyQgiaUZsoLcgHMcr069w7MgcGXfi453zn+37fv3MYZt/n99e76tzVj4JN/hP79fvXnV3hnNabwUBjoOHcgTYOu/JQspgTzsqKgn9BfD4vkWTzur287PqLVy+zM+yePB7KsRXLywTjnSpnZctBkPCdW8ccDuU55vBO8RXbkC/oP5ph19V5+7LIky0OY1BKbZEbLcFSt7u6pN7jLmltCVrr3DV5jY3+KovFEsccB1KJNVpefe10BqS2tqqO4/AuphBB4L/LkrRqNgtJs1lMypLls1kU38mytMLz/E8VIlutqVqX6/weZG52OttRXjbE0cP/FYLRlpVjDXuQ/r77x2XZPKkCHA4HBAIBkCQpAygIAvh8Pu2MZgO0Lz+QSa/sQfwN9RfpVN66XC6Ynp6GhYUFGBwczAC1t7fD0tISxONx6O7upgHILmsqvLcHodOggfiV/v5+SCaT4HQ6IRaLgdfr1bIRRREmJyfBZrNBNBqF+fl5sNsdgE2GiAbp6bmbdbXC7qWQbxMTE7C2tgY6nQ5SqRSEw2ENopaoZpCXlwdTU1NaoECgCbgiU6y8QH+ECYWaTymK7TWdys7MzIwGaWtrg42NDejo6AB1WjU1NZo+FArB2NgYrK6uQrAlCASxn2z6wkuMp87VIAhkE2MEAwMDkEgkYHx8HBYXF0HtkQpRy1BLiEQisLy8rPVNKSsFjEzrXH4+z1hlS4xDhKadNu7t7YPR0VHweDzAEVWfHru6HxkZgeHhYVAURYNjkylVWKArZjjMzqmdVi+QCsLUkQiEjvDvncEkvU7/qQ0Vgukeo48Go87IiCJnZNmipxiz7wXEbVDnbUxQOgM12h9n6qTq6NvapRdtkwaP0XK8RmPuYSbxYfaQ/sJJhjfknuFRURUi7AMOozcCwl94hLZp5F+EioDQVwqYI6jomZU1NFtM+rOSxZjVazcyvwHr/p/Kws1jegAAAABJRU5ErkJggg==');	
+}
+  .commentpostername a.linkmail[href*='baka']::after,
+  .commentpostername a.linkmail[href*='Baka']::after,
+  .commentpostername a.linkmail[href*='BAKA']::after {
+content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAA09JREFUOE91k3tIk1EYxr8sHYgul0QtL6WtRJ2XnF2INKqVVhRIpXYh7EJlZhShFPRXF7Wgggqs/vASldZu6rZyrjWH5cxb1pQV3Wwud/v2fVtDrYSejguEpA68cN5z+Z3neXkPRU0ZyxZX8uK48uNxIWplGl9tTuM398dz1cr4mZqizHh52NTzk3lJ4QCVOEdeuCZR56m58RnPtXYo7lmhkdtgfs2i5uZ7rBO2Mgk81d5/QgTchksnCrphH2ZReqgHMTMMSAzTQxhmQHJ4KxofWOHzjuFUwatfqXxl2V+Q2NAH+UW7u36xbi+uXjAhIkCH8yW9oF1eMLQPF0r6IeBo8crowviPnyje1U0gkjw/RCyqC14W22KzDDJw0x6IFmohFunBEBjLTsQ3/zwzrhVF+X0YHx8H4xrDyhiNZYdYwaEE4fW55WcGyGsshq0ezOUocfJwl/8Sw3gmIQe3d0AUrcPo6HeMjoyh4vRbJPEl26iYkMZbes0gnA7G7z86tAkHdnYQ6R643ewkJGd1G+Zzmsn6CL55fdA3DyI2WHmNmjvjkezdgAMOu9sP2b6xDVEzG9FltBCpRD7NwvB0EJFBakQENsFp88FLrJlNDkRxpDJqXpBUauqz/QHYWXQ8/4qYWUpEc5U4mG/E/tx2CEi+dXUrIok9l8NHbLF402PDolCllIoOUZQrHn6A3UYTCAOn042ezmEc2WdE1iodCnLbYNBaUFrYibjZj4mlidqwUNz/iKRwdTmVEFmfeWhPG+x2l1+F3cZiaIjAbAzJWf8aTeZZK3TYnKEHTTMkaBzN68UKwf1VVFZG1bQFs+s7XxgspIg08ra0YLlQDRdRQzs9BETjheELZgXKceViHxwOF9oNVqTMUXVV3W6e7u+FtMW16ekpDSPmfiuqKk0IDZCh9HgHXrZ/xcN7ZiQvVEEU34gv70lbm4axPvXZz9059Vl/dSOfV5W9RCgdeaz6hPNnOzGPJwE3oA68oDpsy9air9sCTcM7ZCQ9+bFZLDnwz/+QnnI7OSqixpi9QYWKcz24fqUX1XdMuFxmRLa4CcKEux+OFUty/vsjJzaqa/unrV1bmbo0vbpMmFArS0msli9fWltx7OijTfImWeDUy78BwWhEmY8UPKsAAAAASUVORK5CYII=');
+}
+  .commentpostername a.linkmail[href*='Ponyo']::after,
+  .commentpostername a.linkmail[href*='ponyo']::after,
+  .commentpostername a.linkmail[href*='Ponyo']::after {
+content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAuNJREFUOE+Nk3tI01EUx39BTytConQTt1am07m5abi5KT5S8z2dj1yOEMUC7aUgIoimlmUEWX9kBZGWaamEmE6U1BI1XNPNGTrnHs33IwuSXrL4NgcJ0mNdOHDh3PPhnPP9XoKwcroJYvMQiRSicHCQKCgUyZC9/T5rNet5KUFs0zCZbZMsFmZ9fTEjEEBDp4/KSSSb/4JoGIyWaTYbiykpWEhOxhSHAzWD0aqkUGhWAcVkW58xlvuPhfh4zItEmOHxYDR3MhcdDaNAsKJydAz5IySKRNjEUmy88vjOVaU8F0iPCqCNjEBHkC/UYaGYFwqxmJoKLYOhkxPElg0QsbNtTlmox9yjRD9UCbnoOR+J/lwRWtOCcdXfDc2BPpg0d7CQlIQZPh9KKlVkAQjJ2x2zmOSsQu7hpzUJfBhLjsNQmADjxcT10Bcl4rE4EHc5LjBEhEPn7f1WTqXSLQB/s1Tp7vslsoIkyPPiMJAbi86McBguiaHKjoEqR4jJy2K0nAxApzMN5iUGrclrKVaz2fUvuF4tRbxDKA90w5VjTFyLZKHpTBSq4/1QnxGB2qxoVIZx0JopRCPHFSNOThfWZzfrXDcZEowH4iA05ATg68hDtBaL0HAuCm3lJ9Bfcx2fFNUoi/DCjRgfNHHd1wCZA2TyXjNkE6F0cBDpPFiojeNi8EkJdFoN3vXch0nbBJOhDd907dANv8JITxNqziag3ZsJbUDAwLin50Q9QWwl1qSYoNOVvUcOoqOqAAa9Fu9H2/F9+B5WZLcwOyxFX18flLI+VASyMGVeoJHD+Tzq5BS1PoaKRrNT8127P74swsq4FCa9FKvqBqwaOiz3hdEuLKueYSyECT2LNW0eIfo3E/WmEbvnG1MUJnWdpWhDGDvxQXZHo+RR0uW2tnv+auPX+TvtJm7zKpaen/4y2yjBUlcxlvtvmvT16ZWDpQeoVv3/60F/NrHjTf4ugazIXtJ8ivjnz/sJ+yGQRjcqUdIAAAAASUVORK5CYII=');
+}
+/* Text: */
+  .commentpostername a.linkmail[href*='sega']::after,
+  .commentpostername a.linkmail[href*='Sega']::after,
+  .commentpostername a.linkmail[href*='SEGA']::after {
+    content: ' (sega) ';
+    color: #e42217 !important;
+  }
+ 
+  .commentpostername a.linkmail[href*='neko']::after,
+  .commentpostername a.linkmail[href*='Neko']::after,
+  .commentpostername a.linkmail[href*='NEKO']::after {
+    content: ' (neko) ';
+    color: #e42217 !important;
+  }
+  a.linkmail[href*='neko'],
+  a.linkmail[href*='Neko'],
+  a.linkmail[href*='NEKO',
+  a.linkmail[href*='sega'],
+  a.linkmail[href*='Sega'],
+  a.linkmail[href*='SEGA']
+  a.linkmail[href*='Ponyo'],
+  a.linkmail[href*='ponyo'],
+  a.linkmail[href*='PONYO'] 
+  a.linkmail[href*='Sakamoto'],
+  a.linkmail[href*='sakamoto'],
+  a.linkmail[href*='Baka'] 
+  a.linkmail[href*='baka'],
+  a.linkmail[href*='BAKA'] {
+    text-decoration: none !important;
+  }
+
+  .commentpostername a.linkmail[href*='Sakamoto']::after,
+  .commentpostername a.linkmail[href*='sakamoto']::after {
+    content: ' (sakamoto) ';
+    color: #e42217 !important;
+}
+  .commentpostername a.linkmail[href*='baka']::after,
+  .commentpostername a.linkmail[href*='Baka']::after,
+  .commentpostername a.linkmail[href*='BAKA']::after {
+    content: ' (baka) ';
+    color: #e42217 !important;
+}
+  .commentpostername a.linkmail[href*='Ponyo']::after,
+  .commentpostername a.linkmail[href*='ponyo']::after,
+  .commentpostername a.linkmail[href*='Ponyo']::after {
+    content: ' (ponyo) ';
+    color: #e42217 !important;
+}
+/* None: */
