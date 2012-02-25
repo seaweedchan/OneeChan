@@ -1692,6 +1692,12 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
 #qr input:focus::-webkit-input-placeholder, #qr textarea:focus::-webkit-input-placeholder {
   color: transparent !important;
 }
+table {
+  table-layout: fixed !important;
+}
+img {
+  image-rendering: optimizeSpeed !important;
+}
 }
 
 /*[[CustomBoardNames]]*/
