@@ -165,7 +165,8 @@ This style is designed for the following browsers, ordered alphabetically:
  .pages a,
  .pages,
  .quotejs,
- .chanlinkify {
+ .chanlinkify,
+ .linkmail {
    text-decoration: /*[[UnderlineLinks]]*/ !important;
  }
 
