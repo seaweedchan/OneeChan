@@ -81,7 +81,7 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 .replyhider a {
-  color: #000 !important;
+  color: #111 !important;
 }
 
 .replyhider a:hover {
