@@ -1769,7 +1769,9 @@ img {
   input[value="Submit"] {
     height: 22px !important;
   }
-
+  table {
+    table-layout: auto !important;
+  }
 }
 
 @-moz-document url-prefix('http://www.4chan.org/') {
@@ -1887,6 +1889,9 @@ url('http://www.4chan.org') {
 	form[name="delform"] center {
 		position: static !important;
 	}
+  table {
+    table-layout: auto !important;
+  }
 }
 
 @-moz-document domain('sys.4chan.org') {
