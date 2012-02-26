@@ -1137,7 +1137,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   right: auto !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 101px !important;
+  right: 101px !important;/**/
   top: 0px !important;
   bottom: auto !important;
   z-index: 2;
