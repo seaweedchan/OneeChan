@@ -437,7 +437,11 @@ form[name^='post'] input[type='file'][name='upfile'],
   border-color: #eef2ff !important;
 
 }
-/*[[PostSeparationHR]]*/
+hr {
+  position: relative !important;
+  bottom: 8px !important;
+  /*[[PostSeparationHR]]*/
+}
 #filter input,
 #filter textarea,
 #thread_filter input,

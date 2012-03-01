@@ -704,6 +704,10 @@ html body span[style='left: 5px; position: absolute;'] a {
 #threadwatcher .postblock,
 .chanchimp * {
   border-color: #eef2ff !important;
+}
+hr {
+  position: relative !important;
+  bottom: 8px !important;
   /*[[PostSeparationHR]]*/
 }
 #filter input,
