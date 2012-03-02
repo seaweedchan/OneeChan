@@ -1702,6 +1702,9 @@ img {
 #ihover, img[src^="http://images"] {
  image-rendering: optimizeQuality !important;
 }
+input, textarea {
+ text-rendering: geometricPrecision !important;
+}
 }
 
 /*[[CustomBoardNames]]*/
