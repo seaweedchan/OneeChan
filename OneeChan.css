@@ -1699,6 +1699,9 @@ table {
 img {
   image-rendering: optimizeSpeed !important;
 }
+#ihover, img[src^="http://images"] {
+ image-rendering: optimizeQuality !important;
+}
 }
 
 /*[[CustomBoardNames]]*/
