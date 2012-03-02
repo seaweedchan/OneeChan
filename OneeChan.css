@@ -782,6 +782,11 @@ body > form #imgControls {
   right: 0px !important;
   background: none !important;
 }
+
+.gecko #imageType {
+  top: -1px !important;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	#imageType {
 		bottom: 1px !important;
