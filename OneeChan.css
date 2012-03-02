@@ -1867,6 +1867,12 @@ img {
 	}
 }
 
+@-moz-document domain('images.4chan.org') {
+  img {
+    image-rendering: optimizeQuality !important;
+  }
+}
+
 @-moz-document domain('status.4chan.org') {
 	#header {
 		position: static !important;
