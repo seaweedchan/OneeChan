@@ -12,7 +12,7 @@
   body {
     background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #EEF2FF !important;
   }
-  html::before {
+  form[name="delform"]::before {
 width: 252px !important;
 content: '';
 position: fixed !important;
