@@ -309,7 +309,7 @@ postername a:hover,
 .postername,
 .commentpostername {
   color: #2C64A0 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 .postertrip,
 .trip {
