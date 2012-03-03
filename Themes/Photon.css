@@ -181,7 +181,7 @@ textarea:focus {
 .filetitle,
 .replytitle {
   color: #111 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 input, textarea {
   color: #000 !important;
@@ -340,7 +340,7 @@ postername a:hover,
 .postername,
 .commentpostername {
   color: #004A99 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 .postertrip,
 .trip {

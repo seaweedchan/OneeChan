@@ -187,7 +187,7 @@ textarea:focus {
 .filetitle,
 .replytitle {
   color: #3a0c5d !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 body,
 body > form,
@@ -352,7 +352,7 @@ a:hover .postertrip {
   color: #117743 !important;
 }
 a.forwardlink {
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 .unkfunc {
   color: #789922 !important;

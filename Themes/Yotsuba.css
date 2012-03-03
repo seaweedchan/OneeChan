@@ -169,7 +169,7 @@
   .filetitle,
   .replytitle {
     color: #CC1105 !important;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
   }
   input, textarea {
     color: #000 !important;
@@ -461,7 +461,7 @@ textarea:focus {
 .filetitle,
 .replytitle {
   color: #0f0c5d !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 body,
 body > form,
