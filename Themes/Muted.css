@@ -172,7 +172,7 @@ textarea:focus {
 .filetitle,
 .replytitle {
   color: #111 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 input, textarea {
   color: #000 !important;
@@ -320,7 +320,7 @@ a.forwardlink {
   color: #111 !important;
 }
 a.forwardlink {
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 .unkfunc {
   color: #819941 !important;
