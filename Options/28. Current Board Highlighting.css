@@ -2,218 +2,218 @@
 
 /* Yes: */
 @-moz-document url-prefix(http://boards.4chan.org/a/) {
-  #navtop>a[href*='/a/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/a/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/b/) {
-  #navtop>a[href*='/b/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/b/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/c/) {
-  #navtop>a[href*='/c/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/c/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/d/) {
-  #navtop>a[href*='/d/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/d/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/e/) {
-  #navtop>a[href*='/e/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/e/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/g/) {
-  #navtop>a[href*='/g/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/g/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/gif/) {
-  #navtop>a[href*='/gif/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/gif/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/h/) {
-  #navtop>a[href*='/h/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/h/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/hr/) {
-  #navtop>a[href*='/hr/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/hr/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/k/) {
-  #navtop>a[href*='/k/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/k/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/m/) {
-  #navtop>a[href*='/m/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/m/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/o/) {
-  #navtop>a[href*='/o/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/o/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/p/) {
-  #navtop>a[href*='/p/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/p/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/r/) {
-  #navtop>a[href*='/r/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/r/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/s/) {
-  #navtop>a[href*='/s/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/s/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/t/) {
-  #navtop>a[href*='/t/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/t/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/u/) {
-  #navtop>a[href*='/u/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/u/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/v/) {
-  #navtop>a[href*='/v/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/v/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/vg/) {
-  #navtop>a[href*='/vg/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/vg/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/w/) {
-  #navtop>a[href*='/w/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/w/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/wg/) {
-  #navtop>a[href*='/wg/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/wg/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/i/) {
-  #navtop>a[href*='/i/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/i/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/ic/) {
-  #navtop>a[href*='/ic/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/ic/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/r9k/) {
-  #navtop>a[href*='/r9k/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/r9k/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/cm/) {
-  #navtop>a[href*='/cm/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/cm/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/y/) {
-  #navtop>a[href*='/y/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/y/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/3/) {
-  #navtop>a[href*='/3/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/3/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/adv/) {
-  #navtop>a[href*='/adv/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/adv/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/an/) {
-  #navtop>a[href*='/an/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/an/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/cgl/) {
-  #navtop>a[href*='/cgl/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/cgl/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/ck/) {
-  #navtop>a[href*='/ck/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/ck/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/co/) {
-  #navtop>a[href*='/co/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/co/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/diy/) {
-  #navtop>a[href*='/diy/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/diy/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/fa/) {
-  #navtop>a[href*='/fa/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/fa/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/fit/) {
-  #navtop>a[href*='/fit/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/fit/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/hc/) {
-  #navtop>a[href*='/hc/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/hc/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/hm/) {
-  #navtop>a[href*='/hm/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/hm/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/int/) {
-  #navtop>a[href*='/int/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/int/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/jp/) {
-  #navtop>a[href*='/jp/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/jp/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/lit/) {
-  #navtop>a[href*='/lit/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/lit/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/mlp/) {
-  #navtop>a[href*='/mlp/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/mlp/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/mu/) {
-  #navtop>a[href*='/mu/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/mu/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/n/) {
-  #navtop>a[href*='/n/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/n/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/po/) {
-  #navtop>a[href*='/po/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/po/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/sci/) {
-  #navtop>a[href*='/sci/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/sci/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/soc/) {
-  #navtop>a[href*='/soc/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/soc/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/sp/) {
-  #navtop>a[href*='/sp/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/sp/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/tg/) {
-  #navtop>a[href*='/tg/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/tg/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/toy/) {
-  #navtop>a[href*='/toy/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/toy/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/trv/) {
-  #navtop>a[href*='/trv/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/trv/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/tv/) {
-  #navtop>a[href*='/tv/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/tv/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/vp/) {
-  #navtop>a[href*='/vp/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/vp/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://rs.4chan.org/) {
-  #navtop>a[href*='rs.'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='rs.'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 
 @-moz-document url-prefix(http://boards.4chan.org/x/) {
-  #navtop>a[href*='/x/'] { font-weight: 600px !important; font-size: 13px !important; }
+  #navtop>a[href*='/x/'] { font-weight: 600 !important; font-size: 13px !important; }
 }
 /* No: */
