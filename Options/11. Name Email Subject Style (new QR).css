@@ -5,6 +5,9 @@
     height: 111px !important;
     width: 248px !important;
   }
+  .gecko #qr textarea {
+    height: 114px !important;
+  }
   .field[name="email"], .field[name="sub"] {
     width: 81px !important;
   }
@@ -18,6 +21,9 @@
   #qr textarea {
     height: 68px !important;
     width: 248px !important;
+  }
+  .gecko #qr textarea {
+    height: 71px !important;
   }
   .field[name="name"], .field[name="email"], .field[name="sub"] {
     width: 248px !important;
