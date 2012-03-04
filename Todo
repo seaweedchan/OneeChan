@@ -1,1 +1,11 @@
--New color schemes
+-Monochrome white color scheme
+-Original Minimalistic Mayhem color scheme
+-Dark Minimal color scheme
+-Change input:hover and input:focus to use borders and box-shadows instead of recoloring the background
+-Merge Quick Reply / Post Form selections together, only hiding the vanilla post form with body[class]
+-Reimplement Textarea Height option now that the old Quick Reply has lost support
+-Optimize style with the text boards
+-Organize code, removing redundant entries
+-Examine other 4chan scripts (official extension, 4chan Plus, any others) to determine if OneeChan integration can be implemented. Make threads on 4chan asking what people use to discover other scripts that could use support.
+-Redo Github page, reflecting new color schemes and options. Rewrite Github page in Less CSS or Stylus.
+-Redo icon size manually for Firefox issue
