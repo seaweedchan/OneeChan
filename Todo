@@ -9,3 +9,4 @@
 -Examine other 4chan scripts (official extension, 4chan Plus, any others) to determine if OneeChan integration can be implemented. Make threads on 4chan asking what people use to discover other scripts that could use support.
 -Redo Github page, reflecting new color schemes and options. Rewrite Github page in Less CSS or Stylus.
 -Redo icon size manually for Firefox issue
+-Redo autohide functionality (#qr.autohide)
