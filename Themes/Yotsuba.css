@@ -62,7 +62,8 @@
   #options.reply.dialog,
   .deletebuttons input[value=Delete],
   input[value="Report"],
-  body::before {
+  body::before,
+  #qr.autohide .move {
     background-color: #F0E0D6 !important;
   }
   td.reply {
@@ -199,7 +200,8 @@
   font[color="red"],
   #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
     color: #800000 !important;
   }
 
@@ -346,7 +348,8 @@
   #options.reply.dialog,
   .deletebuttons input[value=Delete],
   input[value="Report"],
-  body::before {
+  body::before,
+  #qr.autohide .move {
     background-color: #d6daf0 !important;
   }
   td.reply {
@@ -489,7 +492,8 @@ textarea,
 #updater #count:not(.new)::after,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #000 !important;
 }
 
@@ -726,4 +730,7 @@ form[name='delform'] > div:not(.thread) select,
 .pages input[type='submit'] {
   margin: 0 !important;
   height: 17px !important;
+}
+#qr.autohide .move {
+  border-bottom: none !important;
 }

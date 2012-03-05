@@ -44,7 +44,8 @@ input[type='submit'],
 input[type='file'] > input[type='button'],
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr.autohide .move {
   background-color: #F5F2E9 !important;
 }
 .webkit #qr > form input[type="file"]::-webkit-file-upload-button {
@@ -65,7 +66,7 @@ body::before {
 #options ul:last-of-type {
   border: none !important;
 }
-td.reply, td.replyhl, #watcher, #navbot, body::before {
+td.reply, td.replyhl, #watcher, #navbot, body::before, #qr.autohide .move {
   -moz-appearance: none !important;
   border:1px solid #DBD8D2 !important;
 }
@@ -200,7 +201,8 @@ select,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #393735 !important;
 }
 a.quotelink {
@@ -444,4 +446,8 @@ background-color: #FFF  !important;
 [id^='q'] .error, [id^='q'] .warning {
   background: #FFFFFF !important;
   color: #BC312A !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

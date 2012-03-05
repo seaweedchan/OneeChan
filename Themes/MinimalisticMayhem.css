@@ -52,7 +52,8 @@ textarea,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #BBBBBB !important;
 }
 
@@ -178,7 +179,8 @@ textarea,
 #options.reply.dialog,
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr.autohide .move {
   background-color: #222 !important;
 }
 
@@ -218,7 +220,8 @@ table.reply[style^='clear: both'] {
   background-color: rgba(26,26,26,0.9) !important;
 }
 
-td.reply {
+td.reply,
+#qr.autohide .move {
   border: 1px solid #292929 !important;
 }
 
@@ -476,4 +479,8 @@ background-color: #222 !important;
 [id^='q'] .error, [id^='q'] .warning {
   background: #191919 !important;
   color: #897399 !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

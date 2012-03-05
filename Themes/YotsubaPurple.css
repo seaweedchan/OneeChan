@@ -63,7 +63,7 @@ background-color: rgba(229,220,240,0.9) !important;
   input[type='submit'],
   #com_submit,
   #qr a#attach::after,
-
+  #qr.autohide .move,
   .deletebuttons input[value=Delete],
   input[value="Report"],
   body::before {
@@ -215,7 +215,8 @@ textarea,
 #updater #count:not(.new)::after,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #000 !important;
 }
 
@@ -453,4 +454,8 @@ form[name='delform'] > div:not(.thread) select,
 .pages input[type='submit'] {
   margin: 0 !important;
   height: 17px !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

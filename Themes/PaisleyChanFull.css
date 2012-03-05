@@ -57,7 +57,8 @@ textarea,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #999 !important;
 }
 
@@ -183,7 +184,8 @@ body::before,
 }
 
 
-td.reply {
+td.reply,
+#qr.autohide .move {
   background: rgba(52,56,56,0.8) !important;
 
 }
@@ -478,6 +480,7 @@ a.pointer {
   padding-right: 5px !important;
 }
 .reply,
+#qr.autohide .move,
 .reply a,
 td.replyhl,
 td.replyhl a,
@@ -718,4 +721,8 @@ padding-bottom: 2px !important;
 [id^='q'] .error, [id^='q'] .warning {
   background: #1c1c1c !important;
   color: #bbb !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

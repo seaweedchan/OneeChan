@@ -60,7 +60,8 @@ textarea,
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
 font[color="red"],
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #f1f1f1 !important;
 }
 .webkit #qr > form input[type="file"]::-webkit-file-upload-button {
@@ -175,14 +176,16 @@ textarea,
 #options.reply.dialog,
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr.autohide .move {
   background-color: #1B1B1B !important;
 }
 .webkit #qr > form input[type="file"]::-webkit-file-upload-button {
   background-color: #282a2e !important;
 }
 
-td.reply {
+td.reply,
+#qr.autohide .move {
 border: 1px solid #262626 !important;
 }
 
@@ -487,4 +490,8 @@ padding-bottom: 2px !important;
 
 .op input[type="checkbox"], #imgControls input[type="checkbox"], #spoilerlabel input[type="checkbox"] {
 background: #1b1b1b !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

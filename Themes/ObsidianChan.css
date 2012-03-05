@@ -93,7 +93,8 @@ textarea,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #FDFEFF !important;
 }
 
@@ -185,7 +186,8 @@ a.forwardlink {
 .boxbar,
 .deletebuttons input[value=Delete],
 .top-box,
-.yuimenuitem-selected {
+.yuimenuitem-selected,
+#qr.autohide .move {
   background-color: rgba(0,0,0,0.4) !important;
 }
 .recaptchatable #recaptcha_response_field,
@@ -195,7 +197,8 @@ input[type='submit'],
 select,
 td.postblock,
 td.reply,
-textarea {
+textarea,
+#qr.autohide .move {
   background-color: rgba(0,0,0,0.6) !important;
 }
 
@@ -495,4 +498,8 @@ padding-bottom: 2px !important;
 [id^='q'] .error, [id^='q'] .warning {
   background: #000 !important;
   color: #00FFFF !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

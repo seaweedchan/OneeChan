@@ -54,7 +54,8 @@ textarea,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #dcdccc !important;
 }
 
@@ -172,7 +173,8 @@ textarea,
 #options.reply.dialog,
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr.autohide .move {
   background-color: #575757 !important;
 }
 
@@ -460,3 +462,6 @@ body > a[style='cursor: pointer; float: right;']::after {
     background: #3f3f3f !important;
     color: #efdcbc !important;
   }
+  #qr.autohide .move {
+  border-bottom: none !important;
+}

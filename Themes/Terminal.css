@@ -54,7 +54,8 @@ textarea,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label:after {
+#qr > form > label:after,
+#qr.autohide .move {
   color: #00FE00 !important;
 }
 
@@ -171,7 +172,8 @@ textarea,
 #options.reply.dialog,
 .deletebuttons input[value=Delete],
 input[value="Report"],
-body::before {
+body::before,
+#qr.autohide .move {
   background-color: #000 !important;
 }
 
@@ -429,7 +431,7 @@ input[type="checkbox"], #options input[type="checkbox"], form[name^="post"] td:n
   background-color: #000 !important;
 }
 
-td.reply, #qr textarea, #qp, #iHover, div.logo img, #updater:hover {
+td.reply, #qr textarea, #qp, #iHover, div.logo img, #updater:hover, #qr.autohide .move {
 border: 1px dashed #00FE00 !important;
 }
 #iHover {
@@ -453,4 +455,8 @@ padding-bottom: 0px !important;
 [id^='q'] .error, [id^='q'] .warning {
   background: #000 !important;
   color: #00FE00 !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }

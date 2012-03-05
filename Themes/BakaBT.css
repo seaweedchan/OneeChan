@@ -58,7 +58,7 @@ select,
 td.postblock,
 td.reply,
 html body span[style='left: 5px; position: absolute;'] a,
-
+#qr.autohide .move,
 
 .deletebuttons input[value=Delete],
 input[value="Report"],
@@ -83,7 +83,7 @@ body::before {
 #options ul:last-of-type {
   border: none !important;
 }
-td.reply, td.replyhl, #watcher, #navbot, body::before {
+td.reply, td.replyhl, #watcher, #navbot, body::before, #qr.autohide .move {
   -moz-appearance: none !important;
   border:1px solid #D1A2FF !important;
 }
@@ -222,7 +222,8 @@ select,
 font[color="red"],
 #qr_form input[name="email"] + label::after,
 .postarea #com_submit + label::after,
-#qr > form > label::after {
+#qr > form > label::after,
+#qr.autohide .move {
   color: #000 !important;
 }
 a.quotelink {
@@ -467,4 +468,8 @@ background-color: #FFF  !important;
 [id^='q'] .error, [id^='q'] .warning {
   background: #FFFFFF !important;
   color: #854C9E !important;
+}
+
+#qr.autohide .move {
+  border-bottom: none !important;
 }
