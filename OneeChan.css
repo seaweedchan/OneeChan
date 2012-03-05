@@ -1697,6 +1697,9 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
 table {
   table-layout: fixed !important;
 }
+.postarea table {
+  table-layout: auto !important;
+}
 img {
   image-rendering: optimizeSpeed !important;
 }
