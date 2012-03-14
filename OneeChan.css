@@ -117,8 +117,8 @@ This style is designed for the following browsers, ordered alphabetically:
   blockquote font[color="red"]::before {
     display: none !important;
   }
-  .gecko form[name="delform"] {
-    padding-bottom: 2px !important;
+  .webkit html body span[style='left: 5px; position: absolute;'] + br {
+    display: none !important;
   }
 }
 
