@@ -57,17 +57,17 @@ This style is designed for the following browsers, ordered alphabetically:
     /*[[Margin]]*/
     padding-top: 1px !important;
   }
-  @media only screen and (max-width: 1170px) {
+  @media only screen and (max-width: 1100px) {
     body {
       padding-top: 16px !important;
     }
   }
-  @media only screen and (max-width:760px) {
+  @media only screen and (max-width:689px) {
     body {
       padding-top: 31px !important;
     }
   }
-  @media only screen and (max-width:623px) {
+  @media only screen and (max-width:553px) {
     body {
       padding-top: 46px !important;
     }

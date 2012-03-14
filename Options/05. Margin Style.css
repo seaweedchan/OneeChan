@@ -11,7 +11,7 @@
   #header {
     padding-left: 0px !important;
     padding-right: 20px !important;
-    /*[[ChangeAlign]]*/padding-left: 70px !important;
+    /*[[ChangeAlign]]*/
     padding-right: 0px !important;/**/
   }
 /* Medium Left Margin */
@@ -21,7 +21,7 @@
   #header {
     padding-left: 0px !important;
     padding-right: 50px !important;
-    /*[[ChangeAlign]]*/padding-left: 70px !important;
+    /*[[ChangeAlign]]*/
     padding-right: 0px !important;/**/
   }
 /* Large Left Margin */
@@ -31,7 +31,7 @@
   #header {
     padding-left: 0px !important;
     padding-right: 150px !important;
-    /*[[ChangeAlign]]*/padding-left: 170px !important;
+    /*[[ChangeAlign]]*/
     padding-right: 0px !important;/**/
   }
 /* Completely Centered */
@@ -40,7 +40,7 @@
   #header {
     padding-left: 0px !important;
     padding-right: 26% !important;
-    /*[[ChangeAlign]]*/padding-left: 26% !important;
+    /*[[ChangeAlign]]*/
     padding-right: 0px !important;/**/
   }
 /* Match Sidebar */
@@ -50,6 +50,6 @@
   #header {
     padding-left: 0px !important;
     padding-right: 252px !important;
-    /*[[ChangeAlign]]*/padding-left: 272px !important;
+    /*[[ChangeAlign]]*/
     padding-right: 0px !important;/**/
   }
