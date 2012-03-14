@@ -1831,33 +1831,30 @@ input, textarea {
 }
 
 @-moz-document /*[[CenteredImages]]*/ url('http://www.4chan.org/banned') {
-	html {
-		display: table !important;
-	}
+ @media screen and (-webkit-min-device-pixel-ratio:0) { 
+  html {
+    display: table !important;
+  }
 
-	body {
-		display: table-cell !important;
-		vertical-align: middle !important;
-	}
+  body {
+    display: table-cell !important;
+    vertical-align: middle !important;
+  }
 
-	html,
-	body {
-		height: 100% !important;
-		min-width: 101% !important;
-		width: 101% !important;
-		overflow-y:scroll;
-	}
+  html,
+  body {
+    height: 100% !important;
+    min-width: 101% !important;
+    width: 101% !important;
+    overflow-y:scroll;
+  }
 
 
-	img {
-		margin: auto !important;
-		overflow: auto !important;
-	}
-
-	#doc {
-		width: 65% !important;
-		min-width: 800px !important;
-	}
+  img {
+    margin: auto !important;
+    overflow: auto !important;
+  }
+}
 
 	img {
 		display: block !important;
