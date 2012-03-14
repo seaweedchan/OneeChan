@@ -117,8 +117,10 @@ This style is designed for the following browsers, ordered alphabetically:
   blockquote font[color="red"]::before {
     display: none !important;
   }
-  .webkit html body span[style='left: 5px; position: absolute;'] + br {
-    display: none !important;
+  @media screen and (-webkit-min-device-pixel-ratio:0) {  
+    html body span[style='left: 5px; position: absolute;'] + br {
+      display: none !important;
+    }
   }
 }
 
@@ -1722,7 +1724,7 @@ table {
 img {
   image-rendering: optimizeSpeed !important;
 }
-#ihover, img[src^="http://images"] {
+#ihover, img[src^="http://images"], div.logo img { 
  image-rendering: optimizeQuality !important;
 }
 input, textarea {
