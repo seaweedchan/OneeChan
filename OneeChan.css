@@ -55,6 +55,7 @@ This style is designed for the following browsers, ordered alphabetically:
   }
   body {
     /*[[Margin]]*/
+    padding-top: 1px !important;
   }
   @media only screen and (max-width: 1170px) {
     body {
