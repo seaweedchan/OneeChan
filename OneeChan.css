@@ -56,6 +56,21 @@ This style is designed for the following browsers, ordered alphabetically:
   body {
     /*[[Margin]]*/
   }
+  @media only screen and (max-width: 1170px) {
+    body {
+      padding-top: 16px !important;
+    }
+  }
+  @media only screen and (max-width:760px) {
+    body {
+      padding-top: 31px !important;
+    }
+  }
+  @media only screen and (max-width:623px) {
+    body {
+      padding-top: 46px !important;
+    }
+  }
   font[color="red"]  {
     position: fixed !important;
     top: -1000px !important;
