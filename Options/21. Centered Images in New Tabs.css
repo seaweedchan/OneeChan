@@ -1,5 +1,28 @@
 /*[[CenteredImages]]*/
 
 /* Yes: */
-domain('images.4chan.org'),
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  html {
+    display: table !important;
+  }
+
+  body {
+    display: table-cell !important;
+    vertical-align: middle !important;
+  }
+
+  html,
+  body {
+    height: 100% !important;
+    min-width: 101% !important;
+    width: 101% !important;
+    overflow-y:scroll;
+  }
+
+
+  img {
+    margin: auto !important;
+    overflow: auto !important;
+  }
+}
 /* No: */

@@ -1830,32 +1830,7 @@ input, textarea {
 	}
 }
 
-@-moz-document /*[[CenteredImages]]*/ url('http://www.4chan.org/banned') {
- @media screen and (-webkit-min-device-pixel-ratio:0) { 
-  html {
-    display: table !important;
-  }
-
-  body {
-    display: table-cell !important;
-    vertical-align: middle !important;
-  }
-
-  html,
-  body {
-    height: 100% !important;
-    min-width: 101% !important;
-    width: 101% !important;
-    overflow-y:scroll;
-  }
-
-
-  img {
-    margin: auto !important;
-    overflow: auto !important;
-  }
-}
-
+@-moz-document url('http://www.4chan.org/banned') {
 	img {
 		display: block !important;
 	}
@@ -1878,6 +1853,7 @@ input, textarea {
   img {
     image-rendering: optimizeQuality !important;
   }
+  /*[[CenteredImages]]*/
 }
 
 @-moz-document domain('status.4chan.org') {
