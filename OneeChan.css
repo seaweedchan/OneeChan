@@ -1903,7 +1903,7 @@ url('http://www.4chan.org') {
   table {
     table-layout: auto !important;
   }
-  .postarea form[name^='post'] .inputtext[name='sub']
+  .postarea form[name^='post'] .inputtext[name='sub'] {
     width: 198px !important;
   }
 }
