@@ -484,7 +484,7 @@ textarea {
   position: fixed;
   top: auto;
   left: auto;
-  bottom: 2px;
+  bottom: -4px;
   width: 248px !important;
   margin: 0 !important;
   z-index: 5;
@@ -1902,6 +1902,9 @@ url('http://www.4chan.org') {
 	}
   table {
     table-layout: auto !important;
+  }
+  .postarea form[name^='post'] .inputtext[name='sub']
+    width: 198px !important;
   }
 }
 
