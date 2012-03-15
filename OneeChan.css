@@ -122,6 +122,9 @@ This style is designed for the following browsers, ordered alphabetically:
       display: none !important;
     }
   }
+  .postarea h1 {
+    display: none !important;
+  }
 }
 
 @-moz-document domain('4chan.org') {
