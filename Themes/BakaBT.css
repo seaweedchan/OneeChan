@@ -196,6 +196,14 @@ textarea:focus {
   color: #111 !important;
   font-weight: 600 !important;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .filetitle, 
+  .replytitle {
+    font-weight: 800 !important;
+  }
+}
+
 input, textarea {
   color: #000 !important;
 }
@@ -334,6 +342,12 @@ postername a:hover,
   color: #854C9E !important;
   font-weight: 600 !important;
 }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .postername,
+  .commentpostername {
+    font-weight: 800 !important;
+  }
+}
 .postertrip,
 .trip {
   color: #925C8D !important;
@@ -344,6 +358,11 @@ a.forwardlink {
 }
 a.forwardlink {
   font-weight: 600 !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  a.forwardlink {
+    font-weight: 800 !important;
+  }
 }
 .unkfunc {
   color: #819941 !important;

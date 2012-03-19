@@ -104,13 +104,23 @@ a.quotelink:hover {
   color: #00FE00 !important;
   font-weight: 600 !important;
 }
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .postername,
+  .commentpostername {
+    font-weight: 800 !important;
+  }
+}
 .postertrip,
 .trip {
   color: #00FE00 !important;
     font-weight: 600 !important;
 }
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .postertrip,
+  .trip {
+    font-weight: 800 !important;
+  }
+}
 .postername a:hover,
 .commentpostername a:hover,
 a:hover .postertrip {
@@ -125,6 +135,11 @@ a.forwardlink {
 
 a.forwardlink {
   font-weight: 600 !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  a.forwardlink {
+    font-weight: 800 !important;
+  }
 }
 
 .filetitle,

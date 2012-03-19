@@ -110,7 +110,12 @@ a:hover,
   color: #80accE !important;
   font-weight: 600 !important;
 }
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .postername,
+  .commentpostername {
+    font-weight: 800 !important;
+  }
+}
 .postertrip,
 .trip {
   color: #80accE !important;
@@ -133,7 +138,11 @@ a.forwardlink {
 a.forwardlink {
   font-weight: 600 !important;
 }
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  a.forwardlink {
+    font-weight: 800 !important;
+  }
+}
 .filetitle,
 .replytitle {
   color: #aaa !important;

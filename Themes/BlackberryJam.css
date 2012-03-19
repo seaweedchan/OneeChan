@@ -147,6 +147,12 @@ a.forwardlink {
   color: #f1f1f1 !important;
   font-weight: 600 !important;
 }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .filetitle,
+  .replytitle {
+    font-weight: 800 !important;
+  }
+}
 /* 73CE75 */
 .unkfunc {
   color: #6CCC66 !important;

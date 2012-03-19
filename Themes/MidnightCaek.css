@@ -127,6 +127,12 @@ a.forwardlink {
   font-weight: 600 !important;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  a.forwardlink {
+    font-weight: 800 !important;
+  }
+}
+
 .filetitle,
 .replytitle {
   color: #aaa !important;
