@@ -2,6 +2,22 @@
 
 /* Yes: */
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
+	img {
+		display: block !important;
+	}
+
+	#ft ul {
+		text-align: center !important;
+	}
+
+	#ft li {
+		float: none !important;
+		display: inline-block !important;
+	}
+
+	b {
+		font-weight: 800 !important;
+	}
   html {
     display: table !important;
   }
