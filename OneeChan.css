@@ -1926,3 +1926,16 @@ url('http://www.4chan.org') {
     right: 100px !important;
   }
 }
+
+@-moz-document domain('dis.4chan.org') {
+  .border, .hborder {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+  }
+  .thread {
+    border-top: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    padding-bottom: 35px !important;
+  }
+}
