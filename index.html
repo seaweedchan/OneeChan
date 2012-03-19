@@ -120,426 +120,8 @@ function toggle(togglediv) {
 <link rel="alternate stylesheet" type="text/css" href="Color Schemes/ObsidianChan.css" title="ObsidianChan"/>
 <link rel="alternate stylesheet" type="text/css" href="Color Schemes/MidnightCaek.css" title="MidnightCaek"/>
 <link rel="alternate stylesheet" type="text/css" href="Color Schemes/MinimalisticMayhem.css" title="MinimalisticMayhem"/>
-<style>
-/* inb4 Zixaphir magically has a page as well */
-
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Cedarville+Cursive);
-body {
-	background-color: #EEE;
-	color: #000;
-	font-family: Ubuntu, serif;
-	margin: auto;
-	position: static !important;
-	text-align: justify;
-	width: 700px;
-
-}
-::-moz-selection {
-	background: #FA0;
-	color: #FFF;
-	text-shadow: none;
-}
-::selection {
-	background: #FA0;
-	color: #FFF;
-	text-shadow: none;
-}
-h1, h2, h3, h4 {
-	color: #004a99;
-	text-transform: capitalize;
-	margin: 0;
-	overflow: hidden;
-	text-align: center;
-	white-space: nowrap;
-}
-b {
-	color: #004a99;
-}
-h1 {
-	font-size: 90px;
-}
-h2 {
-	background-color: whiteSmoke;
-	border: 1px solid whiteSmoke;
-	border-radius: 4px;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, .2) inset;
-	font-size: 100px;
-	margin: 5px -5px;
-	text-transform: uppercase;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
-}
-h2:hover {
-	background-color:      rgba(255, 170, 0, .1);
-	border-color:          rgba(255, 170, 0, .25);
-	box-shadow: 0 4px 20px rgba(255, 170, 0, .6) inset;
-}
-h1 {
-	text-shadow:  3px 3px 1px #999;
-}
-h2 {
-	text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #FFF, 3px 3px 1px #999, 4px 4px 10px #999;
-}
-h2:hover a {
-	color: #E69900;
-	text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #FFF, 3px 3px 1px #FA0, 4px 4px 10px #FA0;
-}
-h3 > a {
-	display: inline-block;
-	vertical-align: middle;
-	width: 33%;
-}
-label {
-	cursor: pointer;
-}
-#features, #main {
-	position: absolute;
-	left: 0; right: 0;
-
-}
-#para { 
-	border-radius: 3px; 
-	background-color: #ddd; 
-	border: solid 1px #ccc; 
-	padding-top: 10px; 
-	padding-right: 25px; 
-	font-size: 14px;
-}
-
-
-.reply, .comment {
-	text-align: left; !important; 
-	width: 680px;
-	border-radius: 3px; 
-	background-color: #ddd; 
-	border: solid 1px #ccc; 
-	padding-left: 2px;
-	padding-top: 4px;
-	padding-right: 20px;
-	font-size: 12px;
-	font-family: "Arial", "Helvetica", "sans-serif";
-	margin-bottom: 2px;
-}
-
-.comment blockquote img {
-	margin-right: 10px !important;
-}
-
-input, textarea, .auto {
-	font-family: "Arial", "Helvetica", "sans-serif";
-}
-
-textarea {
-	resize: none !important;
-}
-
-.postertrip {
-	color: #ff3300;
-}
-
-.greentext {
-	color: #789922 !important;
-}
-
-.quotejs, .backlink {
-	color: #000;
-}
-
-.backlink:hover {
-	color: #000;
-	cursor: pointer;
-}
-
-.quotejs:hover {
-	color: #ff6600;
-	cursor: pointer;
-}
-
-input[type='checkbox'] {
-	border: 1px solid #CCC;
-	background-color: #FFFFEE;
-	border-radius: 2px;
-	-webkit-appearance: button !important;
-	/* -moz-appearance: none !important; */
-	width: 12px !important;
-	height: 12px !important;
-	cursor: pointer !important;
-}
-input[type=checkbox]:checked {
-	background-color: #bcc0d4;
-}
-
-select {
-	display: none !important;
-}
-
-/* Firefox */
-@-moz-document url-prefix() {
-	/* Hide checkboxes in Firefox because it wont let me style them */
-	input[type='checkbox'], .auto:not([name="subscribe"]); {
-		display: none !important;
-	}
-	/* Make up for lack of checkboxes */
-	.reply {
-		padding-left: 10px !important;
-	}
-	/* Submit button too high up */
-	input[type="Submit"] {
-		position: static !important;
-	}
-	/* Subject input has space underneath, and its too wide in Firefox */
-	input[name="subject"] {
-		margin-bottom: -1px !important;
-		width: 183px !important;
-	}
-	/* Color scheme reply padding */
-	.reply {
-		padding-top: 8px !important;
-	}
-	textarea {
-		height: 70px !important;
-	}
-} 
-
-/* Chrome */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	/* Chrome checkmark */	
-	input:checked {
-		content: url('http://i.imgur.com/CAewG.png');
-	}
-	.auto {
-		bottom: 186px !important;
-	}
-	.auto input {
-		top: 5px !important;
-	}
-	input[name="name"], input[name="verification"], input[name="password"], input[name="email"] {
-		width: 247px !important;
-	}
-	input[type="submit"] {
-		bottom: 2px !important;
-	}
-	input[name="subject"] {
-		width: 192px !important;
-	}
-	textarea {
-		margin-top: -1px !important;
-		height: 64px !important;
-	}
-	.reply input {
-		position: relative !important;
-		top: 4px !important;
-	}
-	.reply {
-		padding-top: 2px !important;
-	}
-}
-
-#main {
-	position: relative;
-	left: 4px;
-}
-
-input:focus,
-textarea:focus {	
-	outline: none !important;
-}
-
-
-#faq:target ~ #main, 
-#firefox:target ~ #main,
-#chrome:target ~ #main,
-#opera:target ~ #main,
-#mascots:target ~ #main,
-#options:target ~ #main,
-#report:target ~ #main,
-#report:not(:target) ~ #reportp,
-#colorschemes:target ~ #main,
-#faq:not(:target) ~ #faq-list, 
-#firefox:not(:target) ~ #firefoxinst,
-#chrome:not(:target) ~ #chromeinst,
-#opera:not(:target) ~ #operainst,
-#colorschemes:not(:target) ~ #colors,
-#mascots:not(:target) ~ #mascotsp,
-#options:not(:target) ~ #optionsp {
-	display: none;
-}
-
-#HCB_comment_form_box {
-	font-size: 12px !important;
-	width: 300px;
-	margin: auto;
-}
-
-#hcb_msg {
-	margin: auto;
-}
-
-#HCB_comment_box b, #HCB_comment_box h3 {
-	font-weight: 100 !important;
-}
-
-#HCB_comment_box {
-	font-size: 14px !important;
-}
-
-#HCB_comment_box h3 {
-	display: none !important;
-}
-
-#HCB_comment_form_box a {
-	position: relative !important;
-	left: 85px !important;
-}
-
-
-header {
-
-	font-size: 20px;
-	font-weight: 700;
-	margin-top: 1em;
-	padding: 5px 5px 0;
-	text-align: center;
-}
-a {
-	color: #ff6600;
-	text-decoration: none;
-}
-a:hover {
-	color: #dd0000;
-}
-
-#optionsp blockquote {
-	text-align:center;
-	position: relative;
-	right: 10px;
-	bottom: 3px;
-}
-
-#main a {
-	font-size: 14px !important;
-}
-
-code, pre {
-	background: #EEE;
-	border: 1px solid #DDD;
-	border-radius: 2px;
-	text-shadow: 0 1px 1px white;
-	padding: 0 1px;
-}
-#mascotlink:hover {
-	cursor: pointer;
-}
-.faqanswer {
-	font-size: 13px;
-	text-align: center;
-	position: relative;
-	right: 20px;
-}
-small, img[src="http://www.htmlcommentbox.com/static/images/feed.png"] {
-	display: none;
-}
-
-a {
-	outline: 0 !important;
-}
-
-a[href="http://www.htmlcommentbox.com"] {display:none !important;}
-.faqquestion {
-	position: relative;
-	left: 20px;
-}
-.faqpost {
-	margin-bottom: 4px;
-}
-.erika:hover::after {
-	content: url('http://i.imgur.com/zLsPY.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.hakase:hover::after {
-	content: url('http://i.imgur.com/TBHI6.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.miku:hover::after {
-	content: url('http://i.imgur.com/vE3FJ.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.yotsuba:hover::after {
-	content: url('http://i.imgur.com/1MyDM.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.patchouli:hover::after {
-	content: url('http://i.imgur.com/QoKJb.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.asuka:hover::after {
-	content: url('http://i.imgur.com/Wj7s7.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.azusa:hover::after {
-	content: url('http://i.imgur.com/6c3p3.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.seraphim:hover::after {
-	content: url('http://i.imgur.com/PA7pJ.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.musume:hover::after {
-	content: url('http://i.imgur.com/rKT7L.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.nagato:hover::after {
-	content: url('http://i.imgur.com/ucnzg.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.brs:hover::after {
-	content: url('http://i.imgur.com/VidKo.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.shana:hover::after {
-	content: url('http://i.imgur.com/JNS1z.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.rin:hover::after {
-	content: url('http://i.imgur.com/fXXd2.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-.lain:hover::after {
-	content: url('http://i.imgur.com/AfjG9.png');
-	position: fixed;
-	bottom: 244px;
-	right: 0px;
-}
-</style>
+<link rel=StyleSheet href="style.css" TYPE="text/css" MEDIA=screen>
+<link rel=StyleSheet href="mascots.css" TYPE="text/css" MEDIA=screen>
 </head>
 <body class='unloaded'>
 <a href="https://github.com/seaweedchan/OneeChan"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/6429057dfef9e98189338d22e7f6646c6694f032/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
@@ -575,8 +157,8 @@ a[href="http://www.htmlcommentbox.com"] {display:none !important;}
 <header>Comments and Issues</header><br>
 <h3><a href='#' style="text-decoration: underline;">Return</a></h3><div style="text-align: center; font-size: 13px;"><br>Here you can report issues or leave general feedback.<br>Do note that because I have Github notifications sent to my email and phone, this will not receive responses or notice as frequently but I will keep on top of it.<br>Use Github instead if you'd like to have a more personal issue tracker and don't mind registration.<br><br>Note: While an email is not required, a name is required due to recent spam. You can set this to whatever you want, it doesn't matter.<br></div><br>
 <!-- begin htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
- <script type="text/javascript" language="javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={  };} (function(){s=document.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page="+escape((window.hcb_user && hcb_user.PAGE)||(""+window.location)).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dEk1qnvfhGsFyniZbDg5X0"+"&opts=17115&num=50");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+<script type="text/javascript" language="javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={  };} (function(){s=document.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page="+escape((window.hcb_user && hcb_user.PAGE)||(""+window.location)).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dEk1qnvfhGsFyniZbDg5X0"+"&opts=17115&num=50");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end htmlcommentbox.com -->
 </div>
 <div id='faq-list'>
@@ -656,21 +238,47 @@ Enjoy.</p></ul>
 <div id='mascotsp' style="position: relative; left: 2px;">
 <header>Mascots</header><br>
 <h3><a href='#' style="text-decoration: underline;">Return</a></h3><br>
-<ul style="text-align: center; font-size: 14px; position: relative; right: 20px;">Hover over one of the below to see it on the right side of the page, like you would on 4chan!<br>Note the size of the mascot relative to your screen space.<br><br>
-<a id="mascotlink" class="erika">Furudo Erika</a><br>
-<a id="mascotlink" class="hakase">Shinonome Hakase</a><br>
-<a id="mascotlink" class="miku">Hatsune Miku</a><br>
-<a id="mascotlink" class="yotsuba">Kowai Yotsuba</a><br>
-<a id="mascotlink" class="patchouli">Patchouli Knowledge</a><br>
+<ul style="text-align: center; font-size: 14px; position: relative; right: 20px; height: 500px; overflow-y: scroll; width: 400px; margin-left: 140px !important;">Hover over one of the below to see it on the right side of the page, like you would on 4chan!<br>Note the size of the mascot relative to your screen space.<br><br>
+<a id="mascotlink" class="akiyama1">Akiyama Mio</a><br>
+<a id="mascotlink" class="akiyama2">Akiyama Mio 2</a><br>
+<a id="mascotlink" class="miosit">Akiyama Mio sitting</a><br>
 <a id="mascotlink" class="asuka">Asuka Langley Soryu</a><br>
-<a id="mascotlink" class="azusa">Nakano Azusa</a><br>
-<a id="mascotlink" class="seraphim">Seraphim</a><br>
-<a id="mascotlink" class="musume">Ika Musume</a><br>
+<a id="mascotlink" class="brs">BLACK★ROCK SHOOTER</a><br>
+<a id="mascotlink" class="cc">CC</a><br>
+<a id="mascotlink" class="dawn">Dawn / Hikari (Pokemon)</a><br>
+<a id="mascotlink" class="fluttershy">Fluttershy</a><br>
+<a id="mascotlink" class="erika">Furudo Erika</a><br>
+<a id="mascotlink" class="gasai">Gasai Yuno</a><br>
+<a id="mascotlink" class="hasekura">Hasekura Youko</a><br>
+<a id="mascotlink" class="hatsune1">Hatsune Miku</a><br>
+<a id="mascotlink" class="hatsune2">Hatsune Miku 2</a><br>
+<a id="mascotlink" class="hatsunebig">Hatsune Miku (big)</a><br>
+<a id="mascotlink" class="hirasawa">Hirasawa Yui</a><br>
+<a id="mascotlink" class="horosillight">Horo sil (light color schemes)</a><br>
+<a id="mascotlink" class="horosildark">Horo sil (dark color schemes)</a><br>
+<a id="mascotlink" class="horosil2light">Horo sil 2 (light color schemes)</a><br>
+<a id="mascotlink" class="horosil2dark">Horo sil 2 (dark color schemes)</a><br>
+<a id="mascotlink" class="ika">Ika Musume</a><br>
+<a id="mascotlink" class="ika2">Ika Musume 2</a><br>
+<a id="mascotlink" class="iwakura">Iwakura Lain</a><br>
+<a id="mascotlink" class="iwakura2">Iwakura Lain 2</a><br>
+<a id="mascotlink" class="kagamine">Kagamine Rin</a><br>
+<a id="mascotlink" class="kaname">Kaname Madoka</a><br>
+<a id="mascotlink" class="koiwai">Koiwai Yotsuba</a><br>
 <a id="mascotlink" class="nagato">Nagato Yuki</a><br>
-<a id="mascotlink" class="brs">BLACK ROCK SHOOTER</a><br>
+<a id="mascotlink" class="nagatosillight">Nagato Yuki sil (light color schemes)</a><br>
+<a id="mascotlink" class="nagatosildark">Nagato Yuki sil (dark color schemes)</a><br>
+<a id="mascotlink" class="npantsu">Nagato Yuki + Pantsu (light color schemes)</a><br>
+<a id="mascotlink" class="npantsu2">Nagato Yuki + Pantsu (dark color schemes)</a><br>
+<a id="mascotlink" class="nakano">Nakano Azusa</a><br>
+<a id="mascotlink" class="patchouli">Patchouli Knowledge</a><br>
+<a id="mascotlink" class="seraphim">Seraphim</a><br>
 <a id="mascotlink" class="shana">Shana</a><br>
-<a id="mascotlink" class="rin">Kagamine Rin</a><br>
-<a id="mascotlink" class="lain">Iwakura Lain</a><br><br><br>
+<a id="mascotlink" class="shinonome">Shinonome Hakase</a><br>
+<a id="mascotlink" class="suzumiya">Suzumiya Haruhi</a><br>
+<a id="mascotlink" class="suzumiya2">Suzumiya Haruhi 2</a><br>
+<a id="mascotlink" class="tardis">Tardis</a><br>
+<br><br>
 </ul><ul style="position: fixed; bottom: -10px; right: 2px; font-size: 12px;" class='postarea'>
 <input name="name" placeholder="Name" style="width:244px; height: 16px; border: 1px solid #CCC; margin-bottom: 1px; font-size: 12px;">
 <br>
