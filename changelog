@@ -1,5 +1,27 @@
 OneeChan changelog
 
+v3.0
+-New mascots: Fluttershy, Dawn, Tardis
+-New option: Margin Between Replies
+-New option: Remove filtered backlinks
+-New option: Unreverse unicode names
+-New color schemes: BlackberryJam, BakaBT, Yotsuba Purple
+-Remove background from transparent captcha
+-Support for /vg/, /hm/, and /mlp/
+-Fix error page
+-Fix Firefox icons disappearing on hover
+-Added Sakamoto, Ponyo, Baka, and Rabite emoji
+-Improved OneeChan rendering speed
+-Redone autohide functionality, allowing for autohiding to appear correctly via 4chan X
+-New "List" style Slideout Navigation that displays full board names
+-Dropped support for old 4chan X
+-Merged Quick Reply / Post Form options, let 4chan X's option to hide the original post form determine its visibility instead
+-Options to move emoji to left or right side of names
+-Let Firefox center images on its own, rather than letting OneeChan do it
+-@media rules implemented to change top padding based on window width
+-Bottom padding made more consistent and aligned with quick reply
+-Remove white/green backgrounds from text board sections
+
 v2.9
 -New option: Underline links ([Reply], etc)
 -New option: Slimmer Replies
