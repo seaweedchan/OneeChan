@@ -175,6 +175,9 @@ select {
   textarea {
     height: 70px !important;
   }
+  .anonymousb {
+  font-weight: 600;
+  }
 } 
 
 /* Chrome */
@@ -208,6 +211,9 @@ select {
   }
   .reply {
     padding-top: 2px !important;
+  }
+  .anonymousb {
+  font-weight: 800;
   }
 }
 
