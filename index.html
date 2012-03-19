@@ -120,8 +120,24 @@ function toggle(togglediv) {
 <link rel="alternate stylesheet" type="text/css" href="Color Schemes/ObsidianChan.css" title="ObsidianChan"/>
 <link rel="alternate stylesheet" type="text/css" href="Color Schemes/MidnightCaek.css" title="MidnightCaek"/>
 <link rel="alternate stylesheet" type="text/css" href="Color Schemes/MinimalisticMayhem.css" title="MinimalisticMayhem"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/PaisleyChanLite.css" title="PaisleyChanLite"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/PaisleyChan.css" title="PaisleyChan"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/Terminal.css" title="Terminal"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/Muted.css" title="Muted"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/BakaBT.css" title="BakaBT"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/YotsubaPurple.css" title="YotsubaPurple"/>
+<link rel="alternate stylesheet" type="text/css" href="Color Schemes/BlackberryJam.css" title="BlackberryJam"/>
 <link rel=StyleSheet href="style.css" TYPE="text/css" MEDIA=screen>
 <link rel=StyleSheet href="mascots.css" TYPE="text/css" MEDIA=screen>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@font-face {
+  font-family: 'Cedarville Cursive';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cedarville Cursive'), local('Cedarville-Cursive'), url('http://themes.googleusercontent.com/static/fonts/cedarvillecursive/v3/cuCe6HrkcqrWTWTUE7dw-5zpMnghKP_wiJrQSyqob5U.woff') format('woff');
+}
+</style>
 </head>
 <body class='unloaded'>
 <a href="https://github.com/seaweedchan/OneeChan"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/6429057dfef9e98189338d22e7f6646c6694f032/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
@@ -303,7 +319,7 @@ Enjoy.</p></ul>
 <header>Color Schemes</header><br>
 <h3><a href='#' style="text-decoration: underline;">Return</a></h3><br>
 <ul style="text-align: center; font-size: 14px; position: relative; right: 19px;">Click the name of a color scheme below to preview it!<br>See the below replies for testing, and you can switch to the "Mascots" page to test the post form and mascots with your chosen scheme.<br>Want to install your own custom mascot instead? Try <a href="userstyles.org/styles/58011/custom-oneechan-mascot">Custom OneeChan Mascot</a>.<br><br>
-<a href="javascript:set_stylesheet('')">Photon (Default)</a><br>
+<a href="javascript:set_stylesheet('')">Photon (Page Default)</a><br>
 <a href="javascript:set_stylesheet('AppChan')">AppChan</a><br>
 <a href="javascript:set_stylesheet('Yotsuba')">Yotsuba</a><br>
 <a href="javascript:set_stylesheet('YotsubaB')">Yotsuba B</a><br>
@@ -312,7 +328,15 @@ Enjoy.</p></ul>
 <a href="javascript:set_stylesheet('Zenburned')">Zenburned</a><br>
 <a href="javascript:set_stylesheet('ObsidianChan')">ObsidianChan</a><br>
 <a href="javascript:set_stylesheet('MidnightCaek')">Midnight Caek</a><br>
-<a href="javascript:set_stylesheet('MinimalisticMayhem')">Minimalistic Mayhem</a><br><br></ul>
+<a href="javascript:set_stylesheet('MinimalisticMayhem')">Minimalistic Mayhem</a><br>
+<a href="javascript:set_stylesheet('PaisleyChanLite')">PaisleyChan Lite</a><br>
+<a href="javascript:set_stylesheet('PaisleyChan')">PaisleyChan</a><br>
+<a href="javascript:set_stylesheet('Terminal')">Terminal</a><br>
+<a href="javascript:set_stylesheet('Muted')">Muted</a><br>
+<a href="javascript:set_stylesheet('BakaBT')">BakaBT</a><br>
+<a href="javascript:set_stylesheet('YotsubaPurple')">Yotsuba Purple</a><br>
+<a href="javascript:set_stylesheet('BlackberryJam')">BlackberryJam</a><br>
+<br></ul>
 <div class='reply'><input type="checkbox"> <b style="font-weight: 800;">Anonymous</b> 12/14/11(Wed)03:02 <a class='quotejs'>No.</a><a class='quotejs'>21613335</a> <a class='backlink'>>>21613419</a>
 <blockquote><span class='greentext'>>still no image preloading</span><br>Come on, Mayhem.</blockquote>
 </div>
@@ -334,7 +358,25 @@ Enjoy.</p></ul>
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-font');" >Font</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-theme');" >00. Theme</a>
+</div>
+<div name="showdiv" id="show-theme" class='reply' style="display: none;"><blockquote>
+See 'Color Schemes' link above.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-mascot');" >01. Mascot</a>
+</div>
+<div name="showdiv" id="show-mascot" class='reply' style="display: none;"><blockquote>
+See 'Mascot' link above.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-font');" >02. Font</a>
 </div>
 <div name="showdiv" id="show-font" class='reply' style="display: none;"><blockquote>This option has various font families. You can see them below. If you don't have one installed, it will appear <span style="font-family: 'Cedarville Cursive'">cursive</span>, with the exception of the Ubuntu font, this site's default. You can actually click the text to see what the font is supposed to look like.<br><br>
 <a style="font-family: 'Ubuntu','Cedarville Cursive'; font-size: 14px;" href="http://4.bp.blogspot.com/_5bdO0FMWXa8/TKGuVGCOZII/AAAAAAAAASg/qiE4l9UHAHw/s1600/C:%5Cfakepath%5CScreenshot.png">Ubuntu</a><br>
@@ -352,7 +394,7 @@ Enjoy.</p></ul>
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-fontsize');" >Font Size</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-fontsize');" >03. Font Size</a>
 </div>
 <div name="showdiv" id="show-fontsize" class='reply' style="display: none;"><blockquote>
 <span style="font-size: 10px;">This is a sentence at font size 10px.</span><br>
@@ -367,7 +409,7 @@ Enjoy.</p></ul>
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-sidebar');" >Enable Sidebar?</a>
+<a id="myHeader-butts" href="javascript:toggle('show-sidebar');" >04. Enable Sidebar?</a>
 </div>
 <div name="showdiv" id="show-sidebar" class='reply' style="display: none;">
 <blockquote>
@@ -377,7 +419,7 @@ This one's prety obvious. It enables the sidebar on the right side (or left side
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-marginstyle');" >Margin Style</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-marginstyle');" >05. Margin Style (not the sidebar)</a>
 </div>
 <div name="showdiv" id="show-marginstyle" class='reply' style="display: none;">
 <blockquote>
@@ -387,7 +429,7 @@ This is how big the other side opposite the sidebar is.<br>"No Left Margin" mean
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-navigation');" >Navigation Type</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-navigation');" >06. Navigation Type</a>
 </div>
 <div name="showdiv" id="show-navigation" class='reply' style="display: none;">
 <blockquote>
@@ -397,7 +439,7 @@ You probably know on 4chan about the top navigation links and the pages links. T
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-pages');" >Pages Location</a>
+<a id="myHeader-butts" href="javascript:toggle('show-pages');" >07. Pages Location</a>
 </div>
 <div name="showdiv" id="show-pages" class='reply' style="display: none;">
 <blockquote>
@@ -407,7 +449,7 @@ Instead of displaying page links horizontally, you can display them vertically a
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-namelogo');" >Board Name + Logo</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-namelogo');" >08. Board Name + Banner</a>
 </div>
 <div name="showdiv" id="show-namelogo" class='reply' style="display: none;">
 <blockquote>
@@ -417,7 +459,7 @@ Instead of displaying page links horizontally, you can display them vertically a
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-customnames');" >Custom Board Names</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-customnames');" >09. Custom Board Names</a>
 </div>
 <div name="showdiv" id="show-customnames" class='reply' style="display: none;">
 <blockquote>
@@ -427,31 +469,33 @@ This sets pseudo-elements to replace the board names. Instead of, for example, i
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-postform');" >Post Form</a>
+<a id="myHeader-butts" href="javascript:toggle('show-postform');" >10. Quick Reply / Post form</a>
 </div>
 <div name="showdiv" id="show-postform" class='reply' style="display: none;">
 <blockquote>
-"Fixed" - The default 4chan post form is fixed in your sidebar and always visible, ready for you to make a new thread or post.<br>
+4chan X now controls normal post form visibility, OneeChan does not hide it. These options apply to both the post form and the quick reply. <br><br>
+"Fixed" - The post form / quick reply is fixed in your sidebar and always visible, ready for you to make a new thread or post.<br>
 "Slideout" - Half of the post form is hidden in the side of the window until you hover over it.<br>
-"Tabbed Slideout" - A little prettier than the Slideout option, this makes it so all that's visible until hover is a small tab that says "POST FORM".<br>
+"Tabbed Slideout" - A little prettier than the Slideout option, this makes it so all that's visible until hover is a small tab that says "Quick Reply" or "Post Form".<br>
 "Fade" - This works similar to "Fixed," except that it makes the post form slightly transparent until you hover over it.<br>
-"Disabled" - For the masochists! And aeosynth X master branch users that let you make threads with the quick reply. This gets rid of the post form all together. Who needs it?
+"Floating QR Only" - This keeps the 4chan X quick reply floating like it would be without OneeChan.
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-quickreply');" >Replace Post Form with 4chan X Quick Reply?</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-nameemail');" >11. Name/Email/Subject Style</a>
 </div>
-<div name="showdiv" id="show-quickreply" class='reply' style="display: none;">
+<div name="showdiv" id="show-nameemail" class='reply' style="display: none;">
 <blockquote>
-As the title of the option says, if you use 4chan X, this option replaces the post form with 4chan X's quick reply. It makes them visibly identical, and the options are the same as in the "Post Form" option, so all you get is even more benefits. Set to "No" if you don't use 4chan X at all or you prefer 4chan X's floating quick reply.
+"Compact" - This puts the name, email, and subject input fields on the same row of the quick reply, making them smaller.<br>
+"Non-Compact" - This puts the input fields on their own row, similar to how 4chan and the old quick reply used to be.
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-labels');" >Postarea / QR Labels?</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-labels');" >12. Postarea / QR Labels?</a>
 </div>
 <div name="showdiv" id="show-labels" class='reply' style="display: none;">
 <blockquote>
@@ -461,17 +505,17 @@ These are the labels for the input fields and textareas. They say "Name" in the 
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-textareaheight');" >Postarea / QR Textarea Height</a>
+<a id="myHeader-butts" href="javascript:toggle('show-textareaheight');" >13. Expand Textarea on Focus?</a>
 </div>
 <div name="showdiv" id="show-textareaheight" class='reply' style="display: none;">
 <blockquote>
-This changes the height of the textarea, where you'd type in the actual message of your reply or thread. The mascots and error messages do change positions with this option, so if you use a mascot and have a smaller screen, you should possibly leave it at the default setting.
+When you click the textarea, it will expand to a large textarea giving you more room to type.
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-hr');" >Post Separation Lines</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-hr');" >14. Post Separation Lines</a>
 </div>
 <div name="showdiv" id="show-hr" class='reply' style="display: none;">
 <blockquote>
@@ -483,7 +527,7 @@ And they'd just go between threads!
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-captchareload');" >Captcha Reload Button</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-captchareload');" >15. Captcha Reload Button</a>
 </div>
 <div name="showdiv" id="show-captchareload" class='reply' style="display: none;">
 <blockquote>
@@ -493,17 +537,17 @@ This adds a small little icon into your captcha image so that you don't have to 
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-replywidth');" >Reply Width</a>
+<a id="myHeader-butts" href="javascript:toggle('show-replywidth');" >16. Reply Width</a>
 </div>
 <div name="showdiv" id="show-replywidth" class='reply' style="display: none;">
 <blockquote>
-You can either set this option to Normal so that reply width depends on how much text is in the reply, or you can set it to Fit Width which makes the replies take up all available space.
+You can either set this option to Normal so that reply width depends on how much text is in the reply, or you can set it to "Make replies as wide as the page" which makes the replies take up all available space.
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-roundedcorners');" >Rounded Corners</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-roundedcorners');" >17. Rounded Corners</a>
 </div>
 <div name="showdiv" id="show-roundedcorners" class='reply' style="display: none;">
 <blockquote>
@@ -513,7 +557,7 @@ If you'll notice around this very box you'll see the corners are not sharp but s
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-sage');" >Sage Identifier</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-sage');" >18. Sage Identifier</a>
 </div>
 <div name="showdiv" id="show-sage" class='reply' style="display: none;">
 <blockquote>
@@ -523,37 +567,37 @@ If enabled displays <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4A
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-nekosega');" >Neko / Sega Identifiers</a>
+<a id="myHeader-butts" href="javascript:toggle('show-nekosega');" >Emoji</a>
 </div>
 <div name="showdiv" id="show-nekosega" class='reply' style="display: none;">
 <blockquote>
-As in the Sage Identifier option, as a fun addition you can change the display of posts with Neko or Sega in the email field.<br><br>Images: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAMAAAAIRmf1AAACoFBMVEUAAABnUFZoUVddU1T6+PvFwLzn4eFXVlT/+vZpZGCgm5dKU1Cfnpz//flbWljr5uLp5OCalpNZWFb//f3r6+n28ff9+PRaVVH59Pr//vr38vj57/Dp7eyjn5zq8O5aVVJbYV9nVFhjUFRiWFlZVlFgZGOboJzm5uZhamfz9/bt8fDw6+drb26bl5j/8/lkX1z06uldWFS5r61UT0tfWlbDwr3Ew76moqNRTU7Mx8P75OpeY19pWl1XW1qzr6x5eHaLiojv7+1UT0xIU0uzqadVS0nV0MxkZGT5+PPk497///ra29Xq5eFtY2H28e2hnJignJlUUE1dXV2vrqxkY2FkYF/m3d5vZmfDuruhl5aZlJHx8O75+PZWVVP29vT/9fTj3trv6ubh5eRdXFqTkpBOTUtqZmX88/RMQ0T78vPEvr7HwcHDwsDq6ef///3Gx8H++fXEv7tZWVedmZZXXVudnJp0c3FZU1f79fnb1dlXUVVjXWFrZmy8t7359/qLj455e3q4s69vamZjX1zy4+avpaReWFz/+f1NR0vu6Ozp4+f48/lnYmi8ur3Iw7/69fHz7+xbV1SZmJZVUk1ZV1zq5ez++f/c196uqbDn4uj9+P7z7vRVVVXt6ORiXl/OycXHw8CPi4ihoJ5aWF3/+v/k3+axrLOsp67LzMZYU1m2sq9dWF5WUU1WUk/Au7eYlJGqpqObmphYVV749f7p5Or38fPu6OpiXFz38fH79vLz7urv6+hhYF5cWWKal6D//f/Z09Xg29exraqbl5RqaW6kpKTq5uPv7Of/+PDj29D//vP18Ozs5+OloJymoZ1ZVVJZWVlkYF2hnpmblIyspJmVjYKQi4enop5STUlRTUpcWUhqY1BgWT9ZUjhcV1NiXVkkhke3AAAABHRSTlMA5vjapJ+a9wAAAP9JREFUGBk9wA1EAwEAhuHv3dTQAkLiUlJFJWF0QDLFYDRXIMkomBgxNIYxhOk4wwCqQhQjxgxSGIsALFA5BiYbMZHajz1oJlx51sBJpf6Gd3zONcrqm/r1W8ByK0r+XV1LXyOLLnjW6hMGpu0u1IzPSdO17DgrGC6AadrVodGcDQYbhguP6wAvAaC0BRZQalkUQ8UQDz5tAof0XbejOFcV5xiUoCfjj3O/nf0ZbqAMPYmzU18KSDaRQ08qnfw+B2JNdAEQt2O5vctUGjhoIBU4ygPsj2Vh5zYopDK73hsirdkPTwGCbSHpiYFwYVVC/17pCFSBeUmoqwYQuZtWxx+BVEz0LeVKIQAAAABJRU5ErkJggg=="> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAALBAMAAAD2A3K8AAAAMFBMVEUAAACMjpOChImytLmdnqMrKzDIyM55dnkODQ94foQ7PkXm5Olsb3VUUVVhZmw8Sl6klHLxAAAAAXRSTlMAQObYZgAAANFJREFUGJVjYIACRiUlJUUGDHBk4syTkxQwhO3/rQ/4ZYsuymi3YEFUqAhC4LCJZJGIi1uimKKjk3KysbOxsaMnAwNLyqoopaXhttf2it1anrJqke1pr1DlBAZhicLnM5YXZ4RWlIYoezx0zrjYqG6czCDsYRzxIko6Q/qFaKy0690Ij0MxN8K2MIhJXF+hsfxJxuwdpYGVaUU3Mm5bqgKFOZOFit3Vp23J3pgsqLxFUXpLtlD5bgcGBs45794dn6mkOVFQUOjNmXPPz8ysOcAAANw6SHLtrqolAAAAAElFTkSuQmCC"> Text: <span style="font-color: red !important;">(neko) (sega)</span>
+As in the Sage Identifier option, as a fun addition you can change the display of posts with Neko or Sega in the email field. Update: Now there's Ponyo, Baka, Sakamoto, and Rabite! Try them out yourself on 4chan.<br><br>Images: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAMAAAAIRmf1AAACoFBMVEUAAABnUFZoUVddU1T6+PvFwLzn4eFXVlT/+vZpZGCgm5dKU1Cfnpz//flbWljr5uLp5OCalpNZWFb//f3r6+n28ff9+PRaVVH59Pr//vr38vj57/Dp7eyjn5zq8O5aVVJbYV9nVFhjUFRiWFlZVlFgZGOboJzm5uZhamfz9/bt8fDw6+drb26bl5j/8/lkX1z06uldWFS5r61UT0tfWlbDwr3Ew76moqNRTU7Mx8P75OpeY19pWl1XW1qzr6x5eHaLiojv7+1UT0xIU0uzqadVS0nV0MxkZGT5+PPk497///ra29Xq5eFtY2H28e2hnJignJlUUE1dXV2vrqxkY2FkYF/m3d5vZmfDuruhl5aZlJHx8O75+PZWVVP29vT/9fTj3trv6ubh5eRdXFqTkpBOTUtqZmX88/RMQ0T78vPEvr7HwcHDwsDq6ef///3Gx8H++fXEv7tZWVedmZZXXVudnJp0c3FZU1f79fnb1dlXUVVjXWFrZmy8t7359/qLj455e3q4s69vamZjX1zy4+avpaReWFz/+f1NR0vu6Ozp4+f48/lnYmi8ur3Iw7/69fHz7+xbV1SZmJZVUk1ZV1zq5ez++f/c196uqbDn4uj9+P7z7vRVVVXt6ORiXl/OycXHw8CPi4ihoJ5aWF3/+v/k3+axrLOsp67LzMZYU1m2sq9dWF5WUU1WUk/Au7eYlJGqpqObmphYVV749f7p5Or38fPu6OpiXFz38fH79vLz7urv6+hhYF5cWWKal6D//f/Z09Xg29exraqbl5RqaW6kpKTq5uPv7Of/+PDj29D//vP18Ozs5+OloJymoZ1ZVVJZWVlkYF2hnpmblIyspJmVjYKQi4enop5STUlRTUpcWUhqY1BgWT9ZUjhcV1NiXVkkhke3AAAABHRSTlMA5vjapJ+a9wAAAP9JREFUGBk9wA1EAwEAhuHv3dTQAkLiUlJFJWF0QDLFYDRXIMkomBgxNIYxhOk4wwCqQhQjxgxSGIsALFA5BiYbMZHajz1oJlx51sBJpf6Gd3zONcrqm/r1W8ByK0r+XV1LXyOLLnjW6hMGpu0u1IzPSdO17DgrGC6AadrVodGcDQYbhguP6wAvAaC0BRZQalkUQ8UQDz5tAof0XbejOFcV5xiUoCfjj3O/nf0ZbqAMPYmzU18KSDaRQ08qnfw+B2JNdAEQt2O5vctUGjhoIBU4ygPsj2Vh5zYopDK73hsirdkPTwGCbSHpiYFwYVVC/17pCFSBeUmoqwYQuZtWxx+BVEz0LeVKIQAAAABJRU5ErkJggg=="> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAALBAMAAAD2A3K8AAAAMFBMVEUAAACMjpOChImytLmdnqMrKzDIyM55dnkODQ94foQ7PkXm5Olsb3VUUVVhZmw8Sl6klHLxAAAAAXRSTlMAQObYZgAAANFJREFUGJVjYIACRiUlJUUGDHBk4syTkxQwhO3/rQ/4ZYsuymi3YEFUqAhC4LCJZJGIi1uimKKjk3KysbOxsaMnAwNLyqoopaXhttf2it1anrJqke1pr1DlBAZhicLnM5YXZ4RWlIYoezx0zrjYqG6czCDsYRzxIko6Q/qFaKy0690Ij0MxN8K2MIhJXF+hsfxJxuwdpYGVaUU3Mm5bqgKFOZOFit3Vp23J3pgsqLxFUXpLtlD5bgcGBs45794dn6mkOVFQUOjNmXPPz8ysOcAAANw6SHLtrqolAAAAAElFTkSuQmCC"> Text: <span style="font-color: red !important;">(neko) (sega)</span>
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-filenames');" >Expanded Filenames</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-filenames');" >20. Expanded Filenames</a>
 </div>
 <div name="showdiv" id="show-filenames" class='reply' style="display: none;">
 <blockquote>
-4chan by default cuts off some of the file name to avoid it getting too long. By enabling this option, you'll simply be shown the entire file name.
+4chan by default cuts off some of the file name to avoid it getting too long. By enabling this option, you'll simply be shown the entire file name. If you have "Rice filenames" enabled in 4chan X, this OneeChan option will be ignored.
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-centeredimages');" >Centered Images in New Tabs</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-centeredimages');" >21 Centered Images in New Tabs (Chrome only)</a>
 </div>
 <div name="showdiv" id="show-centeredimages" class='reply' style="display: none;">
 <blockquote>
-When you open images in a new tab, via clicking them without Image Expanding enabled or right click -> Open in new tab, this will center the image on the page. Normally they appear in the top left corner. To avoid scrollbars hiding entirely, this will have a horizontal scrollbar that's always visible.
+When you open images in a new tab, via clicking them without Image Expanding enabled or right click -> Open in new tab, this will center the image on the page. Normally they appear in the top left corner. To avoid scrollbars hiding entirely, this will have a horizontal scrollbar that's always visible. As of Firefox 11, Firefox does this on its own, so OneeChan will ignore this option on Firefox.
 </blockquote>
 </div>
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-scrollbars');" >Custom Scrollbars</a>
+<a id="myHeader-butts" href="javascript:toggle('show-scrollbars');" >22. Custom Scrollbars</a>
 </div>
 <div name="showdiv" id="show-scrollbars" class='reply' style="display: none;">
 <blockquote>
@@ -563,7 +607,7 @@ This option changes the colors of the scrollbars to match that of your chosen co
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-ihover');" >Image Hover Fixes</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-ihover');" >23. Image Hover Fixes</a>
 </div>
 <div name="showdiv" id="show-ihover" class='reply' style="display: none;">
 <blockquote>
@@ -573,7 +617,7 @@ When you hover over a link in Firefox or Chrome, a small ~20px popup appears at 
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-backlinks');" >Quote Backlinks (Quoted By:)</a>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-backlinks');" >24. Quote Backlinks (Quoted By:)</a>
 </div>
 <div name="showdiv" id="show-backlinks" class='reply' style="display: none;">
 <blockquote>
@@ -583,7 +627,7 @@ Backlinks in 4chan X, which come from the /b/ackwash userscript, normally appear
 </td>
 <td>
 <div>
-<a id="myHeader-butts" href="javascript:toggle('show-redtext');" >Moot's Announcements</a>
+<a id="myHeader-butts" href="javascript:toggle('show-redtext');" >25. Moot's Announcements</a>
 </div>
 <div name="showdiv" id="show-redtext" class='reply' style="display: none;">
 <blockquote>
@@ -593,7 +637,7 @@ When moot makes an announcement, without OneeChan, the text is read and it appea
 </td>
 <td>
 <div>
-<a id="myHeader-postarea" href="javascript:toggle('show-slideoutwatcher');" >Slideout Watcher?</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-slideoutwatcher');" >26. Slideout Watcher?</a>
 </div>
 <div name="showdiv" id="show-slideoutwatcher" class='reply' style="display: none;">
 <blockquote>
@@ -603,7 +647,99 @@ One criticism of the thread watcher in 4chan X is that its not always needed and
 </td>
 <td>
 <div>
-<a id="myHeader-marginstyle" href="javascript:toggle('show-changealign');" >Sidebar Location</a>
+<a id="myHeader-postarea" href="javascript:toggle('show-slideoutnav');" >27. Slideout Navigation?</a>
+</div>
+<div name="showdiv" id="show-slideoutnav" class='reply' style="display: none;">
+<blockquote>
+Shows a small button in the corner with a compass icon that displays navigation links in a compact way.<br><br>
+"List" - Shows the full names of boards and makes them easily clickable.<br>
+"Compact" - Only shows the board letter.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-currentboard');" >28. Current Board Highlighting</a>
+</div>
+<div name="showdiv" id="show-currentboard" class='reply' style="display: none;">
+<blockquote>
+This will make the board letter of the board you're on bold in the navigation bar.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-recaptchaopacity');" >29. reCaptcha Opacity</a>
+</div>
+<div name="showdiv" id="show-recaptchaopacity" class='reply' style="display: none;">
+<blockquote>
+With this you can set how transparent the post form reCaptcha is, so the white isn't as powerful on darker color schemes.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-hidenamefield');" >30. Hide Name Field Content?</a>
+</div>
+<div name="showdiv" id="show-hidenamefield" class='reply' style="display: none;">
+<blockquote>
+For tripcode users who don't want their tripcode accidentally getting into screenshots of their browser, this hides the content of the name field until you hover it.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-slimmerreplies');" >31. Slimmer Replies</a>
+</div>
+<div name="showdiv" id="show-slimmerreplies" class='reply' style="display: none;">
+<blockquote>
+This option controls the padding INSIDE replies.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-underline');" >32. Underline Links</a>
+</div>
+<div name="showdiv" id="show-underline" class='reply' style="display: none;">
+<blockquote>
+If you like things underlined, like regular links, or the [Reply] link, this option will underline them for you.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-betweenreplies');" >33. Margin Between Replies</a>
+</div>
+<div name="showdiv" id="show-betweenreplies" class='reply' style="display: none;">
+<blockquote>
+OneeChan by default makes the space between replies smaller than it is by default. If you're one of those who want even less space between replies, the "None" option will make that happen. If you're trying to set up an almost vanilla 4chan look, the "Normal" option is the way to go.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-filteredbacklinks');" >34. Filtered Backlinks</a>
+</div>
+<div name="showdiv" id="show-filteredbacklinks" class='reply' style="display: none;">
+<blockquote>
+4chan X creates strikethrough links to filtered posts with no way to hide the links entirely, this does just that.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-postarea" href="javascript:toggle('show-unicode');" >35. Unreverse Unicode Names?</a>
+</div>
+<div name="showdiv" id="show-unicode" class='reply' style="display: none;">
+<blockquote>
+Some people reverse their names, which also reverses every part of their post making it hard to reply to them. This undoes that.
+</blockquote>
+</div>
+</td>
+<td>
+<div>
+<a id="myHeader-marginstyle" href="javascript:toggle('show-changealign');" >36. Sidebar Location</a>
 </div>
 <div name="showdiv" id="show-changealign" class='reply' style="display: none;">
 <blockquote>
@@ -611,6 +747,7 @@ Simply put, you can leave your whole sidebar in its default position on the righ
 </blockquote>
 </div>
 </td>
+<br><br><br><br>
 </div>
 </div>
 </body>
