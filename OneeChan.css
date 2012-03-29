@@ -1675,6 +1675,13 @@ body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > 
   text-decoration: line-through !important;
 }
 
+/* Youtube Link Title */
+
+.chanlinkify.YTLT-link.YTLT-text {
+	font-family: monospace !important;
+    font-size: 11px !important
+}
+
 /*[[PagesPosition]]*/
 /*[[ReplyMargin]]*/
 /*[[ColorScheme]]*/
