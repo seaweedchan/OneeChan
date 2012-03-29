@@ -429,7 +429,6 @@ form[name^='post'] input[type='file'][name='upfile'],
 hr {
   position: relative !important;
   bottom: 8px !important;
-  /*[[PostSeparationHR]]*/
 }
 #filter input,
 #filter textarea,

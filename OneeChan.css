@@ -125,7 +125,6 @@ This style is designed for the following browsers, ordered alphabetically:
 }
 
 @-moz-document domain('4chan.org') {
-  /*[[helpertext]]*/
   body > br,
   body > hr,
   div[lock=off],
@@ -166,7 +165,8 @@ This style is designed for the following browsers, ordered alphabetically:
   .postarea > form:first-child > table > tbody > tr:last-of-type,
   .postarea .refreshBtn,
   .yui-menu-shadow,
-  .warnicon {
+  .warnicon,
+  a[href*="jlist"] {
    /* Cleanup */
    display: none !important;
  }
@@ -855,7 +855,15 @@ td.replyhl {
 	}
 }
 
-/*[[CaptchaReload]]*/
+  #recaptcha_reload_btn {
+    position: absolute !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 12px 0 0 12px !important;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAZ0lEQVR4XgXAsQ0BUQCA4c8kSrOo70KntAgxgkl05CV2sMOVEo2ofgEAYAIAdp6SRQBwkSQJgL3kbJYEwPC1BgArIFcAwAvIFgAcBQwAQAawQZK7g0UmAJKPt+QEAPlJHmYA4AYA8AeJKy3vtXoiawAAAABJRU5ErkJggg==') no-repeat !important;
+    overflow: hidden;
+    z-index: 1 !important;
+  }
 .postarea form[name^='post'] #recaptcha_reload_btn {
   bottom: 62px !important;
   right: 2px !important;
@@ -974,8 +982,6 @@ form[name='delform'] center {
   position: fixed;
   bottom: -500px;
 }
-
-/*[[BackLinks]]*/
 
 /*[[ReplyWidth]]*/
 
@@ -1717,8 +1723,6 @@ input, textarea {
 }
 }
 
-/*[[CustomBoardNames]]*/
-
 /*[[QuickReply]]*/
 
 /*[[BoardHighlight]]*/
@@ -1859,7 +1863,46 @@ input, textarea {
   img {
     image-rendering: optimizeQuality !important;
   }
-  /*[[CenteredImages]]*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  img {
+    display: block !important;
+  }
+
+  #ft ul {
+    text-align: center !important;
+  }
+
+  #ft li {
+    float: none !important;
+    display: inline-block !important;
+  }
+
+  b {
+    font-weight: 800 !important;
+  }
+  html {
+    display: table !important;
+  }
+
+  body {
+    display: table-cell !important;
+    vertical-align: middle !important;
+  }
+
+  html,
+  body {
+    height: 100% !important;
+    min-width: 101% !important;
+    width: 101% !important;
+    overflow-y:scroll;
+  }
+
+
+  img {
+    margin: auto !important;
+    overflow: auto !important;
+  }
+}
 }
 
 @-moz-document domain('status.4chan.org') {

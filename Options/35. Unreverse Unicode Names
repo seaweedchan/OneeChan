@@ -1,7 +1,0 @@
-/*[[Unreverse]]*/
-
-/* Yes: */
-  .postername, .commentpostername { 
-    unicode-bidi: normal !important; 
-  }
-/* No: */
