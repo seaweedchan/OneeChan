@@ -2,8 +2,8 @@
 
 /* Show: */
 /* Hide: */
-  .quotelink.filtered {
-	display: block;
-	visibility: hidden;
-	margin-bottom: -29px !important;
-  }
+	.quotelink.filtered {
+		display: block;
+		visibility: hidden;
+		margin-bottom: -29px !important;
+	}
