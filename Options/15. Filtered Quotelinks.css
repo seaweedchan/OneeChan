@@ -7,3 +7,7 @@
 		visibility: hidden;
 		margin-bottom: -29px !important;
 	}
+
+	.filtered.backlink {
+        display: none !important
+    }
