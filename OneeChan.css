@@ -180,7 +180,7 @@ This style is designed for the following browsers, ordered alphabetically:
  .backlink:not(.filtered),
  .filesize a,
  a[href*=res],
- a[href*="http://dis"],
+ a[href*="//dis"],
  #credits a,
  .pages a,
  .pages,
@@ -400,7 +400,7 @@ a.yuimenuitemlabel {
 #navtop {
   z-index: 98;
 }
-body > table ~ form .reply a > img[src^="http://images"] {
+body > table ~ form .reply a > img[src^="//images"] {
   top: 0px !important;
 }
 #footer {
@@ -1696,7 +1696,7 @@ body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > 
   background: none !important;
 }
 /* Adblock Minus */
-img[src^='http://static.4chan.org/support/'] {
+img[src^='//static.4chan.org/support/'] {
   display: none;
 }
 /*[[TextareaExpand]]*/
@@ -1801,7 +1801,7 @@ input, textarea {
   }
 }
 
-@-moz-document url-prefix('http://www.4chan.org/') {
+@-moz-document url-prefix('http://www.4chan.org/'), url-prefix('https://www.4chan.org/') {
 	html {
 		display: table !important;
 	}
@@ -1846,7 +1846,7 @@ input, textarea {
 	}
 }
 
-@-moz-document url('http://www.4chan.org/banned') {
+@-moz-document url('http://www.4chan.org/banned'), url('https://www.4chan.org/banned') {
 	img {
 		display: block !important;
 	}
@@ -1919,7 +1919,10 @@ input, textarea {
 
 @-moz-document url('http://www.4chan.org/'),
 url('http://www.4chan.org/#'),
-url('http://www.4chan.org') {
+url('http://www.4chan.org'),
+url('https://www.4chan.org/'),
+url('https://www.4chan.org/#'),
+url('https://www.4chan.org') {
 
 	.yui-g {
 		display: none !important;
@@ -1930,7 +1933,8 @@ url('http://www.4chan.org') {
 	}
 }
 
-@-moz-document url-prefix('http://boards.4chan.org/f/') {
+@-moz-document url-prefix('http://boards.4chan.org/f/'),
+url-prefix('https://boards.4chan.org/f/') {
 	form[name="delform"] center {
 		position: static !important;
 	}

@@ -70,7 +70,7 @@
     resize: none !important;
   }
 
-    body > table ~ form .reply a > img[src^="http://images"] {
+    body > table ~ form .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -437,7 +437,7 @@
     width: 185px !important;
   }
 
-  body > table ~ form .reply a > img[src^="http://images"] {
+  body > table ~ form .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -807,7 +807,7 @@
     resize: none !important;
   }
 
-    body > table ~ form .reply a > img[src^="http://images"] {
+    body > table ~ form .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -1085,7 +1085,7 @@
     resize: none !important;
   }
 
-    body > table ~ form .reply a > img[src^="http://images"] {
+    body > table ~ form .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
