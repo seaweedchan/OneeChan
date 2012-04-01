@@ -214,7 +214,7 @@
   bottom: 244px;
   right: 0px;
 }
-.pinkipie:hover::after {
+.pinkiepie:hover::after {
   content: url('http://i.imgur.com/rY3w4.png');
   position: fixed;
   bottom: 244px;
