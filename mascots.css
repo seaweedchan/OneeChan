@@ -10,6 +10,12 @@
   bottom: 244px;
   right: 0px;
 }
+.applejack:hover::after {
+  content: url('http://i.imgur.com/1ufSL.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
 .miosit:hover::after {
   content: url('http://i.imgur.com/0x4Rr.png');
   position: fixed;
@@ -42,6 +48,18 @@
 }
 .fluttershy:hover::after {
   content: url('http://i.imgur.com/x88ZT.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
+.fluttershy2:hover::after {
+  content: url('http://i.imgur.com/hokhQ.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
+.fluttershyc:hover::after {
+  content: url('http://i.imgur.com/vBqiB.png');
   position: fixed;
   bottom: 244px;
   right: 0px;
@@ -196,6 +214,30 @@
   bottom: 244px;
   right: 0px;
 }
+.pinkipie:hover::after {
+  content: url('http://i.imgur.com/rY3w4.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
+.pinkiepie2:hover::after {
+  content: url('http://i.imgur.com/zy6rO.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
+.rainbowdash:hover::after {
+  content: url('http://i.imgur.com/Zf3eQ.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
+.rarity:hover::after {
+  content: url('http://i.imgur.com/Mbhf7.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
 .seraphim:hover::after {
   content: url('http://i.imgur.com/PA7pJ.png');
   position: fixed;
@@ -228,6 +270,12 @@
 }
 .tardis:hover::after {
   content: url('http://goput.it/vig.png');
+  position: fixed;
+  bottom: 244px;
+  right: 0px;
+}
+.twilight:hover::after {
+  content: url('http://i.imgur.com/r5q9h.png');
   position: fixed;
   bottom: 244px;
   right: 0px;
