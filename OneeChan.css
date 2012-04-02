@@ -796,16 +796,11 @@ body > form #imgControls {
   border: none !important;
   width: 90px !important;
   position: relative !important;
-  bottom: 2px !important;
-  right: 0px !important;
+  bottom: 1px !important;
   background: none !important;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	#imageType {
-		bottom: 1px !important;
-	}
-}
+
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
 	#imageType {
 		bottom: 1px !important;
@@ -1144,23 +1139,22 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   position: fixed;
   left: 2px !important;
   right: auto !important;
-  
+  /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 200px !important;
+  right: 200px !important;/**/
   top: 2px !important;
   bottom: auto !important;
-
   z-index: 2;
 }
 
 #imageType {
  position: fixed !important;
-  left: 2px !important;
+  left: 60px !important;
   right: auto !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
   right: 101px !important;/**/
-  top: 0px !important;
+  top: 1px !important;
   bottom: auto !important;
   z-index: 2;
 }
