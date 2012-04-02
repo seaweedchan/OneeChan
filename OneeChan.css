@@ -121,6 +121,7 @@ This style is designed for the following browsers, ordered alphabetically:
   .postarea h1 {
     display: none !important;
   }
+/*[[ReplyWidth]]*/
 }
 
 @-moz-document domain('4chan.org') {
@@ -982,7 +983,7 @@ form[name='delform'] center {
   bottom: -500px;
 }
 
-/*[[ReplyWidth]]*/
+
 
 form[name='delform'] > table:not(.pages):not([align=right]),
 div.thread > table,

@@ -13,6 +13,23 @@
     padding-left: 20px;
     display: block !important;
   }
+  .replyhider {
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+  }
+  form[name="delform"] > .thread > table, form[name="delform"] > table {
+    margin: 1px 0 0;
+    position: relative;
+    width: 100%;
+  }
+  .replyhider a {
+    position: static !important;
+  }
+  .replyhider {
+    width: 20px !important;
+    padding-top: 1px !important;
+  }
 /* Normal (4chan default) */
   .doubledash,
   .doubledash a,
