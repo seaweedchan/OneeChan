@@ -1,6 +1,6 @@
 /*[[boardlogo]]*/
 
-/* Board Name */
+/* Board Name in Sidebar*/
   div.logo {
     position: fixed !important;
     right: auto !important;
@@ -16,11 +16,8 @@
   div.logo img {
     display: none;
   }
-  #watcher:hover {
-    top: 34px !important; 
-  }
   #watcher::before {
-    top: 19px !important;
+    top: 20px !important;
   }
   #watcher:hover {
     top: 34px !important; 
@@ -30,28 +27,28 @@
     top: 35px !important;
   }
   #navbot::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   #navbot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 16px !important;
+    top: 17px !important;
   }
   font[color="red"]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   font[color="red"]:hover {
     top: 34px !important; 
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]:hover {
     top: 14px !important;
@@ -65,7 +62,7 @@
   table[align=right]:hover::after {
     top: 20px !important;
   }
-/* Board Name - No Sidebar */
+/* Board Name at Top */
   div.logo {
     position: fixed !important;
     right: auto !important;
@@ -81,11 +78,8 @@
   div.logo img {
     display: none;
   }
-  #watcher:hover {
-    top: 34px !important; 
-  }
   #watcher::before {
-    top: 19px !important;
+    top: 20px !important;
   }
   #watcher:hover {
     top: 34px !important; 
@@ -95,28 +89,28 @@
     top: 35px !important;
   }
   #navbot::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   #navbot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 16px !important;
+    top: 17px !important;
   }
   font[color="red"]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   font[color="red"]:hover {
     top: 34px !important; 
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]:hover {
     top: 14px !important;
@@ -135,15 +129,12 @@
     margin: auto !important;
     margin-top: 10px !important;
   }
-/* Logo */
+/* Banner in Sidebar*/
   div.logo > *:not(img) {
     display: none;
   }
-  #watcher:hover {
-    top: 119px !important;
-  }
   #watcher::before {
-    top: 104px !important;
+    top: 105px !important;
   }
   #watcher:hover {
     top: 119px !important;
@@ -153,28 +144,28 @@
     top: 120px !important;
   }
   #navbot::after {
-    top: 103px !important;
+    top: 104px !important;
   }
   #navbot:hover {
     top: 119px !important;
   }
   #navtopr a::after {
-    top: 103px !important;
+    top: 104px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 101px !important;
+    top: 102px !important;
   }
   font[color="red"]::before {
-    top: 103px !important;
+    top: 104px !important;
   }
   font[color="red"]:hover {
     top: 119px !important;
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 103px !important;
+    top: 104px !important;
   }
   table[align=right]::before {
-    top: 103px !important;
+    top: 104px !important;
   }
   table[align=right]:hover {
     top: 99px !important;
@@ -188,15 +179,12 @@
   table[align=right]:hover::after {
     top: 105px !important;
   }
-/* Logo - No Sidebar */
+/* Banner at Top */
   div.logo > *:not(img) {
     display: none;
   }
-  #watcher:hover {
-    top: 34px !important; 
-  }
   #watcher::before {
-    top: 19px !important;
+    top: 20px !important;
   }
   #watcher:hover {
     top: 34px !important; 
@@ -206,28 +194,28 @@
     top: 35px !important;
   }
   #navbot::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   #navbot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 16px !important;
+    top: 17px !important;
   }
   font[color="red"]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   font[color="red"]:hover {
     top: 34px !important; 
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]:hover {
     top: 14px !important;
@@ -246,7 +234,7 @@
     margin: auto !important;
     margin-top: 10px !important;
   }
-/* Board Name + Logo */
+/* Both in Sidebar*/
   div.logo {
     position: fixed !important;
     right: auto !important;
@@ -260,7 +248,7 @@
     text-align: center;
   }
   #watcher::before {
-    top: 104px !important;
+    top: 105px !important;
   }
   #watcher:hover {
     top: 119px !important;
@@ -270,28 +258,28 @@
     top: 120px !important;
   }
   #navbot::after {
-    top: 103px !important;
+    top: 104px !important;
   }
   #navbot:hover {
     top: 119px !important;
   }
   #navtopr a::after {
-    top: 103px !important;
+    top: 104px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 101px !important;
+    top: 102px !important;
   }
   font[color="red"]::before {
-    top: 103px !important;
+    top: 104px !important;
   }
   font[color="red"]:hover {
     top: 119px !important;
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 103px !important;
+    top: 104px !important;
   }
   table[align=right]::before {
-    top: 103px !important;
+    top: 104px !important;
   }
   table[align=right]:hover {
     top: 99px !important;
@@ -305,7 +293,7 @@
   table[align=right]:hover::after {
     top: 105px !important;
   }
-/* Board Name + Logo - No sidebar */
+/* Both at Top */
   div.logo {
     position: fixed !important;
     right: auto !important;
@@ -318,11 +306,8 @@
     z-index: 1;
     text-align: center;
   }
-  #watcher:hover {
-    top: 34px !important; 
-  }
   #watcher::before {
-    top: 19px !important;
+    top: 20px !important;
   }
   #watcher:hover {
     top: 34px !important; 
@@ -332,28 +317,28 @@
     top: 35px !important;
   }
   #navbot::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   #navbot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 16px !important;
+    top: 17px !important;
   }
   font[color="red"]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   font[color="red"]:hover {
     top: 34px !important; 
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]:hover {
     top: 14px !important;
@@ -376,11 +361,8 @@
   div.logo {
     display: none;
   }
-  #watcher:hover {
-    top: 34px !important; 
-  }
   #watcher::before {
-    top: 19px !important;
+    top: 20px !important;
   }
   #watcher:hover {
     top: 34px !important; 
@@ -390,28 +372,28 @@
     top: 35px !important;
   }
   #navbot::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   #navbot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 16px !important;
+    top: 17px !important;
   }
   font[color="red"]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   font[color="red"]:hover {
     top: 34px !important; 
   }
   html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]::before {
-    top: 18px !important;
+    top: 19px !important;
   }
   table[align=right]:hover {
     top: 14px !important;
