@@ -477,6 +477,21 @@ font[color="red"]::before {
 body > a[style='cursor: pointer; float: right;']::after { 
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAASZJREFUGBmNwc8rgwEYwPHnnc2y0iTaWhHbQU6KnChHSrn4E0xZXLlQ5KT8igvFxcVhySTloBBKrR1ei7LN9j7P9y+RcnjpVT4fkf+rhrx2uixZjUowa7NJW+eQbcs2MrUm+U3byHFvN5xyyZMdeJmqI353jo1zy5E3pr3eAEs8skpE/IizwrUN15pW5c2xDnZ4rsfFjxT7tqsJ+cYMpXpa/LSTDU60Jy9fiNgiRU2Jn0bJ8mCzH60iXjMjnJOvx8Sv5Gi/HXPPFjmWueCVgiXkJy+sQ7Znz5QoWoErXPIsNOLip049roM6YaPaZX2c8Y5r65poOBKMeVwqlG3NS7gSyJK2RZkKrk7VwhJM07aJy4tNa0SCeSHLMEeObhz5i4VoIWYhkU/P0ajzh8oTswAAAABJRU5ErkJggg==') !important;
 }
+/* Expand */
+#imgControls label:first-of-type::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAALlJREFUKFOFkT0KwlAQhANWaUSb+AciVmLlSZLcVhttBH9QjyIIHiDOF2ZhOxeGebM7b3dfUnRdVwmN0Aq1UAqFGU2eekWSQ8RTh6HNMDqiwczNiJsnkR8Jx1RrSTKKDlE467wR9jY+XK9jN0bSKQwfGy/iqVcrMWespd82fsW7XP/XmZUmuXPsfHLHq3grHKzveef8NXjozKPH4mjAvf5rZPNLGtPAjI7ozUtfiD+1kp4LPLZxDV78APzYoty/jZXwAAAAAElFTkSuQmCC') !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #imgControls label:first-of-type {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAALlJREFUKFOFkT0KwlAQhANWaUSb+AciVmLlSZLcVhttBH9QjyIIHiDOF2ZhOxeGebM7b3dfUnRdVwmN0Aq1UAqFGU2eekWSQ8RTh6HNMDqiwczNiJsnkR8Jx1RrSTKKDlE467wR9jY+XK9jN0bSKQwfGy/iqVcrMWespd82fsW7XP/XmZUmuXPsfHLHq3grHKzveef8NXjozKPH4mjAvf5rZPNLGtPAjI7ozUtfiD+1kp4LPLZxDV78APzYoty/jZXwAAAAAElFTkSuQmCC') !important;
+  }
+  #imgControls label:first-of-type::after {
+    display: none !important;
+  }
+  #imgControls label:first-of-type::after {
+    display: none !important;
+  }
+}
 input:not([type='checkbox']) {
   border: 1px solid transparent !important;
 }
@@ -505,4 +520,7 @@ padding-bottom: 2px !important;
 
 #qr.autohide .move {
   border-bottom: none !important;
+}
+#imageType {
+  top: 0px !important;
 }

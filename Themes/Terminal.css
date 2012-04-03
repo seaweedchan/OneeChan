@@ -434,6 +434,18 @@ font[color="red"]::before {
 body > a[style='cursor: pointer; float: right;']::after { 
  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAB9klEQVQ4T2NgoAWwsbFhMko0EmX4x+DL9obN3NbWlh0oRrxVdnZ2Amyv2BJ4rvPMBBryn/kb83Ugv4H7DrchUI6ZoEn29vYC/Bf5K5h+Mr0BGYCMmb4zHRE6LqQNNIgRp0FAAxhZ37LGAQ14rX5afa3iA8VQxn+MDsIfhT25v3OvBhnI+IvxAlCeC6chjo6O/Lw3eftBioVfCvt0dnYyT58+nQGIGV2OuUiy/WTbBpY7KiyE0xAXFxcpkeMii6FecMBQ+I9hGUhOp01HBachfn5+oiKXRMCByfiH0RHod7haoFdZgV5ZCZLTX6Qvg9OQtLQ0du533A1gl/xlWCB0SAjsbGD0svHc4vEHGnIdJCfyToQfpyFTpkxhVLqtZM7xjeMkNBA3A+llQM2rgIF5AxZTijMUpfFGc01NDYvDUQcrth9s19CjGMYHGnqZ6RvTfGDiw+2ijo4ORu9T3sKF6wpNC+YUeBUuLbSP2xenFLMiRpv1JyvYS0D8h+UDy3LFKYqSQMNwpxtsTgZ6FRR7f2CuYn3Pulj4gLAMSVkC6F0J/nf8G5G9Cgz0eAcHBxaC2QFZQdjSMFXBt4JrYQYJ3xBODg4OZiXJkLq6OiaX/S7q+pf0KwwuGFQaXjFUqa6uJi1cQDZOmDCBqbm5mbOpqYkLxAaJAQDt/NFXqNBKzQAAAABJRU5ErkJggg==') !important; 
 }
+/* Expand */
+#imgControls label:first-of-type::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAI5JREFUKFONkUsKgDAMRAuuuhG78QsiXYkrT6Le/zJ1hkaIoYLCQzqZZkLjUkotOMEFDuCBkz/P1FlvKZ4ubahm8NViro0OH24akUnUG6PDh2gtSve1oMGXZ2T0q5Maq5e6p1kTTfSu6386d7pzaebta2b7GoNEh9JrWHOAuQJF8yxbeja14DyCqDbLDU43kupHrA88wEwAAAAASUVORK5CYII=') !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #imgControls label:first-of-type {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAI5JREFUKFONkUsKgDAMRAuuuhG78QsiXYkrT6Le/zJ1hkaIoYLCQzqZZkLjUkotOMEFDuCBkz/P1FlvKZ4ubahm8NViro0OH24akUnUG6PDh2gtSve1oMGXZ2T0q5Maq5e6p1kTTfSu6386d7pzaebta2b7GoNEh9JrWHOAuQJF8yxbeja14DyCqDbLDU43kupHrA88wEwAAAAASUVORK5CYII=') !important;
+  }
+  #imgControls label:first-of-type::after {
+    display: none !important;
+  }
+}
 input:not([type='checkbox']), .reply a[target="_blank"] img, .op a[target="_blank"] img {
   border: 1px dashed #00FE00 !important;
 }
@@ -472,4 +484,7 @@ padding-bottom: 0px !important;
 
 #qr.autohide .move {
   border-bottom: none !important;
+}
+#imageType {
+  top: 0px !important;
 }
