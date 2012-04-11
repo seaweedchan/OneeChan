@@ -27,6 +27,7 @@
     position: static !important;
   }
   .replyhider {
+	margin-right: 20px !important;
     width: 20px !important;
     padding-top: 1px !important;
   }
