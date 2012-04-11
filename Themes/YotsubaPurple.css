@@ -10,7 +10,7 @@
   thumb:active { background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
   /**/
   body {
-    background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #EEF2FF !important;
+    background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #FFFFFF !important;
   }
   form[name="delform"]::before {
 width: 252px !important;
@@ -65,8 +65,7 @@ background-color: rgba(229,220,240,0.9) !important;
   #qr a#attach::after,
   #qr.autohide .move,
   .deletebuttons input[value=Delete],
-  input[value="Report"],
-  body::before {
+  input[value="Report"] {
     background-color: #EDF !important;
   }
   #options .dialog,   #options.reply.dialog {
@@ -75,7 +74,7 @@ background-color: rgba(229,220,240,0.9) !important;
   td.reply {
     border:1px solid #cab7d9 !important;
   }
-  td.replyhl, #watcher, #navbot, body::before {
+  td.replyhl, #watcher, #navbot {
     border: 1px solid #cab7d9 !important;
   }
   #header { 
@@ -305,9 +304,7 @@ input[type='submit'] {
   background-color: #fff !important;
 }
   body::before {
-    opacity: 1 !important;
-    border-left: none !important;
-    border-top: none !Important;
+display: none !important;
   }
   .logo {
     color: #763E99 !important;
