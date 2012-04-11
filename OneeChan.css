@@ -99,6 +99,7 @@ This style is designed for the following browsers, ordered alphabetically:
     max-width: 30px !important;
     padding-bottom: 5px !important;
     opacity:0.4;
+    z-index: 1 !important;
   }
   font[color="red"]:hover::before {
     opacity: 1;
