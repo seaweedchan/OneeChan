@@ -5,6 +5,7 @@
     position: static !important;
     background: none !important;
     border: none !important;
+    margin-top: 20px !important;
   }
   font[color="red"], h2, h3, h1 {
     position: relative !important;
