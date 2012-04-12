@@ -25,6 +25,8 @@
   }
   .replyhider a {
     position: static !important;
+    width: 20px !important;
+    font-size: 12px !important;
   }
   .replyhider {
     width: 20px !important;
@@ -42,4 +44,8 @@
   .replyhider {
     margin-right: 5px !important;
     width: 20px !important;
+  }
+  .replyhider a {
+    width: 20px !important;
+    font-size: 12px !important;
   }
