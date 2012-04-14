@@ -300,7 +300,7 @@ td.reply > tr > td.reply,
   border: none !important;
 }
 
-.pages b {
+.pages b, .current {
   color: #ccc !important;
 }
 

@@ -1737,11 +1737,15 @@ img[md5] {
 input, textarea {
  text-rendering: geometricPrecision !important;
 }
+#navtop .current { 
+  font-weight: 600 !important; 
+  font-size: 13px !important; 
+}
 }
 
 /*[[QuickReply]]*/
 
-/*[[BoardHighlight]]*/
+
 
 @-moz-document domain(rs.4chan.org) {
   /* /rs/ hacks */

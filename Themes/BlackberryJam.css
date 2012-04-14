@@ -344,7 +344,7 @@ td.reply > tr > td.reply,
   border: none !important;
 }
 
-.pages b {
+.pages b, .current {
   color: #c5c8c6 !important;
 }
 
