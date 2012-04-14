@@ -1,0 +1,55 @@
+/*[[MarginStyle]]*/
+
+/* No Left Margin */
+    padding: 1px 2px 0 252px !important;
+    /*[[ChangeAlign]]*/padding: 1px 252px 0 2px !important;/**/
+  }
+/* Small Left Margin (4chan default) */
+    padding: 1px 25px 0 252px !important;
+    /*[[ChangeAlign]]*/padding: 1px 252px 0 25px !important;/**/
+  }
+  #header {
+    padding-left: 0px !important;
+    padding-right: 20px !important;
+    /*[[ChangeAlign]]*/
+    padding-right: 0px !important;/**/
+  }
+/* Medium Left Margin */
+    padding: 1px 50px 0 252px !important;
+    /*[[ChangeAlign]]*/padding: 1px 252px 0 50px !important;/**/
+  }
+  #header {
+    padding-left: 0px !important;
+    padding-right: 50px !important;
+    /*[[ChangeAlign]]*/
+    padding-right: 0px !important;/**/
+  }
+/* Large Left Margin */
+    padding: 1px 150px 0 252px !important;
+    /*[[ChangeAlign]]*/padding: 1px 252px 0 150px !important;/**/
+  }
+  #header {
+    padding-left: 0px !important;
+    padding-right: 150px !important;
+    /*[[ChangeAlign]]*/
+    padding-right: 0px !important;/**/
+  }
+/* Completely Centered */
+    padding: 1px 25% 0 25% !important;
+  }
+  #header {
+    padding-left: 0px !important;
+    padding-right: 26% !important;
+    /*[[ChangeAlign]]*/
+    padding-right: 0px !important;/**/
+  }
+/* Match Sidebar */
+    padding: 1px 252px 0 252px !important;
+    /*[[ChangeAlign]]*/padding: 1px 252px 0 252px !important;/**/
+  }
+  #header {
+    padding-left: 0px !important;
+    padding-right: 252px !important;
+    /*[[ChangeAlign]]*/
+    padding-right: 0px !important;/**/
+  }

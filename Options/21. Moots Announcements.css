@@ -1,0 +1,31 @@
+/*[[redtext]]*/
+
+/* Normal (4chan default) */
+  font[color="red"] {
+    position: static !important;
+    background: none !important;
+    border: none !important;
+    margin-top: 20px !important;
+  }
+  font[color="red"], h2, h3, h1 {
+    position: relative !important;
+    top: 20px !important;
+  }
+  font[color="red"]::before {
+    display: none !important;
+  }
+  font[color="red"]:hover {
+    top: 20px !important;
+  }
+/* Button only */
+  font[color="red"]:hover {
+    position: fixed !important;
+    z-index: 99 !important;
+  }
+/* Disable entirely */
+  font[color="red"] {
+    display: none !important;
+  }
+  font[color="red"]::before {
+    display: none !important;
+  }
