@@ -97,12 +97,14 @@ input[type='file']::-webkit-file-upload-button {
 
 a,
 #dump,
-.replyhider a {
+.replyhider a,
+.reportbutton {
   color: #bbb !important;
 }
 
 a:hover,
-#dump:hover, a.quotelink:hover {
+#dump:hover, a.quotelink:hover,
+.reportbutton:hover {
   color: #00DFFC !important;
 }
 

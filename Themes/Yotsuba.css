@@ -81,10 +81,6 @@
   #navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
     background-color: rgba(255,255,239,1) !important;
   }
-  .doubledash,
-  .replyhider a {
-    color: #D9BFB7 !important;
-  }
   td[style='border: 1px dashed;'],
   td.reply > tr > td.reply,
   .inline td.reply,
@@ -118,7 +114,8 @@
   }
 
   a,
-#dump {
+#dump,
+.replyhider a {
     color: #800000 !important;
   }
   hr {
@@ -374,10 +371,6 @@
   #navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
     background-color: rgba(238,242,255,1) !important;
   }
-  .doubledash,
-  .replyhider a {
-    color: #B7C5D9 !important;
-  }
   td[style='border: 1px dashed;'],
   td.reply > tr > td.reply,
   .inline td.reply,
@@ -417,7 +410,8 @@
     color: #57577b !important;
   }
  a,
-#dump {
+#dump,
+.replyhider a {
   color: #57577b !important;
 }
 .quotejs, a.backlink {
@@ -624,11 +618,9 @@ div.postarea > form td:nth-of-type(3) > label,
 input[type='file']::-webkit-file-upload-button {
   color: #444 !important;
 }
-.replyhider a:hover {
-  color: #555 !important;
-}
 a:hover,
-#dump:hover {
+#dump:hover,
+.replyhider a:hover {
   color: #d00 !important;
 }
 .postername,

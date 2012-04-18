@@ -76,10 +76,7 @@ td.reply, td.replyhl, #watcher, #navbot, body::before, #qr.autohide .move {
 #navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
   background-color: rgba(238,238,238,1) !important;
 }
-.doubledash,
-.replyhider a {
-  color: #C6C4BE !important;
-}
+
 td[style='border: 1px dashed;'],
 td.reply > tr > td.reply,
 .inline td.reply,
@@ -113,7 +110,8 @@ td.reply > tr > td.reply,
 }
 
 a,
-#dump {
+#dump,
+.replyhider a {
   color: #BC312A !important;
 }
 #header a, #navbot a {

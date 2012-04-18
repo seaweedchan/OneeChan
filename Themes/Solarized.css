@@ -86,14 +86,6 @@ input[type='file']::-webkit-file-upload-button {
   color: #666 !important;
 }
 
-.replyhider a {
-  color: #657b83 !important;
-}
-
-.replyhider a:hover {
-  color: #839496 !important;
-}
-
 a,
 .postername a,
 .commentpostername a,
@@ -101,6 +93,18 @@ a .postertrip,
 #dump:hover {
   color: #6c71c4 !important;
 }
+
+.replyhider a,
+.reportbutton {
+  color: #657b83 !important;
+}
+
+.replyhider a:hover,
+.reportbutton:hover {
+  color: #839496 !important;
+}
+
+
 
 a:hover,
 .postername a:hover,

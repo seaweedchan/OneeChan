@@ -122,11 +122,13 @@ input[type='file']::-webkit-file-upload-button {
   color: #666 !important;
 }
 
-.replyhider a {
+.replyhider a,
+.reportbutton {
   color: #222 !important;
 }
 
-.replyhider a:hover {
+.replyhider a:hover,
+.reportbutton:hover {
   color: #555 !important;
 }
 

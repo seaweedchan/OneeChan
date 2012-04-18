@@ -97,20 +97,6 @@ input[type='file']::-webkit-file-upload-button {
   color: #969896 !important;
 }
 
-.replyhider a {
-  color: #666 !important;
-  margin-top: 2px !important;
-}
-
-.replyhider a:hover {
-  color: #67cce8 !important;
-}
-
-.logo b span {
-color: #67cce8 !important;
-text-shadow: #000 4px 4px 5px !important;
-}
-
 a,
 .postername a,
 .commentpostername a,
@@ -126,6 +112,23 @@ a:hover .postertrip,
 #dump:hover {
   color: #FF00FF !important;
 }
+
+.replyhider a,
+.reportbutton {
+  color: #666 !important;
+  margin-top: 2px !important;
+}
+
+.replyhider a:hover,
+.reportbutton:hover {
+  color: #67cce8 !important;
+}
+
+.logo b span {
+color: #67cce8 !important;
+text-shadow: #000 4px 4px 5px !important;
+}
+
 
 a.backlink,
 a.forwardlink {

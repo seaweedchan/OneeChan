@@ -89,10 +89,7 @@ background-color: rgba(229,220,240,0.9) !important;
   #navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
     background-color: rgba(238,242,255,1) !important;
   }
-  .doubledash,
-  .replyhider a {
-    color: #DCBAFF !important;
-  }
+
   
   td[style='border: 1px dashed;'],
   td.reply > tr > td.reply,
@@ -133,7 +130,8 @@ background-color: rgba(229,220,240,0.9) !important;
     color: #57577b !important;
   }
  a,
-#dump {
+#dump,
+.replyhider a {
   color: #962594 !important;
 }
 .quotejs, a.backlink {
@@ -334,11 +332,9 @@ div.postarea > form td:nth-of-type(3) > label,
 input[type='file']::-webkit-file-upload-button {
   color: #444 !important;
 }
-.replyhider a:hover {
-  color: #555 !important;
-}
 a:hover,
-#dump:hover {
+#dump:hover,
+.replyhider a:hover {
   color: #b22caa !important;
 }
 .postername,

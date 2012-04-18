@@ -82,21 +82,15 @@ input[type='file']::-webkit-file-upload-button {
   color: #666 !important;
 }
 
-.replyhider a {
-  color: #111 !important;
-}
-
-.replyhider a:hover {
-  color: #555 !important;
-}
-
 a,
-#dump {
+#dump,
+.replyhider a {
   color: #897399 !important;
 }
 
 a:hover,
-#dump:hover {
+#dump:hover,
+.replyhider a:hover {
   color: #C617E6 !important;
   font-weight: 100 !important;
 }
