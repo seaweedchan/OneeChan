@@ -75,6 +75,9 @@
     font-size: 9px !important;
   }
 /* Normal (4chan default) */
+  .replyhider a {
+    font-size: 9px !important;
+  }
   .doubledash,
   .doubledash a,
   .replyhider a {
