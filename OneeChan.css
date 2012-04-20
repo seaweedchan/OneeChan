@@ -382,12 +382,6 @@ a.yuimenuitemlabel {
   text-align: center !important;
   word-spacing: -3px !important;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {	
-	input[value="delete"] {
-		position: relative !important;
-		top: 4px !important;
-	}
-}
 #header {
   left: 250px !important;
   right: 2px !important;
@@ -971,6 +965,18 @@ input[type=checkbox],
   height: 12px !important;
   cursor: pointer !important;
 }
+
+body > table ~ form .op input {
+  position: relative !important;
+  bottom: 2px !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  input[value="delete"] {
+    position: relative !important;
+    top: -2px !important;
+  }
+}
+
 /* Posts */
 body > table ~ form[name='delform'] br[clear='left'],
 form[name='delform'] center {
@@ -1298,10 +1304,18 @@ table[align=right]:hover {
   left: 2px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 2px !important;/**/
+  right: 7px !important;/**/
   z-index: 98 !important;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  table[align=right]:hover {
+    left: 2px !important;
+    /*[[ChangeAlign]]*/
+    left: auto !important;
+    right: 2px !important;/**/
+  }
+}
 .deletebuttons {
   height: 18px !important;
   width: 248px !important;
