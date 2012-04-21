@@ -160,8 +160,14 @@
   }
   #spoilerlabel input {
     position: relative !important;
-    top: 4px !important;
+    top: 1px !important;    
     left: 2px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #spoilerlabel input {
+      position: relative !important;
+      top: 5px !important;
+    }
   }
   #qr [type="file"] {
     margin-top: 0px !important;
@@ -527,8 +533,14 @@
   }
   #spoilerlabel input {
     position: relative !important;
-    top: 4px !important;
+    top: 1px !important;    
     left: 2px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #spoilerlabel input {
+      position: relative !important;
+      top: 5px !important;
+    }
   }
   #qr [type="file"] {
     margin-top: 0px !important;
@@ -897,8 +909,14 @@
   }
   #spoilerlabel input {
     position: relative !important;
-    top: 4px !important;
+    top: 1px !important;    
     left: 2px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #spoilerlabel input {
+      position: relative !important;
+      top: 5px !important;
+    }
   }
   #qr [type="file"] {
     margin-top: 0px !important;
@@ -1175,8 +1193,14 @@
   }
   #spoilerlabel input {
     position: relative !important;
-    top: 4px !important;
+    top: 1px !important;    
     left: 2px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #spoilerlabel input {
+      position: relative !important;
+      top: 5px !important;
+    }
   }
   #qr [type="file"] {
     margin-top: 0px !important;
