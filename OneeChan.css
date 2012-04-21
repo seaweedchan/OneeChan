@@ -970,8 +970,13 @@ body > table ~ form .op input {
   position: relative !important;
   bottom: 2px !important;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
   input[value="delete"] {
+    position: relative !important;
+    top: 4px !important;
+  }
+  body > table ~ form input[value="delete"] {
     position: relative !important;
     top: -2px !important;
   }
@@ -984,13 +989,12 @@ form[name='delform'] center {
   bottom: -500px;
 }
 
-
-
-form[name='delform'] > table:not(.pages):not([align=right]),
-div.thread > table,
-.insertedPosts > table {
-  border-spacing: 0 /*[[BetweenReply]]*/ !important;
+html,
+body {
+  margin: 0 !important;
 }
+
+/*[[BetweenReply]]*/
 
 table[align=right] {
   border-spacing: 0 1px !important;
@@ -1005,11 +1009,6 @@ form[name='delform'] .filesize + br + a[target='_blank'] img,
 
 form[name='delform'] .filesize + br + a[target='_blank'] img + img {
   margin: 0 0 25px !important;
-}
-
-html,
-body {
-  margin: 0 !important;
 }
 
 .filesize {

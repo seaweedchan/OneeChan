@@ -1,10 +1,42 @@
 /*[[BetweenReply]]*/
 
 /* Large */
-3px
+form[name='delform'] > table:not(.pages):not([align=right]),
+div.thread > table,
+.insertedPosts > table {
+  border-spacing: 0 3px !important;
+}
+
+body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+  margin-bottom: -2px !important;
+}
 /* Normal (4chan default) */
-2px
+form[name='delform'] > table:not(.pages):not([align=right]),
+div.thread > table,
+.insertedPosts > table {
+  border-spacing: 0 2px !important;
+}
+
+body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+  margin-bottom: -1px !important;
+}
 /* Minimal */
-1px
+form[name='delform'] > table:not(.pages):not([align=right]),
+div.thread > table,
+.insertedPosts > table {
+  border-spacing: 0 1px !important;
+}
+
+body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+  margin-bottom: 0px !important;
+}
 /* None */
-0px
+form[name='delform'] > table:not(.pages):not([align=right]),
+div.thread > table,
+.insertedPosts > table {
+  border-spacing: 0 0px !important;
+}
+
+body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+  margin-bottom: 1px !important;
+}
