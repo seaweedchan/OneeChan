@@ -966,7 +966,7 @@ input[type=checkbox],
   cursor: pointer !important;
 }
 
-body > table ~ form .op input {
+.gecko > table ~ form .op input {
   position: relative !important;
   bottom: 2px !important;
 }
@@ -978,7 +978,7 @@ body > table ~ form .op input {
   }
   body > table ~ form input[value="delete"] {
     position: relative !important;
-    top: -2px !important;
+    top: -1px !important;
   }
 }
 
