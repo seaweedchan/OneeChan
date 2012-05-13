@@ -2,13 +2,13 @@
 
 /* Enabled */
   input[type='checkbox'],
-  form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+  .postForm td:nth-of-type(3) > label input[type='checkbox'],
   #qr label input[type='checkbox'] {
     border-radius: 2px !important;
   }
 
-  td.reply,
-  td.replyhl,
+  div.reply,
+  div.reply.highlight,
   #filter,
   #options,
   #watcher,
@@ -17,11 +17,11 @@
   #backwash_tooltip,
   #twi_table_div
   td[style='border: 1px dashed;'],
-  td.reply > tr > td.reply,
-  .inline td.reply,
+  div.reply > tr > div.reply,
+  .inline div.reply,
   h2,
-  .deletebuttons,
-  #navbot,
+  .deleteform,
+  #boardNavDesktopFoot,
   font[color="red"] {
     border-radius: 3px !important;
   }
@@ -38,7 +38,7 @@
     border-radius: 9px;
   }
 
-  form[name^='post']::after {
+  .postForm::after {
     border-radius: 6px 6px 0 0;
   }
 
@@ -48,13 +48,13 @@
 /* Enabled, with Circle Checkboxes */
   input[type='checkbox'],
   #options input[type='checkbox'],
-  form[name^='post'] td:nth-of-type(3) > label input[type='checkbox'],
+  .postForm td:nth-of-type(3) > label input[type='checkbox'],
   #qr label input[type='checkbox'] {
     border-radius: 6px !important;
   }
 
-  td.reply,
-  td.replyhl,
+  div.reply,
+  div.reply.highlight,
   #filter,
   #options,
   #watcher,
@@ -63,11 +63,11 @@
   #backwash_tooltip,
   #twi_table_div
   td[style='border: 1px dashed;'],
-  td.reply > tr > td.reply,
-  .inline td.reply,
+  div.reply > tr > div.reply,
+  .inline div.reply,
   h2,
-  .deletebuttons,
-  #navbot,
+  .deleteform,
+  #boardNavDesktopFoot,
   font[color="red"] {
     border-radius: 3px !important;
   }
@@ -83,7 +83,7 @@
     border-radius: 9px;
   }
 
-  form[name^='post']::after {
+  .postForm::after {
     border-radius: 6px 6px 0 0;
   }
 

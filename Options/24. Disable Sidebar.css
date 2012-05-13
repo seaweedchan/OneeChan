@@ -12,7 +12,7 @@
     width: 0 !important;
     padding: 0 !important;
 /* Disabled: */
-    padding: 0 2px 0 2px !important;
+    margin: 0 2px 0 2px !important;
   }
   .replyhider a {
     z-index: 1;

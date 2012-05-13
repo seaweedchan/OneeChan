@@ -1,20 +1,20 @@
 /*[[SlideoutNav]]*/
 
 /* List */
-#navbot a {
+#boardNavDesktopFoot a {
 display: block !important;
 font-size: 0px !important;
 visibility: hidden !important;
 margin-bottom: -15px !important;
 }
-#navbot a::after {
+#boardNavDesktopFoot a::after {
 content: attr(title) !important;
 font-size: 12px !important;
 visibility: visible !important;
 word-spacing: 0px !important;
 margin-bottom: -10px !important;
 }
-#navbot {
+#boardNavDesktopFoot {
 height: 300px !important;
 overflow-y: scroll !important;
 padding-bottom: 0px !important;
@@ -22,286 +22,286 @@ padding-top: 0px !important;
 word-spacing: 0px !important;
 text-rendering: geometricPrecision !important;
 }
-#navbot a[href*="/a/"] {
+#boardNavDesktopFoot a[href*="/a/"] {
 margin-top: -12px !important;
 }
-#navbot a[href*="/a/"]::before {
+#boardNavDesktopFoot a[href*="/a/"]::before {
 content: "/a/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/b/"]::before {
+#boardNavDesktopFoot a[href*="/b/"]::before {
 content: "/b/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/c/"]::before {
+#boardNavDesktopFoot a[href*="/c/"]::before {
 content: "/c/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/d/"]::before {
+#boardNavDesktopFoot a[href*="/d/"]::before {
 content: "/d/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/e/"]::before {
+#boardNavDesktopFoot a[href*="/e/"]::before {
 content: "/e/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/f/"]::before {
+#boardNavDesktopFoot a[href*="/f/"]::before {
 content: "/f/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/g/"]::before {
+#boardNavDesktopFoot a[href*="/g/"]::before {
 content: "/g/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/gif/"]::before {
+#boardNavDesktopFoot a[href*="/gif/"]::before {
 content: "/gif/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/h/"]::before {
+#boardNavDesktopFoot a[href*="/h/"]::before {
 content: "/h/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/hr/"]::before {
+#boardNavDesktopFoot a[href*="/hr/"]::before {
 content: "/hr/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/k/"]::before {
+#boardNavDesktopFoot a[href*="/k/"]::before {
 content: "/k/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/m/"]::before {
+#boardNavDesktopFoot a[href*="/m/"]::before {
 content: "/m/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/o/"]::before {
+#boardNavDesktopFoot a[href*="/o/"]::before {
 content: "/o/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/p/"]::before {
+#boardNavDesktopFoot a[href*="/p/"]::before {
 content: "/p/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/r/"]::before {
+#boardNavDesktopFoot a[href*="/r/"]::before {
 content: "/r/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/s/"]::before {
+#boardNavDesktopFoot a[href*="/s/"]::before {
 content: "/s/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/t/"]::before {
+#boardNavDesktopFoot a[href*="/t/"]::before {
 content: "/t/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/u/"]::before {
+#boardNavDesktopFoot a[href*="/u/"]::before {
 content: "/u/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/v/"]::before {
+#boardNavDesktopFoot a[href*="/v/"]::before {
 content: "/v/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/vg/"]::before {
+#boardNavDesktopFoot a[href*="/vg/"]::before {
 content: "/vg/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/w/"]::before {
+#boardNavDesktopFoot a[href*="/w/"]::before {
 content: "/w/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/wg/"]::before {
+#boardNavDesktopFoot a[href*="/wg/"]::before {
 content: "/wg/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/i/"]::before {
+#boardNavDesktopFoot a[href*="/i/"]::before {
 content: "/i/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/ic/"]::before {
+#boardNavDesktopFoot a[href*="/ic/"]::before {
 content: "/ic/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/r9k/"]::before {
+#boardNavDesktopFoot a[href*="/r9k/"]::before {
 content: "/r9k/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/cm/"]::before {
+#boardNavDesktopFoot a[href*="/cm/"]::before {
 content: "/cm/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/y/"]::before {
+#boardNavDesktopFoot a[href*="/y/"]::before {
 content: "/y/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/3/"]::before {
+#boardNavDesktopFoot a[href*="/3/"]::before {
 content: "/3/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/adv/"]::before {
+#boardNavDesktopFoot a[href*="/adv/"]::before {
 content: "/adv/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/an/"]::before {
+#boardNavDesktopFoot a[href*="/an/"]::before {
 content: "/an/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/cgl/"]::before {
+#boardNavDesktopFoot a[href*="/cgl/"]::before {
 content: "/cgl/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/ck/"]::before {
+#boardNavDesktopFoot a[href*="/ck/"]::before {
 content: "/ck/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/co/"]::before {
+#boardNavDesktopFoot a[href*="/co/"]::before {
 content: "/co/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/diy/"]::before {
+#boardNavDesktopFoot a[href*="/diy/"]::before {
 content: "/diy/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/fa/"]::before {
+#boardNavDesktopFoot a[href*="/fa/"]::before {
 content: "/fa/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/fit/"]::before {
+#boardNavDesktopFoot a[href*="/fit/"]::before {
 content: "/fit/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/hc/"]::before {
+#boardNavDesktopFoot a[href*="/hc/"]::before {
 content: "/hc/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/hm/"]::before {
+#boardNavDesktopFoot a[href*="/hm/"]::before {
 content: "/hm/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/int/"]::before {
+#boardNavDesktopFoot a[href*="/int/"]::before {
 content: "/int/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/jp/"]::before {
+#boardNavDesktopFoot a[href*="/jp/"]::before {
 content: "/jp/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/lit/"]::before {
+#boardNavDesktopFoot a[href*="/lit/"]::before {
 content: "/lit/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/mlp/"]::before {
+#boardNavDesktopFoot a[href*="/mlp/"]::before {
 content: "/mlp/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/mu/"]::before {
+#boardNavDesktopFoot a[href*="/mu/"]::before {
 content: "/mu/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/n/"]::before {
+#boardNavDesktopFoot a[href*="/n/"]::before {
 content: "/n/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/po/"]::before {
+#boardNavDesktopFoot a[href*="/po/"]::before {
 content: "/po/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/pol/"]::before {
+#boardNavDesktopFoot a[href*="/pol/"]::before {
 content: "/pol/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/sci/"]::before {
+#boardNavDesktopFoot a[href*="/sci/"]::before {
 content: "/sci/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/soc/"]::before {
+#boardNavDesktopFoot a[href*="/soc/"]::before {
 content: "/soc/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/sp/"]::before {
+#boardNavDesktopFoot a[href*="/sp/"]::before {
 content: "/sp/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/tg/"]::before {
+#boardNavDesktopFoot a[href*="/tg/"]::before {
 content: "/tg/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/toy/"]::before {
+#boardNavDesktopFoot a[href*="/toy/"]::before {
 content: "/toy/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/trv/"]::before {
+#boardNavDesktopFoot a[href*="/trv/"]::before {
 content: "/trv/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/tv/"]::before {
+#boardNavDesktopFoot a[href*="/tv/"]::before {
 content: "/tv/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/vp/"]::before {
+#boardNavDesktopFoot a[href*="/vp/"]::before {
 content: "/vp/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
-#navbot a[href*="/x/"]::before {
+#boardNavDesktopFoot a[href*="/x/"]::before {
 content: "/x/   -    " !important;
 font-size: 12px !important;
 visibility: visible !important;
 }
 /* Compact */
 /* No */
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     display: none !important;
   }

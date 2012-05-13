@@ -1,7 +1,7 @@
 /*[[TextareaExpand]]*/
 
 /* Yes */
-  .postarea textarea:focus, #qr textarea:focus {
+  .postForm textarea:focus, #qr textarea:focus {
     min-height: 200px !important;
     max-height: 200px !important;
     height: 200px !important;

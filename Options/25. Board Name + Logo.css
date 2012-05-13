@@ -1,7 +1,7 @@
 /*[[boardlogo]]*/
 
 /* Board Name in Sidebar*/
-  div.logo {
+  .boardTitle {
     position: fixed !important;
     right: auto !important;
     left: 2px !important;
@@ -13,7 +13,7 @@
     z-index: 4;
     text-align: center;
   }
-  div.logo img {
+  .boardBanner {
     display: none;
   }
   #watcher::before {
@@ -26,10 +26,10 @@
     position: fixed !important;
     top: 34px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 19px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
@@ -38,32 +38,32 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 19px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 34px !important; 
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 19px !important;
   }
-  table[align=right]::before {
-    top: 19px !important;
+  .deleteform::before {
+    top: 17px !important;
   }
-  table[align=right]:hover {
-    top: 14px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 18px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 20px !important;
+  .deleteform:hover .inputtext {
+    top: 18px !important;
   }
-  table[align=right]:hover::after {
-    top: 20px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 22px !important;
+  }
+  .deleteform:hover::after {
+    top: 22px !important;
   }
 /* Board Name at Top */
-  div.logo {
+  .boardTitle {
     position: fixed !important;
     right: auto !important;
     left: 2px !important;
@@ -75,7 +75,7 @@
     z-index: 4;
     text-align: center;
   }
-  div.logo img {
+  .boardBanner {
     display: none;
   }
   #watcher::before {
@@ -88,10 +88,10 @@
     position: fixed !important;
     top: 34px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 19px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
@@ -100,37 +100,37 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 19px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 34px !important; 
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 19px !important;
   }
-  table[align=right]::before {
-    top: 19px !important;
+  .deleteform::before {
+    top: 17px !important;
   }
-  table[align=right]:hover {
-    top: 14px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 18px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 20px !important;
+  .deleteform:hover .inputtext {
+    top: 18px !important;
   }
-  table[align=right]:hover::after {
-    top: 20px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 22px !important;
   }
-  div.logo, div.logo img {
+  .deleteform:hover::after {
+    top: 22px !important;
+  }
+  .boardTitle, .boardBanner {
     position: static !important;
     margin: auto !important;
     margin-top: 10px !important;
   }
 /* Banner in Sidebar*/
-  div.logo > *:not(img) {
+  .boardTitle > *:not(img) {
     display: none;
   }
   #watcher::before {
@@ -143,10 +143,10 @@
     position: fixed !important;
     top: 119px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 104px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
   #navtopr a::after {
@@ -155,32 +155,32 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 102px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 104px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 119px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 104px !important;
   }
-  table[align=right]::before {
-    top: 104px !important;
+  .deleteform::before {
+    top: 102px !important;
   }
-  table[align=right]:hover {
-    top: 99px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 103px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 105px !important;
+  .deleteform:hover .inputtext {
+    top: 103px !important;
   }
-  table[align=right]:hover::after {
-    top: 105px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 107px !important;
+  }
+  .deleteform:hover::after {
+    top: 107px !important;
   }
 /* Banner at Top */
-  div.logo > *:not(img) {
+  .boardTitle > *:not(img) {
     display: none;
   }
   #watcher::before {
@@ -193,10 +193,10 @@
     position: fixed !important;
     top: 34px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 19px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
@@ -205,37 +205,37 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 19px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 34px !important; 
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 19px !important;
   }
-  table[align=right]::before {
-    top: 19px !important;
+  .deleteform::before {
+    top: 17px !important;
   }
-  table[align=right]:hover {
-    top: 14px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 18px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 20px !important;
+  .deleteform:hover .inputtext {
+    top: 18px !important;
   }
-  table[align=right]:hover::after {
-    top: 20px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 22px !important;
   }
-  div.logo, div.logo img {
+  .deleteform:hover::after {
+    top: 22px !important;
+  }
+  .boardTitle, .boardBanner {
     position: static !important;
     margin: auto !important;
     margin-top: 10px !important;
   }
 /* Both in Sidebar*/
-  div.logo {
+  .boardTitle {
     position: fixed !important;
     right: auto !important;
     left: 2px !important;
@@ -257,10 +257,10 @@
     position: fixed !important;
     top: 119px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 104px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
   #navtopr a::after {
@@ -269,32 +269,32 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 102px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 104px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 119px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 104px !important;
   }
-  table[align=right]::before {
-    top: 104px !important;
+  .deleteform::before {
+    top: 102px !important;
   }
-  table[align=right]:hover {
-    top: 99px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 103px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 105px !important;
+  .deleteform:hover .inputtext {
+    top: 103px !important;
   }
-  table[align=right]:hover::after {
-    top: 105px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 107px !important;
+  }
+  .deleteform:hover::after {
+    top: 107px !important;
   }
 /* Both at Top */
-  div.logo {
+  .boardTitle {
     position: fixed !important;
     right: auto !important;
     left: 2px !important;
@@ -316,10 +316,10 @@
     position: fixed !important;
     top: 34px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 19px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
@@ -328,37 +328,37 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 19px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 34px !important; 
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 19px !important;
   }
-  table[align=right]::before {
-    top: 19px !important;
+  .deleteform::before {
+    top: 17px !important;
   }
-  table[align=right]:hover {
-    top: 14px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 18px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 20px !important;
+  .deleteform:hover .inputtext {
+    top: 18px !important;
   }
-  table[align=right]:hover::after {
-    top: 20px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 22px !important;
   }
-  div.logo, div.logo img {
+  .deleteform:hover::after {
+    top: 22px !important;
+  }
+  .boardTitle, .boardBanner {
     position: static !important;
     margin: auto !important;
     margin-top: 10px !important;
   }
 /* Hide Both */
-  div.logo {
+  .boardTitle {
     display: none;
   }
   #watcher::before {
@@ -371,10 +371,10 @@
     position: fixed !important;
     top: 34px !important;
   }
-  #navbot::after {
+  #boardNavDesktopFoot::after {
     top: 19px !important;
   }
-  #navbot:hover {
+  #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
   #navtopr a::after {
@@ -383,28 +383,28 @@
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
   }
-  font[color="red"]::before {
+  .globalMessage::before {
     top: 19px !important;
   }
-  font[color="red"]:hover {
+  .globalMessage:hover {
     top: 34px !important; 
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  div[class="navLinks"] a:first-of-type::after {
     top: 19px !important;
   }
-  table[align=right]::before {
-    top: 19px !important;
+  .deleteform::before {
+    top: 17px !important;
   }
-  table[align=right]:hover {
-    top: 14px !important;
-  }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover {
     top: 18px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
-    top: 20px !important;
+  .deleteform:hover .inputtext {
+    top: 18px !important;
   }
-  table[align=right]:hover::after {
-    top: 20px !important;
+  .deleteform:hover input[type='checkbox'] {
+    top: 22px !important;
+  }
+  .deleteform:hover::after {
+    top: 22px !important;
   }
   

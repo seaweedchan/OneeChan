@@ -1,7 +1,7 @@
 /*[[StickyNavigation]]*/
 
 /* Stickied Header / Pages */
-  #header,
+  #boardNavDesktop,
   .pages {
     position: fixed !important;
   }
@@ -15,7 +15,7 @@
     padding-top: 14px
   }
 
-  #header {
+  #boardNavDesktop {
     top: 0 !important;
   }
 
@@ -47,23 +47,22 @@
     bottom: 26px !important;
   }
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
-    left: 2px !important;
-    right: 250px !important;
-    padding-right: 250px !important;
+    left: 0px !important;
+    right: 0px !important;
     z-index: 1;
   }
   form[name='delform'] {
     padding: 17px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
-  #header {
+  #boardNavDesktop {
     top: 0px !important;
   }
 /* Normal (4chan default) */
-  #header {
+  #boardNavDesktop {
     position: absolute !important;
   }
 
@@ -74,20 +73,20 @@
     padding: 17px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
-  #header {
+  #boardNavDesktop {
     top: 0px !important;
   }
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
-    left: 2px !important;
-    right: 2px !important;
+    left: 0px !important;
+    right: 0px !important;
     padding-right: 0 !important;
     z-index: 1;
   }
 /* Inverted Stickied Header / Pages */
-  #header,
+  #boardNavDesktop,
   .pages {
     position: fixed !important;
   }
@@ -101,7 +100,7 @@
     padding-top: 0;
   }
 
-  #header {
+  #boardNavDesktop {
     top: auto !important;
     bottom: 0px !important;
   }
@@ -125,18 +124,17 @@
     bottom: 46px !important;
   }
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
-    left: 2px !important;
-    right: 250px !important;
-    padding-right: 250px !important;
+    left: 0px !important;
+    right: 0px !important;
     z-index: 1;
   }
   body::before {
     z-index: 2 !important;
   }
-  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  #watcher::before, font[color="red"]::before, .deleteform::before, div[class="navLinks"] a:first-of-type::after {
     z-index: 3 !important;
   }
   body {
@@ -146,7 +144,7 @@
     padding: 17px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
-  body > table ~ form[name='delform'] {
+  body > .postingMode ~ form[name='delform'] {
     padding-top: 0px !important;
   }
 /* Removed regular header */
@@ -154,16 +152,14 @@
     padding: 0 !important;
   }
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
     left: 2px !important;
     right: auto !important;
-    padding-right: 250px !important;
-    padding-left: 250px !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
+    right: 0px !important;/**/
     z-index: 1;
   }
   body {
@@ -173,11 +169,11 @@
     padding: 0px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
-  #header {
+  #boardNavDesktop {
     top: -150px !important;
   }
 /* Bottom Stickied Header (non-stickied pages) */
-  #header {
+  #boardNavDesktop {
     position: fixed !important;
   }
 
@@ -189,7 +185,7 @@
     padding-top: 0;
   }
 
-  #header {
+  #boardNavDesktop {
     top: auto !important;
     bottom: 0px !important;
   }
@@ -208,16 +204,14 @@
     bottom: 46px !important;
   }
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
-    left: 2px !important;
+    left: 0px !important;
     right: auto !important;
-    padding-right: 250px !important;
-    padding-left: 250px !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
+    right: 0px !important;/**/
     z-index: 1;
   }
   body {
@@ -234,23 +228,22 @@
     top: 0 !important;
   }
 
-  #navtop {
+  #boardNavDesktop {
     display: none !important;
   }
 
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
-    left: 2px !important;
-    right: 250px !important;
-    padding-right: 250px !important;
+    left: 0px !important;
+    right: 0px !important;
     z-index: 1;
   }
   body::before {
     z-index: 2 !important;
   }
-  #watcher::before, font[color="red"]::before, table[align=right]::before, html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  #watcher::before, .globalMessage::before, .deleteform::before, div[class="navLinks"] a:first-of-type::after {
     z-index: 3 !important;
   }
   body {
@@ -260,14 +253,14 @@
     padding: 17px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
-  body > table ~ form[name='delform'] {
+  body > .postingMode ~ form[name='delform'] {
     padding-top: 0px !important;
   }
-  #header {
+  #boardNavDesktop {
     top: -150px !important;
   }
 /* Top Stickied Header / Non-Stickied Pages */
-  #header {
+  #boardNavDesktop {
     position: fixed !important;
   }
 
@@ -279,7 +272,7 @@
     padding-top: 0;
   }
 
-  #header {
+  #boardNavDesktop {
     top: 0px !important;
   }
 
@@ -297,16 +290,14 @@
     bottom: 46px !important;
   }
   .pages {
-    width: 100% !important;
+    width: auto !important;
     text-align: center !important;
     border-spacing: 0 !important;
-    left: 2px !important;
+    left: 0px !important;
     right: auto !important;
-    padding-right: 250px !important;
-    padding-left: 250px !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
+    right: 0px !important;/**/
     z-index: 1;
   }
   body {

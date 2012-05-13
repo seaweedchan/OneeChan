@@ -1,42 +1,42 @@
 /*[[BetweenReply]]*/
 
 /* Large */
-form[name='delform'] > table:not(.pages):not([align=right]),
-div.thread > table,
-.insertedPosts > table {
+.thread {
   border-spacing: 0 3px !important;
 }
-
-body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+div.post {
+  margin-bottom: 6px !important;
+}
+body > .postingMode ~ form[name='delform'] > .thread {
   margin-bottom: -2px !important;
 }
 /* Normal (4chan default) */
-form[name='delform'] > table:not(.pages):not([align=right]),
-div.thread > table,
-.insertedPosts > table {
+.thread {
   border-spacing: 0 2px !important;
 }
-
-body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+div.post {
+  margin-bottom: 4px !important;
+}
+body > .postingMode ~ form[name='delform'] > .thread {
   margin-bottom: -1px !important;
 }
 /* Minimal */
-form[name='delform'] > table:not(.pages):not([align=right]),
-div.thread > table,
-.insertedPosts > table {
+.thread {
   border-spacing: 0 1px !important;
 }
-
-body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+div.post {
+  margin-bottom: 2px !important;
+}
+body > .postingMode ~ form[name='delform'] > .thread {
   margin-bottom: 0px !important;
 }
 /* None */
-form[name='delform'] > table:not(.pages):not([align=right]),
-div.thread > table,
-.insertedPosts > table {
+.thread {
   border-spacing: 0 0px !important;
 }
-
-body > table ~ form[name='delform'] > table:nth-last-of-type(2) {
+div.post {
+  margin-bottom: 0px !important;
+}
+body > .postingMode ~ form[name='delform'] > .thread {
   margin-bottom: 1px !important;
 }

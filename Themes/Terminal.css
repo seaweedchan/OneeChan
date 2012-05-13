@@ -30,30 +30,30 @@ body,
 body > form,
 html body span[style='left: 5px; position: absolute;'] a,
 input,
-div.postarea,
+.postForm,
 form[name^='post']::before,
 select,
-.deletebuttons::after,
+.deleteform::after,
 textarea,
 .abbr,
 .boxbar,
 .boxcontent,
 .logo,
-.omittedposts,
+.summary,
 .pages b,
 .postblock,
 .reply,
-.replyhl,
+.reply.highlight,
 #backwash_tooltip,
-#header .title,
+#boardNavDesktop .title,
 #imgControls label::after,
-#navbot::after,
+#boardNavDesktopFoot::after,
 #qp,
 #twi_table_div,
 #updater #count:not(.new)::after,
-font[color="red"],
+.globalMessage,
 #qr_form input[name="email"] + label::after,
-.postarea #com_submit + label::after,
+.postForm #com_submit + label::after,
 #qr > form > label:after,
 #qr.autohide .move {
   color: #00FE00 !important;
@@ -72,7 +72,7 @@ div.logo font {
   text-shadow: #101010 1px 0 2px, #101010 -1px 0 2px, #101010 0 -1px 2px, #101010 0 1px 2px;
 }
 
-div.postarea > form td:nth-of-type(3) > label,
+.postForm > form td:nth-of-type(3) > label,
 #qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
 #quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
 #autonoko {
@@ -99,14 +99,12 @@ a.quotelink:hover {
   text-decoration: underline !important;
 }
 
-.postername,
-.commentpostername {
+.name {
   color: #00FE00 !important;
   font-weight: 600 !important;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  .postername,
-  .commentpostername {
+  .name {
     font-weight: 800 !important;
   }
 }
@@ -121,8 +119,7 @@ a.quotelink:hover {
     font-weight: 800 !important;
   }
 }
-.postername a:hover,
-.commentpostername a:hover,
+.name a:hover,
 a:hover .postertrip {
   color: #00FE00 !important;
   text-decoration: underline !important;
@@ -142,13 +139,12 @@ a.forwardlink {
   }
 }
 
-.filetitle,
-.replytitle {
+.subject {
   color: #00FE00 !important;
   font-weight: 700 !important;
 }
 
-.unkfunc {
+.quote {
   color: #00FE00 !important;
 }
 
@@ -172,7 +168,7 @@ a.quotelink {
 #thread_filter:not(.autohide),
 .box-outer,
 .boxbar,
-.deletebuttons input[value=Delete],
+.deleteform input[value=Delete],
 .recaptcha_image_cell > center > #recaptcha_image,
 .recaptchatable #recaptcha_response_field,
 .top-box,
@@ -182,10 +178,10 @@ input[type='file'] > input[type='button'],
 input[type='submit'],
 select,
 td.postblock,
-td.reply,
+div.reply,
 textarea,
 #options.reply.dialog,
-.deletebuttons input[value=Delete],
+.deleteform input[value=Delete],
 input[value="Report"],
 body::before,
 #qr.autohide .move {
@@ -214,17 +210,17 @@ input[type='file'] > input[type='button']:hover,
 .boxcontent textarea,
 html,
 body,
-div.postarea > form td:nth-of-type(3) > label input,
+.postForm > form td:nth-of-type(3) > label input,
 div[id^=qr],
 table.reply[style^='clear: both'] {
   background-color: #000 !important;
 }
 
-#header, .pages {
+#boardNavDesktop, .pages {
   background-color: #000 !important;
 }
 
-#header {
+#boardNavDesktop {
 border-top: 1px dashed #00FE00 !important;
 border-bottom: 1px dashed #00FE00 !important;
 }
@@ -234,11 +230,11 @@ border-top: 1px dashed #00FE00 !important;
 border-bottom: 1px dashed #00FE00 !important;
 }
 
-#navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
+#boardNavDesktopFoot, #watcher, #watcher:hover, .globalMessage, .deleteform {
   background-color: rgba(16,16,16,1) !important;
 }
 
-html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover,
+div[class="navLinks"] a:first-of-type:hover,
 #com_submit:hover,
 #cc-showpostarea,
 #twi_table_div,
@@ -252,15 +248,14 @@ input[type='file'] > input[type='button']:hover,
 #popup,
 .chanchimp,
 .chanchimp > div,
-.deletebuttons input[type='password']:hover,
+.deleteform input[type='password']:hover,
 .recaptchatable #recaptcha_response_field:hover,
 div[id^=ref],
 form[name^='post']::before,
 input:hover,
 input[type='file'] > input[type='button'],
 input[type='submit']:hover,
-td.replyhl,
-tr.replyhl,
+.reply.highlight,
 textarea:hover {
   background-color: #000 !important;
 }
@@ -284,7 +279,7 @@ input[type='submit'],
 #com_submit,
 input[type='file'] > input[type='button'],
 .recaptchatable #recaptcha_response_field:focus,
-.deletebuttons input[type='password']:focus,
+.deleteform input[type='password']:focus,
 input:focus,
 input[type='submit']:focus,
 textarea:focus {
@@ -307,8 +302,8 @@ textarea:focus {
 }
 
 td[style='border: 1px dashed;'],
-td.reply > tr > td.reply,
-.inline td.reply {
+div.reply > tr > div.reply,
+.inline div.reply {
   /* Inline Quotes */
   background-color: rgba(0,0,0,0.1) !important;
   border: none !important;
@@ -316,7 +311,7 @@ td.reply > tr > td.reply,
 
 form[name^='post'] .postblock b,
 form[name^='post']::before,
-.postarea tr:nth-child(4) .postblock b,
+.postForm tr:nth-child(4) .postblock b,
 #maxchars,
 #qr::before {
   color: #00FE00 !important;
@@ -349,7 +344,7 @@ form[name^='post']::before,
 .chanchimp,
 .chanchimp > div,
 .inputtext,
-.deletebuttons input[value=Delete],
+.deleteform input[value=Delete],
 .recaptcha_image_cell > center > #recaptcha_image,
 .recaptchatable #recaptcha_response_field,
 .top-box,
@@ -371,7 +366,7 @@ textarea {
 
 hr {
   position: relative !important;
-  bottom: 8px !important;
+  top: 2px !important;
   border-top: 1px dashed #00FE00 !important;
 }
 
@@ -403,16 +398,16 @@ form[name='delform'] > div:not(.thread) select,
   
 }
 /* Delete buttons */
-table[align=right]::before { 
+.deleteform::before { 
     content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAB+klEQVQ4T2NggAIbGxtWwWOCGnyX+Mw5HnNoAvksQAyTZgDx5ebKyfBc5zEV3youDuQzgQRhWID5M/MWhn8M/xl/Mz7jvcLrCdIA0g2kmbVKtQy47nCtBsmzvWKbJ7pbVAwkwQrEgkDMyfKJJZrhL8NrkALW96w7gGKiII1ArMp9hxtsMAxzPOUwZOC9zKsC1LQV6NRkoCIeoOZrIAVMP5hecTzhSAKKqQE1rkHWyPqGdY7QESERBo5nQBNATv3D+AaIrwPZP2AKgc7r43zEWQcU/wQXe822VGG6ghzQUEaQszmEDwmnM/1k+oBsOpQNMqgCiPuBLvrK9pptLlC9EFgjNDAYQX4TOCNQDPIn0JYvaIZ8BPJbWN+xtqNoRIomkAHsIEOALliIxQWfgF4oA7kSOfrg8Qhm/GNQAeJAIF6BYcBfhk+sb1lrQLGCacA/BlWghvVA/ACIs4H4JDYD2F+wVyBc8I+BCahIHaoRFo93gHwHYCDNBdIgP8PjF8TmucmTCTSADeRUbSBehaagD5aymL4zlcEN+MvwBBSd3Le418kulJUGad6GpnEzckCAkigw2RZC08J1YNI9DAy8fcDolQdpRnbSZHCgoQGQAezP2ROFDwrXiOwVaQBmEEtQsgZpvg/El4E4GIj5gRgrgKZxHiDNBzIMFOIA0xQbaF7EtQYAAAAASUVORK5CYII=') !important; 
  
 }
 /* Return button */
-html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {  
+div[class="navLinks"] a:first-of-type::after {  
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAA40lEQVQ4T9WSuwoCMRBFI75YkMUXgrZ+gtioaGfhP0QsbCxEBAvFf1fPLOO6b3ZXLAxcQpK5J8nMGPNXw1pbRa2vHg2gjTboVAqEsYkm5mGevoqQMFfQEO1DEAHmGRiNvmIZA+irOL+qbsxntEZ9udy/g4WDjmmQrH1JgRTEgynoXgYkHvxj+dUbVmexKAPDJ991gl+UZI/QJSvZnDfQIRjDuhOrhwbOs8pPzCoC6qUWluAe2nmGyGB/lhukhahhchNA0wiom6fVkr4/4AKrVduGkl2EKI2obePq/GnMIqCfxr4AXwbdRznQCysAAAAASUVORK5CYII=') !important;
   opacity: 0.2 !important;
 }
-html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover::after {  
+div[class="navLinks"] a:first-of-type:hover::after {  
 opacity: 1 !important;
 }
 /* Watcher */
@@ -421,12 +416,12 @@ opacity: 1 !important;
   
 }
 /* Announcement */
-font[color="red"]::before {  
+.globalMessage::before {  
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAChElEQVQ4T2NgAIKUpBRGIGYDYjHNfZo2VoutUp2mO9W6THFpcZjlUGay1iRC7pycMVCeD4iZUxJTQNoYGJKTkkEa+XV26vho79aeyvaV7QPDP4b/6JjlB8sbpVNKDbIXZW2A6tmB+sC28piuNo3mesd1FaZB9J7oQp7XPBP5XvBN5X/GP03ymuRqmBzQ8NPKx5WdgJpZGcxXmNtzfuC8BZIUeiS0Fqg4BWiguMg9EXf2T+w7xG6LeQL5ClLXpIqkrkrtB6lj+c5yXuaSjDoD80/mxyABoC1rHWY6aAAVssTHxzMw/mUMg9oWmpSUBPIal3+Tv4vEDYkjIHHDjYbBDCCG4GPBs0BJC6BTmCAhAQT/GEJhmkFcoAEgL3Jzv+XuB4kbrTeaC9YM9O9eYAjKwjUCGTwveRx5XvEc4n7N7QATBxrODPRGLjxQQZp53vAcAJqqBDIdBmJjY/mBWBOIeWFiQAtYVY+opgLD6CXYVeAAAEaDyH2RLKABrCCFQA0MXG+5+Nm+sBmxfmUVRkoLEkB180F6pK9Iz2LQ3aHbC+IAQ3MNULMm0GksIM1AMS8gfgDE3lDN7ApnFdKZfzF/BKlXPazqwqB0UsmM6RfTC5CA2mG17RbLLBKBIWoBFNMBxrUB0I/mAk8EQKlLTmuP1mSQOo0DGr1AvhAoBNkVTyuGAKPqGDAgwKZiw3rb9OYB4/YYSE78tjjIEgUGUDoFGsAJxAaKpxQbgH5Zh8sAZHHNvZoe4IAEagRhFlAaB2IV3le8SQJPBVKBrkkGxms8KNVJXpcsVDqh1AgMo9lA7zyyXmidhRy1MFeAUhMz1DAQDcpFIIM5gDQoV4mrH1LX8+zylAYADIs4ydXyn/QAAAAASUVORK5CYII=') !important; 
 
 }
 /* Slideout nav */
-#navbot::after {  
+#boardNavDesktopFoot::after {  
    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAADIUlEQVQYGQXBW2scZRgA4O84x53d2WQmadeYpGSztZRQ1lgrFjxAEyveKngj/QnFK/+CP8JroRdeSGtsQSkGU+KBVoXGLEiamE1zcHf2lDl/7/f6PLTdbpPobsSoT70szJrFdLFKJb2Z1tK3CqdomOfmkTk2fwUC2zzhz4yh0RHHYhh+GWra/LrJetd6U6Vf3kAD15Wp2sgxQIYuMrQo0IxoElOkQ1ayP3nBH8pIPgn/CPsinou9IihuFJXiM0LJKkGSMmC/iFQMWMmkFlqBAb4W+g1lq3UwYYogUelsuiWSIGmBCbeR4XWRi/9EIr6zh/ZG+DxMrIHl5m6eDS8Nq/HF+DD38w9Kq1wFE07jIO5x/gW/rSrqQ4bMMMbG/epB9V5js9GZ/2Y+o4qyaCWqEpNY/qH/MvVToRx1GRl6RJNjQQltI0VfpvJp9bj6/ezvs/sn757ww/XDZS31O9lU9qbmWtVf1L+S5/In5rPXQEKTSXaNocTXKaEOK1kUPg+T1lbLRY4r44Xxp+O58Z3SLq9zxdE9c9OgE/REJk4YMMlL3mKUUJcg4RQol4m0olejel7J39ZcryHDQKbymf/Cf7D4w2K/clYhTLGSEsoooR6TqfyHIk2QoU6tNNtZ26nG0/EqRerYE3u71q3dC5+Gm7IjT2MvzjTTqKkG4BALTfXfSLGJAoNkPvHBAY0UQWTi5/pe/dHcb3Pbtb9qZ8drx3J4eehrqWeRYaGE2uH8cx5oWze1oVt5PTedgdM1R+b21MHU1tWNq3vBbjDaf28fj94/ujJpTD5RtrrJgB2IsfiWz3w0kxOTWNrUrcIplstKye2h/a/Td5QylNttd2un7dMr8Uz8sbLULVay0h7YG96e96O48PjCUZ/3H4/IKEymk1tFpVgbLA0ujRZGfQYsBw4UTHgFDFjmOT83R+aWFVlPqjvVl9xb8kBcFOdEkL6WOi2t0gcDFpDjPEhYAgMWQUJAFT1we+5998R9SAqyO+KjCW+0GyT38tI5dCLNdVfb+sRKrbE9sHMrtnKRiTMCZJen/IG36z3yNr1OiumkWCn0/0aZsM/ac6jTAAAAAElFTkSuQmCC') !important; 
 
 }
@@ -446,7 +441,7 @@ body > a[style='cursor: pointer; float: right;']::after {
     display: none !important;
   }
 }
-input:not([type='checkbox']), .reply a[target="_blank"] img, .op a[target="_blank"] img {
+input:not([type='checkbox']), .reply a[target="_blank"] img, .opContainer a[target="_blank"] img {
   border: 1px dashed #00FE00 !important;
 }
 
@@ -456,7 +451,7 @@ input[type="checkbox"], #options input[type="checkbox"], form[name^="post"] td:n
   background-color: #000 !important;
 }
 
-td.reply, #qr textarea, #qp, #iHover, div.logo img, #updater:hover, #qr.autohide .move {
+div.reply, #qr textarea, #qp, #iHover, .boardBanner, #updater:hover, #qr.autohide .move {
 border: 1px dashed #00FE00 !important;
 }
 #iHover {

@@ -21,14 +21,14 @@ right: 0px !important;
 height: 19px !important;
 background-color: rgba(229,220,240,0.9) !important;
 }
-  td.reply, td.replyhl {
+  div.reply, .reply.highlight {
     border: 1px solid #cab7d9 !important;
   }
-  td.replyhl {
+  .reply.highlight {
     border: 1px solid #cab7d9 !important;
   }
 
-  .logo b span {
+  .boardTitle {
     text-shadow: 1px 1px 1px #222 !important;
   }
   a.backlink,
@@ -52,57 +52,57 @@ background-color: rgba(229,220,240,0.9) !important;
   #updater:hover,
   .box-outer,
   .boxbar,
-  .deletebuttons input[value=Delete],
+  .deleteform input[value=Delete],
   .top-box,
   .yuimenuitem-selected,
   form[name^='post']::before,
   select,
   td.postblock,
-  td.reply,
+  div.reply,
   html body span[style='left: 5px; position: absolute;'] a,
   input[type='submit'],
   #com_submit,
   #qr a#attach::after,
   #qr.autohide .move,
-  .deletebuttons input[value=Delete],
+  .deleteform input[value=Delete],
   input[value="Report"] {
     background-color: #EDF !important;
   }
   #options .dialog,   #options.reply.dialog {
     background-color: #FFF !important;
   }
-  td.reply {
+  div.reply {
     border:1px solid #cab7d9 !important;
   }
-  td.replyhl, #watcher, #navbot {
+  .reply.highlight, #watcher, #boardNavDesktopFoot {
     border: 1px solid #cab7d9 !important;
   }
-  #header { 
+  #boardNavDesktop { 
     background-color: rgba(229,220,240,0.9) !important;
   }
-#header a {
+#boardNavDesktop a {
   color: #000 !important;
 }
   .pages {
     background-color: rgba(238,242,255,0.9) !important;
   }
-  #navbot, #watcher, #watcher:hover, font[color="red"], .deletebuttons {
+  #boardNavDesktopFoot, #watcher, #watcher:hover, .globalMessage, .deleteform {
     background-color: rgba(238,242,255,1) !important;
   }
 
   
   td[style='border: 1px dashed;'],
-  td.reply > tr > td.reply,
-  .inline td.reply,
-  .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+  div.reply > tr > div.reply,
+  .inline div.reply,
+  .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply {
     /* Inline Quotes */
     background-color: rgba(255,255,255,0.2) !important;
     border: 1px solid rgba(128,128,128,0.5) !important;
@@ -110,16 +110,16 @@ background-color: rgba(229,220,240,0.9) !important;
     -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
     box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
   }
-  .inline .inline td.reply,
-  .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply,
-  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline td.reply {
+  .inline .inline div.reply,
+  .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply,
+  .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline .inline div.reply {
     background-color: #d6daf0 !important;
   }
 
@@ -134,7 +134,7 @@ background-color: rgba(229,220,240,0.9) !important;
 .replyhider a {
   color: #962594 !important;
 }
-.quotejs, a.backlink {
+.postNum a, a.backlink {
   color: #000 !important;
 }
 hr {
@@ -142,8 +142,8 @@ hr {
 }
 #watcher, 
 #updater:hover, 
-font[color="red"], 
-td.deletebuttons,
+.globalMessage, 
+.deleteform,
 #cc-showpostarea,
 #ft li,
 #ft ul,
@@ -157,7 +157,7 @@ td.deletebuttons,
 .chanchimp,
 .chanchimp > div,
 .inputtext,
-.deletebuttons input[value=Delete],
+.deleteform input[value=Delete],
 .recaptcha_image_cell > center > #recaptcha_image,
 .recaptchatable #recaptcha_response_field,
 .top-box,
@@ -175,20 +175,18 @@ html body span[style='left: 5px; position: absolute;'] a {
   border: 1px solid #cab7d9 !important;
 }
 .recaptchatable #recaptcha_response_field:focus,
-.deletebuttons input[type='password']:focus,
+.deleteform input[type='password']:focus,
 input:not([type="submit"]):focus,
 input.inputtext:focus,
 textarea:focus {
   border: 1px solid #D1A2FF !important;
 }
-.filetitle,
-.replytitle {
+.subject {
   color: #3a0c5d !important;
   font-weight: 600 !important;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  .filetitle,
-  .replytitle {
+  .subject {
     font-weight: 800 !important;
   }
 }
@@ -196,27 +194,27 @@ body,
 body > form,
 html body span[style='left: 5px; position: absolute;'] a,
 input,
-div.postarea,
+.postForm,
 form[name^='post']::before,
 select,
-.deletebuttons::after,
+.deleteform::after,
 textarea,
 .abbr,
 .boxbar,
 .boxcontent,
-.omittedposts,
+.summary,
 .pages b,
 .postblock,
 .reply,
-.replyhl,
+.reply.highlight,
 #backwash_tooltip,
-#header .title,
+#boardNavDesktop .title,
 #imgControls label::after,
-#navbot::after,
+#boardNavDesktopFoot::after,
 #qp,
 #twi_table_div,
 #updater #count:not(.new)::after,
-font[color="red"],
+.globalMessage,
 #qr_form input[name="email"] + label::after,
 #qr > form > label::after,
 #qr.autohide .move {
@@ -234,7 +232,7 @@ font[color="red"],
 a.quotelink {
   color: #962594 !important;
 }
-html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover,
+div[class="navLinks"] a:first-of-type:hover,
 #com_submit:hover,
 #cc-showpostarea,
 #twi_table_div,
@@ -243,14 +241,13 @@ html body span[style='left: 5px; position: absolute;'] a:first-of-type:hover,
 #popup,
 .chanchimp,
 .chanchimp > div,
-.deletebuttons input:hover,
+.deleteform input:hover,
 .recaptchatable #recaptcha_response_field:hover,
 div[id^=ref],
 input:hover,
 input[type='submit']:hover,
 input[type='file'] > input[type='button']:hover,
-td.replyhl,
-tr.replyhl,
+.reply.highlight,
 textarea:hover {
   background-color: #EDF !important;
 }
@@ -323,7 +320,7 @@ display: none !important;
   }
 }
 
-div.postarea > form td:nth-of-type(3) > label,
+.postForm > form td:nth-of-type(3) > label,
 #qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
 #quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
 #autonoko {
@@ -337,14 +334,12 @@ a:hover,
 .replyhider a:hover {
   color: #b22caa !important;
 }
-.postername,
-.commentpostername {
+.name {
   color: #591177 !important;
   font-weight: 600 !important;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  .postername,
-  .commentpostername {
+  .name {
     font-weight: 800 !important;
   }
 }
@@ -352,8 +347,7 @@ a:hover,
 .trip {
   color: #b22caa !important;
 }
-.postername a:hover,
-.commentpostername a:hover,
+.name a:hover,
 a:hover .postertrip {
   color: #117743 !important;
 }
@@ -365,20 +359,20 @@ a.forwardlink {
     font-weight: 800 !important;
   }
 }
-.unkfunc {
+.quote {
   color: #789922 !important;
 }
 .boxcontent > hr,
 .boxcontent input,
 .boxcontent textarea,
-div.postarea > form td:nth-of-type(3) > label input,
+.postForm > form td:nth-of-type(3) > label input,
 div[id^=qr],
 table.reply[style^='clear: both'],
 input,
 textarea,
 .recaptchatable #recaptcha_response_field,
 .recaptchatable #recaptcha_response_field:focus,
-.deletebuttons input[type='password']:focus,
+.deleteform input[type='password']:focus,
 input:focus,
 input[type='submit']:focus,
 textarea:focus {
@@ -388,14 +382,14 @@ textarea:focus {
 form[name^='post']::before {
   border-radius: 6px 6px 0 0;
 }
-.qphl {
+a.qphl {
   outline-color: #763E99 !important;
 }
-td.reply {
+div.reply {
   border-left: none !important;
   border-top: none !important;
 }
-td.replyhl {
+.reply.highlight {
   border-left: none !important;
   border-top: none !important;
 }
@@ -407,7 +401,7 @@ form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:active,
 }
 form[name^='post'] .postblock b,
 form[name^='post']::before,
-.postarea tr:nth-child(4) .postblock b,
+.postForm tr:nth-child(4) .postblock b,
 #maxchars,
 #qr::before {
   color: rgba(0,0,0,0.5) !important;
@@ -443,7 +437,7 @@ html body span[style='left: 5px; position: absolute;'] a {
 
 hr {
   position: relative !important;
-  bottom: 8px !important;
+  top: 2px !important;
   border-top: 1px solid #E8D1FF !important;
 }
 

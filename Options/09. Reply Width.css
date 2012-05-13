@@ -1,14 +1,20 @@
 /*[[ReplyWidth]]*/
 
 /* Fit Width: */
-  form[name='delform'] > table:not(.pages):not([align="right"]), /* Reply are tables. */
-  div.thread > table, /* Replies are tables. A script like 4chan X is present */
-  .insertedPosts > table, /* 4chanplus inserts new posts in a new div */
-  td.reply, /* Reply cell */
-  td.replyhl /* Highlighted Reply cell */ {
+  form[name='delform'] > .board,
+  form[name='delform'], 
+  .board, /* Reply are tables. */
+  div.thread, /* Replies are tables. A script like 4chan X is present */
+  div.reply,
+  .replyContainer,
+  .opContainer,
+  .postContainer, /* Reply cell */
+  div.reply.highlight,
+  div.post,
+  div.post.reply /* Highlighted Reply cell */ {
     width: 100% !important;
   }
-  .omittedposts /* X posts and Y image replies omitted. Click Reply to view. */ {
+  .summary /* X posts and Y image replies omitted. Click Reply to view. */ {
     clear: both;
     padding-left: 20px;
     display: block !important;
@@ -18,10 +24,10 @@
     position: absolute;
     right: 0px;
   }
-  form[name="delform"] > .thread > table, form[name="delform"] > table {
-    margin: 1px 0 0;
-    position: relative;
-    width: 100%;
+  .postInfo {
+    margin: 1px 0 0 !important;
+    position: relative !important;
+    width: 100% !important;
   }
   .replyhider a {
     position: static !important;
@@ -32,36 +38,38 @@
     width: 20px !important;
     padding-top: 1px !important;
   }
-  td.reply .reportbutton, .replyhider, td.reply input {
+  div.reply .reportbutton, .replyhider, .postInfo input {
     opacity: 0 !important;
   }
-  form tr:not(:hover) td.reply .reportbutton, form tr:not(:hover) .replyhider, form tr:not(:hover) td.reply input {
+  form .replyContainer:not(:hover) div.reply .reportbutton, form .replyContainer:not(:hover) .replyhider, form .replyContainer:not(:hover) .postInfo input{
     -webkit-transition: opacity .3s ease-out 0s !important;
     -moz-transition: opacity .3s ease-out 0s !important;
     -o-transition: opacity .3s ease-out 0s !important;
   }
-  form tr:hover td.reply .reportbutton, form tr:hover .replyhider, form tr:hover td.reply input {
+  form .replyContainer:hover div.reply .reportbutton, form .replyContainer:hover .replyhider, .replyContainer:hover .postInfo input {
     opacity: 1 !important;
     -webkit-transition: opacity .3s ease-in .5s !important;
     -moz-transition: opacity .3s ease-in .5s !important;
     -o-transition: opacity .3s ease-in .5s !important;
   }
-  td.reply input:checked {
+   div.reply input:checked {
     opacity: 1 !important;
   }
-  form tr blockquote {
+  form .postContainer blockquote {
     margin-left: 30px !important;
   }
-  td.reply {
+  div.reply {
     padding-top: 6px !important;
     padding-left: 10px !important;
   }
-  td.reply input {
+
+  div.reply .postInfo input {
     position: absolute !important;
-    top: 6px !important;
+    top: -3px !important;
     right: 5px !important;
-  }
-  td.reply .reportbutton {
+  } 
+
+  div.reply .reportbutton {
     position: absolute !important;
     right: 33px !important;
     top: 8px !important;
@@ -74,16 +82,24 @@
   .replyhider a {
     font-size: 9px !important;
   }
+  div.replyContainer {
+    display: table-row !important;
+  }
+  div.reply {
+    width: 100% !important;
+    display: table-cell !important;
+  }
+  div.sideArrows {
+    display: table-cell !important;
+  }
 /* Normal (4chan default) */
   .replyhider a {
     font-size: 9px !important;
   }
-  .doubledash,
-  .doubledash a,
   .replyhider a {
     position: static;
   }
-  td.reply {
+  div.reply {
     padding-right: 5px !important;
   }
   .replyhider {

@@ -2,21 +2,21 @@
 
 /* Fixed: */
   @-moz-document domain('4chan.org') {
-  .postarea input[type="password"] {
+  .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;
   }
-  .postarea form[name^='post'] {
+  .postForm {
     right: auto !important;
     left: 2px !important;
     /*[[ChangeAlign]]*/
     right: 2px !important;
     left: auto !important;/**/
   }
-  .postarea form[name^='post'] textarea {
+  .postForm textarea {
     height: 81px !important;
   }
-  .postarea form[name^='post'] input[type='file'][name='upfile'] {
+  .postForm input[type='file'][name='upfile'] {
     margin: 0 0px -1px 0px !important;
   }
   /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
@@ -70,7 +70,7 @@
     resize: none !important;
   }
 
-    body > table ~ form .reply a > img[src^="//images"] {
+    body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -336,7 +336,7 @@
   }
 /* Slideout: */
   @-moz-document domain('4chan.org') {
-  .postarea form[name^='post'] {
+  .postForm {
     right: auto !important;
     left: -233px !important;
   /*[[ChangeAlign]]*/
@@ -346,7 +346,7 @@
     -moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
     -o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
   }
-  .postarea form[name^='post']:hover {
+  .postForm:hover {
     right: auto !important;
     left: 2px !important;
     /*[[ChangeAlign]]*/
@@ -356,13 +356,13 @@
     -moz-transition: right .3s linear, left .3s linear;
     -o-transition: right .3s linear, left .3s linear;
   }
-  .postarea form[name='post'] tr:nth-child(4) {
+  .postForm tr:nth-child(4) {
     height: 79px !important;
   }
-  .postarea form[name^='post'] textarea {
+  .postForm textarea {
     height: 81px !important;
   }
-  .postarea input[type="password"] {
+  .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;
   }
@@ -443,7 +443,7 @@
     width: 185px !important;
   }
 
-  body > table ~ form .reply a > img[src^="//images"] {
+  body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -642,7 +642,7 @@
   }
 /* Tabbed Slideout: */
   @-moz-document domain('4chan.org') {
-  .postarea form[name^='post'] {
+  .postForm {
     right: auto !important;
     left: -248px !important;
     /*[[ChangeAlign]]*/
@@ -652,7 +652,7 @@
     -moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
     -o-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
   }
-  .postarea form[name^='post']:hover {
+  .postForm:hover {
     right: auto !important;
     left: 2px !important;
     /*[[ChangeAlign]]*/
@@ -662,7 +662,7 @@
     -moz-transition: right .3s linear, left .3s linear;
     -o-transition: right .3s linear, left .3s linear;
   }
-  .postarea form[name='post']::before {
+  .postForm::before {
     -webkit-transform: rotate(90deg);
     -webkit-transform-origin: bottom left;
     -moz-transform: rotate(90deg);
@@ -695,22 +695,22 @@
     -moz-transition: opacity .3s ease-in-out 3s;
     -o-transition: opacity .3s ease-in-out 3s;
   }
-  .postarea form[name='post']:hover::before {
+  .postForm:hover::before {
     opacity: 0;
     -webkit-transition: opacity .3s linear;
     -moz-transition: opacity .3s linear;
     -o-transition: opacity .3s linear;
   }
-  .postarea form[name='post'] tr:nth-child(4) {
+  .postForm tr:nth-child(4) {
     height: 79px !important;
   }
   [id^="q"] .error, [id^="q"] .warning {
     bottom: 250px !important;
   }
-  .postarea form[name^='post'] textarea {
+  .postForm textarea {
     height: 81px !important;
   }
-  .postarea input[type="password"] {
+  .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;
   }
@@ -819,7 +819,7 @@
     resize: none !important;
   }
 
-    body > table ~ form .reply a > img[src^="//images"] {
+    body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -1018,7 +1018,7 @@
   }
 /* Fade: */
   @-moz-document domain('4chan.org') {
-  .postarea form[name^='post'] {
+  .postForm {
     right: auto !important;
     left: 2px !important;
     /*[[ChangeAlign]]*/
@@ -1029,16 +1029,16 @@
     -moz-transition: opacity .3s ease-in-out 3s;
     -o-transition: opacity .3s ease-in-out 3s;
   }
-  .postarea form[name='post']:hover {
+  .postForm:hover {
     opacity: 1;
     -webkit-transition: opacity .3s linear;
     -moz-transition: opacity .3s linear;
     -o-transition: opacity .3s linear;
   }
-  .postarea form[name^='post'] textarea {
+  .postForm textarea {
     height: 81px !important;
   }
-  .postarea input[type="password"] {
+  .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;
   }
@@ -1103,7 +1103,7 @@
     resize: none !important;
   }
 
-    body > table ~ form .reply a > img[src^="//images"] {
+    body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
     position: relative !important;
     /*[[ChangeAlign]]*/
     z-index: 96 !important;/**/
@@ -1364,7 +1364,7 @@
 /* Floating QR ONLY */
   @-moz-document domain('4chan.org') {
   /* Remove vanilla post form and remove #qr UI to make it look more like the original post form */
-  .postarea,
+  .postForm,
   #qr > input,
   #qr > a:not(.error):not(.warning) {
     display: none;
@@ -1523,7 +1523,7 @@
     padding-top: 3px !important;
   }
   /*[[FieldStyle]]*/
-  .postarea input[type="password"] {
+  .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;
   }
