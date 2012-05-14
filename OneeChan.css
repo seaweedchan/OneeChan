@@ -1764,10 +1764,6 @@ input, textarea {
   font-weight: 600 !important; 
   font-size: 13px !important; 
 }
-div.sideArrows {
-  font-size: 0px !important;
-  visibility: hidden !important;
-}
 }
 
 /*[[QuickReply]]*/

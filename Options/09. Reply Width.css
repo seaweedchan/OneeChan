@@ -60,9 +60,12 @@
     top: -1px !important;
     font-size: 9px !important;
   }
+  div.postContainer, div.replyContainer {
+    position: relative !important;
+  }
   .sideArrows {
     right: 47px !important;
-    top: 2px !important;
+    top: 1px !important;
   }
   .sideArrows a {
     font-size: 9px !important;
