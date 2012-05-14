@@ -5,13 +5,19 @@ div.post {
   margin-top: 6px !important;
 }
 form[name="delform"] {
-  margin-bottom: 18px !important;
+  margin-bottom: 6px !important;
+}
+body > .postingMode ~ form[name="delform"] {
+  margin-bottom: 14px !important;
 }
 /* Normal (4chan default) */
 div.post {
   margin-bottom: 0px !important;
 }
 form[name="delform"] {
+  margin-bottom: 10px !important;
+}
+body > .postingMode ~ form[name="delform"] {
   margin-bottom: 18px !important;
 }
 /* Minimal */
@@ -19,6 +25,9 @@ div.post {
   margin-bottom: -2px !important;
 }
 form[name="delform"] {
+  margin-bottom: 12px !important;
+}
+body > .postingMode ~ form[name="delform"] {
   margin-bottom: 20px !important;
 }
 /* None */
@@ -26,5 +35,8 @@ div.post {
   margin-bottom: -4px !important;
 }
 form[name="delform"] {
+  margin-bottom: 14px !important;
+}
+body > .postingMode ~ form[name="delform"] {
   margin-bottom: 22px !important;
 }

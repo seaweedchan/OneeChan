@@ -166,7 +166,8 @@ This style is designed for the following browsers, ordered alphabetically:
   .next,
   body > .postingMode ~ form[name='delform'] hr,
   #settingsBox,
-  form[name="post"] h1 {
+  form[name="post"] h1,
+  .board > hr:last-of-type {
    /* Cleanup */
    display: none !important;
  }
