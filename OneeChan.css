@@ -1846,8 +1846,13 @@ height: 20px !important;
   margin-top: 0px !important;
   width: 57px !important;
 }
-.postForm textarea {
-  height: 65px !important;
+.postContainer.inline {
+  border: none !important;
+  background: none !important;
+  padding-bottom: 2px !important;
+}
+.postContainer.inline .report_button, .postContainer.inline input {
+  display: none !important;
 }
 }
 
