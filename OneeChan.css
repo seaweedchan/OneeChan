@@ -432,6 +432,10 @@ body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
   margin: 0 1px 0 2px;
 }
 
+.pages {
+  word-spacing: 10px !important;
+}
+
 /* moot's announcements */
 h3, h2, h1, .globalMessage {
   font-size: 12px !important; 
