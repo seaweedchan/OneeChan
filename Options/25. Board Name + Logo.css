@@ -1,13 +1,14 @@
 /*[[boardlogo]]*/
 
 /* Board Name in Sidebar*/
-  .boardTitle {
+  .boardBanner {
     position: fixed !important;
     right: auto !important;
     left: 2px !important;
     /*[[ChangeAlign]]*/
     right: 2px !important;
     left: auto !important;/**/
+    top: auto !important;
     bottom: 327px !important;
     width: 248px !important;
     z-index: 4;
@@ -302,6 +303,9 @@
   .deleteform:hover::after {
     top: 107px !important;
   }
+  .boardTitle {
+    margin-top: 20px !important;
+  }
 /* Both at Top */
   .boardTitle {
     position: fixed !important;
@@ -361,10 +365,13 @@
   .deleteform:hover::after {
     top: 22px !important;
   }
-  .boardBanner {
+  .boardBanner, .boardTitle {
     position: static !important;
     margin: auto !important;
     margin-top: 10px !important;
+  }
+  .boardTitle {
+    margin-top: 0px !important;
   }
 /* Hide Both */
   .boardBanner {
