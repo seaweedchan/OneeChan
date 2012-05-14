@@ -288,7 +288,7 @@ div[id^='4chan_ext_iqr'] > *,
 .boardTitle {
   color: #854C9E !important;
 }
-.logo {
+.boardBanner {
   color: #333 !important;
 }
 input[type=checkbox]:checked,

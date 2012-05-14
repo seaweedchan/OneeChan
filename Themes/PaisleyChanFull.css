@@ -41,7 +41,7 @@ textarea,
 .abbr,
 .boxbar,
 .boxcontent,
-.logo,
+.boardBanner,
 .summary,
 .pages strong,
 .current,
@@ -78,7 +78,7 @@ color: #bbb !important;
   border: none !important;
 }
 
-div.logo font {
+.boardTitle {
   text-shadow: #101010 1px 0 2px, #101010 -1px 0 2px, #101010 0 -1px 2px, #101010 0 1px 2px;
 }
 

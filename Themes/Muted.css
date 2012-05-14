@@ -267,7 +267,7 @@ input[type='submit'] {
 .boardTitle {
   color: #BC312A !important;
 }
-.logo {
+.boardBanner {
   color: #333 !important;
 }
 input[type=checkbox]:checked,

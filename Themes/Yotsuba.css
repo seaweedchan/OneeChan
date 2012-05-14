@@ -21,9 +21,6 @@
     color: #800000 !important;
   }
 
-  .logo {
-    text-shadow: 1px 1px 1px #222 !important;
-  }
   .boardTitle {
     text-shadow: 1px 1px 1px #222 !important;
   }
@@ -306,9 +303,6 @@
   .reply.highlight {
     border: 1px solid #5765B5 !important;
   }
-  .logo {
-    text-shadow: 1px 1px 1px #222 !important;
-  }
   .boardTitle {
     text-shadow: 1px 1px 1px #222 !important;
   }
@@ -584,7 +578,7 @@ input[type='submit'] {
 		border-left: none !important;
 		border-top: none !Important;
 	}
-	.logo {
+	.boardBanner {
 		color: #af0a0f !important;
 	}
 	input[type=checkbox]:checked,

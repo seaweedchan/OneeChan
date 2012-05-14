@@ -301,7 +301,7 @@ input[type='submit'] {
   body::before {
 display: none !important;
   }
-  .logo {
+  .boardBanner {
     color: #763E99 !important;
   }
   input[type=checkbox]:checked,
