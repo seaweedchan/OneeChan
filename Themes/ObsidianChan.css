@@ -197,8 +197,7 @@ input,
 input[type='file'] > input[type='button'],
 input[type='submit'],
 select,
-td.postblock,
-td.reply,
+div.reply,
 textarea,
 #qr.autohide .move {
   background-color: rgba(0,0,0,0.6) !important;

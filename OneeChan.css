@@ -168,7 +168,8 @@ This style is designed for the following browsers, ordered alphabetically:
   #settingsBox,
   form[name="post"] h1,
   .board > hr:last-of-type,
-  .rules {
+  .rules,
+  div.pagelist {
    /* Cleanup */
    display: none !important;
  }
