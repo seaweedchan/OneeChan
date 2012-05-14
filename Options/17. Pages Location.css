@@ -6,7 +6,7 @@
     visibility: hidden;
     top: auto !important;
     bottom: 311px !important;
-    width: auto !important;
+    width: 290px !important;
     left: -1px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/   left: auto !important;
@@ -22,9 +22,10 @@
     word-spacing: -6px;
     z-index: 6 !important;
     margin: 0 !important;
+    height: 15px !important;
   }
 
-  .pages a, .pages b, .pages input {
+  .pages a, .pages strong, .pages input {
     visibility: visible;
     min-width: 0;
   }
