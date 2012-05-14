@@ -75,7 +75,7 @@ textarea,
 .subject,
 .logo,
 .summary,
-.pages b,
+.pages strong,
 .postblock,
 .name,
 .pages td,
@@ -340,7 +340,7 @@ td.reply > tr > td.reply,
   border: none !important;
 }
 
-.pages b, .current {
+.pages strong, .current {
   color: #ccc !important;
 }
 

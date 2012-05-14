@@ -234,7 +234,9 @@ label,
 #imageType option
 #count,
 #timer,
-#postcount {
+#postcount,
+.pages strong,
+.pages a {
   font-size: 12px !important;
   text-decoration: none !important;
 }
@@ -418,7 +420,7 @@ body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
 
 #boardNavDesktop a,
 .pages a,
-.pages b,
+.pages strong,
 .pages input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -443,7 +445,7 @@ h3, .globalMessage {
 marquee {
   display: none !important;
 }
-.pages b,
+.pages strong,
 .pages input,
 a,
 .new {

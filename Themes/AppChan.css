@@ -41,7 +41,7 @@ textarea,
 .subject,
 .boardTitle,
 .summary,
-.pages b,
+.pages strong,
 .postblock,
 .postertrip,
 .reply,
@@ -287,7 +287,7 @@ div.reply > tr > div.reply,
   border: none !important;
 }
 
-.pages b, .current {
+.pages strong, .current {
   color: #ccc !important;
 }
 
