@@ -110,3 +110,13 @@
     z-index: 2 !important;
     margin-right: 5px !important;
   }
+  div.reply {
+    padding-top: 5px !important;
+    padding-left: 2px !important;
+  }
+  .sideArrows span {
+  font-size: 9px !important;
+  }
+  .sideArrows {
+  width: 15px !important;
+  }

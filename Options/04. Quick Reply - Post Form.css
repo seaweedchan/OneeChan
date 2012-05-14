@@ -332,6 +332,11 @@
   #qr.autohide:hover .move {
     padding-top: 1px !important;
   }
+  #qr textarea.field, #qr input[title="Verification"], #qr div {
+    min-width: 248px !important;
+    max-width: 248px !important;
+    width: 248px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* Slideout: */
@@ -637,6 +642,11 @@
     right: 0px !important;/**/
     content: "Disable autohide and enable persistent QR in your 4chan X settings!";
     text-align: center !important;
+  }
+  #qr textarea.field, #qr input[title="Verification"], #qr div {
+    min-width: 248px !important;
+    max-width: 248px !important;
+    width: 248px !important;
   }
   /*[[FieldStyle]]*/
   }
@@ -1014,6 +1024,11 @@
     content: "Disable autohide and enable persistent QR in your 4chan X settings!";
     text-align: center !important;
   }
+  #qr textarea.field, #qr input[title="Verification"], #qr div {
+    min-width: 248px !important;
+    max-width: 248px !important;
+    width: 248px !important;
+  }
   /*[[FieldStyle]]*/
   }
 /* Fade: */
@@ -1358,6 +1373,11 @@
   }
   #qr.autohide:hover .move {
     padding-top: 1px !important;
+  }
+  #qr textarea.field, #qr input[title="Verification"], #qr div {
+    min-width: 248px !important;
+    max-width: 248px !important;
+    width: 248px !important;
   }
   /*[[FieldStyle]]*/
   }
