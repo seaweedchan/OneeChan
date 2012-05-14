@@ -10,16 +10,18 @@
     z-index: 1;
     position: absolute;
     right: 0px;
+    height: 10px !important;
   }
   .postInfo {
     margin: 1px 0 0 !important;
     position: relative !important;
     width: 100% !important;
   }
-  .sideArrows a {
+  .sideArrows a, .sideArrows span {
     position: static !important;
     width: 20px !important;
     font-size: 12px !important;
+    height: 10px !important;
   }
   .sideArrows {
     width: 20px !important;
