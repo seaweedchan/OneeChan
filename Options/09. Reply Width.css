@@ -82,7 +82,9 @@
   .hide_thread_button {
     position: relative !important;
     z-index: 2 !important;
-    margin-right: 5px !important;
+    margin-right: 10px !important;
+    margin-left: 5px !important;
+    font-size: 9px !important;
   }
   .opContainer input {
     opacity: 1 !important;
