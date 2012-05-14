@@ -8,9 +8,9 @@
   }
   .postForm {
     right: auto !important;
-    left: 2px !important;
+    left: 1px !important;
     /*[[ChangeAlign]]*/
-    right: 2px !important;
+    right: 1px !important;
     left: auto !important;/**/
   }
   .postForm textarea {

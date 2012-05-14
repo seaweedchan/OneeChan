@@ -87,7 +87,13 @@
   .opContainer input {
     opacity: 1 !important;
   }
+  #options.reply {
+    display: inline-block !important;
+  }
 /* Normal (4chan default) */
+  #updater {
+    display: block !important;
+  }
   .sideArrows a {
     font-size: 9px !important;
   }

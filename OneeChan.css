@@ -167,7 +167,8 @@ This style is designed for the following browsers, ordered alphabetically:
   body > .postingMode ~ form[name='delform'] hr,
   #settingsBox,
   form[name="post"] h1,
-  .board > hr:last-of-type {
+  .board > hr:last-of-type,
+  .rules {
    /* Cleanup */
    display: none !important;
  }
@@ -1772,6 +1773,81 @@ input, textarea {
 #boardNavDesktop .current { 
   font-weight: 600 !important; 
   font-size: 13px !important; 
+}
+
+.postForm textarea, .postForm input:not([type="submit"])  {
+  width: 238px !important;
+  margin-top: 0px !important;
+}
+#recaptcha_response_field, #recaptcha_widget_div input {
+  width: 242px !important;
+}
+.postForm input:not([type="submit"]) {
+  margin: -10px !important;
+  height: 13px !important;
+  border-spacing: 0px !important;
+}
+
+.postForm [type="Submit"] {
+height: 20px !important;
+
+}
+.postForm input[name="sub"] {
+  width: 188px !important;
+}
+
+.postForm input#recaptcha_response_field {
+  height: 13px !important;
+}
+
+#postPassword + span {
+  display: none !important;
+}
+
+#postPassword {
+  position: relative !important;
+  bottom: 3px !important;
+}
+
+.postForm > tbody > tr > td:first-child {
+  display: none !important;
+}
+
+#recaptcha_table, #recaptcha_table tbody, #recaptcha tbody tr {
+  display: block !important;
+  visibility: visible !important;
+}
+
+#postPassword {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+.postForm > tbody > tr:nth-last-of-type(2) td {
+  height: 20px !important;
+}
+.postForm > tbody > tr:nth-last-of-type(3) td:last-child {
+  height: 15px !important;
+  max-height: 15px !important;
+  min-height: 15px !important;
+}
+
+#postFile {
+  height: 22px !important;
+}
+
+#postFile input[type="text"] {
+  height: 13px !important;
+  margin-top: 0px !important;
+  margin-left: 1px !important;
+}
+
+#postFile input[type="button"] {
+  height: 19px !important;
+  margin-top: 0px !important;
+  width: 57px !important;
+}
+.postForm textarea {
+  height: 65px !important;
 }
 }
 
