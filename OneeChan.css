@@ -1858,6 +1858,9 @@ div.pagelist {
   background: none !important;
   border: none !important;
 }
+a.forwardlink {
+  border: none !important;
+}
 }
 
 /*[[QuickReply]]*/
