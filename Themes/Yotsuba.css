@@ -359,7 +359,7 @@
   .pages {
     background-color: rgba(238,242,255,0.9) !important;
   }
-  #boardNavDesktop, #watcher, #watcher:hover, .globalMessage, .deleteform {
+  #boardNavDesktopFoot, #watcher, #watcher:hover, .globalMessage, .deleteform {
     background-color: rgba(238,242,255,1) !important;
   }
   td[style='border: 1px dashed;'],
