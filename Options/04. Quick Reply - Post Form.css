@@ -43,12 +43,12 @@
     overflow: visible !important;
     position: fixed;
     top: auto !important;
-    left: 2px !important;
+    left: 3px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
-    bottom: 2px !important;
+    right: 3px !important;/**/
+    bottom: 3px !important;
     width: 248px !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -401,7 +401,7 @@
     left: auto !important;
     right: -233px !important;/**/
     top: auto !important;
-    bottom: 2px !important;
+    bottom: 3px !important;
     width: 248px !important;
     margin: 0 !important;
     padding: 0;
@@ -753,7 +753,7 @@
     left: auto !important;
     right: -250px !important;/**/
     top: auto !important;
-    bottom: 2px !important;
+    bottom: 3px !important;
     width: 248px !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -1080,12 +1080,12 @@
     overflow: visible !important;
     position: fixed;
     top: auto !important;
-    left: 2px !important;
+    left: 3px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
-    bottom: 2px !important;
+    right: 3px !important;/**/
+    bottom: 3px !important;
     width: 248px !important;
     margin: 0 !important;
     padding: 0 !important;

@@ -73,8 +73,34 @@
   .sideArrows a {
     font-size: 9px !important;
   }
+  form[name="delform"] {
+    position: relative !important;
+  }
+  div.thread {
+    overflow: visible!important;
+    padding: 0!important;
+    padding-right: 2px!important;
+    position: relative;
+  }
+  div.post:not(#qp):not([hidden]) {
+    margin: 0!important;
+    width: 100%;
+  }
+  body, body > a[style="cursor: pointer; float: right;"] + div, input, select, textarea, .replyContainer > .reply, .hidden_thread, .stub > a, .thread.stub, .boardBanner .boardTitle, #qr, #qr > form > .captcha > img {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  form[name="delform"] .op::after, #addMascot > label::after, #qr > form > div::after, #updater div > label::after, .thread::after, .reply::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .thread > div > .post {
+    overflow: visible !important;
+  }
   div.reply {
-    display: block !important;
+    display: table !important;
   }
   div.sideArrows {
     float: none !important;
@@ -93,8 +119,8 @@
     display: inline-block !important;
   }
 /* Normal (4chan default) */
-  #updater {
-    display: block !important;
+   #updater {
+    top: -3px !important;
   }
   .sideArrows a {
     font-size: 9px !important;
@@ -121,10 +147,39 @@
   div.reply {
     padding-top: 5px !important;
     padding-left: 2px !important;
+    display: table !important;
+  }
+   form[name="delform"] {
+    position: relative !important;
+  }
+  div.thread {
+    overflow: visible!important;
+    padding: 0!important;
+    padding-right: 2px!important;
+    position: relative;
+  }
+  div.post:not(#qp):not([hidden]) {
+    margin: 0!important;
+  }
+  body, body > a[style="cursor: pointer; float: right;"] + div, input, select, textarea, .replyContainer > .reply, .hidden_thread, .stub > a, .thread.stub, .boardBanner .boardTitle, #qr, #qr > form > .captcha > img {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  form[name="delform"] .op::after, #addMascot > label::after, #qr > form > div::after, #updater div > label::after, .thread::after, .reply::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .thread > div > .post {
+    overflow: visible !important;
   }
   .sideArrows span {
   font-size: 9px !important;
   }
   .sideArrows {
   width: 15px !important;
+  }
+  #options.reply {
+    display: inline-block !important;
   }
