@@ -153,18 +153,18 @@
   #qr {
     padding-bottom: 16px !important;
   }
-  #spoilerlabel {
+  #spoilerLabel {
     position: absolute !important;
     bottom: 0px !important;
     right: 20px !important;
   }
-  #spoilerlabel input {
+  #spoilerLabel input {
     position: relative !important;
     top: 1px !important;    
     left: 2px !important;
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    #spoilerlabel input {
+    #spoilerLabel input {
       position: relative !important;
       top: 5px !important;
     }
@@ -526,18 +526,18 @@
   #qr {
     padding-bottom: 16px !important;
   }
-  #spoilerlabel {
+  #spoilerLabel {
     position: absolute !important;
     bottom: 0px !important;
     right: 20px !important;
   }
-  #spoilerlabel input {
+  #spoilerLabel input {
     position: relative !important;
     top: 1px !important;    
     left: 2px !important;
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    #spoilerlabel input {
+    #spoilerLabel input {
       position: relative !important;
       top: 5px !important;
     }
@@ -902,18 +902,18 @@
   #qr {
     padding-bottom: 16px !important;
   }
-  #spoilerlabel {
+  #spoilerLabel {
     position: absolute !important;
     bottom: 0px !important;
     right: 20px !important;
   }
-  #spoilerlabel input {
+  #spoilerLabel input {
     position: relative !important;
     top: 1px !important;    
     left: 2px !important;
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    #spoilerlabel input {
+    #spoilerLabel input {
       position: relative !important;
       top: 5px !important;
     }
@@ -1186,18 +1186,18 @@
   #qr {
     padding-bottom: 16px !important;
   }
-  #spoilerlabel {
+  #spoilerLabel {
     position: absolute !important;
     bottom: 0px !important;
     right: 20px !important;
   }
-  #spoilerlabel input {
+  #spoilerLabel input {
     position: relative !important;
     top: 1px !important;    
     left: 2px !important;
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    #spoilerlabel input {
+    #spoilerLabel input {
       position: relative !important;
       top: 5px !important;
     }
