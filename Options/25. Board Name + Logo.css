@@ -235,18 +235,18 @@
     margin-top: 10px !important;
   }
 /* Both in Sidebar*/
-.boardBanner {
-  position: fixed !important;
-  left: 2px !important;
-  right: auto !important;
-  /*[[ChangeAlign]]*//
-  left: auto !important;
-  right: 2px !important;/**/
-  top: 19px !important;
-  padding-top: 0px !important;
-  margin: 0 !important;
-  margin-top: -6px !important;
-  z-index: 1;
+  .boardBanner {
+    position: fixed !important;
+    left: 2px !important;
+    right: auto !important;
+    /*[[ChangeAlign]]*/
+    left: auto !important;
+    right: 2px !important;/**/
+    top: 19px !important;
+    padding-top: 0px !important;
+    margin: 0 !important;
+    margin-top: -6px !important;
+    z-index: 1;
   }
   .boardBanner img {
     width: 248px !important;

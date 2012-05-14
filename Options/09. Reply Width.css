@@ -1,19 +1,6 @@
 /*[[ReplyWidth]]*/
 
 /* Fit Width: */
-  form[name='delform'] > .board,
-  form[name='delform'], 
-  .board, /* Reply are tables. */
-  div.thread, /* Replies are tables. A script like 4chan X is present */
-  div.reply,
-  .replyContainer,
-  .opContainer,
-  .postContainer, /* Reply cell */
-  div.reply.highlight,
-  div.post,
-  div.post.reply /* Highlighted Reply cell */ {
-    width: 100% !important;
-  }
   .summary /* X posts and Y image replies omitted. Click Reply to view. */ {
     clear: both;
     padding-left: 20px;
@@ -81,7 +68,6 @@
     font-size: 9px !important;
   }
   div.reply {
-    width: 100% !important;
     display: block !important;
   }
   div.sideArrows {

@@ -17,6 +17,15 @@
   .field[name="name"] {
     width: 84px !important;
   }
+  #qr [type="submit"] {
+    width: 29% !important;
+    position: relative !important;
+    top: 0px !important;
+    float: right !important;
+  }
+  #qr form div:nth-last-of-type(2) {
+    height: 20px !important;
+  }
 /* Non-Compact (Old 4chan X default) */
   #qr textarea {
     height: 68px !important;
@@ -33,4 +42,13 @@
   }
   .dump #replies {
     top: 130px !important;
+  }
+  #qr [type="submit"] {
+    width: 29% !important;
+    position: relative !important;
+    top: 0px !important;
+    float: right !important;
+  }
+  #qr form div:nth-last-of-type(2) {
+    height: 20px !important;
   }
