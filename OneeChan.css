@@ -168,8 +168,7 @@ This style is designed for the following browsers, ordered alphabetically:
   #settingsBox,
   form[name="post"] h1,
   .board > hr:last-of-type,
-  .rules,
-  div.pagelist {
+  .rules {
    /* Cleanup */
    display: none !important;
  }
@@ -1854,6 +1853,10 @@ height: 20px !important;
 }
 .postContainer.inline .report_button, .postContainer.inline input {
   display: none !important;
+}
+div.pagelist {
+  background: none !important;
+  border: none !important;
 }
 }
 
