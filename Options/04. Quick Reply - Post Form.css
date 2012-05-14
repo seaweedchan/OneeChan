@@ -1035,9 +1035,9 @@
   @-moz-document domain('4chan.org') {
   .postForm {
     right: auto !important;
-    left: 2px !important;
+    left: 1px !important;
     /*[[ChangeAlign]]*/
-    right: 2px !important;
+    right: 1px !important;
     left: auto !important;/**/
     opacity: 0.2;
     -webkit-transition: opacity .3s ease-in-out 3s;
