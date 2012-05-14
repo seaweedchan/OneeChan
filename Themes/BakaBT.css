@@ -128,7 +128,7 @@ div.reply > tr > div.reply,
 
 a,
 #dump,
-.replyhider a {
+.sideArrows a {
   color: #854C9E !important;
 }
 #boardNavDesktop a, #boardNavDesktopFoot a {
@@ -326,7 +326,7 @@ a:hover,
 #boardNavDesktop a:hover,
 .pages input:hover,
 #dump:hover,
-.replyhider a:hover {
+.sideArrows a:hover {
   color: #8E2220 !important;
 }
 .name {

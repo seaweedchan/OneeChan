@@ -256,27 +256,27 @@
     padding-top: 2px !important;
     max-height: 16px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  body > a[style='cursor: pointer; float: right;']::after {
     bottom: 1px !important;
     top: auto !important;
   }
-  table[align=right]::before {
+  .deleteform::before {
     top: auto !important;
     bottom: 1px !important;
   }
-  table[align=right]:hover {
+  .deleteform:hover {
     top: auto !important;
     bottom: -4px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
+  .deleteform:hover input[type='checkbox'] {
     top: auto !important;
     bottom: 2px !important;
   }
-  table[align=right]:hover::after {
+  .deleteform:hover::after {
     top: auto !important;
     bottom: 2px !important;
   }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover .inputtext {
     top: auto !important;
     bottom: 1px !important;
   }
@@ -1283,27 +1283,27 @@
     padding-top: 2px !important;
     max-height: 16px !important;
   }
-  html body span[style='left: 5px; position: absolute;'] a:first-of-type::after {
+  body > a[style='cursor: pointer; float: right;']::after {
     bottom: 1px !important;
     top: auto !important;
   }
-  table[align=right]::before {
+  .deleteform::before {
     top: auto !important;
     bottom: 1px !important;
   }
-  table[align=right]:hover {
+  .deleteform:hover {
     top: auto !important;
     bottom: -4px !important;
   }
-  table[align=right]:hover input[type='checkbox'] {
+  .deleteform:hover input[type='checkbox'] {
     top: auto !important;
     bottom: 2px !important;
   }
-  table[align=right]:hover::after {
+  .deleteform:hover::after {
     top: auto !important;
     bottom: 2px !important;
   }
-  table[align=right]:hover .inputtext {
+  .deleteform:hover .inputtext {
     top: auto !important;
     bottom: 1px !important;
   }

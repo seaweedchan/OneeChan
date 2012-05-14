@@ -13,7 +13,7 @@
     z-index: 4;
     text-align: center;
   }
-  .boardBanner {
+  .boardBanner img {
     display: none;
   }
   #watcher::before {
@@ -45,7 +45,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 19px !important;
+    top: 17px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -75,7 +75,7 @@
     z-index: 4;
     text-align: center;
   }
-  .boardBanner {
+  .boardBanner img {
     display: none;
   }
   #watcher::before {
@@ -107,7 +107,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 19px !important;
+    top: 17px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -130,7 +130,7 @@
     margin-top: 10px !important;
   }
 /* Banner in Sidebar*/
-  .boardTitle > *:not(img) {
+  .boardTitle, .boardSubtitle {
     display: none;
   }
   #watcher::before {
@@ -162,7 +162,7 @@
     top: 119px !important;
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 104px !important;
+    top: 102px !important;
   }
   .deleteform::before {
     top: 102px !important;
@@ -180,7 +180,7 @@
     top: 107px !important;
   }
 /* Banner at Top */
-  .boardTitle > *:not(img) {
+  .boardTitle, .boardSubtitle {
     display: none;
   }
   #watcher::before {
@@ -212,7 +212,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 19px !important;
+    top: 17px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -235,17 +235,26 @@
     margin-top: 10px !important;
   }
 /* Both in Sidebar*/
-  .boardTitle {
-    position: fixed !important;
-    right: auto !important;
-    left: 2px !important;
-    /*[[ChangeAlign]]*/
-    right: 2px !important;
-    left: auto !important;/**/
-    top: 120px !important;
+.boardBanner {
+  position: fixed !important;
+  left: 2px !important;
+  right: auto !important;
+  /*[[ChangeAlign]]*//
+  left: auto !important;
+  right: 2px !important;/**/
+  top: 19px !important;
+  padding-top: 0px !important;
+  margin: 0 !important;
+  margin-top: -6px !important;
+  z-index: 1;
+  }
+  .boardBanner img {
     width: 248px !important;
-    z-index: 1;
-    text-align: center;
+    height: 83px !important;
+    -webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, .1)), color-stop(21.01%, transparent) );
+  }
+  .boardTitle {
+    margin-top: 20px !important;
   }
   #watcher::before {
     top: 105px !important;
@@ -276,7 +285,7 @@
     top: 119px !important;
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 104px !important;
+    top: 102px !important;
   }
   .deleteform::before {
     top: 102px !important;
@@ -335,7 +344,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 19px !important;
+    top: 17px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -352,13 +361,13 @@
   .deleteform:hover::after {
     top: 22px !important;
   }
-  .boardTitle, .boardBanner {
+  .boardBanner {
     position: static !important;
     margin: auto !important;
     margin-top: 10px !important;
   }
 /* Hide Both */
-  .boardTitle {
+  .boardBanner {
     display: none;
   }
   #watcher::before {
@@ -390,7 +399,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 19px !important;
+    top: 17px !important;
   }
   .deleteform::before {
     top: 17px !important;

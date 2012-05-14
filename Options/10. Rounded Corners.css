@@ -22,7 +22,7 @@
   h2,
   .deleteform,
   #boardNavDesktopFoot,
-  font[color="red"] {
+  .globalMessage {
     border-radius: 3px !important;
   }
 
@@ -68,7 +68,7 @@
   h2,
   .deleteform,
   #boardNavDesktopFoot,
-  font[color="red"] {
+  .globalMessage {
     border-radius: 3px !important;
   }
 

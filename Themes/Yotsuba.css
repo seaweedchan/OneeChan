@@ -115,7 +115,7 @@
 
   a,
 #dump,
-.replyhider a {
+.sideArrows a {
     color: #800000 !important;
   }
   hr {
@@ -408,7 +408,7 @@
   }
  a,
 #dump,
-.replyhider a {
+.sideArrows a {
   color: #57577b !important;
 }
 .postNum a, a.backlink {
@@ -614,7 +614,7 @@ input[type='file']::-webkit-file-upload-button {
 }
 a:hover,
 #dump:hover,
-.replyhider a:hover {
+.sideArrows a:hover {
   color: #d00 !important;
 }
 .name {

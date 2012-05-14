@@ -55,8 +55,11 @@
     z-index: 1;
   }
   form[name='delform'] {
-    padding: 17px 0 2px 0 !important;
+    padding: 11px 0 2px 0 !important;
     margin: 0 0 0px !important;
+  }
+  body > .postingMode ~ form[name='delform'] {
+    padding-top: 2px !important;
   }
   #boardNavDesktop {
     top: 0px !important;
@@ -70,8 +73,11 @@
     padding: 0 !important;
   }
   form[name='delform'] {
-    padding: 17px 0 2px 0 !important;
+    padding: 11px 0 2px 0 !important;
     margin: 0 0 0px !important;
+  }
+  body > .postingMode ~ form[name='delform'] {
+    padding-top: 2px !important;
   }
   #boardNavDesktop {
     top: 0px !important;
@@ -141,8 +147,11 @@
     padding-top: 5px !important;
   }
   form[name='delform'] {
-    padding: 17px 0 2px 0 !important;
+    padding: 11px 0 2px 0 !important;
     margin: 0 0 0px !important;
+  }
+  body > .postingMode ~ form[name='delform'] {
+    padding-top: 2px !important;
   }
   body > .postingMode ~ form[name='delform'] {
     padding-top: 0px !important;
@@ -168,6 +177,9 @@
   form[name='delform'] {
     padding: 0px 0 2px 0 !important;
     margin: 0 0 0px !important;
+  }
+  body > .postingMode ~ form[name='delform'] {
+    padding-top: 2px !important;
   }
   #boardNavDesktop {
     top: -150px !important;
@@ -221,6 +233,9 @@
     padding: 0px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
+  body > .postingMode ~ form[name='delform'] {
+    padding-top: 2px !important;
+  }
 /* Top Stickied Pages */
   .pages {
     position: fixed !important;
@@ -250,7 +265,7 @@
     padding-top: 5px !important;
   }
   form[name='delform'] {
-    padding: 17px 0 2px 0 !important;
+    padding: 2px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
   body > .postingMode ~ form[name='delform'] {
@@ -307,4 +322,6 @@
     padding: 0px 0 2px 0 !important;
     margin: 0 0 0px !important;
   }
-  
+  body > .postingMode ~ form[name='delform'] {
+    padding-top: 2px !important;
+  }

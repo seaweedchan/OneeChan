@@ -19,7 +19,7 @@
     padding-left: 20px;
     display: block !important;
   }
-  .replyhider {
+  .sideArrows {
     z-index: 1;
     position: absolute;
     right: 0px;
@@ -29,24 +29,24 @@
     position: relative !important;
     width: 100% !important;
   }
-  .replyhider a {
+  .sideArrows a {
     position: static !important;
     width: 20px !important;
     font-size: 12px !important;
   }
-  .replyhider {
+  .sideArrows {
     width: 20px !important;
     padding-top: 1px !important;
   }
-  div.reply .reportbutton, .replyhider, .postInfo input {
+  div.reply .report_button, .sideArrows, .postInfo input {
     opacity: 0 !important;
   }
-  form .replyContainer:not(:hover) div.reply .reportbutton, form .replyContainer:not(:hover) .replyhider, form .replyContainer:not(:hover) .postInfo input{
+  form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) .sideArrows, form .replyContainer:not(:hover) .postInfo input{
     -webkit-transition: opacity .3s ease-out 0s !important;
     -moz-transition: opacity .3s ease-out 0s !important;
     -o-transition: opacity .3s ease-out 0s !important;
   }
-  form .replyContainer:hover div.reply .reportbutton, form .replyContainer:hover .replyhider, .replyContainer:hover .postInfo input {
+  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover .sideArrows, .replyContainer:hover .postInfo input {
     opacity: 1 !important;
     -webkit-transition: opacity .3s ease-in .5s !important;
     -moz-transition: opacity .3s ease-in .5s !important;
@@ -62,51 +62,46 @@
     padding-top: 6px !important;
     padding-left: 10px !important;
   }
-
   div.reply .postInfo input {
     position: absolute !important;
     top: -3px !important;
     right: 5px !important;
-  } 
-
-  div.reply .reportbutton {
+  }
+  div.reply .report_button {
     position: absolute !important;
     right: 33px !important;
-    top: 8px !important;
+    top: -1px !important;
     font-size: 9px !important;
   }
-  .replyhider {
+  .sideArrows {
     right: 47px !important;
-    top: 7px !important;
+    top: 2px !important;
   }
-  .replyhider a {
+  .sideArrows a {
     font-size: 9px !important;
-  }
-  div.replyContainer {
-    display: table-row !important;
   }
   div.reply {
     width: 100% !important;
-    display: table-cell !important;
+    display: block !important;
   }
   div.sideArrows {
-    display: table-cell !important;
+    float: none !important;
   }
 /* Normal (4chan default) */
-  .replyhider a {
+  .sideArrows a {
     font-size: 9px !important;
   }
-  .replyhider a {
+  .sideArrows a {
     position: static;
   }
   div.reply {
     padding-right: 5px !important;
   }
-  .replyhider {
+  .sideArrows {
     margin-right: 5px !important;
     width: 20px !important;
   }
-  .replyhider a {
+  .sideArrows a {
     width: 20px !important;
     font-size: 12px !important;
   }

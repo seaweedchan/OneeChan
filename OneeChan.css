@@ -160,11 +160,13 @@ This style is designed for the following browsers, ordered alphabetically:
   #absbot,
   .absBotText,
   .postingMode,
-  .stylechanger
+  .stylechanger,
   .closed,
   .prev,
   .next,
-  body > .postingMode ~ form[name='delform'] hr {
+  body > .postingMode ~ form[name='delform'] hr,
+  #settingsBox,
+  form[name="post"] h1 {
    /* Cleanup */
    display: none !important;
  }
@@ -222,7 +224,7 @@ input,
 #imgControls,
 #stats,
 #updater,
-#navtopr a,
+#navtopr a:first-of-type,
 label,
 #imageType,
 #boardNavDesktop,
@@ -249,10 +251,10 @@ thumb { -moz-appearance: none !important; border: 1px solid; }/**/
 
 span[id^='4chan_ext_right'],
 a.yuimenuitemlabel:hover,
-.replyhider a:hover {
+.sideArrows a:hover {
   background-color: transparent !important;
 }
-.boardBanner img {
+.boardBanner {
   position: fixed !important;
   left: 2px !important;
   right: auto !important;
@@ -261,9 +263,13 @@ a.yuimenuitemlabel:hover,
   right: 2px !important;/**/
   top: 19px !important;
   width: 248px !important;
-  height: 83px !important;
   margin: 0 !important;
+  margin-top: -6px !important;
   z-index: 1;
+ }
+.boardBanner img {
+  width: 248px !important;
+  height: 83px !important;
   -webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, .1)), color-stop(21.01%, transparent) );
 }
 /*[[boardlogo]]*/
@@ -271,8 +277,11 @@ a.yuimenuitemlabel:hover,
   font-size: 30px !important;
   font-weight: 400 !important;
 }
+.boardTitle {
+margin-top: 20px !important;
+}
 
-.boardTitle font[size='1'] {
+.boardSubtitle {
   font-size: 13px !important;
 
 }
@@ -646,6 +655,16 @@ input[type='file'][name='upfile'],
 		position: relative !important;
 		top: 5px !important;
 	}
+  #qr [type="submit"] {
+    width: 30% !important;
+    position: relative !important;
+    top: 0px !important;
+    float: right !important;
+  }
+
+  #qr form div:nth-last-of-type(2) {
+   height: 20px !important;
+  }
 }
 
 /* /mu/ last.fm userscript support */
@@ -755,7 +774,10 @@ form[name^='post'] input[name='recaptcha_response_field'] {
   font-weight: bold !important;
 }
 /* Image Hover and Image Expansion */
-/*[[ihover]]*/
+#ihover {
+  max-width:85% !important;
+  max-height:85% !important;
+}
 #qp {
   z-index: 99 !important;
 }
@@ -764,7 +786,7 @@ form[name^='post'] input[name='recaptcha_response_field'] {
   z-index: 99 !important;
 }
 
-#iHover {
+#ihover {
   z-index: 99 !important;
 }
 
@@ -1073,7 +1095,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   color: transparent !important;
   z-index: 96 !important;
 }
-#navtopr a::after {
+#navtopr a:first-of-type::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAgNJREFUOE9tk8tLW1EQh881iUZNRYNRcBPIaxGTm9y8X/UBrtwoVpCoUFBBIoigdFFQUEFBUXy0urO4cOFj2WVBVFDRav2X/EZvqrQJfJy5vzkzZ2bOiVLmL5lM2jKZTBsEEolEs2EY1rJP1lQqZcXXAp54PN7o8/mq/vpxNuZyuWI+nz+AeWw9FAq9JNB13ZLNZoNoM/j2YTgajX5QXq/Xlk6nmwiuJasXxwJcwSLfLk6xsPoJnIVv6EfwFb1FymlGHERIhsNhB/Yn7Es4xjYggD3NugU72BtU0ReLxeoVvbbKKfAdccIs64H1F5uHYBh73Tx1DbsoMR6PR1PUbkcYgJ9wA4/wZK6nrCUpE5alKgKdjEF7GRb9aJzogiE2bMMZ3JkJpIITgkr4e7mFt8DyqGleI2MNG11sjBUKhV3sWzPBb9ZTgrvZZ39/ff/ZkUhEhiZtyJWUEzyiHUIXbdZWTICzAUZgiZN6zOmWW7gn2Q/0Tsp/rYBSFIJdrgXnF7Nvg2nKiwqgy4Sv4Q9cwB7aR+KqZWBVfAQRN2U40I9mk8Rut1seSDvaKpyDvLwSjPM+nIrX5UD8DIcwidj2vieephVdkq/AHEwRPEbvTsVLqeOjA6RHF+Va/h0IupXWQgTKdY7yrTNYm/L7/RpZavgXVSO+Xn6FH5stDMpBZQ30K/NQzzXRtPzuPrd1AAAAAElFTkSuQmCC');
   position: fixed !important;
   left: 5px !important;
@@ -1084,7 +1106,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   z-index: -1 !important;
   opacity: 0.3;
 }
-#navtopr a:hover::after {
+#navtopr a:first-of-type:hover::after {
   opacity: 1;
 }
 /* Strip 4chan+ of shadows and rounded edges */
@@ -1519,7 +1541,7 @@ div[class="navLinks"] a:first-of-type:hover::after {
   /*[[ChangeAlign]]*/
   right: 2px !important;
   left: auto !important; /**/
-  top: 2px !important;
+  top: -4px !important;
   bottom: auto !important;
   width: 58px !important;
   border: 0 !important;
@@ -1527,6 +1549,10 @@ div[class="navLinks"] a:first-of-type:hover::after {
   overflow: hidden;
   z-index: 5 !important;
   padding-bottom: 2px;
+}
+
+#updater {
+  background: none !important;
 }
 
 #count.new {
