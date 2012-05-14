@@ -76,6 +76,11 @@
   div.sideArrows {
     float: none !important;
   }
+  .hide_thread_button {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-right: 5px !important;
+  }
 /* Normal (4chan default) */
   .sideArrows a {
     font-size: 9px !important;
@@ -93,4 +98,9 @@
   .sideArrows a {
     width: 20px !important;
     font-size: 12px !important;
+  }
+  .hide_thread_button {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-right: 5px !important;
   }
