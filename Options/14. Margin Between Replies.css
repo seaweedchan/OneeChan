@@ -1,42 +1,30 @@
 /*[[BetweenReply]]*/
 
 /* Large */
-.thread {
-  border-spacing: 0 3px !important;
-}
 div.post {
-  margin-bottom: 6px !important;
+  margin-top: 6px !important;
 }
-body > .postingMode ~ form[name='delform'] > .thread {
-  margin-bottom: -2px !important;
+form[name="delform"] {
+  margin-bottom: 18px !important;
 }
 /* Normal (4chan default) */
-.thread {
-  border-spacing: 0 2px !important;
-}
 div.post {
-  margin-bottom: 4px !important;
+  margin-bottom: 0px !important;
 }
-body > .postingMode ~ form[name='delform'] > .thread {
-  margin-bottom: -1px !important;
+form[name="delform"] {
+  margin-bottom: 18px !important;
 }
 /* Minimal */
-.thread {
-  border-spacing: 0 1px !important;
-}
 div.post {
-  margin-bottom: 2px !important;
+  margin-bottom: -2px !important;
 }
-body > .postingMode ~ form[name='delform'] > .thread {
-  margin-bottom: 0px !important;
+form[name="delform"] {
+  margin-bottom: 20px !important;
 }
 /* None */
-.thread {
-  border-spacing: 0 0px !important;
-}
 div.post {
-  margin-bottom: 0px !important;
+  margin-bottom: -4px !important;
 }
-body > .postingMode ~ form[name='delform'] > .thread {
-  margin-bottom: 1px !important;
+form[name="delform"] {
+  margin-bottom: 22px !important;
 }
