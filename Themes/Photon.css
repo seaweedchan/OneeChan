@@ -328,8 +328,8 @@ input[type='file']::-webkit-file-upload-button {
   color: #444 !important;
 }
 a:hover,
-.name a:hover,
-.postertrip a:hover,
+.useremail .name:hover,
+.useremail .postertrip:hover,
 #boardNavDesktop a:hover,
 .pages input:hover,
 #dump:hover,

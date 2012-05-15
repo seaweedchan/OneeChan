@@ -132,15 +132,15 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-.name a,
-a .postertrip,
+.useremail .name,
+.useremail .postertrip,
 #dump {
   color: #00FFFF !important;
 }
 
 a:hover,
-.name a:hover,
-a:hover .postertrip,
+.useremail .name:hover,
+.useremail .postertrip:hover,
 #dump:hover {
   color: #00FFFF !important;
 }
@@ -149,7 +149,7 @@ a.backlink,
 a.forwardlink {
   color: #00FFFF !important;
 }
-.postertrip, .linkmail .postertrip {
+.postertrip, .useremail .postertrip {
   color: #FF52CB !important;
 }
 body > form {

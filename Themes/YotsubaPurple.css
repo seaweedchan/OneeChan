@@ -347,8 +347,8 @@ a:hover,
 .trip {
   color: #b22caa !important;
 }
-.name a:hover,
-a:hover .postertrip {
+.useremail .name:hover,
+.useremail .postertrip:hover {
   color: #117743 !important;
 }
 a.forwardlink {

@@ -124,8 +124,8 @@ a:hover,
   color: #80accE !important;
 }
 
-.name a:hover,
-a:hover .postertrip {
+.useremail .name:hover,
+.useremail .postertrip:hover {
   color: #00DFFC !important;
 }
 

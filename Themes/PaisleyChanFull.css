@@ -122,8 +122,8 @@ a:hover,
   color: #80accE !important;
 }
 
-.name a:hover,
-a:hover .postertrip {
+.useremail .name:hover,
+.useremail .postertrip:hover {
   color: #00DFFC !important;
 }
 
@@ -534,10 +534,10 @@ blockquote {
 .name:empty {
   display: none;
 }
-.name a:empty::after {
+.useremail:empty .name::after {
   content: ">>";
 }
-.name a:empty {
+.useremail:empty {
   text-decoration: none !important;
   color: #444 !important;
   text-shadow: none !important;
@@ -552,13 +552,13 @@ blockquote {
   border-radius: 5px 0px 0px 0px;
   -moz-border-radius: 5px 0px 0px 0px;
 }
-.name a:empty:hover {
+.useremail:empty .name:hover {
   color: #666 !important;
 }
 .postertrip {
   color: #608caE !important;
 }
-.name a {
+.useremail .name {
   color: #95C3E7 !important;
   font-weight: bold !important;
 }

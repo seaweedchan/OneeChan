@@ -97,15 +97,15 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-.name a,
-a .postertrip,
+.useremail .name,
+.useremail .postertrip,
 #dump {
   color: #DA69E0 !important;
 }
 
 a:hover,
-.name a:hover,
-a:hover .postertrip,
+.useremail .name:hover,
+.useremail .postertrip:hover,
 #dump:hover {
   color: #FF00FF !important;
 }

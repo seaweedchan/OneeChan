@@ -119,8 +119,8 @@ a.quotelink:hover {
     font-weight: 800 !important;
   }
 }
-.name a:hover,
-a:hover .postertrip {
+.useremail .name:hover,
+.useremail .postertrip:hover {
   color: #00FE00 !important;
   text-decoration: underline !important;
 }

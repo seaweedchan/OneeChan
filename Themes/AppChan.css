@@ -83,16 +83,16 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-.name a,
-a .postertrip,
+.useremail .name,
+.useremail .postertrip,
 #dump,
 .sideArrows a {
   color: #68a !important;
 }
 
 a:hover,
-.name a:hover,
-a:hover .postertrip,
+.useremail .name:hover,
+.useremail .postertrip:hover,
 #dump:hover,
 .sideArrows a:hover {
   color: #4E6E8E !important;
