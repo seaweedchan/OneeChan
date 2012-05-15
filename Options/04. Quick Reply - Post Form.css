@@ -266,7 +266,7 @@
   }
   .deleteform:hover {
     top: auto !important;
-    bottom: -4px !important;
+    bottom: 1px !important;
   }
   .deleteform:hover input[type='checkbox'] {
     top: auto !important;
@@ -1308,7 +1308,7 @@
   }
   .deleteform:hover {
     top: auto !important;
-    bottom: -4px !important;
+    bottom: 1px !important;
   }
   .deleteform:hover input[type='checkbox'] {
     top: auto !important;

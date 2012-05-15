@@ -901,8 +901,8 @@ div.reply.highlight {
 
 form[name^='post'] #recaptcha_reload_btn,
 .refreshBtn {
-  bottom: 76px !important;
-  right: 15px !important;
+  bottom: 70px !important;
+  right: 5px !important;
 }
 
 #dragarea > div:nth-of-type(2) {
@@ -1851,6 +1851,35 @@ height: 20px !important;
   margin-top: 0px !important;
   width:64px !important;
 }
+
+.postForm label {
+  position: absolute !important;
+  bottom: 0px !important;
+  font-size: 0px !important;
+}
+
+.postForm > tbody > tr:nth-of-type(3) > td {
+  font-size: 0px !important;
+}
+
+.postForm label input {
+  position: absolute !important;
+  bottom: 18px !important;
+  right: 150px !important;
+  z-index: 3 !important;
+  max-height: 12px !important;
+  max-width: 12px !important;
+}
+
+.postForm label::after {
+  font-size: 12px !important;
+  content: "Spoiler?" !important;
+  position: absolute !important;
+  bottom: 7px !important;
+  right: 90px !important;
+  z-index: 3 !important;
+}
+
 .postContainer.inline {
   border: none !important;
   background: none !important;
