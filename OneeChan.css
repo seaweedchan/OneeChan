@@ -410,8 +410,9 @@ a.yuimenuitemlabel {
 #boardNavDesktop {
   z-index: 98;
 }
-body > .postingMode ~ form[name='delform'] .reply a > img[src^="//images"] {
-  top: 0px !important;
+.fileThumb {
+  position: relative !important;
+  z-index: 7 !important;
 }
 .pages td:nth-of-type(1) {
   font-size: 75% !important;
@@ -1176,6 +1177,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   opacity: 0.2 !important;
   position: relative !important;
   top: 4px !important;
+  z-index: 10 !important;
 }
 #imgControls label:hover:first-of-type::after {
   opacity: 1 !important;
@@ -1202,7 +1204,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   right: 140px !important;/**/
   top: 1px !important;
   bottom: auto !important;
-  z-index: 2;
+  z-index: 10 !important;
 }
 
 #imgControls label:nth-of-type(2)::after {
@@ -1297,7 +1299,7 @@ div[id^='ref'] img {
   -moz-transform: scale(.8);
   -o-transform: scale(.8);
   -webkit-transform: scale(.8);
-  z-index: 999;
+  z-index: 6;
   opacity: 0.4;
 }
 
@@ -1548,6 +1550,7 @@ div[class="navLinks"] a:first-of-type:hover::after {
   text-align: right !important;
   bottom: auto !important;
   cursor: default !important;
+  z-index: 10 !important;
 }
 
 #updater {
@@ -1562,7 +1565,7 @@ div[class="navLinks"] a:first-of-type:hover::after {
   border: 0 !important;
   font-size: 12px;
   overflow: hidden;
-  z-index: 5 !important;
+  z-index: 10 !important;
   padding-bottom: 2px;
 }
 
