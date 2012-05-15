@@ -10,7 +10,7 @@
   thumb:active { background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
   /**/
   body {
-    background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #FFFFFF !important;
+    background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #F6EEFF !important;
   }
   form[name="delform"]::before {
 width: 252px !important;

@@ -451,7 +451,7 @@ input[type="checkbox"], #options input[type="checkbox"], form[name^="post"] td:n
   background-color: #000 !important;
 }
 
-div.reply, #qr textarea, #qp, #iHover, .boardBanner, #updater:hover, #qr.autohide .move {
+div.reply, #qr textarea, #qp, #iHover, .boardBanner img, #updater:hover, #qr.autohide .move {
 border: 1px dashed #00FE00 !important;
 }
 #iHover {
