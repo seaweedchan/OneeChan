@@ -797,11 +797,6 @@ form[name^='post'] input[name='recaptcha_response_field'] {
   z-index: 99 !important;
 }
 
-.fileThumb {
-  position: relative !important;
-  z-index: 1 !important;
-}
-
 #ihover {
   z-index: 99 !important;
 }
