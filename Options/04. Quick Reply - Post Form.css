@@ -14,7 +14,7 @@
     left: auto !important;/**/
   }
   .postForm textarea {
-    height: 66px !important;
+    height: 72px !important;
   }
   .postForm input[type='file'][name='upfile'] {
     margin: 0 0px -1px 0px !important;
@@ -365,7 +365,7 @@
     height: 79px !important;
   }
   .postForm textarea {
-    height: 66px !important;
+    height: 72px !important;
   }
   .postForm input[type="password"] {
     text-align: right !important;
@@ -718,7 +718,7 @@
     bottom: 250px !important;
   }
   .postForm textarea {
-    height: 66px !important;
+    height: 72px !important;
   }
   .postForm input[type="password"] {
     text-align: right !important;
@@ -1051,7 +1051,7 @@
     -o-transition: opacity .3s linear;
   }
   .postForm textarea {
-    height: 66px !important;
+    height: 72px !important;
   }
   .postForm input[type="password"] {
     text-align: right !important;

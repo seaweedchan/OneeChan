@@ -168,7 +168,8 @@ This style is designed for the following browsers, ordered alphabetically:
   #settingsBox,
   form[name="post"] h1,
   .board > hr:last-of-type,
-  .rules {
+  .rules,
+  div.reply[hidden] {
    /* Cleanup */
    display: none !important;
  }
@@ -241,6 +242,10 @@ label,
 .pages a {
   font-size: 12px !important;
   text-decoration: none !important;
+}
+
+.filtered {
+  text-decoration: line-through !important;
 }
 
 /*[[CustomScrollbars]]*/scrollbarbutton { display: none !important; }
@@ -1776,15 +1781,15 @@ input, textarea {
 }
 
 .postForm textarea, .postForm input:not([type="submit"])  {
-  width: 238px !important;
+  width: 248px !important;
   margin-top: 0px !important;
 }
 #recaptcha_response_field, #recaptcha_widget_div input {
-  width: 242px !important;
+  width: 249px !important;
 }
 .postForm input:not([type="submit"]) {
   margin: -10px !important;
-  height: 13px !important;
+  height: 20px !important;
   border-spacing: 0px !important;
 }
 
@@ -1793,11 +1798,11 @@ height: 20px !important;
 
 }
 .postForm input[name="sub"] {
-  width: 188px !important;
+  width: 198px !important;
 }
 
 .postForm input#recaptcha_response_field {
-  height: 13px !important;
+  height: 20px !important;
 }
 
 #postPassword + span {
@@ -1832,19 +1837,19 @@ height: 20px !important;
 }
 
 #postFile {
-  height: 22px !important;
+  height: 24px !important;
 }
 
 #postFile input[type="text"] {
-  height: 13px !important;
+  height: 20px !important;
   margin-top: 0px !important;
-  margin-left: 1px !important;
+  margin-left: 0px !important;
 }
 
 #postFile input[type="button"] {
-  height: 19px !important;
+  height: 20px !important;
   margin-top: 0px !important;
-  width: 57px !important;
+  width:64px !important;
 }
 .postContainer.inline {
   border: none !important;
