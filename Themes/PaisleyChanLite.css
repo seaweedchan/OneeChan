@@ -425,7 +425,7 @@ form[name='delform'] > div:not(.thread) select,
 }
 /* Toolbox images */
 /* 4chan X options */
-#navtopr a:first-of-type::after {
+#navtopr a[href="javascript:;"]::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAYhJREFUGBlVwUtLG2EYBtB3nIlGjWKDUXCpmEVahAgu7QVcualoIWgFQQWJIIKlC8HiBSxYWqq1Zldx0UWN4KY7FVGpBnXixMuQEJ35vuf5Ja21oD1H5I9CwG/QUa92x5qWW67l1anGfM12idzyatCLb5jyWzKWSM70YxhnSvflq+Qi4D26KVdNeMcDzPgR2/SbMcFlfMekrhNVi1e6rRhCD/f5A3EVxRg/Y4kf8fKqUnQ9Z/gVw0jR5jYT6OMHLHMBvdf1W4Y4QXTzJ4+YpcMs00hiEnO6pxhOGyJCQ0eQ4CI3eEyHNteZ1J2FcNqQO7ZxU4aIbuUXZujwlGm8yAXlf24I3UgxQ4dZrunnl+VyD9V4zVndgSUe0+EJV/nsPCgithSDKo63WET81FJRLPCQZ9zDim7/VSrFEhXDJ67rLgZElKkf8z13MYUkhryw+CEMcI0jqkH+ylkqxnm8wSgGvbC4FXiKDhW5NOWfvOU/QQL9aCkEZNM4KjsvzRvygGO6oUK1a1F+A62z3cM64xkkAAAAAElFTkSuQmCC') !important;
 }
 /* Delete buttons */

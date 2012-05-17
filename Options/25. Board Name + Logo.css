@@ -33,7 +33,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
@@ -95,7 +95,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
@@ -150,7 +150,7 @@
   #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 104px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
@@ -200,7 +200,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
@@ -273,7 +273,7 @@
   #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 104px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
@@ -335,7 +335,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
@@ -393,7 +393,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a::after {
+  #navtopr a[href="javascript:;"]::after {
     top: 19px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
