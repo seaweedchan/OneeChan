@@ -369,6 +369,8 @@ a.yuimenuitemlabel {
   opacity: 0.4;
 }
 
+/*[[NavigationOpacity]]*/
+
 #boardNavDesktopFoot:hover::after {
   opacity: 1;
   cursor: pointer;
