@@ -1,0 +1,39 @@
+/*[[NavigationOpacity]]*/
+
+/* Theme default */
+
+/* 100% */
+#boardNavDesktop {
+	opacity: 1.0 !important;
+}
+
+/* 75% */
+#boardNavDesktop {
+	opacity: 0.75 !important;
+}
+
+/* 50% */
+#boardNavDesktop {
+	opacity: 0.5 !important;
+}
+
+/* 25% */
+#boardNavDesktop {
+	opacity: 0.25 !important;
+}
+
+/* Transition from 0% to 100% */
+#boardNavDesktop {
+	opacity: 0.0 !important;
+	/* Transitions */
+	-moz-transition-duration: 0.5s;
+	-moz-transition-property: opacity;
+	-webkit-transition-duration: 0.5s;
+	-webkit-transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-property: opacity;
+}
+
+#boardNavDesktop:hover {
+	opacity: 1.0 !important;
+}
