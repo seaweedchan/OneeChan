@@ -88,7 +88,8 @@ input[type='file']::-webkit-file-upload-button {
 a,
 .useremail .name,
 .useremail .postertrip,
-#dump:hover {
+#dump,
+a.quotelink {
   color: #6c71c4 !important;
 }
 
@@ -107,6 +108,7 @@ a,
 a:hover,
 .useremail .name:hover,
 .useremail .postertrip:hover,
+a.quotelink:hover,
 #dump:hover {
   color: #d33682 !important;
 }

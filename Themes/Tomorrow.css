@@ -96,6 +96,7 @@ a,
 .useremail .name,
 .useremail .postertrip,
 #dump,
+a.quotelink,
 .sideArrows a {
   color: #81a2be !important;
 }
@@ -104,6 +105,7 @@ a:hover,
 .useremail .name:hover,
 .useremail .postertrip:hover,
 #dump:hover,
+a.quotelink:hover,
 .sideArrows a:hover {
   color: #5F89AC !important;
 }

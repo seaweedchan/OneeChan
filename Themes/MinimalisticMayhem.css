@@ -84,12 +84,14 @@ input[type='file']::-webkit-file-upload-button {
 
 a,
 #dump,
+a.quotelink,
 .sideArrows a {
   color: #897399 !important;
 }
 
 a:hover,
 #dump:hover,
+a.quotelink:hover,
 .sideArrows a:hover {
   color: #C617E6 !important;
   font-weight: 100 !important;

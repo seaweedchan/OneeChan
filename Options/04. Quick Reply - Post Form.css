@@ -338,6 +338,14 @@
     width: 248px !important;
   }
   /*[[TextareaExpand]]*/
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr > form {
+      padding-bottom: 20px !important;
+    }
+    #qr [type="file"] {
+      width: 71% !important;
+    }
+  }
   /*[[FieldStyle]]*/
   }
 /* Slideout: */
@@ -650,6 +658,14 @@
     width: 248px !important;
   }
   /*[[TextareaExpand]]*/
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr > form {
+      padding-bottom: 20px !important;
+    }
+    #qr [type="file"] {
+      width: 71% !important;
+    }
+  }
   /*[[FieldStyle]]*/
   }
 /* Tabbed Slideout: */
@@ -1032,6 +1048,14 @@
     width: 248px !important;
   }
   /*[[TextareaExpand]]*/
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr > form {
+      padding-bottom: 20px !important;
+    }
+    #qr [type="file"] {
+      width: 71% !important;
+    }
+  }
   /*[[FieldStyle]]*/
   }
 /* Fade: */
@@ -1383,6 +1407,14 @@
     width: 248px !important;
   }
   /*[[TextareaExpand]]*/
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr > form {
+      padding-bottom: 20px !important;
+    }
+    #qr [type="file"] {
+      width: 71% !important;
+    }
+  }
   /*[[FieldStyle]]*/
   }
 /* Floating QR ONLY */
@@ -1545,6 +1577,14 @@
     height: 19px !important;
     text-align: center !important;
     padding-top: 3px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr > form {
+      padding-bottom: 20px !important;
+    }
+    #qr [type="file"] {
+      width: 71% !important;
+    }
   }
   /*[[FieldStyle]]*/
   .postForm input[type="password"] {

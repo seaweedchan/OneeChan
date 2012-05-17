@@ -134,13 +134,15 @@ input[type='file']::-webkit-file-upload-button {
 a,
 .useremail .name,
 .useremail .postertrip,
-#dump {
+#dump,
+a.quotelink {
   color: #00FFFF !important;
 }
 
 a:hover,
 .useremail .name:hover,
 .useremail .postertrip:hover,
+a.quotelink:hover,
 #dump:hover {
   color: #00FFFF !important;
 }
