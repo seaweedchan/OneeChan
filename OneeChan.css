@@ -1593,7 +1593,9 @@ div[class="navLinks"] a:first-of-type:hover::after {
 
 
 #watcher > div {
-  max-width: 246px !important;
+  max-width: 236px !important;
+  width: 236px !important;
+  overflow: hidden !important;
 }
 #watcher .move {
   font-size: 0px !important;
@@ -1620,6 +1622,7 @@ div[class="navLinks"] a:first-of-type:hover::after {
 }
 #watcher {
   z-index: 5;
+  padding-left: 0px !important;
 }
 #watcher:hover::before {
   opacity: 1;
