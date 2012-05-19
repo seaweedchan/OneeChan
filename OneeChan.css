@@ -80,7 +80,6 @@ This style is designed for the following browsers, ordered alphabetically:
     right: 2px !important;
     left: auto !important; /**/
     bottom: auto !important;
-    width: 236px !important;
     padding: 10px 5px 10px 5px !important;
   }
   .globalMessage b {
