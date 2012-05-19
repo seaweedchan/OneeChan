@@ -171,17 +171,15 @@
     right: 0px !important;/**/
     z-index: 1;
   }
-  body {
-    padding-top: 5px !important;
-  }
   form[name='delform'] {
     padding: 0px 0 2px 0 !important;
-    margin: 0 0 0px !important;
+    margin: 0px 0 0px !important;
   }
   body > .postingMode ~ form[name='delform'] {
-    padding-top: 4px !important;
+    margin: -11px 0 0px !important;
   }
   #boardNavDesktop {
+    position: absolute !important;
     top: -150px !important;
   }
 /* Bottom Stickied Header (non-stickied pages) */
@@ -224,17 +222,17 @@
     /*[[ChangeAlign]]*/
     left: auto !important;
     right: 0px !important;/**/
+    margin-bottom: 20px !important;
+    margin-top: 0px !important;
     z-index: 1;
   }
-  body {
-    padding-top: 5px !important;
-  }
+
   form[name='delform'] {
     padding: 0px 0 2px 0 !important;
-    margin: 0 0 0px !important;
+    margin: 0px 0 0px !important;
   }
   body > .postingMode ~ form[name='delform'] {
-    padding-top: 4px !important;
+    margin: -11px 0 0px !important;
   }
 /* Top Stickied Pages */
   .pages {
@@ -265,11 +263,11 @@
     padding-top: 5px !important;
   }
   form[name='delform'] {
-    padding: 2px 0 2px 0 !important;
-    margin: 0 0 0px !important;
+    padding: 0px 0 2px 0 !important;
+    margin: 11px 0 0px !important;
   }
   body > .postingMode ~ form[name='delform'] {
-    padding-top: 4px !important;
+    margin: -11px 0 0px !important;
   }
   #boardNavDesktop {
     top: -150px !important;
