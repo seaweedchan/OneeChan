@@ -168,7 +168,8 @@ This style is designed for the following browsers, ordered alphabetically:
   form[name="post"] h1,
   .board > hr:last-of-type,
   .rules,
-  div.reply[hidden] {
+  div.reply[hidden],
+  .sideArrows:not(.hide_reply_button) {
    /* Cleanup */
    display: none !important;
  }
