@@ -1899,6 +1899,14 @@ div.pagelist {
 a.forwardlink {
   border: none !important;
 }
+.deleteform {
+  border-bottom: 2px solid transparent !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  .deleteform {
+    border-bottom: 1px solid transparent !important;
+  }
+}
 }
 
 /*[[QuickReply]]*/
