@@ -1320,10 +1320,10 @@ div[id^='ref'] img {
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
   .deleteform:hover {
-    left: 3px !important;
+    left: -1px !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 3px !important;/**/
+    right: -1px !important;/**/
   }
 }
 .deleteform {
@@ -1368,6 +1368,7 @@ div.deleteform input[type="password"] {
   /*[[ChangeAlign]]*/
   left: auto !important; 
   right: 130px !important;/**/
+  z-index: 7 !important;
 }
 
 .deleteform:hover::after {

@@ -266,7 +266,7 @@
   }
   .deleteform:hover {
     top: auto !important;
-    bottom: 1px !important;
+    bottom: 0px !important;
   }
   .deleteform:hover input[type='checkbox'] {
     top: auto !important;
@@ -278,7 +278,7 @@
   }
   ..deleteform:hover input[name="pwd"] {
     top: auto !important;
-    bottom: 1px !important;
+    bottom: 0px !important;
   }
   #qr.autohide .move {
     display: inline-block !important;
@@ -1335,7 +1335,7 @@
   }
   .deleteform:hover {
     top: auto !important;
-    bottom: 1px !important;
+    bottom: 0px !important;
   }
   .deleteform:hover input[type='checkbox'] {
     top: auto !important;
@@ -1347,7 +1347,7 @@
   }
   ..deleteform:hover input[name="pwd"] {
     top: auto !important;
-    bottom: 1px !important;
+    bottom: 0px !important;
   }
   #qr.autohide .move {
     display: inline-block !important;
