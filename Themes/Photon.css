@@ -85,6 +85,11 @@ div.reply, .reply.highlight, #watcher, #boardNavDesktopFoot, body::before, #qr.a
 #boardNavDesktopFoot, #watcher, #watcher:hover, .globalMessage, .deleteform {
   background-color: rgba(238,238,238,1) !important;
 }
+#boardNavDesktopFoot { 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(238, 238, 238, 0.9)), to(rgba(255, 255, 255, 0.0))) !important;
+  background: -moz-linear-gradient(top, from(rgba(238, 238, 238, 0.9)), to(rgba(255, 255, 255, 0.0))) !important;
+}
+
 td[style='border: 1px dashed;'],
 div.reply > tr > div.reply,
 .inline div.reply,
