@@ -1759,6 +1759,20 @@ input[type="file"]::-webkit-file-upload-button:hover {
 input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
   cursor: pointer !important;
 }
+/* 4chan Sounds */
+.ys_playerContainer.reply {
+  position: fixed !important; 
+  bottom: 252px !important;
+  margin: 0 !important;
+  right: 3px !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+}
+
+.ys_playerContainer audio {
+  width: 248px !important;
+}
 /*[[FilteredBacklinks]]*/
 /*[[CaptchaOpacity]]*/
 /*[[SlideoutNav]]*/
