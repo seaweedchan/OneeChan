@@ -1,5 +1,9 @@
 OneeChan changelog
 
+v3.1
+-Updated for the new HTML
+-Expand Textarea on Focus -> Expand Inputs on Focus (with just textarea as an option)
+
 v3.0
 -New mascots: Fluttershy, Dawn, Tardis
 -New option: Margin Between Replies
