@@ -1311,19 +1311,19 @@ div[id^='ref'] img {
 
 .deleteform:hover {
   position: fixed !important;
-  left: 2px !important;
+  left: 3px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 2px !important;/**/
+  right: 3px !important;/**/
   z-index: 98 !important;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
   .deleteform:hover {
-    left: 2px !important;
+    left: 3px !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
+    right: 3px !important;/**/
   }
 }
 .deleteform {
@@ -1339,13 +1339,13 @@ div[id^='ref'] img {
   width: 246px !important;
 }
 
-.deleteform:hover .inputtext {
+.deleteform:hover input[name="pwd"] {
   position: fixed !important;
   left: 175px !important;
   /*[[ChangeAlign]]*/
   left: auto !important;
-  right: 0px !important;/**/
-  width: 150px !important;
+  right: 3px !important;/**/
+  width: 146px !important;
   height: 20px !important;
 }
 

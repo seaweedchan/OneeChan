@@ -276,7 +276,7 @@
     top: auto !important;
     bottom: 2px !important;
   }
-  .deleteform:hover .inputtext {
+  ..deleteform:hover input[name="pwd"] {
     top: auto !important;
     bottom: 1px !important;
   }
@@ -1345,7 +1345,7 @@
     top: auto !important;
     bottom: 2px !important;
   }
-  .deleteform:hover .inputtext {
+  ..deleteform:hover input[name="pwd"] {
     top: auto !important;
     bottom: 1px !important;
   }

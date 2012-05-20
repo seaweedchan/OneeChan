@@ -54,7 +54,7 @@
   .deleteform:hover {
     top: 18px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 18px !important;
   }
   .deleteform:hover input[type='checkbox'] {
@@ -116,7 +116,7 @@
   .deleteform:hover {
     top: 18px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 18px !important;
   }
   .deleteform:hover input[type='checkbox'] {
@@ -171,7 +171,7 @@
   .deleteform:hover {
     top: 103px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 103px !important;
   }
   .deleteform:hover input[type='checkbox'] {
@@ -221,7 +221,7 @@
   .deleteform:hover {
     top: 18px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 18px !important;
   }
   .deleteform:hover input[type='checkbox'] {
@@ -294,7 +294,7 @@
   .deleteform:hover {
     top: 103px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 103px !important;
   }
   .deleteform:hover input[type='checkbox'] {
@@ -356,7 +356,7 @@
   .deleteform:hover {
     top: 18px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 18px !important;
   }
   .deleteform:hover input[type='checkbox'] {
@@ -414,7 +414,7 @@
   .deleteform:hover {
     top: 18px !important;
   }
-  .deleteform:hover .inputtext {
+  .deleteform:hover input[name="pwd"] {
     top: 18px !important;
   }
   .deleteform:hover input[type='checkbox'] {
