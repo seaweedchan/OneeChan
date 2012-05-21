@@ -1921,6 +1921,9 @@ a.forwardlink {
     border-bottom: 1px solid transparent !important;
   }
 }
+.exif td {
+  color: #999 !important;
+}
 }
 
 /*[[QuickReply]]*/
