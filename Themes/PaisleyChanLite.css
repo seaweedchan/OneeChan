@@ -1,0 +1,139 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  color: #999;
+}
+
+body, html {
+  background-image: url(http://i.imgur.com/DRaZf.jpg) !important;
+  background-attachment: fixed !important;
+  background-repeat: repeat !important;
+}
+
+input, textarea {
+  color: #aaa;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #bbb !important;
+}
+
+a:hover, .quotelink:hover {
+  color: #00DFFC !important;
+}
+
+.backlink {
+  color: #D4D4D4 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #aaa !important;
+}
+
+b {
+  color: #80accE !important;
+}
+
+input, textarea, #para, .comment {
+  background-color: #1c1c1c !important;
+}
+
+.reply {
+  background: rgba(52,56,56,0.8) !important;
+}
+
+.reply, #para, .comment {
+  border: 1px solid #333 !important;
+}
+
+
+.postertrip {
+  color: #80accE !important;
+}
+
+.greentext {
+  color: #98b962 !important;
+}
+
+a.quotelink {
+  color: #999 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #393939 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #202020 !important;
+}
+
+input[type="checkbox"] {
+  border: 1px solid #3c3c3c !important;
+  background: #222 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #222 !important;
+  color: #FFF !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #333 !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #3f3f3f !important;
+}
+
+input[type="submit"] {
+  color: #AAA !important;
+  background-color: #202020 !important;
+  border-color: #303030 !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}
+
+input:not([type='checkbox']), textarea {
+  border: 1px solid transparent !important;
+}

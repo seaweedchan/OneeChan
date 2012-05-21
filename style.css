@@ -78,14 +78,13 @@ label {
   background-color: #ddd; 
   border: solid 1px #ccc; 
   padding-top: 10px; 
-  padding-right: 25px; 
   font-size: 14px;
 }
 
 
 .reply, .comment {
   text-align: left; !important; 
-  width: 680px;
+  width: 668px;
   border-radius: 3px; 
   background-color: #ddd; 
   border: solid 1px #ccc; 
@@ -114,7 +113,7 @@ textarea {
 }
 
 .greentext {
-  color: #789922 !important;
+  color: #789922;
 }
 
 .quotejs, .backlink {
@@ -165,7 +164,7 @@ select {
   }
   /* Subject input has space underneath, and its too wide in Firefox */
   input[name="subject"] {
-    margin-bottom: -1px !important;
+    margin-bottom: 0px !important;
     width: 183px !important;
   }
   /* Color scheme reply padding */

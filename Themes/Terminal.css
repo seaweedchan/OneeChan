@@ -1,0 +1,136 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: #000;
+  color: #00FE00;
+}
+
+input, textarea {
+  color: #aaa;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #00FE00 !important;
+}
+
+a:hover {
+  color: #00FE00 !important;
+}
+
+.backlink {
+  color: #00FE00 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #00FE00 !important;
+}
+
+b {
+  color: #00FE00 !important;
+}
+
+input, textarea, #para, .reply, .comment {
+  background-color: #000 !important;
+}
+
+.reply, #para, .comment {
+  border: 1px dashed #00FE00 !important;
+}
+
+.postertrip {
+  color: #00FE00 !important;
+}
+
+.greentext {
+  color: #00FE00 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #000 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #000 !important;
+}
+
+input[type="checkbox"] {
+  background-color: #444 !important;
+  border: 1px solid #444 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #111 !important;
+  border: 1px solid #111 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px dashed #00FE00 !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px dashed #00FE00 !important;
+}
+
+input[type="submit"] {
+  color: #00FE00 !important;
+  background-color: #000 !important;
+  border-color: #00FE00 !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #00FE00 !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #00FE00 !important;
+}
+
+input:placeholder,
+textarea:placeholder {
+  color: #00FE00 !important;
+}

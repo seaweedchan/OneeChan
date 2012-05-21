@@ -1,0 +1,104 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: #2D2D2D;
+  color: #f1f1f1;
+}
+
+input, textarea {
+  color: #f1f1f1;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #DA69E0 !important;
+}
+
+a:hover {
+  color: #FF00FF !important;
+}
+
+
+.backlink {
+  color: #DF99F7 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: #000 4px 4px 5px !important;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #67cce8 !important;
+}
+
+b {
+  color: #f1f1f1 !important;
+}
+
+#para, .reply, .comment {
+  background-color: #1B1B1B !important;
+  box-shadow: inset 0px 1px 2px 1px #111 !important;
+}
+
+input, textarea {
+  background-color: #1B1B1B !important;
+}
+
+.reply, #para, .comment {
+  border: 1px solid #262626 !important;
+}
+
+
+.postertrip {
+  color: #f1f1f1 !important;
+}
+
+.greentext {
+  color: #6CCC66 !important;
+}
+
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #1B1B1B !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #2C64A0 !important;
+}
+
+input[type="submit"] {
+  color: #f1f1f1 !important;
+  background-color: 1B1B1B !important;
+  border-color: #1B1B1B !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

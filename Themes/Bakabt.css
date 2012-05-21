@@ -1,0 +1,147 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded {
+  background-color: transparent;
+  color: #000;
+}
+
+.unloaded > div {
+  background-color: #FFF;
+  border: 1px solid #CCC !important;
+  -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
+  box-shadow: 0px 10px 10px 2px rgba(128,128,128,0.5) !important;
+  border-radius: 3px;
+}
+input,
+textarea {
+  color: #000;
+}
+
+.reply, #para {
+  width: 648px !important;
+  margin: auto !important;
+}
+
+#para {
+  margin-left: -15px !important;
+}
+
+body, html {
+  background: #EEE url('http://i.imgur.com/rTkxi.jpg') repeat 20px 20px;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #962594 !important;
+}
+
+a:hover {
+  color: #854C9E !important;
+}
+
+.backlink {
+  color: #925C8D !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  font-size: 90px;
+  text-shadow: 1px 1px 1px #222 !important;
+}
+
+.logo::after, h3 {
+  color: #763E99  !important;
+}
+
+b {
+  color: #854C9E !important;
+  font-weight: 600 !important;
+}
+
+#para, .reply, .comment {
+  background-color: #EDF !important;
+}
+
+.reply, #para, .comment {
+  border:1px solid #D1A2FF !important;
+}
+
+.postertrip {
+  color: #925C8D !important;
+}
+
+.greentext {
+  color: #789922 !important;
+}
+a.quotelink {
+  color: #962594 !important;
+}
+
+
+input:hover, textarea:hover {
+  background-color: #CCC !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #3f3f3f !important;
+}
+
+input[type="checkbox"] {
+  background-color: #FFFFEE !important;
+  border: 1px solid #cab7d9 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #bcc0d4 !important;
+  border: 1px solid #CCC !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #cab7d9 !important;
+}
+
+input:focus,
+textarea:focus {  
+  border: 1px solid #2C64A0 !important;
+}
+
+input[type="submit"] {
+  color: #AAA !important;
+  background-color: #EDF !important;
+  border-color: #CCC !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

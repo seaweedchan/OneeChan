@@ -1,0 +1,129 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+  background-color: #FFF;
+  color: #393735;
+}
+
+input, textarea {
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #BC312A !important;
+}
+
+a:hover {
+  color: #8E2220 !important;
+}
+
+.filesize {
+  color: #666 !important;
+}
+
+.backlink {
+  color: #111 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #772E28 !important;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #BC312A !important;
+}
+
+b {
+  color: #2C64A0 !important;
+}
+
+#para, .reply, .comment {
+  background-color: #F5F2E9 !important;
+}
+
+input, textarea {
+  background-color: #FFF !important;
+}
+
+.reply, #para, .comment {
+  border: 1px solid #DBD8D2 !important;
+}
+
+.postertrip {
+  color: #CC6563 !important;
+}
+
+.greentext {
+  color: #819941 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #CCC !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #3f3f3f !important;
+}
+
+input[type="checkbox"] {
+  background-color: #FFFFEE !important;
+  border: 1px solid #CCC !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #bcc0d4 !important;
+  border: 1px solid #CCC !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #CCC !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #2C64A0 !important;
+}
+
+input[type="submit"] {
+  color: #AAA !important;
+  background-color: #F5F2E9 !important;
+  border-color: #CCC !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

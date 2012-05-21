@@ -1,0 +1,133 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded {
+  background-color: #F6EEFF;
+  color: #000;
+}
+input,
+textarea {
+  color: #000;
+}
+body, html {
+  background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #F6EEFF;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #962594 !important;
+}
+
+a:hover {
+  color: #b22caa !important;
+}
+
+.backlink {
+  color: #4f5f8f !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  font-size: 90px;
+  text-shadow: 1px 1px 1px #222 !important;
+}
+
+.logo::after, h3 {
+  color: #763E99  !important;
+}
+
+b {
+  color: #591177 !important;
+  font-weight: 600 !important;
+}
+
+#para, .reply, .comment {
+  background-color: #EDF !important;
+}
+
+.reply, #para, .comment {
+  border:1px solid #cab7d9 !important;
+}
+
+.postertrip {
+  color: #b22caa !important;
+}
+
+.greentext {
+  color: #789922 !important;
+}
+a.quotelink {
+  color: #962594 !important;
+}
+.reply {
+  border-left: none !important;
+  border-top: none !important;
+  border-radius: 0px !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #CCC !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #3f3f3f !important;
+}
+
+input[type="checkbox"] {
+  background-color: #FFFFEE !important;
+  border: 1px solid #cab7d9 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #bcc0d4 !important;
+  border: 1px solid #CCC !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #cab7d9 !important;
+}
+
+input:focus,
+textarea:focus {  
+  border: 1px solid #2C64A0 !important;
+}
+
+input[type="submit"] {
+  color: #AAA !important;
+  background-color: #EDF !important;
+  border-color: #CCC !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}

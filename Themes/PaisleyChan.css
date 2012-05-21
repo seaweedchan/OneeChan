@@ -1,0 +1,190 @@
+body, h1, h2, h3, h4, header, html, div, br, .unloaded, .logo::after {
+
+  color: #999;
+}
+.unloaded > div {
+    background-color: rgba(52, 56, 56, 0.75);
+    border-radius: 3px;
+}
+
+.reply {
+  width: 668px !important;
+  color: #888;
+}
+
+blockquote {
+  color: #bbb;
+}
+
+body, html {
+  background-image: url(http://i.imgur.com/DRaZf.jpg) !important;
+  background-attachment: fixed !important;
+  background-repeat: repeat !important;
+}
+
+input, textarea {
+  color: #aaa;
+}
+
+::-webkit-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::-moz-selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+::selection {
+  background: #aaa !important;
+  color: #101010 !important;
+}
+
+a {
+  color: #bbb !important;
+}
+
+a:hover, .quotelink:hover {
+  color: #00DFFC !important;
+}
+
+.backlink {
+  color: #D4D4D4 !important;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.logo::after {
+  position: fixed;
+  top: -8px;
+  content: "OneeChan";
+  position: relative;
+  right: 308px;
+  visibility: visible;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 90px;
+}
+
+.logo::after, h3 {
+  color: #aaa !important;
+}
+
+b,
+.postertrip {
+  color: #80accE !important;
+  text-shadow: 0px 0px 6px rgba(20,20,20,0.9);
+  font-weight: bold !important;
+  background: #343838 !important;
+  border: 1px solid #343838 !important;
+  border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  padding: 4px 6px !important;
+  padding-top: 2px !important;
+}
+
+input, textarea, #para, .comment {
+  background-color: #1c1c1c !important;
+}
+
+.reply {
+  background: transparent !important;
+  border-color: transparent;
+}
+
+blockquote {
+  background: #343838 !important;
+  margin-bottom: 10px !important;
+  padding: 8px !important;
+  box-shadow:0px 0px 20px rgba(25,25,25,0.6) !important;
+  border: 1px solid #343838 !important;
+  border-bottom: 2px solid #444848 !important;
+  border-radius: 0px 6px 6px 6px;
+  -moz-border-radius: 0px 6px 6px 6px;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  margin-left: 23px !important;
+
+}
+
+.filesize {
+  float: right !important;
+  clear: both;
+  padding: 4px !important;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+  margin-right: 0px !important;
+}
+
+.reply img {
+  position: relative;
+  bottom: 13px;
+  right: 5px;
+  margin-bottom: 0px !important;
+  margin-right: 10px !important;
+}
+
+.reply, #para, .comment {
+  border: 1px solid transparent !important;
+}
+
+.greentext {
+  color: #98b962 !important;
+}
+
+a.quotelink {
+  color: #999 !important;
+}
+
+input:hover, textarea:hover {
+  background-color: #393939 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #202020 !important;
+}
+
+input[type="checkbox"] {
+  border: 1px solid #3c3c3c !important;
+  background: #222 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #222 !important;
+  color: #FFF !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input:checked {
+    content: url('http://i.imgur.com/CAewG.png') !important;
+  }
+}
+
+pre {
+  color: #000 !important;
+}
+
+input,
+textarea {
+  border: 1px solid #333 !important;
+}
+
+input:focus,
+textarea:focus {	
+  border: 1px solid #3f3f3f !important;
+}
+
+input[type="submit"] {
+  color: #AAA !important;
+  background-color: #202020 !important;
+  border-color: #303030 !important;
+  text-shadow: none !important;
+  font-weight: 100 !important;
+}
+
+input:not([type='checkbox']), textarea {
+  border: 1px solid transparent !important;
+}
