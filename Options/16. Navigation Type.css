@@ -68,8 +68,7 @@
     top: 0px !important;
   }
 /* Normal (4chan default) */
-  #boardNavDesktop,
-  #boardNavMobile {
+  #boardNavDesktop {
     position: absolute !important;
   }
 
@@ -83,8 +82,7 @@
   body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
   }
-  #boardNavDesktop,
-  #boardNavMobile {
+  #boardNavDesktop {
     top: 0px !important;
   }
   .pages {
