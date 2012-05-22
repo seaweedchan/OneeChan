@@ -682,7 +682,7 @@
   }
   .postForm:hover {
     right: auto !important;
-    left: -12px !important;
+    left: 1px !important;
     /*[[ChangeAlign]]*/
     right: -12px !important;
     left: auto !important;/**/
@@ -729,14 +729,11 @@
     -moz-transition: opacity .3s linear;
     -o-transition: opacity .3s linear;
   }
-  .postForm tr:nth-child(4) {
-    height: 79px !important;
-  }
   [id^="q"] .error, [id^="q"] .warning {
     bottom: 250px !important;
   }
   .postForm textarea {
-    height: 72px !important;
+    height: 68px !important;
   }
   .postForm input[type="password"] {
     text-align: right !important;
@@ -765,7 +762,7 @@
   #qr {
     overflow: visible !important;
     position: fixed;
-    left: -265px !important;
+    left: -252px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
@@ -782,7 +779,7 @@
   }
 
   #qr:hover {
-    left: -11px !important;
+    left: 2px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
@@ -887,7 +884,7 @@
     margin: 0 !important;
     position: absolute !important;
     bottom: 2px !important;
-    right: 0px !important;
+    right: 10px !important;
     font-size: 14px !important;
     vertical-align: center !important;
     outline: none !important;
@@ -1057,6 +1054,22 @@
     }
   }
   /*[[FieldStyle]]*/
+  .postForm #recaptcha_reload_btn {
+    position: absolute !important;
+    bottom: 75px !important;
+    left: 230px !important;
+    /*[[ChangeAlign]]*/
+    left: auto !important;
+    right: 2px !important;/**/
+  }
+  }
+  .postForm textarea {
+    margin-top: 1px !important;
+  }
+  #postFile {
+    margin-top: 2px !important;
+    margin-left: 0px !important;
+  }
   }
 /* Fade: */
   @-moz-document domain('4chan.org') {
