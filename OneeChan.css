@@ -164,7 +164,7 @@ This style is designed for the following browsers, ordered alphabetically:
   .prev,
   .next,
   body > .postingMode ~ form[name='delform'] hr,
-  #settingsBox,
+  #settingsBox[style*="display: none;"],
   form[name="post"] h1,
   .board > hr:last-of-type,
   .rules,
@@ -228,6 +228,7 @@ input,
 #stats,
 #updater,
 #navtopr a[href="javascript:;"],
+body:not([class]) #navtopr a[href="javascript:void(0);"],
 label,
 #imageType,
 #boardNavDesktop,
@@ -1106,7 +1107,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   color: transparent !important;
   z-index: 6 !important;
 }
-#navtopr a[href="javascript:;"]::after {
+#navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAgNJREFUOE9tk8tLW1EQh881iUZNRYNRcBPIaxGTm9y8X/UBrtwoVpCoUFBBIoigdFFQUEFBUXy0urO4cOFj2WVBVFDRav2X/EZvqrQJfJy5vzkzZ2bOiVLmL5lM2jKZTBsEEolEs2EY1rJP1lQqZcXXAp54PN7o8/mq/vpxNuZyuWI+nz+AeWw9FAq9JNB13ZLNZoNoM/j2YTgajX5QXq/Xlk6nmwiuJasXxwJcwSLfLk6xsPoJnIVv6EfwFb1FymlGHERIhsNhB/Yn7Es4xjYggD3NugU72BtU0ReLxeoVvbbKKfAdccIs64H1F5uHYBh73Tx1DbsoMR6PR1PUbkcYgJ9wA4/wZK6nrCUpE5alKgKdjEF7GRb9aJzogiE2bMMZ3JkJpIITgkr4e7mFt8DyqGleI2MNG11sjBUKhV3sWzPBb9ZTgrvZZ39/ff/ZkUhEhiZtyJWUEzyiHUIXbdZWTICzAUZgiZN6zOmWW7gn2Q/0Tsp/rYBSFIJdrgXnF7Nvg2nKiwqgy4Sv4Q9cwB7aR+KqZWBVfAQRN2U40I9mk8Rut1seSDvaKpyDvLwSjPM+nIrX5UD8DIcwidj2vieephVdkq/AHEwRPEbvTsVLqeOjA6RHF+Va/h0IupXWQgTKdY7yrTNYm/L7/RpZavgXVSO+Xn6FH5stDMpBZQ30K/NQzzXRtPzuPrd1AAAAAElFTkSuQmCC');
   position: fixed !important;
   left: 5px !important;
@@ -1117,7 +1118,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   z-index: -1 !important;
   opacity: 0.3;
 }
-#navtopr a[href="javascript:;"]:hover::after {
+#navtopr a[href="javascript:;"]:hover::after, body:not([class]) #navtopr a[href="javascript:void(0);"]:hover::after {
   opacity: 1;
 }
 /* Strip 4chan+ of shadows and rounded edges */
