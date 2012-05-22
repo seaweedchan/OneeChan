@@ -292,6 +292,9 @@ a.yuimenuitemlabel:hover,
   top: -1000px !important;
   pointer-events: all;
 }
+.extButton img {
+  margin-top: -4px !important;
+}
 #boardNavMobile select {
   font-size: 11px !important;
   pointer-events: all;
