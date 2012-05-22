@@ -1,7 +1,8 @@
 /*[[StickyNavigation]]*/
 
 /* Stickied Header / Pages */
-  #boardNavDesktop,
+   #boardNavDesktop,
+  #boardNavMobile,
   .pages {
     position: fixed !important;
   }
@@ -15,7 +16,8 @@
     padding-top: 14px
   }
 
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: 0 !important;
   }
 
@@ -61,11 +63,13 @@
   body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
   }
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: 0px !important;
   }
 /* Normal (4chan default) */
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     position: absolute !important;
   }
 
@@ -79,7 +83,8 @@
   body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
   }
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: 0px !important;
   }
   .pages {
@@ -93,6 +98,7 @@
   }
 /* Inverted Stickied Header / Pages */
   #boardNavDesktop,
+  #boardNavMobile,
   .pages {
     position: fixed !important;
   }
@@ -106,7 +112,8 @@
     padding-top: 0;
   }
 
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: auto !important;
     bottom: 0px !important;
   }
@@ -178,12 +185,14 @@
   body > .postingMode ~ form[name='delform'] {
     margin: -11px 0 0px !important;
   }
-  #boardNavDesktop {
+   #boardNavDesktop,
+  #boardNavMobile {
     position: absolute !important;
     top: -150px !important;
   }
 /* Bottom Stickied Header (non-stickied pages) */
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     position: fixed !important;
   }
 
@@ -195,7 +204,8 @@
     padding-top: 0;
   }
 
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: auto !important;
     bottom: 0px !important;
   }
@@ -241,7 +251,8 @@
     top: 0 !important;
   }
 
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     display: none !important;
   }
 
@@ -269,11 +280,13 @@
   body > .postingMode ~ form[name='delform'] {
     margin: -11px 0 0px !important;
   }
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: -150px !important;
   }
 /* Top Stickied Header / Non-Stickied Pages */
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     position: fixed !important;
   }
 
@@ -285,7 +298,8 @@
     padding-top: 0;
   }
 
-  #boardNavDesktop {
+  #boardNavDesktop,
+  #boardNavMobile {
     top: 0px !important;
   }
 

@@ -169,7 +169,8 @@ This style is designed for the following browsers, ordered alphabetically:
   .board > hr:last-of-type,
   .rules,
   div.reply[hidden],
-  .sideArrows:not(.hide_reply_button) {
+  .sideArrows:not(.hide_reply_button),
+  .qrHeader {
    /* Cleanup */
    display: none !important;
  }
@@ -228,7 +229,7 @@ input,
 #stats,
 #updater,
 #navtopr a[href="javascript:;"],
-body:not([class]) #navtopr a[href="javascript:void(0);"],
+body:not([class]) a[href="javascript:void(0);"],
 label,
 #imageType,
 #boardNavDesktop,
@@ -263,6 +264,51 @@ span[id^='4chan_ext_right'],
 a.yuimenuitemlabel:hover,
 .sideArrows a:hover {
   background-color: transparent !important;
+}
+#settingsBox {
+  z-index: 9;
+}
+#settingsBox {
+  position: fixed !important;
+  left: 5px !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 5px !important;/**/
+  width: 234px !important;
+}
+#boardNavMobile {
+  z-index: 10;
+  background: none !important;
+  border: none !important;
+  font-size: 12px !important;
+  padding: 0px !important;
+  padding-top: 1px !important;
+  padding-left: 2px !important;
+  width: 320px !important;
+  pointer-events: none;
+}
+.pageJump {
+  position: fixed !important;
+  top: -1000px !important;
+  pointer-events: all;
+}
+#boardNavMobile select {
+  font-size: 11px !important;
+  pointer-events: all;
+}
+.qrMessage {
+  position: fixed !important;
+  left: 3px !important;
+  /*[[ChangeAlign]]*/
+  left: auto !important;
+  right: 3px !important;/**/
+  bottom: 250px !important;
+  z-index: 6;
+  font-size: 11px !important;
+  font-weight: 100 !important;
+  background: none !important;
+  border: none !important;
+  width: 248px !important;
 }
 .boardBanner {
   position: fixed !important;
@@ -1107,7 +1153,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   color: transparent !important;
   z-index: 6 !important;
 }
-#navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+#navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAgNJREFUOE9tk8tLW1EQh881iUZNRYNRcBPIaxGTm9y8X/UBrtwoVpCoUFBBIoigdFFQUEFBUXy0urO4cOFj2WVBVFDRav2X/EZvqrQJfJy5vzkzZ2bOiVLmL5lM2jKZTBsEEolEs2EY1rJP1lQqZcXXAp54PN7o8/mq/vpxNuZyuWI+nz+AeWw9FAq9JNB13ZLNZoNoM/j2YTgajX5QXq/Xlk6nmwiuJasXxwJcwSLfLk6xsPoJnIVv6EfwFb1FymlGHERIhsNhB/Yn7Es4xjYggD3NugU72BtU0ReLxeoVvbbKKfAdccIs64H1F5uHYBh73Tx1DbsoMR6PR1PUbkcYgJ9wA4/wZK6nrCUpE5alKgKdjEF7GRb9aJzogiE2bMMZ3JkJpIITgkr4e7mFt8DyqGleI2MNG11sjBUKhV3sWzPBb9ZTgrvZZ39/ff/ZkUhEhiZtyJWUEzyiHUIXbdZWTICzAUZgiZN6zOmWW7gn2Q/0Tsp/rYBSFIJdrgXnF7Nvg2nKiwqgy4Sv4Q9cwB7aR+KqZWBVfAQRN2U40I9mk8Rut1seSDvaKpyDvLwSjPM+nIrX5UD8DIcwidj2vieephVdkq/AHEwRPEbvTsVLqeOjA6RHF+Va/h0IupXWQgTKdY7yrTNYm/L7/RpZavgXVSO+Xn6FH5stDMpBZQ30K/NQzzXRtPzuPrd1AAAAAElFTkSuQmCC');
   position: fixed !important;
   left: 5px !important;
@@ -1118,7 +1164,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   z-index: -1 !important;
   opacity: 0.3;
 }
-#navtopr a[href="javascript:;"]:hover::after, body:not([class]) #navtopr a[href="javascript:void(0);"]:hover::after {
+#navtopr a[href="javascript:;"]:hover::after, body:not([class]) a[href="javascript:void(0);"]:hover::after {
   opacity: 1;
 }
 /* Strip 4chan+ of shadows and rounded edges */

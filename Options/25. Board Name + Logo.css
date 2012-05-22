@@ -33,8 +33,11 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
+  }
+  #settingsBox {
+    top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
@@ -95,8 +98,11 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
+  }
+  #settingsBox {
+    top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
@@ -150,8 +156,11 @@
   #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 104px !important;
+  }
+  #settingsBox {
+    top: 110px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 102px !important;
@@ -200,8 +209,11 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
+  }
+   #settingsBox {
+    top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
@@ -273,8 +285,11 @@
   #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 104px !important;
+  }
+  #settingsBox {
+    top: 110px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 102px !important;
@@ -335,8 +350,11 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
+  }
+  #settingsBox {
+    top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
@@ -393,8 +411,11 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) #navtopr a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
+  }
+  #settingsBox {
+    top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
     top: 17px !important;
