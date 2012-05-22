@@ -682,9 +682,9 @@
   }
   .postForm:hover {
     right: auto !important;
-    left: 2px !important;
+    left: -12px !important;
     /*[[ChangeAlign]]*/
-    right: 2px !important;
+    right: -12px !important;
     left: auto !important;/**/
     -webkit-transition: right .3s linear, left .3s linear;
     -moz-transition: right .3s linear, left .3s linear;
@@ -782,11 +782,11 @@
   }
 
   #qr:hover {
-    left: 2px !important;
+    left: -12px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: 2px !important;/**/
+    right: -12px !important;/**/
     -webkit-transition: right .3s linear, left .3s linear;
     -moz-transition: right .3s linear, left .3s linear;
     -o-transition: right .3s linear, left .3s linear;
