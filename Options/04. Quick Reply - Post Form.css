@@ -672,9 +672,9 @@
   @-moz-document domain('4chan.org') {
   .postForm {
     right: auto !important;
-    left: -248px !important;
+    left: -263px !important;
     /*[[ChangeAlign]]*/
-    right: -248px !important;
+    right: -263px !important;
     left: auto !important;/**/
     -webkit-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
     -moz-transition: right .3s ease-in-out 3s, left .3s ease-in-out 3s;
@@ -765,11 +765,11 @@
   #qr {
     overflow: visible !important;
     position: fixed;
-    left: -250px !important;
+    left: -265px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: -250px !important;/**/
+    right: -265px !important;/**/
     top: auto !important;
     bottom: 3px !important;
     width: 248px !important;
@@ -782,11 +782,11 @@
   }
 
   #qr:hover {
-    left: -12px !important;
+    left: -11px !important;
     right: auto !important;
     /*[[ChangeAlign]]*/
     left: auto !important;
-    right: -12px !important;/**/
+    right: -11px !important;/**/
     -webkit-transition: right .3s linear, left .3s linear;
     -moz-transition: right .3s linear, left .3s linear;
     -o-transition: right .3s linear, left .3s linear;
