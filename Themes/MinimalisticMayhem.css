@@ -99,7 +99,6 @@ a.quotelink:hover,
 .useremail .name:hover,
 div.post div.postInfo span.postNum a:hover {
   color: #C617E6 !important;
-  font-weight: 100 !important;
 }
 a.backlink {
   color: #897399 !important;
@@ -107,7 +106,6 @@ a.backlink {
 
 a.backlink:hover {
   color: #C617E6 !important;
-  font-weight: 100 !important;
 }
 .name {
   color: #A34443 !important;
