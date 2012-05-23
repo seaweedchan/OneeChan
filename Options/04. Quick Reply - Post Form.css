@@ -1604,5 +1604,8 @@
     text-align: right !important;
     border: none !important;
   }
+  #qr {
+    z-index: 999 !important;
+  }
   }
 /* End */
