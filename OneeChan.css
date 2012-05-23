@@ -1829,7 +1829,7 @@ input, textarea {
  text-rendering: geometricPrecision !important;
 }
 #boardNavDesktop .current { 
-  font-weight: 600 !important; 
+  font-weight: bold !important; 
   font-size: 13px !important; 
 }
 
