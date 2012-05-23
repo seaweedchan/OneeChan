@@ -2,6 +2,11 @@
 
 /* Fixed: */
   @-moz-document domain('4chan.org') {
+  #qr input.inputtext,
+  #qr input[type='file'][name='upfile'] > input[type='text'],
+  #qr textarea {
+    width: 300px !important;
+  }
   .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;
@@ -350,6 +355,11 @@
   }
 /* Slideout: */
   @-moz-document domain('4chan.org') {
+  #qr input.inputtext,
+  #qr input[type='file'][name='upfile'] > input[type='text'],
+  #qr textarea {
+    width: 300px !important;
+  }
   .postForm {
     right: auto !important;
     left: -233px !important;
@@ -670,6 +680,11 @@
   }
 /* Tabbed Slideout: */
   @-moz-document domain('4chan.org') {
+  #qr input.inputtext,
+  #qr input[type='file'][name='upfile'] > input[type='text'],
+  #qr textarea {
+    width: 300px !important;
+  }
   .postForm {
     right: auto !important;
     left: -263px !important;
@@ -1073,6 +1088,11 @@
   }
 /* Fade: */
   @-moz-document domain('4chan.org') {
+  #qr input.inputtext,
+  #qr input[type='file'][name='upfile'] > input[type='text'],
+  #qr textarea {
+    width: 300px !important;
+  }
   .postForm {
     right: auto !important;
     left: 1px !important;
@@ -1465,7 +1485,6 @@
   /* Width and height of all #qr elements (excluding some captcha elements) */
   #qr textarea {
     min-height: 0 !important;
-    resize: none !important;
   }
 
   #qr .close {
@@ -1481,15 +1500,9 @@
   /* Errors */
   [id^='q'] .error, [id^='q'] .warning {
     visibility: visible !important;
-    position: fixed !important;
     bottom: 250px !important;
     height: 19px !important;
     width: 248px !important;
-    right: auto !important;
-    left: 2px !important;
-    /*[[ChangeAlign]]*/
-    right: 2px !important;
-    left: auto !important;/**/
     top: auto !important;
     font-size: 10px !important;
     z-index: 1;
@@ -1505,9 +1518,6 @@
     width: 20px !important;
     height: 17px !important;
     margin: 0 !important;
-    position: absolute !important;
-    bottom: 2px !important;
-    right: 0px !important;
     font-size: 14px !important;
     vertical-align: center !important;
     outline: none !important;
@@ -1519,11 +1529,8 @@
     display: none !important;
   }
   #qr select {
-    position: absolute !important;
-    bottom: -1px !important;
-    right: 65px !important;
-    background: none !important;
-    border: none !important;
+    position: relative !important;
+    right: 25px !important;
     font-size: 12px !important;
     width: 128px !important;
   }
@@ -1551,12 +1558,6 @@
     margin-top: 1px !important;
   }
   [id^='q'] .warning {
-    position: absolute !important;
-    bottom: -2px !important;
-    left: 0px !important;
-    /*[[ChangeAlign]]*/
-    left: auto !important;
-    right: 0px !important;/**/
     height: 20px !important;
   }
   .gecko #qr input[type="submit"] {
@@ -1599,7 +1600,6 @@
       width: 71% !important;
     }
   }
-  /*[[FieldStyle]]*/
   .postForm input[type="password"] {
     text-align: right !important;
     border: none !important;

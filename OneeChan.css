@@ -884,12 +884,6 @@ body > form #imgControls {
   padding: 2px;
 }
 
-#qr input.inputtext,
-#qr input[type='file'][name='upfile'] > input[type='text'],
-#qr textarea {
-  width: 300px !important;
-}
-
 #qr input[type=file][name='upfile'] {
   width: 300px !important;
 }
