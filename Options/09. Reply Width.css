@@ -118,6 +118,11 @@
   #options.reply {
     display: inline-block !important;
   }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    div.op {
+      display: table !important;
+    }
+  }
 /* Normal (4chan default) */
    #updater {
     top: -3px !important;
@@ -182,4 +187,14 @@
   }
   #options.reply {
     display: inline-block !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {  
+    input[value="delete"] {
+      position: relative !important;
+      top: 4px !important;
+    }
+    body > .postingMode ~ form[name='delform'] input[value="delete"] {
+      position: relative !important;
+      top: -1px !important;
+    }
   }

@@ -63,6 +63,16 @@
   body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
   }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    form[name='delform'] {
+      padding: 0px 0 2px 0 !important;
+      margin: -2px 0 0px !important;
+    }
+    body > .postingMode ~ form[name='delform'] {
+      padding-top: 0px !important;
+      margin: -12px 0 0px !important;
+    }
+  }
   #boardNavDesktop,
   #boardNavMobile {
     top: 0px !important;
@@ -81,6 +91,16 @@
   }
   body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    form[name='delform'] {
+      padding: 0px 0 2px 0 !important;
+      margin: -2px 0 0px !important;
+    }
+    body > .postingMode ~ form[name='delform'] {
+      padding-top: 0px !important;
+      margin: -12px 0 0px !important;
+    }
   }
   #boardNavDesktop {
     top: 0px !important;
@@ -156,10 +176,17 @@
     margin: 0 0 0px !important;
   }
   body > .postingMode ~ form[name='delform'] {
-    padding-top: 2px !important;
-  }
-  body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    form[name='delform'] {
+      padding: 0px 0 2px 0 !important;
+      margin: -2px 0 0px !important;
+    }
+    body > .postingMode ~ form[name='delform'] {
+      padding-top: 0px !important;
+      margin: -12px 0 0px !important;
+    }
   }
 /* Removed regular header */
   .pages {
@@ -334,4 +361,14 @@
   }
   body > .postingMode ~ form[name='delform'] {
     padding-top: 4px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    form[name='delform'] {
+      padding: 0px 0 2px 0 !important;
+      margin: -2px 0 0px !important;
+    }
+    body > .postingMode ~ form[name='delform'] {
+      padding-top: 0px !important;
+      margin: -12px 0 0px !important;
+    }
   }

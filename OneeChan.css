@@ -1041,17 +1041,6 @@ input[type=checkbox],
   bottom: 2px !important;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {  
-  input[value="delete"] {
-    position: relative !important;
-    top: 4px !important;
-  }
-  body > .postingMode ~ form[name='delform'] input[value="delete"] {
-    position: relative !important;
-    top: -1px !important;
-  }
-}
-
 /* Posts */
 body > .postingMode ~ form[name='delform'] br[clear='left'],
 form[name='delform'] center {
