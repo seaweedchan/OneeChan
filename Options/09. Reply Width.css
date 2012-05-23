@@ -119,7 +119,7 @@
     display: inline-block !important;
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    div.op {
+    body .postingMode ~ form div.op {
       display: table !important;
     }
   }
