@@ -1483,9 +1483,6 @@
     width: 248px !important;
   }
   /* Width and height of all #qr elements (excluding some captcha elements) */
-  #qr textarea {
-    min-height: 0 !important;
-  }
 
   #qr .close {
     position: absolute !important;
