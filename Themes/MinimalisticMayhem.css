@@ -85,14 +85,19 @@ input[type='file']::-webkit-file-upload-button {
 a,
 #dump,
 a.quotelink,
-.sideArrows a {
+.sideArrows a,
+.useremail .postertrip,
+a.replylink {
   color: #897399 !important;
 }
 
 a:hover,
 #dump:hover,
 a.quotelink:hover,
-.sideArrows a:hover {
+.sideArrows a:hover,
+.useremail .postertrip:hover,
+.useremail .name:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #C617E6 !important;
   font-weight: 100 !important;
 }

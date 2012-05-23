@@ -131,7 +131,10 @@ background-color: rgba(229,220,240,0.9) !important;
   }
  a,
 #dump,
-.sideArrows a {
+.sideArrows a,
+.useremail .name,
+.useremail .postertrip,
+a.replylink {
   color: #962594 !important;
 }
 .postNum a, a.backlink {
@@ -331,7 +334,8 @@ input[type='file']::-webkit-file-upload-button {
 }
 a:hover,
 #dump:hover,
-.sideArrows a:hover {
+.sideArrows a:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #b22caa !important;
 }
 .name {

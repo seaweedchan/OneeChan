@@ -98,13 +98,17 @@ input[type='file']::-webkit-file-upload-button {
 a,
 #dump,
 .sideArrows a,
-.report_button {
+.report_button,
+.useremail .name,
+.useremail .postertrip,
+a.replylink {
   color: #bbb !important;
 }
 
 a:hover,
 #dump:hover, a.quotelink:hover,
-.report_button:hover {
+.report_button:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #00DFFC !important;
 }
 

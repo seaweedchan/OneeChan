@@ -122,7 +122,12 @@
     body .postingMode ~ form div.op {
       display: table !important;
     }
+    .opContainer input[value="delete"] {
+      position: relative !important;
+      bottom: 1px !important;
+    }
   }
+
 /* Normal (4chan default) */
    #updater {
     top: -3px !important;

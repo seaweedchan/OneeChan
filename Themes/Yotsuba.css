@@ -112,7 +112,10 @@
 
   a,
 #dump,
-.sideArrows a {
+.sideArrows a,
+.useremail .name,
+.useremail .postertrip,
+a.replylink {
     color: #800000 !important;
   }
   hr {
@@ -402,7 +405,10 @@
   }
  a,
 #dump,
-.sideArrows a {
+.sideArrows a,
+.useremail .name,
+.useremail .postertrip,
+a.repylink {
   color: #57577b !important;
 }
 .postNum a, a.backlink {
@@ -608,7 +614,8 @@ input[type='file']::-webkit-file-upload-button {
 }
 a:hover,
 #dump:hover,
-.sideArrows a:hover {
+.sideArrows a:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #d00 !important;
 }
 .name {

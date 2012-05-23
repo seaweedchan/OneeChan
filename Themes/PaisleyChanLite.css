@@ -99,14 +99,18 @@ input[type='file']::-webkit-file-upload-button {
 a,
 #dump,
 .sideArrows,
-.report_button a {
+.report_button a,
+.useremail .name,
+.useremail .postertrip,
+a.replylink {
   color: #bbb !important;
 }
 
 a:hover,
 #dump:hover, a.quotelink:hover,
 .report_button:hover,
-.sideArrows a:hover {
+.sideArrows a:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #00DFFC !important;
 }
 

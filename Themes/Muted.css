@@ -111,7 +111,10 @@ div.reply > tr > div.reply,
 
 a,
 #dump,
-.sideArrows a {
+.sideArrows a,
+.useremail .name,
+.useremail .postertrip,
+a.replylink {
   color: #BC312A !important;
 }
 #boardNavDesktop a, #boardNavDesktopFoot a {
@@ -305,7 +308,8 @@ a:hover,
 #boardNavDesktop a:hover,
 .pages input:hover,
 #dump:hover,
-.sideArrows a:hover {
+.sideArrows a:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #8E2220 !important;
 }
 .name {

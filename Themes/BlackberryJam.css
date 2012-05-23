@@ -100,7 +100,8 @@ a,
 .useremail .name,
 .useremail .postertrip,
 a.quotelink,
-#dump {
+#dump,
+a.replylink {
   color: #DA69E0 !important;
 }
 
@@ -108,7 +109,8 @@ a:hover,
 .useremail .name:hover,
 .useremail .postertrip:hover,
 a.quotelink:hover,
-#dump:hover {
+#dump:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #FF00FF !important;
 }
 

@@ -85,12 +85,16 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-#dump {
+#dump,
+.useremail .name,
+.useremail .postertrip,
+a.replylink {
   color: #efdcbc !important;
 }
 
 a:hover,
-#dump:hover {
+#dump:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #f8f893 !important;
 }
 

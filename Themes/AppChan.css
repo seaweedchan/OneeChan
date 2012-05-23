@@ -87,7 +87,8 @@ a,
 .useremail .postertrip,
 #dump,
 a.quotelink,
-.sideArrows a {
+.sideArrows a,
+a.replylink {
   color: #68a !important;
 }
 
@@ -96,7 +97,8 @@ a:hover,
 .useremail .postertrip:hover,
 #dump:hover,
 a.quotelink:hover,
-.sideArrows a:hover {
+.sideArrows a:hover,
+div.post div.postInfo span.postNum a:hover {
   color: #4E6E8E !important;
 }
 
