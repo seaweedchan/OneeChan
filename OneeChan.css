@@ -1959,6 +1959,13 @@ a.forwardlink {
 .exif td {
   color: #999 !important;
 }
+.callToAction.callToAction-big {
+  font-size: 18px !important;
+  color: white !important;
+}
+body > table[cellpadding="30"] h1, body > table[cellpadding="30"] h3 {
+  position: static !important;
+}
 }
 
 /*[[QuickReply]]*/
