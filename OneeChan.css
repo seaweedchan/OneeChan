@@ -170,7 +170,8 @@ This style is designed for the following browsers, ordered alphabetically:
   .rules,
   div.reply[hidden],
   .sideArrows:not(.hide_reply_button),
-  .qrHeader {
+  .qrHeader,
+  .replyContainer > .hide_reply_button.stub ~ .reply {
    /* Cleanup */
    display: none !important;
  }
