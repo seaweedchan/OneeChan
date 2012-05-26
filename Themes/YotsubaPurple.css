@@ -131,10 +131,11 @@ background-color: rgba(229,220,240,0.9) !important;
   }
  a,
 #dump,
+div.post > blockquote a[href^="//"],
 .sideArrows a,
-div.postContainer > .useremail .name,
-div.postContainer > .useremail .postertrip,
-div.postContainer > a.replylink {
+.nameBlock > .useremail > .name,
+.nameBlock > .useremail > .postertrip,
+ div.postContainer span.postNum > .replylink {
   color: #962594 !important;
 }
 .postNum a, a.backlink {
@@ -334,8 +335,10 @@ input[type='file']::-webkit-file-upload-button {
 }
 a:hover,
 #dump:hover,
+div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
-div.post div.postInfo span.postNum a:hover {
+div.post div.postInfo span.postNum a:hover,
+ div.postContainer span.postNum > .replylink:hover {
   color: #b22caa !important;
 }
 .name {
@@ -351,8 +354,8 @@ div.post div.postInfo span.postNum a:hover {
 .trip {
   color: #b22caa !important;
 }
-div.postContainer > .useremail .name:hover,
-div.postContainer > .useremail .postertrip:hover {
+.nameBlock > .useremail > .name:hover,
+.nameBlock > .useremail > .postertrip:hover {
   color: #117743 !important;
 }
 a.forwardlink {

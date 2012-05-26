@@ -85,20 +85,23 @@ input[type='file']::-webkit-file-upload-button {
 
 a,
 #dump,
+div.post > blockquote a[href^="//"],
 span.quote > a.quotelink,
 .sideArrows a,
-div.postContainer > .useremail .postertrip,
-div.postContainer > a.replylink {
+.nameBlock > .useremail > .postertrip,
+ div.postContainer span.postNum > .replylink {
   color: #897399 !important;
 }
 
 a:hover,
 #dump:hover,
+div.post > blockquote a[href^="//"]:hover,
 span.quote > a.quotelink:hover,
 .sideArrows a:hover,
-div.postContainer > .useremail .postertrip:hover,
-div.postContainer > .useremail .name:hover,
-div.postContainer > div.post div.postInfo span.postNum a:hover {
+.nameBlock > .useremail > .postertrip:hover,
+.nameBlock > .useremail > .name:hover,
+div.postContainer > div.post div.postInfo span.postNum a:hover,
+ div.postContainer span.postNum > .replylink:hover {
   color: #C617E6 !important;
 }
 a.backlink {
@@ -118,7 +121,7 @@ a.backlink:hover {
   color: #96562C!important;
 }
 
-.useremail .name {
+.nameBlock > .useremail > .name {
 	color: #AE2B29 !important;
 }
 

@@ -98,20 +98,23 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-div.postContainer > .useremail .name,
-div.postContainer > .useremail .postertrip,
+.nameBlock > .useremail > .name,
+.nameBlock > .useremail > .postertrip,
 span.quote > a.quotelink,
 #dump,
-div.postContainer > a.replylink {
+div.post > blockquote a[href^="//"],
+ div.postContainer span.postNum > .replylink {
   color: #DA69E0 !important;
 }
 
 a:hover,
-div.postContainer > .useremail .name:hover,
-div.postContainer > .useremail .postertrip:hover,
+.nameBlock > .useremail > .name:hover,
+.nameBlock > .useremail > .postertrip:hover,
 span.quote > a.quotelink:hover,
 #dump:hover,
-div.postContainer > div.post div.postInfo span.postNum a:hover {
+div.post > blockquote a[href^="//"]:hover,
+div.postContainer > div.post div.postInfo span.postNum a:hover,
+ div.postContainer span.postNum > .replylink:hover {
   color: #FF00FF !important;
 }
 

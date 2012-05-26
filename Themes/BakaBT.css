@@ -128,10 +128,11 @@ div.reply > tr > div.reply,
 
 a,
 #dump,
+div.post > blockquote a[href^="//"],
 .sideArrows a,
-div.postContainer > .useremail .name,
-div.postContainer > .useremail .postertrip,
-div.postContainer > a.replylink {
+.nameBlock > .useremail > .name,
+.nameBlock > .useremail > .postertrip,
+ div.postContainer span.postNum > .replylink {
   color: #854C9E !important;
 }
 #boardNavDesktop a, #boardNavDesktopFoot a {
@@ -324,13 +325,15 @@ input[type='file']::-webkit-file-upload-button {
 }
     
 a:hover,
-div.postContainer > .useremail .name:hover,
-div.postContainer > .useremail .postertrip:hover,
+.nameBlock > .useremail > .name:hover,
+.nameBlock > .useremail > .postertrip:hover,
 #boardNavDesktop a:hover,
 .pages input:hover,
 #dump:hover,
+div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
-div.postContainer > div.post div.postInfo span.postNum a:hover {
+div.postContainer > div.post div.postInfo span.postNum a:hover,
+ div.postContainer span.postNum > .replylink:hover {
   color: #8E2220 !important;
 }
 .name {

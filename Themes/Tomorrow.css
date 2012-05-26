@@ -94,22 +94,25 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-div.postContainer > .useremail .name,
-div.postContainer > .useremail .postertrip,
+.nameBlock > .useremail > .name,
+.nameBlock > .useremail > .postertrip,
 #dump,
+div.post > blockquote a[href^="//"],
 span.quote > a.quotelink,
 .sideArrows a,
-div.postContainer > a.replylink {
+ div.postContainer span.postNum > .replylink {
   color: #81a2be !important;
 }
 
 a:hover,
-div.postContainer > .useremail .name:hover,
-div.postContainer > .useremail .postertrip:hover,
+.nameBlock > .useremail > .name:hover,
+.nameBlock > .useremail > .postertrip:hover,
 #dump:hover,
+div.post > blockquote a[href^="//"]:hover,
 span.quote > a.quotelink:hover,
 .sideArrows a:hover,
-div.postContainer > div.post div.postInfo span.postNum a:hover {
+div.postContainer > div.post div.postInfo span.postNum a:hover,
+ div.postContainer span.postNum > .replylink:hover {
   color: #5F89AC !important;
 }
 

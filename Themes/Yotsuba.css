@@ -112,10 +112,11 @@
 
   a,
 #dump,
+div.post > blockquote a[href^="//"],
 .sideArrows a,
-div.postContainer > .useremail .name,
-div.postContainer > .useremail .postertrip,
-div.postContainer > a.replylink {
+.nameBlock > .useremail > .name,
+.nameBlock > .useremail > .postertrip,
+ div.postContainer span.postNum > .replylink {
     color: #800000 !important;
   }
   hr {
@@ -405,10 +406,11 @@ div.postContainer > a.replylink {
   }
  a,
 #dump,
+div.post > blockquote a[href^="//"],
 .sideArrows a,
-div.postContainer > .useremail .name,
-div.postContainer > .useremail .postertrip,
-div.postContainer > a.repylink {
+.nameBlock > .useremail > .name,
+.nameBlock > .useremail > .postertrip,
+ div.postContainer span.postNum > .replylink {
   color: #57577b !important;
 }
 .postNum a, a.backlink {
@@ -614,8 +616,10 @@ input[type='file']::-webkit-file-upload-button {
 }
 a:hover,
 #dump:hover,
+div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
-div.post div.postInfo span.postNum a:hover {
+div.post div.postInfo span.postNum a:hover,
+ div.postContainer span.postNum > .replylink:hover {
   color: #d00 !important;
 }
 .name {
@@ -631,8 +635,8 @@ div.post div.postInfo span.postNum a:hover {
 .trip {
   color: #228854 !important;
 }
-div.postContainer > .useremail .name:hover,
-div.postContainer > .useremail .postertrip:hover {
+.nameBlock > .useremail > .name:hover,
+.nameBlock > .useremail > .postertrip:hover {
   color: #117743 !important;
 }
 a.forwardlink {
