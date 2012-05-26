@@ -54,7 +54,8 @@ textarea,
 #qr_form input[name="email"] + label::after,
 .postForm #com_submit + label::after,
 #qr > form > label::after,
-#qr.autohide .move {
+#qr.autohide .move,
+input[type="checkbox"] {
   color: #BBBBBB !important;
 }
 
