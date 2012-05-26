@@ -18,6 +18,15 @@
     right: 1px !important;
     left: auto !important;/**/
   }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .postForm {
+      right: auto !important;
+      left: 4px !important;
+      /*[[ChangeAlign]]*/
+      right: 4px !important;
+      left: auto !important;/**/
+    }
+  }
   .postForm textarea {
     height: 72px !important;
   }
@@ -380,6 +389,15 @@
     -moz-transition: right .3s linear, left .3s linear;
     -o-transition: right .3s linear, left .3s linear;
   }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .postForm:hover {
+      right: auto !important;
+      left: 4px !important;
+      /*[[ChangeAlign]]*/
+      right: 4px !important;
+      left: auto !important;/**/
+    }
+  }
   .postForm tr:nth-child(4) {
     height: 79px !important;
   }
@@ -704,6 +722,15 @@
     -webkit-transition: right .3s linear, left .3s linear;
     -moz-transition: right .3s linear, left .3s linear;
     -o-transition: right .3s linear, left .3s linear;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .postForm:hover {
+      right: auto !important;
+      left: 4px !important;
+      /*[[ChangeAlign]]*/
+      right: -8px !important;
+      left: auto !important;/**/
+    }
   }
   .postForm::before {
     -webkit-transform: rotate(90deg);
@@ -1103,6 +1130,15 @@
     -webkit-transition: opacity .3s ease-in-out 3s;
     -moz-transition: opacity .3s ease-in-out 3s;
     -o-transition: opacity .3s ease-in-out 3s;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .postForm {
+      right: auto !important;
+      left: 4px !important;
+      /*[[ChangeAlign]]*/
+      right: 4px !important;
+      left: auto !important;/**/
+    }
   }
   .postForm:hover {
     opacity: 1;
