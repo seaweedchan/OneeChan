@@ -85,20 +85,20 @@ input[type='file']::-webkit-file-upload-button {
 
 a,
 #dump,
-a.quotelink,
+span.quote > a.quotelink,
 .sideArrows a,
-.useremail .postertrip,
-a.replylink {
+div.postContainer > .useremail .postertrip,
+div.postContainer > a.replylink {
   color: #897399 !important;
 }
 
 a:hover,
 #dump:hover,
-a.quotelink:hover,
+span.quote > a.quotelink:hover,
 .sideArrows a:hover,
-.useremail .postertrip:hover,
-.useremail .name:hover,
-div.post div.postInfo span.postNum a:hover {
+div.postContainer > .useremail .postertrip:hover,
+div.postContainer > .useremail .name:hover,
+div.postContainer > div.post div.postInfo span.postNum a:hover {
   color: #C617E6 !important;
 }
 a.backlink {

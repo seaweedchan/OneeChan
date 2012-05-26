@@ -193,7 +193,8 @@ This style is designed for the following browsers, ordered alphabetically:
  .quotejs,
  .chanlinkify,
  .useremail,
- .abbr a {
+ .abbr a,
+ div.postContainer > .replylink {
    text-decoration: /*[[UnderlineLinks]]*/ !important;
  }
 

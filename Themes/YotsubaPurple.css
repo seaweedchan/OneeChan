@@ -132,9 +132,9 @@ background-color: rgba(229,220,240,0.9) !important;
  a,
 #dump,
 .sideArrows a,
-.useremail .name,
-.useremail .postertrip,
-a.replylink {
+div.postContainer > .useremail .name,
+div.postContainer > .useremail .postertrip,
+div.postContainer > a.replylink {
   color: #962594 !important;
 }
 .postNum a, a.backlink {
@@ -232,7 +232,7 @@ textarea,
 #options ul:last-of-type {
   border: none !important;
 }
-a.quotelink {
+span.quote > a.quotelink {
   color: #962594 !important;
 }
 div[class="navLinks"] a:first-of-type:hover,
@@ -351,8 +351,8 @@ div.post div.postInfo span.postNum a:hover {
 .trip {
   color: #b22caa !important;
 }
-.useremail .name:hover,
-.useremail .postertrip:hover {
+div.postContainer > .useremail .name:hover,
+div.postContainer > .useremail .postertrip:hover {
   color: #117743 !important;
 }
 a.forwardlink {

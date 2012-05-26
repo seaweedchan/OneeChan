@@ -120,15 +120,15 @@ div.reply > tr > div.reply,
 a,
 #dump,
 .sideArrows a,
-.useremail .name,
-.useremail .postertrip,
-a.replylink {
+div.postContainer > .useremail .name,
+div.postContainer > .useremail .postertrip,
+div.postContainer > a.replylink {
   color: #FF6600 !important;
 }
 #boardNavDesktop a, #boardNavDesktopFoot a {
 	color: #111 !important;
 }
-.postNum a {
+div.postContainer > div.post .postNum a {
 	color: #333 !important;
 }
 .fileText {
@@ -218,7 +218,7 @@ select,
 #qr.autohide .move {
   color: #333 !important;
 }
-a.quotelink {
+span.quote > a.quotelink {
   color: #FF6600 !important;
 }
 div[class="navLinks"] a:first-of-type:hover,
@@ -331,13 +331,13 @@ input[type='file']::-webkit-file-upload-button {
   color: #444 !important;
 }
 a:hover,
-.useremail .name:hover,
-.useremail .postertrip:hover,
+div.postContainer > .useremail .name:hover,
+div.postContainer > .useremail .postertrip:hover,
 #boardNavDesktop a:hover,
 .pages input:hover,
 #dump:hover,
 .sideArrows a:hover,
-div.post div.postInfo span.postNum a:hover {
+div.postContainer > div.post div.postInfo span.postNum a:hover {
   color: #FF3300 !important;
 }
 .name {

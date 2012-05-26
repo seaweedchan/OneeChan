@@ -98,20 +98,20 @@ input[type='file']::-webkit-file-upload-button {
 }
 
 a,
-.useremail .name,
-.useremail .postertrip,
-a.quotelink,
+div.postContainer > .useremail .name,
+div.postContainer > .useremail .postertrip,
+span.quote > a.quotelink,
 #dump,
-a.replylink {
+div.postContainer > a.replylink {
   color: #DA69E0 !important;
 }
 
 a:hover,
-.useremail .name:hover,
-.useremail .postertrip:hover,
-a.quotelink:hover,
+div.postContainer > .useremail .name:hover,
+div.postContainer > .useremail .postertrip:hover,
+span.quote > a.quotelink:hover,
 #dump:hover,
-div.post div.postInfo span.postNum a:hover {
+div.postContainer > div.post div.postInfo span.postNum a:hover {
   color: #FF00FF !important;
 }
 

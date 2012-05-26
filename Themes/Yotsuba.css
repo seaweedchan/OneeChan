@@ -113,9 +113,9 @@
   a,
 #dump,
 .sideArrows a,
-.useremail .name,
-.useremail .postertrip,
-a.replylink {
+div.postContainer > .useremail .name,
+div.postContainer > .useremail .postertrip,
+div.postContainer > a.replylink {
     color: #800000 !important;
   }
   hr {
@@ -215,7 +215,7 @@ a.replylink {
   #options ul:last-of-type {
     border: none !important;
   }
-  a.quotelink {
+  span.quote > a.quotelink {
     color: #000080 !important;
   }
   div[class="navLinks"] a:first-of-type:hover,
@@ -406,9 +406,9 @@ a.replylink {
  a,
 #dump,
 .sideArrows a,
-.useremail .name,
-.useremail .postertrip,
-a.repylink {
+div.postContainer > .useremail .name,
+div.postContainer > .useremail .postertrip,
+div.postContainer > a.repylink {
   color: #57577b !important;
 }
 .postNum a, a.backlink {

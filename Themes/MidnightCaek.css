@@ -88,16 +88,16 @@ input[type='file']::-webkit-file-upload-button {
 a,
 #dump,
 .sideArrows a,
-.useremail .name,
-.useremail .postertrip,
-a.replylink {
+div.postContainer > .useremail .name,
+div.postContainer > .useremail .postertrip,
+div.postContainer > a.replylink {
   color: #57577b !important;
 }
 
 a:hover,
 #dump:hover,
 .sideArrows a:hover,
-div.post div.postInfo span.postNum a:hover {
+div.postContainer > div.post div.postInfo span.postNum a:hover {
   color: #47475b !important;
 }
 
@@ -111,8 +111,8 @@ div.post div.postInfo span.postNum a:hover {
   color: #3e7157 !important;
 }
 
-.useremail .name:hover,
-.useremail .postertrip:hover {
+div.postContainer > .useremail .name:hover,
+div.postContainer > .useremail .postertrip:hover {
   color: #444 !important;
 }
 
@@ -140,7 +140,7 @@ a.forwardlink {
   color: #71793e !important;
 }
 
-a.quotelink {
+span.quote > a.quotelink {
   color: #47475b !important;
 }
 
