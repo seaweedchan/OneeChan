@@ -194,7 +194,8 @@ This style is designed for the following browsers, ordered alphabetically:
  .chanlinkify,
  .useremail,
  .abbr a,
- div.postContainer span.postNum > .replylink {
+ div.postContainer span.postNum > .replylink,
+ a.deadlink {
    text-decoration: /*[[UnderlineLinks]]*/ !important;
  }
 
