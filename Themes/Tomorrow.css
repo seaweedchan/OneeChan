@@ -60,7 +60,8 @@ textarea,
 .postForm #com_submit + label::after,
 .globalMessage,
 #qr > form > label::after,
-#qr.autohide .move {
+#qr.autohide .move,
+input[type="checkbox"] {
   color: #c5c8c6 !important;
 }
 .webkit #qr > form input[type="file"]::-webkit-file-upload-button {
