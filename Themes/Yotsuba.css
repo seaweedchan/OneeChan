@@ -508,7 +508,7 @@ textarea,
 #options ul:last-of-type {
   border: none !important;
 }
-a.quotelink {
+span.quote > a.quotelink {
   color: #d00 !important;
 }
 div[class="navLinks"] a:first-of-type:hover,
@@ -631,8 +631,8 @@ div.post div.postInfo span.postNum a:hover {
 .trip {
   color: #228854 !important;
 }
-.useremail .name:hover,
-.useremail .postertrip:hover {
+div.postContainer > .useremail .name:hover,
+div.postContainer > .useremail .postertrip:hover {
   color: #117743 !important;
 }
 a.forwardlink {
