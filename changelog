@@ -1,5 +1,8 @@
 OneeChan changelog
 
+v3.2
+-Fix for Chrome users for many colors being off due to Moot adding !important everywhere
+
 v3.1
 -Updated for the new HTML
 -Expand Textarea on Focus -> Expand Inputs on Focus (with just textarea as an option)
