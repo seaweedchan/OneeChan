@@ -178,8 +178,8 @@ a.forwardlink {
   color: #909090 !important;
 }
 
-.unkfunc {
-  color: #65FF65 !important;
+.quote {
+  color: #43CC67 !important;
 }
 
 #boards h3,
@@ -529,20 +529,23 @@ padding-bottom: 2px !important;
   top: 0px !important;
 }
 span.tag {
-  color: #4355EE !important;
+  color: #4BB0BD !important;
 }
 span.pun {
-  color: #3C9F56 !important;
+  color: #90B05E !important;
 }
 span.com {
-  color: #C05067 !important;
+  color: #FF52CB !important;
 }
 span.str {
-  color: #43CC67 !important;
+  color: #65FF65 !important;
 }
 span.kwd {
-  color: #4363CC !important;
+  color: #00FFFF !important;
 }
 span.typ {
-  color: #CE6DCE !important;
+  color: #B96BDD !important;
+}
+span.lit {
+  color: #30C288 !important;
 }

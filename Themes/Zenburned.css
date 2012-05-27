@@ -498,20 +498,23 @@ body > a[style='cursor: pointer; float: right;']::after {
   top: 0px !important;
 }
 span.tag {
-  color: #4355EE !important;
+  color: #f8f893 !important;
 }
 span.pun {
-  color: #3C9F56 !important;
+  color: #A7B099 !important;
 }
 span.com {
-  color: #C05067 !important;
+  color: #dca3a3 !important;
 }
 span.str {
-  color: #43CC67 !important;
+  color: #C2E092 !important;
 }
 span.kwd {
-  color: #4363CC !important;
+  color: #efdcbc !important;
 }
 span.typ {
-  color: #CE6DCE !important;
+  color: #c0bed1 !important;
+}
+span.lit {
+  color: #8cd0d3 !important;
 }

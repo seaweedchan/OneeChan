@@ -10,7 +10,7 @@
   thumb:active { background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) !important; }
   /**/
   body {
-    background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #F6EEFF !important;
+    background: url("http://i.imgur.com/ah4AZ.png") repeat-x scroll center top #F8F3FE !important;
   }
   form[name="delform"]::before {
 width: 252px !important;
@@ -469,4 +469,29 @@ form[name='delform'] > div:not(.thread) select,
 
 #qr.autohide .move {
   border-bottom: none !important;
+}
+.prettyprint {
+  background-color: rgba(150,150,150,0.1) !important;
+  border-color: rgba(130,130,130,0.1) !important;
+}
+span.tag {
+  color: #70348A !important;
+}
+span.pun {
+  color: #61663A !important;
+}
+span.com {
+  color: #AF3280 !important;
+}
+span.str {
+  color: #7FA61B !important;
+}
+span.kwd {
+  color: #854C9E !important;
+}
+span.typ {
+  color: #6F4E9C !important;
+}
+span.lit {
+  color: #5C39AD !important;
 }

@@ -335,7 +335,7 @@ div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
 div.postContainer > div.post div.postInfo span.postNum a:hover,
  div.postContainer span.postNum > .replylink:hover {
-  color: #8E2220 !important;
+  color: #C617E6 !important;
 }
 .name {
   color: #854C9E !important;
@@ -488,4 +488,29 @@ background-color: #FFF  !important;
 
 #qr.autohide .move {
   border-bottom: none !important;
+}
+.prettyprint {
+  background-color: rgba(150,150,150,0.1) !important;
+  border-color: rgba(130,130,130,0.1) !important;
+}
+span.tag {
+  color: #70348A !important;
+}
+span.pun {
+  color: #61663A !important;
+}
+span.com {
+  color: #AF3280 !important;
+}
+span.str {
+  color: #7FA61B !important;
+}
+span.kwd {
+  color: #854C9E !important;
+}
+span.typ {
+  color: #6F4E9C !important;
+}
+span.lit {
+  color: #5C39AD !important;
 }

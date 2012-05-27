@@ -468,3 +468,28 @@ background-color: #FFF  !important;
 #qr.autohide .move {
   border-bottom: none !important;
 }
+.prettyprint {
+  background-color: rgba(150,150,150,0.1) !important;
+  border-color: rgba(130,130,130,0.1) !important;
+}
+span.tag {
+  color: #4f5f8f !important;
+}
+span.pun {
+  color: #61663A !important;
+}
+span.com {
+  color: #CC1006 !important;
+}
+span.str {
+  color: #7FA61B !important;
+}
+span.kwd {
+  color: #5960D4 !important;
+}
+span.typ {
+  color: #AB59D4 !important;
+}
+span.lit {
+  color: #05A163 !important;
+}

@@ -492,21 +492,28 @@ padding-bottom: 0px !important;
 #imageType {
   top: 0px !important;
 }
+.prettyprint {
+  background-color: rgba(100,100,100,0.1) !important;
+  border-color: rgba(130,130,130,0.1) !important;
+}
 span.tag {
-  color: #4355EE !important;
+  color: #00FE00 !important;
 }
 span.pun {
-  color: #3C9F56 !important;
+  color: #00FE00 !important;
 }
 span.com {
-  color: #C05067 !important;
+  color: #00FE00 !important;
 }
 span.str {
-  color: #43CC67 !important;
+  color: #00FE00 !important;
 }
 span.kwd {
-  color: #4363CC !important;
+  color: #00FE00 !important;
 }
 span.typ {
-  color: #CE6DCE !important;
+  color: #00FE00 !important;
+}
+span.lit {
+  color: #00FE00 !important;
 }

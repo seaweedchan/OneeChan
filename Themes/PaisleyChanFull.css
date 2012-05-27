@@ -753,20 +753,23 @@ padding-bottom: 2px !important;
   top: 0px !important;
 }
 span.tag {
-  color: #4355EE !important;
+  color: #4BB0BD !important;
 }
 span.pun {
-  color: #3C9F56 !important;
+  color: #758F4C !important;
 }
 span.com {
-  color: #C05067 !important;
+  color: #C95C5B !important;
 }
 span.str {
-  color: #43CC67 !important;
+  color: #98b962 !important;
 }
 span.kwd {
-  color: #4363CC !important;
+  color: #80accE !important;
 }
 span.typ {
-  color: #CE6DCE !important;
+  color: #57577b !important;
+}
+span.lit {
+  color: #558773 !important;
 }

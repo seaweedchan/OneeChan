@@ -498,3 +498,28 @@ form[name='delform'] > div:not(.thread) select,
 #qr.autohide .move {
   border-bottom: none !important;
 }
+.prettyprint {
+  background-color: rgba(150,150,150,0.2) !important;
+  border-color: rgba(130,130,130,0.1) !important;
+}
+span.tag {
+  color: #003369 !important;
+}
+span.pun {
+  color: #61663A !important;
+}
+span.com {
+  color: #FF6600 !important;
+}
+span.str {
+  color: #7FA61B !important;
+}
+span.kwd {
+  color: #004A99 !important;
+}
+span.typ {
+  color: #6F4E9C !important;
+}
+span.lit {
+  color: #FF3300 !important;
+}
