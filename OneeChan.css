@@ -181,6 +181,10 @@ This style is designed for the following browsers, ordered alphabetically:
    font-family: /*[[Font]]*/ !important;
  }
 
+div.post > blockquote .prettyprint * {
+  font-family: monospace !important;
+}
+
  .quotelink:not(.filtered),
  .quotelink:not(.filtered),
  .backlink:not(.filtered),
