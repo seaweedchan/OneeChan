@@ -1763,11 +1763,21 @@ body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] {
 
 body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > table {
   height: 100% !important;
+  vertical-align: top !important;
 }
 
-#fs_search {
-  min-width: 138px !important;
-  max-width: 138px !important;
+body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;']{
+  height: 95% !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+#fs_status {
+  width: auto !important;
+  height: 100% !important;
+  background: none !important;
+  padding: 10px !important;
+  overflow: scroll !important;
 }
 
 [alt="sticky"] + a::before {
