@@ -1794,6 +1794,7 @@ body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > 
 /*[[ColorScheme]]*/
 /*[[redtext]]*/
 /*[[RoundedCorners]]*/
+/*[[RevealSpoilers]]*/
 .fileText+br+a[target='_blank']:hover {
   background: none !important;
 }
