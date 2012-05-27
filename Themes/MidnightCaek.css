@@ -468,3 +468,21 @@ padding-bottom: 2px !important;
 #imageType {
   top: 0px !important;
 }
+span.tag {
+  color: #4355EE !important;
+}
+span.pun {
+  color: #3C9F56 !important;
+}
+span.com {
+  color: #C05067 !important;
+}
+span.str {
+  color: #43CC67 !important;
+}
+span.kwd {
+  color: #4363CC !important;
+}
+span.typ {
+  color: #CE6DCE !important;
+}
