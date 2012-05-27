@@ -1969,6 +1969,9 @@ a.forwardlink {
 body > table[cellpadding="30"] h1, body > table[cellpadding="30"] h3 {
   position: static !important;
 }
+#options.reply.dialog {
+  z-index: 999  !important;
+}
 }
 
 /*[[QuickReply]]*/
