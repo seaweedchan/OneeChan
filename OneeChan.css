@@ -1789,6 +1789,39 @@ body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;'] > 
 	font-size: 11px !important
 }
 
+.prettyprint {
+  background-color: rgba(255,255,255,.1) !important;
+  white-space: pre-wrap !important;
+  border: 1px solid rgba(0,0,0,0.5) !important;
+  border-radius: 2px !important;
+}
+
+span.pun {
+  color: #8ba446 !important;
+}
+
+span.com {
+  color: #F42424 !important;
+}
+
+span.str {
+  color: #15C030 !important;
+}
+
+span.kwd {
+  color: #2A61E4 !important;
+}
+
+span.typ {
+  color: #964ACC !important;
+}
+
+span.lit {
+  color: #2AA0A0 !important;
+}
+
+
+
 /*[[PagesPosition]]*/
 /*[[ReplyMargin]]*/
 /*[[ColorScheme]]*/

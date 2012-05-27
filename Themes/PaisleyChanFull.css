@@ -60,7 +60,8 @@ textarea,
 .postForm #com_submit + label::after,
 #qr > form > label::after,
 #qr.autohide .move,
-input[type="checkbox"] {
+input[type="checkbox"],
+span.pln {
   color: #999 !important;
 }
 

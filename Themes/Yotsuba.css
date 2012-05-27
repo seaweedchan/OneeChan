@@ -204,7 +204,8 @@ div.post > blockquote a[href^="//"],
   #qr_form input[name="email"] + label::after,
 .postForm #com_submit + label::after,
 #qr > form > label::after,
-#qr.autohide .move {
+#qr.autohide .move,
+span.pln {
     color: #800000 !important;
   }
 
@@ -498,7 +499,8 @@ textarea,
 .globalMessage,
 #qr_form input[name="email"] + label::after,
 #qr > form > label::after,
-#qr.autohide .move {
+#qr.autohide .move,
+span.pln {
   color: #000 !important;
 }
 

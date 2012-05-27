@@ -229,7 +229,8 @@ select,
 #qr_form input[name="email"] + label::after,
 .postForm #com_submit + label::after,
 #qr > form > label::after,
-#qr.autohide .move {
+#qr.autohide .move,
+span.pln {
   color: #000 !important;
 }
 span.quote > a.quotelink {

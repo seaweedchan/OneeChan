@@ -61,7 +61,8 @@ textarea,
 .globalMessage,
 #qr > form > label::after,
 #qr.autohide .move,
-input[type="checkbox"] {
+input[type="checkbox"],
+span.pln {
   color: #f1f1f1 !important;
 }
 .webkit #qr > form input[type="file"]::-webkit-file-upload-button {
