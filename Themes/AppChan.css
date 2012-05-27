@@ -481,20 +481,23 @@ padding-bottom: 2px !important;
   top: 0px !important;
 }
 span.tag {
-  color: #4355EE !important;
+  color: #4f5f8f !important;
 }
 span.pun {
-  color: #3C9F56 !important;
+  color: #72814D !important;
 }
 span.com {
-  color: #C05067 !important;
+  color: #BB7878 !important;
 }
 span.str {
-  color: #43CC67 !important;
+  color: #879957 !important;
 }
 span.kwd {
-  color: #4363CC !important;
+  color: #68a !important;
 }
 span.typ {
-  color: #CE6DCE !important;
+  color: #9A89A3 !important;
+}
+span.lit {
+  color: #6E9B89 !important;
 }
