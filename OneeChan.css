@@ -195,7 +195,8 @@ This style is designed for the following browsers, ordered alphabetically:
  .useremail,
  .abbr a,
  div.postContainer span.postNum > .replylink,
- a.deadlink {
+ a.deadlink,
+ div.post > blockquote .chanlinkify.YTLT-link.YTLT-text {
    text-decoration: /*[[UnderlineLinks]]*/ !important;
  }
 
@@ -224,7 +225,8 @@ This style is designed for the following browsers, ordered alphabetically:
  .postertrip,
  .postNum,
  .summary,
- time + span {
+ time + span,
+ div.post > blockquote .chanlinkify.YTLT-link.YTLT-text {
   font-size: /*[[FontSize]]*/ !important;
 }
 
@@ -252,6 +254,16 @@ label,
 
 .filtered {
   text-decoration: line-through !important;
+}
+
+/* YouTube URL Replacer */
+
+div.post > blockquote .chanlinkify.YTLT-link.YTLT-na {
+  text-decoration: line-through !important;
+}
+
+div.post > blockquote .chanlinkify.YTLT-link.YTLT-text {
+  font-style: normal !important;
 }
 
 /*[[CustomScrollbars]]*/scrollbarbutton { display: none !important; }
