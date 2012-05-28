@@ -351,6 +351,11 @@
   #qr.autohide:hover .move {
     padding-top: 1px !important;
   }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr.autohide:hover .move {
+        vertical-align: middle !important;
+    }
+  }
   #qr textarea.field, #qr input[title="Verification"], #qr div {
     min-width: 248px !important;
     max-width: 248px !important;
@@ -1479,6 +1484,11 @@
   }
   #qr.autohide:hover .move {
     padding-top: 1px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    #qr.autohide:hover .move {
+        vertical-align: middle !important;
+    }
   }
   #qr textarea.field, #qr input[title="Verification"], #qr div {
     min-width: 248px !important;
