@@ -477,13 +477,13 @@ span.pun {
 span.com {
   color: #A34443 !important;
 }
-span.str {
+span.str, span.atv {
   color: #71793e !important;
 }
 span.kwd {
   color: #987D3E !important;
 }
-span.typ {
+span.typ, span.atn {
   color: #57577b !important;
 }
 span.lit {

@@ -755,7 +755,7 @@ form[name='delform'] > div:not(.thread) select,
 span.com {
 color: #d00 !important;
 }
-span.str {
+span.str, span.atv {
   color: #7FA61B !important;
 }
 span.pun {
@@ -767,7 +767,7 @@ span.tag {
 span.kwd {
   color: #5A6F9E !important;
 }
-span.typ {
+span.typ, span.atn {
   color: #9474BD !important;
 }
 span.lit {
