@@ -271,7 +271,7 @@
     max-height: 16px !important;
   }
   div[class="navLinks"] a:first-of-type::after {
-    bottom: 1px !important;
+    bottom: 0px !important;
     top: auto !important;
   }
   .deleteform::before {
@@ -326,7 +326,12 @@
     -webkit-transition: bottom .3s linear, top .3s linear;
     -moz-transition: bottom .3s linear, top .3s linear !important;
     -o-transition: bottom .3s linear, top .3s linear;
-    bottom: 0px !important;
+    bottom: 1px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    #qr.autohide:hover {
+      bottom: 3px !important;
+    }
   }
   #qr.autohide:hover .move {
     padding-bottom: 5px !important;
@@ -1395,7 +1400,7 @@
     max-height: 16px !important;
   }
   div[class="navLinks"] a:first-of-type::after {
-    bottom: 1px !important;
+    bottom: 0px !important;
     top: auto !important;
   }
   .deleteform::before {
@@ -1450,7 +1455,12 @@
     -webkit-transition: bottom .3s linear, top .3s linear;
     -moz-transition: bottom .3s linear, top .3s linear !important;
     -o-transition: bottom .3s linear, top .3s linear;
-    bottom: 0px !important;
+    bottom: 1px !important;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    #qr.autohide:hover {
+      bottom: 3px !important;
+    }
   }
   #qr.autohide:hover .move {
     padding-bottom: 5px !important;
