@@ -1880,6 +1880,9 @@ input[type='submit']:hover, input[type='file'] > input[type='button']:hover {
 #qr input:focus::-webkit-input-placeholder, #qr textarea:focus::-webkit-input-placeholder {
   color: transparent !important;
 }
+#qr input:focus:-moz-placeholder, #qr textarea:focus:-moz-placeholder {
+  color: transparent !important;
+}
 form[name="delform"] table {
   table-layout: fixed !important;
 }
