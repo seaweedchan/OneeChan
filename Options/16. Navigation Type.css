@@ -65,11 +65,11 @@
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
     form[name='delform'] {
-      padding: 0px 0 2px 0 !important;
+      padding: 4px 0 2px 0 !important;
       margin: -2px 0 0px !important;
     }
     body > .postingMode ~ form[name='delform'] {
-      padding-top: 0px !important;
+      padding-top: 4px !important;
       margin: -12px 0 0px !important;
     }
   }
@@ -94,11 +94,11 @@
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
     form[name='delform'] {
-      padding: 0px 0 2px 0 !important;
+      padding: 4px 0 2px 0 !important;
       margin: -2px 0 0px !important;
     }
     body > .postingMode ~ form[name='delform'] {
-      padding-top: 0px !important;
+      padding-top: 4px !important;
       margin: -12px 0 0px !important;
     }
   }
@@ -180,11 +180,11 @@
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
     form[name='delform'] {
-      padding: 0px 0 2px 0 !important;
+      padding: 4px 0 2px 0 !important;
       margin: -2px 0 0px !important;
     }
     body > .postingMode ~ form[name='delform'] {
-      padding-top: 0px !important;
+      padding-top: 4px !important;
       margin: -12px 0 0px !important;
     }
   }
@@ -364,11 +364,11 @@
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) { 
     form[name='delform'] {
-      padding: 0px 0 2px 0 !important;
+      padding: 4px 0 2px 0 !important;
       margin: -2px 0 0px !important;
     }
     body > .postingMode ~ form[name='delform'] {
-      padding-top: 0px !important;
+      padding-top: 4px !important;
       margin: -12px 0 0px !important;
     }
   }
