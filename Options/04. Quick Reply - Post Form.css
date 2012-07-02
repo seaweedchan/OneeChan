@@ -113,7 +113,7 @@
   }
   /* Webkit Hax */
   .fake input[type='file']::-webkit-file-upload-button,
-  * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  html #qr form[name^='post'] input[type='file'][name='upfile'] {
     width: 248px !important;
   }
   #dump {
@@ -524,7 +524,7 @@
   }
   /* Webkit Hax */
   .fake input[type='file']::-webkit-file-upload-button,
-  * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  html #qr form[name^='post'] input[type='file'][name='upfile'] {
     width: 248px !important;
   }
   #dump {
@@ -925,7 +925,7 @@
   }
   /* Webkit Hax */
   .fake input[type='file']::-webkit-file-upload-button,
-  * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  html #qr form[name^='post'] input[type='file'][name='upfile'] {
     width: 248px !important;
   }
   #dump {
@@ -1253,7 +1253,7 @@
   }
   /* Webkit Hax */
   .fake input[type='file']::-webkit-file-upload-button,
-  * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  html #qr form[name^='post'] input[type='file'][name='upfile'] {
     width: 248px !important;
   }
   #dump {
@@ -1562,7 +1562,7 @@
   }
   /* Webkit Hax */
   .fake input[type='file']::-webkit-file-upload-button,
-  * > #qr form[name^='post'] input[type='file'][name='upfile'] {
+  html #qr form[name^='post'] input[type='file'][name='upfile'] {
     width: 248px !important;
   }
   #dump {

@@ -573,7 +573,7 @@ textarea {
   padding: 0 !important;
 }
 /* Unfuxor the Captcha layout */
-#recaptcha_widget_div * {
+#recaptcha_widget_div tr, #recaptcha_widget_div td, #recaptcha_widget_div center, #recaptcha_widget_div #recaptcha_table, #recaptcha_widget_div #recaptcha_area, #recaptcha_widget_div #recaptcha_image {
   margin: 0 !important;
   padding: 0 !important;
   height: auto !important;
@@ -1552,17 +1552,6 @@ div[class="navLinks"] a:first-of-type:hover::after {
   width: 700px !important;
 }
 
-#content > * {
-  height: 600px !important;
-}
-
-#floaty::after {
-  content: "4chan X Options" !important;
-  position: relative !important;
-  left: 120px !important;
-  font-size: 14px !important;
-}
-
 #options hr {
   display: none !important;
 }
@@ -1574,6 +1563,10 @@ div[class="navLinks"] a:first-of-type:hover::after {
 
 #options ul:first-of-type {
   padding-top: 5px !important;
+}
+
+#content textarea {
+  width: 99% !important;
 }
 
 /* End of 4chan x options */
