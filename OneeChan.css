@@ -2009,7 +2009,7 @@ height: 20px !important;
   background: none !important;
   padding-bottom: 2px !important;
 }
-.postContainer.inline .report_button, .postContainer.inline input {
+.inline .report_button, .inline input {
   display: none !important;
 }
 div.pagelist {
