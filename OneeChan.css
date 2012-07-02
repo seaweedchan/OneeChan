@@ -130,7 +130,6 @@ This style is designed for the following browsers, ordered alphabetically:
   td.rules,
   th,
   [id='4chan_ext_nav_top'],
-  #footer > *:not(#boardNavDesktopFoot):not(center),
   #ft li.fill,
   #popular-threads,
   #recaptcha_logo,
@@ -140,7 +139,7 @@ This style is designed for the following browsers, ordered alphabetically:
   #rules,
   #recaptcha_switch_audio_btn,
   #recaptcha_whatsthis_btn,
-  #recaptcha_reload_btn *,
+  #recaptcha_reload,
   #quickrep tr:nth-of-type(4) b,
   #qr.auto:not(:hover) #recaptcha_reload_btn,
   .deleteform br,
@@ -176,12 +175,12 @@ This style is designed for the following browsers, ordered alphabetically:
    display: none !important;
  }
 
- * {
+ html, body, input, select, textarea, .boardTitle {
    /* Defaults of all elements */
    font-family: /*[[Font]]*/ !important;
  }
 
-div.post > blockquote .prettyprint * {
+div.post > blockquote .prettyprint span {
   font-family: monospace !important;
 }
 
