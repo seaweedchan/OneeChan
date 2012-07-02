@@ -859,7 +859,7 @@ form[name^='post'] input[name='recaptcha_response_field'] {
   max-width:85% !important;
   max-height:85% !important;
 }
-#qp div.reply {
+#qp {
   z-index: 99 !important;
 }
 
