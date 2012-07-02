@@ -224,8 +224,8 @@ div.post > blockquote .prettyprint * {
  .subjectm
  .container::before,
  #captchas,
- #qp .postertrip,
- #qp .subject,
+ #qp div.reply .postertrip,
+ #qp div.reply .subject,
  .postertrip,
  .postNum,
  .summary,
@@ -859,7 +859,7 @@ form[name^='post'] input[name='recaptcha_response_field'] {
   max-width:85% !important;
   max-height:85% !important;
 }
-#qp {
+#qp div.reply {
   z-index: 99 !important;
 }
 
@@ -1074,7 +1074,7 @@ form[name='delform'] center {
 }
 
 form[name='delform'] .fileText + br + a[target='_blank'] img, 
-#qp .fileText + br + a[target='_blank'] img  {
+#qp div.reply .fileText + br + a[target='_blank'] img  {
   border: 0;
   float: left;
   margin: 5px 20px 15px !important;
@@ -1277,17 +1277,17 @@ select > input {
 /* Reply Previews */
 #backwash_tooltip, /* /b/ackwash reloaded */
 #popup, /* 4chanplus */
-#qp, /* 4chan x Quote Preview */
+#qp div.reply, /* 4chan x Quote Preview */
 div[id^=ref] /* 4chan4chrome */ {
   max-width: 70%;
   visibility: visible;
 }
 
-#qp {
+#qp div.reply {
   padding: 2px 6px !important;
 }
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-	#qp {
+	#qp div.reply {
 		padding: 5px 5px 12px 5px !important;
 	}
 }
@@ -1307,7 +1307,7 @@ div[id^='ref'],
 
 #backwash_tooltip img,
 #popup img,
-#qp img,
+#qp div.reply img,
 div[id^='ref'] img {
   max-width: 300px !important;
   height: auto !important;
@@ -1685,7 +1685,7 @@ div[class="navLinks"] a:first-of-type:hover::after {
 }
 /*[[watcherslideout]]*/
 #backwash_tooltip,
-#qp,
+#qp div.reply,
 #popup,
 div[id^=ref],
 div.reply,
@@ -1845,6 +1845,10 @@ span.lit {
 /*[[RevealSpoilers]]*/
 .fileText+br+a[target='_blank']:hover {
   background: none !important;
+}
+.inline, #qp {
+  background-color: transparent !important;
+  border: none !important;
 }
 /* Adblock Minus */
 img[src^='//static.4chan.org/support/'] {

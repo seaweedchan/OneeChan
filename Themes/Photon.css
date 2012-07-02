@@ -242,20 +242,20 @@ input[type='file'] > input[type='button']:hover,
 textarea:hover {
   background-color: #CCC !important;
 }
-#qp {
+#qp div.reply {
   background-color: rgba(21,21,21,0.8) !important;
   color: #FFF !important;
   border: 1px solid rgba(255,255,255,1) !important;
   outline: 1px solid black !important;
   -moz-outline-radius: 3px !important;
 }
-#qp .name, #qp .container a, #qp .postNum a {
+#qp div.reply .name, #qp div.reply .container a, #qp div.reply .postNum a {
   color: #FFF !important;
 }
-#qp .postertrip {
+#qp div.reply .postertrip {
   color: #999 !important;
 }
-#qp .fileText {
+#qp div.reply .fileText {
   color: #999 !important;
 }
 input[type='checkbox'],
