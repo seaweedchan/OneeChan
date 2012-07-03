@@ -27,15 +27,15 @@
     width: 20px !important;
     padding-top: 1px !important;
   }
-  div.reply .report_button, .sideArrows, .postInfo input {
+  div.reply .report_button, .sideArrows, .postInfo input, .menu_button {
     opacity: 0 !important;
   }
-  form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) .sideArrows, form .replyContainer:not(:hover) .postInfo input{
+  form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu_button, form .replyContainer:not(:hover) .sideArrows, form .replyContainer:not(:hover) .postInfo input{
     -webkit-transition: opacity .3s ease-out 0s !important;
     -moz-transition: opacity .3s ease-out 0s !important;
     -o-transition: opacity .3s ease-out 0s !important;
   }
-  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover .sideArrows, .replyContainer:hover .postInfo input {
+  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu_button, form .replyContainer:hover .sideArrows, .replyContainer:hover .postInfo input {
     opacity: 1 !important;
     -webkit-transition: opacity .3s ease-in .5s !important;
     -moz-transition: opacity .3s ease-in .5s !important;
@@ -56,7 +56,7 @@
     top: -3px !important;
     right: 5px !important;
   }
-  div.reply .report_button {
+  div.reply .report_button, div.reply .menu_button {
     position: absolute !important;
     right: 33px !important;
     top: -1px !important;

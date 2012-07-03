@@ -2033,6 +2033,13 @@ body > table[cellpadding="30"] h1, body > table[cellpadding="30"] h3 {
 #options.reply.dialog {
   z-index: 999  !important;
 }
+.focused.entry {
+  background-color: transparent !important;
+}
+#menu.reply.dialog, html .subMenu {
+  padding: 0px !important;
+  z-index: 99 !important;
+}
 }
 
 /*[[QuickReply]]*/
