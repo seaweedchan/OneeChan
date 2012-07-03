@@ -132,7 +132,8 @@ div.post > blockquote a[href^="//"],
 .sideArrows a,
 .nameBlock > .useremail > .name,
 .nameBlock > .useremail > .postertrip,
- div.postContainer span.postNum > .replylink {
+ div.postContainer span.postNum > .replylink,
+ .entry {
   color: #854C9E !important;
 }
 #boardNavDesktop a, #boardNavDesktopFoot a {
@@ -334,7 +335,8 @@ a:hover,
 div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
 div.postContainer > div.post div.postInfo span.postNum a:hover,
- div.postContainer span.postNum > .replylink:hover {
+ div.postContainer span.postNum > .replylink:hover,
+ .entry:hover {
   color: #C617E6 !important;
 }
 .name {

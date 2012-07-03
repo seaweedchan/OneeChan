@@ -91,7 +91,8 @@ a,
 div.post > blockquote a[href^="//"],
 span.quote > a.quotelink,
 .sideArrows a,
-div.postContainer span.postNum > .replylink {
+div.postContainer span.postNum > .replylink,
+.entry {
   color: #68a !important;
 }
 
@@ -103,7 +104,8 @@ div.post > blockquote a[href^="//"]:hover,
 span.quote > a.quotelink:hover,
 .sideArrows a:hover,
 div.postContainer > div.post div.postInfo span.postNum a:hover,
-div.postContainer span.postNum > .replylink:hover {
+div.postContainer span.postNum > .replylink:hover,
+.entry:hover {
   color: #4E6E8E !important;
 }
 

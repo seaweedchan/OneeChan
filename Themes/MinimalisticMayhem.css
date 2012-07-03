@@ -90,12 +90,14 @@ div.post > blockquote a[href^="//"],
 span.quote > a.quotelink,
 .sideArrows a,
 .nameBlock > .useremail > .postertrip,
- div.postContainer span.postNum > .replylink {
+ div.postContainer span.postNum > .replylink,
+ .entry {
   color: #897399 !important;
 }
 
 a:hover,
 #dump:hover,
+.entry:hover,
 div.post > blockquote a[href^="//"]:hover,
 span.quote > a.quotelink:hover,
 .sideArrows a:hover,

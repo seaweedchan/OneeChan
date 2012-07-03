@@ -2040,6 +2040,9 @@ body > table[cellpadding="30"] h1, body > table[cellpadding="30"] h3 {
   padding: 0px !important;
   z-index: 99 !important;
 }
+.entry:not(.focused) > .subMenu {
+  display: none;
+}
 }
 
 /*[[QuickReply]]*/

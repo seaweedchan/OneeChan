@@ -115,7 +115,8 @@ div.post > blockquote a[href^="//"],
 .sideArrows a,
 .nameBlock > .useremail > .name,
 .nameBlock > .useremail > .postertrip,
- div.postContainer span.postNum > .replylink {
+ div.postContainer span.postNum > .replylink,
+ .entry {
   color: #BC312A !important;
 }
 #boardNavDesktop a, #boardNavDesktopFoot a {
@@ -310,6 +311,7 @@ a:hover,
 #boardNavDesktop a:hover,
 .pages input:hover,
 #dump:hover,
+.entry:hover,
 div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
 div.postContainer > div.post div.postInfo span.postNum a:hover,

@@ -88,6 +88,7 @@ input[type='file']::-webkit-file-upload-button {
 
 a,
 #dump,
+.entry,
 div.post > blockquote a[href^="//"],
 .nameBlock > .useremail > .name,
 .nameBlock > .useremail > .postertrip,
@@ -97,6 +98,7 @@ div.post > blockquote a[href^="//"],
 
 a:hover,
 #dump:hover,
+.entry:hover,
 div.post > blockquote a[href^="//"]:hover,
 div.postContainer > div.post div.postInfo span.postNum a:hover,
  div.postContainer span.postNum > .replylink:hover {

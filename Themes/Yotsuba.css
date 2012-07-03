@@ -112,6 +112,7 @@
 
   a,
 #dump,
+.entry,
 div.post > blockquote a[href^="//"],
 .sideArrows a,
 .nameBlock > .useremail > .name,
@@ -407,6 +408,7 @@ span.pln {
   }
  a,
 #dump,
+.entry,
 div.post > blockquote a[href^="//"],
 .sideArrows a,
 .nameBlock > .useremail > .name,
@@ -618,6 +620,7 @@ input[type='file']::-webkit-file-upload-button {
 }
 a:hover,
 #dump:hover,
+.entry:hover,
 div.post > blockquote a[href^="//"]:hover,
 .sideArrows a:hover,
 div.post div.postInfo span.postNum a:hover,

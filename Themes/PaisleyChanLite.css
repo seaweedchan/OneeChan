@@ -100,6 +100,7 @@ input[type='file']::-webkit-file-upload-button {
 
 a,
 #dump,
+.entry,
 .sideArrows,
 div.post > blockquote a[href^="//"],
 .report_button a,
@@ -111,6 +112,7 @@ div.post > blockquote a[href^="//"],
 
 a:hover,
 #dump:hover, span.quote > a.quotelink:hover,
+.entry:hover
 div.post > blockquote a[href^="//"]:hover,
 .report_button:hover,
 .sideArrows a:hover,
