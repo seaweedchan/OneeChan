@@ -197,7 +197,7 @@ div.post > blockquote a[href^="//"],
   #backwash_tooltip,
   #boardNavDesktop .title,
   #imgControls label::after,
-  #qp div.reply,
+  #qp div.reply, #qp div.op,
   #twi_table_div,
   #updater #count:not(.new)::after,
   .globalMessage,
@@ -239,7 +239,7 @@ span.pln {
   textarea:hover {
     background-color: #F0E0D6 !important;
   }
-  #qp div.reply {
+  #qp div.reply, #qp div.op {
     background-color: #d6bad0 !important;
     -moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
     -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
@@ -493,7 +493,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktop::after,
-#qp div.reply,
+#qp div.reply, #qp div.op,
 #twi_table_div,
 #updater #count:not(.new)::after,
 .globalMessage,
@@ -534,7 +534,7 @@ input[type='file'] > input[type='button']:hover,
 textarea:hover {
   background-color: #d6bad0 !important;
 }
-#qp div.reply {
+#qp div.reply, #qp div.op {
  background-color: #d6bad0 !important;
  -moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
  -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;

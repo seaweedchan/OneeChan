@@ -860,6 +860,7 @@ form[name^='post'] input[name='recaptcha_response_field'] {
 }
 #qp {
   z-index: 99 !important;
+  min-width: 500px !important;
 }
 
 .exPopup {
