@@ -2041,7 +2041,7 @@ body > table[cellpadding="30"] h1, body > table[cellpadding="30"] h3 {
   z-index: 99 !important;
 }
 .entry:not(.focused) > .subMenu {
-  display: none;
+  display: none !important;
 }
 }
 
