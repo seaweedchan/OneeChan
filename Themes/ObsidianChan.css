@@ -86,7 +86,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
-#qp div.reply, #qp div.op,
+#qp div.post,
 #twi_table_div,
 #updater #count:not(.new)::after,
 .globalMessage,
@@ -272,7 +272,7 @@ textarea:hover {
 .qphl {
   outline-color: #627c8d !important;
 }
-#qp div.reply, #qp div.op {
+#qp div.post {
  background-color: rgba(0,0,0,0.8) !important;
  border-radius: 4px !important;
  border: 1px solid #333 !important;

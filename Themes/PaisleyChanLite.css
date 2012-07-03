@@ -52,7 +52,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
-#qp div.reply, #qp div.op,
+#qp div.post,
 #twi_table_div,
 #updater #count:not(.new)::after,
 .globalMessage,
@@ -279,7 +279,7 @@ textarea:hover {
   background-color: #181818 !important;
 }
 
-#qp div.reply, #qp div.op {
+#qp div.post {
 border: 1px solid rgba(128,172,206,0.5) !important;
 background-color: rgba(24,24,24,0.9) !important;
 }

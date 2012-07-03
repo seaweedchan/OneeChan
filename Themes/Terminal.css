@@ -48,7 +48,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
-#qp div.reply, #qp div.op,
+#qp div.post,
 #twi_table_div,
 #updater #count:not(.new)::after,
 .globalMessage,
@@ -251,7 +251,7 @@ div[class="navLinks"] a:first-of-type:hover,
 input[type='submit']:hover,
 input[type='file'] > input[type='button']:hover,
 #backwash_tooltip,
-#qp div.reply, #qp div.op,
+#qp div.post,
 #qr::before,
 #updater:hover,
 #popup,
@@ -460,7 +460,7 @@ input[type="checkbox"], #options input[type="checkbox"], form[name^="post"] td:n
   background-color: #000 !important;
 }
 
-div.reply, #qr textarea, #qp div.reply, #qp div.op, #iHover, .boardBanner img, #updater:hover, #qr.autohide .move {
+div.reply, #qr textarea, #qp div.post, #iHover, .boardBanner img, #updater:hover, #qr.autohide .move {
 border: 1px dashed #00FE00 !important;
 }
 #iHover {

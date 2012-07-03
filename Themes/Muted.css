@@ -234,7 +234,7 @@ input[type='file'] > input[type='button']:hover,
 textarea:hover {
   background-color: #CCC !important;
 }
-#qp div.reply, #qp div.op {
+#qp div.post {
   background-color: rgba(255,255,255,0.9) !important;
   border: 1px solid #CCC !important;
   color: #000 !important;
