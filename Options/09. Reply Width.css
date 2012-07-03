@@ -59,6 +59,7 @@
   div.reply .report_button, div.reply .menu_button {
     position: absolute !important;
     right: 33px !important;
+    /*[[HideCheckboxes]]*/right: 13px !important;/**/
     top: -1px !important;
     font-size: 9px !important;
   }
@@ -68,6 +69,7 @@
   .sideArrows a {
     position: absolute !important;
     right: 47px !important;
+    /*[[HideCheckboxes]]*/right: 27px !important;/**/
     top: 7px !important;
   }
   .sideArrows a {
@@ -126,6 +128,9 @@
       position: relative !important;
       bottom: 1px !important;
     }
+  /*[[HideCheckboxes]]*/.postInfo input {
+    display: none !important;
+  }/**/
   }
 
 /* Normal (4chan default) */
@@ -201,5 +206,26 @@
     body > .postingMode ~ form[name='delform'] input[value="delete"] {
       position: relative !important;
       top: -1px !important;
-    }
+  }
+  /*[[HideCheckboxes]]*/
+   .postInfo input {
+    display: none !important;
+  }
+  .sideArrows a {
+    right: 27px !important;
+   }
+  div.reply .report_button, div.reply .menu_button {
+    right: 13px !important;
+   }
+  div.reply {
+    padding-top: 6px !important;
+    padding-left: 8px !important;
+  }
+  .sideArrows {
+    margin-right: 2px !important;
+    width: 20px !important;
+  }
+  form .postContainer blockquote {
+    margin-left: 30px !important;
+  }/**/
   }
