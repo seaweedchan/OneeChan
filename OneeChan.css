@@ -2249,6 +2249,12 @@ url-prefix('https://boards.4chan.org/f/') {
   .postForm .inputtext[name='sub'] {
     width: 198px !important;
   }
+  tr, .highlightPost {
+    background-color: transparent !important;
+  }
+  .flashListing {
+    margin-top: 50px !important;
+  }
 }
 
 @-moz-document domain('sys.4chan.org') {
