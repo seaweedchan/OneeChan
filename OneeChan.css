@@ -2043,6 +2043,20 @@ body > table[cellpadding="30"] h1, body > table[cellpadding="30"] h3 {
 .entry:not(.focused) > .subMenu {
   display: none !important;
 }
+#charCount {
+  background: none !important;
+  position: absolute !important;
+  right: 2px !important;
+  top: 112px !important;
+  color: black !important;
+  font-size: 10px !important;
+}
+#charCount.warning {
+  color: red !important;
+  position: absolute !important;
+  right: 2px !important;
+  top: 110px !important;
+}
 }
 
 /*[[QuickReply]]*/
