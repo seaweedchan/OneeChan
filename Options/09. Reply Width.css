@@ -27,7 +27,7 @@
     width: 20px !important;
     padding-top: 1px !important;
   }
-  div.reply .report_button, .sideArrows, .postInfo input, .menu_button {
+  div.reply .report_button, .sideArrows, .postInfo input, div.reply .menu_button {
     opacity: 0 !important;
   }
   form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu_button, form .replyContainer:not(:hover) .sideArrows, form .replyContainer:not(:hover) .postInfo input{
