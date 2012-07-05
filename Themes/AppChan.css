@@ -47,12 +47,10 @@ textarea,
 .reply,
 .reply.highlight,
 .trip
-#backwash_tooltip,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
 #qp div.post,
-#twi_table_div,
 #updater #count:not(.new)::after,
 .globalMessage,
 #qr_form input[name="email"] + label::after,
@@ -75,8 +73,7 @@ span.pln {
 }
 
 .postForm > td:nth-of-type(3) > label,
-#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label,
-#autonoko {
+#qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label {
   color: #888;
 }
 
@@ -133,14 +130,10 @@ a.forwardlink {
 }
 
 #boards h3,
-#boardsMenu,
 #ft li,
 #ft ul,
 #navbar,
 #options .dialog,
-#popup,
-#threadwatcher,
-#threadwatcher .postblock,
 .box-outer,
 .boxbar,
 .deleteform input[value=Delete],
@@ -163,19 +156,11 @@ body::before,
   background-color: #333 !important;
 }
 
-div[id^='4chan_ext_iqr'],
-div[id^='4chan_ext_iqr'] *,
-#filter input,
-#filter textarea,
 #options input,
 #options textarea,
 #qr,
 #qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
-#quickrep,
-#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
 #qr label input,
-#thread_filter input,
-#thread_filter textarea,
 #updater input:not([type='checkbox']),
 .bd,
 .boxcontent > hr,
@@ -201,21 +186,9 @@ table.reply[style^='clear: both'] {
   font-weight: 100 !important;
 }
 
-#backwash_tooltip,
-#cc-showpostForm,
-#filter.autohide:hover,
-#filter:not(.autohide),
-#twi_table_div,
-#twi_table_div *,
 #updater:hover,
-#thread_filter.autohide:hover,
-#thread_filter:not(.autohide),
-#popup,
-.chanchimp,
-.chanchimp > div,
 .recaptchatable #recaptcha_response_field:hover,
 .deleteform input[type='password']:hover,
-div[id^=ref],
 input:hover,
 input[type='file'] > input[type='button']
 input[type='submit']:hover,
@@ -324,18 +297,13 @@ form[name^='post'] .postblock b,
   color: rgba(255,255,255,0.1) !important;
 }
 
-#cc-showpostForm,
 #ft li,
 #ft ul,
 #options input:not([type='checkbox']),
 #qr table .recaptchatable #recaptcha_image,
 #updater input:not([type='checkbox']),
-#twi_table_div,
-#twi_table_div *,
 .box-outer,
 .boxbar,
-.chanchimp,
-.chanchimp > div,
 .inputtext,
 .deleteform input[value=Delete],
 .recaptcha_image_cell > center > #recaptcha_image,
@@ -362,9 +330,7 @@ input[type='checkbox'] {
 }
 
 .boxcontent dd,
-#options ul,
-#threadwatcher .postblock,
-.chanchimp * {
+#options ul {
   border-color: #2c2c2c !important;
 }
 
@@ -385,15 +351,9 @@ form[name^='post']::before,
   bottom: 171px !important; /* Borders change the dimensions of the postform slightly. */
 }
 
-#filter input,
-#filter textarea,
-#thread_filter input,
-#thread_filter textarea,
 #updater input,
 #options input,
 #qr,
-#quickrep,
-div[id^=qr],
 table.reply[style^='clear: both'] {
   border: none !important;
 }
@@ -471,7 +431,7 @@ background-color: #333 !important;
 padding-bottom: 2px !important;
 }
 
-[id^='q'] .error, [id^='q'] .warning {
+[id^='q'] .warning {
   background: #2c2c2c !important;
   color: #68a !important;
 }

@@ -1027,11 +1027,7 @@ form[name='delform'] .fileText + br + a[target='_blank'] img + img {
   font-size: /*[[FontSize]]*/ !important;
 }
 
-#filter.autohide:hover,
-#filter:not(.autohide),
-#updater:hover,
-#thread_filter.autohide:hover,
-#thread_filter:not(.autohide) {
+#updater:hover {
   border: 0 !important;
 }
 
@@ -1448,17 +1444,11 @@ div[class="navLinks"] a:first-of-type:hover::after {
 }
 
 /* End of 4chan x options */
-#filter,
-#thread_filter,
 #stats {
   padding: 3px 0;
   border: 0 !important;
   border-radius: 0;
   font-size: 12px !important;
-  z-index: 4 !important;
-}
-
-#stats {
   position: fixed !important;
   top: -1px !important;
   right: auto !important;
@@ -1487,9 +1477,6 @@ div[class="navLinks"] a:first-of-type:hover::after {
   overflow: hidden;
   z-index: 10 !important;
   padding-bottom: 2px;
-}
-
-#updater {
   background: none !important;
 }
 
@@ -1561,8 +1548,7 @@ div.reply.highlight,
   border: 0 !important;
 }
 
-#watcher,
-#threadwatcher /* 4chan4chrome's threadwatcher */ {
+#watcher {
   border: 0 !important;
   padding: 1px 0;
   border-radius: 0;
