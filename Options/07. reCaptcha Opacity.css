@@ -2,7 +2,6 @@
 
 /* 0.1 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.1 !important;
@@ -13,7 +12,6 @@
 }
 /* 0.2 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.2 !important;
@@ -24,7 +22,6 @@
 }
 /* 0.3 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.3 !important;
@@ -35,7 +32,6 @@
 }
 /* 0.4 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.4 !important;
@@ -46,7 +42,6 @@
 }
 /* 0.5 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.5 !important;
@@ -57,7 +52,6 @@
 }
 /* 0.6 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.6 !important;
@@ -68,7 +62,6 @@
 }
 /* 0.7 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.7 !important;
@@ -79,7 +72,6 @@
 }
 /* 0.8 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.8 !important;
@@ -90,7 +82,6 @@
 }
 /* 0.9 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 0.9 !important;
@@ -101,7 +92,6 @@
 }
 /* 1.0 */
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img,
 .captcha img {
   opacity: 1.0 !important;
