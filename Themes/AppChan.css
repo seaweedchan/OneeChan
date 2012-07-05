@@ -132,7 +132,6 @@ a.forwardlink {
 #boards h3,
 #ft li,
 #ft ul,
-#navbar,
 #options .dialog,
 .box-outer,
 .boxbar,
@@ -243,10 +242,6 @@ form[name^='post'] td:nth-of-type(3) > label input[type='checkbox']:checked,
 	#qr label input:checked {
 		content: url('http://i.imgur.com/CAewG.png') !important;
 	}
-}
-
-#crntBoard {
-  border-right-color: #393939 !important;
 }
 
 html body span[style='left: 5px; position: absolute;'] a,
