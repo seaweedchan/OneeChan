@@ -2,303 +2,38 @@
 
 /* List */
 #boardNavDesktopFoot a {
-display: block !important;
-font-size: 0px !important;
-visibility: hidden !important;
-margin-bottom: -15px !important;
-}
-#boardNavDesktopFoot a::after {
-content: attr(title) !important;
-font-size: 12px !important;
-visibility: visible !important;
-word-spacing: 0px !important;
-margin-bottom: -10px !important;
+	position: relative;
+	z-index: 1;
+	display: block !important;
+	margin-bottom: -15px !important;
 }
 #boardNavDesktopFoot {
-height: 300px !important;
-overflow-y: scroll !important;
-padding-bottom: 0px !important;
-padding-top: 0px !important;
-word-spacing: 0px !important;
-text-rendering: geometricPrecision !important;
+	height: 300px !important;
+	overflow-y: scroll !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+	word-spacing: 0px !important;
+	text-rendering: geometricPrecision !important;
 }
 #boardNavDesktopFoot a[href*="/a/"] {
-margin-top: -12px !important;
+	margin-top: -12px !important;
 }
-#boardNavDesktopFoot a[href*="/a/"]::before {
-content: "/a/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
+#boardNavDesktopFoot a::after{
+	content: " - " attr(title) !important;
+	font-size: 12px !important;
 }
-#boardNavDesktopFoot a[href*="/b/"]::before {
-content: "/b/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
+#boardNavDesktopFoot a[href*="//boards.4chan.org/"]::after,
+#boardNavDesktopFoot a[href*="//rs.4chan.org/"]::after{
+	content: "/ - " attr(title) !important;
+	font-size: 12px !important;
 }
-#boardNavDesktopFoot a[href*="/c/"]::before {
-content: "/c/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
+#boardNavDesktopFoot a[href*="//boards.4chan.org/"]::before,
+#boardNavDesktopFoot a[href*="//rs.4chan.org/"]::before {
+	content: "/" !important;
+	font-size: 12px !important;
 }
-#boardNavDesktopFoot a[href*="/d/"]::before {
-content: "/d/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/e/"]::before {
-content: "/e/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/f/"]::before {
-content: "/f/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/g/"]::before {
-content: "/g/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/gif/"]::before {
-content: "/gif/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/h/"]::before {
-content: "/h/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/hr/"]::before {
-content: "/hr/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/k/"]::before {
-content: "/k/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/m/"]::before {
-content: "/m/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/o/"]::before {
-content: "/o/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/p/"]::before {
-content: "/p/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/r/"]::before {
-content: "/r/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/s/"]::before {
-content: "/s/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/t/"]::before {
-content: "/t/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/u/"]::before {
-content: "/u/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/v/"]::before {
-content: "/v/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/vg/"]::before {
-content: "/vg/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/w/"]::before {
-content: "/w/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/wg/"]::before {
-content: "/wg/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/i/"]::before {
-content: "/i/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/ic/"]::before {
-content: "/ic/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/r9k/"]::before {
-content: "/r9k/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/cm/"]::before {
-content: "/cm/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/y/"]::before {
-content: "/y/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/3/"]::before {
-content: "/3/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/adv/"]::before {
-content: "/adv/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/an/"]::before {
-content: "/an/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/cgl/"]::before {
-content: "/cgl/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/ck/"]::before {
-content: "/ck/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/co/"]::before {
-content: "/co/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/diy/"]::before {
-content: "/diy/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/fa/"]::before {
-content: "/fa/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/fit/"]::before {
-content: "/fit/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/hc/"]::before {
-content: "/hc/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/hm/"]::before {
-content: "/hm/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/int/"]::before {
-content: "/int/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/jp/"]::before {
-content: "/jp/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/lit/"]::before {
-content: "/lit/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/mlp/"]::before {
-content: "/mlp/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/mu/"]::before {
-content: "/mu/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/n/"]::before {
-content: "/n/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/po/"]::before {
-content: "/po/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/pol/"]::before {
-content: "/pol/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/sci/"]::before {
-content: "/sci/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/soc/"]::before {
-content: "/soc/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/sp/"]::before {
-content: "/sp/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/tg/"]::before {
-content: "/tg/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/toy/"]::before {
-content: "/toy/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/trv/"]::before {
-content: "/trv/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/tv/"]::before {
-content: "/tv/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/vp/"]::before {
-content: "/vp/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
-}
-#boardNavDesktopFoot a[href*="/x/"]::before {
-content: "/x/   -    " !important;
-font-size: 12px !important;
-visibility: visible !important;
+#navbotr {
+	display: none;
 }
 /* Compact */
 /* No */
