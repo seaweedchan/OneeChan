@@ -240,7 +240,6 @@ scrollbar[orient='vertical'] { border-left: 0; }
 scrollbar[orient='horizontal'] { border-top: 0; }
 thumb { -moz-appearance: none !important; border: 1px solid; }/**/
 
-span[id^='4chan_ext_right'],
 a.yuimenuitemlabel:hover,
 .sideArrows a:hover {
   background-color: transparent !important;
@@ -349,11 +348,9 @@ img,
 .pages,
 .pages *,
 #qr,
-#quickrep,
 div[id^='qr'],
 table.reply[style^='clear: both'],
 td.postblock,
-span[id^='4chan_ext_right'],
 .boxcontent > hr,
 h3 {
   border: none !important;
@@ -908,35 +905,10 @@ div.reply.highlight {
   right: 2px !important;
 }
 
-#cc-newpostarea form[name^='post'] #recaptcha_reload_btn,
-#cc-newpostarea2 form[name^='post'] #recaptcha_reload_btn {
-  bottom: 13px !important;
-  left: 290px !important;
-  right: auto !important;
-}
-
-#cc-newpostarea2 form[name^='post'] #recaptcha_reload_btn {
-  left: 288px !important;
-  bottom: 34px !important;
-}
-
 form[name^='post'] #recaptcha_reload_btn,
 .refreshBtn {
   bottom: 70px !important;
   right: 5px !important;
-}
-
-#dragarea > div:nth-of-type(2) {
-  width: 260px !important;
-}
-
-#maxchars {
-  bottom: 131px;
-  right: 12px;
-}
-
-#quickrep td > table {
-  border-spacing: 0;
 }
 
 .top-box .menubutton,
@@ -983,15 +955,13 @@ form[name^='post'] #com_submit + label {
   bottom: 4px !important;
 }
 
-#qr > form[name^='post'] #com_submit + label,
-#quickrep > form[name^='post'] #com_submit + label {
+#qr > form[name^='post'] #com_submit + label {
   top: auto !important;
   right: 4px !important;
 }
 
 div.postForm > form td:nth-of-type(3) > label input,
 #qr > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
-#quickrep > form tr:nth-of-type(3) > td:nth-of-type(3) > label input,
 form[name='delform'] > div:not(.thread) input,
 .deleteform input[type='checkbox'] {
   vertical-align: middle;
@@ -1096,11 +1066,8 @@ body > div[style='width: 100%;'] {
 #boardNavDesktop a,
 #qr td,
 #qr tr[height='73']:nth-of-type(2),
-#quickrep tr[height='73'] td:nth-of-type(2),
-#quickrep td.postblock,
 .recaptcha_input_area,
 .menubutton a,
-.chanchimp > div,
 .pages td,
 .recaptchatable td.recaptcha_image_cell,
 td[style='padding-left: 7px;'],
@@ -1133,26 +1100,6 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
 }
 #navtopr a[href="javascript:;"]:hover::after, body:not([class]) a[href="javascript:void(0);"]:hover::after {
   opacity: 1;
-}
-/* Strip 4chan+ of shadows and rounded edges */
-#navbar,
-#boardsMenu,
-#popup,
-.navbar2, /* 4chanplus - submenus */
-#crntBoard, /* 4chanplus - 'current board' */
-#quickrep {
-  -webkit-border-radius: 0 !important;
-  border-radius: 0 !important;
-  -webkit-box-shadow: none !important;
-}
-
-#navbar {
-  margin-left: -265px !important;
-  height: 26px !important;
-}
-
-#crntBoard {
-  height: 24px !important;
 }
 /* Expand Images div */
 #imgControls input {
@@ -1236,10 +1183,7 @@ select > input {
 }
 /* End of Expand Images div */
 /* Reply Previews */
-#backwash_tooltip, /* /b/ackwash reloaded */
-#popup, /* 4chanplus */
-#qp div.reply, /* 4chan x Quote Preview */
-div[id^=ref] /* 4chan4chrome */ {
+#qp div.reply {
   max-width: 70%;
   visibility: visible;
 }
@@ -1253,30 +1197,11 @@ div[id^=ref] /* 4chan4chrome */ {
 	}
 }
 
-#backwash_tooltip,
-#popup,
-div[id^='ref'],
-#cc-quotedcontainer_t {
-  visibility: visible;
-  z-index: 10 !important;
-}
-
-#cc-newpostarea,
-#cc-newpostarea2 {
-  z-index: 9 !important;
-}
-
-#backwash_tooltip img,
-#popup img,
-#qp div.reply img,
-div[id^='ref'] img {
+#qp div.reply img {
   max-width: 300px !important;
   height: auto !important;
 }
 
-#popup > img {
-  max-width: 100% !important;
-}
 .deleteform {
   position: fixed !important;
   top: -1000px !important;
@@ -1366,15 +1291,6 @@ div[id^='ref'] img {
 
 div.deleteform input[type="password"] {
   width: 144px !important;
-}
-
-#popup {
-  position: fixed !important;
-  top: auto !important;
-  left: auto !important;
-  right: 2px !important;
-  visibility: visible !important;
-  bottom: 24px;
 }
 
 .deleteform:hover input[type='checkbox'] {
@@ -1638,16 +1554,10 @@ div[class="navLinks"] a:first-of-type:hover::after {
   cursor: pointer;
 }
 /*[[watcherslideout]]*/
-#backwash_tooltip,
 #qp div.reply,
-#popup,
-div[id^=ref],
 div.reply,
 div.reply.highlight,
-#options,
-#navbar,
-#popup,
-#boardsMenu {
+#options {
   border: 0 !important;
 }
 
@@ -1658,14 +1568,7 @@ div.reply.highlight,
   border-radius: 0;
 }
 
-#threadwatcher .postblock {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-}
-
-#watcher .move,
-#threadwatcher .postblock {
+#watcher .move {
   padding: 2px 3px !important;
   margin-bottom: 2px !important;
   text-decoration: none !important;
