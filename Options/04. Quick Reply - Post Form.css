@@ -290,7 +290,7 @@
     top: auto !important;
     bottom: 2px !important;
   }
-  ..deleteform:hover input[name="pwd"] {
+  .deleteform:hover input[name="pwd"] {
     top: auto !important;
     bottom: 0px !important;
   }
@@ -1424,7 +1424,7 @@
     top: auto !important;
     bottom: 2px !important;
   }
-  ..deleteform:hover input[name="pwd"] {
+  .deleteform:hover input[name="pwd"] {
     top: auto !important;
     bottom: 0px !important;
   }

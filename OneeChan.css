@@ -104,59 +104,20 @@ This style is designed for the following browsers, ordered alphabetically:
     opacity: 1;
     cursor: pointer;
   }
-  @media screen and (-webkit-min-device-pixel-ratio:0) {  
-    div[class="navLinks"] + br {
-      display: none !important;
-    }
-  }
-  .postForm h1 {
-    display: none !important;
-  }
 }
 
 @-moz-document domain('4chan.org') {
   body > br,
   body > hr,
-  div[lock=off],
-  div[lock=on],
-  .boardTitle br:nth-of-type(1),
-  div.thread.stub > .summary,
-  div#logo,
-  form table tbody > tr:nth-of-type(2) td[align='right'],
+  .hidden_thread ~ .summary,
   form[name='delform'] > hr:last-of-type,
-  form[name='delform'] > hr:nth-last-of-type(2),
-  html body > a:not([style='cursor: pointer; float: right;']),
-  td[style^='padding: ']:not(#backwash_tipcell):not([style='padding: 10px 7px 7px 7px;']):not([style='padding: 10px 7px 7px;']),
-  td.rules,
-  th,
-  [id='4chan_ext_nav_top'],
+  td[style^='padding: ']:not([style='padding: 10px 7px 7px 7px;']):not([style='padding: 10px 7px 7px;']),
   #ft li.fill,
-  #popular-threads,
-  #recaptcha_logo,
-  #recaptcha_tagline,
-  #recent-images,
-  #recent-threads,
-  #rules,
   #recaptcha_switch_audio_btn,
   #recaptcha_whatsthis_btn,
-  #recaptcha_reload,
-  #quickrep tr:nth-of-type(4) b,
-  #qr.auto:not(:hover) #recaptcha_reload_btn,
-  .deleteform br,
-  .error:empty,
-  .fill,
-  .notice,
-  table[style="text-align:center;width:100%;height:300px;"],
-  .replymode,
-  .pages td:nth-of-type(2n-1),
-  .postForm form > div,
-  .postForm > form:first-child > table > tbody > tr:last-of-type,
-  .postForm .refreshBtn,
-  .yui-menu-shadow,
-  .warnicon,
   a[href*="jlist"],
   #absbot,
-  .absBotText,
+  #logo,
   .postingMode,
   .stylechanger,
   .closed,
