@@ -400,7 +400,6 @@ form[name^='post'] input[type='file'][name='upfile'],
   height: 19px !important;
 }
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img {
   opacity: 1 !important;
 }

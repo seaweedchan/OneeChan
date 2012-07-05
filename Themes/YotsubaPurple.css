@@ -397,7 +397,6 @@ html body span[style='left: 5px; position: absolute;'] a {
   width: 56px !important;
 }
 #recaptcha_image img,
-#quick_recaptcha_image img,
 #qr img {
   opacity: 1 !important;
 }
