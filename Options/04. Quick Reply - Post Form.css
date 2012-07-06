@@ -222,8 +222,8 @@
   }
   .dump #replies {
     position: relative !important;
-    top: 175px !important;
-    height: 90px !important;
+    top: 185px !important;
+    height: 100px !important;
   }
   .dump textarea {
     position: relative !important;
@@ -233,7 +233,7 @@
     position: relative !important;
     bottom: 100px !important;
   }
-  .dump input[title="Verification"] {
+  .dump .captchaimg, .dump .captchainput {
     position: relative !important;
     bottom: 100px !important;
   }
@@ -252,7 +252,7 @@
   }
   .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
     position: relative !important;
-    bottom: 10px !important;
+    bottom: 0px !important;
   }
   .warning:empty {
     position: fixed !important;
@@ -633,8 +633,8 @@
   }
   .dump #replies {
     position: relative !important;
-    top: 175px !important;
-    height: 90px !important;
+    top: 185px !important;
+    height: 100px !important;
   }
   .dump textarea {
     position: relative !important;
@@ -644,7 +644,7 @@
     position: relative !important;
     bottom: 100px !important;
   }
-  .dump input[title="Verification"] {
+  .dump .captchaimg, .dump .captchainput {
     position: relative !important;
     bottom: 100px !important;
   }
@@ -663,7 +663,7 @@
   }
   .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
     position: relative !important;
-    bottom: 10px !important;
+    bottom: 0px !important;
   }
   .warning:empty {
     position: fixed !important;
@@ -1034,8 +1034,8 @@
   }
   .dump #replies {
     position: relative !important;
-    top: 175px !important;
-    height: 90px !important;
+    top: 185px !important;
+    height: 100px !important;
   }
   .dump textarea {
     position: relative !important;
@@ -1045,7 +1045,7 @@
     position: relative !important;
     bottom: 100px !important;
   }
-  .dump input[title="Verification"] {
+  .dump .captchaimg, .dump .captchainput {
     position: relative !important;
     bottom: 100px !important;
   }
@@ -1064,7 +1064,7 @@
   }
   .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
     position: relative !important;
-    bottom: 10px !important;
+    bottom: 0px !important;
   }
   .warning:empty {
     position: fixed !important;
@@ -1362,8 +1362,8 @@
   }
   .dump #replies {
     position: relative !important;
-    top: 175px !important;
-    height: 90px !important;
+    top: 185px !important;
+    height: 100px !important;
   }
   .dump textarea {
     position: relative !important;
@@ -1373,7 +1373,7 @@
     position: relative !important;
     bottom: 100px !important;
   }
-  .dump input[title="Verification"] {
+  .dump .captchaimg, .dump .captchainput {
     position: relative !important;
     bottom: 100px !important;
   }
@@ -1392,7 +1392,7 @@
   }
   .dump input[name="name"], .dump input[name="sub"], .dump input[name="email"] { 
     position: relative !important;
-    bottom: 10px !important;
+    bottom: 0px !important;
   }
   .warning:empty {
     position: fixed !important;
