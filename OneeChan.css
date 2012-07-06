@@ -1852,8 +1852,14 @@ height: 20px !important;
   background: none !important;
   padding-bottom: 2px !important;
 }
-.inline .report_button, .inline input {
+.inline input {
   display: none !important;
+}
+html .inline .report_button, html .inline .menu_button {
+  opacity: 1 !important;
+  position: relative !important;
+  top: -2px !important;
+  left: 2px !important;
 }
 div.pagelist {
   background: none !important;
