@@ -1,5 +1,17 @@
 OneeChan changelog
 
+v3.4
+-New icons to replace old ones
+-Operating System emoji
+-Support for new 4chan X menu
+-Performance improvements
+-New option: Hide Checkboxes?
+
+v3.3
+-Code tag support
+-YouTube URL Replacer / Link Title support
+-New option: Reveal All Spoilers
+
 v3.2
 -Fix for Chrome users for many colors being off due to Moot adding !important everywhere
 
