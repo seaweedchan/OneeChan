@@ -40,7 +40,7 @@
     top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .globalMessage::before {
     top: 19px !important;
@@ -49,7 +49,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -105,7 +105,7 @@
     top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .globalMessage::before {
     top: 19px !important;
@@ -114,7 +114,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -163,7 +163,7 @@
     top: 110px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 102px !important;
+    top: 104px !important;
   }
   .globalMessage::before {
     top: 104px !important;
@@ -172,7 +172,7 @@
     top: 119px !important;
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 102px !important;
+    top: 104px !important;
   }
   .deleteform::before {
     top: 102px !important;
@@ -216,7 +216,7 @@
     top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .globalMessage::before {
     top: 19px !important;
@@ -225,7 +225,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -292,7 +292,7 @@
     top: 110px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 102px !important;
+    top: 104px !important;
   }
   .globalMessage::before {
     top: 104px !important;
@@ -301,7 +301,7 @@
     top: 119px !important;
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 102px !important;
+    top: 104px !important;
   }
   .deleteform::before {
     top: 102px !important;
@@ -357,7 +357,7 @@
     top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .globalMessage::before {
     top: 19px !important;
@@ -366,7 +366,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .deleteform::before {
     top: 17px !important;
@@ -418,7 +418,7 @@
     top: 25px !important;
   }
   body > a[style='cursor: pointer; float: right;']::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .globalMessage::before {
     top: 19px !important;
@@ -427,7 +427,7 @@
     top: 34px !important; 
   }
   div[class="navLinks"] a:first-of-type::after {
-    top: 17px !important;
+    top: 19px !important;
   }
   .deleteform::before {
     top: 17px !important;
