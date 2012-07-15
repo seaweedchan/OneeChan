@@ -183,7 +183,7 @@ div.post > blockquote a[href^="//"],
   .reply.highlight,
   #boardNavDesktop .title,
   #imgControls label::after,
-  #qp div.post,
+  #qp,
   #updater #count:not(.new)::after,
   .globalMessage,
   #qr_form input[name="email"] + label::after,
@@ -216,7 +216,7 @@ span.pln {
   textarea:hover {
     background-color: #F0E0D6 !important;
   }
-  #qp div.post {
+  #qp {
     background-color: #d6bad0 !important;
     -moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
     -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
@@ -446,7 +446,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktop::after,
-#qp div.post,
+#qp,
 #updater #count:not(.new)::after,
 .globalMessage,
 #qr_form input[name="email"] + label::after,
@@ -478,7 +478,7 @@ input[type='file'] > input[type='button']:hover,
 textarea:hover {
   background-color: #d6bad0 !important;
 }
-#qp div.post {
+#qp {
  background-color: #d6bad0 !important;
  -moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
  -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;

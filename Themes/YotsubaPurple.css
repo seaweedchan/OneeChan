@@ -201,7 +201,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
-#qp div.post,
+#qp,
 #updater #count:not(.new)::after,
 .globalMessage,
 #qr_form input[name="email"] + label::after,
@@ -233,7 +233,7 @@ input[type='file'] > input[type='button']:hover,
 textarea:hover {
   background-color: #EDF !important;
 }
-#qp div.post {
+#qp {
  background-color: #FFF !important;
  -moz-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;
  -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;

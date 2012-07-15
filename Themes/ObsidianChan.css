@@ -85,7 +85,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
-#qp div.post,
+#qp,
 #updater #count:not(.new)::after,
 .globalMessage,
 #qr_form input[name="email"] + label::after,
@@ -245,7 +245,7 @@ textarea:hover {
 .qphl {
   outline-color: #627c8d !important;
 }
-#qp div.post {
+#qp {
  background-color: rgba(0,0,0,0.8) !important;
  border-radius: 4px !important;
  border: 1px solid #333 !important;

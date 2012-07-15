@@ -49,7 +49,7 @@ textarea,
 #boardNavDesktop .title,
 #imgControls label::after,
 #boardNavDesktopFoot::after,
-#qp div.post,
+#qp,
 #updater #count:not(.new)::after,
 .globalMessage,
 #qr_form input[name="email"] + label::after,
@@ -213,7 +213,7 @@ textarea:hover {
   background-color: #073642 !important;
 }
 
-#qp div.post {
+#qp {
   background-color: rgba(7,54,66,0.9) !important; 
   border: 1px solid rgba(79,95,143,0.9) !important;
 }

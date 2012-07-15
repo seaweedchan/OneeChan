@@ -1678,7 +1678,10 @@ span.lit {
   color: #2AA0A0 !important;
 }
 
-
+.inline, #qp {
+  background-color: transparent !important;
+  border: none !important;
+}
 
 /*[[PagesPosition]]*/
 /*[[ReplyMargin]]*/
@@ -1689,9 +1692,8 @@ span.lit {
 .fileText+br+a[target='_blank']:hover {
   background: none !important;
 }
-.inline, #qp {
+#qp div.reply {
   background-color: transparent !important;
-  border: none !important;
 }
 /* Adblock Minus */
 img[src^='//static.4chan.org/support/'] {
