@@ -818,7 +818,6 @@ form[name^='post'] input[name='recaptcha_response_field'] {
 }
 #qp {
   z-index: 99 !important;
-  min-width: 500px !important;
 }
 
 .exPopup {
@@ -1180,7 +1179,6 @@ select > input {
 /* End of Expand Images div */
 /* Reply Previews */
 #qp div.reply {
-  max-width: 70%;
   visibility: visible;
 }
 
