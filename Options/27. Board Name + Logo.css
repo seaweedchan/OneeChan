@@ -33,7 +33,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
   }
   #settingsBox {
@@ -98,7 +98,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
   }
   #settingsBox {
@@ -156,7 +156,7 @@
   #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 104px !important;
   }
   #settingsBox {
@@ -209,7 +209,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
   }
    #settingsBox {
@@ -285,7 +285,7 @@
   #boardNavDesktopFoot:hover {
     top: 119px !important;
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 104px !important;
   }
   #settingsBox {
@@ -350,7 +350,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
   }
   #settingsBox {
@@ -411,7 +411,7 @@
   #boardNavDesktopFoot:hover {
     top: 34px !important; 
   }
-  #navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+  #navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
     top: 19px !important;
   }
   #settingsBox {

@@ -199,6 +199,7 @@ input,
 #stats,
 #updater,
 #navtopr a[href="javascript:;"],
+#settingsWindowLink,
 body:not([class]) a[href="javascript:void(0);"],
 label,
 #imageType,
@@ -1082,7 +1083,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   color: transparent !important;
   z-index: 6 !important;
 }
-#navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+#navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVERwCAMQyMBKZOAhEng69lCChImYRKQkH0AG7fdjfaHpmmbFmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFAGGyWuspVmQAAAAASUVORK5CYII=');
   position: fixed !important;
   left: 230px !important;
@@ -1093,7 +1094,7 @@ div[id^='qr'] tr[height='73']:nth-of-type(2) {
   z-index: -1 !important;
   opacity: 0.3;
 }
-#navtopr a[href="javascript:;"]:hover::after, body:not([class]) a[href="javascript:void(0);"]:hover::after {
+#navtopr a[href="javascript:;"]:hover::after, #settingsWindowLink:hover::after, body:not([class]) a[href="javascript:void(0);"]:hover::after {
   opacity: 1;
 }
 /* Expand Images div */

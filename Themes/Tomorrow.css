@@ -369,7 +369,7 @@ form[name='delform'] > div:not(.thread) select,
 }
 /* Toolbox images */
 /* 4chan X options */
-#navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+#navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVENwCAMRE8CUiYBCZOAM6Rg4CWTMAlIuH0AG9mS0f7Q67W9FmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFtjLxtKnNCFwAAAAASUVORK5CYII=') !important;
 }
 /* Delete buttons */

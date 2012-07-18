@@ -358,7 +358,7 @@ form[name='delform'] > div:not(.thread) select,
 }
 /* Toolbox images */
 /* 4chan X options */
-#navtopr a[href="javascript:;"]::after, body:not([class]) a[href="javascript:void(0);"]::after {
+#navtopr a[href="javascript:;"]::after, #settingsWindowLink::after, body:not([class]) a[href="javascript:void(0);"]::after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABZUlEQVQ4T5WUTUoDQRCFy5+YiY5xERCNIgqKuDO4cOFAQHERVHAruNJLeBmP4Qk8gTfIDbxBx/c6NZ3KdM8MNjymp7r665qaqhbRURSFQB2oD+1AXWilXLdP45djvsq9YSjoQpzMSsF2RMfKYZuw3RmfM++jAH8y5lsWxDlsA13z69Bjwifj4jp0Cg11Q16J6lbtjCSC6GFdgnomzEO8Z4kTN2B/qtoVcuxzyaSmHCpRneD9O3HAOfav+Rxq1i9bYL9YH0JfJvoFxCSxB+BDC2yK9WtoCl/+qXkklbooa2gPDlcNQELoE0oiVWcLm5OPpugA2vUJbhxOngG5h95bYPv1MCcvZvMr5p8tsIMY5mSc2MTk/uMz05CZ6bGoSE0ZTBBVR2BgTkKjhrlJpPbjUh/C1jewjKAY4mRSUyLbieq+mddUDMrr/moZGZ4j9h5rjr1KO0E/Cntrroulu4uXGS/BcKn9AdkbdrZ6te9cAAAAAElFTkSuQmCC') !important; 
   
 }
