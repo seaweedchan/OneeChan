@@ -371,12 +371,17 @@ div.reply.highlight,
 {
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 0 3px 0" : "0 0 0 3px") + " !important;
 }
-#qr, .deleteform 
+#qr:not(.autohide), .deleteform 
 {
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 0 3px" : "3px 0 0 3px") + " !important;
 }
 
 " : "") + "
+#qr.autohide > .move 
+{
+padding-top: 4px !important;
+height: 26px !important;
+}
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder
 {
