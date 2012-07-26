@@ -1358,7 +1358,7 @@ td.doubledash
 }
 .boardBanner .boardSubtitle
 {
-    " + ($SS.conf["Board Name Position"] == 1 ? "" : "position:absolute; bottom:" + ($SS.conf["Post Form"] !== 1 ? 342 : 72) + "px;") + "
+    " + ($SS.conf["Board Name Position"] == 1 ? "position: relative;" : "position:absolute; bottom:" + ($SS.conf["Post Form"] !== 1 ? 342 : 72) + "px;") + "
 	left:0;
 	text-shadow:" + $SS.theme.mainColor.hex + " -1px -1px," + $SS.theme.mainColor.hex + " 1px -1px," + $SS.theme.mainColor.hex + " -1px 1px," + $SS.theme.mainColor.hex + " 1px 1px,rgba(0,0,0,.2) 0 0 10px,#000 0 1px 5px,#000 0 -1px 5px;
 	width:100%;
