@@ -1,5 +1,9 @@
 OneeChan changelog
 
+v4.0.0:
+-Moved to userscript, forked now from 4chan Style Script rather than AppChan
+-New Themes: Original Minimalistic Mayhem, Solarized Light, Blackboard, Vimyanized Dark, and everything that was already in 4chan SS
+
 v3.4
 -New icons to replace old ones
 -Operating System emoji

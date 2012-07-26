@@ -1,8 +1,0 @@
-/*[[HideTrip]]*/
-
-/* Yes: */
-  input[name="name"]:not(:hover):not(:focus), input[name="name"]:not(:hover):not(:focus) > * {
-    color: transparent !important;
-    text-shadow: none !important;
-  }
-/* No: */
