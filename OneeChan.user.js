@@ -2238,7 +2238,7 @@
                 { img: "http://i.imgur.com/qTQqY.png",                                                          "default":   true }, // Hasekura Youko
                 { img: "http://i.imgur.com/lKQHW.png",                                                          "default":   true }, // Hatsune Miku
                 { img: "http://i.imgur.com/ULksz.png",                                                          "default":   true }, // Hatsune Miku 2
-                { img: "http://i.imgur.com/H1pgZ.png",                                                          "default":   true }, // Hatsune Miku (big)
+                { img: "http://i.imgur.com/H1pgZ.png", offset: -120, position: "center",                        "default":   true }, // Hatsune Miku (big)
                 { img: "http://i.imgur.com/sL1Uo.png",                                                          "default":   true }, // Hirasawa Yui
                 { img: "http://i.imgur.com/HMpug.png",                                                          "default":   true }, // Horo sil (light color schemes)
                 { img: "http://i.imgur.com/PKfl4.png",                                                          "default":   true }, // Horo sil (dark color schemes)
@@ -2255,12 +2255,12 @@
                 { img: "http://i.imgur.com/aGFCl.png",                                                          "default":   true }, // Nagato Yuki sil (dark color schemes)
                 { img: "http://i.imgur.com/L9ZAT.png",                                                          "default":   true }, // Nagato Yuki + Pantsu (light color schemes)
                 { img: "http://i.imgur.com/MwoI9.png",                                                          "default":   true }, // Nagato Yuki + Pantsu (dark color schemes)
-                { img: "http://i.imgur.com/6c3p3.png",                                                          "default":   true }, // Nakano Azusa
+                { img: "http://i.imgur.com/6c3p3.png", overflow: true,                                          "default":   true }, // Nakano Azusa
                 { img: "http://i.imgur.com/QoKJb.png",                                                          "default":   true }, // Patchouli Knowledge
                 { img: "http://i.imgur.com/JNS1z.png",                                                          "default":   true }, // Shana
                 { img: "http://i.imgur.com/TBHI6.png",                                                          "default":   true }, // Shinonome Hakase
                 { img: "http://i.imgur.com/iVl5d.png",                                                          "default":   true }, // Suzumiya Haruhi
-                { img: "http://i.imgur.com/rW9Q6.png",                                                          "default":   true }, // Suzumiya Haruhi 2
+                { img: "http://i.imgur.com/rW9Q6.png", offset: -120, position: "center",                         "default":   true }, // Suzumiya Haruhi 2
                 { img: "http://i.imgur.com/DL5uR.png", overflow: true,                                          "default":   true }, // asuka
                 { img: "http://i.imgur.com/zhPlM.png",                                                          "default":   true }, // erio
                 { img: "http://i.imgur.com/b9KmB.png",                                                          "default":   true }, // homu
