@@ -2233,7 +2233,7 @@
                 { img: "http://i.imgur.com/Wj7s7.png",                                                          "default":   true }, // Asuka Langley Soryu
                 { img: "http://i.imgur.com/VidKo.png",                                                          "default":   true }, // BLACK★ROCK SHOOTER
                 { img: "http://i.imgur.com/lxLdH.png",                                                          "default":   true }, // Dawn / Hikari (Pokemon)
-                { img: "http://i.imgur.com/zLsPY.png",                                                          "default":   true }, // Furudo Erika
+                { img: "http://i.imgur.com/1Jvs3.png", small: true,                                             "default":   true }, // Furudo Erika
                 { img: "http://i.imgur.com/iG1F2.png",                                                          "default":   true }, // Gasai Yuno
                 { img: "http://i.imgur.com/qTQqY.png",                                                          "default":   true }, // Hasekura Youko
                 { img: "http://i.imgur.com/lKQHW.png",                                                          "default":   true }, // Hatsune Miku
