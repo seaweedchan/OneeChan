@@ -403,7 +403,7 @@ body
 	padding:0!important;
 	" + ($SS.conf["Navigation Bar Position"] !== 1 ? "margin-top: -15px !important;" : "") + "
 }
-#boardLinks {
+" + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
 }
 " + (!$SS.bHideSidebar ?
