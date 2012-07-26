@@ -373,7 +373,7 @@ div.reply.highlight,
 }
 #qr:not(.autohide), .deleteform 
 {
-	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 0 3px" : "3px 0 0 3px") + " !important;
+	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 3px 0px" : "3px 0 0 3px") + " !important;
 }
 
 " : "") + "
@@ -402,6 +402,9 @@ body
     " + ($SS.conf["Sidebar Position"] == 2 ? "margin-left: 261px !important" : "") + ";
 	padding:0!important;
 	" + ($SS.conf["Navigation Bar Position"] !== 1 ? "margin-top: -15px !important;" : "") + "
+}
+#boardLinks {
+	padding-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
 }
 " + (!$SS.bHideSidebar ?
 ($SS.conf["Sidebar Position"] !== 3 ? "
@@ -1967,10 +1970,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 {
 	float:  " + $SS.conf["Sidebar Position String"] + " !important;
 }
-#boardNavDesktop>select
-{
-	float: left !important;
-}
+
 #boardNavDesktop>select
 {
     padding:0 4px!important;
