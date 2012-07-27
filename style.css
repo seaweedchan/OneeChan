@@ -2058,7 +2058,7 @@ label#prefetch
     position:fixed!important;
     " + $SS.conf["Sidebar Position String"] + ":130px!important;
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
-    top:108px!important;
+    top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
     z-index:13!important;
 }
 
