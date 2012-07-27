@@ -713,6 +713,13 @@ div.postContainer, div.replyContainer
 {
 	margin-left: 5px !important;
 }
+html .inline .report_button, html .inline .menu_button 
+{
+	opacity: 1 !important;
+	position: relative !important;
+	top: -2px !important;
+	right: 1px !important;
+}
 
 " + ($SS.conf["Layout"] === 1 ?
 ($SS.conf["Show/Hide Menu Entry"] ? "
