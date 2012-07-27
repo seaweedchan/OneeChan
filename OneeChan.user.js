@@ -2276,7 +2276,8 @@
                 { img: "http://i.imgur.com/K1mLx.png", flip: false, samll: true,                                "default":   true }, // shana
                 { img: "http://i.imgur.com/FKDcd.png",                                                          "default":   true }, // shiki
                 { img: "http://i.imgur.com/haBSN.png",                                                          "default":   true }, // yin
-                { img: "http://i.imgur.com/c8Lal.png",                                                          "default":   true }  // yuzuki
+                { img: "http://i.imgur.com/c8Lal.png",                                                          "default":   true }, // yuzuki
+                { img: "http://i.imgur.com/dK9Pn.png",                                                          "default":   true }  // patchouli 2
             ],
 
             init: function()
