@@ -2057,14 +2057,10 @@ label#prefetch
     position:fixed!important;
     " + $SS.conf["Sidebar Position String"] + ":130px!important;
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
-    top:19px!important;
+    top:108px!important;
     z-index:13!important;
 }
-#prefetch 
-{
-	top: 108px !important;
-	background: none !important;
-}
+
 #prefetch .riceCheck 
 {
 	float: left !important;
