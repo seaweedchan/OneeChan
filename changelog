@@ -1,5 +1,15 @@
 OneeChan changelog
 
+v4.0.1:
+-Add zenburned theme
+-Add new Patchouli mascot
+-Tweak prefetch label
+-Fix navlinks placement
+-Fix thread hider link in Chrome
+-Style the front page
+-Move navigation links based on side bar and side margin
+
+
 v4.0.0:
 -Moved to userscript, forked now from 4chan Style Script rather than AppChan
 -New Themes: Original Minimalistic Mayhem, Solarized Light, Blackboard, Vimyanized Dark, and everything that was already in 4chan SS
