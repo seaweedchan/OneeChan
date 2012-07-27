@@ -2258,11 +2258,11 @@
                 { img: "http://i.imgur.com/L9ZAT.png",                                                          "default":   true }, // Nagato Yuki + Pantsu (light color schemes)
                 { img: "http://i.imgur.com/MwoI9.png",                                                          "default":   true }, // Nagato Yuki + Pantsu (dark color schemes)
                 { img: "http://i.imgur.com/6c3p3.png", overflow: true,                                          "default":   true }, // Nakano Azusa
-                { img: "http://i.imgur.com/QoKJb.png",                                                          "default":   true }, // Patchouli Knowledge
+                { img: "http://i.imgur.com/QoKJb.png", small: true,                                             "default":   true }, // Patchouli Knowledge
                 { img: "http://i.imgur.com/JNS1z.png",                                                          "default":   true }, // Shana
                 { img: "http://i.imgur.com/TBHI6.png",                                                          "default":   true }, // Shinonome Hakase
                 { img: "http://i.imgur.com/iVl5d.png",                                                          "default":   true }, // Suzumiya Haruhi
-                { img: "http://i.imgur.com/rW9Q6.png", offset: -120, position: "center",                         "default":   true }, // Suzumiya Haruhi 2
+                { img: "http://i.imgur.com/rW9Q6.png", offset: -120, position: "center",                        "default":   true }, // Suzumiya Haruhi 2
                 { img: "http://i.imgur.com/DL5uR.png", overflow: true,                                          "default":   true }, // asuka
                 { img: "http://i.imgur.com/zhPlM.png",                                                          "default":   true }, // erio
                 { img: "http://i.imgur.com/b9KmB.png",                                                          "default":   true }, // homu
