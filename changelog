@@ -2,10 +2,10 @@ OneeChan changelog
 
 master:
 -Fix /f/
+-Revert Hide Tripcode option for Smart Tripcode Hider
 
 v4.0.3:
 -z-index tweaks
--New option: Hide Tripcode
 
 v4.0.2:
 -Add zenburned theme

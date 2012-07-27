@@ -2409,11 +2409,6 @@ select#pagesDrop
 {
     padding:2px;
 }") : "") + "
-" + ($SS.conf["Hide Tripcode"] ? "
-input[name='name']:not(:hover):not(:focus) {
-	color: transparent !important;
-	text-shadow: none !important;
-}" : "") + "
 body>div[style='width: 100%;']+form[name=delform]
 {
 	display:block!important;
