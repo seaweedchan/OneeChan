@@ -211,6 +211,10 @@ content: '●';
 color: rgb(214, 149, 149);
 position: relative !important;
 top: 2px !important;
+.flashListing .highlightPost::after {
+left: 12px !important;
+margin-left: -10px !important;
+}
 }
 .flashListing > tbody
 {
