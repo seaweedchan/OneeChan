@@ -451,6 +451,14 @@ textarea:-moz-placeholder
 html, body {
 background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 }
+" + (($SS.conf["Hide Filtered 4chan X Links"] === 1) || ($SS.conf["Hide Filtered 4chan X Links"] === 3) ? ".filtered.backlink
+{ 
+	display: none !important;
+}" : "") + "
+" + (($SS.conf["Hide Filtered 4chan X Links"] === 2) || ($SS.conf["Hide Filtered 4chan X Links"] === 3) ? ".quotelink.filtered
+{ 
+	display: none !important;
+}" : "") + "
 body[class]
 {
 	
