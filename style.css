@@ -182,6 +182,39 @@ div[id*=jsMath],
 {
 	background:" + $SS.theme.mainColor.hex + "!important;
 }
+.boxcontent, .top-box, .left-box, .box-outer, .yui-skin-sam .yuimenu .bd
+{
+	background:" + $SS.theme.mainColor.hex + "!important;
+}
+.box-outer, .yui-skin-sam .yuimenu .bd
+{
+	border: 1px solid " + $SS.theme.brderColor.hex + " !important;
+}
+#ft li, #recent-images li, .boxbar, body:not([class]) .menubutton
+{
+	background: none !important;
+	border: none !important;
+
+}
+#optionsmenu:not([style=*='visibility:hidden;']), #filtermenu:not([style*='visibility: hidden;']) {
+	top: 24px !important;
+}
+
+
+
+body:not([class]) {
+margin-top: 100px !important;
+}
+#ft ul {
+	border-top: none !important;
+}
+#ft li.first {
+	border-left: none !important;
+}
+#ft li.current, #ft li.fill {
+	background: none !important;
+	border: none !important;
+}
 #boardNavDesktop,
 #imgControls
 {
@@ -280,6 +313,8 @@ body>form[name=post],
 a[href='#bottom'],
 .stylechanger,
 #absbot,
+#logo,
+#copyright,
 #boardNavDesktopFoot,
 .pagelist,
 .pages~div,
@@ -359,7 +394,9 @@ textarea,
 div.reply,
 div.reply.highlight,
 #qp,
-.inline div.reply 
+.inline div.reply,
+.box-outer, 
+.yui-skin-sam .yuimenu .bd 
 {
 	border-radius: 3px !important;
 }
@@ -392,9 +429,12 @@ textarea:-moz-placeholder
 {
 	color:rgba(" + $SS.theme.textColor.rgb + ",.4)!important;
 }
-body
+html, body {
+background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
+}
+body[class]
 {
-	background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
+	
 	margin:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : -15) + "px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ||
                 ($SS.conf["Sidebar Position"] === 3 && $SS.conf["Reserve Edge"]) ? "261px 0 0" :
                 (!$SS.bHideSidebar && $SS.conf["Sidebar Position"] !== 3 ? "0 0 261px " + $SS.iSidebarSize + "px" : "0 0 0")) + "!important;
@@ -406,6 +446,7 @@ body
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
 }
+
 " + (!$SS.bHideSidebar ?
 ($SS.conf["Sidebar Position"] !== 3 ? "
 body::before
