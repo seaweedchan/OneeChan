@@ -1,6 +1,6 @@
 OneeChan changelog
 
-master:
+v4.0.4:
 -Fix /f/
 -Revert Hide Tripcode option for Smart Tripcode Hider
 -Add "Hide Filtered 4chan X Links" option
