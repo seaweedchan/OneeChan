@@ -444,6 +444,7 @@ body[class]
 }
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
 }
 
 " + (!$SS.bHideSidebar ?
