@@ -2066,7 +2066,7 @@ label#prefetch
     " + $SS.conf["Sidebar Position String"] + ":130px!important;
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
     top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
-    z-index:13!important;
+    z-index:5!important;
 }
 
 #prefetch .riceCheck, #prefetch input 
@@ -2389,7 +2389,11 @@ select#pagesDrop
 {
     padding:2px;
 }") : "") + "
-
+" + ($SS.conf["Hide Tripcode"] ? "
+input[name='name']:not(:hover):not(:focus) {
+	color: transparent !important;
+	text-shadow: none !important;
+}" : "") + "
 body>div[style='width: 100%;']+form[name=delform]
 {
 	display:block!important;
@@ -2900,6 +2904,10 @@ pre.prettyprint
     color:" + $SS.ppDark.lit + ";
 }" : "") +
 ($SS.conf["Pages Position"] === 3 ? "
+.mPagelist.mobile
+{
+	z-index: 5 !important;
+}
 .pages
 {
 	bottom:auto!important;
