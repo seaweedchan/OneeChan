@@ -172,7 +172,6 @@ span[style='color:#FF0000;font-weight:normal']
 option,
 div[id*=jsMath],
 #imgControls .preload,
-#prefetch,
 #jsMath_float>*,
 .deleteform
 {
@@ -705,6 +704,7 @@ div.postContainer, div.replyContainer
     float: left !important;
     margin-right: 5px !important;
     margin-left: 5px !important;
+    position: relative !important;
 }
 
 .op .menu_button
@@ -2058,6 +2058,17 @@ label#prefetch
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
     top:19px!important;
     z-index:13!important;
+}
+#prefetch 
+{
+	top: 108px !important;
+	background: none !important;
+}
+#prefetch .riceCheck 
+{
+	float: left !important;
+	position: relative !important;
+	bottom: 1px !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
