@@ -2061,7 +2061,7 @@ label#prefetch
     z-index:13!important;
 }
 
-#prefetch .riceCheck 
+#prefetch .riceCheck, #prefetch input 
 {
 	float: left !important;
 	position: relative !important;
