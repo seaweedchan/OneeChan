@@ -705,6 +705,7 @@ div.postContainer, div.replyContainer
     margin-right: 5px !important;
     margin-left: 5px !important;
     position: relative !important;
+    z-index: 2;
 }
 
 .op .menu_button
