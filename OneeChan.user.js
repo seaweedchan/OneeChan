@@ -2290,7 +2290,7 @@
                 { img: "http://i.imgur.com/zhPlM.png",                                                          "default":   true }, // erio
                 { img: "http://i.imgur.com/b9KmB.png",                                                          "default":   true }, // homu
                 { img: "http://i.imgur.com/Ht6dr.png", offset: -90, position: "center", small: true,            "default":   true }, // kuroneko
-                { img: "http://i.imgur.com/AfjG9.png", offset: 0, position: "center", flip: false, small: true, "default":   true }, // lain
+                { img: "http://i.imgur.com/AfjG9.png", small: true,                                             "default":   true }, // lain
                 { img: "http://i.imgur.com/WUIMw.png",                                                          "default":   true }, // luka
                 { img: "http://i.imgur.com/J1i26.png", offset: -90, position: "center",                         "default":   true }, // madotsuki
                 { img: "http://i.imgur.com/53yAK.png", overflow: true,                                          "default":   true }, // ムゥ～りさ
