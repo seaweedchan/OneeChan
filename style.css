@@ -125,12 +125,14 @@ a[href='javascript:;'],
 	color:" + $SS.theme.jlinkColor.hex + "!important;
 }
 .postInfo span.name,
-.postInfo span.name a
+.postInfo span.name a,
+#delform[action='https://sys.4chan.org/f/up.php'] .name
 {
 	color:" + $SS.theme.nameColor.hex + "!important;
 }
 .useremail span.postertrip,
-span>span.postertrip
+span>span.postertrip,
+#delform[action='https://sys.4chan.org/f/up.php'] .postertrip
 {
 	color:" + $SS.theme.tripColor.hex + "!important;
 }
@@ -153,7 +155,8 @@ a.forwardlink
 	color:#000!important;
 }
 .postInfo .subject,
-.replytitle
+.replytitle,
+#delform[action='https://sys.4chan.org/f/up.php'] .subject
 {
 	color:" + $SS.theme.titleColor.hex + "!important;
 }
@@ -173,7 +176,8 @@ option,
 div[id*=jsMath],
 #imgControls .preload,
 #jsMath_float>*,
-.deleteform
+.deleteform,
+table.flashListing tr:nth-of-type(2n+1)
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + ",.9)!important;
 }
@@ -193,14 +197,29 @@ div[id*=jsMath],
 {
 	background: none !important;
 	border: none !important;
-
 }
 #optionsmenu:not([style=*='visibility:hidden;']), #filtermenu:not([style*='visibility: hidden;']) {
 	top: 24px !important;
 }
-
-
-
+table.flashListing .highlightPost 
+{
+background: none !important;
+}
+table.flashListing .highlightPost::after 
+{
+content: '●';
+color: rgb(214, 149, 149);
+position: relative !important;
+top: 2px !important;
+}
+.flashListing > tbody
+{
+padding-top: 200px !important;
+}
+#delform[action='https://sys.4chan.org/f/up.php'], #delform[action='https://sys.4chan.org/f/up.php'] .postblock {
+background: none !important;
+border: none !important;
+}
 body:not([class]) {
 margin-top: 100px !important;
 }
@@ -361,6 +380,7 @@ tr,
 .preview>label::after,
 .reply,
 .replymode,
+#delform[action='https://sys.4chan.org/f/up.php'] .postblock,
 .mPagelist .pages span strong,
 #boardLinks>a.selectedBoard
 {
@@ -2649,6 +2669,12 @@ a[href='.././']
 {
 	display:block!important;
 }") + "
+" + ($SS.conf["Post Form"] === 1 ? "
+#delform[action='https://sys.4chan.org/f/up.php'] ~ #qr 
+{
+	bottom: 0px !important;
+}
+" : "") + "
 #qr>form>.captchaimg>img
 {
 	height:48px!important;

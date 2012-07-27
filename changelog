@@ -1,5 +1,8 @@
 OneeChan changelog
 
+master:
+-Fix /f/
+
 v4.0.3:
 -z-index tweaks
 -New option: Hide Tripcode
