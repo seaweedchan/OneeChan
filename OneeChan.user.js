@@ -5,8 +5,6 @@
 // @namespace     seaweedchan.github.com
 // @version       4.0.0
 // @run-at        document-start
-// @include       http://4chan.org/
-// @include       https://4chan.org/
 // @include       http://www.4chan.org/
 // @include       https://www.4chan.org/
 // @include       http://boards.4chan.org/*
