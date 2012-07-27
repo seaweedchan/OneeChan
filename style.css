@@ -2164,7 +2164,7 @@ form[name=post] #com_submit+label,
 }
 #navlinks
 {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:50px;" : "
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:50px !important;" : "
 	left:50px;
 	right:auto!important;") + "
 	top:2px !important;
