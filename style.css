@@ -568,6 +568,7 @@ body::before,
 	top:1.75em!important;
 	right:auto!important;
 }
+" + ($SS.conf["Auto Hide Thread Watcher"] ? "
 #watcher::before
 {
     top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
@@ -576,10 +577,15 @@ body::before,
 {
     top: " + ($SS.conf["Show Logo"] ? "123" : "36") + "px !important;
 }
+" : "
+#watcher
+{
+    top: " + ($SS.conf["Show Logo"] ? "130" : "43") + "px !important;
+}
+") + "
 #watcher
 {
     position: fixed !important;
-    top: 119px !important;
 }
 #watcher > div
 {
@@ -608,6 +614,7 @@ body::before,
 	max-width: 30px !important;
 	opacity: 0.6;
 	z-index: 5;
+	" + (!$SS.conf["Auto Hide Thread Watcher"] ? "display: none !important;" : "") + "
 }
 #watcher
 {
@@ -622,8 +629,9 @@ body::before,
 #watcher 
 {
     position: fixed !important;
+    " + ($SS.conf["Auto Hide Thread Watcher"] ? "
     top: -1000px !important;
-
+    bottom: auto !important;" : "") + "
 	  " + ($SS.conf["Sidebar Position"] !== 2 ? " 
     right: 2px !important;
     left: auto !important;
@@ -631,7 +639,6 @@ body::before,
     right: auto !important;
     left: 2px !important;
 	  ") + "
-    bottom: auto !important;
     width: 258px !important;
     padding-bottom: 4px !important;
 }

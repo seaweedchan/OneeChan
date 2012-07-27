@@ -4,6 +4,7 @@ master:
 -Fix /f/
 -Revert Hide Tripcode option for Smart Tripcode Hider
 -Add "Hide Filtered 4chan X Links" option
+-Fix autohide thread watcher option when disabled
 
 v4.0.3:
 -z-index tweaks
