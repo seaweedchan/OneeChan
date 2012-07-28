@@ -83,6 +83,7 @@ h3,
 }
 a,
 span>a.replylink,
+" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
 blockquote a.quotelink
 {
     " + (!$SS.conf["Underline Links"] ? "text-decoration:none!important;" : "") + "
@@ -260,7 +261,7 @@ img[alt=Sticky],
 .navLinks,
 .deleteform,
 #boardNavDesktop,
-#boardNavDesktop>a,
+
 #boardNavDesktop>span:not(#navtopr)>a,
 #navtopr,
 #imageType+label,
@@ -321,9 +322,10 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] !== 4 ? "#qr>.move .close," : "") +
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
+(!$SS.conf["Pages Position"] === 1 ? ".pagelist," : "" ) +
 ($SS.conf["Hide Checkboxes"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck," : "") +
-($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") +
-($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>select," : "") + "
+($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
+#boardNavDesktop>select,
 [hidden],
 .hidden:not(.postContainer),
 body>hr,
@@ -335,11 +337,12 @@ a[href='#bottom'],
 #logo,
 #copyright,
 #boardNavDesktopFoot,
-.pagelist,
-.pages~div,
+.prev,
+.next,	
 .postingMode,
 .sideArrows:not(.hide_reply_button),
 #delform>hr,
+" + ($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
 body>.closed>br,
 .board>hr:nth-last-child(2),
 div[style^='text-align: center'],
@@ -382,8 +385,9 @@ tr,
 .reply,
 .replymode,
 #delform[action='https://sys.4chan.org/f/up.php'] .postblock,
-.mPagelist .pages span strong,
-#boardLinks>a.selectedBoard
+.mPagelist .pages span strong,	
+#boardLinks>a.selectedBoard,
+#boardNavDesktop>a.current
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
@@ -472,7 +476,6 @@ body[class]
 	" + ($SS.conf["Navigation Bar Position"] !== 1 ? "margin-top: -15px !important;" : "") + "
 }
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
-	padding-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
 	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
 }
 
@@ -1041,7 +1044,7 @@ a.summary
 }
 .deleteform
 {
-    bottom:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : 21) + "px!important;
+    bottom:0px!important;
 	height:21px;
 	overflow:hidden;
 	padding:2px 2px 0 18px!important;
@@ -1051,7 +1054,7 @@ a.summary
 	$SS.conf["Sidebar Position String"] + ":260px;") + "
 	width:0;
 	white-space:nowrap;
-	z-index:" + ($SS.conf["Sidebar Position"] === 3 ? 11 : 6) + "!important;
+	z-index:12!important;
 	" + ($SS.conf["Layout"] !== 1 ? "border-radius:" + ($SS.conf["Sidebar Position"] !== 2 ? "3px 0 0 0" : "0 3px 0 0") : "") + ";
 	-webkit-transition:all .2s ease-in-out;
 	-moz-transition:all .2s ease-in-out;
@@ -1423,7 +1426,7 @@ td.doubledash
 	font-size: 30px !important;
 	font-weight: 400 !important;
 	font-family: Tahoma,sans-serif;
-	margin-top: 130px !important;
+	margin-top: 30px !important;
 	cursor:default!important;
 	display:block;
 	font-size:28px!important;
@@ -2220,10 +2223,6 @@ body>center:nth-of-type(2)
 {
 	color:" + $SS.theme.sageColor.hex + "!important;
 }
-#navtopr a:not(:hover)
-{
-	opacity: .5 !important;
-}
 .globalMessage 
 {
     position: fixed !important;
@@ -2305,18 +2304,24 @@ body>.closed
     position:relative;
 }
 " : "
-#boardNavDesktop
+#bNavWrapper
 {
-	height:20px!important;
-	line-height:20px!important;
-	bottom:0!important;
-	padding:0!important;
-	top:auto!important;
+    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + $SS.iSidebarSize + "px!important;" : "") + "
+    height:19px;
 	left:0!important;
+    line-height:18px;
+    overflow-y:hidden;
 	position:fixed!important;
 	text-align:center;
+    bottom:0!important;
 	width:100%!important;
 	z-index:12!important;
+}
+#boardNavDesktop
+{
+    height:19px!important;
+    margin-left:" + $SS.iSidebarSize + "px!important;
+    position:relative;
 }") + "
 #navtop,
 #navtopr
@@ -2335,7 +2340,7 @@ body>.closed
 #navtopr
 {
 	position:absolute;
-	right:5px!important;
+	right:" + ($SS.conf["Sidebar Position"] !== 2 ? "2" : "") + "5px!important;
 	top:0;
 }
 #navtopr>a:last-child::before
@@ -2344,6 +2349,9 @@ body>.closed
 
 }
 " + (!$SS.conf["Custom Navigation Links"] ? "
+#boardNavDesktop {
+	word-spacing: 1px !important;
+}
 #navtop
 {
 	bottom:0;
@@ -2354,7 +2362,7 @@ body>.closed
 	width:500px;
 	-webkit-transition:all .1s ease-in-out;
 	-moz-transition:all .1s ease-in-out;
-	-o-transition:all .1s ease-in-out
+	-o-transition:all .1s ease-in-out;
 }
 #navtop::before
 {
@@ -2385,13 +2393,46 @@ body>.closed
 }
 " : "") + ($SS.conf["Pages Position"] !== 4 ?
 ($SS.conf["Pages Position"] === 1 ? "
-select#pagesDrop
+.pagelist 
 {
-    display:inline-block!important;
-    float:left;
-    " + ($SS.conf["Navigation Bar Position"] === 2 ? "
-    height:20px!important;" : "") + "
-    margin-top:1px!important;
+	width: 100% !important;
+	padding: 3px 0px !important;
+	background: none !important;
+	border: none !important;
+	float: none !important;
+	clear:both;
+	margin-bottom: 10px !important;
+	height: 10px !important;
+	position: absolute !important;
+}
+.pages 
+{
+	width: 500px !important;
+	text-align: center !important;
+	border-spacing: 0 !important;
+	margin: auto !important;
+	padding-right: 0 !important;
+	z-index: 1;
+	float: none !important;
+	clear:both;
+	position: relative !important;
+	bottom: 5px !important;
+	right: 131px !important;
+	word-spacing: 10px !important;
+	font-size: 0px !important;
+	color: transparent !important;
+}
+.pages a 
+{
+	color:" + $SS.theme.linkColor.hex + "!important;
+}
+.pagelist .pages strong
+{
+	color:" + $SS.theme.textColor.hex + "!important;
+}
+.pages a, .pages strong 
+{
+	font-size: 12px !important;
 }
 " : "
 
@@ -2601,14 +2642,18 @@ a[href='.././']
 {
 	display:block;
 }
-#boardLinks>a.selectedBoard
+#boardLinks>a.selectedBoard, #boardNavDesktop>a.current
 {
 	font-weight: bold !important;
+}
+#boardNavDesktop>a.current:not(.selectedBoard)
+{
+	font-size: 13px !important;
 }
 #qr
 {
 	height:auto!important;
-    margin:0 0 " + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : 21) + "px!important;
+    margin:0 0 0px!important;
 	padding:0px 2px !important;
 	position:fixed!important;
 " + ($SS.conf["Post Form"] !== 4 ? "
