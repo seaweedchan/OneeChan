@@ -236,6 +236,7 @@ margin-top: 100px !important;
 	border: none !important;
 }
 #boardNavDesktop,
+" + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
 #imgControls
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",.8)!important;
@@ -322,7 +323,7 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] !== 4 ? "#qr>.move .close," : "") +
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
-(!$SS.conf["Pages Position"] === 1 ? ".pagelist," : "" ) +
+(($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
 ($SS.conf["Hide Checkboxes"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
 #boardNavDesktop>select,
@@ -467,13 +468,13 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 body[class]
 {
 	
-	margin:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : -15) + "px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ||
+	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ||
                 ($SS.conf["Sidebar Position"] === 3 && $SS.conf["Reserve Edge"]) ? "261px 0 0" :
                 (!$SS.bHideSidebar && $SS.conf["Sidebar Position"] !== 3 ? "0 0 261px " + $SS.iSidebarSize + "px" : "0 0 0")) + "!important;
-    margin-bottom:" + ($SS.conf["Navigation Bar Position"] === 1 ? 23 : 43) + "px!important;
+    margin-bottom:23px!important;
     " + ($SS.conf["Sidebar Position"] == 2 ? "margin-left: 261px !important" : "") + ";
 	padding:0!important;
-	" + ($SS.conf["Navigation Bar Position"] !== 1 ? "margin-top: -15px !important;" : "") + "
+	" + (($SS.conf["Navigation Bar Position"] === 2) && ($SS.conf["Pages Position"] !== 2) ? "margin-top: -15px !important;" : "") + "
 }
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
@@ -487,7 +488,7 @@ body::before
 	height:100%;
 	width:262px;
 	position:fixed;
-    top:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : -19) + "px!important;
+    top:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -19) + "px!important;
 	z-index:1;
 }" : "") +
 ($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
@@ -499,7 +500,7 @@ body::after
 	height:100%;
 	width:261px;
 	" + (!$SS.mascot.small ? "background-size:contain;" : "")) + "
-    bottom:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : 19) + "px!important;
+    bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : 19) + "px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
 	position:fixed;
 	z-index:2;
@@ -2323,6 +2324,7 @@ body>.closed
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
 }") + "
+
 #navtop,
 #navtopr
 {
@@ -2341,16 +2343,39 @@ body>.closed
 {
 	position:absolute;
 	right:" + ($SS.conf["Sidebar Position"] !== 2 ? "2" : "") + "5px!important;
-	top:0;
+	top:1;
 }
 #navtopr>a:last-child::before
 {
     content:' / ';
 
 }
+" + ($SS.conf["Navigation Bar Position"] === 3 ? "
+#bNavWrapper
+{
+    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + $SS.iSidebarSize + "px!important;" : "") + "
+    height:19px;
+	left:0!important;
+    line-height:18px;
+    overflow-y:hidden;
+	position:static!important;
+	text-align:center;
+	width:100%!important;
+	z-index:12!important;
+	position: absolute !important;
+	top: 0px !important;
+}
+#boardNavDesktop
+{
+    height:18px!important;
+    margin-left:" + $SS.iSidebarSize + "px!important;
+    position:relative;
+}
+" : "") + "
 " + (!$SS.conf["Custom Navigation Links"] ? "
-#boardNavDesktop {
-	word-spacing: 1px !important;
+#boardNavDesktop a 
+{
+	margin: 0 1px 0 2px !important;
 }
 #navtop
 {
@@ -2435,7 +2460,6 @@ body>.closed
 	font-size: 12px !important;
 }
 " : "
-
 .mPagelist.mobile
 {
 	background:transparent!important;
@@ -2466,6 +2490,54 @@ body>.closed
 {
     padding:2px;
 }") : "") + "
+" + ($SS.conf["Pages Position"] === 2 ? "
+.pagelist 
+{
+	width: 100% !important;
+	padding: 3px 0px !important;
+	border: none !important;
+	float: none !important;
+	clear:both;
+	margin-bottom: 10px !important;
+	height: 15px !important;
+	position: fixed !important;
+" + ($SS.conf["Navigation Bar Position"] !== 2 ? "bottom: -10px !important;" : "
+	top: 0px !important;") + "
+	z-index: 3;
+}
+.pages 
+{
+	width: 500px !important;
+	text-align: center !important;
+	border-spacing: 0 !important;
+	margin: auto !important;
+	padding-right: 0 !important;
+	z-index: 1;
+	float: none !important;
+	clear:both;
+	position: relative !important;
+    bottom: 4px !important;
+	right: 131px !important;
+	word-spacing: 10px !important;
+	font-size: 0px !important;
+	color: transparent !important;
+	height: 15px !important;
+}
+.pages a 
+{
+	color:" + $SS.theme.linkColor.hex + "!important;
+}
+.pagelist .pages strong
+{
+	color:" + $SS.theme.textColor.hex + "!important;
+}
+.pages a, .pages strong 
+{
+	font-size: 12px !important;
+}
+.mPagelist.mobile {
+display: none !important;
+}" : "") + "
 body>div[style='width: 100%;']+form[name=delform]
 {
 	display:block!important;
@@ -2754,7 +2826,7 @@ a[href='.././']
 }
 #qr>.move
 {
-    height:" + ($SS.conf["Navigation Bar Position"] === 1 ? 23 : 22) + "px!important;
+    height:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 23 : 22) + "px!important;
 	line-height:18px!important;
 	min-width:0!important;
 	padding:2px 0 0 3px!important;
@@ -2935,7 +3007,7 @@ form[name=delform][action$='/f/up.php'] tr
 .ys_playerContainer
 {
     position:fixed!important;
-    bottom:" + ($SS.conf["Navigation Bar Position"] === 1 ? 262 : 287) + "px!important;
+    bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 262 : 287) + "px!important;
     margin:0!important;
     width:262px!important;
     " + $SS.conf["Sidebar Position String"] + ":0!important;
