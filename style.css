@@ -2344,6 +2344,7 @@ body>.closed
 	position:absolute;
 	right:" + ($SS.conf["Sidebar Position"] !== 2 ? "2" : "") + "5px!important;
 	margin-top: 1px !important;
+	top: 0px !important;
 }
 #navtopr>a:last-child::before
 {
