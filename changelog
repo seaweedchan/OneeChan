@@ -1,5 +1,8 @@
 OneeChan changelog
 
+v4.0.5:
+-Bring back navigation/pages styling from userstyle
+
 v4.0.4:
 -Fix /f/
 -Revert Hide Tripcode option for Smart Tripcode Hider
