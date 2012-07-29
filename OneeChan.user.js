@@ -11,7 +11,7 @@
 // @include       https://boards.4chan.org/*
 // @include       http*://rs.4chan.org/*
 // @include       http*://sys.4chan.org/*
-// @updateURL     https://github.com/ahodesuka/4chan-Style-Script/raw/stable/4chanSS.user.js
+// @updateURL     https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js
 // ==/UserScript==
 
 (function()
