@@ -1,1 +1,2 @@
 -Switch "4chan X" and "OneeChan" links out with icons
+-Use isLight for switching OneeChan icons, rather than relying on the customCSS
