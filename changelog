@@ -1,5 +1,12 @@
 OneeChan changelog
 
+v4.0.6:
+ahokadesuka:
+  -Emoji position option
+  -SFW/NSFW separate themes option
+  -Madotsuki emoji
+  -Fixed issues with deleting mascot defaults, and slightly redesigned mascot dialog
+
 v4.0.5:
 -Bring back navigation/pages styling from userstyle
 
