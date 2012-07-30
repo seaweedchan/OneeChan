@@ -1161,7 +1161,7 @@ blockquote>div[style]
 .fileThumb>img+img
 {
 	background-color:rgba(" + $SS.theme.mainColor.rgb + ",.01)!important;
-    z-index:10!important;
+    z-index:13!important;
 }
 img[alt=Closed],
 img[alt=Sticky],
@@ -2043,7 +2043,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 	top:0;
 	width:" + ($SS.conf["Sidebar Position"] === 3 && $SS.conf["Reserve Edge"] ? 114 : 115) + "px!important;
 	padding-" + $SS.conf["Sidebar Position String"] + ":147px!important;
-	z-index:13;
+	z-index:14;
 }
 #imgControls #imageType,
 #boardNavDesktop>select
@@ -2214,7 +2214,7 @@ form[name=post] #com_submit+label,
 #ihover
 {
 	padding-bottom:21px;
-	z-index:10!important;
+	z-index:15!important;
 }
 body>center:nth-of-type(2)
 {
