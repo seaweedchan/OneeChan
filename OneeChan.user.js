@@ -184,15 +184,15 @@
         "Bitmap Font": [ false, "Check this if you are using a bitmap font" ],
         "Nav Links":
         [
-            { text: "anime & manga", link: "boards.4chan.org/a/"  },
-            { text: "anime/cute",    link: "boards.4chan.org/c/"  },
-            { text: "technology",    link: "boards.4chan.org/g/"  },
-            { text: "video games",   link: "boards.4chan.org/v/"  },
-            { text: "otaku culture", link: "boards.4chan.org/jp/" }
+            { text: "Anime & Manga", link: "boards.4chan.org/a/"  },
+            { text: "Anime/Cute",    link: "boards.4chan.org/c/"  },
+            { text: "Technology",    link: "boards.4chan.org/g/"  },
+            { text: "Video Game Generals",   link: "boards.4chan.org/vg/"  },
+            { text: "Otaku Culture", link: "boards.4chan.org/jp/" }
         ],
         "Nav Link Delimiter":
         [
-            "&nbsp;-&nbsp;", "Sets the character which will separate navigation links"
+            "&nbsp;•&nbsp;", "Sets the character which will separate navigation links"
         ],
         "Themes"          : [],
         "Hidden Themes"   : [],
