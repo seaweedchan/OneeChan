@@ -107,16 +107,23 @@ div.post div.postInfo span~span.postNum a:hover,
 	-moz-transition:none;
 	-o-transition:none;
 }
-.settingsWindowLink
-{
-color: transparent !important;
-font-size: 0px !important;
+.settingsWindowLink {
+	position: fixed !important;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAARhJREFUOE9j8PX1ZUDCbEA2N5oYsjyIzQeTR5eYAJS4DsTzgFgMzRBOIH8WEB8E4nKQHEwzE1QhC5DuTktL+w+k5yJpBmmcD8QFQLwciFcja54K5IhCFSuDNEMNEAKKIWtcATIciKOQNa8BcjYAsS0Q70TSbATkd0BthGmMR/dzGEwDMg31nwGQngTEPUAM14hsM8jv4UC8Dt0QqAEgF4HkUQIYPbRhUbEMiws0idEMMgCkkKAB2GyOAWrcAw19vAYga5YAaigC4gNArAB1Iig1YTNAAznAWIGc7UB8AYj10PwGNwBquDmQXoCsuRjIOQ/EIBqW2pBdBTYAiJOAWAWIlyBrzsFiI7YM0QRUNxOIVZE1Yws4gmIA3NYVkcQXjeIAAAAASUVORK5CYII=');
+	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 46px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+	opacity: .6;
+	height: 13px !important;
+	width: 13px !important;
+	z-index: 5;
+	font-size: 0 !important;
+	color: transparent !important;
 }
-.settingsWindowLink::before
-{
-	content: \"4chan X\";
-	font-size: 12px !important;
-	}
+.settingsWindowLink:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 a:not([href]),
 a[href='javascript:;'],
 #settingsWindowLink,
@@ -182,7 +189,7 @@ table.flashListing tr:nth-of-type(2n+1)
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + ",.9)!important;
 }
-.globalMessage
+.globalMessage, #boardNavDesktopFoot
 {
 	background:" + $SS.theme.mainColor.hex + "!important;
 }
@@ -337,7 +344,8 @@ a[href='#bottom'],
 #absbot,
 #logo,
 #copyright,
-#boardNavDesktopFoot,
+.absBotText,
+#navbotr,
 .prev,
 .next,	
 .postingMode,
@@ -388,7 +396,8 @@ tr,
 #delform[action='https://sys.4chan.org/f/up.php'] .postblock,
 .mPagelist .pages span strong,	
 #boardLinks>a.selectedBoard,
-#boardNavDesktop>a.current
+#boardNavDesktop>a.current,
+#boardNavDesktopFoot>a.current
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
@@ -425,7 +434,7 @@ div.reply.highlight,
 {
 	border-radius: 3px !important;
 }
-.globalMessage 
+.globalMessage, #boardNavDesktopFoot 
 {
 	border-radius: 3px !important;
 }
@@ -537,7 +546,7 @@ body::before,
 	border-" + $SS.conf["Sidebar Position oString"] + ":1px solid " + $SS.theme.brderColor.hex + "!important;
 	border-bottom:1px solid " + $SS.theme.brderColor.hex + "!important;
 }
-.globalMessage 
+.globalMessage, #boardNavDesktopFoot 
 {
 	border: 1px solid " + $SS.theme.brderColor.hex + "!important;
 }
@@ -609,14 +618,10 @@ body::before,
 	height: 9px !important;
 	font-size: 12px !important;
 	position: fixed !important;
-	" + ($SS.conf["Sidebar Position"] !== 2 ? " 
-	right: 15px !important;
-	" : " 
-	left: 30px !important;
-	") + "
+	" + $SS.conf["Sidebar Position String"] + ": 85px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-	min-width: 30px !important;
-	max-width: 30px !important;
+	min-width: 15px !important;
+	max-width: 15px !important;
 	opacity: 0.6;
 	z-index: 5;
 	" + (!$SS.conf["Auto Hide Thread Watcher"] ? "display: none !important;" : "") + "
@@ -652,6 +657,96 @@ body::before,
     position: fixed !important;
     z-index: 99 !important;
 }
+#boardNavDesktopFoot::after 
+{
+	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
+	border: none !important;
+	position: fixed !important;
+	" + $SS.conf["Sidebar Position String"] + ": 65px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+	z-index: 6 !important;
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEVQTFRFAAAAZ2dnzczMZ2dnzczMZ2dntLOzZ2dnq6qqZ2dnZ2dnZ2dnkI+PZ2dnjIyMqKenZ2dnZ2dnZ2dndXR0e3t7Z2dndHR03/W/BgAAABV0Uk5TABAQICAwQGBggI+fn6+vr7/P3+/vEpdk4gAAAHlJREFUCB0FwYEBgjAQBLDUCghY/aLn/qOagOWoqmMBtJHMmsnZoM2cHf3MbBjZAFtOlpzA+jbSHelwf/1WPbua8PjkiVmqcP/ke0OVmnjl+4Cr7OnW3/MGPbue4b0CI50zG2DLgTYzOvrIbNCO5KorORqg71W1d/gDBFEGZ/GMsaMAAAAASUVORK5CYII=');
+	opacity: 0.6;
+}
+#boardNavDesktopFoot:hover::after 
+{
+	opacity: 1;
+	cursor: pointer;
+}
+#boardNavDesktopFoot 
+{
+	visibility: visible !important;
+	position: fixed !important;
+	overflow-y: scroll !important;
+	top: -1000px !important;
+	bottom: auto !important;
+	width: 238px !important;
+	color: transparent !important;
+	padding: 3px 10px 35px 10px !important;
+	height: 50px !important;
+	text-align: center !important;
+	word-spacing: -3px !important;
+}
+#boardNavDesktopFoot:hover 
+{
+	z-index: 99 !important;
+	top: " + ($SS.conf["Show Logo"] ? "123" : "36") + "px !important;
+}
+" + ($SS.conf["Slideout Navigation Type"] === 1 ? "
+#boardNavDesktopFoot a 
+{
+	position: relative;
+	z-index: 1;
+	display: block !important;
+	margin-bottom: -15px !important;
+}
+#boardNavDesktopFoot 
+{
+	height: 300px !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+	word-spacing: 0px !important;
+	text-rendering: geometricPrecision !important;
+}
+#boardNavDesktopFoot a[href*='/a/'] 
+{
+	margin-top: -12px !important;
+}
+#boardNavDesktopFoot a::after
+{
+	content: ' - ' attr(title) !important;
+	font-size: 12px !important;
+}
+#boardNavDesktopFoot a[href*='//boards.4chan.org/']::after,
+#boardNavDesktopFoot a[href*='//rs.4chan.org/']::after
+{
+	content: '/ - ' attr(title) !important;
+	font-size: 12px !important;
+}
+#boardNavDesktopFoot a[href*='//boards.4chan.org/']::before,
+#boardNavDesktopFoot a[href*='//rs.4chan.org/']::before 
+{
+	content: '/' !important;
+	font-size: 12px !important;
+}
+#boardNavDesktopFoot 
+{
+  	" + $SS.conf["Sidebar Position String"] + ": 2px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+}
+" : "
+#boardNavDesktopFoot 
+{
+		overflow-y: hidden !important;
+  	" + $SS.conf["Sidebar Position String"] + ": 20px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+}
+#boardNavDesktopFoot:hover 
+{
+  	" + $SS.conf["Sidebar Position String"] + ": 2px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+}
+") + "
 " + ($SS.conf["Layout"] !== 2 ? "
 .sideArrows a, .sideArrows span
 {
@@ -2247,8 +2342,8 @@ body>center:nth-of-type(2)
     content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK5JREFUGNN1kE0VxCAMhCMBCZVQCUhAwp6+cyXEARKQgIRIQAISKiF7oEvp7ts5zuTNT0QukCgYhpHZZQU7DcdQFKXhVMItnjS25TzSaQQRIdCxi37hw3iyHJwfIxQnTgcnCkaZpscti9DIgvNaMlc5Y4KTHvIchWKCkSexUZf+jfysdvxWC3OjkLCxn0CjrW+JX2/xGcSG4XQKSqXjOH6HDg+lYhSURBkH8h9E4htm9nkTaedRxgAAAABJRU5ErkJggg==') !important;
     height: 9px !important;
     position: fixed !important;
-  " + $SS.conf["Sidebar Position String"] + ": 52px !important;
-  " + $SS.conf["Sidebar Position oString"] + ": auto !important;
+	" + $SS.conf["Sidebar Position String"] + ": 105px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
     min-width: 15px !important;
     max-width: 15px !important;
     padding-botom: 5px !important;
@@ -2345,11 +2440,22 @@ body>.closed
 	right:" + ($SS.conf["Sidebar Position"] !== 2 ? "2" : "") + "5px!important;
 	margin-top: 1px !important;
 	top: 0px !important;
+	font-size: 0 !important;
 }
-#navtopr>a:last-child::before
-{
-    content:' / ';
-
+#OneeChanLink {
+	position: fixed !important;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVERwCAMQyMBKZOAhEng69lCChImYRKQkH0AG7fdjfaHpmmbFmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFAGGyWuspVmQAAAAASUVORK5CYII=');
+	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 28px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+	opacity: .6;
+	height: 13px !important;
+	width: 13px !important;
+	z-index: 5;
+}
+#OneeChanLink:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 " + ($SS.conf["Navigation Bar Position"] === 3 ? "
 #bNavWrapper
@@ -2568,12 +2674,12 @@ body > a[style='cursor: pointer; float: right;']::after
   top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
   " + $SS.conf["Sidebar Position String"] + ": 10px !important;
   " + $SS.conf["Sidebar Position oString"] + ": auto !important;
-  opacity: 0.6;
+  opacity: 0.6 !important;
 }
 
 body > a[style='cursor: pointer; float: right;']:hover::after
 {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 body > a[style='cursor: pointer; float: right;'] ~ div[style^='width: 100%;']
@@ -2672,7 +2778,7 @@ a[href='.././']
 	height: 15px !important;
 	top:2px;
 	" + $SS.conf["Sidebar Position String"] + ":" + (($SS.conf["Sidebar Position"] === 3 && $SS.conf["Reserve Edge"] ? 263 : 265) - 38) + "px!important;
-	z-index:14;
+	z-index:15;
 	color: transparent !important;
 	font-size: 0px !important;
 	opacity: .4;
@@ -2715,11 +2821,11 @@ a[href='.././']
 {
 	display:block;
 }
-#boardLinks>a.selectedBoard, #boardNavDesktop>a.current
+#boardLinks>a.selectedBoard, #boardNavDesktop>a.current, #boardNavDesktopFoot>a.current
 {
 	font-weight: bold !important;
 }
-#boardNavDesktop>a.current:not(.selectedBoard)
+#boardNavDesktop>a.current:not(.selectedBoard), #boardNavDesktopFoot>a.current
 {
 	font-size: 13px !important;
 }
@@ -2988,7 +3094,11 @@ a.useremail" + ($SS.conf["Sage Identification"] === 2 ? ":not([href='mailto:sage
 form[name=delform][action$='/f/up.php']
 {
     border:1px solid " + $SS.theme.brderColor.hex + "!important;
-    margin:0 5%!important;
+    " + ($SS.conf["Sidebar Position"] !== 3 ? "
+    margin-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
+	margin-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + " !important;
+	" : "
+	margin: 0px 5% !important;") + "
     border-radius:3px!important;
 }
 form[name=delform][action$='/f/up.php']>center
@@ -3033,6 +3143,34 @@ pre.prettyprint
 {
     color:" + $SS.theme.textColor.hex + ";
 }
+" + (!$SS.theme.bgColor.isLight ? "
+#imgControls label:first-of-type::after {
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAALlJREFUKFOFkT0KwlAQhANWaUSb+AciVmLlSZLcVhttBH9QjyIIHiDOF2ZhOxeGebM7b3dfUnRdVwmN0Aq1UAqFGU2eekWSQ8RTh6HNMDqiwczNiJsnkR8Jx1RrSTKKDlE467wR9jY+XK9jN0bSKQwfGy/iqVcrMWespd82fsW7XP/XmZUmuXPsfHLHq3grHKzveef8NXjozKPH4mjAvf5rZPNLGtPAjI7ozUtfiD+1kp4LPLZxDV78APzYoty/jZXwAAAAAElFTkSuQmCC')!important;
+}
+#watcher::before {
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACpQTFRFAAAA0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLUmYS1qAAAAA10Uk5TABAgQFBggI+fv8/f74aeqbgAAABVSURBVAjXnY0xDsMwEMNo+5TYPen/3+2SpUCXlhvBgfAH2uecrcdWt5O4ewHIdVtTvmXB9BoRoIzy5DqsDIAszvXRlyfItS3kXRZA9StJ0l1f/z/xBlXVAtkqW+Q3AAAAAElFTkSuQmCC')!important;
+}
+body > a[style='cursor: pointer; float: right;']::after{
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMIXMlggAAAA90Uk5TABAgMEBQYICPn6+/z9/vD6iGsgAAAFRJREFUCB0FwYcBwyAMADAZCCN2y//fRgIAAG0MAMSba/8eAO9EVAe0BOMAxgISMDaIBKgGewKMesS+C0A7mXPdCgCQtwIAou6/A0DUPQCgnw4A4APNOQHMJOa9jgAAAABJRU5ErkJggg==')!important;
+}
+a[href='.././'] {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAA5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHkJaAqNQAAAA50Uk5TABAgQFBgcICPn6+/3+9ACPafAAAASElEQVQI15XMyxKAIAxD0eCr1ZT8/+eKDCOw07O700mBT45rrDXEXgul3sn0yCwsAaGBv/cw86xc92fbl0v7z7mBzeeudhJ/3aoUA1Vr0uhDAAAAAElFTkSuQmCC')!important;
+}
+.globalMessage::before {
+	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK5JREFUGNN1kF0RxCAMhCMBCZVQCUhAwkmohDhAAhKQEAPfDBKQUAm5B3qU3s3t425mfyJygUTBMIzMLivYaTiGoigNpxJu8aSxLeeRTiOICIGOXfQLH8aT5eD8GKE4cTo4UTDKND1uWYRGFpzXkrnKGROc9JDnKBQTjDyJjbr0b+RnteO3WpgbhYSN/QQabX1L/HqLzyA2DKdTUCodx/E7dHgoFaOgJMo4kP8gEt+mlap7ZbvCVgAAAABJRU5ErkJggg==')!important;
+}
+#OneeChanLink
+{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVENwCAMRE8CUiYBCZOAM6Rg4CWTMAlIuH0AG9mS0f7Q67W9FmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFtjLxtKnNCFwAAAAASUVORK5CYII=') !important;
+}
+.settingsWindowLink
+{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABAklEQVQ4T2PYsWMHAxJmA7K50cSQ5UFsPpg8isSZM2f+wzBQgRiaIZxA/iwgPgjE5SA5mGYmqEIWNANg8iCN84G4AIiXA/FquGaQBiBHFGqAMpLtQkAxZI0rgPxuII5C0Qw1wBbNZiOgog6ojTCN8eh+DkPWhGaAAVDxJCDuAWK4RmQ/g/wWjscAW5A8WgDCAww51PmwGQLUqEmMZpBBmsQYgJ4AQPwYIN4DCn1CBiBrlgBqKALiA0CsAHUiLi9oIAcYK5CzHYgvALEemt/gBkANNwfSC5A1FwM554EYRMNSG0YgAuWSgFgFiJcga87BYiO2DNEEVDcTiFWRNWMLOIJiAARDOk9b1IHWAAAAAElFTkSuQmCC') !important;
+}
+#boardNavDesktopFoot::after {  
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMdShx9gAAAA50Uk5TABAgMEBggI+fr7/P3+82uMT1AAAAb0lEQVQIHQXBiQHDIAwEMOE8gGlu/3ErgWt297wAYyenT7IGjJNVqJUzsPMAniyuLODedspMQe3cKq8+8HxZOK0b9eUb6NYHO98Dv/am3FkDKq/Ktm9gp1h5AE8mxsku1M4ZMGby618yB6De7n4L/v79BDw2df22AAAAAElFTkSuQmCC') !important;
+}
+" : "") + "
 " + (!$SS.theme.mainColor.isLight ? "
 .prettyprint .com
 {

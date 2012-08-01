@@ -1,5 +1,12 @@
 OneeChan changelog
 
+v4.0.7:
+-Fixed a few z-index issues
+-Re-added back in Slideout Navigation with a new option to switch between "List" and "Compact", default to List.
+-Changed 4chan X link to a wrench icon, and OneeChan link to a gear icon
+-Auto detection of light or dark icons based on background color, rather than relying on custom CSS sections
+-Fix /f/ replies ignoring sidebar
+
 v4.0.6:
 ahokadesuka:
   -Emoji position option
