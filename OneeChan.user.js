@@ -3,7 +3,7 @@
 // @author        seaweedchan
 // @description   Customize 4chan to your liking right on the page itself.
 // @namespace     seaweedchan.github.com
-// @version       [4.0.7]
+// @version       4.0.7
 // @run-at        document-start
 // @include       *://www.4chan.org/
 // @include       *://boards.4chan.org/*
