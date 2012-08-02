@@ -1,5 +1,9 @@
 OneeChan changelog
 
+v4.0.8:
+-Add "Reply Opacity" option in themes' settings for control and possibly speed, defaults to 1.0 except on 安心院なじみ and 4chan Rewired. Edit this to a value of 0.0 to 0.9 if you want transparent replies, 0.0 being fully transparent.
+-Edit colors of Yotsuba/B/P's navigation to look less out of place at the top of the page
+
 v4.0.7:
 -Fixed a few z-index issues
 -Re-added back in Slideout Navigation with a new option to switch between "List" and "Compact", default to List.
