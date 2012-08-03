@@ -55,7 +55,9 @@ input::-moz-focus-inner
 	color:#" + ($SS.theme.linkColor.isLight ? "000" : "fff") +"!important;
 }
 img,
-.replyContainer div.highlight
+.replyContainer div.highlight,
+.post:target, 
+.highlight
 {
 	border:0!important;
 }
@@ -478,7 +480,7 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 { 
 	display: none !important;
 }" : "") + "
-body[class]
+html:not([xmlns]) > body
 {
 	
 	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ||
@@ -1066,7 +1068,9 @@ a.hide_thread_button>span,
 }
 .replyContainer div.highlight,
 .highlightPost,
-.qphl
+.qphl,
+.post:target, 
+.highlight
 {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(16, true) + "," + $SS.theme.replyOp + ")!important;
 }
