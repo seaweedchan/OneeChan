@@ -431,6 +431,7 @@ textarea,
 #delform div.reply,
 div.reply.highlight,
 #qp,
+#delform .postContainer,
 .inline div.reply,
 .box-outer, 
 .yui-skin-sam .yuimenu .bd 
@@ -1072,6 +1073,14 @@ a.hide_thread_button>span,
 {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(4, true) + "," + $SS.theme.replyOp + ")!important;
 	border:1px solid " + $SS.theme.linkColor.hex + "!important;
+}
+.opContainer.qphl
+{
+	background: none !important;
+	border:1px solid " + $SS.theme.linkColor.hex + "!important;
+}
+.opContainer:not(.qphl) {
+	border:1px solid transparent !important;
 }
 .filter_highlight>div.opContainer,
 .filter_highlight>.reply
