@@ -1,5 +1,9 @@
 OneeChan changelog
 
+v4.0.9:
+-Change "Hide Checkboxes" to "Menu-Only Mode" which hides the deleteform as well as checkboxes, for full replacement by 4chan X menu
+-Fix issue where #imgControls checkbox is not hidden (Linux only)
+
 v4.0.8:
 -Add "Reply Opacity" option in themes' settings for control and possibly speed, defaults to 1.0 except on 安心院なじみ and 4chan Rewired. Edit this to a value of 0.0 to 0.9 if you want transparent replies, 0.0 being fully transparent.
 -Edit colors of Yotsuba/B/P's navigation to look less out of place at the top of the page

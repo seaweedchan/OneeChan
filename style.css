@@ -331,9 +331,10 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
-($SS.conf["Hide Checkboxes"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck," : "") +
+($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
 #boardNavDesktop>select,
+#imgControls .riceCheck,
 [hidden],
 .hidden:not(.postContainer),
 body>hr,
@@ -425,7 +426,7 @@ textarea,
 	-webkit-box-sizing:border-box;
 }
 " + ($SS.conf["Rounded Corners"] ? "
-div.reply,
+#delform div.reply,
 div.reply.highlight,
 #qp,
 .inline div.reply,
@@ -442,11 +443,14 @@ div.reply.highlight,
 {
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 0 3px 0" : "0 0 0 3px") + " !important;
 }" : "") + "
-#qr:not(.autohide), .deleteform 
+" + ($SS.conf["Post Form"] === 3 ? "#qr" : "#qr:not(.autohide)") + "
+{ 
+	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 0 0px" : "3px 0 0 0") + " !important;
+}
+.deleteform 
 {
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 3px 0px" : "3px 0 0 3px") + " !important;
 }
-
 " : "") + "
 #qr.autohide > .move 
 {
@@ -884,7 +888,7 @@ form[name=delform]
 {
 	margin-bottom:1px!important;
 }
-" + ($SS.conf["Hide Checkboxes"] ? "
+" + ($SS.conf["Menu-Only Mode"] ? "
 .postInfo
 {
     padding:0 3px!important;
@@ -1138,6 +1142,7 @@ a.summary
 	padding:0 6px;
 	border-radius:3px;
 }
+" + (!$SS.conf["Menu-Only Mode"] ? "
 .deleteform
 {
     bottom:0px!important;
@@ -1223,6 +1228,7 @@ a.summary
 {
 	margin-left:0!important;
 }
+" : "") + "
 table,
 td:not(.hide_reply_button):not(.deleteform)
 {
