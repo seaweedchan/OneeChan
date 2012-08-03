@@ -2144,7 +2144,7 @@
                     "default":   true,
                     bgImg:       "http://oi39.tinypic.com/2h51rb4.jpg",
                     bgRPA:       "no-repeat bottom right fixed",
-                    replyOp:     "0.9", 
+                    replyOp:     "0.8", 
                     bgColor:     "f4f4f4",
                     mainColor:   "efefef",
                     brderColor:  "d4d4d4",
@@ -2161,7 +2161,7 @@
                     tripColor:   "bf7f3f",
                     titleColor:  "4c4c4c",
                     timeColor:   "4c4c4c",
-                    customCSS:   '\n\n\n\n\n\n"+($SS.conf["Layout"]===2?".opContainer{display:block!important;border:1px solid "+this.brderColor.hex+"!important;"+($SS.conf["Sidebar Position"]===3?"margin-left:-"+($SS.conf["Side Margin"]+2)+"px!important;padding-left:"+($SS.conf["Side Margin"]+2)+"px!important}.opContainer,":"}"):"")+".post.reply{background:-webkit-linear-gradient(top,rgba(244,244,244,.8),rgba(239,239,239,.8))!important;background:-moz-linear-gradient(top,rgba(244,244,244,.8),rgba(239,239,239,.8))!important;background:-o-linear-gradient(top,rgba(244,244,244,.8),rgba(239,239,239,.8))!important;box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}'
+                    customCSS:   '\n\n\n\n\n\n"+($SS.conf["Layout"]===2?".opContainer{display:block!important;border:1px solid "+this.brderColor.hex+"!important;"+($SS.conf["Sidebar Position"]===3?"margin-left:-"+($SS.conf["Side Margin"]+2)+"px!important;padding-left:"+($SS.conf["Side Margin"]+2)+"px!important}.opContainer,":"}"):"")+".post.reply{background:-webkit-linear-gradient(top,rgba(244,244,244," + this.replyOp + "),rgba(239,239,239," + this.replyOp + "))!important;background:-moz-linear-gradient(top,rgba(244,244,244," + this.replyOp + "),rgba(239,239,239," + this.replyOp + "))!important;background:-o-linear-gradient(top,rgba(244,244,244," + this.replyOp + "),rgba(239,239,239," + this.replyOp + "))!important;box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}'
                 },
                 {
                     name:        "violaceous",
