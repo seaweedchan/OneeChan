@@ -203,7 +203,7 @@ table.flashListing tr:nth-of-type(2n+1)
 {
 	border: 1px solid " + $SS.theme.brderColor.hex + " !important;
 }
-#ft li, #recent-images li, .boxbar, body:not([class]) .menubutton
+#ft li, #recent-images li, .boxbar, body:not([class]) .menubutton, .postContainer>.op:target
 {
 	background: none !important;
 	border: none !important;
@@ -1066,13 +1066,12 @@ a.hide_thread_button>span,
 {
     padding-top:2px!important;
 }
-.replyContainer div.highlight,
 .highlightPost,
 .qphl,
-.postContainer .post:target, 
-.postContainer .highlight
+.replyContainer>.post:target
 {
-	background:rgba(" + $SS.theme.mainColor.shiftRGB(16, true) + "," + $SS.theme.replyOp + ")!important;
+	background:rgba(" + $SS.theme.mainColor.shiftRGB(4, true) + "," + $SS.theme.replyOp + ")!important;
+	border:1px solid " + $SS.theme.linkColor.hex + "!important;
 }
 .filter_highlight>div.opContainer,
 .filter_highlight>.reply

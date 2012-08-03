@@ -9,6 +9,7 @@ v4.0.9:
 -Fix issue where certain highlighted posts in Chrom* wouldn't get styled
 -Fix issue where body would wait to style
 -Fix 4chan Rewired theme not accepting new Reply Opacity values if modified.
+-Add in ahodesuka's highlight changes
 
 v4.0.8:
 -Add "Reply Opacity" option in themes' settings for control and possibly speed, defaults to 1.0 except on 安心院なじみ and 4chan Rewired. Edit this to a value of 0.0 to 0.9 if you want transparent replies, 0.0 being fully transparent.
