@@ -56,8 +56,8 @@ input::-moz-focus-inner
 }
 img,
 .replyContainer div.highlight,
-.post:target, 
-.highlight
+.postContainer .post:target, 
+.postContainer .highlight
 {
 	border:0!important;
 }
@@ -1069,8 +1069,8 @@ a.hide_thread_button>span,
 .replyContainer div.highlight,
 .highlightPost,
 .qphl,
-.post:target, 
-.highlight
+.postContainer .post:target, 
+.postContainer .highlight
 {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(16, true) + "," + $SS.theme.replyOp + ")!important;
 }
