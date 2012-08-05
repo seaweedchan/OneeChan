@@ -349,6 +349,8 @@ a[href='#bottom'],
 #copyright,
 .absBotText,
 .prev,
+#navbotr,
+#navtopr a:last-child,
 .next,	
 .postingMode,
 .sideArrows:not(.hide_reply_button),
@@ -575,6 +577,11 @@ body::before,
 {
 	border-top:1px solid " + $SS.theme.brderColor.hex + "!important;
 }
+" + ($SS.conf["Reveal All Spoilers"] ? "
+div.post > blockquote .spoiler 
+{
+    color: white !important;
+}" : "") + "
 #jsmath_button
 {
 	bottom:auto!important;
@@ -1727,6 +1734,13 @@ textarea
 {
     opacity:.5;
     padding-right:5px;
+}
+.linkdelimiter
+{
+    opacity:.4;
+}
+#issueslink {
+    padding-right:10px;
 }
 #themeoptions #toWrapper
 {
