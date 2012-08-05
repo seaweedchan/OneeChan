@@ -1271,7 +1271,7 @@
                     $("a[name=restoreMascots]", p).hide();
 
                 p.append($("<a class=trbtn name=selectAll>select all", tOptions)
-                    .bind("click", function(){ $("#tMascot>div").each(function(){ $(this).addClass("selected") }); }));
+                    .bind("click", function(){ $("#tMascot>div:not([hidden])").each(function(){ $(this).addClass("selected") }); }));
                 p.append($("<a class=trbtn name=selectNone>select none", tOptions)
                     .bind("click", function(){ $("#tMascot>div").each(function(){ $(this).removeClass("selected") }); }));
 
