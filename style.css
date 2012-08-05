@@ -323,7 +323,12 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 .container::before,
 .deleteform::before,
 .riceFile span,
-.trbtn
+.trbtn,
+#SSVersion,
+#updatelink,
+#changeloglink,
+.linkdelimiter,
+#issueslink
 {
 	font-size:" + ($SS.conf["Bitmap Font"] ? $SS.conf["Font Size"] : 12) + "px!important;
 }
@@ -1733,6 +1738,7 @@ textarea
 {
     opacity:.5;
     padding-right:5px;
+    padding-left: 35px;
 }
 .linkdelimiter
 {

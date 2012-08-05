@@ -8,6 +8,7 @@ v4.1.0:
 -Add update, changelog, and issues links
 [Post-Update]
 -Added in pinku theme from DrooidKun
+-Fix new links overlapping in other tabs
 
 v4.0.9:
 -Change "Hide Checkboxes" to "Menu-Only Mode" which hides the deleteform as well as checkboxes, for full replacement by 4chan X menu
