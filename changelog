@@ -6,6 +6,8 @@ v4.1.0:
 -Fix hidden mascots being selected with Select All
 -Add "Reveal All Spoilers" option
 -Add update, changelog, and issues links
+[Post-Update]
+-Added in pinku theme from DrooidKun
 
 v4.0.9:
 -Change "Hide Checkboxes" to "Menu-Only Mode" which hides the deleteform as well as checkboxes, for full replacement by 4chan X menu
