@@ -32,7 +32,7 @@
 }
 input:not([disabled]):active,
 input:focus,
-select:focus,
+.webkit select:focus,
 textarea:focus
 {
     border:1px solid " + $SS.theme.brderColor.hex + "!important;
@@ -388,7 +388,7 @@ form[name=delform],
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
 input:not(.jsColor),
-select,
+.webkit select,
 textarea,
 tr,
 #navtopr>a:last-child::before,
@@ -1313,7 +1313,7 @@ img[alt=Sticky]
 textarea,
 button,
 input:not([type=checkbox]):not([type=radio]),
-select,
+.webkit select,
 #qr>form>.captchaimg>img,
 .riceFile
 {
@@ -1327,7 +1327,7 @@ input[type=submit],
 input[type=text]:not(.jsColor),
 input#fs_search,
 input.field,
-select,
+.webkit select,
 textarea,
 .riceFile,
 #options input
@@ -1350,7 +1350,7 @@ input[type=submit]:hover,
 input[type=text]:not(.jsColor):not([disabled]):hover,
 input#fs_search:hover,
 input.field:hover,
-select:hover,
+.webkit select:hover,
 textarea:hover,
 #options input:hover,
 .riceFile input:hover+div,
@@ -1363,7 +1363,7 @@ input[type=password]:hover,
 input[type=text]:not([disabled]):hover,
 input#fs_search:hover,
 input.field:hover,
-select:hover,
+.webkit select:hover,
 textarea:hover,
 #options input:not[type=checkbox]:hover
 {
@@ -1373,7 +1373,7 @@ input[type=password]:focus,
 input[type=text]:focus,
 input#fs_search:focus,
 input.field:focus,
-select:focus,
+.webkit select:focus,
 textarea:focus,
 #options input:focus
 {
@@ -2177,15 +2177,18 @@ input[name=customIMGB64]+a[name=clearIMG]
 	padding-" + $SS.conf["Sidebar Position String"] + ":147px!important;
 	z-index:14;
 }
-#imgControls #imageType,
-#boardNavDesktop>select
+.webkit #imgControls #imageType,
+.webkit #boardNavDesktop>select
 {
     background:none!important;
 	border:0!important;
+	padding:1px 1px 1px 0;
+}
+#imgControls #imageType
+{
 	line-height:16px!important;
 	margin:0!important;
 	height:18px!important;
-	padding:1px 1px 1px 0;
 	width:77px!important;
 }
 #imgControls #imageType
@@ -2193,7 +2196,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 	float:  " + $SS.conf["Sidebar Position String"] + " !important;
 }
 
-#boardNavDesktop>select
+.webkit #boardNavDesktop>select
 {
     padding:0 4px!important;
     width:auto!important;
