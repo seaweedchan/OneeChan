@@ -174,8 +174,6 @@ span[style='color:#FF0000;font-weight:normal']
 	text-shadow:none!important;
 }
 .reply,
-html .reply:target,
-html .reply.highlight,
 .hidden_thread,
 .stub>a:first-child,
 .webkit option,
@@ -546,8 +544,6 @@ body::before,
 #qr,
 #themeoptions #toWrapper,
 .reply,
-html .reply:target,
-html .reply.highlight,
 .hidden_thread,
 .stub>a:first-child
 {
@@ -1080,6 +1076,8 @@ a.hide_thread_button>span,
 .highlightPost,
 .qphl,
 .replyContainer>.post:target
+.replyContainer>.reply:target,
+.replyContainer>.reply.highlight
 {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(4, true) + "," + $SS.theme.replyOp + ")!important;
 	border:1px solid " + $SS.theme.linkColor.hex + "!important;
