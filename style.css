@@ -231,7 +231,7 @@ padding-top: 200px !important;
 background: none !important;
 border: none !important;
 }
-body:not([class]) {
+html[xmlns] > body {
 margin-top: 100px !important;
 }
 #ft ul {
