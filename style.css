@@ -1075,9 +1075,9 @@ a.hide_thread_button>span,
 }
 .highlightPost,
 .qphl,
-.replyContainer>.post:target
-.replyContainer>.reply:target,
-.replyContainer>.reply.highlight
+.replyContainer>.post:target,
+html .reply:target,
+html .reply.highlight
 {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(4, true) + "," + $SS.theme.replyOp + ")!important;
 	border:1px solid " + $SS.theme.linkColor.hex + "!important;
