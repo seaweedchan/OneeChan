@@ -54,13 +54,7 @@ input::-moz-focus-inner
 	background:" + $SS.theme.linkColor.hex + ";
 	color:#" + ($SS.theme.linkColor.isLight ? "000" : "fff") +"!important;
 }
-img,
-.replyContainer div.highlight,
-.postContainer .post:target, 
-.postContainer .highlight
-{
-	border:0!important;
-}
+
 hr
 {
 	border:0!important;
@@ -180,6 +174,8 @@ span[style='color:#FF0000;font-weight:normal']
 	text-shadow:none!important;
 }
 .reply,
+html .reply:target,
+html .reply.highlight,
 .hidden_thread,
 .stub>a:first-child,
 .webkit option,
@@ -550,6 +546,8 @@ body::before,
 #qr,
 #themeoptions #toWrapper,
 .reply,
+html .reply:target,
+html .reply.highlight,
 .hidden_thread,
 .stub>a:first-child
 {
