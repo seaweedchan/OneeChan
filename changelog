@@ -2,6 +2,14 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.1.1:
+-Fix greentext in Reveal All Spoilers option
+-Add option to disable ads, ads enabled by default (AdBlock users wont see a difference)
+-Fix Backlink font size not abiding by font size option
+-Fix slideout navigation scaling by font size causing some links to be hidden
+-Set expanded images to be covered up by board navigation
+-Add option to toggle slideout announcement
+
 v4.1.0:
 -Fix hidden mascots being selected with Select All
 -Add "Reveal All Spoilers" option

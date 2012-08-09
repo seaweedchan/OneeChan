@@ -289,7 +289,8 @@ textarea,
 #themeoptions #tMascot div a,
 #updater label,
 #updater span,
-.container *
+#boardNavDesktopFoot,
+#boardNavDesktopFoot a
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
 }
@@ -331,6 +332,7 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] !== 4 ? "#qr>.move .close," : "") +
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
+($SS.conf["Disable Ads (for non-AdBlock users)"] ? "div[style^='text-align: center']," : "" ) +
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
@@ -357,7 +359,6 @@ a[href='#bottom'],
 " + ($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
 body>.closed>br,
 .board>hr:nth-last-child(2),
-div[style^='text-align: center'],
 #imageExpand,
 .hidden_thread+div.opContainer,
 .stub+div+div.post,
@@ -368,13 +369,13 @@ div[style^='text-align: center'],
 a.summary,
 a.summary:hover,
 blockquote>.abbr,
-.globalMessage::before,
 .globalMessage>b,
 .globalMessage, 
 .globalMessage strong, 
 .globalMessage h1, 
-globalMessage h2, 
-globalMessage h3,
+.globalMessage h2, 
+.globalMessage h3,
+.globalMessage span,
 button,
 div,
 div.autohide>a,
@@ -496,7 +497,30 @@ html:not([xmlns]) > body
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
 }
-
+div[style^='text-align: center']
+{
+	margin-top: 30px !important;
+}
+script + hr + div[style^='text-align: center'] {
+	margin-top: -10px !important;
+}
+.board + div[style^='text-align: center'] {
+	margin-top: 10px !important;
+}
+div[style^='text-align: center'] a
+{
+	opacity: 0.2 !important;
+}
+div[style^='text-align: center'] img
+{
+	-webkit-transform:scale(.85);
+	-moz-transform:scale(.85);
+	-0-transform:scale(.85);
+}
+div[style^='text-align: center'] a:hover
+{
+	opacity: 1.0 !important;
+}
 " + (!$SS.bHideSidebar ?
 ($SS.conf["Sidebar Position"] !== 3 ? "
 body::before
@@ -577,10 +601,19 @@ body::before,
 	border-top:1px solid " + $SS.theme.brderColor.hex + "!important;
 }
 " + ($SS.conf["Reveal All Spoilers"] ? "
-div.post > blockquote .spoiler 
+div.post > blockquote .spoiler
 {
     color: white !important;
-}" : "") + "
+}
+div.post > blockquote .spoiler .quote
+{
+	color:" + $SS.theme.quoteColor.hex + "!important;
+}
+div.post > blockquote .spoiler a
+{
+	color:" + $SS.theme.linkColor.hex + "!important;
+}
+" : "") + "	
 #jsmath_button
 {
 	bottom:auto!important;
@@ -2351,10 +2384,29 @@ body>center:nth-of-type(2)
 {
 	position:relative;
 }
-*[style='color: red;']
+" + (!$SS.conf["Slideout Announcement"] ? "
+.globalMessage 
 {
-	color:" + $SS.theme.sageColor.hex + "!important;
+	margin-top: 40px !important;
+	position: static !important;
+	background: none !important;
+	border: none !important;
+	width: 100% !important;
 }
+.globalMessage, .globalMessage h2, .globalMessage h3, .globalMessage h1 
+{
+	position: relative !important;
+	top: 0px !important;
+}
+.globalMessage::before 
+{
+	display: none !important;
+}
+.globalMessage:hover 
+{
+	top: 0px !important;
+}
+" : "
 .globalMessage 
 {
     position: fixed !important;
@@ -2409,6 +2461,7 @@ body>center:nth-of-type(2)
 {
     width: 248px !important;
 }
+") + "
 body>.closed
 {
     height:18px;
@@ -2427,7 +2480,7 @@ body>.closed
 	text-align:center;
     top:0!important;
 	width:100%!important;
-	z-index:12!important;
+	z-index:14!important;
 }
 #boardNavDesktop
 {
@@ -2447,7 +2500,7 @@ body>.closed
 	text-align:center;
     bottom:0!important;
 	width:100%!important;
-	z-index:12!important;
+	z-index:14!important;
 }
 #boardNavDesktop
 {
@@ -2504,7 +2557,7 @@ body>.closed
 	position:static!important;
 	text-align:center;
 	width:100%!important;
-	z-index:12!important;
+	z-index:14!important;
 	position: absolute !important;
 	top: 0px !important;
 }
