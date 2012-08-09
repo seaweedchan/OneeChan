@@ -348,6 +348,7 @@ a[href='#bottom'],
 #absbot,
 #logo,
 #copyright,
+body>div.closed,
 .absBotText,
 .prev,
 #navbotr,
@@ -2387,29 +2388,24 @@ body>center:nth-of-type(2)
 " + (!$SS.conf["Slideout Announcement"] ? "
 .globalMessage 
 {
-	margin-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
 	margin-top: 40px !important;
 	position: static !important;
 	background: none !important;
 	border: none !important;
 }
-.globalMessage, .globalMessage h2, .globalMessage h3, .globalMessage h1 
-{
-	position: relative !important;
-	top: 0px !important;
-}
 .globalMessage::before 
 {
 	display: none !important;
 }
-.globalMessage:hover 
+div.closed ~ .globalMessage 
 {
-	top: 0px !important;
+margin-bottom: 20px !important;
 }
 " : "
 .globalMessage 
 {
-    position: fixed !important;
+    position: fixed !important;													
     top: -1000px !important;
  	" + ($SS.conf["Sidebar Position"] !== 2 ? "
     right: 2px !important;
