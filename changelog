@@ -9,6 +9,9 @@ v4.1.1:
 -Fix slideout navigation scaling by font size causing some links to be hidden
 -Set expanded images to be covered up by board navigation
 -Add option to toggle slideout announcement
+[Post-Update]
+ahodesuka:
+  -Fix announcement color
 
 v4.1.0:
 -Fix hidden mascots being selected with Select All

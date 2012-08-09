@@ -2387,11 +2387,11 @@ body>center:nth-of-type(2)
 " + (!$SS.conf["Slideout Announcement"] ? "
 .globalMessage 
 {
+	margin-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
 	margin-top: 40px !important;
 	position: static !important;
 	background: none !important;
 	border: none !important;
-	width: 100% !important;
 }
 .globalMessage, .globalMessage h2, .globalMessage h3, .globalMessage h1 
 {
