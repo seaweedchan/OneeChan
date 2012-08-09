@@ -35,7 +35,7 @@
         "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards" ],
         "SFW/NSFW Themes":          [ false,  "Allows you to choose one theme for SFW boards and another for NSFW boards." ],
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
-        "Disable Ads (for non-AdBlock users)":              [ false,  "Hides the ads on each page" ],
+        "Disable Ads":              [ true,  "Hides the ads on each page" ],
         "Slideout Announcement":    [ true, "Condense the announcement into a button in the sidebar" ],
         "Sage Identification":
         [
