@@ -1071,7 +1071,6 @@ a.hide_thread_button>span,
 .hidden_thread>span,
 .stub>a:first-child>span
 {
-    -o-transform:scale(.65);
     -moz-transform:scale(.65);
     -webkit-transform:scale(.65);
 }
