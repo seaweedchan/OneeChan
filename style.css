@@ -498,14 +498,14 @@ html:not([xmlns]) > body
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
 }
-div[style^='text-align: center']
+div[style^='text-align: center'] img
 {
 	margin-top: 30px !important;
 }
-script + hr + div[style^='text-align: center'] {
+script + hr + div[style^='text-align: center'] img {
 	margin-top: -10px !important;
 }
-.board + div[style^='text-align: center'] {
+.board + div[style^='text-align: center'] img {
 	margin-top: 10px !important;
 }
 div[style^='text-align: center'] a
