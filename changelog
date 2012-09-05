@@ -2,6 +2,9 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.1.2:
+-Change navtopr to navtopright for 4chan X settings button
+
 v4.1.1:
 -Fix greentext in Reveal All Spoilers option
 -Add option to disable ads, ads enabled by default (AdBlock users wont see a difference)
@@ -12,6 +15,7 @@ v4.1.1:
 [Post-Update]
 ahodesuka:
   -Fix announcement color
+-Fix size of hide thread button in Opera
 
 v4.1.0:
 -Fix hidden mascots being selected with Select All
