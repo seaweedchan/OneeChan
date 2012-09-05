@@ -363,7 +363,9 @@ body>.closed>br,
 #imageExpand,
 .hidden_thread+div.opContainer,
 .stub+div+div.post,
-#navtopright>a:last-child
+#navtopright>a:last-child,
+#navtopright a:not([class]),
+#first-run
 {
 	display:none!important;
 }

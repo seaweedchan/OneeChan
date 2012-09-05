@@ -4,6 +4,9 @@ Items under [Post-Update] are bug fixes added into the official version after th
 
 v4.1.2:
 -Change navtopr to navtopright for 4chan X settings button
+[Post-Update]
+-Remove regular links in navtopright
+-Fix scrollbar appearing
 
 v4.1.1:
 -Fix greentext in Reveal All Spoilers option
