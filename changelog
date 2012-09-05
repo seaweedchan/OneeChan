@@ -7,6 +7,8 @@ v4.1.2:
 [Post-Update]
 -Remove regular links in navtopright
 -Fix scrollbar appearing
+Zixaphir:
+	-Automatically disable 4chan's "extension"
 
 v4.1.1:
 -Fix greentext in Reveal All Spoilers option

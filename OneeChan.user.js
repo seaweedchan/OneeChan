@@ -797,6 +797,7 @@
             $SS.Config.init();
             $SS.Themes.init();
             $SS.Mascots.init();
+            localStorage.setItem('4chan-settings', '{"disableAll":true}');
 
             if (reload)
             {
