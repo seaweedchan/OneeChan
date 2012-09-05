@@ -740,6 +740,7 @@
             if (!reload)
             {
                 if (/^about:neterror/.test(document.documentURI)) return;
+                localStorage["4chan-settings"] = JSON.stringify({ "disableAll" : true })
 
                 var m_VERSION;
                 $SS.browser.webkit = /AppleWebKit/.test(navigator.userAgent);
@@ -797,7 +798,6 @@
             $SS.Config.init();
             $SS.Themes.init();
             $SS.Mascots.init();
-            localStorage.setItem('4chan-settings', '{"disableAll":true}');
 
             if (reload)
             {
