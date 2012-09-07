@@ -544,7 +544,7 @@ body::after
 	height:100%;
 	width:261px;
 	" + (!$SS.mascot.small ? "background-size:contain;" : "")) + "
-    bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : 19) + "px!important;
+    bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
 	position:fixed;
 	z-index:2;
