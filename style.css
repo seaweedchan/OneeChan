@@ -867,6 +867,39 @@ div.postContainer, div.replyContainer
 {
     position: relative !important;
 }
+.thread > .hide_thread_button:not(.hidden_thread) 
+{
+	position: absolute !important;
+	top: 0px !important;
+	right: 31px !important;
+}
+.thread > .hide_thread_button > span 
+{
+	font-size: 9px !important;
+}
+.op > .postInfo > .menu_button 
+{
+	position: absolute !important;
+	top: 1px !important;
+	right: 15px !important;
+	font-size: 9px !important;
+}
+.hidden_thread {
+	padding: 4px !important;
+	padding-bottom: 6px !important;
+}
+.hidden_thread > .menu_button {
+	position: absolute !important;
+	right: 18px !important;
+	font-size: 9px !important;
+	top: 7px !important;
+}
+.hidden_thread > a:not([class]) > span {
+	float: right !important;
+	margin-right: 25px !important;
+	font-size: 14px !important;
+	text-align: center !important;
+	}
 .sideArrows a
 {
     position: absolute !important;
@@ -909,7 +942,6 @@ div.postContainer, div.replyContainer
     float: left !important;
     margin-right: 5px !important;
     margin-left: 5px !important;
-    position: relative !important;
     z-index: 2;
 }
 
