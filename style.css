@@ -829,16 +829,16 @@ div.post > blockquote .spoiler a
     width: 20px !important;
     padding-top: 1px !important;
 }
-div.reply .report_button, .sideArrows, .postInfo input, div.reply .menu_button
+div.reply .report_button, .sideArrows, div.reply .menu_button
 {
     opacity: 0 !important;
 }
-form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu_button, form .replyContainer:not(:hover) .sideArrows, form .replyContainer:not(:hover) .postInfo input{
+form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu_button, form .replyContainer:not(:hover) .sideArrows {
     -webkit-transition: opacity .3s ease-out 0s !important;
     -moz-transition: opacity .3s ease-out 0s !important;
     -o-transition: opacity .3s ease-out 0s !important;
 }
-  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu_button, form .replyContainer:hover .sideArrows, .replyContainer:hover .postInfo input
+  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu_button, form .replyContainer:hover .sideArrows
 {
     opacity: 1 !important;
     -webkit-transition: opacity .3s ease-in .5s !important;
@@ -848,12 +848,6 @@ form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:
  div.reply input:checked
 {
     opacity: 1 !important;
-}
-div.reply .postInfo input
-{
-    position: absolute !important;
-    top: -3px !important;
-    right: 5px !important;
 }
 div.reply .report_button, div.reply .menu_button
 {
