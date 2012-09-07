@@ -80,7 +80,9 @@ h3,
 a,
 span>a.replylink,
 " + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
-blockquote a.quotelink
+blockquote a.quotelink,
+span.typ, 
+span.atn
 {
     " + (!$SS.conf["Underline Links"] ? "text-decoration:none!important;" : "") + "
 	color:" + $SS.theme.linkColor.hex + "!important;
@@ -92,7 +94,8 @@ blockquote a.quotelink
 a:hover,
 div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
-.backlink:hover
+.backlink:hover,
+span.lit
 {
 	color:" + $SS.theme.linkHColor.hex + "!important;
 	text-shadow:rgba(" + $SS.theme.linkHColor.rgb + ",.2) 0 0 2px!important;
@@ -131,18 +134,22 @@ a[href='javascript:;'],
 	color:" + $SS.theme.jlinkColor.hex + "!important;
 }
 .postInfo span.name,
+span.com,
 .postInfo span.name a,
 #delform[action='https://sys.4chan.org/f/up.php'] .name
 {
 	color:" + $SS.theme.nameColor.hex + "!important;
 }
 .useremail span.postertrip,
+span.tag,
 span>span.postertrip,
 #delform[action='https://sys.4chan.org/f/up.php'] .postertrip
 {
 	color:" + $SS.theme.tripColor.hex + "!important;
 }
-.postMessage .quote
+.postMessage .quote,
+span.str, 
+span.atv
 {
 	color:" + $SS.theme.quoteColor.hex + "!important;
 }
@@ -162,6 +169,7 @@ a.forwardlink
 }
 .postInfo .subject,
 .replytitle,
+span.kwd,
 #delform[action='https://sys.4chan.org/f/up.php'] .subject
 {
 	color:" + $SS.theme.titleColor.hex + "!important;
@@ -169,6 +177,7 @@ a.forwardlink
 a.linkmail[href='mailto:sage'],
 a.linkmail[href='mailto:sage']:hover,
 #qr .warning,
+span.lit,
 span[style='color:#F00000'],
 span[style='color:#FF0000;font-weight:normal']
 {
@@ -3264,9 +3273,12 @@ form[name=delform][action$='/f/up.php'] tr
 }
 pre.prettyprint
 {
-    background:rgb(" + $SS.theme.mainColor.shiftRGB(-16) + ");
-    border:1px solid rgb(" + $SS.theme.brderColor.shiftRGB(16) + ");
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.2) !important;
+	border: 1px solid rgb(204, 204, 204) !important;
     vertical-align:middle;
+}
+span.pun {
+	color:rgba(" + $SS.theme.textColor.rgb + ",.4)!important;
 }
 .prettyprint *
 {
@@ -3278,6 +3290,11 @@ pre.prettyprint
     color:" + $SS.theme.textColor.hex + ";
 }
 " + (!$SS.theme.bgColor.isLight ? "
+pre.prettyprint
+{
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.2) !important;
+	border: 1px solid rgba(204, 204, 204,.1) !important;
+}
 #navtopright .settingsWindowLinkBot {
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABG0lEQVQ4T2O4dOkSA7mYkEZGJIMtgOxaIOYCYrA4SDMTjANVyAyke4A4Bc1F6UD+fyCeDBMHaUY2XRrIXwVV1A5VxAukBYFYCYjvAfEXIJaF2QwyQAqIXYD4PlQjyAaQE0Fyc4F4L5TtCZVfBtMcAGS8BuJ/SBpBmuugGoKh4nFQ/iOoerCfM9E0gTSCcD1UMSgMXgHxPCj/OJB+AbM5m4BmfqD8ZyCeAdV8Fkg/h2k2BTK2AvFtNENgfq6BilsCaW4gfoOsGRbXwkBBWEgjB1g1ULwDamsJ1KAKmM1MUAmYIblQBaC4Rk5EVkD+LyB+DMSghAIOMFA8I8c1SMwDiO3QNMMCNhUmTih5IsvLATVZQzXCkycpBqCoBQCET0VYtxt+GAAAAABJRU5ErkJggg==') !important;
 }
@@ -3311,32 +3328,7 @@ a[href='.././'] {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMdShx9gAAAA50Uk5TABAgMEBggI+fr7/P3+82uMT1AAAAb0lEQVQIHQXBiQHDIAwEMOE8gGlu/3ErgWt297wAYyenT7IGjJNVqJUzsPMAniyuLODedspMQe3cKq8+8HxZOK0b9eUb6NYHO98Dv/am3FkDKq/Ktm9gp1h5AE8mxsku1M4ZMGby618yB6De7n4L/v79BDw2df22AAAAAElFTkSuQmCC') !important;
 }
 " : "") + "
-" + (!$SS.theme.mainColor.isLight ? "
-.prettyprint .com
-{
-    color:" + $SS.ppDark.com + ";
-}
-.prettyprint .kwd
-{
-    color:" + $SS.ppDark.kwd + ";
-}
-.prettyprint .typ
-{
-    color:" + $SS.ppDark.typ + ";
-}
-.prettyprint .str
-{
-    color:" + $SS.ppDark.str + ";
-}
-.prettyprint .pun
-{
-    color:" + $SS.ppDark.pun + ";
-}
-.prettyprint .lit
-{
-    color:" + $SS.ppDark.lit + ";
-}" : "") +
-($SS.conf["Pages Position"] === 3 ? "
+" + ($SS.conf["Pages Position"] === 3 ? "
 .mPagelist.mobile
 {
 	z-index: 5 !important;
