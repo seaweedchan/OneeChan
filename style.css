@@ -3102,6 +3102,9 @@ a[href='.././']
 	-o-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
     " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
 }
+.webkit #qr textarea {
+	min-height: 127px;
+}
 #qr>.move
 {
     height:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 23 : 22) + "px!important;
