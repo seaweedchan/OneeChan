@@ -91,6 +91,9 @@ span.atn
 	-moz-transition:all .1s;
 	-o-transition:all .1s;
 }
+.filtered {
+	text-decoration:line-through" + ($SS.conf["Underline Links"] ? " underline" : "") + "!important;
+}
 a:hover,
 div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
@@ -554,12 +557,11 @@ body::before
 ($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
 body::after
 {
-	" + ($SS.mascot.overflow ? "content:" + $SS.mascot.img.get() + ";" :
-	"background:" + $SS.mascot.img.get() + ";
+	background:" + $SS.mascot.img.get() + ";
 	content:'';
 	height:100%;
-	width:261px;
-	" + (!$SS.mascot.small ? "background-size:contain;" : "")) + "
+	width:" + ($SS.mascot.overflow ? "100%" : "261px") + ";
+	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
     bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
 	position:fixed;
