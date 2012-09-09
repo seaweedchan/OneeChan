@@ -1603,6 +1603,7 @@ td.doubledash
 {
     height:86.3333px;
     position:fixed;
+	" + ($SS.conf["Sidebar Position"] === 3 ? "pointer-events: none !important;" : "") + "
 }
 " + ($SS.conf["Show Logo Reflection"] ? "
 .boardBanner #bBanner::after

@@ -4,6 +4,8 @@ Items under [Post-Update] are bug fixes added into the official version after th
 
 v4.1.4:
 -Allow floating QR resizing
+[Post-Update]
+-Removed pointer-events of #bBanner when sidebar is disabled
 
 v4.1.3:
 -Add back in BakaBT color scheme from old OneeChan
