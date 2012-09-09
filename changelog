@@ -2,6 +2,9 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.1.4:
+-Allow floating QR resizing
+
 v4.1.3:
 -Add back in BakaBT color scheme from old OneeChan
 -Make mascot positions more consistent

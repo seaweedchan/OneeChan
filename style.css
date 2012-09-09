@@ -290,7 +290,6 @@ img[alt=Sticky],
 #imageType+label,
 #qr>form #spoilerLabel,
 .preview>label,
-.close,
 .remove,
 .mPagelist .pages span
 {
@@ -457,7 +456,8 @@ div.reply.highlight,
 #qp,
 #delform .postContainer,
 .inline div.reply,
-.box-outer, 
+.box-outer,
+" + ($SS.conf["Post Form"] === 4 ? "#qr," : "") + "
 .yui-skin-sam .yuimenu .bd 
 {
 	border-radius: 3px !important;
@@ -470,7 +470,7 @@ div.reply.highlight,
 {
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 0 3px 0" : "0 0 0 3px") + " !important;
 }" : "") + "
-" + ($SS.conf["Post Form"] === 3 ? "#qr" : "#qr:not(.autohide)") + "
+" + ($SS.conf["Post Form"] !== 4 ? "#qr" : "") + "
 { 
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 0 0px" : "3px 0 0 0") + " !important;
 }
@@ -1098,7 +1098,6 @@ a.hide_thread_button>span,
 	-moz-transition:all .1s ease-in-out;
 	-o-transition:all .1s ease-in-out;
 }
-.close,
 .remove
 {
 	background-position:-16px -16px!important;
@@ -1113,7 +1112,6 @@ a.hide_thread_button>span,
     background-position:-32px -16px!important;
     display: inline !important;
 }
-.close,
 .remove,
 .hide_reply_button:not(.stub)>a:first-child>span,
 a.hide_thread_button>span,
@@ -1124,13 +1122,11 @@ a.hide_thread_button>span,
     -moz-transform:scale(.65);
     -webkit-transform:scale(.65);
 }
-.close,
 .remove
 {
 	margin:0!important;
 	text-indent:-9999px!important;
 }
-.close:hover,
 .remove:hover
 {
 	opacity:.75;
@@ -1369,7 +1365,6 @@ blockquote>div[style]
 }
 img[alt=Closed],
 img[alt=Sticky],
-.close,
 .remove
 {
 	background-image:" + $SS.theme.icons.get() + "!important;
@@ -1380,6 +1375,9 @@ img[alt=Sticky],
 	padding-top:16px!important;
 	vertical-align:bottom;
 	width:16px!important;
+}
+.close {
+	height:0!important;
 }
 img[alt=Closed]
 {
@@ -3059,8 +3057,10 @@ a[href='.././']
 {
 	display:block!important;
 }" : "
+	" + ($SS.conf["Post Form"] !== 4 ? "width:263px!important;
 	margin-bottom:19px!important;
-	width:263px!important;
+	" : "min-width:261px!important;
+	padding-bottom: 2px !important;") + "
 	z-index:11!important;
 }
 #qr .move
@@ -3084,7 +3084,7 @@ a[href='.././']
 #qr>form>.captchaimg>img
 {
 	height:48px!important;
-	max-width:300px;
+	" + ($SS.conf["Post Form"] !== 4 ? "max-width:300px;" : "") + "
 	width:100%;
 }
 #qr textarea
@@ -3092,7 +3092,7 @@ a[href='.././']
 	min-height:120px;
     position:relative;
     " + $SS.conf["Sidebar Position String"] + ":0;
-	resize:none;
+	" + ($SS.conf["Post Form"] !== 4 ? "resize:none;" : "") + "
     width:255px;
     z-index:1;
 	-webkit-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
@@ -3153,9 +3153,8 @@ a[href='.././']
 {
 	float:left;
     height:22px;
-	margin-left:1px!important;
     padding:3px 4px!important;
-	width:76px!important;
+	" + ($SS.conf["Post Form"] !== 4 ? "margin-left:1px!important; width:76px!important;" : "width: 29%!important;") + "
 }
 #qr>form>div:first-child .field:not(#dump)+span
 {
@@ -3193,15 +3192,16 @@ a[href='.././']
 	margin-right:1px;
 	position:relative;
 	z-index:1;
+	" + ($SS.conf["Post Form"] !== 4 ? "" : "width: 69% !important;") + "
 }
 #qr>form>.captchaimg+div input
 {
     height:22px;
-	width:189px!important;
+	" + ($SS.conf["Post Form"] !== 4 ? "width:189px!important;" : "") + "
 }
 #qr>form input[type=submit]
 {
-	width:65px!important;
+	" + ($SS.conf["Post Form"] !== 4 ? "width:65px!important;" : "width: 31% !important; margin: 0px -1px !important;") + "
 }
 #qr>form input[type=file]+input[type=submit]
 {
