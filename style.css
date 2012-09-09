@@ -1391,7 +1391,7 @@ textarea,
 button,
 input:not([type=checkbox]):not([type=radio]),
 .webkit select,
-#qr>form>.captchaimg>img,
+" + ($SS.conf["Post Form"] !== 4 ? "#qr>form>.captchaimg>img," : "#qr>form>.captchaimg,") + "
 .riceFile
 {
 	border:1px solid " + $SS.theme.inputbColor.hex + "!important;
@@ -3084,7 +3084,7 @@ a[href='.././']
 #qr>form>.captchaimg>img
 {
 	height:48px!important;
-	" + ($SS.conf["Post Form"] !== 4 ? "max-width:300px;" : "") + "
+	max-width:300px;
 	width:100%;
 }
 #qr textarea
@@ -3183,7 +3183,7 @@ a[href='.././']
 }
 #qr>form>.captchaimg
 {
-	background:none!important;
+	" + ($SS.conf["Post Form"] !== 4 ? "background: none !important;" : "") + "
 	outline:none!important;
 }
 #qr>form>.captchaimg+div
