@@ -95,7 +95,7 @@ span.atn
 	text-decoration:line-through" + ($SS.conf["Underline Links"] ? " underline" : "") + "!important;
 }
 a:hover,
-" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
+" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a:hover," : "") + "
 div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
 .backlink:hover,
