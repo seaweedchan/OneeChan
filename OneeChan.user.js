@@ -2312,25 +2312,25 @@
                     customCSS:   ".boardTitle {color: #854C9E !important;text-shadow: 1px 1px 1px #222 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a { color: #83678F !important; }\n\n\nform[name='delform'] {\nbackground-color: #FFF !important;\nborder: 1px solid #CCC !important;\npadding-left: 20px !important;\npadding-right: 20px !important;\n  -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;\n  box-shadow: 0px 10px 10px 2px rgba(128,128,128,0.5) !important;\n  border-radius: 3px !important;\npadding-bottom: 2px !important;\nmargin-bottom: -4px !important;\n}",
                 },
                 {
-                    name:        "Monokai";
+                    name:        "Monokai",
                     author:      "seaweed",
                     "default":   true,
-                    replyOp:     "1.0";
-                    bgColor:     "23241e";
-                    mainColor:   "272822";
-                    brderColor:  "2d2e27";
-                    inputColor:  "1f1f1a";
-                    inputbColor: "171713";
-                    blinkColor:  "f92672";
-                    jlinkColor:  "e2db74";
-                    linkColor:   "e2db74";
-                    linkHColor:  "ae81ff";
-                    nameColor:   "5ac0cc";
-                    quoteColor:  "a2cc28";
-                    textColor:   "e5f5d1";
-                    sageColor:   "4f4f4f";
-                    tripColor:   "fa8220";
-                    titleColor:  "ae81ff";
+                    replyOp:     "1.0",
+                    bgColor:     "23241e",
+                    mainColor:   "272822",
+                    brderColor:  "2d2e27",
+                    inputColor:  "1f1f1a",
+                    inputbColor: "171713",
+                    blinkColor:  "f92672",
+                    jlinkColor:  "e2db74",
+                    linkColor:   "e2db74",
+                    linkHColor:  "ae81ff",
+                    nameColor:   "5ac0cc",
+                    quoteColor:  "a2cc28",
+                    textColor:   "e5f5d1",
+                    sageColor:   "4f4f4f",
+                    tripColor:   "fa8220",
+                    titleColor:  "ae81ff",
                     timeColor:   "e5f5d1",
                 }
             ],
