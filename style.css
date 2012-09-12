@@ -479,11 +479,7 @@ div.reply.highlight,
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 3px 0px" : "3px 0 0 3px") + " !important;
 }
 " : "") + "
-#qr > .move 
-{
-padding-top: 4px !important;
-height: 26px !important;
-}
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder
 {
@@ -3108,10 +3104,11 @@ a[href='.././']
 }
 #qr>.move
 {
-    height:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 23 : 22) + "px!important;
 	line-height:18px!important;
 	min-width:0!important;
+	height: 26px !important;
 	padding:2px 0 0 3px!important;
+	padding-top: 4px !important;
 	text-align:left!important;
 }
 #qr>.move *
