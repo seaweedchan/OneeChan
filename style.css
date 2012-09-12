@@ -3087,7 +3087,7 @@ a[href='.././']
 }
 #qr textarea
 {
-	min-height:127px;
+	min-height:127px !important;
     position:relative;
     " + $SS.conf["Sidebar Position String"] + ":0;
 	" + ($SS.conf["Post Form"] !== 4 ? "resize:none;" : "") + "
