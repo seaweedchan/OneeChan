@@ -2331,7 +2331,7 @@
                     sageColor:   "4f4f4f";
                     tripColor:   "fa8220";
                     titleColor:  "ae81ff";
-                    timeColor:   "e5f5d1"
+                    timeColor:   "e5f5d1",
                 }
             ],
 
