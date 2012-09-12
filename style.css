@@ -3087,7 +3087,7 @@ a[href='.././']
 }
 #qr textarea
 {
-	min-height:120px;
+	min-height:127px;
     position:relative;
     " + $SS.conf["Sidebar Position String"] + ":0;
 	" + ($SS.conf["Post Form"] !== 4 ? "resize:none;" : "") + "
@@ -3099,9 +3099,6 @@ a[href='.././']
     " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
 	-o-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
     " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
-}
-.webkit #qr textarea {
-	min-height: 127px;
 }
 #qr>.move
 {

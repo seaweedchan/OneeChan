@@ -9,6 +9,7 @@ v4.1.5:
 -Make quick reply .move height and padding consistent
 -Fix top nav color not showing right on hover without custom nav links
 -Change a few Monokai colors
+-Use same textarea height in both browsers
 
 v4.1.4:
 -Allow floating QR resizing
