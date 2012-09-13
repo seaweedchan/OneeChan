@@ -1813,7 +1813,7 @@ textarea
 {
     opacity:.5;
     padding-right:5px;
-    padding-left: 35px;
+    " + (($SS.conf["Font"] === "Consolas") || ($SS.conf["Font"] === "Monospace") ? "padding-left: 10px;" : "padding-left: 35px;") + "
 }
 .linkdelimiter
 {
