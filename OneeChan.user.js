@@ -36,6 +36,7 @@
         "SFW/NSFW Themes":          [ false,  "Allows you to choose one theme for SFW boards and another for NSFW boards." ],
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
         "Slideout Announcement":    [ true, "Condense the announcement into a button in the sidebar" ],
+        "Disable Ads":              [ true, "Disables ads on 4chan" ],
         "Sage Identification":
         [
             3, "Adds identification to posts that do not bump threads.",

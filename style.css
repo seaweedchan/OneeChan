@@ -356,7 +356,7 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
 #boardNavDesktop>select,
 #imgControls .riceCheck,
-div[style^='text-align: center'],
+($SS.conf["Disable Ads"] ? "div[style^='text-align: center']," : "" ) +
 [hidden],
 .hidden:not(.postContainer),
 body>hr,

@@ -4,7 +4,6 @@ Items under [Post-Update] are bug fixes added into the official version after th
 
 v4.1.5:
 -Add Monokai theme
--Remove ads once more
 [Post-Update]
 -Make quick reply .move height and padding consistent
 -Fix top nav color not showing right on hover without custom nav links
