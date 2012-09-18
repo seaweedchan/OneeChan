@@ -201,6 +201,7 @@ div[id*=jsMath],
 #imgControls .preload,
 #jsMath_float>*,
 .deleteform,
+#qr .warning,
 table.flashListing tr:nth-of-type(2n+1)
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
@@ -1403,6 +1404,7 @@ input#fs_search,
 input.field,
 .webkit select,
 textarea,
+#qr > form #spoilerLabel,
 .riceFile,
 #options input
 {
@@ -3233,11 +3235,9 @@ a[href='.././']
 }
 #qr .warning
 {
-	overflow:hidden;
-	padding:0 2px;
+	z-index: 2 !important;
+	padding: 1px 2px;
 	text-align:center;
-	text-overflow:ellipsis;
-	white-space:nowrap;
 }
 #menu,
 .subMenu
