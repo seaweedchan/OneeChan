@@ -5,6 +5,8 @@ Items under [Post-Update] are bug fixes added into the official version after th
 v4.1.6:
 -Fix spoiler text overlapping with file input text
 -Stop truncating quick reply error message
+[Post-Update]
+-Only reposition non-inline OP menu button
 
 v4.1.5:
 -Add Monokai theme

@@ -871,7 +871,7 @@ div.postContainer, div.replyContainer
 {
 	font-size: 9px !important;
 }
-.op > .postInfo > .menu_button 
+.thread > .opContainer > .op .menu_button
 {
 	position: absolute !important;
 	top: 1px !important;
