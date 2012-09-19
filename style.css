@@ -866,6 +866,7 @@ div.postContainer, div.replyContainer
 	position: absolute !important;
 	top: 0px !important;
 	right: 31px !important;
+	opacity: 0.6 !important;
 }
 .thread > .hide_thread_button > span 
 {
@@ -877,6 +878,10 @@ div.postContainer, div.replyContainer
 	top: 1px !important;
 	right: 15px !important;
 	font-size: 9px !important;
+	opacity: 0.6 !important;
+}
+.thread > .opContainer > .op .menu_button:hover, .thread > .hide_thread_button:not(.hidden_thread):hover {
+	opacity: 1.0 !important;
 }
 .hidden_thread {
 	padding: 4px !important;

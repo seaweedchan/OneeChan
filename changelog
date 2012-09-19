@@ -7,6 +7,7 @@ v4.1.6:
 -Stop truncating quick reply error message
 [Post-Update]
 -Only reposition non-inline OP menu button
+-Reduce OP menu/hide button opacity so its not as intrusive
 
 v4.1.5:
 -Add Monokai theme
