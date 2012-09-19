@@ -183,7 +183,8 @@ a.linkmail[href='mailto:sage']:hover,
 #qr .warning,
 span.lit,
 span[style='color:#F00000'],
-span[style='color:#FF0000;font-weight:normal']
+span[style='color:#FF0000;font-weight:normal'], 
+#qr #errmsg
 {
 	color:" + $SS.theme.sageColor.hex + "!important;
 	text-shadow:none!important;
