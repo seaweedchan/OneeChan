@@ -353,7 +353,8 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] !== 4 ? "#qr>.move .close," : "") +
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
-($SS.conf["Disable Ads"] ? "div[style^='text-align: center']," : "" ) + 
+($SS.conf["Disable Ads"] ? "hr + div[style^='text-align: center'],
+.board + div[style^='text-align: center']," : "" ) + 
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
@@ -426,7 +427,8 @@ tr,
 .mPagelist .pages span strong,	
 #boardLinks>a.selectedBoard,
 #boardNavDesktop>a.current,
-#boardNavDesktopFoot>a.current
+#boardNavDesktopFoot>a.current,
+table.postForm > tbody > tr > td:first-child
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
@@ -2500,6 +2502,10 @@ margin-bottom: 20px !important;
 {
     opacity: 1;
     cursor: pointer;
+}
+table.postForm > tbody > tr > td:first-child
+{
+	background-color: transparent !important;
 }
  .globalMessage:hover
 {
