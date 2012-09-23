@@ -3245,6 +3245,40 @@ a[href='.././']
 	padding: 1px 2px;
 	text-align:center;
 }
+" + ($SS.conf["Post Form"] === 4 ? "
+#qr:not(.captcha) [type='submit'] 
+{
+	margin: 1px -1px 0px 0px !important;
+	width: 100% !important;
+	float: right !important;
+	margin-right: 0px !important;
+}
+#qr:not(.captcha) #spoilerLabel 
+{
+	bottom: 5px !important;
+}
+#qr:not(.captcha) .warning:not(:empty) 
+{
+	padding: 3px 2px !important;
+}" : "#qr:not(.captcha) [type='submit'] 
+{
+	margin: 1px 1px 0px 0px !important;
+	width: 256px !important;
+	float: right !important;
+	margin-right: 0px !important;
+}
+#qr:not(.captcha) #spoilerLabel 
+{
+	bottom: 3px !important;
+}
+#qr:not(.captcha) textarea 
+{
+	height: 174px !important;
+}
+#qr:not(.captcha) .warning:not(:empty) 
+{
+	padding: 3px 2px !important;
+}") + "
 #menu,
 .subMenu
 {

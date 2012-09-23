@@ -2,6 +2,9 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.1.7:
+-Restyle QR if 4chan Pass is detected (Make SURE you have Mayhem's 4chan X 2.35.3 or higher / ihavenoface's 4chan X 2.35.5 or higher or you will have issues.)
+
 v4.1.6:
 -Fix spoiler text overlapping with file input text
 -Stop truncating quick reply error message
