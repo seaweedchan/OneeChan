@@ -6,6 +6,7 @@ v4.1.7:
 -Restyle QR if 4chan Pass is detected (Make SURE you have Mayhem's 4chan X 2.35.3 or higher / ihavenoface's 4chan X 2.35.5 or higher or you will have issues.)
 [Post-Update]
 -Fix visibility of Pass-related messages (on login) as well as Pass page colors
+-Remove Mayhem's default box-shadow for .qphl (It was made for Opera but OneeChan does not support Opera)
 
 v4.1.6:
 -Fix spoiler text overlapping with file input text

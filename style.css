@@ -1222,6 +1222,9 @@ input[type=checkbox]:focus,
 {
 	outline:none!important;
 }
+.qphl {
+	box-shadow: none !important;
+}
 #qp
 {
 	background:rgb(" + $SS.theme.mainColor.shiftRGB(-8) + ")!important;
