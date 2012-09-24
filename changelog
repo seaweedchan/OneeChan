@@ -10,6 +10,9 @@ v4.1.7:
 -Fix Expanding Form Inputs with new large textarea
 -Fix ad blocking with new class (moot ur a fgt)
 -Removed ExSauce option (deprecated -- use ExLinks instead http://hupotronic.github.com/ExLinks/)
+ahodesuka:
+	-Don't apply to /rs/
+	-Don't hide scrollbars when opening options
 
 v4.1.6:
 -Fix spoiler text overlapping with file input text

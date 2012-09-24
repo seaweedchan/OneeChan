@@ -1178,7 +1178,7 @@
                     });
                     $("#tNavLinks .navlink", tOptions).each(function(){ bindNavLinks(this); });
 
-                    return $(document.body).attr("style", "overflow:hidden;").append(overlay);
+                    return $(document.body).append(overlay);
                 }
             },
             createThemesTab: function(tOptions)
