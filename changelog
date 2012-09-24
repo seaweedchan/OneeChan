@@ -7,6 +7,7 @@ v4.1.7:
 [Post-Update]
 -Fix visibility of Pass-related messages (on login) as well as Pass page colors
 -Remove Mayhem's default box-shadow for .qphl (It was made for Opera but OneeChan does not support Opera)
+-Fix Expanding Form Inputs with new large textarea
 
 v4.1.6:
 -Fix spoiler text overlapping with file input text

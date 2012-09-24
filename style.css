@@ -3461,9 +3461,12 @@ a[href='.././'] {
 	-moz-transition:box-shadow .2s,width .2s ease-in-out!important;
 	-o-transition:box-shadow .2s,width .2s ease-in-out!important;
 }
-#qr #replies+div
+#qr.captcha #replies+div
 {
     height:128px!important;
+}
+#qr:not(.captcha) #replies+div {
+	height: 175px !important;
 }
 #qr textarea
 {
