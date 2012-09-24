@@ -7,7 +7,6 @@
 // @run-at        document-start
 // @include       *://www.4chan.org/
 // @include       *://boards.4chan.org/*
-// @include       *://rs.4chan.org/*
 // @include       *://sys.4chan.org/*
 // @updateURL     https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js
 // ==/UserScript==
