@@ -353,8 +353,10 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] !== 4 ? "#qr>.move .close," : "") +
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
-($SS.conf["Disable Ads"] ? "body > div.center,
-#delform > div.center," : "" ) + 
+($SS.conf["Disable Ads"] ? "div.center,
+img.topad,
+img.bottomad,
+img.middlead," : "" ) + 
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
@@ -524,23 +526,23 @@ div[style^='text-align: center'] img
 {
 	margin-top: 30px !important;
 }
-script + hr + div[style^='text-align: center'] img {
+script + hr + div.center img {
 	margin-top: -10px !important;
 }
-.board + div[style^='text-align: center'] img {
+.board + div.center img {
 	margin-top: 10px !important;
 }
-div[style^='text-align: center'] a
+div.center a
 {
 	opacity: 0.2 !important;
 }
-div[style^='text-align: center'] img
+div.center img
 {
 	-webkit-transform:scale(.85);
 	-moz-transform:scale(.85);
 	-0-transform:scale(.85);
 }
-div[style^='text-align: center'] a:hover
+div.center a:hover
 {
 	opacity: 1.0 !important;
 }

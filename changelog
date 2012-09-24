@@ -9,6 +9,7 @@ v4.1.7:
 -Remove Mayhem's default box-shadow for .qphl (It was made for Opera but OneeChan does not support Opera)
 -Fix Expanding Form Inputs with new large textarea
 -Fix ad blocking with new class (moot ur a fgt)
+-Removed ExSauce option (deprecated -- use ExLinks instead http://hupotronic.github.com/ExLinks/)
 
 v4.1.6:
 -Fix spoiler text overlapping with file input text
