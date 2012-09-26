@@ -1,10 +1,10 @@
 @import url(" + location.protocol + "//fonts.googleapis.com/css?family=PT+Sans+Narrow);
-*
+html, body, input, select, textarea, .boardTitle
 {
 	font-family:" + $SS.formatFont($SS.conf["Font"]) + "!important;
 	font-size:" + $SS.conf["Font Size"] + "px!important;
 }
-*:focus
+input:focus, textarea:focus
 {
 	outline:none!important;
 	-moz-outline:none!important;
@@ -194,13 +194,13 @@ span[style='color:#FF0000;font-weight:normal'],
 #fs_data tr[style],
 .stub>a:first-child,
 .webkit option,
-div[id*=jsMath],
+div[id^=jsMath],
 #playerDiv,
 #playerListMenu,
 #playerListItemMenu,
 #playerSettings,
 #imgControls .preload,
-#jsMath_float>*,
+#jsMath_float,
 .deleteform,
 #qr .warning,
 table.flashListing tr:nth-of-type(2n+1)
@@ -224,7 +224,7 @@ table.flashListing tr:nth-of-type(2n+1)
 	background: none !important;
 	border: none !important;
 }
-#optionsmenu:not([style=*='visibility:hidden;']), #filtermenu:not([style*='visibility: hidden;']) {
+#optionsmenu:not([style=='visibility:hidden;']), #filtermenu:not([style='visibility: hidden;']) {
 	top: 24px !important;
 }
 table.flashListing .highlightPost 
@@ -280,15 +280,11 @@ input[type=submit],
 {
 	cursor:pointer;
 }
-body,
 form[name=post] tr:nth-of-type(3)>td:nth-of-type(3),
 img[alt=Closed],
 img[alt=Sticky],
-.navLinks,
 .deleteform,
 #boardNavDesktop,
-
-#boardNavDesktop>span:not(#navtopright)>a,
 #navtopright,
 #imageType+label,
 #qr>form #spoilerLabel,
@@ -302,7 +298,7 @@ img[alt=Sticky],
 #qr>form>div:first-child .field:not(#dump):focus+span,
 input:not([type=submit]),
 select,
-select *,
+select option,
 textarea,
 #navlinks,
 #themeoptions label,
@@ -311,7 +307,8 @@ textarea,
 #updater label,
 #updater span,
 #boardNavDesktopFoot,
-#boardNavDesktopFoot a
+#boardNavDesktopFoot a,
+#boardNavDesktop a
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
 }
@@ -1312,7 +1309,8 @@ a.summary
 	right: 122px;
 	line-height:24px;
 }
-.deleteform *
+.deleteform input,
+.deleteform .riceCheck
 {
 	visibility:visible!important;
 }
@@ -2029,7 +2027,7 @@ textarea
 	right:0;
 	border-radius:0 10px 0 10px;
 }
-#themeoptions #tNavLinks .navlink>*:not(.handle)
+#themeoptions #tNavLinks .navlink>div:not(.handle), #themeoptions #tNavLinks .navlink>label, #themeoptions #tNavLinks .navlink>a
 {
 	position:relative;
 	z-index:1;
@@ -3129,7 +3127,7 @@ a[href='.././']
 	padding-top: 4px !important;
 	text-align:left!important;
 }
-#qr>.move *
+#qr>.move select, #qr>.move .riceCheck, #qr>.move span
 {
 	text-transform:none;
 }
@@ -3359,7 +3357,7 @@ pre.prettyprint
 span.pun {
 	color:rgba(" + $SS.theme.textColor.rgb + ",.4)!important;
 }
-.prettyprint *
+div.post > blockquote .prettyprint span
 {
     font-family:monospace!important;
     font-size:medium!important;
