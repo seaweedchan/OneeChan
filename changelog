@@ -13,6 +13,7 @@ v4.1.7:
 ahodesuka:
 	-Don't apply to /rs/
 	-Don't hide scrollbars when opening options
+-Style /p/ exif data
 
 v4.1.6:
 -Fix spoiler text overlapping with file input text

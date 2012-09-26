@@ -430,7 +430,8 @@ tr,
 #boardLinks>a.selectedBoard,
 #boardNavDesktop>a.current,
 #boardNavDesktopFoot>a.current,
-table.postForm > tbody > tr > td:first-child
+table.postForm > tbody > tr > td:first-child,
+table.exif td
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
