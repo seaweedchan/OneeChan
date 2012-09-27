@@ -886,6 +886,11 @@ div.postContainer, div.replyContainer
 	font-size: 9px !important;
 	opacity: 0.6 !important;
 }
+.inline .op .menu_button {
+	position: static !important;
+	margin-left: 5px !important;
+}
+.thread > .opContainer > .op .menu_button
 .thread > .opContainer > .op .menu_button:hover, .thread > .hide_thread_button:not(.hidden_thread):hover {
 	opacity: 1.0 !important;
 }
@@ -948,11 +953,6 @@ div.postContainer, div.replyContainer
     margin-right: 5px !important;
     margin-left: 5px !important;
     z-index: 2;
-}
-
-.op .menu_button
-{
-	margin-left: 5px !important;
 }
 html .inline .report_button, html .inline .menu_button 
 {
