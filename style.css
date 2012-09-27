@@ -2429,6 +2429,7 @@ form[name=post] #com_submit+label,
 	width:100px;
 	z-index:14!important;
 }
+" + ($SS.conf["Navlinks Position"] == 1 ? "
 #navlinks
 {
 	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:50px !important;" : "
@@ -2437,7 +2438,18 @@ form[name=post] #com_submit+label,
 	top:2px !important;
 	height:18px;
 	z-index:14!important;
+}" : "
+#navlinks
+{
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:265px !important;" : "
+	left:265px;
+	right:auto!important;") + "
+	bottom: 0px !important;
+	top: auto !important;
+	height:18px;
+	z-index:14!important;
 }
+" ) + "
 #ihover
 {
 	padding-bottom:21px;
