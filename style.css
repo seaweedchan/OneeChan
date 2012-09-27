@@ -290,7 +290,8 @@ img[alt=Sticky],
 #qr>form #spoilerLabel,
 .preview>label,
 .remove,
-.mPagelist .pages span
+.mPagelist .pages span,
+div.navLinks
 {
 	color:transparent!important;
 	font-size:0!important;
@@ -301,6 +302,7 @@ select,
 select option,
 textarea,
 #navlinks,
+div.navLinks a,
 #themeoptions label,
 #themeoptions label>span,
 #themeoptions #tMascot div a,
