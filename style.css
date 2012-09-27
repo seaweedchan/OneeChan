@@ -291,7 +291,8 @@ img[alt=Sticky],
 .preview>label,
 .remove,
 .mPagelist .pages span,
-div.navLinks
+div.navLinks, 
+label#prefetch
 {
 	color:transparent!important;
 	font-size:0!important;
@@ -327,7 +328,8 @@ input[type=submit],
 #stats span,
 .deleteform::after,
 .preview>label::after,
-.riceFile div
+.riceFile div,
+label#prefetch::after
 {
 	font-size:" + ($SS.conf["Bitmap Font"] ? $SS.conf["Font Size"] : 12) + "px!important;
 }
@@ -431,7 +433,8 @@ tr,
 #boardNavDesktop>a.current,
 #boardNavDesktopFoot>a.current,
 table.postForm > tbody > tr > td:first-child,
-table.exif td
+table.exif td,
+label#prefetch::after
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
@@ -2326,7 +2329,7 @@ label#prefetch
     bottom:auto!important;
     line-height:16px!important;
     position:fixed!important;
-    " + $SS.conf["Sidebar Position String"] + ":130px!important;
+    " + $SS.conf["Sidebar Position String"] + ":160px!important;
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
     top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
     z-index:5!important;
@@ -2337,6 +2340,9 @@ label#prefetch
 	float: left !important;
 	position: relative !important;
 	bottom: 1px !important;
+}
+label#prefetch::after {
+content: 'Prefetch' !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,

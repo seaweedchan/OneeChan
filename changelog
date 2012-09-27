@@ -8,6 +8,7 @@ v4.1.8:
 [Post-Update]
 -Rehost all mascots on a secure server -- minus.com -- that supports TLS
 -Fix delimiter
+-Make prefetch label smaller
 
 v4.1.7:
 -Restyle QR if 4chan Pass is detected (Make SURE you have Mayhem's 4chan X 2.35.3 or higher / ihavenoface's 4chan X 2.35.5 or higher or you will have issues.)
