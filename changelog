@@ -5,6 +5,9 @@ Items under [Post-Update] are bug fixes added into the official version after th
 v4.1.8:
 -Slight performance increase from removal of * selector
 -New option: Navlinks Position
+[Post-Update]
+-Rehost all mascots on a secure server -- minus.com -- that supports TLS
+-Fix delimiter
 
 v4.1.7:
 -Restyle QR if 4chan Pass is detected (Make SURE you have Mayhem's 4chan X 2.35.3 or higher / ihavenoface's 4chan X 2.35.5 or higher or you will have issues.)

@@ -1,5 +1,5 @@
 @import url(" + location.protocol + "//fonts.googleapis.com/css?family=PT+Sans+Narrow);
-html, body, input, select, textarea, div.boardBanner > div.boardSubtitle
+html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks
 {
 	font-family:" + $SS.formatFont($SS.conf["Font"]) + "!important;
 	font-size:" + $SS.conf["Font Size"] + "px!important;
