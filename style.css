@@ -4,7 +4,7 @@ html, body, input, select, textarea, .boardTitle
 	font-family:" + $SS.formatFont($SS.conf["Font"]) + "!important;
 	font-size:" + $SS.conf["Font Size"] + "px!important;
 }
-input:focus, textarea:focus
+input:focus, textarea:focus, a
 {
 	outline:none!important;
 	-moz-outline:none!important;
