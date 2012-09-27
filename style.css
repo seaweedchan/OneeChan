@@ -878,7 +878,7 @@ div.postContainer, div.replyContainer
 {
 	font-size: 9px !important;
 }
-.thread > .opContainer > .op .menu_button
+.thread > .opContainer > .op > .postInfo > .menu_button
 {
 	position: absolute !important;
 	top: 1px !important;
@@ -886,12 +886,8 @@ div.postContainer, div.replyContainer
 	font-size: 9px !important;
 	opacity: 0.6 !important;
 }
-.inline .op .menu_button {
-	position: static !important;
-	margin-left: 5px !important;
-}
-.thread > .opContainer > .op .menu_button
-.thread > .opContainer > .op .menu_button:hover, .thread > .hide_thread_button:not(.hidden_thread):hover {
+.thread > .opContainer > .op > .postInfo > .menu_button
+.thread > .opContainer > .op > .postInfo > .menu_button:hover, .thread > .hide_thread_button:not(.hidden_thread):hover {
 	opacity: 1.0 !important;
 }
 .hidden_thread {
