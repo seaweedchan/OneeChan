@@ -73,6 +73,17 @@ span.spoiler:hover, span.spoiler:focus {
     padding-left: 10px !important;
 }
 /* End */
+" + (!$SS.conf["Disable Ads"] ? "img.middlead {
+	width: 468px;
+	height: 60px;
+	max-width: 100%;
+	position: relative !important;
+	top: 30px !important;
+}
+div.center {
+	margin: auto;
+	text-align: center;
+}" : "") + "
 #delform hr 
 {
 	margin-bottom: 6px !important;
@@ -412,9 +423,11 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
 ($SS.conf["Disable Ads"] ? "div.center,
+body > div.center:not(:nth-of-type(2)),
 img.topad,
 img.bottomad,
-img.middlead," : "" ) + 
+img.middlead," : "
+div.center img:not(.middlead)," ) + 
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
