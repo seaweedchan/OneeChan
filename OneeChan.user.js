@@ -1985,7 +1985,7 @@
                     inputbColor: "aaaaaa",
                     blinkColor:  "dd0000",
                     jlinkColor:  "800000",
-                    linkColor:   "ba0000",
+                    linkColor:   "800000",
                     linkHColor:  "dd0000",
                     nameColor:   "117743",
                     quoteColor:  "789922",
@@ -2009,7 +2009,7 @@
                     inputbColor: "aaaaaa",
                     blinkColor:  "000000",
                     jlinkColor:  "34345C",
-                    linkColor:   "cc2200",
+                    linkColor:   "34345c",
                     linkHColor:  "dd0000",
                     nameColor:   "117743",
                     quoteColor:  "789922",
@@ -2018,7 +2018,7 @@
                     tripColor:   "228854",
                     titleColor:  "0f0c5d",
                     timeColor:   "000000",
-                    customCSS:   '\n\n\n\n\n\n#boardNavDesktop,.pagelist,#imgControls{background:rgba(210, 214, 239,.9)!important;}#delform,.reply,.hidden_thread,.stub{border-radius:0!important}.reply,.hidden_thread,.stub"+($SS.conf["Recolor Even Posts"] ? ",.replyContainer:nth-of-type(even)>div" : "")+"{border-left:0!important;border-top:0!important;}.boardTitle {color: #004a99 !important;text-shadow: 1px 1px 1px #222 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a { color: #000000 !important; }'
+                    customCSS:   '\n\n\n\n\n\na.quotelink:not(:hover){color:#cc2200!important;}#boardNavDesktop,.pagelist,#imgControls{background:rgba(210, 214, 239,.9)!important;}#delform,.reply,.hidden_thread,.stub{border-radius:0!important}.reply,.hidden_thread,.stub"+($SS.conf["Recolor Even Posts"] ? ",.replyContainer:nth-of-type(even)>div" : "")+"{border-left:0!important;border-top:0!important;}.boardTitle {color: #AF0A0F !important;text-shadow: 1px 1px 1px #7A070D !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a { color: #000000 !important; }'
                 },
                 {
                     name:        "Yotsuba Purple",
