@@ -64,6 +64,9 @@ span.spoiler {
 span.spoiler:hover, span.spoiler:focus {
     color: rgb(255, 255, 255) !important;
 }
+div.reply {
+	display: table;
+}
 /* End */
 #delform hr 
 {
@@ -1419,10 +1422,10 @@ blockquote>div[style]
     position:relative;
     z-index:1;
 }
-.fileThumb>img+img
+.image_expanded
 {
-	background-color:rgba(" + $SS.theme.mainColor.rgb + ",.01)!important;
     z-index:13!important;
+    position: relative;
 }
 img[alt=Closed],
 img[alt=Sticky],
