@@ -274,7 +274,7 @@ table.flashListing tr:nth-of-type(2n+1)
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
-" + ($SS.conf["Recolor Even Posts"] ? ".replyContainer:nth-of-type(even) > div {background-color:rgba(" + $SS.theme.mainColor.rgb + ", 0.5)!important;
+" + ($SS.conf["Recolor Even Posts"] ? ".replyContainer:nth-of-type(even) > div {background-color:rgba(" + $SS.theme.mainColor.rgb + ", " + ($SS.theme.mainColor.isLight ? "0.7" : "0.5")  + ")!important;
 border:1px solid rgba(" + $SS.theme.brderColor.rgb + ", 0.8) !important;
 }" : "") + "
 .globalMessage, #boardNavDesktopFoot
