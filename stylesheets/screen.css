@@ -115,7 +115,10 @@ q:before, q:after {
   z-index: 99;
   margin-left: 0;
   width: 300px;
-  background: rgba(255,255,255,0.9) !important;
+  font-size: 12px !important;
+  background: rgba(255,255,255,0.8) !important;
+  border-radius: 3px !important;
+  padding: 2px !important;
 }
 .chrome::before, .firefox::before, .opera::before {
   content: '';
