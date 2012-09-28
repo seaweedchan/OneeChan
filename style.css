@@ -64,9 +64,6 @@ span.spoiler {
 span.spoiler:hover, span.spoiler:focus {
     color: rgb(255, 255, 255) !important;
 }
-div.reply {
-	display: table;
-}
 /* End */
 #delform hr 
 {
@@ -1422,10 +1419,16 @@ blockquote>div[style]
     position:relative;
     z-index:1;
 }
+.op,
+.thread.hidden
+{
+    display:block!important;
+}
 .image_expanded
 {
     z-index:13!important;
-    position: relative;
+    position: relative !important;
+    display: table !important;
 }
 img[alt=Closed],
 img[alt=Sticky],
@@ -1729,11 +1732,6 @@ td.doubledash
 div.autohide>a[title='Auto-hide dialog box']
 {
 	text-decoration:underline!important;
-}
-.op,
-.thread.hidden
-{
-    display:block!important;
 }
 .op .filesize
 {
