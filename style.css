@@ -35,7 +35,7 @@ div.post {
 	margin: 4px 0;
 	overflow: hidden;
 }
-#delform div.reply, div.image_expanded {
+#delform div.reply:not([hidden]), div.image_expanded {
 	display: table !important;
 }
 div.thread {
@@ -73,6 +73,9 @@ span.spoiler:hover, span.spoiler:focus {
     padding-left: 10px !important;
 }
 /* End */
+#delform .sideArrows[hidden], #delform div.post[hidden] {
+	display: none !important;
+}
 " + (!$SS.conf["Disable Ads"] ? "img.middlead {
 	width: 468px;
 	height: 60px;
@@ -1938,6 +1941,26 @@ textarea
 	height:20px;
 	padding:0 3px;
 	vertical-align:top;
+}
+#updater label {
+	width: 100%;
+	float: left;
+}
+#updater label input {
+	float: right;
+}
+#updater input.field {
+	height: 18px !important;
+}
+#updater input[type='number'] {
+	width: 3em !important;
+}
+#updater>div>input[name='Update Now'] {
+	margin-right: 28px !important;
+}
+#updater .riceCheck {
+	position: relative !important;
+	top: 1px !important;
 }
 .deleteform::before,
 #themeoptions #tMain .mOption span
