@@ -3349,7 +3349,6 @@ a[href='.././']
 	margin: 1px -1px 0px 0px !important;
 	width: 100% !important;
 	float: right !important;
-	margin-right: 0px !important;
 }
 #qr:not(.captcha) #spoilerLabel 
 {
@@ -3360,10 +3359,9 @@ a[href='.././']
 	padding: 3px 2px !important;
 }" : "#qr:not(.captcha) [type='submit'] 
 {
-	margin: 1px 1px 0px 0px !important;
-	width: 256px !important;
+	margin: 1px 0px 0px 0px !important;
+	width: 255px !important;
 	float: right !important;
-	margin-right: 0px !important;
 }
 #qr:not(.captcha) #spoilerLabel 
 {
