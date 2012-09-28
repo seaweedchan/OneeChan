@@ -1441,11 +1441,6 @@ blockquote>div[style]
 {
     padding-left:3px!important;
 }
-.fileThumb>img
-{
-    position:relative;
-    z-index:1;
-}
 .op,
 .thread.hidden
 {
