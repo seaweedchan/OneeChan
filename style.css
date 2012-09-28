@@ -1,8 +1,7 @@
-@import url(" + location.protocol + "//fonts.googleapis.com/css?family=PT+Sans+Narrow);
 html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks
 {
-	font-family:" + $SS.formatFont($SS.conf["Font"]) + "!important;
-	font-size:" + $SS.conf["Font Size"] + "px!important;
+	font-family:" + $SS.formatFont($SS.conf["Font"]) + ";
+	font-size:" + $SS.conf["Font Size"] + "px;
 }
 input:focus, textarea:focus, a
 {
@@ -17,6 +16,63 @@ input:focus, textarea:focus, a
 	-o-user-select:none;
 	user-select:none;
 }
+/* Some original Yotsuba CSS */
+div.post div.file .fileThumb {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+.postContainer {
+	display: block;
+	clear: both;
+}
+div.post blockquote.postMessage {
+	display: block;
+}
+div.post {
+	margin: 4px 0;
+	overflow: hidden;
+}
+#delform div.reply, div.image_expanded {
+	display: table !important;
+}
+div.thread {
+	margin: 0px;
+	clear: both;
+}
+table.flashListing {
+	border-spacing: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.pagelist div.pages {
+	padding: 4px;
+}
+.globalMessage {
+	text-align: center;
+}
+.prettyprint {
+    padding: 5px !important;
+    display: inline-block;
+    max-height: 400px;
+    overflow-x: auto;
+    max-width: 600px;
+}
+span.spoiler {
+    color: rgb(0, 0, 0) !important;
+    background: none repeat scroll 0% 0% rgb(0, 0, 0) !important;
+}
+span.spoiler:hover, span.spoiler:focus {
+    color: rgb(255, 255, 255) !important;
+}
+#delform div.reply
+{
+    padding-top: 8px !important;
+    padding-left: 10px !important;
+}
+/* End */
 #delform hr 
 {
 	margin-bottom: 6px !important;
@@ -291,7 +347,8 @@ img[alt=Sticky],
 .preview>label,
 .remove,
 .mPagelist .pages span,
-div.navLinks, 
+div.navLinks,
+div.navLinks a,
 label#prefetch
 {
 	color:transparent!important;
@@ -303,7 +360,6 @@ select,
 select option,
 textarea,
 #navlinks,
-div.navLinks a,
 #themeoptions label,
 #themeoptions label>span,
 #themeoptions #tMascot div a,
@@ -391,7 +447,9 @@ body>.closed>br,
 .stub+div+div.post,
 #navtopright>a:last-child,
 #navtopright a:not([class]),
-#first-run
+#first-run,
+.mobile,
+.mobileinline
 {
 	display:none!important;
 }
@@ -919,7 +977,9 @@ div.postContainer, div.replyContainer
 {
     font-size: 9px !important;
 }
-" : "") + "
+" : "
+.sideArrows {
+float: left !important; }") + "
 .thread
 {
 	clear:both;
@@ -983,7 +1043,6 @@ form[name=delform]
 .thread>div>.post
 {
 	" + ($SS.conf["Layout"] !== 2 ? "width:100%;" : "") + "
-    overflow:visible;
 }
 .thread:last-child>.postContainer:last-child>.reply
 {
@@ -1370,10 +1429,15 @@ blockquote>div[style]
     position:relative;
     z-index:1;
 }
-.fileThumb>img+img
+.op,
+.thread.hidden
 {
-	background-color:rgba(" + $SS.theme.mainColor.rgb + ",.01)!important;
+    display:block!important;
+}
+.image_expanded
+{
     z-index:13!important;
+    position: relative !important;
 }
 img[alt=Closed],
 img[alt=Sticky],
@@ -1418,7 +1482,7 @@ input#fs_search,
 input.field,
 .webkit select,
 textarea,
-#qr > form #spoilerLabel,
+#qr.captcha > form #spoilerLabel,
 .riceFile,
 #options input
 {
@@ -1678,11 +1742,6 @@ div.autohide>a[title='Auto-hide dialog box']
 {
 	text-decoration:underline!important;
 }
-.op,
-.thread.hidden
-{
-    display:block!important;
-}
 .op .filesize
 {
 	display:inline-block!important;
@@ -1829,7 +1888,7 @@ textarea
 {
     opacity:.5;
     padding-right:5px;
-    " + (($SS.conf["Font"] === "Consolas") || ($SS.conf["Font"] === "Monospace") ? "padding-left: 10px;" : "padding-left: 35px;") + "
+    " + (($SS.conf["Font"] === "Consolas") || ($SS.conf["Font"] === "monospace") ? "padding-left: 10px;" : "padding-left: 35px;") + "
 }
 .linkdelimiter
 {
