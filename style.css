@@ -462,7 +462,8 @@ body>.closed>br,
 #navtopright a:not([class]),
 #first-run,
 .mobile,
-.mobileinline
+.mobileinline,
+iframe
 {
 	display:none!important;
 }
