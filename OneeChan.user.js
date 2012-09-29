@@ -32,7 +32,7 @@
         "Reveal All Spoilers":      [ false, "Makes all spoilers look as if you were hovering over them" ],
         "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
         "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards", null, true ],
-        "Use Title Text for Selected Board": [ false, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
+        "Use Title Text for Selected Board": [ true, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
         "SFW/NSFW Themes":          [ false,  "Allows you to choose one theme for SFW boards and another for NSFW boards." ],
         "Recolor Even Posts":       [ true,  "Makes every other post a darker color" ],
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
@@ -2522,7 +2522,7 @@
 
                         for (var i = 0, MAX = links.length; i < MAX; ++i)
                             a.push("<a title='" + links[i].title + "' href='" + window.location.protocol + "//" + links[i].link + "'" +
-                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + ($SS.conf["Use Title Text for Selected Board"] ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
+                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + (($SS.conf["Use Title Text for Selected Board"]) && (links[i].title !== "undefined") ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
 
                         if ((div = $("#boardLinks")).exists())
                             return div.html(a.join($SS.conf["Nav Link Delimiter"]));
