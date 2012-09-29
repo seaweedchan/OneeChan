@@ -2,6 +2,10 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.2.0:
+ahodesuka:
+	 - Settings window will now close when clicking outside of the window.
+
 v4.1.9:
 -Unload default 4chan CSS file for slight performance increase
 [Post-Update]

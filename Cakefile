@@ -4,7 +4,6 @@ fs     = require 'fs'
 
 STYLE     = 'style.css'
 SCRIPT    = 'OneeChan.user.js'
-CHANGELOG = 'CHANGELOG'
 
 option '-o', '--output [DIR]', 'Specify output location.'
 
@@ -27,7 +26,3 @@ task 'release', (options) ->
   data = fs.readFileSync SCRIPT, 'utf8'
   fs.writeFileSync SCRIPT, data.replace /(\/\s@version\s+|VERSION\s+=\s\")[\d\.]+/g, "$1#{version}", 'utf8', (err) ->
     throw err if err
-  data = fs.readFileSync CHANGELOG, 'utf8'
-  fs.writeFileSync CHANGELOG, data.replace 'master', "master\n\n#{version}", 'utf8', (err) ->
-    throw err if err
-  exec "cake build && git commit -am 'Release #{version}' && git tag -a #{version} -m '#{version}' && git tag -af stable -m '#{version}'"
