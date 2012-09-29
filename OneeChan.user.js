@@ -2522,7 +2522,7 @@
 
                         for (var i = 0, MAX = links.length; i < MAX; ++i)
                             a.push("<a title='" + links[i].title + "' href='" + window.location.protocol + "//" + links[i].link + "'" +
-                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + (($SS.conf["Use Title Text for Selected Board"]) && (links[i].title !== "undefined") ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
+                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + (($SS.conf["Use Title Text for Selected Board"]) && (links[i].title !== "undefined") && (links[i].title !== "") ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
 
                         if ((div = $("#boardLinks")).exists())
                             return div.html(a.join($SS.conf["Nav Link Delimiter"]));
