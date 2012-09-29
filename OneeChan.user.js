@@ -31,7 +31,8 @@
         "Underline Links":          [ false, "If enabled links that are normally underlined will remain so" ],
         "Reveal All Spoilers":      [ false, "Makes all spoilers look as if you were hovering over them" ],
         "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
-        "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards" ],
+        "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards", null, true ],
+        "Use Title Text for Selected Board": [ true, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
         "SFW/NSFW Themes":          [ false,  "Allows you to choose one theme for SFW boards and another for NSFW boards." ],
         "Recolor Even Posts":       [ true,  "Makes every other post a darker color" ],
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
@@ -1116,7 +1117,7 @@
                         if (defaultConfig[key][4] === true) // sub-option
                         {
                             var pVal = $SS.conf[defaultConfig[key][2]];
-                                id   = defaultConfig[key][2].replace(" ", "_") + defaultConfig[key][3];
+                                id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
                             optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" +
                                             (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
                                             "</span><input" + (val ? " checked" : "") + " name='" + key + "' type=checkbox></label>";
@@ -1200,13 +1201,13 @@
                     });
                     $("[hasSub]", tOptions).bind("change", function()
                     {
-                        var id  = this.name.replace(" ", "_") + $(this).val(),
+                        var id  = this.name.replace(/\s/g, "_") + $(this).val(),
                             sub = $("." + id);
 
                         if (sub.exists())
                             sub.each(function(){ $(this).show(); });
                         else
-                            $("[class*='" + this.name.replace(" ", "_") + "']")
+                            $("[class*='" + this.name.replace(/\s/g, "_") + "']")
                                 .each(function(){ $(this).hide(); });
                     });
                     $("a[name=save]", tOptions).bind("click", $SS.options.save);
@@ -2521,7 +2522,7 @@
 
                         for (var i = 0, MAX = links.length; i < MAX; ++i)
                             a.push("<a title='" + links[i].title + "' href='" + window.location.protocol + "//" + links[i].link + "'" +
-                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + links[i].text + "</a>");
+                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + ($SS.conf["Use Title Text for Selected Board"] ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
 
                         if ((div = $("#boardLinks")).exists())
                             return div.html(a.join($SS.conf["Nav Link Delimiter"]));
