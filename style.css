@@ -26,14 +26,12 @@ div.post div.file .fileThumb {
 }
 .postContainer {
 	display: block;
-	clear: both;
 }
 div.post blockquote.postMessage {
 	display: block;
 }
 div.post {
 	margin: 4px 0;
-	overflow: hidden;
 }
 #delform div.reply:not([hidden]), div.image_expanded {
 	display: table !important;
@@ -469,7 +467,7 @@ body>.closed>br,
 #first-run,
 .mobile,
 .mobileinline,
-iframe
+iframe[src='about:blank']
 {
 	display:none!important;
 }
@@ -904,6 +902,10 @@ div.post > blockquote .spoiler a
 }
 ") + "
 " + ($SS.conf["Layout"] !== 2 ? "
+div.postContainer, div.replyContainer
+{
+    position: relative !important;
+}
 .sideArrows a, .sideArrows span
 {
     position: static !important;
@@ -943,10 +945,6 @@ div.reply .report_button, div.reply .menu_button
     right: 13px !important;
     top: 7px !important;
     font-size: 9px !important;
-}
-div.postContainer, div.replyContainer
-{
-    position: relative !important;
 }
 .thread > .hide_thread_button:not(.hidden_thread) 
 {
