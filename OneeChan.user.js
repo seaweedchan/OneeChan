@@ -1116,7 +1116,7 @@
                                            "<p><a class=trbtn name=addLink>add</a>" +
                                            "<label>Delimiter: " +
                                            "<input type=text name='Nav Link Delimiter' value='" + $SS.conf["Nav Link Delimiter"] +
-                                           "' style='width:40px' title='" + defaultConfig["Nav Link Delimiter"][1] + "'></p>";
+                                           "' style='width:40px' title='" + defaultConfig["Nav Link Delimiter"][1] + "'> Suggestions: \" - \", \"\/ \/\", \" • \"</p>";
 
                             if (links != undefined)
                                 for (var i = 0, MAX = links.length; i < MAX; ++i)
