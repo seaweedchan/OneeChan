@@ -9,6 +9,9 @@ ahodesuka:
 -Changed all custom nav links defaults to what they'd be without custom nav links enabled -- to be used as a board hider
 [Post-Update]
 -New option: Use Title Text for Selected Board (sub-option for Custom Navigation Links)
+-Fix YouTube Link Title
+-Fix replies not wrapping on Fit Content
+-Make emails more visible
 
 v4.2.0:
 ahodesuka:

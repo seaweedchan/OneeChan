@@ -167,7 +167,8 @@ a:hover,
 div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
 .backlink:hover,
-span.lit
+span.lit,
+.useremail>.name:hover
 {
 	color:" + $SS.theme.linkHColor.hex + "!important;
 	text-shadow:rgba(" + $SS.theme.linkHColor.rgb + ",.2) 0 0 2px!important;
@@ -205,16 +206,14 @@ a[href='javascript:;'],
 {
 	color:" + $SS.theme.jlinkColor.hex + "!important;
 }
-.postInfo span.name,
+.nameBlock>span.name,
 span.com,
-.postInfo span.name a,
 #delform[action='https://sys.4chan.org/f/up.php'] .name
 {
 	color:" + $SS.theme.nameColor.hex + "!important;
 }
-.useremail span.postertrip,
+.nameBlock>span.postertrip,
 span.tag,
-span>span.postertrip,
 #delform[action='https://sys.4chan.org/f/up.php'] .postertrip
 {
 	color:" + $SS.theme.tripColor.hex + "!important;
