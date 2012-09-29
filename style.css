@@ -2166,7 +2166,7 @@ textarea
 }
 #themeoptions #tNavLinks label
 {
-	margin:0 5px;
+	margin:0 3px;
 	position:relative;
 	top:1px;
 }
@@ -2177,11 +2177,11 @@ textarea
 }
 #themeoptions #tNavLinks label:first-child>input[type=text]
 {
-	width:130px;
+	width:120px;
 }
 #themeoptions #tNavLinks label>input[type=text]
 {
-	width:180px;
+	width:125px;
 }
 #themeoptions label>input[type=checkbox],
 #themeoptions label>.riceCheck
