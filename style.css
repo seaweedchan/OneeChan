@@ -152,7 +152,7 @@ blockquote a.quotelink,
 span.typ, 
 span.atn
 {
-    " + (!$SS.conf["Underline Links"] ? "text-decoration:none!important;" : "") + "
+    " + (!$SS.conf["Underline Links"] ? "text-decoration:none;" : "") + "
 	color:" + $SS.theme.linkColor.hex + "!important;
 	font-weight:normal!important;
 	-webkit-transition:all .1s;
