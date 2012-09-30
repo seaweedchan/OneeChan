@@ -13,6 +13,7 @@ ahodesuka:
 -Fix replies not wrapping on Fit Content
 -Make emails more visible
 -Fix Chrome not allowing hover of announcement and slideout nav
+-Fix Chrome quotelinks not applying line-through
 
 v4.2.0:
 ahodesuka:
