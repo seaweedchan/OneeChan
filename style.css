@@ -814,7 +814,7 @@ div.post > blockquote .spoiler a
 {
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
 	border: none !important;
-	position: absolute !important;
+	position: fixed !important;
 	" + $SS.conf["Sidebar Position String"] + ": 65px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	z-index: 6 !important;
@@ -829,7 +829,7 @@ div.post > blockquote .spoiler a
 #boardNavDesktopFoot 
 {
 	visibility: visible !important;
-	position: fixed !important;
+	position: absolute !important;
 	overflow-y: scroll !important;
 	top: -1000px !important;
 	bottom: auto !important;
