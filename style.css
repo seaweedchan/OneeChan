@@ -810,14 +810,11 @@ div.post > blockquote .spoiler a
     position: fixed !important;
     z-index: 99 !important;
 }
-#boardNavDesktopFoot {
-	position: absolute !important;
-}
 #boardNavDesktopFoot::after 
 {
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
 	border: none !important;
-	position: fixed !important;
+	position: absolute !important;
 	" + $SS.conf["Sidebar Position String"] + ": 65px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	z-index: 6 !important;
@@ -847,6 +844,7 @@ div.post > blockquote .spoiler a
 {
 	z-index: 99 !important;
 	top: " + ($SS.conf["Show Logo"] ? "123" : "36") + "px !important;
+	position: fixed !important;
 }
 " + ($SS.conf["Slideout Navigation Type"] === 1 ? "
 #boardNavDesktopFoot a 
@@ -2572,12 +2570,9 @@ div.closed ~ .globalMessage
 margin-bottom: 20px !important;
 }
 " : "
-.globalMessage {
-	position: absolute !important;
-}
 .globalMessage 
 {
-    position: fixed !important;													
+    position: absolute !important;													
     top: -1000px !important;
  	" + ($SS.conf["Sidebar Position"] !== 2 ? "
     right: 2px !important;
@@ -2614,6 +2609,7 @@ margin-bottom: 20px !important;
 .globalMessage:hover
 {
     top: " + ($SS.conf["Show Logo"] ? "123" : "36") + "px !important;
+    position: fixed !important;
 }
 .globalMessage:hover::before
 {
