@@ -810,6 +810,9 @@ div.post > blockquote .spoiler a
     position: fixed !important;
     z-index: 99 !important;
 }
+#boardNavDesktopFoot {
+	position: absolute !important;
+}
 #boardNavDesktopFoot::after 
 {
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
@@ -2569,6 +2572,9 @@ div.closed ~ .globalMessage
 margin-bottom: 20px !important;
 }
 " : "
+.globalMessage {
+	position: absolute !important;
+}
 .globalMessage 
 {
     position: fixed !important;													
