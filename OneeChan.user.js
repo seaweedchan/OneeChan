@@ -38,7 +38,7 @@
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
         "Slideout Announcement":    [ true, "Condense the announcement into a button in the sidebar" ],
         "Use Post Info Color":      [ false, "Separate the post info by the post info colors defined in themes", null, true ],
-        "Add Shadow?":              [ false, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
+        "Add Shadow?":              [ true, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
         "Disable Ads":              [ true, "Disables ads on 4chan" ],
         "Sage Identification":
         [
