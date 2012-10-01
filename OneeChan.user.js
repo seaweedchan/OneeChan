@@ -32,7 +32,7 @@
         "Reveal All Spoilers":      [ false, "Makes all spoilers look as if you were hovering over them" ],
         "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
         "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards", null, true ],
-        "Use Title Text for Selected Board": [ true, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
+        "Use Title Text for Selected Board": [ false, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
         "SFW/NSFW Themes":          [ false,  "Allows you to choose one theme for SFW boards and another for NSFW boards." ],
         "Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
