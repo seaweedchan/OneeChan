@@ -922,7 +922,6 @@ div.postContainer, div.replyContainer
 {
     position: static !important;
     width: 20px !important;
-    font-size: 9px !important;
     height: 10px !important;
 }
 .sideArrows
@@ -956,7 +955,6 @@ div.reply .report_button, div.reply .menu_button
     right: 33px !important;
     right: 13px !important;
     top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
-    font-size: 9px !important;
 }
 .thread > .hide_thread_button:not(.hidden_thread) 
 {
@@ -965,19 +963,13 @@ div.reply .report_button, div.reply .menu_button
 	right: 31px !important;
 	opacity: 0.6 !important;
 }
-.thread > .hide_thread_button > span 
-{
-	font-size: 9px !important;
-}
 .thread > .opContainer > .op > .postInfo > .menu_button
 {
 	position: absolute !important;
 	top: 1px !important;
 	right: 15px !important;
-	font-size: 9px !important;
 	opacity: 0.6 !important;
 }
-.thread > .opContainer > .op > .postInfo > .menu_button
 .thread > .opContainer > .op > .postInfo > .menu_button:hover, .thread > .hide_thread_button:not(.hidden_thread):hover {
 	opacity: 1.0 !important;
 }
@@ -1002,10 +994,6 @@ div.reply .report_button, div.reply .menu_button
     position: absolute !important;
     right: 27px !important;
     top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
-}
-.sideArrows a
-{
-    font-size: 9px !important;
 }
 " : "
 .sideArrows {
@@ -3462,6 +3450,55 @@ div.post > blockquote .prettyprint span
 {
     color:" + $SS.theme.textColor.hex + ";
 }
+.sideArrows span, .hide_thread_button span, .menu_button {
+	font-size: 0px !important;
+}
+.sideArrows span::after {
+	content: '⨯';
+	font-size: 16px !important;
+	position: relative;
+	bottom: 6px !important;
+}
+.hide_thread_button span::after {
+	content: '⨯';
+	font-size: 16px !important;
+	position: relative;
+	bottom: 4px !important;
+	right: 4px !important;
+}
+.menu_button::after {
+	content: '❖';
+	font-size: 12px !important;
+	position: relative;
+	bottom: 2px !important;
+}
+" + ($SS.conf["Layout"] !== 2 ? "
+.sideArrows span::after {
+	position: relative;
+	bottom: 6px !important;
+}
+.hide_thread_button span::after {
+	position: relative;
+	bottom: 4px !important;
+	right: 4px !important;
+}
+.menu_button::after {
+	position: relative;
+	bottom: 2px !important;
+}
+" : "
+.menu_button {
+margin-right: 3px !important;
+}
+.menu_button::after {
+	position: relative;
+	bottom: 1px !important;
+}
+.hide_thread_button span::after {
+	position: relative;
+	bottom: 2px !important;
+}
+") + "
 " + ($SS.conf["Use Post Info Color"] ? "
 .reply {
 	padding-top: 0px !important;
