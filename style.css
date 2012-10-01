@@ -1106,10 +1106,22 @@ div.post
 {
     margin:2px 0!important;
 }
-.favicon
-{
-    position: relative !important;
-    top: 3px !important;
+.favicon {
+	padding-top: 15px !important;
+	width: 15px !important;
+	height: 0px !important;
+	display: inline-block !important;
+	margin-right: 5px !important;
+	background-image: url('" + ($SS.theme.bgColor.isLight ? ""+$SS.theme.lightIcons.watcher+"" : ""+$SS.theme.darkIcons.watcher+"") + "') !important;
+	background-repeat: no-repeat !important;
+	position: relative !important;
+	top: 4px !important;
+}
+.favicon[src^='data'] {
+	opacity: 0." + ($SS.theme.bgColor.isLight ? 3 : 2) + " !important;
+}
+.favicon[src$='ico'] {
+	opacity: 0.8 !important;
 }
 " + ($SS.conf["Layout"] !== 2 ? "
 hr
@@ -1811,11 +1823,6 @@ textarea
 #updater .move
 {
 	cursor:default!important;
-}
-.opContainer .favicon
-{
-  position: relative !important;
-  top: 2px !important;
 }
 #overlay,
 #overlay2
