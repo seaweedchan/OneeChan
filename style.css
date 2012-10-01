@@ -313,9 +313,20 @@ margin-left: -10px !important;
 {
 padding-top: 200px !important;
 }
+.flashListing td:not(:last-of-type):not(.postblock) 
+{
+	border-right: 1px solid " + $SS.theme.brderColor.hex + " !important;
+}
+.flashListing td 
+{
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+	text-align: center !important;
+}
 #delform[action='https://sys.4chan.org/f/up.php'], #delform[action='https://sys.4chan.org/f/up.php'] .postblock {
 background: none !important;
 border: none !important;
+box-shadow: none !important;
 }
 html[xmlns] > body {
 margin-top: 100px !important;
