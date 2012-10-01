@@ -3454,13 +3454,13 @@ div.post > blockquote .prettyprint span
 	font-size: 0px !important;
 }
 .sideArrows span::after {
-	content: '⨯';
+	content: '×';
 	font-size: 16px !important;
 	position: relative;
 	bottom: 6px !important;
 }
 .hide_thread_button span::after {
-	content: '⨯';
+	content: '×';
 	font-size: 16px !important;
 	position: relative;
 	bottom: 4px !important;
@@ -3475,11 +3475,11 @@ div.post > blockquote .prettyprint span
 " + ($SS.conf["Layout"] !== 2 ? "
 .sideArrows span::after {
 	position: relative;
-	bottom: 6px !important;
+	bottom: 4px !important;
 }
 .hide_thread_button span::after {
 	position: relative;
-	bottom: 4px !important;
+	bottom: 1px !important;
 	right: 4px !important;
 }
 .menu_button::after {
