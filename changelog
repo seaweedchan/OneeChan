@@ -2,6 +2,12 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.2.2:
+-New option: Use Post Info Color
+-New sub-option: Add Shadow?
+-New theme options: Post Info Background Color, Post Info Border Color
+-Added 10px margin underneath ad
+
 v4.2.1:
 ahodesuka:
 	- Fix whitespace-only delimiter
