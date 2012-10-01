@@ -3454,32 +3454,25 @@ div.post > blockquote .prettyprint span
 	font-size: 0px !important;
 }
 .sideArrows span::after {
-	content: '×';
-	font-size: 16px !important;
-	position: relative;
-	bottom: 6px !important;
+	content: '✗';
+	font-size: 12px !important;
 }
 .hide_thread_button span::after {
-	content: '×';
-	font-size: 16px !important;
-	position: relative;
-	bottom: 4px !important;
-	right: 4px !important;
+	content: '✗';
+	font-size: 12px !important;
 }
 .menu_button::after {
 	content: '❖';
 	font-size: 12px !important;
-	position: relative;
-	bottom: 2px !important;
 }
 " + ($SS.conf["Layout"] !== 2 ? "
 .sideArrows span::after {
 	position: relative;
-	bottom: 4px !important;
+	bottom: 2px !important;
 }
 .hide_thread_button span::after {
 	position: relative;
-	bottom: 1px !important;
+	bottom: 0px !important;
 	right: 4px !important;
 }
 .menu_button::after {
@@ -3494,9 +3487,14 @@ margin-right: 3px !important;
 	position: relative;
 	bottom: 1px !important;
 }
-.hide_thread_button span::after {
+.sideArrows span::after {
 	position: relative;
 	bottom: 2px !important;
+}
+.hide_thread_button span::after {
+	position: relative;
+	bottom: -2px !important;
+	right: 4px !important;
 }
 ") + "
 " + ($SS.conf["Use Post Info Color"] ? "
