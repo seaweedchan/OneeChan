@@ -3469,10 +3469,16 @@ div.post > blockquote .prettyprint span
 .sideArrows span::after {
 	position: relative;
 	bottom: 2px !important;
+	left: 1px !important;
+}
+.webkit .sideArrows span::after {
+	left: 9px !important;
 }
 .hide_thread_button span::after {
 	position: relative;
 	bottom: 0px !important;
+}
+.gecko .hide_thread_button span::after {
 	right: 4px !important;
 }
 .menu_button::after {
