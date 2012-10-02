@@ -29,4 +29,4 @@ task 'release', (options) ->
 
 task 'update', (options) ->
   {version} = options
-  exec "git tag -af {version} -m '{version}' && git tag -af stable -m '{version}' && git push --tags"
+  exec "git tag -af #{version} -m '#{version}' && git tag -af stable -m '#{version}' && git push --tags"
