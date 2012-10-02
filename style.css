@@ -462,7 +462,7 @@ body>div.closed,
 .absBotText,
 .prev,
 #navbotr,
-#navtopright a:last-child,
+#navtopright a:last-child:not(#lastmuSettingsWindowLink),
 .next,	
 .postingMode,
 .sideArrows:not(.hide_reply_button),
@@ -473,8 +473,8 @@ body>.closed>br,
 #imageExpand,
 .hidden_thread+div.opContainer,
 .stub+div+div.post,
-#navtopright>a:last-child,
-#navtopright a:not([class]),
+#navtopright>a:last-child:not(#lastmuSettingsWindowLink),
+#navtopright a:not([class]):not(#lastmuSettingsWindowLink),
 #first-run,
 .mobile,
 .mobileinline,
@@ -521,7 +521,8 @@ tr,
 #boardNavDesktopFoot>a.current,
 table.postForm > tbody > tr > td:first-child,
 table.exif td,
-label#prefetch::after
+label#prefetch::after,
+strong[style='color:#000'] 
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
@@ -1110,6 +1111,30 @@ div.post
 }
 .favicon[src$='ico'] {
 	opacity: 0.8 !important;
+}
+/* Last.mu */
+div[id^='lastmuInfo'] 
+{
+	background: none !important;
+	border: none !important;
+}
+#lastmuSettingsWindowLink 
+{
+	display: block !important;
+	font-size: 0px !important;
+	color: transparent !important;
+	background-image: url('" + ($SS.theme.bgColor.isLight ? ""+$SS.theme.lightIcons.lastmu+"" : ""+$SS.theme.darkIcons.lastmu+"") + "') !important;
+	background-repeat: no-repeat !important;
+	height: 12px !important;
+	width: 18px !important;
+	position: fixed !important;
+	top: 4px !important;
+	right: 264px !important;
+	opacity: 0." + ($SS.theme.bgColor.isLight ? 5 : 3) + " !important;
+}
+#lastmuSettingsWindowLink:hover 
+{
+	opacity: 1.0 !important;
 }
 " + ($SS.conf["Layout"] !== 2 ? "
 hr
