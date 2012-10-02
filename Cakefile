@@ -29,4 +29,6 @@ task 'release', (options) ->
 
 task 'update', (options) ->
   {version} = options
+  return log 'ERROR! No version provided.' unless version
+  data = fs.readFileSync SCRIPT, 'utf8'
   exec "git tag -af #{version} -m '#{version}' && git tag -af stable -m '#{version}' && git push --tags"
