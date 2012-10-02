@@ -26,3 +26,7 @@ task 'release', (options) ->
   data = fs.readFileSync SCRIPT, 'utf8'
   fs.writeFileSync SCRIPT, data.replace /(\/\s@version\s+|VERSION\s+=\s\")[\d\.]+/g, "$1#{version}", 'utf8', (err) ->
     throw err if err
+
+task 'update', (options) ->
+  {version} = options
+  exec "git tag -af {version} -m '{version}' && git tag -af stable -m '{version}'"
