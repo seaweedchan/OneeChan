@@ -981,10 +981,10 @@ div.reply .report_button, div.reply .menu_button
 .hidden_thread > .menu_button {
 	position: absolute !important;
 	right: 18px !important;
-	font-size: 9px !important;
+	font-size: 0px !important;
 	top: 7px !important;
 }
-.hidden_thread > a:not([class]) > span {
+.hidden_thread > a:not([class]) > span, .stub > a:not([class]) > span {
 	float: right !important;
 	margin-right: 25px !important;
 	font-size: 14px !important;
@@ -1196,14 +1196,16 @@ a.hide_thread_button>span,
     width:auto!important;
 }
 " + ($SS.conf["Layout"] !== 2 ?
-($SS.conf["Show/Hide Menu Entry"] ? "
-.menu_button," : ".stub>.menu_button,") + "
-.hide_reply_button:not(.stub)
+".stub>.menu_button
 {
 	position:absolute;
-	right:0;
-	top:0;
+	right:16px;
+	top:6px;
     z-index:3;
+}
+.stub > a:not([class]) > span {
+position: relative !important;
+bottom: 1px !important;
 }" : "") + "
 a.hide_thread_button>span,
 .hide_reply_button:not(.stub)>a:first-child>span
@@ -1309,7 +1311,7 @@ html .reply.highlight
 .stub>a:first-child
 {
 	display:" + ($SS.conf["Layout"] === 2 ? "inline-" : "") + "block;
-	padding:7px;
+	padding:5px;
 }
 .container
 {
@@ -3482,7 +3484,7 @@ div.post > blockquote .prettyprint span
 	content: '✗';
 	font-size: 12px !important;
 }
-.hide_thread_button span::after {
+.hide_thread_button:not(.hidden_thread) span::after {
 	content: '✗';
 	font-size: 12px !important;
 }
