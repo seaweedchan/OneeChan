@@ -612,7 +612,8 @@ html:not([xmlns]) > body
 	" + (($SS.conf["Navigation Bar Position"] === 2) && ($SS.conf["Pages Position"] !== 2) ? "margin-top: -15px !important;" : "") + "
 }
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + "px !important;
+	padding-" + $SS.conf["Sidebar Position String"] + ":  " + $SS.conf["Sidebar Side Margin"] + "px !important;
 }
 div[style^='text-align: center'] img
 {
@@ -996,6 +997,27 @@ div.reply .report_button, div.reply .menu_button
     right: 27px !important;
     top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
 }
+" + (($SS.conf["Sidebar Position"] === 3) && (!$SS.conf["Reserve Edge"]) ? "
+.thread:first-of-type>.hide_thread_button
+{
+	right: 256px !important;
+	top: 1px !important;
+}
+.thread:first-of-type>.opContainer>.op>.postInfo>.menu_button
+{
+	right: 240px !important;
+	top: 2px !important;
+}
+.thread:first-of-type>.hidden_thread>.menu_button
+{
+	right: 240px !important;
+	top: 5px !important;
+}
+.thread:first-of-type>.hidden_thread>a:not([class])>span {
+	position: relative !important;
+	right: 226px !important;
+	bottom: 2px !important;
+}" : "") + "
 " : "
 .sideArrows {
 float: left !important; }") + "
@@ -1052,9 +1074,9 @@ form[name=delform]
 	" + ($SS.conf["Layout"] !== 2 ? "
 	" + ($SS.conf["Layout"] === 1 ? "border-" + $SS.conf["Sidebar Position String"] + ":0!important;" : "") : "") + "
 	margin:" + ($SS.conf["Layout"] !== 3 ?
-	($SS.conf["Sidebar Position"] !== 2 ? "0 0 0 " + $SS.conf["Side Margin"] + "px" :
-    "0 " + $SS.conf["Side Margin"] + "px 0 0") :
-    "0 " + (Math.min($SS.conf["Side Margin"], 40) / 2 * ($SS.conf["Side Margin"] < 10 ? 3 : 1)) + "% 0") + ";
+	($SS.conf["Sidebar Position"] !== 2 ? "0 " + $SS.conf["Sidebar Side Margin"] + "px 0 " + $SS.conf["Non-Sidebar Side Margin"] + "px" :
+    "0 " + $SS.conf["Non-Sidebar Side Margin"] + "px 0 " + $SS.conf["Non-Sidebar Side Margin"] + "px") :
+    "0 " + (Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "% 0") + ";
 	padding:0!important;
 	position:relative;
 	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "4px 0 0 4px" : "0 4px 4px 0") : "4px") + ";
@@ -2606,7 +2628,7 @@ body>center:nth-of-type(2)
 " + (!$SS.conf["Slideout Announcement"] ? "
 .globalMessage 
 {
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + "px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + "px !important;
 	margin-top: 40px !important;
 	position: static !important;
 	background: none !important;
@@ -3436,7 +3458,7 @@ form[name=delform][action$='/f/up.php']
     border:1px solid " + $SS.theme.brderColor.hex + "!important;
     " + ($SS.conf["Sidebar Position"] !== 3 ? "
     margin-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
-	margin-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Side Margin"] + " !important;
+	margin-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + " !important;
 	" : "
 	margin: 0px 5% !important;") + "
     border-radius:3px!important;
@@ -3616,7 +3638,7 @@ a[href='.././'] {
 	padding:0!important;
     position:fixed;
 	right:" + ($SS.conf["Layout"] === 3 ?
-	(Math.min($SS.conf["Side Margin"], 40) / 2 * ($SS.conf["Side Margin"] < 10 ? 3 : 1)) + "%" : "263px") + "!important;
+	(Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "%" : "263px") + "!important;
 	top:47%;
 	width:auto!important;
 	z-index:6!important;
