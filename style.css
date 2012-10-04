@@ -1723,6 +1723,13 @@ input[type=radio]:active,
 	background:rgba(" + $SS.theme.inputColor.shiftRGB(40, true) + "," + $SS.theme.replyOp + ")!important;
 	box-shadow:inset rgba(" + $SS.theme.inputColor.shiftRGB(100, true) + ",.4) 0 0 3px,rgba(" + $SS.theme.mainColor.shiftRGB(64) + ",.6) 0 1px!important;
 }
+input[name='Persistent QR']:not([checked]), 
+input[name='Auto Hide QR']:not([checked]),
+input[name='Persistent QR']:not([checked]) + .riceCheck, 
+input[name='Auto Hide QR']:not([checked]) + .riceCheck 
+{
+	outline: 1px solid red !important;
+}
 .replyContainer>.reply input[type=checkbox],
 .replyContainer>.reply .riceCheck,
 {

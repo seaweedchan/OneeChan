@@ -8,6 +8,7 @@ v4.2.3:
 -When sidebar is disabled, reserve edge is disabled, and Layout is set to Fit Width, move the hide thread button and menu button abut 250px to the right to not be hidden behind the OneeChan buttons
 [Post-Update]
 -Fully center pagelist of Post Form is set to Float
+-Outline Persistent QR and Auto Hide QR options in 4chan X if unchecked
 
 v4.2.2:
 -New option: Use Post Info Color
