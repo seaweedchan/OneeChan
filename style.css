@@ -1322,13 +1322,22 @@ html .reply.highlight
 	z-index:1;" : "") + "
 	margin-left:-2px;
 }
+#qp .container 
+{
+	bottom: 0px !important;
+}
+#qp div.reply 
+{
+	display: table !important;
+}
 " + ($SS.conf["Backlinks Position"] !== 1 ? "
 .container::before
 {
 	color:rgba(" + $SS.theme.textColor.rgb + ",.4)!important;
 	content:'REPLIES:';
 	padding-right:2px;
-}" : "") + "
+}
+	" : "") + "
 .container>a
 {
 	color:" + $SS.theme.blinkColor.hex + "!important;

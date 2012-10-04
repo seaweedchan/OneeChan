@@ -12,6 +12,8 @@ v4.2.2:
 -Add unicode icons for 4chan X buttons
 -Last.mu support
 -Fix hidden thread/reply styling
+-Fix buttons covered up by backlinks
+-Fix non-default Backlink position being incorrectly positioned
 
 v4.2.1:
 ahodesuka:
