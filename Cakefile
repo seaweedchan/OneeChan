@@ -20,14 +20,14 @@ task 'build', (options) ->
 
 option '-v', '--version [VERSION]', 'Release a new version.'
 
-task 'new', (options) ->
+task 'upgrade', (options) ->
   {version} = options
   return log 'ERROR! No version provided.' unless version
   data = fs.readFileSync SCRIPT, 'utf8'
   fs.writeFileSync SCRIPT, data.replace /(\/\s@version\s+|VERSION\s+=\s\")[\d\.]+/g, "$1#{version}", 'utf8', (err) ->
     throw err if err
 
-task 'upgrade', (options) ->
+task 'release', (options) ->
   {version} = options
   return log 'ERROR! No version provided.' unless version
   data = fs.readFileSync SCRIPT, 'utf8'
