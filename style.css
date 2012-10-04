@@ -2879,7 +2879,7 @@ body>.closed
 	clear:both;
 	position: relative !important;
 	bottom: 5px !important;
-	right: 131px !important;
+	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
 	word-spacing: 10px !important;
 	font-size: 0px !important;
 	color: transparent !important;
@@ -2954,7 +2954,7 @@ body>.closed
 	clear:both;
 	position: relative !important;
     bottom: 4px !important;
-	right: 131px !important;
+	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
 	word-spacing: 10px !important;
 	font-size: 0px !important;
 	color: transparent !important;
