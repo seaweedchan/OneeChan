@@ -3538,8 +3538,7 @@ margin-right: 3px !important;
 .thread>.replyContainer>.reply>div.postInfo {
 	background: rgba(" + $SS.theme.pinfoColor.rgb + "," + $SS.theme.replyOp + ")!important;
 	border-bottom: 1px solid " + $SS.theme.pinfobColor.hex + " !important;
-	padding: " + ($SS.conf["Slim Replies"] ? 2 : 4) + "px !important;
-	padding-left: 10px !important;
+	padding: " + ($SS.conf["Slim Replies"] ? 2 : 4) + "px 50px " + ($SS.conf["Slim Replies"] ? 2 : 4) + "px 10px !important;
 	marigin-top: -1px !important;
 }
 div.post div.postInfo {
@@ -3552,6 +3551,9 @@ div.post div.postInfo {
 	margin-bottom: 3px !important;
 }" : "") + "
 " : "") + "
+.thread>.replyContainer>.reply>.postInfo {
+	padding-right: 50px !important;
+}
 " + (!$SS.theme.bgColor.isLight ? "
 pre.prettyprint
 {
