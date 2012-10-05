@@ -184,7 +184,7 @@ span.lit,
 	position: fixed !important;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAARhJREFUOE9j8PX1ZUDCbEA2N5oYsjyIzQeTR5eYAJS4DsTzgFgMzRBOIH8WEB8E4nKQHEwzE1QhC5DuTktL+w+k5yJpBmmcD8QFQLwciFcja54K5IhCFSuDNEMNEAKKIWtcATIciKOQNa8BcjYAsS0Q70TSbATkd0BthGmMR/dzGEwDMg31nwGQngTEPUAM14hsM8jv4UC8Dt0QqAEgF4HkUQIYPbRhUbEMiws0idEMMgCkkKAB2GyOAWrcAw19vAYga5YAaigC4gNArAB1Iig1YTNAAznAWIGc7UB8AYj10PwGNwBquDmQXoCsuRjIOQ/EIBqW2pBdBTYAiJOAWAWIlyBrzsFiI7YM0QRUNxOIVZE1Yws4gmIA3NYVkcQXjeIAAAAASUVORK5CYII=');
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 46px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 26px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
 	height: 13px !important;
@@ -348,6 +348,16 @@ margin-top: 100px !important;
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",.8)!important;
 }
+" + ((!$SS.conf["Show Logo"]) && ($SS.conf["Sidebar Position"] === 3) ? "html::after {
+	width: 262px !important;
+	position: fixed !important;
+	height: 21px !important;
+	top: 18px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 0px !important;
+	content: '';
+	background:rgba(" + $SS.theme.bgColor.rgb + ",.8)!important;
+	display: block !important;
+}" : "") + "
 a,
 button,
 input[type=checkbox],
@@ -393,7 +403,7 @@ textarea,
 #updater span,
 #boardNavDesktopFoot,
 #boardNavDesktopFoot a,
-#boardNavDesktop a
+#boardNavDesktop>a:not(#lastmuSettingsWindowLink):not(.current)
 
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
@@ -462,7 +472,6 @@ body>div.closed,
 .absBotText,
 .prev,
 #navbotr,
-#navtopright a:last-child:not(#lastmuSettingsWindowLink),
 .next,	
 .postingMode,
 .sideArrows:not(.hide_reply_button),
@@ -473,7 +482,6 @@ body>.closed>br,
 #imageExpand,
 .hidden_thread+div.opContainer,
 .stub+div+div.post,
-#navtopright>a:last-child:not(#lastmuSettingsWindowLink),
 #navtopright a:not([class]):not(#lastmuSettingsWindowLink),
 #first-run,
 .mobile,
@@ -577,6 +585,12 @@ div.reply.highlight,
 {
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 3px 0px" : "3px 0 0 3px") + " !important;
 }
+" + (!$SS.conf["Sidebar Position"] === 2 ? "
+html::after
+{
+	border-radius: 0px 0px 0px 2px !important;
+}
+" : "") + "
 " : "") + "
 
 input::-webkit-input-placeholder,
@@ -785,7 +799,7 @@ div.post > blockquote .spoiler a
 	height: 9px !important;
 	font-size: 12px !important;
 	position: fixed !important;
-	" + $SS.conf["Sidebar Position String"] + ": 85px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 65px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	min-width: 15px !important;
 	max-width: 15px !important;
@@ -829,7 +843,7 @@ div.post > blockquote .spoiler a
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
 	border: none !important;
 	position: fixed !important;
-	" + $SS.conf["Sidebar Position String"] + ": 65px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 45px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	z-index: 6 !important;
 	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEVQTFRFAAAAZ2dnzczMZ2dnzczMZ2dntLOzZ2dnq6qqZ2dnZ2dnZ2dnkI+PZ2dnjIyMqKenZ2dnZ2dnZ2dndXR0e3t7Z2dndHR03/W/BgAAABV0Uk5TABAQICAwQGBggI+fn6+vr7/P3+/vEpdk4gAAAHlJREFUCB0FwYEBgjAQBLDUCghY/aLn/qOagOWoqmMBtJHMmsnZoM2cHf3MbBjZAFtOlpzA+jbSHelwf/1WPbua8PjkiVmqcP/ke0OVmnjl+4Cr7OnW3/MGPbue4b0CI50zG2DLgTYzOvrIbNCO5KorORqg71W1d/gDBFEGZ/GMsaMAAAAASUVORK5CYII=');
@@ -1075,7 +1089,7 @@ form[name=delform]
 	" + ($SS.conf["Layout"] === 1 ? "border-" + $SS.conf["Sidebar Position String"] + ":0!important;" : "") : "") + "
 	margin:" + ($SS.conf["Layout"] !== 3 ?
 	($SS.conf["Sidebar Position"] !== 2 ? "0 " + $SS.conf["Sidebar Side Margin"] + "px 0 " + $SS.conf["Non-Sidebar Side Margin"] + "px" :
-    "0 " + $SS.conf["Non-Sidebar Side Margin"] + "px 0 " + $SS.conf["Non-Sidebar Side Margin"] + "px") :
+    "0 " + $SS.conf["Non-Sidebar Side Margin"] + "px 0 " + $SS.conf["Sidebar Side Margin"] + "px") :
     "0 " + (Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "% 0") + ";
 	padding:0!important;
 	position:relative;
@@ -1149,10 +1163,9 @@ div[id^='lastmuInfo']
 	background-repeat: no-repeat !important;
 	height: 12px !important;
 	width: 18px !important;
-	position: fixed !important;
-	top: 4px !important;
-	right: 264px !important;
-	opacity: 0." + ($SS.theme.bgColor.isLight ? 5 : 3) + " !important;
+	float: " + $SS.conf["Sidebar Position oString"] + " !important;
+	opacity: 0." + ($SS.theme.bgColor.isLight ? 6 : 6) + " !important;
+	font-size: 0px !important;
 }
 #lastmuSettingsWindowLink:hover 
 {
@@ -2500,10 +2513,10 @@ label#prefetch
     bottom:auto!important;
     line-height:16px!important;
     position:fixed!important;
-    " + $SS.conf["Sidebar Position String"] + ":160px!important;
+    " + $SS.conf["Sidebar Position String"] + ":120px!important;
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
-    top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
-    z-index:5!important;
+    top: 2px !important;
+    z-index:15!important;
 }
 
 #prefetch .riceCheck, #prefetch input 
@@ -2513,7 +2526,7 @@ label#prefetch
 	bottom: 1px !important;
 }
 label#prefetch::after {
-content: 'Prefetch' !important;
+content: 'P' !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
@@ -2593,11 +2606,11 @@ form[name=post] #com_submit+label,
 	line-height:18px;
 	top:2px!important;
 	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-	right:43px!important;
+	right:13px!important;
 	left:auto!important;
 	text-align:left;" : "
 	right:auto!important;
-	left:43px!important;
+	left:13px!important;
 	text-align:right;") + "
 	width:100px;
 	z-index:14!important;
@@ -2673,7 +2686,7 @@ margin-bottom: 20px !important;
     content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK5JREFUGNN1kE0VxCAMhCMBCZVQCUhAwp6+cyXEARKQgIRIQAISKiF7oEvp7ts5zuTNT0QukCgYhpHZZQU7DcdQFKXhVMItnjS25TzSaQQRIdCxi37hw3iyHJwfIxQnTgcnCkaZpscti9DIgvNaMlc5Y4KTHvIchWKCkSexUZf+jfysdvxWC3OjkLCxn0CjrW+JX2/xGcSG4XQKSqXjOH6HDg+lYhSURBkH8h9E4htm9nkTaedRxgAAAABJRU5ErkJggg==') !important;
     height: 9px !important;
     position: fixed !important;
-	" + $SS.conf["Sidebar Position String"] + ": 105px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 85px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
     min-width: 15px !important;
     max-width: 15px !important;
@@ -2719,11 +2732,11 @@ body>.closed
 " + ($SS.conf["Navigation Bar Position"] === 1 ? "
 #bNavWrapper
 {
-    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + $SS.iSidebarSize + "px!important;" : "") + "
+    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + ($SS.iSidebarSize - 3) + "px!important;" : "") + "
     height:19px;
 	left:0!important;
     line-height:18px;
-    overflow-y:hidden;
+    overflow:hidden !important;
 	position:fixed!important;
 	text-align:center;
     top:0!important;
@@ -2739,7 +2752,7 @@ body>.closed
 " : "
 #bNavWrapper
 {
-    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + $SS.iSidebarSize + "px!important;" : "") + "
+    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + ($SS.iSidebarSize - 3) + "px!important;" : "") + "
     height:19px;
 	left:0!important;
     line-height:18px;
@@ -2773,17 +2786,14 @@ body>.closed
 }
 #navtopright
 {
-	position:absolute;
-	right:" + ($SS.conf["Sidebar Position"] !== 2 ? "2" : "") + "5px!important;
 	margin-top: 1px !important;
-	top: 0px !important;
 	font-size: 0 !important;
 }
 #OneeChanLink {
 	position: fixed !important;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVERwCAMQyMBKZOAhEng69lCChImYRKQkH0AG7fdjfaHpmmbFmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFAGGyWuspVmQAAAAASUVORK5CYII=');
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 28px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
 	height: 15px !important;
@@ -2988,33 +2998,18 @@ body>div[style='width: 100%;']+form[name=delform]
 	margin-top:43px!important;
 	position:fixed;
 }
-body > a[style='cursor: pointer; float: right;']
+#navtopright>.sight4
 {
-  position: fixed;
-  top:-119px;
-  " + ($SS.conf["Sidebar Position"] !== 2 ? " 
-  right: 60px !important;
-  left: auto !important;
-  " : " 
-  left: 60px;
-  ") + "
-  z-index: 6;
-  font-size: 0px !important;
-  
+	font-size: 0px !important;
+	float: " + $SS.conf["Sidebar Position oString"] + " !important;
+	width: 15px !important;
+	height: 15px !important;
+	background-image: url('"+$SS.theme.lightIcons.foursight+"') !important;
+	opacity: 0.7 !important;
+	background-repeat: no-repeat !important;
 }
 
-body > a[style='cursor: pointer; float: right;']::after
-{
-  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAH9JREFUGNONkFEZgCAMhIlABCIQgQhE8O2vQQMiEMEIi7AIRjACPqGC4ueetu/udrcZ869wBMI7ZFkREpmN+IRXlpOo+HGt3KZA6eFA6mYZ4dzlkNFbcWefW467XonGYMnU3qrFKwjCQqKi2PmD5JOARansw/0PQpkbeMpUfdUBLYs3tDb03tIAAAAASUVORK5CYII=') !important;
-  font-size: 12px !important;
-  position: fixed !important;
-  top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
-  " + $SS.conf["Sidebar Position String"] + ": 10px !important;
-  " + $SS.conf["Sidebar Position oString"] + ": auto !important;
-  opacity: 0.6 !important;
-}
-
-body > a[style='cursor: pointer; float: right;']:hover::after
+#navtopright>.sight4:hover
 {
   opacity: 1 !important;
 }
@@ -3035,6 +3030,9 @@ div[style='width: 100%; height: 450px; float: left;'] {
 div[style='width: 100%; height: 450px; float: left;']>table {
 	height:100%!important;
 	padding-bottom:20px;
+	margin-left: 20px !important;
+	width: 97% !important;
+	margin-top: 20px !important;
 }
 div[style='width: 100%; height: 450px; float: left;']>table td {
 	border-left:1px solid " + $SS.theme.brderColor.hex + "!important;
@@ -3060,6 +3058,9 @@ div[style='width: 100%; height: 450px; float: left;']>table #fs_search {
 #fs_data tr:first-child td {
 	border-top:0!important;
 }
+#fs_status {
+	background-color: transparent !important;
+}
 a[href='.././']:hover
 {
 	opacity:1;
@@ -3068,12 +3069,21 @@ a[href='.././']:hover
 {
 	border-top:0!important;
 }
-
-.exlinksOptionsLink 
-{
-  top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
-  " + $SS.conf["Sidebar Position String"] + ": 245px !important;
-  " + $SS.conf["Sidebar Position oString"] + ": auto !important;
+#navtopright {
+	display: block !important;
+	position: fixed !important;
+	width: 148px !important;
+	top: " + ($SS.conf["Show Logo"] ? "107" : "20") + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 110px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+}
+.settingsWindowLinkBot, .exlinksOptionsLink {
+	position: static !important;
+	display: inline-block !important;
+	float: " + $SS.conf["Sidebar Position oString"] + " !important;
+}
+#navtopright>a:not(.settingsWindowLink) {
+	margin-right: 6px !important;
 }
 #playerDiv {
 	padding:2px;
@@ -3085,17 +3095,13 @@ a[href='.././']:hover
 	right:2px!important;
 }
 #navtopright .settingsWindowLinkBot {
-	position: fixed !important;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABGklEQVQ4T2PIy8tjIBcT0siIZLAFkF0LxFxADBYHaWaCcaAKmYF0DxCnoLkoHcj/D8STYeIgzcimSwP5q6CK2qGKeIG0IBArAfE9IP4CxLIwm0EGSAGxCxDfh2oE2QByIkhuLhDvhbI9ofLLYJoDgIzXQPwPSSNIcx1UQzBUPA7KfwRVD/ZzJpomkEYQrocqBoXBKyCeB+UfB9IvYDZnE9DMD5T/DMQzoJrPAunnMM2mQMZWIL6NZgjMzzVQcUsgzQ3Eb5A1w+JaGCgIC2nkAKsGindAbS2BGlQBsxkUz8iJJReqABTXyOJWQP4vIH4MxKCEAg4wUDwjxzVIzAOI7dA0wwI2FSZOKHkiy8sBNVlDNcKTJykGoKgFAHcmTzHKv9mBAAAAAElFTkSuQmCC') !important;
-	top: " + ($SS.conf["Show Logo"] ? "109" : "22") + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 225px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
 	height: 13px !important;
 	width: 13px !important;
 	z-index: 5;
 	font-size: 0 !important;
 	color: transparent !important;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABGklEQVQ4T2PIy8tjIBcT0siIZLAFkF0LxFxADBYHaWaCcaAKmYF0DxCnoLkoHcj/D8STYeIgzcimSwP5q6CK2qGKeIG0IBArAfE9IP4CxLIwm0EGSAGxCxDfh2oE2QByIkhuLhDvhbI9ofLLYJoDgIzXQPwPSSNIcx1UQzBUPA7KfwRVD/ZzJpomkEYQrocqBoXBKyCeB+UfB9IvYDZnE9DMD5T/DMQzoJrPAunnMM2mQMZWIL6NZgjMzzVQcUsgzQ3Eb5A1w+JaGCgIC2nkAKsGindAbS2BGlQBsxkUz8iJJReqABTXyOJWQP4vIH4MxKCEAg4wUDwjxzVIzAOI7dA0wwI2FSZOKHkiy8sBNVlDNcKTJykGoKgFAHcmTzHKv9mBAAAAAElFTkSuQmCC') !important;
 }
 #navtopright .settingsWindowLinkBot:hover {
   opacity: 1 !important;
@@ -3610,8 +3616,8 @@ pre.prettyprint
 #watcher::before {
 	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACpQTFRFAAAA0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLUmYS1qAAAAA10Uk5TABAgQFBggI+fv8/f74aeqbgAAABVSURBVAjXnY0xDsMwEMNo+5TYPen/3+2SpUCXlhvBgfAH2uecrcdWt5O4ewHIdVtTvmXB9BoRoIzy5DqsDIAszvXRlyfItS3kXRZA9StJ0l1f/z/xBlXVAtkqW+Q3AAAAAElFTkSuQmCC')!important;
 }
-body > a[style='cursor: pointer; float: right;']::after{
-	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMIXMlggAAAA90Uk5TABAgMEBQYICPn6+/z9/vD6iGsgAAAFRJREFUCB0FwYcBwyAMADAZCCN2y//fRgIAAG0MAMSba/8eAO9EVAe0BOMAxgISMDaIBKgGewKMesS+C0A7mXPdCgCQtwIAou6/A0DUPQCgnw4A4APNOQHMJOa9jgAAAABJRU5ErkJggg==')!important;
+#navtopright>.sight4 {
+	background-image: url('"+$SS.theme.darkIcons.foursight+"') !important;
 }
 a[href='.././'] {
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAA5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHkJaAqNQAAAA50Uk5TABAgQFBgcICPn6+/3+9ACPafAAAASElEQVQI15XMyxKAIAxD0eCr1ZT8/+eKDCOw07O700mBT45rrDXEXgul3sn0yCwsAaGBv/cw86xc92fbl0v7z7mBzeeudhJ/3aoUA1Vr0uhDAAAAAElFTkSuQmCC')!important;
