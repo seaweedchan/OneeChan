@@ -3556,11 +3556,19 @@ div.post > blockquote .prettyprint span
 	position: relative;
 	bottom: 2px !important;
 }
+.inline .menu_button::after {
+	bottom: 0px !important;
+	top: 1px !important;
+}
 " : "
 .menu_button {
 margin-right: 3px !important;
 }
-.menu_button::after {
+.replyContainer>.reply>.postInfo>.menu_button::after {
+	position: relative;
+	bottom: 1px !important;
+}
+.postingMode ~ #delform>.board>.thread>.opContainer>.op>.postInfo>.menu_button::after {
 	position: relative;
 	bottom: 1px !important;
 }
@@ -3572,6 +3580,10 @@ margin-right: 3px !important;
 	position: relative;
 	bottom: -2px !important;
 	right: 4px !important;
+}
+.inline .menu_button::after {
+	bottom: 0px !important;
+	top: 1px !important;
 }
 ") + "
 " + ($SS.conf["Use Post Info Color"] ? "
