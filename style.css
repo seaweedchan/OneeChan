@@ -453,7 +453,7 @@ img.topad,
 img.bottomad,
 img.middlead," : "
 div.center img:not(.middlead)," ) + 
-(($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pagelist," : "" ) +
+(($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pages," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
 #boardNavDesktop>select,
@@ -470,9 +470,7 @@ a[href='#bottom'],
 #copyright,
 body>div.closed,
 .absBotText,
-.prev,
-#navbotr,
-.next,	
+#navbotr,	
 .postingMode,
 .sideArrows:not(.hide_reply_button),
 #delform>hr,
@@ -2621,19 +2619,56 @@ form[name=post] #com_submit+label,
 	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:50px !important;" : "
 	left:50px;
 	right:auto!important;") + "
-	top:2px !important;
+	top:3px !important;
 	height:18px;
 	z-index:14!important;
-}" : "
+}
+.next, .prev {
+	display: inline !important;
+	position: fixed !important;
+	top: 3px !important;
+	z-index: 14 !important;
+}
+.next input, .prev input {
+	display: none !important;
+}
+.next {
+	right: 34px !important;
+}
+.prev {
+	right: 82px !important;
+	top: 3px !important;
+}
+" : "
 #navlinks
 {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:265px !important;" : "
-	left:265px;
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:280px !important;" : "
+	left:280px;
 	right:auto!important;") + "
-	bottom: 0px !important;
+	bottom: -1px !important;
 	top: auto !important;
 	height:18px;
 	z-index:14!important;
+}
+.next, .prev {
+	display: inline !important;
+	position: fixed !important;
+	bottom: 4px !important;
+	z-index: 14 !important;
+}
+.next input, .prev input {
+	display: none !important;
+}
+.next {
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:264px !important;" : "
+	left:264px;
+	right:auto!important;") + "
+}
+.prev {
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:312px !important;" : "
+	left:312px;
+	right:auto!important;") + "
+	bottom: 4px !important;
 }
 " ) + "
 #ihover
@@ -2970,7 +3005,7 @@ body>.closed
 	float: none !important;
 	clear:both;
 	position: relative !important;
-    bottom: 4px !important;
+    bottom: 3px !important;
 	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
 	word-spacing: 10px !important;
 	font-size: 0px !important;

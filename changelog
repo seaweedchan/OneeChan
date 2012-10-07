@@ -2,6 +2,9 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.2.5:
+-Added back previous/next links, styled around 4chan X's Index Navigation
+
 v4.2.4:
 -Change #navtopright to make extension buttons position vary depending on whats installed
 -Add background to icons if sidebar is disabled
