@@ -840,10 +840,6 @@
                     div.text("");
                     $("#navtopright").append(div);
                 };
-                if ((div = $("body>#delform .postInfo>.favicon")).exists())
-                {
-                    console.log("poop");
-                };
                 setTimeout(function()
                 {
                     if (!$SS.QRhandled && (div = $("#qr")).exists())
