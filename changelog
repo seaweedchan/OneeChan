@@ -4,6 +4,8 @@ Items under [Post-Update] are bug fixes added into the official version after th
 
 v4.2.5:
 -Added back previous/next links, styled around 4chan X's Index Navigation
+[Post-Update]
+-Minimize the effect of partial flashing in Firefox
 
 v4.2.4:
 -Change #navtopright to make extension buttons position vary depending on whats installed

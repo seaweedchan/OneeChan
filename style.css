@@ -408,6 +408,11 @@ textarea,
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
 }
+" + ($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a, #boardNavDesktop>select
+{
+	color:transparent!important;
+	font-size:0!important;
+}" : "") + "
 #qr>form #spoilerLabel::after,
 button,
 form[name=post] input[name=email]+label,
@@ -612,7 +617,7 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 { 
 	display: none !important;
 }" : "") + "
-html:not([xmlns]) > body
+body
 {
 	
 	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ||
@@ -2778,12 +2783,19 @@ body>.closed
 	width:100%!important;
 	z-index:14!important;
 }
-#boardNavDesktop
+" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop
 {
     height:18px!important;
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
+}" : "
+
+#boardLinks
+{
+    margin-left:" + $SS.iSidebarSize + "px!important;
+    position:relative;
 }
+") + "
 " : "
 #bNavWrapper
 {
@@ -2798,12 +2810,20 @@ body>.closed
 	width:100%!important;
 	z-index:14!important;
 }
-#boardNavDesktop
+" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop
 {
     height:19px!important;
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
-}") + "
+}" : "
+
+#boardLinks
+{
+    margin-left:" + $SS.iSidebarSize + "px!important;
+    position:relative;
+}
+") + "
+") + "
 
 #navtop,
 #navtopright
@@ -2854,12 +2874,19 @@ body>.closed
 	position: absolute !important;
 	top: 0px !important;
 }
-#boardNavDesktop
+" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop
 {
     height:18px!important;
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
+}" : "
+
+#boardLinks
+{
+    margin-left:" + $SS.iSidebarSize + "px!important;
+    position:relative;
 }
+") + "
 " : "") + "
 " + (!$SS.conf["Custom Navigation Links"] ? "
 #boardNavDesktop a 
