@@ -3245,11 +3245,10 @@ a[href='.././']
 	top:auto!important;
 	overflow:visible!important;
     " + ($SS.conf["Sidebar Position"] === 3 ? "
-	border-left:1px solid " + $SS.theme.brderColor.hex + "!important;
-	border-right: none !important;
-	border-bottom: none !important;
+	border-right:1px solid " + $SS.theme.mainColor.hex + " !important;
+	border-bottom:1px solid " + $SS.theme.mainColor.hex + " !important;
 	z-index:11!important;
-	width:262px!important;" : "
+	width:261px!important;" : "
 	max-width:261px!important;
 	min-width:261px!important;
 	z-index:5!important;
