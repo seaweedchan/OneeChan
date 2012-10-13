@@ -626,7 +626,7 @@ body
     margin-bottom:23px!important;
     " + ($SS.conf["Sidebar Position"] == 2 ? "margin-left: 261px !important" : "") + ";
 	padding:0!important;
-	" + (($SS.conf["Navigation Bar Position"] === 2) && ($SS.conf["Pages Position"] !== 2) ? "margin-top: -15px !important;" : "") + "
+	" + ((($SS.conf["Navigation Bar Position"] === 2) || ($SS.conf["Navigation Bar Position"] === 4)) && ($SS.conf["Pages Position"] !== 2) ? "margin-top: -15px !important;" : "") + "
 }
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
 	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + "px !important;
@@ -2629,7 +2629,7 @@ form[name=post] #com_submit+label,
 	z-index:14!important;
 }
 .next, .prev {
-	display: inline !important;
+	" + (!$SS.conf["Disable Pages Navlinks"] ? "display: inline !important;" : "display: none !important;") + "
 	position: fixed !important;
 	top: 3px !important;
 	z-index: 14 !important;
@@ -2888,6 +2888,11 @@ body>.closed
 }
 ") + "
 " : "") + "
+" + ($SS.conf["Navigation Bar Position"] === 4 ? "#boardNavDesktop, #bNavWrapper {
+position: fixed !important;
+top: -1000px !important;
+bottom: auto !important;
+}" : "") + "
 " + (!$SS.conf["Custom Navigation Links"] ? "
 #boardNavDesktop a 
 {
