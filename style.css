@@ -1540,7 +1540,7 @@ blockquote>div[style]
 {
     display:block!important;
 }
-.image_expanded
+.image_expanded .fileThumb
 {
     z-index:13!important;
     position: relative !important;
@@ -3010,7 +3010,17 @@ bottom: auto !important;
 .mPagelist .pages span
 {
     padding:2px;
-}") : "") + "
+}
+.mPagelist strong, .mPagelist a {
+	font-size: 12px !important;
+}
+.mPagelist strong {
+	color: " + $SS.theme.textColor.hex + " !important;
+}
+.mPagelist a {
+	color: " + $SS.theme.linkColor.hex + " !important;
+}
+") : "") + "
 " + ($SS.conf["Pages Position"] === 2 ? "
 .pagelist 
 {
@@ -3729,7 +3739,8 @@ a[href='.././'] {
 	padding:0!important;
     position:fixed;
 	right:" + ($SS.conf["Layout"] === 3 ?
-	(Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "%" : "263px") + "!important;
+	(Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "%" : "
+	" + ($SS.conf["Sidebar Position"] === 3 ? "25" : "263") + "px") + "!important;
 	top:47%;
 	width:auto!important;
 	z-index:6!important;

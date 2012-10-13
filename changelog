@@ -5,6 +5,10 @@ Items under [Post-Update] are bug fixes added into the official version after th
 v4.2.6:
 -Option to disable pages navlinks
 -Option to disable navigation bar
+[Post-Update]
+-Fully fix vertical pages
+-Allow reclicking of hide thread button on expanded image
+-Make Yotsuba closer to real thing
 
 v4.2.5:
 -Added back previous/next links, styled around 4chan X's Index Navigation
