@@ -9,6 +9,10 @@ v4.2.6:
 -Fully fix vertical pages
 -Allow reclicking of hide thread button on expanded image
 -Make Yotsuba closer to real thing
+-Fix Yotsuba themes moving up a pixel on quote preview
+-Add option: Expanded Images Cover QR
+-Make Yotsuba B's backlink color its original color
+-Fix mobile pagelist showing on normal
 
 v4.2.5:
 -Added back previous/next links, styled around 4chan X's Index Navigation
