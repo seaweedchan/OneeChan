@@ -8,6 +8,7 @@ v4.2.5:
 -Minimize the effect of partial flashing in Firefox
 -Fix width difference in QR
 -Fix Yotsubas not recoloring html::after
+-Dont hide fixed vertical pages
 
 v4.2.4:
 -Change #navtopright to make extension buttons position vary depending on whats installed

@@ -487,7 +487,7 @@ body>.closed>br,
 .stub+div+div.post,
 #navtopright a:not([class]):not(#lastmuSettingsWindowLink),
 #first-run,
-.mobile,
+.mobile:not(.mPagelist),
 .mobileinline,
 iframe[src='about:blank']
 {
