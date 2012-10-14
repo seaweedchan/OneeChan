@@ -656,7 +656,8 @@ div.center a:hover
 {
 	opacity: 1.0 !important;
 }
-" + ($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
+" + (!$SS.bHideSidebar ?
+($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
 body::after
 {
 	background:" + $SS.mascot.img.get() + ";
