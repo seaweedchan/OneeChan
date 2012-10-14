@@ -1814,7 +1814,7 @@ td.doubledash
 {
     -webkit-box-reflect:below 0 -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(.1,transparent),to(rgba(255,255,255,.5)));
 }" : "") + "
-" + ($SS.conf["Board Name Position"] == 1 ? "" : ".boardBanner .boardTitle { position: absolute !important; bottom: 360px !important;}") + "
+" + ($SS.conf["Board Name Position"] == 1 ? "" : ".boardBanner .boardTitle { position: absolute !important; bottom: " + (($SS.conf["Post Form"] === 1) || ($SS.conf["Post Form"] === 4) ? 90 : 360) + "px !important;}") + "
 .boardBanner .boardTitle
 {
 	font-size: 30px !important;

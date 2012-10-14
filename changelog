@@ -4,6 +4,8 @@ Items under [Post-Update] are bug fixes added into the official version after th
 
 v4.2.7:
 -New theme option: Navigation Opacity
+[Post-Update]
+-Move bottom board name depending on QR position
 
 v4.2.6:
 -Option to disable pages navlinks
