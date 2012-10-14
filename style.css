@@ -656,23 +656,11 @@ div.center a:hover
 {
 	opacity: 1.0 !important;
 }
-" + (!$SS.bHideSidebar ?
-($SS.conf["Sidebar Position"] !== 3 ? "
-body::before
-{
-	content:'';
-	height:100%;
-	width:262px;
-	position:fixed;
-    top:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -19) + "px!important;
-	z-index:1;
-}" : "") +
-($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
+" + ($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
 body::after
 {
 	background:" + $SS.mascot.img.get() + ";
 	content:'';
-	height:100%;
 	width:" + ($SS.mascot.overflow ? "100%" : "261px") + ";
 	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
     bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
