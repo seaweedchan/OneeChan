@@ -1034,7 +1034,8 @@ div.reply .report_button, div.reply .menu_button
 	position: relative !important;
 	right: 226px !important;
 	bottom: 2px !important;
-}" : "") + "
+}
+.thread:first-of-type>.opContainer>.op>.postInfo { margin-top: 7px !important; }" : "") + "
 " : "
 .sideArrows {
 float: left !important; }") + "
@@ -3351,11 +3352,14 @@ a[href='.././']
 	-o-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
     " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
 }
+#qr:not(.captcha)>.move
+{
+	height: 26px !important;
+}
 #qr>.move
 {
 	line-height:18px!important;
 	min-width:0!important;
-	height: 26px !important;
 	padding:2px 0 0 3px!important;
 	padding-top: 4px !important;
 	text-align:left!important;
