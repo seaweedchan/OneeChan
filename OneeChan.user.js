@@ -2292,8 +2292,8 @@
                     customCSS:   ".boardTitle {color: #b58900 !important;text-shadow: 1px 1px 1px #999 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a {color: #657b83 !important;}"
                 },
                 {
-                    name:        "4chan Rewired", // Originally by !K.WeEabo0o @ http://userstyles.org/styles/57787/4chan-rewired
-                    author:      "!K.WeEabo0o",
+                    name:        "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
+                    author:      "ahodesuka",
                     "default":   true,
                     bgImg:       "http://oi39.tinypic.com/2h51rb4.jpg",
                     bgRPA:       "no-repeat bottom right fixed",
