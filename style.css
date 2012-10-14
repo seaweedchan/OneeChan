@@ -662,6 +662,7 @@ body::after
 {
 	background:" + $SS.mascot.img.get() + ";
 	content:'';
+	height:100%;
 	width:" + ($SS.mascot.overflow ? "100%" : "261px") + ";
 	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
     bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
@@ -1764,6 +1765,7 @@ td.doubledash
 	" + $SS.conf["Sidebar Position String"] + ":1px;
 	text-align:center;
 	top:20px;
+	z-index: 3;
 }
 .boardBanner,
 .boardBanner img,
