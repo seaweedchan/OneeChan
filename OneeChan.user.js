@@ -2536,6 +2536,32 @@
                     timeColor:   "000000",
                     customCSS:   '.op .postInfo { width: 100% !important;\ndisplay: block !important;\nbackground: rgba(255,255,255," + this.replyOp + ") !important;\n" + ($SS.conf["Rounded Corners"] ? "border-radius: 3px 3px 0px 0px !important;\n" : "") + "}.op blockquote{" + ($SS.conf["Rounded Corners"] ? "border-radius: 0px 0px 3px 3px !important;\n" : "") + "background:-webkit-linear-gradient(top,rgba(255,255,255," + this.replyOp + "),rgba(242,242,242," + this.replyOp + "))!important;\nbackground:-moz-linear-gradient(top,rgba(255,255,255," + this.replyOp + "),rgba(242,242,242," + this.replyOp + "))!important;\nbackground:-o-linear-gradient(top,rgba(255,255,255," + this.replyOp + "),rgba(242,242,242," + this.replyOp + "))!important;\nbox-shadow:0 2px 2px rgba(0,0,0,.05)!important}.thread>.replyContainer>.reply{background:-webkit-linear-gradient(top,rgba(204,214,228," + this.replyOp + "),rgba(183,197,217," + this.replyOp + "))!important;\nbackground:-moz-linear-gradient(top,rgba(204,214,228," + this.replyOp + "),rgba(183,197,217," + this.replyOp + "))!important;\nbackground:-o-linear-gradient(top,rgba(204,214,228," + this.replyOp + "),rgba(183,197,217," + this.replyOp + "))!important;\nbox-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}"+($SS.conf["Layout"]===2?".opContainer{display:block!important;\nborder:1px solid "+this.brderColor.hex+"!important;\n"+($SS.conf["Sidebar Position"]===3?"margin-left:-"+($SS.conf["Side Margin"]+2)+"px!important;\npadding-left:"+($SS.conf["Side Margin"]+2)+"px!important}.opContainer,":"}"):"")+"box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}a.quotelink:not(:hover){color:#cc2200!important;\n}.boardTitle {color: #AF0A0F !important;\ntext-shadow: 1px 1px 1px #7A070D !important;\n}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;\n}.postNum a { color: #000000 !important;\n }',
                     bgRPA:       "no-repeat bottom right fixed"
+                },
+                {
+                    name:        "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
+                    author:      "seaweed",
+                    "default":   true,
+                    replyOp:     "1.0",
+                    navOp:       "0.8",
+                    bgColor:     "e9eced",
+                    mainColor:   "e3e7e8",
+                    brderColor:  "cccccc",
+                    inputColor:  "e9eced",
+                    inputbColor: "cccccc",
+                    pinfoColor:  "ffffff",
+                    pinfobColor: "ffffff",
+                    blinkColor:  "477085",
+                    jlinkColor:  "477085",
+                    linkColor:   "477085",
+                    linkHColor:  "5d6678",
+                    nameColor:   "4c4c4c",
+                    quoteColor:  "6b7a1e",
+                    textColor:   "4c4c4c",
+                    sageColor:   "cc6666",
+                    tripColor:   "5d6678",
+                    titleColor:  "4c4c4c",
+                    timeColor:   "4c4c4c",
+                    customCSS:   '.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.boardTitle {color: #477085 !important;text-shadow: 1px 1px 1px #772E28 !important;}.post.reply{background:-webkit-linear-gradient(top,#E5E8E9,#E3E7E8)!important;background:-moz-linear-gradient(top,#E5E8E9,#E3E7E8)!important;background:-o-linear-gradient(top,#E5E8E9,#E3E7E8)!important;box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}',
                 }
             ],
 
