@@ -2557,9 +2557,9 @@
                     nameColor:   "4c4c4c",
                     quoteColor:  "6b7a1e",
                     textColor:   "4c4c4c",
-                    sageColor:   "cc6666",
+                    sageColor:   "92afc2",
                     tripColor:   "5d6678",
-                    titleColor:  "4c4c4c",
+                    titleColor:  "617d6f",
                     timeColor:   "4c4c4c",
                     customCSS:   '.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.boardTitle {color: #477085 !important;text-shadow: 1px 1px 1px #772E28 !important;}.post.reply{background:-webkit-linear-gradient(top,#E5E8E9,#E3E7E8)!important;background:-moz-linear-gradient(top,#E5E8E9,#E3E7E8)!important;background:-o-linear-gradient(top,#E5E8E9,#E3E7E8)!important;box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}',
                 }
