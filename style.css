@@ -1298,11 +1298,6 @@ html .reply.highlight
 .opContainer:not(.qphl) {
 	border:1px solid transparent !important;
 }
-.filter_highlight>div.opContainer,
-.filter_highlight>.reply
-{
-    box-shadow:inset 5px 0 rgba(" + $SS.theme.sageColor.rgb + ",.5)!important;
-}
 .stub
 {
     margin:1px 0 0 " + ($SS.conf["Layout"] === 2 && !$SS.conf["Show/Hide Menu Entry"] ? 16 : 0) + "px!important;
@@ -3726,6 +3721,14 @@ div.reply.lastmuInfo p {
 #lastmuSettingsWindowLink:hover 
 {
 	opacity: 1.0 !important;
+}
+.opContainer.filter_highlight,
+#delform .filter_highlight div.reply
+{
+    box-shadow:inset 5px 0 rgba(" + $SS.theme.sageColor.rgb + ",.5)!important;
+}
+.opContainer.filter_highlight {
+	padding-left: 5px !important;
 }
 " + ($SS.conf["Pages Position"] === 3 ? "
 .mPagelist.mobile
