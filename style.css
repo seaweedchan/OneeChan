@@ -1142,29 +1142,6 @@ div.post
 .favicon[src$='ico'] {
 	opacity: 0.8 !important;
 }
-/* Last.mu */
-div[id^='lastmuInfo'] 
-{
-	background: none !important;
-	border: none !important;
-}
-#lastmuSettingsWindowLink 
-{
-	display: block !important;
-	font-size: 0px !important;
-	color: transparent !important;
-	background-image: url('" + ($SS.theme.bgColor.isLight ? ""+$SS.theme.lightIcons.lastmu+"" : ""+$SS.theme.darkIcons.lastmu+"") + "') !important;
-	background-repeat: no-repeat !important;
-	height: 12px !important;
-	width: 18px !important;
-	float: " + $SS.conf["Sidebar Position oString"] + " !important;
-	opacity: 0." + ($SS.theme.bgColor.isLight ? 6 : 6) + " !important;
-	font-size: 0px !important;
-}
-#lastmuSettingsWindowLink:hover 
-{
-	opacity: 1.0 !important;
-}
 " + ($SS.conf["Layout"] !== 2 ? "
 hr
 {
@@ -3720,6 +3697,36 @@ a[href='.././'] {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMdShx9gAAAA50Uk5TABAgMEBggI+fr7/P3+82uMT1AAAAb0lEQVQIHQXBiQHDIAwEMOE8gGlu/3ErgWt297wAYyenT7IGjJNVqJUzsPMAniyuLODedspMQe3cKq8+8HxZOK0b9eUb6NYHO98Dv/am3FkDKq/Ktm9gp1h5AE8mxsku1M4ZMGby618yB6De7n4L/v79BDw2df22AAAAAElFTkSuQmCC') !important;
 }
 " : "") + "
+
+/* Last.mu */
+#delform div.reply.lastmuInfo
+{
+	background: none !important;
+	border: none !important;
+	padding: 0px !important;
+	padding-top: 0px !important;
+	padding-left: 0px !important;
+}
+div.reply.lastmuInfo p {
+	display: inline-block !important;
+}
+#lastmuSettingsWindowLink 
+{
+	display: block !important;
+	font-size: 0px !important;
+	color: transparent !important;
+	background-image: url('" + ($SS.theme.bgColor.isLight ? ""+$SS.theme.lightIcons.lastmu+"" : ""+$SS.theme.darkIcons.lastmu+"") + "') !important;
+	background-repeat: no-repeat !important;
+	height: 12px !important;
+	width: 18px !important;
+	float: " + $SS.conf["Sidebar Position oString"] + " !important;
+	opacity: 0." + ($SS.theme.bgColor.isLight ? 6 : 6) + " !important;
+	font-size: 0px !important;
+}
+#lastmuSettingsWindowLink:hover 
+{
+	opacity: 1.0 !important;
+}
 " + ($SS.conf["Pages Position"] === 3 ? "
 .mPagelist.mobile
 {
