@@ -1091,7 +1091,7 @@ form[name=delform]
 }
 .thread>div>.post
 {
-	" + ($SS.conf["Layout"] !== 2 ? "width:100%;" : "") + "
+	" + ($SS.conf["Layout"] !== 2 ? "width:100% !important;" : "") + "
 }
 .thread:last-child>.postContainer:last-child>.reply
 {
@@ -1173,7 +1173,7 @@ hr
 div.post:not(#qp):not([hidden])
 {
     margin:0!important;
-    width:100%;
+    width:100% !important;
 }" : "" ) + "
 .identifyIcon
 {
@@ -1296,7 +1296,7 @@ a.hide_thread_button>span,
 .hidden_thread,
 {
 	padding:5px!important;
-	" + ($SS.conf["Layout"] !== 2 ? "width:100%;" : ($SS.conf["Sidebar Position"] !== 2 ? "margin-right:1px!important;" : "")) + "
+	" + ($SS.conf["Layout"] !== 2 ? "width:100% !important;" : ($SS.conf["Sidebar Position"] !== 2 ? "margin-right:1px!important;" : "")) + "
 	border-radius:" + ($SS.conf["Layout"] !== 3 && !($SS.conf["Sidebar Position"] !== 2 && $SS.conf["Layout"] === 2) ?
 	($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
 }

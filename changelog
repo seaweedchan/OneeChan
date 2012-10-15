@@ -8,6 +8,8 @@ v4.2.7:
 -Move bottom board name depending on QR position
 -Renamed 4chan Rewired to 4chan Rewired Modded, credit given to ahodesuka. Style based on REAL 4chan Rewired coming eventually.
 -New theme: Yotsuba B Rewired
+-Chrome: Fix board name/subtitle issues
+-Last.mu: Fix width being weird
 
 v4.2.6:
 -Option to disable pages navlinks
