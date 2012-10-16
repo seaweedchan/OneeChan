@@ -13,6 +13,7 @@ v4.2.7:
 -Last.mu: Make info smaller
 -New theme: Ao ni sarasu
 -Fix .filter_highlight not matching sage color as intended
+-Add default colors to admin/moot
 
 v4.2.6:
 -Option to disable pages navlinks

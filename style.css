@@ -3653,6 +3653,12 @@ div.post div.postInfo {
 .thread>.replyContainer>.reply>.postInfo {
 	padding-right: 50px !important;
 }
+.capcodeAdmin>span.name, .capcodeAdmin>strong.capcode {
+	color: red !important;
+}
+.capcodeMod>span.name, .capcodeMod>strong.capcode {
+	color: purple !important;
+}
 " + (!$SS.theme.bgColor.isLight ? "
 pre.prettyprint
 {
