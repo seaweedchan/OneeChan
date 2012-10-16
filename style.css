@@ -663,7 +663,7 @@ body::after
 	background:" + $SS.mascot.img.get() + ";
 	content:'';
 	height:100%;
-	width:" + ($SS.mascot.overflow ? "100%" : "261px") + ";
+	width:" + ($SS.mascot.overflow ? "100%" : "263px") + ";
 	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
     bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
