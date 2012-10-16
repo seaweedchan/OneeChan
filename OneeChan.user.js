@@ -1303,6 +1303,7 @@
                     p      = $("<p style='bottom:8px!important'>");
 
                 p.append($("<a class=trbtn name=addTheme>add", tOptions).bind("click", $SS.options.showTheme));
+                p.append($("<a class=trbtn href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>custom themes"));
                 p.append($("<div id=selectImage>").append($("<input type=file riced=true>")
                  .bind("change", function()
                 {
