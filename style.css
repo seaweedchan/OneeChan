@@ -3729,7 +3729,7 @@ div.reply.lastmuInfo p {
 	opacity: 1.0 !important;
 }
 .opContainer.filter_highlight,
-#delform .filter_highlight div.reply
+#delform .filter_highlight>div.reply
 {
     box-shadow:inset 5px 0 rgba(" + $SS.theme.sageColor.rgb + ",.5)!important;
 }
