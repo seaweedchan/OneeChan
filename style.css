@@ -1737,7 +1737,7 @@ td.doubledash
 	" + $SS.conf["Sidebar Position String"] + ":1px;
 	text-align:center;
 	top:20px;
-	z-index: 3;
+	" + (!$SS.conf["Sidebar Postion"] === 3 ? "z-index: 3;" : "") + "
 }
 .boardBanner,
 .boardBanner img,
