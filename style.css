@@ -1147,7 +1147,7 @@ hr
 {
     margin:0!important;
 }
-div.post:not(#qp):not([hidden])
+div.post:not(#qp):not([hidden]):not(#exlinks-options)
 {
     margin:0!important;
     width:100% !important;
