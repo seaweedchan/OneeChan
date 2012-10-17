@@ -129,7 +129,7 @@
             1, "Change the position of the board name/text board link",
             [
                 { name: "Top",      value: 1 },
-                { name: "Above QR", value: 2 }
+                { name: "Bottom", value: 2 }
             ]
         ],
         "Post Form":
