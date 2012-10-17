@@ -67,7 +67,7 @@ span.spoiler:hover, span.spoiler:focus {
 }
 " + (!$SS.conf["Use Post Info Color"] ? "#delform div.reply
 {
-    padding-top: 8px !important;
+    padding-top: " + ($SS.conf["Slim Replies"] ? 4 : 8) + "px !important;
     padding-left: 10px !important;
 }" : "") + "
 /* End */
@@ -663,7 +663,7 @@ body::after
 	background:" + $SS.mascot.img.get() + ";
 	content:'';
 	height:100%;
-	width:" + ($SS.mascot.overflow ? "100%" : "263px") + ";
+	width:" + ($SS.mascot.overflow ? "" + ($SS.conf["Sidebar Position"] === 2 && $SS.mascot.flip ? "263px" : "100%") + "" : "263px") + ";
 	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
     bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
@@ -675,6 +675,13 @@ body::after
 	-moz-transform:scaleX(-1);
 	-o-transform:scaleX(-1);" : "") + "
 }" : "") : "") + "
+" + ($SS.conf["Sidebar Position"] === 2 && $SS.mascot.flip ? "
+label[title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option']::after {
+content: 'Disabled from left sidebar + flip mascot';
+color: red;
+font-size: 12px;
+}
+" : "") + "
 body::after,
 body::before,
 #imgControls,
@@ -719,6 +726,9 @@ body::before,
 {
     margin-top:18px!important;
 }
+" + ($SS.conf["Sidebar Position"] === 2 ? ".postingMode ~ #delform {
+	margin-top: 10px !important;
+	}" : "") + "
 .closed~#delform
 {
     margin-top:0!important;
@@ -1479,14 +1489,14 @@ blockquote
 }
 " + (!$SS.conf["Use Post Info Color"] ? "#delform div.reply
 {
-    padding-top: 8px !important;
+    padding-top: " + ($SS.conf["Slim Replies"] ? 4 : 8) + "px !important;
     padding-left: 10px !important;
 }" : "
 blockquote, .fileInfo {
 	margin-left: 10px !important;
 }
 #qp div.reply {
-	padding-top: 8px !important;
+	padding-top: " + ($SS.conf["Slim Replies"] ? 4 : 8) + "px !important;
     padding-left: 10px !important;
 }
 ") + "

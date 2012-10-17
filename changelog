@@ -5,6 +5,9 @@ Items under [Post-Update] are bug fixes added into the official version after th
 v4.2.8:
 -Added new mascots from /cm/
 -Fix margin for cut-off mascots
+[Post-Update]
+-Disable overflow when flipped + left sidebar (buggy)
+-Reduce top padding of slim replies
 
 v4.2.7:
 -New theme option: Navigation Opacity
