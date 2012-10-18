@@ -9,6 +9,7 @@ v4.2.8:
 -Disable overflow when flipped + left sidebar (buggy)
 -Reduce top padding of slim replies
 -On Fit Width, switch placement of submenu
+-Fix left sidebar + flipped mascot + overflow
 
 v4.2.7:
 -New theme option: Navigation Opacity
