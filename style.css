@@ -996,6 +996,10 @@ div.reply .report_button, div.reply .menu_button
 	padding: 4px !important;
 	padding-bottom: 6px !important;
 }
+.subMenu {
+	left: -121% !important;
+	width: 120px !important;
+}
 .hidden_thread > .menu_button {
 	position: absolute !important;
 	right: 18px !important;
