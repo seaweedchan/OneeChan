@@ -661,6 +661,17 @@ div.center a:hover
 	opacity: 1.0 !important;
 }
 " + (!$SS.bHideSidebar ?
+($SS.conf["Sidebar Position"] !== 3  && $SS.conf["SS-like Sidebar"] ? "
+body::before {
+	background:rgba(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
+	border-" + $SS.conf["Sidebar Position oString"] + ":2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
+	box-shadow:" + ($SS.conf["Sidebar Position"] !== 2 ? "inset " : "") + $SS.theme.brderColor.hex + " 1px 0 0," + ($SS.conf["Sidebar Position"] === 2 ? "inset " : "") + $SS.theme.brderColor.hex + " -1px 0 0;
+	content:'';
+	height:100%;
+	width:262px;
+	position:fixed;
+	top:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : -19) + "px!important;
+}" : "") +
 ($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
 body::after
 {
@@ -1000,10 +1011,10 @@ div.reply .report_button, div.reply .menu_button
 	padding: 4px !important;
 	padding-bottom: 6px !important;
 }
-.subMenu {
+" + (!$SS.conf["Sidebar Position"] === 1 ? ".subMenu {
 	left: -121% !important;
 	width: 120px !important;
-}
+}" : "") + "
 .hidden_thread > .menu_button {
 	position: absolute !important;
 	right: 18px !important;
@@ -3509,7 +3520,7 @@ a[href='.././']
 .subMenu
 {
     border:1px solid " + $SS.theme.brderColor.hex + "!important;
-    z-index:13;
+    z-index:16;
 }
 .hasSubMenu:after
 {
