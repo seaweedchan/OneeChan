@@ -1,4 +1,4 @@
-html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks, #toNav
+html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks
 {
 	font-family:" + $SS.formatFont($SS.conf["Font"]) + ";
 	font-size:" + $SS.conf["Font Size"] + "px;
