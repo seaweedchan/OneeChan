@@ -1,7 +1,11 @@
-html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks
+html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks, #toNav
 {
 	font-family:" + $SS.formatFont($SS.conf["Font"]) + ";
 	font-size:" + $SS.conf["Font Size"] + "px;
+}
+#themeoptions #toNav li label, .trbtn, #themeoptions #toWrapper > div > p {
+	font-family:sans-serif !important;
+	font-size:12px !important;
 }
 input:focus, textarea:focus, a
 {
@@ -1974,7 +1978,7 @@ textarea
 {
     opacity:.5;
     padding-right:5px;
-    " + (($SS.conf["Font"] === "Consolas") || ($SS.conf["Font"] === "monospace") ? "padding-left: 10px;" : "padding-left: 35px;") + "
+    padding-left: 35px;
 }
 .linkdelimiter
 {
