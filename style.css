@@ -346,6 +346,20 @@ margin-top: 100px !important;
 	background: none !important;
 	border: none !important;
 }
+.mOption.header {
+	cursor: auto !important;
+	font-size:" + $SS.conf["Small Font Size"] + "px;
+	font-family:" + $SS.formatFont($SS.conf["Font"]) + "!important;
+	font-weight: bold !important;
+}
+.mOption.header>span {
+	margin: auto; 
+	width: 100%; 
+	display: block; 
+	text-align: left; 
+	font-weight: bold !important; 
+	color:" + $SS.theme.titleColor.hex + "!important;
+}
 #boardNavDesktop,
 " + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
 #imgControls
@@ -400,8 +414,8 @@ select,
 select option,
 textarea,
 #navlinks,
-#themeoptions label,
-#themeoptions label>span,
+#themeoptions label:not(.header),
+#themeoptions label:not(.header)>span,
 #themeoptions #tMascot div a,
 #updater label,
 #updater span,
