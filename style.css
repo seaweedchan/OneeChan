@@ -633,8 +633,8 @@ body
 	" + ((($SS.conf["Navigation Bar Position"] === 2) || ($SS.conf["Navigation Bar Position"] === 4)) && ($SS.conf["Pages Position"] !== 2) ? "margin-top: -15px !important;" : "") + "
 }
 " + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + "px !important;
-	padding-" + $SS.conf["Sidebar Position String"] + ":  " + $SS.conf["Sidebar Side Margin"] + "px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px !important;
+	padding-" + $SS.conf["Sidebar Position String"] + ":  " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px !important;
 }
 div[style^='text-align: center'] img
 {
@@ -678,7 +678,7 @@ body::after
 	background:" + $SS.mascot.img.get() + ";
 	content:'';
 	height:100%;
-	width:" + ($SS.mascot.overflow ? "100%" : "263px") + ";
+	width:" + ($SS.mascot.overflow ? "100%" : "26" + ($SS.conf["SS-like Sidebar"] ? 0 : 3) + "px") + ";
 	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
     bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
@@ -1111,9 +1111,9 @@ form[name=delform]
 	" + ($SS.conf["Layout"] !== 2 ? "
 	" + ($SS.conf["Layout"] === 1 ? "border-" + $SS.conf["Sidebar Position String"] + ":0!important;" : "") : "") + "
 	margin:" + ($SS.conf["Layout"] !== 3 ?
-	($SS.conf["Sidebar Position"] !== 2 ? "0 " + $SS.conf["Sidebar Side Margin"] + "px 0 " + $SS.conf["Non-Sidebar Side Margin"] + "px" :
-    "0 " + $SS.conf["Non-Sidebar Side Margin"] + "px 0 " + $SS.conf["Sidebar Side Margin"] + "px") :
-    "0 " + (Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "% 0") + ";
+	($SS.conf["Sidebar Position"] !== 2 ? "0 " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px 0 " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px" :
+    "0 " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px 0 " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px") :
+    "0 " + (Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "% 0") + ";
 	padding:0!important;
 	position:relative;
 	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "4px 0 0 4px" : "0 4px 4px 0") : "4px") + ";
@@ -1834,7 +1834,7 @@ td.doubledash
 }
 .boardBanner .boardSubtitle
 {
-    " + ($SS.conf["Board Name Position"] == 1 ? "position: relative; z-index: 2;" : "z-index: 3; position:absolute; bottom:" + ($SS.conf["Post Form"] !== 1 ? 342 : 72) + "px;") + "
+    " + ($SS.conf["Board Name Position"] == 1 ? "position: relative; z-index: 2;" : "z-index: 3; position:absolute; bottom:" + (($SS.conf["Post Form"] !== 1) && ($SS.conf["Post Form"] !== 4) ? 342 : 72) + "px;") + "
 	left:0;
 	text-shadow:" + $SS.theme.mainColor.hex + " -1px -1px," + $SS.theme.mainColor.hex + " 1px -1px," + $SS.theme.mainColor.hex + " -1px 1px," + $SS.theme.mainColor.hex + " 1px 1px,rgba(0,0,0,.2) 0 0 10px,#000 0 1px 5px,#000 0 -1px 5px;
 	width:100%;
@@ -2681,7 +2681,7 @@ body>center:nth-of-type(2)
 " + (!$SS.conf["Slideout Announcement"] ? "
 .globalMessage 
 {
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + "px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + (!$SS.conf["Non-Sidebar Margin"] === Custom ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px !important;
 	margin-top: 40px !important;
 	position: static !important;
 	background: none !important;
@@ -3144,7 +3144,7 @@ a[href='.././']:hover
 	position: fixed !important;
 	width: 148px !important;
 	top: " + ($SS.conf["Show Logo"] ? "107" : "20") + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 110px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 1" + ($SS.conf["SS-like Sidebar"] ? "07" : "10") + "px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 }
 .settingsWindowLinkBot, .exlinksOptionsLink {
@@ -3543,7 +3543,7 @@ form[name=delform][action$='/f/up.php']
     border:1px solid " + $SS.theme.brderColor.hex + "!important;
     " + ($SS.conf["Sidebar Position"] !== 3 ? "
     margin-" + $SS.conf["Sidebar Position String"] + ": 261px !important;
-	margin-" + $SS.conf["Sidebar Position oString"] + ": " + $SS.conf["Non-Sidebar Side Margin"] + " !important;
+	margin-" + $SS.conf["Sidebar Position oString"] + ": " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + " !important;
 	" : "
 	margin: 0px 5% !important;") + "
     border-radius:3px!important;
@@ -3779,7 +3779,7 @@ div.reply.lastmuInfo p {
 	padding:0!important;
     position:fixed;
 	right:" + ($SS.conf["Layout"] === 3 ?
-	(Math.min($SS.conf["Non-Sidebar Side Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Side Margin"] < 10 ? 3 : 1)) + "%" : "
+	(Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : "
 	" + ($SS.conf["Sidebar Position"] === 3 ? "25" : "263") + "px") + "!important;
 	top:47%;
 	width:auto!important;
