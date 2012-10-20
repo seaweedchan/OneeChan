@@ -2696,7 +2696,7 @@ body>center:nth-of-type(2)
 " + (!$SS.conf["Slideout Announcement"] ? "
 .globalMessage 
 {
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + (!$SS.conf["Non-Sidebar Margin"] === Custom ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px !important;
+	padding-" + $SS.conf["Sidebar Position oString"] + ": " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px !important;
 	margin-top: 40px !important;
 	position: static !important;
 	background: none !important;
