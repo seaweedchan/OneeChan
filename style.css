@@ -1131,6 +1131,7 @@ form[name=delform]
 	padding:0!important;
 	position:relative;
 	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "4px 0 0 4px" : "0 4px 4px 0") : "4px") + ";
+	z-index: 1;
 }
 .thread>div>.post
 {
