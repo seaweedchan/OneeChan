@@ -1023,7 +1023,7 @@ div.reply .report_button, div.reply .menu_button
 	padding: 4px !important;
 	padding-bottom: 6px !important;
 }
-" + (!$SS.conf["Sidebar Position"] === 1 ? ".subMenu {
+" + ($SS.conf["Sidebar Position"] !== 1 ? ".subMenu {
 	left: -121% !important;
 	width: 120px !important;
 }" : "") + "
@@ -3714,7 +3714,7 @@ pre.prettyprint
 	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].expand+"')!important;
 }
 #watcher::before {
-	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"')!important;
+	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcherb+"')!important;
 }
 #navtopright>.sight4 {
 	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].foursight+"') !important;
