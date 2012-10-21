@@ -186,7 +186,7 @@ span.lit,
 }
 #navtopright .settingsWindowLink {
 	position: fixed !important;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAARhJREFUOE9j8PX1ZUDCbEA2N5oYsjyIzQeTR5eYAJS4DsTzgFgMzRBOIH8WEB8E4nKQHEwzE1QhC5DuTktL+w+k5yJpBmmcD8QFQLwciFcja54K5IhCFSuDNEMNEAKKIWtcATIciKOQNa8BcjYAsS0Q70TSbATkd0BthGmMR/dzGEwDMg31nwGQngTEPUAM14hsM8jv4UC8Dt0QqAEgF4HkUQIYPbRhUbEMiws0idEMMgCkkKAB2GyOAWrcAw19vAYga5YAaigC4gNArAB1Iig1YTNAAznAWIGc7UB8AYj10PwGNwBquDmQXoCsuRjIOQ/EIBqW2pBdBTYAiJOAWAWIlyBrzsFiI7YM0QRUNxOIVZE1Yws4gmIA3NYVkcQXjeIAAAAASUVORK5CYII=');
+	background-image: url('');
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 26px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
@@ -827,7 +827,6 @@ div.post > blockquote .spoiler a
 }
 #watcher::before
 {
-	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAALhJREFUOE+tkl0RgzAQhJFQCUhBAhJ4yENnMIEDJFRKJVRCJSCh3HfsMQfTFzI87CS5n+zuJU0ppalFdSOE9zY/x3EwvAzvBM7D2d7ObMnO8BUWW38JnCPXxSXeLDYKesNsYI+CNuWIE/Oce1YBAZgfYjtIVBNKyENAfUvzhDcp4AIvOvtT3CVrFlMNMwQb8x/PTHb3lXwSD8mb55CnBBP9SGKeNvuYdn+YdvYnpmvvXPO/7/2eVxSsk6VHBDjH8sAAAAAASUVORK5CYII=') !important;
 	height: 9px !important;
 	font-size: 12px !important;
 	position: fixed !important;
@@ -878,7 +877,6 @@ div.post > blockquote .spoiler a
 	" + $SS.conf["Sidebar Position String"] + ": 45px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	z-index: 6 !important;
-	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEVQTFRFAAAAZ2dnzczMZ2dnzczMZ2dntLOzZ2dnq6qqZ2dnZ2dnZ2dnkI+PZ2dnjIyMqKenZ2dnZ2dnZ2dndXR0e3t7Z2dndHR03/W/BgAAABV0Uk5TABAQICAwQGBggI+fn6+vr7/P3+/vEpdk4gAAAHlJREFUCB0FwYEBgjAQBLDUCghY/aLn/qOagOWoqmMBtJHMmsnZoM2cHf3MbBjZAFtOlpzA+jbSHelwf/1WPbua8PjkiVmqcP/ke0OVmnjl+4Cr7OnW3/MGPbue4b0CI50zG2DLgTYzOvrIbNCO5KorORqg71W1d/gDBFEGZ/GMsaMAAAAASUVORK5CYII=');
 	opacity: 0.6;
 }
 #boardNavDesktopFoot:hover::after 
@@ -1177,7 +1175,6 @@ div.post
 	height: 0px !important;
 	display: inline-block !important;
 	margin-right: 5px !important;
-	background-image: url('" + ($SS.theme.bgColor.isLight ? ""+$SS.theme.lightIcons.watcher+"" : ""+$SS.theme.darkIcons.watcher+"") + "') !important;
 	background-repeat: no-repeat !important;
 	position: relative !important;
 	top: 4px !important;
@@ -2500,7 +2497,6 @@ input[name=customIMGB64]+a[name=clearIMG]
 }
 #imgControls label:first-of-type::after
 {
-    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAMRJREFUKFNtks0OAUEQhOdM4iBx8XMSwb6En0dw89CciQMXvIIb9XW6pXfYpDKlu6rV9G4ppfSElbB2THTGA486GrQmfjteOnfJAKcWfbQ2IQp38WkyDMWvqY/WDEyJxkl8JoyFg4sfrjEDOflrpoUAU/CLD0CT72dB8lRiIp6niD+0NkS8lvBfJCYfPf9ZJ4v4RqovjXjh8cLUujSGWOuzyjzS71vq25a2qcB690JH6DrPL26DYSDkT2PpNeqNwFSApv8BTpBEE3rYF6oAAAAASUVORK5CYII=') !important;
 	position: relative !important;
 	top: 4px !important;
 	z-index: 10 !important;
@@ -2733,7 +2729,6 @@ margin-bottom: 20px !important;
 }
 .globalMessage::before
 {
-    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK5JREFUGNN1kE0VxCAMhCMBCZVQCUhAwp6+cyXEARKQgIRIQAISKiF7oEvp7ts5zuTNT0QukCgYhpHZZQU7DcdQFKXhVMItnjS25TzSaQQRIdCxi37hw3iyHJwfIxQnTgcnCkaZpscti9DIgvNaMlc5Y4KTHvIchWKCkSexUZf+jfysdvxWC3OjkLCxn0CjrW+JX2/xGcSG4XQKSqXjOH6HDg+lYhSURBkH8h9E4htm9nkTaedRxgAAAABJRU5ErkJggg==') !important;
     height: 9px !important;
     position: fixed !important;
 	" + $SS.conf["Sidebar Position String"] + ": 85px !important;
@@ -2856,7 +2851,6 @@ body>.closed
 }
 #OneeChanLink {
 	position: fixed !important;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVERwCAMQyMBKZOAhEng69lCChImYRKQkH0AG7fdjfaHpmmbFmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFAGGyWuspVmQAAAAASUVORK5CYII=');
 	top: " + ($SS.conf["Show Logo"] ? "108" : "21") + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
@@ -3091,7 +3085,6 @@ body>div[style='width: 100%;']+form[name=delform]
 	float: " + $SS.conf["Sidebar Position oString"] + " !important;
 	width: 15px !important;
 	height: 15px !important;
-	background-image: url('"+$SS.theme.lightIcons.foursight+"') !important;
 	opacity: 0.7 !important;
 	background-repeat: no-repeat !important;
 }
@@ -3188,7 +3181,6 @@ a[href='.././']:hover
 	z-index: 5;
 	font-size: 0 !important;
 	color: transparent !important;
-	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABGklEQVQ4T2PIy8tjIBcT0siIZLAFkF0LxFxADBYHaWaCcaAKmYF0DxCnoLkoHcj/D8STYeIgzcimSwP5q6CK2qGKeIG0IBArAfE9IP4CxLIwm0EGSAGxCxDfh2oE2QByIkhuLhDvhbI9ofLLYJoDgIzXQPwPSSNIcx1UQzBUPA7KfwRVD/ZzJpomkEYQrocqBoXBKyCeB+UfB9IvYDZnE9DMD5T/DMQzoJrPAunnMM2mQMZWIL6NZgjMzzVQcUsgzQ3Eb5A1w+JaGCgIC2nkAKsGindAbS2BGlQBsxkUz8iJJReqABTXyOJWQP4vIH4MxKCEAg4wUDwjxzVIzAOI7dA0wwI2FSZOKHkiy8sBNVlDNcKTJykGoKgFAHcmTzHKv9mBAAAAAElFTkSuQmCC') !important;
 }
 #navtopright .settingsWindowLinkBot:hover {
   opacity: 1 !important;
@@ -3239,7 +3231,6 @@ ul#Alerts a:hover
 }
 a[href='.././']
 {
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGNJREFUGNNjYKAaiC2IXY9LyiH2fuz/2P3YpBRi9wOl/mORjhWIbYBKgeB7oEIIbIgVAEnfR5JEhf2Yuu8DeQ2x/UBTgCYh7J6PajdEC6rL9+ORBgsGgO3DJY2kMAHkegbaAgCK4libswvDKwAAAABJRU5ErkJggg==');
 	position:fixed!important;
 	width: 15px !important;
 	height: 15px !important;
@@ -3711,40 +3702,48 @@ pre.prettyprint
 	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.2) !important;
 	border: 1px solid rgba(204, 204, 204,.1) !important;
 }
+" : "") + "
+/* Icons */
 #navtopright .settingsWindowLinkBot {
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABG0lEQVQ4T2O4dOkSA7mYkEZGJIMtgOxaIOYCYrA4SDMTjANVyAyke4A4Bc1F6UD+fyCeDBMHaUY2XRrIXwVV1A5VxAukBYFYCYjvAfEXIJaF2QwyQAqIXYD4PlQjyAaQE0Fyc4F4L5TtCZVfBtMcAGS8BuJ/SBpBmuugGoKh4nFQ/iOoerCfM9E0gTSCcD1UMSgMXgHxPCj/OJB+AbM5m4BmfqD8ZyCeAdV8Fkg/h2k2BTK2AvFtNENgfq6BilsCaW4gfoOsGRbXwkBBWEgjB1g1ULwDamsJ1KAKmM1MUAmYIblQBaC4Rk5EVkD+LyB+DMSghAIOMFA8I8c1SMwDiO3QNMMCNhUmTih5IsvLATVZQzXCkycpBqCoBQCET0VYtxt+GAAAAABJRU5ErkJggg==') !important;
+	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].soundp+"') !important;
 }
 .exlinksOptionsLink {
-	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAAz0lEQVQ4T6WTsQ3CMBREU1BQUWQCS1nEzIJHQGKHiIKF6KicjhGoGIEO7sL94BgLLCieolj/fGfn0oQQGjIMgwO+AmeaURhj3IM7hF/hHOepGx1tQe7TzuaQJOOsGTmKvVyLonQD20TzfibG4lopGI1sq8Q6u4m7XJS+vzmXxHQGN7ACJ9Brjhf7ip2JGbkDC3ABR3AFbY14ig3BRuffWfTa2K0cz4pfdtb3zm+7V+ylngfrxezMXPx0w2mN09i/NyztdlYQK0rp+ez2P3/VA4VYH+avXGv4AAAAAElFTkSuQmCC') !important;
+	background: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].exlinks+"') !important;
 }
 #imgControls label:first-of-type::after {
-	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAALlJREFUKFOFkT0KwlAQhANWaUSb+AciVmLlSZLcVhttBH9QjyIIHiDOF2ZhOxeGebM7b3dfUnRdVwmN0Aq1UAqFGU2eekWSQ8RTh6HNMDqiwczNiJsnkR8Jx1RrSTKKDlE467wR9jY+XK9jN0bSKQwfGy/iqVcrMWespd82fsW7XP/XmZUmuXPsfHLHq3grHKzveef8NXjozKPH4mjAvf5rZPNLGtPAjI7ozUtfiD+1kp4LPLZxDV78APzYoty/jZXwAAAAAElFTkSuQmCC')!important;
+	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].expand+"')!important;
 }
 #watcher::before {
-	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACpQTFRFAAAA0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLU0dLUmYS1qAAAAA10Uk5TABAgQFBggI+fv8/f74aeqbgAAABVSURBVAjXnY0xDsMwEMNo+5TYPen/3+2SpUCXlhvBgfAH2uecrcdWt5O4ewHIdVtTvmXB9BoRoIzy5DqsDIAszvXRlyfItS3kXRZA9StJ0l1f/z/xBlXVAtkqW+Q3AAAAAElFTkSuQmCC')!important;
+	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"')!important;
 }
 #navtopright>.sight4 {
-	background-image: url('"+$SS.theme.darkIcons.foursight+"') !important;
+	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].foursight+"') !important;
 }
 a[href='.././'] {
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAA5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHk5OHkJaAqNQAAAA50Uk5TABAgQFBgcICPn6+/3+9ACPafAAAASElEQVQI15XMyxKAIAxD0eCr1ZT8/+eKDCOw07O700mBT45rrDXEXgul3sn0yCwsAaGBv/cw86xc92fbl0v7z7mBzeeudhJ/3aoUA1Vr0uhDAAAAAElFTkSuQmCC')!important;
+	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].returnb+"')!important;
 }
 .globalMessage::before {
-	content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK5JREFUGNN1kF0RxCAMhCMBCZVQCUhAwkmohDhAAhKQEAPfDBKQUAm5B3qU3s3t425mfyJygUTBMIzMLivYaTiGoigNpxJu8aSxLeeRTiOICIGOXfQLH8aT5eD8GKE4cTo4UTDKND1uWYRGFpzXkrnKGROc9JDnKBQTjDyJjbr0b+RnteO3WpgbhYSN/QQabX1L/HqLzyA2DKdTUCodx/E7dHgoFaOgJMo4kP8gEt+mlap7ZbvCVgAAAABJRU5ErkJggg==')!important;
+	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].gmessage+"')!important;
 }
 #OneeChanLink
 {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUGNOFkVENwCAMRE8CUiYBCZOAM6Rg4CWTMAlIuH0AG9mS0f7Q67W9FmkyMoWstxGIEgljTJKIhCd59IQp9+voBHaMOUmdnqgYs41qcxLYKZhCJFCxbrZJvUfz2LCm1liappoiYUxu8AiHVw2cPIXf6sXsl/L6Vb7c++9qi5v//dgFtjLxtKnNCFwAAAAASUVORK5CYII=') !important;
+  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].oclink+"') !important;
 }
 #navtopright .settingsWindowLink
 {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABAklEQVQ4T2PYsWMHAxJmA7K50cSQ5UFsPpg8isSZM2f+wzBQgRiaIZxA/iwgPgjE5SA5mGYmqEIWNANg8iCN84G4AIiXA/FquGaQBiBHFGqAMpLtQkAxZI0rgPxuII5C0Qw1wBbNZiOgog6ojTCN8eh+DkPWhGaAAVDxJCDuAWK4RmQ/g/wWjscAW5A8WgDCAww51PmwGQLUqEmMZpBBmsQYgJ4AQPwYIN4DCn1CBiBrlgBqKALiA0CsAHUiLi9oIAcYK5CzHYgvALEemt/gBkANNwfSC5A1FwM554EYRMNSG0YgAuWSgFgFiJcga87BYiO2DNEEVDcTiFWRNWMLOIJiAARDOk9b1IHWAAAAAElFTkSuQmCC') !important;
+  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].navtopr+"') !important;
 }
 #boardNavDesktopFoot::after {  
-  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMdShx9gAAAA50Uk5TABAgMEBggI+fr7/P3+82uMT1AAAAb0lEQVQIHQXBiQHDIAwEMOE8gGlu/3ErgWt297wAYyenT7IGjJNVqJUzsPMAniyuLODedspMQe3cKq8+8HxZOK0b9eUb6NYHO98Dv/am3FkDKq/Ktm9gp1h5AE8mxsku1M4ZMGby618yB6De7n4L/v79BDw2df22AAAAAElFTkSuQmCC') !important;
+  content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].slidenav+"') !important;
 }
-" : "") + "
-
+#lastmuSettingsWindowLink 
+{
+  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].lastmu+"') !important;
+}
+.favicon
+{
+  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"') !important;
+}
 /* Last.mu */
 #delform div.reply.lastmuInfo
 {
@@ -3762,7 +3761,6 @@ div.reply.lastmuInfo p {
 	display: block !important;
 	font-size: 0px !important;
 	color: transparent !important;
-	background-image: url('" + ($SS.theme.bgColor.isLight ? ""+$SS.theme.lightIcons.lastmu+"" : ""+$SS.theme.darkIcons.lastmu+"") + "') !important;
 	background-repeat: no-repeat !important;
 	height: 12px !important;
 	width: 18px !important;
