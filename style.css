@@ -474,7 +474,9 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 body > div.center:not(:nth-of-type(2)),
 img.topad,
 img.bottomad,
-img.middlead," : "
+img.middlead,
+form[action='https://sys.4chan.org/f/post'] ~ div[style='text-align: center'],
+form[action='https://sys.4chan.org/f/up.php']>div[style='text-align: center;']," : "
 div.center img:not(.middlead)," ) + 
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pages," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
