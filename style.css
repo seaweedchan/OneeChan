@@ -2502,7 +2502,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 	z-index: 10 !important;
 	margin:1px;
 	overflow:hidden;
-	opacity: 0.3 !important;
+	opacity: 0.6 !important;
 	" + ($SS.conf["Sidebar Position"] !== 2 ? "left: 3px !important;" : "") + "
 }
 #imgControls label:hover:first-of-type::after
@@ -3085,7 +3085,7 @@ body>div[style='width: 100%;']+form[name=delform]
 	float: " + $SS.conf["Sidebar Position oString"] + " !important;
 	width: 15px !important;
 	height: 15px !important;
-	opacity: 0.7 !important;
+	opacity: 0.6 !important;
 	background-repeat: no-repeat !important;
 }
 
@@ -3239,7 +3239,7 @@ a[href='.././']
 	z-index:15;
 	color: transparent !important;
 	font-size: 0px !important;
-	opacity: .4;
+	opacity: .6;
 }
 #boardLinks>a.selectedBoard, #boardNavDesktop>a.current, #boardNavDesktopFoot>a.current
 {
@@ -3708,7 +3708,7 @@ pre.prettyprint
 	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].soundp+"') !important;
 }
 .exlinksOptionsLink {
-	background: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].exlinks+"') !important;
+	background: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" : "darkIcons"].exlinks+"') !important;
 }
 #imgControls label:first-of-type::after {
 	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].expand+"')!important;
@@ -3738,12 +3738,47 @@ a[href='.././'] {
 }
 #lastmuSettingsWindowLink 
 {
-  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].lastmu+"') !important;
+  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" : "darkIcons"].lastmu+"') !important;
 }
 .favicon
 {
   background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"') !important;
 }
+" + ($SS.conf["Icon Theme"] === "SS" ? "
+.globalMessage::before {
+	margin-right:6px !important
+}
+.globalMessage::before,#watcher::before {
+	margin-top:1px !important
+}
+#watcher::before {
+	margin-right:4px !important
+}
+#OneeChanLink,#navtopright .settingsWindowLink,#boardNavDesktopFoot::after {
+	height:15px !important
+}
+#OneeChanLink {
+	width:13px !important;
+	margin-right:1px !important
+}
+#navtopright .settingsWindowLink {
+	width:16px !important;
+	margin-right:-2px !important
+}
+a[href='.././'] {
+	width:18px !important;
+	margin-top:2px !important
+}
+a[href='.././'],#imgControls label:first-of-type::after {
+	height:13px !important
+}
+#imgControls label:first-of-type::after {
+	margin-top:-5px !important
+}
+#navtopright .settingsWindowLinkBot {
+	width:15px !important
+}
+" : "") + "
 /* Last.mu */
 #delform div.reply.lastmuInfo
 {
