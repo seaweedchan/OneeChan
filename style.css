@@ -3750,7 +3750,7 @@ a[href='.././'] {
 .globalMessage::before {
 	margin-right:6px !important
 }
-.globalMessage::before,#watcher::before {
+.globalMessage::before {
 	margin-top:1px !important
 }
 #watcher::before {
