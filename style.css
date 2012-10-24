@@ -595,7 +595,7 @@ div.reply.highlight,
 #delform .postContainer,
 .inline div.reply,
 .box-outer,
-#imgControls:hover,
+#prefetch,
 " + ($SS.conf["Post Form"] === 4 ? "#qr," : "") + "
 .yui-skin-sam .yuimenu .bd 
 {
@@ -2469,7 +2469,6 @@ input[name=customIMGB64]+a[name=clearIMG]
 }
 #imgControls:hover {
 	width:130px!important;
-	background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important;
 }
 #imgControls:hover {
 	position: fixed !important;
@@ -2512,10 +2511,14 @@ input[name=customIMGB64]+a[name=clearIMG]
 	display: none !important;
 }
 #imgControls:hover + #prefetch, #prefetch:hover {
+	width: 70px !important;
+	padding-left: 3px !important;
+	padding-right: 3px !important;
 	position: fixed !important;
 	top: 19px !important;
-	" + $SS.conf["Sidebar Position String"] + ":142px!important;
+	" + $SS.conf["Sidebar Position String"] + ":102px!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	background-color:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important;
 }
 .webkit #imgControls #imageType,
 .webkit #boardNavDesktop>select
@@ -2579,7 +2582,7 @@ label#prefetch
 	bottom: 1px !important;
 }
 label#prefetch::after {
-content: 'P' !important;
+content: 'Prefetch?' !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
