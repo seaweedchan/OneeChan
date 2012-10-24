@@ -4088,6 +4088,27 @@ a.useremail[href*='windows']:last-of-type::" + ($SS.conf["Emoji Position"] === 1
     content:url('"+$SS.theme.emoji.windows+"');
 	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
 }
+a.useremail[href*='OPENBSD']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='OpenBSD']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='openbsd']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
+{
+    content:url('"+$SS.theme.emoji.openbsd+"');
+	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
+}
+a.useremail[href*='GNU']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='gnu']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='Gnu']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
+{
+    content:url('"+$SS.theme.emoji.gnu+"');
+	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
+}
+a.useremail[href*='PLAN']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='Plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
+{
+    content:url('"+$SS.theme.emoji.plannine+"');
+	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
+}
 " : "") +
 ($SS.conf["Pony Icons"] ? "
 a.useremail[href*='PINKIE']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
