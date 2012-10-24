@@ -3580,7 +3580,7 @@
             this.overflow = mascot.overflow;
             this.flip     = mascot.flip == undefined ? true : mascot.flip;
             this.img      = new $SS.Image(mascot.img,
-                "no-repeat " + (this.overflow ? $SS.conf["Sidebar Position " + (this.flip ? "" + ($SS.conf["Sidebar Position"] === 2 ? "o" : "" ) + "" : "") + "String"] : "center") +
+                "no-repeat " + (this.overflow ? $SS.conf["Sidebar Position " + ($SS.conf["Sidebar Position"] === 2 && this.flip ? "o" : "") + "String"] : "center") +
                 " " + (this.position || "bottom"));
             this.small    = mascot.small || this.overflow;
             this.bOffset  = typeof mascot.offset === "number";
