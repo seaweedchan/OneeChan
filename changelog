@@ -2,6 +2,13 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.3.3:
+-#stats and #updater now floating to allow for manual positioning
+-All toolbox icons moved up to the top
+-Expand image controls now autohide
+-New expand icon for OneeChan (to fit in when with the rest of the icons)
+-New option: "Add Background to Stats/Updater"
+
 v4.3.2:
 -New category: Icons
 -New option: Icon Theme
