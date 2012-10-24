@@ -147,7 +147,7 @@
                 { name: "Bottom",          value: 2 }
             ]
         ],
-        "Disable Pages Navlinks":   [ false, "Disables pages navlinks" ],
+        "Disable Pages Navlinks":   [ true, "Disables pages navlinks" ],
         "--Replies--":                  [ "header",  "" ],
         "Slim Replies":             [ false,  "Reduces the size of replies" ],
         "Rounded Corners":          [ true,  "Styles a few elements to have subtly rounded coreners" ], 
