@@ -2465,7 +2465,9 @@ input[name=customIMGB64]+a[name=clearIMG]
 	z-index:14;
 }
 #imgControls:not(:hover) {
-   width: 20px !important;
+    width: 20px !important;
+	position: fixed;
+	top: -500px;
 }
 #imgControls:hover {
 	width:130px!important;
@@ -2509,6 +2511,8 @@ input[name=customIMGB64]+a[name=clearIMG]
 }
 #imgControls:not(:hover) + #prefetch:not(:hover) {
 	display: none !important;
+	position: fixed;
+	top: -500px;
 }
 #imgControls:hover + #prefetch, #prefetch:hover {
 	width: 70px !important;
