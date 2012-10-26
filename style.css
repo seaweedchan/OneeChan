@@ -278,6 +278,18 @@ table.flashListing tr:nth-of-type(2n+1)
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
+#id_css::after {
+	width: 262px !important;
+	position: fixed !important;
+	height: 21px !important;
+	top: -2px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 0px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
+	content: '';
+	display: block !important;
+	opacity: 1 !important;
+}
 " + ($SS.conf["Recolor Even Posts"] ? ".replyContainer:nth-of-type(even) > div:not(.qphl):not(.sideArrows):not(.lastmuInfo) {background-color:rgba(" + $SS.theme.mainColor.rgb + ", " + ($SS.theme.mainColor.isLight ? "0.7" : "0.5")  + ")!important;
 border:1px solid rgba(" + $SS.theme.brderColor.rgb + ", 0.8) !important;
 }" : "") + "
@@ -368,18 +380,6 @@ margin-top: 100px !important;
 #boardNavDesktop
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",0.7)!important;
-}
-#id_css::after {
-	width: 262px !important;
-	position: fixed !important;
-	height: 21px !important;
-	top: -2px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 0px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
-	content: '';
-	display: block !important;
-	opacity: 1 !important;
 }
 a,
 button,
@@ -682,7 +682,7 @@ div.center a:hover
 	opacity: 1.0 !important;
 }
 " + (!$SS.bHideSidebar ?
-($SS.conf["Sidebar Position"] !== 3  && $SS.conf["SS-like Sidebar"] ? "
+((($SS.conf["Sidebar Position"] !== 3) || ($SS.conf["Reserve Edge"])) && $SS.conf["SS-like Sidebar"] ? "
 body::before {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
 	border-" + $SS.conf["Sidebar Position oString"] + ":2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
@@ -2840,15 +2840,15 @@ body>.closed
 }
 #boardNavDesktop
 {
-    height:18px!important;
-    margin-right:" + $SS.iSidebarSize + "px!important;
+    height:19px!important;
+    margin-right:" + ($SS.iSidebarSize - 3) + "px!important;
     position:relative;
 }
 " : "
 #boardNavDesktop
 {
-    height:18px!important;
-    margin-left:" + $SS.iSidebarSize + "px!important;
+    height:19px!important;
+    margin-left:" + ($SS.iSidebarSize - 3) + "px!important;
     position:relative;
 }
 
