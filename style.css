@@ -278,18 +278,6 @@ table.flashListing tr:nth-of-type(2n+1)
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
-#id_css::after {
-	width: 262px !important;
-	position: fixed !important;
-	height: 21px !important;
-	top: -2px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 0px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
-	content: '';
-	display: block !important;
-	opacity: 1 !important;
-}
 " + ($SS.conf["Recolor Even Posts"] ? ".replyContainer:nth-of-type(even) > div:not(.qphl):not(.sideArrows):not(.lastmuInfo) {background-color:rgba(" + $SS.theme.mainColor.rgb + ", " + ($SS.theme.mainColor.isLight ? "0.7" : "0.5")  + ")!important;
 border:1px solid rgba(" + $SS.theme.brderColor.rgb + ", 0.8) !important;
 }" : "") + "
@@ -376,10 +364,21 @@ margin-top: 100px !important;
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
 }
-" + ($SS.conf["Add Background to Updater/Stats"] ? "#updater .move, #stats," : "") + "
-#boardNavDesktop
-{
+" + ($SS.conf["Add Background to Updater/Stats"] ? "#updater .move, #stats {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",0.7)!important;
+}" : "") + "
+#id_css::after {
+	width: 262px !important;
+	position: fixed !important;
+	height: 21px !important;
+	top: -2px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 0px !important;
+	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+	background-color:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
+	content: '';
+	display: block !important;
+	opacity: 1 !important;
+	z-index: 1;
 }
 a,
 button,
