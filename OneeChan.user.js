@@ -954,7 +954,6 @@
                     if (otMascots !== ntMascots && otMascots != undefined)
                     {
                         var mDiff = ntMascots - otMascots;
-                        sMascots.reverse();
 
                         for (var i = 0, MAX = sMascots.length; i < MAX; ++i)
                             if (sMascots[i] < otMascots) break;
