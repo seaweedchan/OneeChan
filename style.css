@@ -2150,7 +2150,7 @@ textarea
 }
 #themeoptions #tThemes>div h3
 {
-	bottom:0;
+	bottom:-5px;
 	font-size:32px!important;
 	margin:0!important;
 	opacity:0;
@@ -2160,7 +2160,6 @@ textarea
 	-moz-transition:all .3s;
 	-o-transition:all .3s;
 }
-" + ($SS.conf["SFW/NSFW Themes"] ? "
 #themeoptions #tThemes>div.nsfw .h3nsfw
 {
 	opacity:1;
@@ -2183,13 +2182,6 @@ textarea
 	right:3px;
 	z-index:1;	
 }
-" : "
-#themeoptions #tThemes>div.selected .h3selected
-{
-	opacity:1;
-	right:3px;
-	z-index:1;
-}") + "
 #themeoptions #tMascot
 {
 	text-align:center;

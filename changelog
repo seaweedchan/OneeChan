@@ -9,6 +9,7 @@ v4.3.4:
 -Expand icon in OneeChan icon theme edited slightly
 [Post-Update]
 -NSFW button added. Click anywhere but the button to change SFW theme, click NSFW button to change NSFW theme. Add indicator for SFW and NSFW themes
+-Added SFW button as well. Removed SFW/NSFW Themes option as it is now redundant. Non-button click sets both.
 
 v4.3.3:
 -#stats and #updater now floating to allow for manual positioning
