@@ -364,11 +364,9 @@ margin-top: 100px !important;
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
 }
-" + ($SS.conf["Add Background to Updater/Stats"] ? "#updater .move, #stats," : "") + "
-#boardNavDesktop
-{
+" + ($SS.conf["Add Background to Updater/Stats"] ? "#updater .move, #stats {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",0.7)!important;
-}
+}" : "") + "
 #id_css::after {
 	width: 262px !important;
 	position: fixed !important;
@@ -376,10 +374,11 @@ margin-top: 100px !important;
 	top: -2px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 0px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
+	background-color:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
 	content: '';
 	display: block !important;
 	opacity: 1 !important;
+	z-index: 1;
 }
 a,
 button,
@@ -682,7 +681,7 @@ div.center a:hover
 	opacity: 1.0 !important;
 }
 " + (!$SS.bHideSidebar ?
-($SS.conf["Sidebar Position"] !== 3  && $SS.conf["SS-like Sidebar"] ? "
+((($SS.conf["Sidebar Position"] !== 3) || ($SS.conf["Reserve Edge"])) && $SS.conf["SS-like Sidebar"] ? "
 body::before {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
 	border-" + $SS.conf["Sidebar Position oString"] + ":2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
@@ -1524,7 +1523,7 @@ td:not(.hide_reply_button):not(.deleteform)
 blockquote
 {
 	margin:0!important;
-	padding:" + ($SS.conf["Slim Replies"] ? ($SS.conf["Backlinks Position"] !== 1 ? 8 : 4) + "px 16px" : "12px 12px 12px 32px") + "!important;
+	padding:" + ($SS.conf["Slim Replies"] ? ($SS.conf["Backlinks Position"] !== 1 ? 8 : 4) + "px 16px" : "12px 22px") + "!important;
 }
 " + (!$SS.conf["Use Post Info Color"] ? "#delform div.reply
 {
@@ -2840,15 +2839,15 @@ body>.closed
 }
 #boardNavDesktop
 {
-    height:18px!important;
-    margin-right:" + $SS.iSidebarSize + "px!important;
+    height:19px!important;
+    margin-right:" + ($SS.iSidebarSize - 3) + "px!important;
     position:relative;
 }
 " : "
 #boardNavDesktop
 {
-    height:18px!important;
-    margin-left:" + $SS.iSidebarSize + "px!important;
+    height:19px!important;
+    margin-left:" + ($SS.iSidebarSize - 3) + "px!important;
     position:relative;
 }
 
