@@ -1135,7 +1135,6 @@
 
                 return this.hasGM ?
                         GM_setValue(name, val) :
-                        localstorage.removeItem(name);
                         localStorage.setItem(name, val);
             }
         },
