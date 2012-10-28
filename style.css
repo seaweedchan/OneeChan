@@ -187,7 +187,7 @@ span.lit,
 #navtopright .settingsWindowLink {
 	position: fixed !important;
 	background-image: url('');
-	top: 2px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 24px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
@@ -804,11 +804,11 @@ div.post > blockquote .spoiler a
 " + ($SS.conf["Auto Hide Thread Watcher"] ? "
 #watcher::before
 {
-    top: 2px !important;
+    top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
 }
 #watcher:hover
 {
-    top: 18px !important;
+    top: " + (18 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 104 : 0))) + "px !important;
 }
 " : "
 #watcher
@@ -877,7 +877,7 @@ div.post > blockquote .spoiler a
 }
 #boardNavDesktopFoot::after 
 {
-	top: 2px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
 	border: none !important;
 	position: fixed !important;
 	" + $SS.conf["Sidebar Position String"] + ": 45px !important;
@@ -907,7 +907,7 @@ div.post > blockquote .spoiler a
 #boardNavDesktopFoot:hover 
 {
 	z-index: 99 !important;
-	top: 17px !important;
+	top: " + (17 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 105 : 0))) + "px !important;
 	position: fixed !important;
 }
 " + ($SS.conf["Slideout Navigation Type"] === 1 ? "
@@ -2786,11 +2786,11 @@ margin-bottom: 20px !important;
 .globalMessage::before
 {
     top: 108px !important;
-    top: 2px !important;
+    top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
 }
 .globalMessage:hover
 {
-    top: 17px !important;
+    top: " + (17 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 105 : 0))) + "px !important;
     position: fixed !important;
 }
 .globalMessage:hover::before
@@ -2925,7 +2925,7 @@ body>.closed
 }
 #OneeChanLink {
 	position: fixed !important;
-	top: 2px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
@@ -3227,8 +3227,8 @@ a[href='.././']:hover
 	display: block !important;
 	position: fixed !important;
 	width: " + ($SS.conf["Sidebar Position"] !== 2 ? "131" : "135") + "px !important;
-	top: 1px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 1" + ($SS.conf["SS-like Sidebar"] ? "07" : "10") + "px !important;
+	top: " + (1 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": " + (($SS.conf["SS-like Sidebar"] ? 107 : 110) + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 18 : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 }
 .settingsWindowLinkBot, .exlinksOptionsLink {
