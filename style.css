@@ -2173,6 +2173,16 @@ textarea
 	right:3px;
 	z-index:1;
 }
+#themeoptions #tThemes>div.selected.nsfw h3:not(.h3both) {
+	opacity:0 !important;
+	right:300px !important;
+	z-index:0 !important;
+}
+#themeoptions #tThemes>div.selected.nsfw .h3both {
+	opacity:1;
+	right:3px;
+	z-index:1;	
+}
 " : "
 #themeoptions #tThemes>div.selected .h3selected
 {
