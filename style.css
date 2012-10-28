@@ -2159,12 +2159,26 @@ textarea
 	-moz-transition:all .3s;
 	-o-transition:all .3s;
 }
-#themeoptions #tThemes>div.selected h3
+" + ($SS.conf["SFW/NSFW Themes"] ? "
+#themeoptions #tThemes>div.nsfw .h3nsfw
 {
 	opacity:1;
 	right:3px;
 	z-index:1;
 }
+#themeoptions #tThemes>div.selected .h3sfw
+{
+	opacity:1;
+	right:3px;
+	z-index:1;
+}
+" : "
+#themeoptions #tThemes>div.selected .h3selected
+{
+	opacity:1;
+	right:3px;
+	z-index:1;
+}") + "
 #themeoptions #tMascot
 {
 	text-align:center;

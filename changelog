@@ -7,6 +7,8 @@ v4.3.4:
 -New option: Updater and Stats Position
 -Defaults reverted to the old layout
 -Expand icon in OneeChan icon theme edited slightly
+[Post-Update]
+-NSFW button added. Click anywhere but the button to change SFW theme, click NSFW button to change NSFW theme. Add indicator for SFW and NSFW themes
 
 v4.3.3:
 -#stats and #updater now floating to allow for manual positioning
