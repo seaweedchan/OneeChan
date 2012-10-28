@@ -2112,7 +2112,8 @@ textarea
 	-o-transition:all .1s;
 }
 #themeoptions #tThemes>div:hover,
-#themeoptions #tThemes>div.selected
+#themeoptions #tThemes>div.selected,
+#themeoptions #tThemes>div.nsfw
 {
 	opacity:1;
 }
@@ -2213,7 +2214,7 @@ textarea
 {
 	opacity:1;
 }
-#themeoptions #tMascot div.selected
+#themeoptions #tMascot div.selected, #themeoptions #tMascot div.nsfw
 {
 	background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;
 	opacity:1;
