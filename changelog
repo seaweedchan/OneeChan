@@ -2,6 +2,12 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.3.4:
+-New option: Icon Position
+-New option: Updater and Stats Position
+-Defaults reverted to the old layout
+-Expand icon in OneeChan icon theme edited slightly
+
 v4.3.3:
 -#stats and #updater now floating to allow for manual positioning
 -All toolbox icons moved up to the top

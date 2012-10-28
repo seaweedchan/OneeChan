@@ -187,11 +187,11 @@ span.lit,
 #navtopright .settingsWindowLink {
 	position: fixed !important;
 	background-image: url('');
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 24px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
-	height: 13px !important;
+	height: 14px !important;
 	width: 15px !important;
 	z-index: 5;
 	font-size: 0 !important;
@@ -364,7 +364,7 @@ margin-top: 100px !important;
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
 }
-" + ($SS.conf["Add Background to Updater/Stats"] ? "#updater .move, #stats {
+" + (($SS.conf["Updater and Stats Position"] === 2) && ($SS.conf["Add Background to Updater/Stats"]) ? "#updater .move, #stats {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",0.7)!important;
 }" : "") + "
 #id_css::after {
@@ -469,8 +469,8 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 {
 	font-size:" + ($SS.conf["Bitmap Font"] ? $SS.conf["Font Size"] : 12) + "px!important;
 }
-" + (!$SS.conf["Show Board Name"] ? ".boardBanner .boardTitle," : "") +
-(!$SS.conf["Show Text Board"] ? ".boardBanner .boardSubtitle," : "") +
+" + (!($SS.conf["Show Board Name"]) || ($SS.conf["Sidebar Position"] === 3) ? ".boardBanner .boardTitle," : "") +
+(!($SS.conf["Show Text Board"]) || ($SS.conf["Sidebar Position"] === 3) ? ".boardBanner .boardSubtitle," : "") +
 ($SS.conf["Post Form"] !== 4 ? "#qr>.move .close," : "") +
 ($SS.conf["Post Form"] === 3 ? "#qr>.move #autohide,#qr>.move .riceCheck," : "") +
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
@@ -644,8 +644,7 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 body
 {
 	
-	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ||
-                ($SS.conf["Sidebar Position"] === 3 && $SS.conf["Reserve Edge"]) ? "261px 0 0" :
+	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0" :
                 (!$SS.bHideSidebar && $SS.conf["Sidebar Position"] !== 3 ? "0 0 261px " + $SS.iSidebarSize + "px" : "0 0 0")) + "!important;
     margin-bottom:23px!important;
     " + ($SS.conf["Sidebar Position"] == 2 ? "margin-left: 261px !important" : "") + ";
@@ -681,7 +680,7 @@ div.center a:hover
 	opacity: 1.0 !important;
 }
 " + (!$SS.bHideSidebar ?
-((($SS.conf["Sidebar Position"] !== 3) || ($SS.conf["Reserve Edge"])) && $SS.conf["SS-like Sidebar"] ? "
+(($SS.conf["Sidebar Position"] !== 3) && $SS.conf["SS-like Sidebar"] ? "
 body::before {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
 	border-" + $SS.conf["Sidebar Position oString"] + ":2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
@@ -803,11 +802,11 @@ div.post > blockquote .spoiler a
 " + ($SS.conf["Auto Hide Thread Watcher"] ? "
 #watcher::before
 {
-    top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
+    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
 }
 #watcher:hover
 {
-    top: " + (18 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 104 : 0))) + "px !important;
+    top: " + (18 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 21) : 0))) + "px !important;
 }
 " : "
 #watcher
@@ -876,7 +875,7 @@ div.post > blockquote .spoiler a
 }
 #boardNavDesktopFoot::after 
 {
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
 	border: none !important;
 	position: fixed !important;
 	" + $SS.conf["Sidebar Position String"] + ": 45px !important;
@@ -906,7 +905,7 @@ div.post > blockquote .spoiler a
 #boardNavDesktopFoot:hover 
 {
 	z-index: 99 !important;
-	top: " + (17 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 105 : 0))) + "px !important;
+	top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 21) : 0))) + "px !important;
 	position: fixed !important;
 }
 " + ($SS.conf["Slideout Navigation Type"] === 1 ? "
@@ -1050,7 +1049,7 @@ div.reply .report_button, div.reply .menu_button
     right: 27px !important;
     top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
 }
-" + (($SS.conf["Sidebar Position"] === 3) && (!$SS.conf["Reserve Edge"]) ? "
+" + ($SS.conf["Sidebar Position"] === 3 ? "
 .thread:first-of-type>.hide_thread_button
 {
 	right: 256px !important;
@@ -2458,6 +2457,48 @@ input[name=customIMGB64]+a[name=clearIMG]
 	border-radius:5px;
 	box-shadow:inset rgba(" + ($SS.theme.mainColor.isLight ? "255,255,255" : "155,155,155") + ",.3) 0 0 5px;
 }
+" + ($SS.conf["Icon Position"] === 2 ? "
+#imgControls
+{
+	height:18px;
+	position:fixed!important;
+	top:0;
+	width:100px!important;
+	" + $SS.conf["Sidebar Position String"] + ":162px!important;
+	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	z-index:14;
+}
+label#prefetch
+{
+    bottom:auto!important;
+    line-height:16px!important;
+    position:fixed!important;
+    " + $SS.conf["Sidebar Position String"] + ":136px!important;
+    " + $SS.conf["Sidebar Position oString"] + ":auto!important;
+    top: 2px !important;
+    z-index:15!important;
+}
+label#prefetch::after {
+content: 'P' !important;
+}
+" + ($SS.conf["Updater and Stats Position"] === 1 ? "
+#updater
+{
+	position: fixed !important;
+	top: 0px !important;
+	" + $SS.conf["Sidebar Position String"] + ":0!important;
+	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+}
+#stats
+{
+	position: fixed !important;
+	top: 0px !important;
+	" + $SS.conf["Sidebar Position String"] + ":13px!important;
+	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	width: 80px !important;
+}
+" : "") + "
+" : "
 #imgControls
 {
 	height:24px;
@@ -2487,7 +2528,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 	position:fixed!important;
 	top:-1px;
 	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-	right:24" + ($SS.conf["SS-like Sidebar"] ? 5 : 7) + "px!important;
+	right:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
 	left:auto!important;
 	" : "
 	left:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
@@ -2498,7 +2539,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 	position: fixed !important;
 	top: -1px !important;
 	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-	right:24" + ($SS.conf["SS-like Sidebar"] ? 5 : 7) + "px!important;
+	right:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
 	left:auto!important;
 	" : "
 	left:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
@@ -2523,6 +2564,27 @@ input[name=customIMGB64]+a[name=clearIMG]
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
 	background-color:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important;
 }
+label#prefetch::after {
+content: 'Prefetch?' !important;
+}
+" + ($SS.conf["Updater and Stats Position"] === 1 ? "
+#updater
+{
+	position: fixed !important;
+	top: " + (18 + ($SS.conf["Show Logo"] ? 87 : 0)) + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ":4px!important;
+	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+}
+#stats
+{
+	position: fixed !important;
+	top: " + (18 + ($SS.conf["Show Logo"] ? 87 : 0)) + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ":155px!important;
+	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	width: 100px !important;
+}
+" : "") + "
+") + "
 .webkit #imgControls #imageType,
 .webkit #boardNavDesktop>select
 {
@@ -2583,9 +2645,6 @@ label#prefetch
 	float: left !important;
 	position: relative !important;
 	bottom: 1px !important;
-}
-label#prefetch::after {
-content: 'Prefetch?' !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
@@ -2666,8 +2725,8 @@ form[name=post] #com_submit+label,
 " + ($SS.conf["Navlinks Position"] == 1 ? "
 #navlinks
 {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:130px !important;" : "
-	left:130px;
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:" + (130 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px !important;" : "
+	left:" + (130 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px;
 	right:auto!important;") + "
 	top:2px !important;
 	height:18px;
@@ -2683,13 +2742,13 @@ form[name=post] #com_submit+label,
 	display: none !important;
 }
 .next {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:114px !important;" : "
-	left:162px;
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:" + (114 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px !important;" : "
+	left:" + (162- ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px;
 	right:auto!important;") + "
 }
 .prev {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:162px !important;" : "
-	left:114px;
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:" + (162 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px !important;" : "
+	left:" + (114 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px;
 	right:auto!important;") + "
 	top: 2px !important;
 }
@@ -2785,11 +2844,11 @@ margin-bottom: 20px !important;
 .globalMessage::before
 {
     top: 108px !important;
-    top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
+    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
 }
 .globalMessage:hover
 {
-    top: " + (17 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 105 : 0))) + "px !important;
+    top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 21) : 0))) + "px !important;
     position: fixed !important;
 }
 .globalMessage:hover::before
@@ -2924,7 +2983,7 @@ body>.closed
 }
 #OneeChanLink {
 	position: fixed !important;
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
@@ -3226,14 +3285,22 @@ a[href='.././']:hover
 	display: block !important;
 	position: fixed !important;
 	width: " + ($SS.conf["Sidebar Position"] !== 2 ? "131" : "135") + "px !important;
-	top: " + (1 + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 106 : 0))) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": " + (($SS.conf["SS-like Sidebar"] ? 107 : 110) + (($SS.conf["Icon Position"] === 2 && $SS.conf["Show Logo"] ? 18 : 0))) + "px !important;
+	top: " + (1 + (($SS.conf["Icon Position"] === 2  ? ($SS.conf["Show Logo"] ? 106 : 21): 0))) + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": " + (($SS.conf["SS-like Sidebar"] ? 105 : 108) + (($SS.conf["Icon Position"] === 2 ? 18 : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 }
 .settingsWindowLinkBot, .exlinksOptionsLink {
 	position: static !important;
 	display: inline-block !important;
 	float: " + $SS.conf["Sidebar Position oString"] + " !important;
+}
+.exlinksOptionsLink {
+	height: 15px;
+	width: 15px;
+	opacity: 0.6;
+}
+.exlinksOptionsLink:hover {
+	opacity: 1;
 }
 #navtopright>a:not(.settingsWindowLink) {
 	margin-right: 6px !important;
