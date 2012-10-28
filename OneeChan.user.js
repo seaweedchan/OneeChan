@@ -3840,10 +3840,9 @@
                         "<a title='Sets the NSFW theme.' style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>NSFW</a>" +
                         "<a title=Edit style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>Edit</a>" +
                         "<a title=Delete style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>Delete</a></p>" +
-                        "<h3 class=h3selected>SELECTED</h3>" +
                         "<h3 class=h3nsfw>NSFW</h3>" +
                         "<h3 class=h3sfw>SFW</h3>" +
-                        "<h3 class=h3both>NSFW & SFW</h3>" +
+                        "<h3 class=h3both>SFW & NSFW</h3>" +
                     "</div>");
 
                 $(div).bind("click", function()
