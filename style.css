@@ -2068,6 +2068,9 @@ textarea
 	position: relative !important;
 	top: 1px !important;
 }
+#updater {
+	height: 200px !important;
+}
 .deleteform::before,
 #themeoptions #tMain .mOption span
 {
@@ -2507,6 +2510,7 @@ content: 'P' !important;
 	top: 0px !important;
 	" + $SS.conf["Sidebar Position String"] + ":0!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	bottom: auto !important;
 }
 #stats
 {
@@ -2514,7 +2518,9 @@ content: 'P' !important;
 	top: 0px !important;
 	" + $SS.conf["Sidebar Position String"] + ":13px!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	bottom: auto !important;
 	width: 80px !important;
+	height: 16px !important;
 }
 " : "") + "
 " : "
@@ -2593,6 +2599,7 @@ content: 'Prefetch?' !important;
 	top: " + (18 + ($SS.conf["Show Logo"] ? 87 : 0)) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ":4px!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
+	bottom: auto !important;
 }
 #stats
 {
@@ -2601,6 +2608,8 @@ content: 'Prefetch?' !important;
 	" + $SS.conf["Sidebar Position String"] + ":155px!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
 	width: 100px !important;
+	bottom: auto !important;
+	height: 16px !important;
 }
 " : "") + "
 ") + "
@@ -3761,16 +3770,12 @@ div.post > blockquote .prettyprint span
 .sideArrows span, .hide_thread_button span, .menu_button {
 	font-size: 0px !important;
 }
-.sideArrows span::after {
-	content: '✗';
-	font-size: 12px !important;
-}
-.hide_thread_button:not(.hidden_thread) span::after {
-	content: '✗';
+.sideArrows span::after, .hide_thread_button:not(.hidden_thread) span::after {
+	content: " + ($SS.conf["Hide Button Content"].indexOf("http") === 0 ? "url(" + $SS.conf["Hide Button Content"] + ")" : "'" + $SS.conf["Hide Button Content"] + "'") + ";
 	font-size: 12px !important;
 }
 .menu_button::after {
-	content: '❖';
+	content: " + ($SS.conf["Menu Button Content"].indexOf("http") === 0 ? "url(" + $SS.conf["Menu Button Content"] + ")" : "'" + $SS.conf["Menu Button Content"] + "'") + ";
 	font-size: 12px !important;
 }
 " + ($SS.conf["Layout"] !== 2 ? "
