@@ -3781,34 +3781,32 @@ div.post > blockquote .prettyprint span
 	font-size: 12px !important;
 }
 " + ($SS.conf["Layout"] !== 2 ? "
-.sideArrows span::after {
+.replyContainer>.sideArrows span::after {
 	position: relative;
-	bottom: 2px !important;
-	left: 1px !important;
+	bottom: " + (2 + $SS.conf["Hide Button RVO"]) + "px !important;
+	left: " + (1 + $SS.conf["Hide Button RHO"]) + "px !important;
 }
 .webkit .sideArrows span::after {
-	left: 9px !important;
+	right: -9px !important;
 }
 .hide_thread_button span::after {
 	position: relative;
-	bottom: 0px !important;
-}
-.gecko .hide_thread_button span::after {
-	right: 4px !important;
+	bottom: " + $SS.conf["Hide Button OVO"] + "px !important;
+	left: " + (-2 + $SS.conf["Hide Button OHO"]) + "px !important;
 }
 .op>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: " + (2 + $SS.conf["Menu Button OHO"]) + "px !important;
-	left: " + $SS.conf["Menu Button OVO"] + "px !important;
+	bottom: " + (2 + $SS.conf["Menu Button OVO"]) + "px !important;
+	left: " + $SS.conf["Menu Button OHO"] + "px !important;
 }
 .replyContainer>.reply>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: " + (2 + $SS.conf["Menu Button RHO"]) + "px !important;
-	left: " + $SS.conf["Menu Button RVO"] + "px !important;
+	bottom: " + (2 + $SS.conf["Menu Button RVO"]) + "px !important;
+	left: " + (-2 + ($SS.conf["Menu Button RHO"])) + "px !important;
 }
 .inline .menu_button::after {
-	bottom: " + $SS.conf["Menu Button RHO"] + "px !important;
-	left: " + $SS.conf["Menu Button RVO"] + "px !important;
+	bottom: " + $SS.conf["Menu Button RVO"] + "px !important;
+	left: " + $SS.conf["Menu Button RHO"] + "px !important;
 	top: 1px !important;
 }
 " : "
@@ -3817,13 +3815,13 @@ margin-right: 3px !important;
 }
 .op>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: " + $SS.conf["Menu Button OHO"] + "px !important;
-	left: " + $SS.conf["Menu Button OVO"] + "px !important;
+	bottom: " + $SS.conf["Menu Button OVO"] + "px !important;
+	left: " + $SS.conf["Menu Button OHO"] + "px !important;
 }
 .replyContainer>.reply>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: " + (1 + $SS.conf["Menu Button RHO"]) + "px !important;
-	left: " + $SS.conf["Menu Button RVO"] + "px !important;
+	bottom: " + (1 + $SS.conf["Menu Button RVO"]) + "px !important;
+	left: " + $SS.conf["Menu Button RHO"] + "px !important;
 }
 .postingMode ~ #delform>.board>.thread>.opContainer>.op>.postInfo>.menu_button::after {
 	position: relative;
@@ -3831,16 +3829,18 @@ margin-right: 3px !important;
 }
 .sideArrows span::after {
 	position: relative;
-	bottom: 2px !important;
+	bottom: " + (2 + $SS.conf["Hide Button RVO"]) + "px !important;
+	left: " + $SS.conf["Hide Button RHO"] + "px !important;
 }
 .hide_thread_button span::after {
 	position: relative;
-	bottom: -2px !important;
+	bottom: " + (-2 + $SS.conf["Hide Button OVO"]) + "px !important;
 	right: 4px !important;
+	left: " + $SS.conf["Hide Button OHO"] + "px !important;
 }
 .inline .menu_button::after {
-	bottom: " + $SS.conf["Menu Button RHO"] + "px !important;
-	left: " + $SS.conf["Menu Button RVO"] + "px !important;
+	bottom: " + $SS.conf["Menu Button RVO"] + "px !important;
+	left: " + $SS.conf["Menu Button RHO"] + "px !important;
 	top: 1px !important;
 }
 ") + "
