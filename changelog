@@ -3,7 +3,8 @@ As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
 master:
--Fix issue with #stats in some cases covering up icons.
+-Fix issue with #stats and #updater in some cases covering up icons.
+-Fix incorrect not-autohide watcher positioning.
 -Add options for menu / hide button content that accepts text or a URL
 
 v4.3.4:

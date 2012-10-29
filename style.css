@@ -811,7 +811,7 @@ div.post > blockquote .spoiler a
 " : "
 #watcher
 {
-    top: " + ($SS.conf["Show Logo"] ? "130" : "18") + "px !important;
+    top: " + (18 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 21) : 0))) + "px !important;
 }
 ") + "
 #watcher
@@ -2511,6 +2511,7 @@ content: 'P' !important;
 	" + $SS.conf["Sidebar Position String"] + ":0!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
 	bottom: auto !important;
+	height: 16px !important;
 }
 #stats
 {
@@ -2600,6 +2601,7 @@ content: 'Prefetch?' !important;
 	" + $SS.conf["Sidebar Position String"] + ":4px!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
 	bottom: auto !important;
+	height: 16px !important;
 }
 #stats
 {
