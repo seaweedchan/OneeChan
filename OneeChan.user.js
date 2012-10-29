@@ -243,7 +243,15 @@
             ]
         ],
         "Menu Button Content": [ "❖", "http://url.com/link.png or ❖" ],
+        "Menu Button OHO": [ 0, "" ],
+        "Menu Button OVO": [ 0, "" ],
+        "Menu Button RHO": [ 0, "" ],
+        "Menu Button RVO": [ 0, "" ],
         "Hide Button Content": [ "✗", "http://url.com/link.png or ✗" ],
+        "Hide Button OHO": [ 0, "" ],
+        "Hide Button OVO": [ 0, "" ],
+        "Hide Button RHO": [ 0, "" ],
+        "Hide Button RVO": [ 0, "" ],
         "--Script Settings--":                     [ "header",  "" ],
         "Disable Ads":              [ true, "Disables ads on 4chan" ],
         "Show/Hide Menu Entry":     [ false, "Replaces the hide/show post button with a menu entry" ],
@@ -1281,14 +1289,34 @@
                         }
                         else if (key === "Menu Button Content")
                         {
-                            optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + " (example: " + des + ")" + "</span>" +
+                            optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + "</span>" +
                                            "<input type=text name='" + key + "' value=" + $SS.conf["Menu Button Content"] + "></span>";
                         }
                         else if (key === "Hide Button Content")
                         {
-                            optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + " (example: " + des + ")" + "</span>" +
+                            optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + "</span>" +
                                            "<input type=text name='" + key + "' value='" + $SS.conf["Hide Button Content"] + "'></span>";
                         }
+                        else if (key === "Menu Button OVO" || key === "Menu Button RHO" || key == "Menu Button RVO" || key === "Hide Button OVO" || key === "Hide Button RHO" || key == "Hide Button RVO")
+                        {
+                            optionsHTML == "";
+                        }
+                        else if (key === "Menu Button OHO")
+                        {
+                            optionsHTML += "<span class=mOption title='Menu Button Offset'><span>Menu Button Offset</span>" +
+                                           "<input style='width: 40px !important;' name='Menu Button OHO' type=text title='OP Horizontal Offset: Positive value to move right, negative value to move left' value=" + $SS.conf["Menu Button OHO"] + "px>" +
+                                           "<input style='width: 40px !important;' name='Menu Button OVO' type=text title='OP Vertical Offset: Positive value to move up, negative value to move down' value=" + $SS.conf["Menu Button OVO"] + "px>" +
+                                           "<input style='width: 40px !important;' name='Menu Button RHO' type=text title='Reply Horizontal Offset: Positive value to move right, negative value to move left' value=" + $SS.conf["Menu Button RHO"] + "px>" +
+                                           "<input style='width: 40px !important;' name='Menu Button RVO' type=text title='Reply Vertical Offset: Positive value to move up, negative value to move down' value=" + $SS.conf["Menu Button RVO"] + "px></span>";
+                        } 
+                        else if (key === "Hide Button OHO")
+                        {
+                            optionsHTML += "<span class=mOption title='Hide Button Offset'><span>Hide Button Offset</span>" +
+                                           "<input style='width: 40px !important;' name='Hide Button OHO' type=text title='OP Horizontal Offset: Positive value to move right, negative value to move left' value=" + $SS.conf["Hide Button OHO"] + "px>" +
+                                           "<input style='width: 40px !important;' name='Hide Button OVO' type=text title='OP Vertical Offset: Positive value to move up, negative value to move down' value=" + $SS.conf["Hide Button OVO"] + "px>" +
+                                           "<input style='width: 40px !important;' name='Hide Button RHO' type=text title='Reply Horizontal Offset: Positive value to move right, negative value to move left' value=" + $SS.conf["Hide Button RHO"] + "px>" +
+                                           "<input style='width: 40px !important;' name='Hide Button RVO' type=text title='Reply Vertical Offset: Positive value to move up, negative value to move down' value=" + $SS.conf["Hide Button RVO"] + "px></span>";
+                        } 
                         else if (key === "Themes")
                         {
                             optionsHTML += "</div><input type=radio name=toTab id=tcbThemes hidden><div id=tThemes>";
@@ -1566,6 +1594,10 @@
                         val = parseInt(val);
                     }
                     else if (name === "Non-Sidebar Custom Margin")
+                    {
+                        val = parseInt(val);
+                    }
+                    else if (name === ("Menu Button OHO" || "Menu Button OVO" || "Menu Button RHO" || "Menu Button RVO" || "Hide Button OHO" || "Hide Button OVO" || "Hide Button RHO" || "Hide Button RVO"))
                     {
                         val = parseInt(val);
                     }
