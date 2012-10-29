@@ -3796,25 +3796,38 @@ div.post > blockquote .prettyprint span
 .gecko .hide_thread_button span::after {
 	right: 4px !important;
 }
-.menu_button::after {
+.op>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: 2px !important;
+	bottom: " + (2 + $SS.conf["Menu Button OHO"]) + "px !important;
+	left: " + $SS.conf["Menu Button OVO"] + "px !important;
+}
+.replyContainer>.reply>.postInfo>.menu_button::after {
+	position: relative;
+	bottom: " + (2 + $SS.conf["Menu Button RHO"]) + "px !important;
+	left: " + $SS.conf["Menu Button RVO"] + "px !important;
 }
 .inline .menu_button::after {
-	bottom: 0px !important;
+	bottom: " + $SS.conf["Menu Button RHO"] + "px !important;
+	left: " + $SS.conf["Menu Button RVO"] + "px !important;
 	top: 1px !important;
 }
 " : "
 .menu_button {
 margin-right: 3px !important;
 }
+.op>.postInfo>.menu_button::after {
+	position: relative;
+	bottom: " + $SS.conf["Menu Button OHO"] + "px !important;
+	left: " + $SS.conf["Menu Button OVO"] + "px !important;
+}
 .replyContainer>.reply>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: 1px !important;
+	bottom: " + (1 + $SS.conf["Menu Button RHO"]) + "px !important;
+	left: " + $SS.conf["Menu Button RVO"] + "px !important;
 }
 .postingMode ~ #delform>.board>.thread>.opContainer>.op>.postInfo>.menu_button::after {
 	position: relative;
-	bottom: 1px !important;
+	top: -1px !important;
 }
 .sideArrows span::after {
 	position: relative;
@@ -3826,7 +3839,8 @@ margin-right: 3px !important;
 	right: 4px !important;
 }
 .inline .menu_button::after {
-	bottom: 0px !important;
+	bottom: " + $SS.conf["Menu Button RHO"] + "px !important;
+	left: " + $SS.conf["Menu Button RVO"] + "px !important;
 	top: 1px !important;
 }
 ") + "
