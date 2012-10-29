@@ -1779,7 +1779,7 @@ td.doubledash
 }
 .boardBanner
 {
-    height:100%;
+    height:0px !important;
 	position:fixed;
 	" + $SS.conf["Sidebar Position String"] + ":1px;
 	text-align:center;
@@ -1825,13 +1825,14 @@ td.doubledash
 {
     -webkit-box-reflect:below 0 -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(.1,transparent),to(rgba(255,255,255,.5)));
 }" : "") + "
-" + ($SS.conf["Board Name Position"] == 1 ? "" : ".boardBanner .boardTitle { position: absolute !important; bottom: " + (($SS.conf["Post Form"] === 1) || ($SS.conf["Post Form"] === 4) ? 90 : 360) + "px !important;}") + "
+" + ($SS.conf["Board Name Position"] == 1 ? ".boardBanner .boardTitle { top: 150px !important; bottom: auto; }" : ".boardBanner .boardTitle {  top: auto; bottom: " + (($SS.conf["Post Form"] === 1) || ($SS.conf["Post Form"] === 4) ? 90 : 360) + "px !important;}") + "
 .boardBanner .boardTitle
 {
+	position: fixed !important;
+	bottom: auto;
 	font-size: 30px !important;
 	font-weight: 400 !important;
 	font-family: sans-serif;
-	margin-top: 130px !important;
 	cursor:default!important;
 	display:block;
 	font-size:28px!important;
@@ -1840,7 +1841,7 @@ td.doubledash
 	text-align:center;
 	text-shadow:" + $SS.theme.mainColor.hex + " -1px -1px," + $SS.theme.mainColor.hex + " 1px -1px," + $SS.theme.mainColor.hex + " -1px 1px," + $SS.theme.mainColor.hex + " 1px 1px,rgba(0,0,0,.6) 0 2px 4px,rgba(0,0,0,.6) 0 0 10px;
 	z-index:3;
-	
+	" + $SS.conf["Sidebar Position String"] + ": 0px; " + $SS.conf["Sidebar Position oString"] + ": auto;
 }
 .boardBanner .boardTitle::selection
 {
@@ -1852,10 +1853,11 @@ td.doubledash
 }
 .boardBanner .boardSubtitle
 {
-    " + ($SS.conf["Board Name Position"] == 1 ? "position: relative; z-index: 2;" : "z-index: 3; position:absolute; bottom:" + (($SS.conf["Post Form"] !== 1) && ($SS.conf["Post Form"] !== 4) ? 342 : 72) + "px;") + "
-	left:0;
+    " + ($SS.conf["Board Name Position"] == 1 ? "top: 185px !important; z-index: 2;" : "z-index: 3; fixed !important; bottom:" + (($SS.conf["Post Form"] !== 1) && ($SS.conf["Post Form"] !== 4) ? 342 : 72) + "px;") + "
 	text-shadow:" + $SS.theme.mainColor.hex + " -1px -1px," + $SS.theme.mainColor.hex + " 1px -1px," + $SS.theme.mainColor.hex + " -1px 1px," + $SS.theme.mainColor.hex + " 1px 1px,rgba(0,0,0,.2) 0 0 10px,#000 0 1px 5px,#000 0 -1px 5px;
-	width:100%;
+	width: 256px !important;
+	" + $SS.conf["Sidebar Position String"] + ": 0px; " + $SS.conf["Sidebar Position oString"] + ": auto;
+	position: fixed !important;
 }
 .boardBanner .boardSubtitle>a
 {
@@ -4043,13 +4045,9 @@ div.reply.lastmuInfo p {
     width:415px!important;
 }" : "") +
 (!$SS.conf["Show Logo"] ? "
-.boardBanner
-{
-	top:-20px;
-}
 .boardBanner img
 {
-    visibility:hidden;
+    display: none !important;
 }" : "") +
 ($SS.conf["Style Scrollbars"] ? "::-webkit-scrollbar
 {
