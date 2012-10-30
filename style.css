@@ -2522,6 +2522,7 @@ content: 'P' !important;
 	bottom: auto !important;
 	width: 80px !important;
 	height: 16px !important;
+	z-index:14!important;
 }
 " : "") + "
 " : "
@@ -2750,7 +2751,6 @@ form[name=post] #com_submit+label,
 #stats
 {
 	line-height:16px;
-	z-index:14!important;
 }
 " + ($SS.conf["Navlinks Position"] == 1 ? "
 #navlinks
