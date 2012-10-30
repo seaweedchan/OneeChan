@@ -2585,7 +2585,7 @@ content: 'P' !important;
 	position: fixed;
 	top: -500px;
 }
-#imgControls:hover + #prefetch, #prefetch:hover {
+#imgControls:hover + #prefetch, #prefetch:not([type='checkbox']):hover {
 	width: 70px !important;
 	padding-left: 3px !important;
 	padding-right: 3px !important;
