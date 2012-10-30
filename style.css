@@ -2503,6 +2503,10 @@ label#prefetch
 label#prefetch::after {
 content: 'P' !important;
 }
+.webkit #imgControls #imageType
+{
+    background:none!important;
+}
 " + ($SS.conf["Updater and Stats Position"] === 1 ? "
 #updater
 {
@@ -2619,9 +2623,12 @@ content: 'Prefetch?' !important;
 .webkit #imgControls #imageType,
 .webkit #boardNavDesktop>select
 {
-    background:none!important;
 	border:0!important;
 	padding:1px 1px 1px 0;
+}
+.webkit #boardNavDesktop>select
+{
+    background:none!important;
 }
 #imgControls #imageType
 {
