@@ -75,6 +75,7 @@
         ],
         "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards", null, true ],
         "Use Title Text for Selected Board": [ false, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
+        "Underline Links":    [ false, "Underlines links" ],
         "Pages Position":
         [
             2, "Change the location of the page links",
