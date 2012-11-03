@@ -187,7 +187,7 @@ span.lit,
 #navtopright .settingsWindowLink {
 	position: fixed !important;
 	background-image: url('');
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 24px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
@@ -802,16 +802,16 @@ div.post > blockquote .spoiler a
 " + ($SS.conf["Auto Hide Thread Watcher"] ? "
 #watcher::before
 {
-    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
+    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
 }
 #watcher:hover
 {
-    top: " + (18 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 21) : 0))) + "px !important;
+    top: " + (18 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
 }
 " : "
 #watcher
 {
-    top: " + (18 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 21) : 0))) + "px !important;
+    top: " + (20 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
 }
 ") + "
 #watcher
@@ -875,7 +875,7 @@ div.post > blockquote .spoiler a
 }
 #boardNavDesktopFoot::after 
 {
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
 	border: none !important;
 	position: fixed !important;
 	" + $SS.conf["Sidebar Position String"] + ": 45px !important;
@@ -905,7 +905,7 @@ div.post > blockquote .spoiler a
 #boardNavDesktopFoot:hover 
 {
 	z-index: 99 !important;
-	top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 21) : 0))) + "px !important;
+	top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 19) : 0))) + "px !important;
 	position: fixed !important;
 }
 " + ($SS.conf["Slideout Navigation Type"] === 1 ? "
@@ -2881,11 +2881,11 @@ margin-bottom: 20px !important;
 .globalMessage::before
 {
     top: 108px !important;
-    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
+    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
 }
 .globalMessage:hover
 {
-    top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 21) : 0))) + "px !important;
+    top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 19) : 0))) + "px !important;
     position: fixed !important;
 }
 .globalMessage:hover::before
@@ -3020,7 +3020,7 @@ body>.closed
 }
 #OneeChanLink {
 	position: fixed !important;
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 21) : 0))) + "px !important;
+	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
@@ -3322,8 +3322,8 @@ a[href='.././']:hover
 	display: block !important;
 	position: fixed !important;
 	width: " + ($SS.conf["Sidebar Position"] !== 2 ? "131" : "135") + "px !important;
-	top: " + (1 + (($SS.conf["Icon Position"] === 2  ? ($SS.conf["Show Logo"] ? 106 : 21): 0))) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": " + (($SS.conf["SS-like Sidebar"] ? 105 : 108) + (($SS.conf["Icon Position"] === 2 ? 18 : 0))) + "px !important;
+	top: " + (1 + (($SS.conf["Icon Position"] === 2  ? ($SS.conf["Show Logo"] ? 106 : 19): 0))) + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": " + (($SS.conf["SS-like Sidebar"] ? 105 : 108) + (($SS.conf["Icon Position"] === 2 ? 20 : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 }
 .settingsWindowLinkBot, .exlinksOptionsLink {
