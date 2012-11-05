@@ -813,6 +813,24 @@ div.post > blockquote .spoiler a
 {
     top: " + (20 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
 }
+#watcher>.move 
+{
+	text-decoration: none !important;
+	cursor: auto !important;
+}
+#watcher>.move:only-child 
+{
+	height: 16px !important;
+	text-align: center !important;
+}
+#watcher>.move:only-child::after 
+{
+	content: 'Click the hearts to watch threads:  ' url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"') !important;
+	font-size: 12px !important;
+	color: " + $SS.theme.textColor.hex + " !important;
+	text-decoration: none !important;
+	opacity: 0.4;
+}
 ") + "
 #watcher
 {
@@ -865,7 +883,7 @@ div.post > blockquote .spoiler a
     right: auto !important;
     left: 2px !important;
 	  ") + "
-    width: 258px !important;
+    width: 25" + ($SS.conf["SS-like Sidebar"] ? 5 : 8) + "px !important;
     padding-bottom: 4px !important;
 }
 #watcher:hover
@@ -2870,7 +2888,7 @@ margin-bottom: 20px !important;
 {
     height: 9px !important;
     position: fixed !important;
-	" + $SS.conf["Sidebar Position String"] + ": 85px !important;
+	" + $SS.conf["Sidebar Position String"] + ": " + (85 - ($SS.conf["Auto Hide Thread Watcher"] ? 0 : 18)) + "px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
     min-width: 15px !important;
     max-width: 15px !important;
