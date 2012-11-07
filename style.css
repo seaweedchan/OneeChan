@@ -811,7 +811,7 @@ div.post > blockquote .spoiler a
 " : "
 #watcher
 {
-    top: " + (20 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
+    top: " + (20 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : ($SS.conf["Updater and Stats Position"] === 1 ? ($SS.conf["Show Logo"] ? 102 : 17) : 0)))) + "px !important;
 }
 #watcher>.move 
 {
