@@ -3070,17 +3070,6 @@
             }
         },
 
-
-        /**
-         * jscolor, JavaScript Color Picker
-         *
-         * @version 1.3.11
-         * @license GNU Lesser General Public License, http://www.gnu.org/copyleft/lesser.html
-         * @author  Jan Odvarko, http://odvarko.cz
-         * @created 2008-06-15
-         * @updated 2011-11-07
-         * @link    http://jscolor.com
-         */
         jscolor:
         {
             getElementPos: function(e)
@@ -3853,24 +3842,6 @@
                 soundp:     this.header + "A8AAAAOCAYAAADwikbvAAAABGdBTUEAAK/INwWK6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABG0lEQVQ4T2O4dOkSA7mYkEZGJIMtgOxaIOYCYrA4SDMTjANVyAyke4A4Bc1F6UD+fyCeDBMHaUY2XRrIXwVV1A5VxAukBYFYCYjvAfEXIJaF2QwyQAqIXYD4PlQjyAaQE0Fyc4F4L5TtCZVfBtMcAGS8BuJ/SBpBmuugGoKh4nFQ/iOoerCfM9E0gTSCcD1UMSgMXgHxPCj/OJB+AbM5m4BmfqD8ZyCeAdV8Fkg/h2k2BTK2AvFtNENgfq6BilsCaW4gfoOsGRbXwkBBWEgjB1g1ULwDamsJ1KAKmM1MUAmYIblQBaC4Rk5EVkD+LyB+DMSghAIOMFA8I8c1SMwDiO3QNMMCNhUmTih5IsvLATVZQzXCkycpBqCoBQCET0VYtxt+GAAAAABJRU5ErkJggg==",
                 slidenav:   this.header + "A8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC1QTFRFAAAAzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMzczMdShx9gAAAA50Uk5TABAgMEBggI+fr7/P3+82uMT1AAAAb0lEQVQIHQXBiQHDIAwEMOE8gGlu/3ErgWt297wAYyenT7IGjJNVqJUzsPMAniyuLODedspMQe3cKq8+8HxZOK0b9eUb6NYHO98Dv/am3FkDKq/Ktm9gp1h5AE8mxsku1M4ZMGby618yB6De7n4L/v79BDw2df22AAAAAElFTkSuQmCC",
             };
-            /* Bitmap icons modified from Raphael's SVG icons: http://raphaeljs.com/icons/
-             *
-             * Copyright © 2008 Dmitry Baranovskiy
-             *
-             * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-             * associated documentation files (the “Software”), to deal in the Software without restriction, including
-             * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-             * copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
-             * following conditions:
-             * The above copyright notice and this permission notice shall be included in all copies or substantial
-             * portions of the Software.
-             *
-             * The software is provided “as is”, without warranty of any kind, express or implied, including but not
-             * limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no
-             * event shall the authors or copyright holders be liable for any claim, damages or other liability, whether
-             * in an action of contract, tort or otherwise, arising from, out of or in connection with the software or
-             * the use or other dealings in the software.
-             */
             this.lightIconsSS =
             {
                 watcher:    this.header + "A8AAAANCAYAAAB2HjRBAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAATDAAAEwwBeUQCqQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEgSURBVCiRnc4xS0JhFMbx//vcpMk1aKuxIaItcFCwzbWlXZH7BcKlqS0/wMX3/Qp9BFuCIHCIaBCcGoSwCIemyPueFguVC5VnfM7zOxxnZqRpuhNjvAQqwCZwJ+k8y7L7NE0PY4wXwBHwAdxKOsuy7Mk1m81dSQ9AmeX5NLMr59wJUFrZvccYDzYkdQsgQMk5d1qQA5QldTV/dZ2pCJitiWdyzvXXkc65vvI87wCv/7SveZ53FEKYmFkDmP4RTs2sEUKYCMB7P5BUB95+gW+S6t77AYAzs59Nu93eB/rAVgF8AY57vd7jd7CEAVqt1p6ka2B7IX6OMdZDCMPFrlbPhxCGZlYDxvNobGa1VViIAbz3oyRJqsBNkiRV7/2oqPcFqExuTvxGhCUAAAAASUVORK5CYII=",
