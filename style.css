@@ -3884,7 +3884,7 @@ div.post div.postInfo {
 	width: 100% !important;
 	display: block !important;
 }
-" + ($SS.conf["Add Shadow?"] ? "
+" + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? "
 .thread>.replyContainer>.reply>div.postInfo {
 	box-shadow: 0px 2px 3px " + ($SS.theme.bgColor.isLight ? "#999" : "#111") + " !important;
 	margin-bottom: 3px !important;
