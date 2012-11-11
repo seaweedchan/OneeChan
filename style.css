@@ -2086,7 +2086,7 @@ textarea
 	position: relative !important;
 	top: 1px !important;
 }
-#updater {
+#updater:hover {
 	height: 200px !important;
 }
 .deleteform::before,
