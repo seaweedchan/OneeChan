@@ -4306,56 +4306,6 @@ a.useremail[href*='Plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? 
 	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
 }
 " : "") +
-($SS.conf["Pony Icons"] ? "
-a.useremail[href*='PINKIE']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='pinkie']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Pinkie']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.pinkie+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='APPLEJACK']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Applejack']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='applejack']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.applejack+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='FLUTTERSHY']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='fluttershy']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Fluttershy']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.fluttershy+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='TWILIGHT']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='twilight']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Twilight']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.twilight+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='RAINBOW']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Rainbow']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='rainbow']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.rainbow+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='RARITY']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Rarity']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='rarity']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.rarity+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='SPIKE']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Spike']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='spike']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content: url('"+$SS.theme.emoji.spike+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}" : "") +
 ($SS.location.sub === "sys" ? "
 body
 {
