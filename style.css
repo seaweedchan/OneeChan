@@ -806,7 +806,7 @@ div.post > blockquote .spoiler a
 }
 #watcher:hover
 {
-    top: " + (18 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
+    top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
 }
 " : "
 #watcher
