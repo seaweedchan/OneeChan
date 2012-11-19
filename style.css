@@ -2504,7 +2504,7 @@ input[name=customIMGB64]+a[name=clearIMG]
 	position:fixed!important;
 	top:0;
 	width:100px!important;
-	" + $SS.conf["Sidebar Position String"] + ":162px!important;
+	" + $SS.conf["Sidebar Position String"] + ":" + (($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["SS-like Sidebar"]) ? 159 : 162) + "px!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
 	z-index:14;
 }
@@ -2513,7 +2513,7 @@ label#prefetch
     bottom:auto!important;
     line-height:16px!important;
     position:fixed!important;
-    " + $SS.conf["Sidebar Position String"] + ":136px!important;
+    " + $SS.conf["Sidebar Position String"] + ":" + (($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["SS-like Sidebar"]) ? 133 : 136) + "px!important;
     " + $SS.conf["Sidebar Position oString"] + ":auto!important;
     top: 2px !important;
     z-index:15!important;
@@ -3341,7 +3341,7 @@ a[href='.././']:hover
 	position: fixed !important;
 	width: " + ($SS.conf["Sidebar Position"] !== 2 ? "131" : "135") + "px !important;
 	top: " + (1 + (($SS.conf["Icon Position"] === 2  ? ($SS.conf["Show Logo"] ? 106 : 19): 0))) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": " + (($SS.conf["SS-like Sidebar"] ? 105 : 108) + (($SS.conf["Icon Position"] === 2 ? 20 : 0))) + "px !important;
+	" + $SS.conf["Sidebar Position String"] + ": " + ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["SS-like Sidebar"]) ? 105 : 108) + (($SS.conf["Icon Position"] === 2 ? 20 : 0))) + "px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 }
 .settingsWindowLinkBot, .exlinksOptionsLink {
