@@ -256,7 +256,7 @@
         "Hide Button RVO": [ "0", "" ],
         "--Script Settings--":                     [ "header",  "" ],
         "Disable Ads":              [ true, "Disables ads on 4chan" ],
-        "Show/Hide Menu Entry":     [ false, "Replaces the hide/show post button with a menu entry" ],
+        "Show/Hide Menu Entry":     [ true, "Replaces the hide/show post button with a menu entry" ],
         "--Font--":                     [ "header",  "" ],
         "Font":
         [
