@@ -10,6 +10,7 @@ v4.3.5:
 -Add tip to empty watcher when auto-hide is disabled
 -Remove gap from former watcher position when auto-hide disabled
 -Remove pony emoji
+-Changed Emoji Icons description to contain a list of available emoji
 
 v4.3.4:
 -New option: Icon Position

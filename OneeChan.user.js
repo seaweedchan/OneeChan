@@ -207,7 +207,7 @@
         "Smart Tripcode Hider":     [ false, "Hides the name field if the value contains a tripcode" ],
         "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
         "--Emoji--":                  [ "header",  "" ],
-        "Emoji Icons":              [ true, "Show icons for different e-mails" ],
+        "Emoji Icons":              [ true, "Show icons for different e-mails.\nUse one of the following words in the email field to get the appropriate emoji, case-insensitive:\n\nneko\nmadotsuki\nsega\nsakamoto\nbaka\nponyo\nrabite\narch\ncentos\ndebian\nfreebsd\nopenbsd\nfedora\ngentoo\nmint\nosx\nrhel\nsabayon\ntrisquel\nslackware\nubuntu\nwindows\ngnu\nplan" ],
         "Emoji Position":
         [
             1, "Changes the location of emoji icons",
