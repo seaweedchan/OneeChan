@@ -12,6 +12,7 @@ v4.3.5:
 -Remove pony emoji
 -Changed Emoji Icons description to contain a list of available emoji
 -Max font size changed to 18
+-Capitalize all button names in options, and rename the "Edit" button to "Save" when inside the theme editor
 
 v4.3.4:
 -New option: Icon Position

@@ -1359,7 +1359,7 @@
                         {
                             var links = $SS.conf["Nav Links"];
                             optionsHTML += "</div><input type=radio name=toTab id=tcbNavLinks hidden><div id=tNavLinks>" +
-                                           "<p><a class=trbtn name=addLink>add</a>" +
+                                           "<p><a class=trbtn name=addLink>Add</a>" +
                                            "<label>Delimiter: " +
                                            "<input type=text name='Nav Link Delimiter' value='" + $SS.conf["Nav Link Delimiter"] +
                                            "' style='width:40px' title='" + defaultConfig["Nav Link Delimiter"][1] + "'> Suggestions: \" \", \" - \", \"\/ \/\", \" • \"</p>";
@@ -1376,7 +1376,7 @@
                                            " name='" + key + "' " + (defaultConfig[key][3] === true ? " hasSub" : "")  + " type=checkbox></label>";
                     }
 
-                    optionsHTML += "</div></div><div><a class=trbtn name=save title='Hold any modifier to prevent window from closing'>save</a><a class=trbtn name=cancel>cancel</a></div>";
+                    optionsHTML += "</div></div><div><a class=trbtn name=save title='Hold any modifier to prevent window from closing'>Save</a><a class=trbtn name=cancel>Cancel</a></div>";
                     tOptions.html(optionsHTML);
                     overlay.append(tOptions);
 
@@ -1446,8 +1446,8 @@
                 var themes = $("#tThemes", tOptions).html(""),
                     p      = $("<p style='bottom:8px!important'>");
 
-                p.append($("<a class=trbtn name=addTheme>add", tOptions).bind("click", $SS.options.showTheme));
-                p.append($("<a class=trbtn href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>custom themes"));
+                p.append($("<a class=trbtn name=addTheme>Add", tOptions).bind("click", $SS.options.showTheme));
+                p.append($("<a class=trbtn href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
                 p.append($("<div id=selectImage>").append($("<input type=file riced=true>")
                  .bind("change", function()
                 {
@@ -1509,8 +1509,8 @@
                 var mascots = $("#tMascot", tOptions).html(""),
                     p       = $("<p>");
 
-                p.append($("<a class=trbtn name=addMascot>add", tOptions).bind("click", $SS.options.showMascot));
-                p.append($("<a class=trbtn name=restoreMascots title='Restore hidden default mascots'>restore", tOptions)
+                p.append($("<a class=trbtn name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
+                p.append($("<a class=trbtn name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
                     .bind("click", function()
                     {
                         $SS.conf["Hidden Mascots"] = [];
@@ -1521,9 +1521,9 @@
                 if ($SS.conf["Hidden Mascots"].length === 0)
                     $("a[name=restoreMascots]", p).hide();
 
-                p.append($("<a class=trbtn name=selectAll>select all", tOptions)
+                p.append($("<a class=trbtn name=selectAll>Select All", tOptions)
                     .bind("click", function(){ $("#tMascot>div:not([hidden])").each(function(){ $(this).addClass("selected") }); }));
-                p.append($("<a class=trbtn name=selectNone>select none", tOptions)
+                p.append($("<a class=trbtn name=selectNone>Select None", tOptions)
                     .bind("click", function(){ $("#tMascot>div").each(function(){ $(this).removeClass("selected") }); }));
 
                 mascots.append(p);
@@ -1546,7 +1546,7 @@
                 if (e.keyCode >= 16 && e.keyCode <= 18)
                 {
                     $SS.options.saveAndClose = false;
-                    $("a[name=save]").text("apply");
+                    $("a[name=save]").text("Apply");
                 }
             },
             keyup: function(e)
@@ -1554,7 +1554,7 @@
                 if (!$SS.options.saveAndClose)
                 {
                     $SS.options.saveAndClose = true;
-                    $("a[name=save]").text("save");
+                    $("a[name=save]").text("Save");
                 }
             },
             loadSystemFonts: function(evt)
@@ -1781,7 +1781,7 @@
                 "" + (bEdit && $SS.validBase64(tEdit.bgImg) ? "<input type=hidden name=customIMGB64 value='" + tEdit.bgImg + "'>" : "") + "" +
                 "<a class=trbtn name=clearIMG>Clear Image</a>" +
                 "<a class=trbtn name=export>Export</a>" +
-                "<a class=trbtn name=" + (bEdit ? "edit" : "add") + ">" + (bEdit ? "edit" : "add") + "</a><a class=trbtn name=cancel>cancel</a></div>";
+                "<a class=trbtn name=" + (bEdit ? "edit" : "add") + ">Save</a><a class=trbtn name=cancel>Cancel</a></div>";
 
                 div.html(innerHTML);
                 $(".jsColor", div).jsColor();
@@ -1937,7 +1937,7 @@
                         "<span class=trbtn>Select Image</span></div>" +
                         "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
                         "<a class=trbtn name=clearIMG>Clear Image</a>" +
-                        "<a class=trbtn name=" + (bEdit ? "edit" : "add") + ">" + (bEdit ? "edit" : "add") + "</a><a class=trbtn name=cancel>cancel</a></div></div>");
+                        "<a class=trbtn name=" + (bEdit ? "edit" : "add") + ">Save</a><a class=trbtn name=cancel>Cancel</a></div></div>");
 
                 overlay = $("<div id=overlay2>").append(div);
 
