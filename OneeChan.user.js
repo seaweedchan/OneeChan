@@ -351,7 +351,7 @@
         "Mascots"         : [],
         "Hidden Mascots"  : []
     },
-    MAX_FONT_SIZE = 16,
+    MAX_FONT_SIZE = 18,
     MIN_FONT_SIZE = 10,
     NAMESPACE     = "OneeChan.",
     VERSION       = "4.3.5",

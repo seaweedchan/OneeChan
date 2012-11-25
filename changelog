@@ -11,6 +11,7 @@ v4.3.5:
 -Remove gap from former watcher position when auto-hide disabled
 -Remove pony emoji
 -Changed Emoji Icons description to contain a list of available emoji
+-Max font size changed to 18
 
 v4.3.4:
 -New option: Icon Position
