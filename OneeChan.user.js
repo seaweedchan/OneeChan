@@ -75,6 +75,7 @@
         ],
         "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards", null, true ],
         "Use Title Text for Selected Board": [ false, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
+        "Replace links with catalog versions on the catalog": [ true, "Adds catalog to the end of all custom nav links inside the catalog", "Custom Navigation Links", true, true ],
         "Underline Links":    [ false, "Underlines links" ],
         "Pages Position":
         [
@@ -2915,7 +2916,7 @@
                         if (links == undefined) return;
 
                         for (var i = 0, MAX = links.length; i < MAX; ++i)
-                            a.push("<a title='" + links[i].title + "' href='" + window.location.protocol + "//" + links[i].link + "'" +
+                            a.push("<a title='" + links[i].title + "' href='" + window.location.protocol + "//" + links[i].link + (($SS.conf["Replace links with catalog versions on the catalog"]) && ((div = $("#ctxmenu-main")).exists()) ? "catalog" : "") + "'" +
                                 ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + (($SS.conf["Use Title Text for Selected Board"]) && (links[i].title !== "undefined") && (links[i].title !== "") ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
 
                         if ((div = $("#boardLinks")).exists())
