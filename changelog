@@ -14,6 +14,7 @@ Hupotronic:
 	-Fix ExLinks details getting stretched to 100% width
 -Make Catalog toggle option visible
 -On catalog with Custom Navigation Links, only style the link for the catalog
+-Remove SS-like sidebar as well in catalog
 
 v4.3.6:
 -New option under Updater and Stats Position: Fixed Top Left (default option renamed to Fixed Top Right)

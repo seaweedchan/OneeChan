@@ -527,6 +527,7 @@ iframe[src='about:blank'],
 #toggleMsgBtn,
 .catalog .boardBanner,
 body.catalog::after,
+body.catalog::before,
 .catalog #navtopright > a:not(#OneeChanLink),
 .catalog #boardNavDesktopFoot,
 .catalog hr
