@@ -524,7 +524,9 @@ body>.closed>br,
 iframe[src='about:blank'],
 .catalog #globalMessage,
 #styleSwitcher,
-#toggleMsgBtn
+#toggleMsgBtn,
+.catalog .boardBanner,
+body.catalog::after
 {
 	display:none!important;
 }
