@@ -199,6 +199,12 @@ span.lit,
 	font-size: 0 !important;
 	color: transparent !important;
 }
+.catalog #navtopright .settingsWindowLink {
+	top: 2px !important;
+	right: 24px !important;
+	left: auto !important;
+	z-index: 15;
+}
 #navtopright .settingsWindowLink:hover {
   opacity: 1 !important;
   cursor: pointer;
@@ -526,7 +532,8 @@ iframe[src='about:blank'],
 #styleSwitcher,
 #toggleMsgBtn,
 .catalog .boardBanner,
-body.catalog::after
+body.catalog::after,
+.catalog #navtopright > a:not(#OneeChanLink):not(.settingsWindowLink):not(#boardNavDesktopFoot)
 {
 	display:none!important;
 }
@@ -913,6 +920,12 @@ div.post > blockquote .spoiler a
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	z-index: 6 !important;
 	opacity: 0.6;
+}
+.catalog #boardNavDesktopFoot::after{
+	top: 2px !important;
+	right: 45px !important;
+	left: auto !important;
+	z-index: 15 !important;
 }
 #boardNavDesktopFoot:hover::after 
 {
@@ -2982,7 +2995,7 @@ body>.closed
 }
 " + (!$SS.conf["Custom Navigation Links"] ? "
 " + ($SS.conf["Sidebar Position"] === 2 ? "
-#bNavWrapper {
+body:not(.catalog) #bNavWrapper {
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
 }
@@ -3003,7 +3016,7 @@ body>.closed
 ") + "
 " : "
 " + ($SS.conf["Sidebar Position"] === 2 ? "
-#bNavWrapper {
+body:not(.catalog) #bNavWrapper {
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
 }
@@ -3080,6 +3093,12 @@ body>.closed
 	height: 15px !important;
 	width: 15px !important;
 	z-index: 5;
+}
+.catalog #OneeChanLink {
+	top: 2px !important;
+	right: 5px !important;
+	left: auto !important;
+	z-index: 15;
 }
 #OneeChanLink:hover {
   opacity: 1 !important;
