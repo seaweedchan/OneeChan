@@ -155,7 +155,8 @@ span>a.replylink,
 " + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
 blockquote a.quotelink,
 span.typ, 
-span.atn
+span.atn,
+.catalog .button
 {
     " + (!$SS.conf["Underline Links"] ? "text-decoration:none;" : "") + "
 	color:" + $SS.theme.linkColor.hex + "!important;
@@ -173,7 +174,8 @@ div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
 .backlink:hover,
 span.lit,
-.useremail>.name:hover
+.useremail>.name:hover,
+.catalog .button:hover
 {
 	color:" + $SS.theme.linkHColor.hex + "!important;
 	text-shadow:rgba(" + $SS.theme.linkHColor.rgb + ",.2) 0 0 2px!important;
@@ -212,6 +214,7 @@ a[href='javascript:;'],
 	color:" + $SS.theme.jlinkColor.hex + "!important;
 }
 .nameBlock>span.name,
+.post-author,
 span.com,
 #delform[action='https://sys.4chan.org/f/up.php'] .name
 {
@@ -219,6 +222,7 @@ span.com,
 }
 .nameBlock>span.postertrip,
 span.tag,
+.post-tripcode,
 #delform[action='https://sys.4chan.org/f/up.php'] .postertrip
 {
 	color:" + $SS.theme.tripColor.hex + "!important;
@@ -483,7 +487,7 @@ img.middlead,
 form[action='https://sys.4chan.org/f/post'] ~ div[style='text-align: center'],
 form[action='https://sys.4chan.org/f/up.php']>div[style='text-align: center;']," : "
 div.center img:not(.middlead)," ) + 
-(($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pages," : "" ) +
+(($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pages:not(.cataloglink)," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
 #boardNavDesktop>select,
@@ -514,7 +518,10 @@ body>.closed>br,
 #first-run,
 .mobile" + ($SS.conf["Pages Position"] === 3 ? ":not(.mPagelist)" : "") + ",
 .mobileinline,
-iframe[src='about:blank']
+iframe[src='about:blank'],
+.catalog #globalMessage,
+#styleSwitcher,
+#toggleMsgBtn
 {
 	display:none!important;
 }
@@ -1093,7 +1100,7 @@ div.reply .report_button, div.reply .menu_button
 " : "
 .sideArrows {
 float: left !important; }") + "
-.thread
+body:not(.catalog) .thread
 {
 	clear:both;
 	margin:1px" + ($SS.conf["Layout"] === 1 ? ($SS.conf["Sidebar Position"] !== 2 ? " 0 1px 1px" : " 1px 1px 0") : ($SS.conf["Layout"] === 2 ? " 0 1px" : "")) + "!important;
@@ -4045,7 +4052,7 @@ div.reply.lastmuInfo p {
 {
 	z-index: 5 !important;
 }
-.pages
+.pages:not(.cataloglink)
 {
 	bottom:auto!important;
 	left:auto!important;
@@ -4065,7 +4072,30 @@ div.reply.lastmuInfo p {
 	-moz-transform-origin:bottom right;
 	-o-transform:rotate(90deg);
 	-o-transform-origin:bottom right;
-}" : "") +
+}
+.cataloglink
+{
+	bottom:auto!important;
+	left:auto!important;
+	margin:0!important;
+	opacity:.75;
+	padding:0!important;
+    position:fixed;
+	right:" + ($SS.conf["Layout"] === 3 ?
+	(Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : "
+	" + ($SS.conf["Sidebar Position"] === 3 ? "20" : "263") + "px") + "!important;
+	top:53%;
+	width:auto!important;
+	z-index:6!important;
+	-webkit-transform:rotate(90deg);
+	-webkit-transform-origin:bottom right;
+	-moz-transform:rotate(90deg);
+	-moz-transform-origin:bottom right;
+	-o-transform:rotate(90deg);
+	-o-transform-origin:bottom right;
+}
+
+" : "") +
 ($SS.conf["Expanding Form Inputs"] ? "
 .field:focus::-webkit-input-placeholder
 {
