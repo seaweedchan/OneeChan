@@ -9,6 +9,7 @@ v4.3.7:
 -Don't move sticky nav with left sidebar
 -Reposition a few icons
 -Change text of cataloglink to just "C" to be less intrusive
+-Dropped 4chan X support on catalog
 
 v4.3.6:
 -New option under Updater and Stats Position: Fixed Top Left (default option renamed to Fixed Top Right)

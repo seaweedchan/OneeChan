@@ -199,12 +199,6 @@ span.lit,
 	font-size: 0 !important;
 	color: transparent !important;
 }
-.catalog #navtopright .settingsWindowLink {
-	top: 2px !important;
-	right: 24px !important;
-	left: auto !important;
-	z-index: 15;
-}
 #navtopright .settingsWindowLink:hover {
   opacity: 1 !important;
   cursor: pointer;
@@ -369,8 +363,8 @@ margin-top: 100px !important;
 	font-weight: bold !important; 
 	color:" + $SS.theme.titleColor.hex + "!important;
 }
-.catalog #content {
-	margin-top: -14px !important;
+.catalog>#content {
+	margin-top: 18px !important;
 }
 " + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
 #boardNavDesktop
@@ -533,7 +527,9 @@ iframe[src='about:blank'],
 #toggleMsgBtn,
 .catalog .boardBanner,
 body.catalog::after,
-.catalog #navtopright > a:not(#OneeChanLink):not(.settingsWindowLink):not(#boardNavDesktopFoot)
+.catalog #navtopright > a:not(#OneeChanLink),
+.catalog #boardNavDesktopFoot,
+.catalog hr
 {
 	display:none!important;
 }
@@ -661,7 +657,7 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 { 
 	display: none !important;
 }" : "") + "
-body
+body:not(.catalog)
 {
 	
 	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0" :
@@ -920,12 +916,6 @@ div.post > blockquote .spoiler a
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	z-index: 6 !important;
 	opacity: 0.6;
-}
-.catalog #boardNavDesktopFoot::after{
-	top: 2px !important;
-	right: 45px !important;
-	left: auto !important;
-	z-index: 15 !important;
 }
 #boardNavDesktopFoot:hover::after 
 {
@@ -2981,9 +2971,12 @@ body>.closed
     padding:0!important;
 }
 " + ($SS.conf["Navigation Bar Position"] === 1 ? "
-#bNavWrapper
+body:not(.catalog) #bNavWrapper
 {
     " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + ($SS.iSidebarSize - 3) + "px!important;" : "") + "
+}
+#bNavWrapper
+{
     height:19px;
 	left:0!important;
     line-height:18px;
@@ -3000,14 +2993,14 @@ body:not(.catalog) #bNavWrapper {
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
 }
-#boardNavDesktop
+body:not(.catalog) #boardNavDesktop
 {
     height:19px!important;
     margin-right:" + ($SS.iSidebarSize - 3) + "px!important;
     position:relative;
 }
 " : "
-#boardNavDesktop
+body:not(.catalog) #boardNavDesktop
 {
     height:19px!important;
     margin-left:" + ($SS.iSidebarSize - 3) + "px!important;
@@ -3021,13 +3014,13 @@ body:not(.catalog) #bNavWrapper {
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
 }
-#boardLinks
+body:not(.catalog) #boardLinks
 {
     margin-right:" + $SS.iSidebarSize + "px!important;
     position:relative;
 }
 " : "
-#boardLinks
+body:not(.catalog) #boardLinks
 {
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
@@ -3038,9 +3031,12 @@ body:not(.catalog) #bNavWrapper {
 
 ") + "
 " : "
-#bNavWrapper
+body:not(.catalog) #bNavWrapper
 {
     " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + ($SS.iSidebarSize - 3) + "px!important;" : "") + "
+}
+#bNavWrapper
+{
     height:19px;
 	left:0!important;
     line-height:18px;
@@ -3051,14 +3047,18 @@ body:not(.catalog) #bNavWrapper {
 	width:100%!important;
 	z-index:14!important;
 }
-" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop
+" + (!$SS.conf["Custom Navigation Links"] ? "
+body:not(.catalog) #boardNavDesktop
+{
+	margin-left:" + $SS.iSidebarSize + "px!important;
+}
+#boardNavDesktop
 {
     height:19px!important;
-    margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
-}" : "
-
-#boardLinks
+}
+" : "
+body:not(.catalog) #boardLinks
 {
     margin-left:" + $SS.iSidebarSize + "px!important;
     position:relative;
