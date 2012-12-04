@@ -4118,7 +4118,7 @@ div.reply.lastmuInfo p {
 	right:" + ($SS.conf["Layout"] === 3 ?
 	(Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : "
 	" + ($SS.conf["Sidebar Position"] === 3 ? "20" : "263") + "px") + "!important;
-	top:53%;
+	top:49%;
 	width:auto!important;
 	z-index:6!important;
 	-webkit-transform:rotate(90deg);
