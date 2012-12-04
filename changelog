@@ -12,6 +12,7 @@ v4.3.7:
 -Dropped 4chan X support on catalog
 Hupotronic:
 	-Fix ExLinks details getting stretched to 100% width
+-Make Catalog toggle option visible
 
 v4.3.6:
 -New option under Updater and Stats Position: Fixed Top Left (default option renamed to Fixed Top Right)

@@ -433,8 +433,8 @@ textarea,
 #updater span,
 #boardNavDesktopFoot,
 #boardNavDesktopFoot a,
-#boardNavDesktop>a:not(#lastmuSettingsWindowLink):not(.current)
-
+#boardNavDesktop>a:not(#lastmuSettingsWindowLink):not(.current),
+#toggleCatalog
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
 }
