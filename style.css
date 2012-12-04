@@ -567,7 +567,8 @@ tr,
 .replymode,
 #delform[action='https://sys.4chan.org/f/up.php'] .postblock,
 .mPagelist .pages span strong,	
-#boardLinks>a.selectedBoard,
+body:not(.catalog) #boardLinks>a.selectedBoard,
+.catalog #boardLinks>a.selectedBoard[href*='catalog'],
 #boardNavDesktop>a.current,
 #boardNavDesktopFoot>a.current,
 table.postForm > tbody > tr > td:first-child,
@@ -3489,7 +3490,7 @@ a[href='.././']
 	font-size: 0px !important;
 	opacity: .6;
 }
-#boardLinks>a.selectedBoard, #boardNavDesktop>a.current, #boardNavDesktopFoot>a.current
+body:not(.catalog) #boardLinks>a.selectedBoard, .catalog #boardLinks>a.selectedBoard[href*='catalog'], #boardNavDesktop>a.current, #boardNavDesktopFoot>a.current
 {
 	font-weight: bold !important;
 }
