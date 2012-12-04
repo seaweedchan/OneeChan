@@ -1228,7 +1228,7 @@ hr
 {
     margin:0!important;
 }
-div.post:not(#qp):not([hidden]):not(#exlinks-options)
+div.post:not(#qp):not([hidden]):not(#exlinks-options):not(#exdetails);
 {
     margin:0!important;
     width:100% !important;
