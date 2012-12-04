@@ -363,6 +363,9 @@ margin-top: 100px !important;
 	font-weight: bold !important; 
 	color:" + $SS.theme.titleColor.hex + "!important;
 }
+.catalog #content {
+	margin-top: -14px !important;
+}
 " + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
 #boardNavDesktop
 {
@@ -4009,8 +4012,17 @@ a[href='.././'],#imgControls label:first-of-type::after {
 #navtopright .settingsWindowLinkBot {
 	width:15px !important
 }
-
-" : "") + "
+.catalog #OneeChanLink {
+	width: 12px !important;
+}
+" : "
+.catalog #OneeChanLink {
+	width: 13px !important;
+}
+") + "
+.catalog #OneeChanLink {
+	height: 13px !important;
+}
 /* Last.mu */
 #delform div.reply.lastmuInfo
 {
