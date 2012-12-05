@@ -375,6 +375,13 @@ margin-top: 100px !important;
 	font-size: 13px !important;
 	font-weight: normal !important;
 }
+.catalog #backdrop {
+	z-index: 15;
+}
+.catalog #theme {
+	z-index: 16;
+	top: 30% !important;
+}
 " + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
 #boardNavDesktop
 {
