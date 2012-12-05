@@ -278,7 +278,8 @@ div[id^=jsMath],
 #jsMath_float,
 .deleteform,
 #qr .warning,
-table.flashListing tr:nth-of-type(2n+1)
+table.flashListing tr:nth-of-type(2n+1),
+.catalog .panel
 {
 	background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
@@ -297,7 +298,7 @@ border:1px solid rgba(" + $SS.theme.brderColor.rgb + ", 0.8) !important;
 {
 	border: 1px solid " + $SS.theme.brderColor.hex + " !important;
 }
-#ft li, #recent-images li, .boxbar, body:not([class]) .menubutton, .postContainer>.op:target
+#ft li, #recent-images li, .boxbar, body:not([class]) .menubutton, .postContainer>.op:target, .closeIcon
 {
 	background: none !important;
 	border: none !important;
@@ -365,6 +366,14 @@ margin-top: 100px !important;
 }
 .catalog>#content {
 	margin-top: 18px !important;
+}
+.catalog kbd {
+	box-shadow: none !important;
+	border-radius: none !important;
+}
+.closeIcon {
+	font-size: 13px !important;
+	font-weight: normal !important;
 }
 " + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
 #boardNavDesktop
@@ -1621,7 +1630,8 @@ button,
 input:not([type=checkbox]):not([type=radio]),
 .webkit select,
 " + ($SS.conf["Post Form"] !== 4 ? "#qr>form>.captchaimg>img," : "#qr>form>.captchaimg,") + "
-.riceFile
+.riceFile,
+.catalog kbd
 {
 	border:1px solid " + $SS.theme.inputbColor.hex + "!important;
 }
@@ -1637,7 +1647,8 @@ input.field,
 textarea,
 #qr.captcha > form #spoilerLabel,
 .riceFile,
-#options input
+#options input,
+.catalog kbd
 {
 	background:rgba(" + $SS.theme.inputColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }

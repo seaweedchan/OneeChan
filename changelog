@@ -17,6 +17,7 @@ Hupotronic:
 -Remove SS-like sidebar as well in catalog
 -New suboption for Custom Navigation Links to replace them in the catalog with catalog versions
 -Make Reveal All Spoilers affect catalog
+-Add support for catalog settings menu
 
 v4.3.6:
 -New option under Updater and Stats Position: Fixed Top Left (default option renamed to Fixed Top Right)
