@@ -2,6 +2,9 @@ OneeChan changelog
 As of v4.0.9, releases are based on new or redesigned features.
 Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
 
+v4.3.8:
+-Unmoot /b/
+
 v4.3.7:
 -Support for new catalog links -- subject to change with 4chan X support, I'm sure.
 [Post-Update]
