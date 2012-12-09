@@ -4,6 +4,10 @@ Items under [Post-Update] are bug fixes added into the official version after th
 
 v4.3.8:
 -Unmoot /b/
+[Post-Update]
+ahodesuka:
+	-Fix mascot adding and deleting
+	-Fix QR field in FF19
 
 v4.3.7:
 -Support for new catalog links -- subject to change with 4chan X support, I'm sure.

@@ -4159,6 +4159,10 @@ div.reply.lastmuInfo p {
 {
     color:transparent!important;
 }
+.field:focus::-moz-placeholder
+{
+    color:transparent!important;
+}
 #qr>form>div:first-child .field:not(#dump):focus
 {
 	background:rgba(" + $SS.theme.inputColor.hover + ",.98)!important;
