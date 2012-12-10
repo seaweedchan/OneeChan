@@ -806,19 +806,28 @@ body::before
 	border-top:1px solid " + $SS.theme.brderColor.hex + "!important;
 }
 " + ($SS.conf["Reveal All Spoilers"] ? "
-div.post > blockquote .spoiler, .teaser s
+div.post > blockquote .spoiler, .teaser s, s
 {
     color: white !important;
 }
-div.post > blockquote .spoiler .quote, .teaser s .quote
+div.post > blockquote .spoiler .quote, .teaser s .quote, s.quote
 {
 	color:" + $SS.theme.quoteColor.hex + "!important;
 }
-div.post > blockquote .spoiler a, .teaser a
+div.post > blockquote .spoiler a, .teaser a, s a
 {
 	color:" + $SS.theme.linkColor.hex + "!important;
 }
-" : "") + "	
+" : "
+s {
+    background: none repeat scroll 0 0 #000000 !important;
+    color: #000000 !important;
+    text-decoration: none;
+}
+s:hover, s:focus {
+    color: #FFFFFF !important;
+}
+") + "	
 #jsmath_button
 {
 	bottom:auto!important;
