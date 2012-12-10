@@ -171,7 +171,7 @@
             [
                 { name: "Large",      value: 6 },
                 { name: "Normal (4chan default)", value: 4 },
-                { name: "Minimal",  value: 2 },
+                { name: "Minimal",  value: 0 },
                 { name: "None",  value: -2 },
                 { name: "Overlapping Borders", value: -3 }
             ]

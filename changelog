@@ -6,6 +6,7 @@ v4.3.9:
 -Give spoiler styling to <s> elements since moot doesn't know HTML apparently
 [Post-Update]
 -Fix "None" and "Overlapping Borders" in Margin Between Replies
+-Fix "Minimal" hopefully
 
 v4.3.8:
 -Unmoot /b/
