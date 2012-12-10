@@ -810,7 +810,7 @@ div.post > blockquote .spoiler, .teaser s, s
 {
     color: white !important;
 }
-div.post > blockquote .spoiler .quote, .teaser s .quote, s.quote
+div.post > blockquote .spoiler .quote, .teaser s .quote, s .quote
 {
 	color:" + $SS.theme.quoteColor.hex + "!important;
 }
@@ -819,7 +819,7 @@ div.post > blockquote .spoiler a, .teaser a, s a
 	color:" + $SS.theme.linkColor.hex + "!important;
 }
 " : "
-s {
+s, .postMessage s:not(:hover) .quote {
     background: none repeat scroll 0 0 #000000 !important;
     color: #000000 !important;
     text-decoration: none;
