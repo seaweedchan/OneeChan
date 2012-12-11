@@ -809,6 +809,8 @@ body::before
 div.post > blockquote .spoiler, .teaser s, s
 {
     color: white !important;
+    text-decoration: none !important;
+    background: none repeat scroll 0 0 #000000 !important;
 }
 div.post > blockquote .spoiler .quote, .teaser s .quote, s .quote
 {
