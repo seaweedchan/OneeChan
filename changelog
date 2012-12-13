@@ -8,6 +8,8 @@ v4.3.9:
 -Fix "None" and "Overlapping Borders" in Margin Between Replies
 -Fix "Minimal" hopefully
 -Fix quotes in spoilers with new <s> element
+ahdesuka:
+	-Fix options menu becoming unresponsive when deleting mascot
 
 v4.3.8:
 -Unmoot /b/
