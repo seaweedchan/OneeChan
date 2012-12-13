@@ -4308,6 +4308,13 @@ a.useremail[href*='Rabite']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 
 	content:url('"+$SS.theme.emoji.rabite+"');
 	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
 }
+a.useremail[href*='yuno']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='YUNO']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='Yuno']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
+{
+	content:url('"+$SS.theme.emoji.yuno+"');
+	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
+}
 a.useremail[href*='Arch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
 a.useremail[href*='ARCH']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
 a.useremail[href*='arch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
@@ -4425,6 +4432,13 @@ a.useremail[href*='plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? 
 a.useremail[href*='Plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
 {
     content:url('"+$SS.theme.emoji.plannine+"');
+	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
+}
+a.useremail[href*='Crunch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='CRUNCH']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
+a.useremail[href*='crunch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
+{
+    content:url('"+$SS.theme.emoji.crunchbang+"');
 	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
 }
 " : "") +
