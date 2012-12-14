@@ -167,7 +167,7 @@
         "Add Shadow?":              [ true, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
         "Margin Between Replies":
         [
-            2, "Change the position of 4chan x backlinks",
+            0, "Change the position of 4chan x backlinks",
             [
                 { name: "Large",      value: 6 },
                 { name: "Normal (4chan default)", value: 4 },
