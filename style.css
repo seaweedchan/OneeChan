@@ -1,4 +1,4 @@
-html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks
+html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks, #qr-filename-container
 {
 	font-family:" + $SS.formatFont($SS.conf["Font"]) + ";
 	font-size:" + $SS.conf["Font Size"] + "px;
@@ -105,6 +105,7 @@ div.center {
 }
 input:not([disabled]):active,
 input:focus,
+#qr-filename-container:focus,
 .webkit select:focus,
 textarea:focus
 {
@@ -277,7 +278,7 @@ div[id^=jsMath],
 #playerSettings,
 #jsMath_float,
 .deleteform,
-#qr .warning,
+#qr,
 table.flashListing tr:nth-of-type(2n+1),
 .catalog .panel
 {
@@ -388,9 +389,6 @@ margin-top: 100px !important;
 	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
 	border: none !important;
 }
-" + (($SS.conf["Updater and Stats Position"] === 3) && ($SS.conf["Add Background to Updater/Stats"]) ? "#updater .move, #stats {
-	background:rgba(" + $SS.theme.bgColor.rgb + ",0.7)!important;
-}" : "") + "
 #id_css::after {
 	width: 262px !important;
 	position: fixed !important;
@@ -435,7 +433,6 @@ label#prefetch
 	color:transparent!important;
 	font-size:0!important;
 }
-#qr>form>div:first-child .field:not(#dump):focus+span,
 input:not([type=submit]),
 select,
 select option,
@@ -445,8 +442,6 @@ textarea,
 #themeoptions .mOption:not(.header),
 #themeoptions .mOption:not(.header)>span,
 #themeoptions #tMascot div a,
-#updater label,
-#updater span,
 #boardNavDesktopFoot,
 #boardNavDesktopFoot a,
 #toggleCatalog
@@ -459,13 +454,8 @@ form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
 input[type=button],
 input[type=submit],
-#stats .move,
-#updater span,
-#updater .move,
-#stats span,
 .deleteform::after,
 .preview>label::after,
-.riceFile div,
 label#prefetch::after
 {
 	font-size:" + ($SS.conf["Bitmap Font"] ? $SS.conf["Font Size"] : 12) + "px!important;
@@ -477,7 +467,6 @@ label#prefetch::after
 a.useremail[href='mailto:sage']:last-of-type::before,
 .container::before,
 .deleteform::before,
-.riceFile span,
 .trbtn,
 #SSVersion,
 #updatelink,
@@ -558,13 +547,13 @@ form[name=delform],
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
 input:not(.jsColor),
+#qr-filename-container,
 .webkit select,
 textarea,
 tr,
 #navtopright>a:last-child::before,
 #qr>.move,
 #qr>form #spoilerLabel::after,
-#stats span,
 #themeoptions #toNav li label.selected,
 #themeoptions #toNav li label:hover,
 .deleteform::before,
@@ -577,7 +566,7 @@ tr,
 .mPagelist .pages span strong,	
 body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']),
 .catalog #boardLinks>a.selectedBoard[href*='catalog'],
-#header-bar>a.current,
+#header-bar a.current,
 #boardNavDesktopFoot>a.current,
 table.postForm > tbody > tr > td:first-child,
 table.exif td,
@@ -595,12 +584,11 @@ textarea,
 .postInfo,
 .stub>a:first-child,
 .thread.stub,
-.riceFile,
 .riceCheck,
 .boardBanner .boardTitle,
 .ys_playerContainer,
 #qr,
-#qr>form>.captchaimg>img,
+#qr>form>.captcha-img>img,
 #themeoptions #tMascot div,
 #themeoptions #tThemes .reply,
 #themeoptions #tNavLinks .navlink .handle
@@ -609,9 +597,6 @@ textarea,
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
-" + ($SS.conf["Add Background to Updater/Stats"] ? "#updater .move, #stats {
-	border-radius: 1px !important;
-}" : "") + "
 " + ($SS.conf["Rounded Corners"] ? "
 #delform div.reply,
 div.reply.highlight,
@@ -776,10 +761,6 @@ body::before
 	border: 1px solid " + $SS.theme.brderColor.hex + "!important;
 }
 " + ($SS.conf["Sidebar Position"] === 3 ? ".globalMessage," : "") + "
-#updater
-{
-	border-right:1px solid " + $SS.theme.brderColor.hex + "!important;
-}
 #delform
 {
     margin-top:18px!important;
@@ -1140,7 +1121,6 @@ body:not(.catalog) .thread
 }
 #addMascot>label::after,
 #qr>form>div::after,
-#updater div>label::after,
 " + ($SS.conf["Layout"] !== 2 ? ".thread .op::after," : "") + "
 .thread::after
 {
@@ -1635,9 +1615,9 @@ img[alt=Sticky]
 textarea,
 button,
 input:not([type=checkbox]):not([type=radio]),
+#qr-filename-container,
 .webkit select,
-" + ($SS.conf["Post Form"] !== 4 ? "#qr>form>.captchaimg>img," : "#qr>form>.captchaimg,") + "
-.riceFile,
+" + ($SS.conf["Post Form"] !== 4 ? "#qr>form>.captcha-img>img," : "#qr>form>.captcha-img,") + "
 .catalog kbd
 {
 	border:1px solid " + $SS.theme.inputbColor.hex + "!important;
@@ -1652,17 +1632,16 @@ input#fs_search,
 input.field,
 .webkit select,
 textarea,
-#qr.captcha > form #spoilerLabel,
-.riceFile,
+#qr.has-captcha > form #spoilerLabel,
 #options input,
+#qr-filename-container,
 .catalog kbd
 {
 	background:rgba(" + $SS.theme.inputColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
 button,
 input:not(.jsColor),
-textarea,
-.riceFile input~div
+textarea
 {
 	-webkit-transition:background .2s,box-shadow .2s;
 	-moz-transition:background .2s,box-shadow .2s;
@@ -1677,10 +1656,7 @@ input#fs_search:hover,
 input.field:hover,
 .webkit select:hover,
 textarea:hover,
-#options input:hover,
-.riceFile input:hover+div,
-.riceFile input:focus+div,
-.riceFile div.focus
+#options input:hover
 {
 	background:rgba(" + $SS.theme.inputColor.hover + "," + $SS.theme.replyOp + ")!important;
 }
@@ -1715,11 +1691,9 @@ input.field:focus,
 }
 button,
 input[type=button],
-input[type=submit],
-.riceFile div
+input[type=submit]
 {
 	height:22px!important;
-	margin-top:1px!important;
 	padding:0!important;
 	text-align:center!important;
 	vertical-align:top;
@@ -1826,6 +1800,9 @@ textarea,
 .navLinks
 {
 	margin:0!important;
+}
+.textarea {
+	margin-bottom: -1px !important;
 }
 td.doubledash
 {
@@ -1954,10 +1931,8 @@ textarea
 	-webkit-appearance:none;
 	-o-appearance:none;
 }
-#options .move,
 " + ($SS.conf["Post Form"] !== 4 ? "#qr>.move," : "") + "
-#stats .move,
-#updater .move
+#options .move
 {
 	cursor:default!important;
 }
@@ -2092,7 +2067,6 @@ textarea
 {
 	display:none;
 }
-#updater label,
 #themeoptions #tMain .mOption,
 #themeoptions #tNavLinks .navlink
 {
@@ -2103,42 +2077,17 @@ textarea
 	padding:0 3px;
 	vertical-align:top;
 }
-#updater label {
-	width: 100%;
-	float: left;
-}
-#updater label input {
-	float: right;
-}
-#updater input.field {
-	height: 18px !important;
-}
-#updater input[type='number'] {
-	width: 3em !important;
-}
-#updater>div>input[name='Update Now'] {
-	margin-right: 28px !important;
-}
-#updater .riceCheck {
-	position: relative !important;
-	top: 1px !important;
-}
-#updater:hover {
-	height: 200px !important;
-}
 .deleteform::before,
 #themeoptions #tMain .mOption span
 {
     float:left;
 	line-height:20px!important;
 }
-#themeoptions #tMain .mOption:first-child,
-#updater div:first-child label
+#themeoptions #tMain .mOption:first-child
 {
 	border-top:0!important;
 }
-#themeoptions #tMain .mOption:last-child,
-#updater div:nth-last-of-type(3) label
+#themeoptions #tMain .mOption:last-child
 {
 	border-bottom:0!important;
 }
@@ -2562,28 +2511,6 @@ content: 'P' !important;
 {
     background:none!important;
 }
-" + ($SS.conf["Updater and Stats Position"] === 1 ? "
-#updater
-{
-	position: fixed !important;
-	top: 0px !important;
-	" + $SS.conf["Sidebar Position String"] + ":0!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-	bottom: auto !important;
-	height: 16px !important;
-}
-#stats
-{
-	position: fixed !important;
-	top: 0px !important;
-	" + $SS.conf["Sidebar Position String"] + ":13px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-	bottom: auto !important;
-	width: 80px !important;
-	height: 16px !important;
-	z-index:14!important;
-}
-" : "") + "
 " : "
 #imgControls
 {
@@ -2653,50 +2580,7 @@ content: 'P' !important;
 label#prefetch::after {
 content: 'Prefetch?' !important;
 }
-" + ($SS.conf["Updater and Stats Position"] === 1 ? "
-#updater
-{
-	position: fixed !important;
-	top: " + (18 + ($SS.conf["Show Logo"] ? 87 : 0)) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ":4px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-	bottom: auto !important;
-	height: 16px !important;
-}
-#stats
-{
-	position: fixed !important;
-	top: " + (18 + ($SS.conf["Show Logo"] ? 87 : 0)) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ":155px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-	width: 100px !important;
-	bottom: auto !important;
-	height: 16px !important;
-}
-" : "") + "
 ") + "
-" + ($SS.conf["Updater and Stats Position"] === 2 ? "
-#updater
-{
-	position: fixed !important;
-	top: 0px !important;
-	left: " + (0 + ($SS.conf["Sidebar Position"] === 2 ? 265 : 0)) + "px!important;
-	right:auto!important;
-	bottom: auto !important;
-	height: 16px !important;
-}
-#stats
-{
-	position: fixed !important;
-	top: 0px !important;
-	left: " + (45 + ($SS.conf["Sidebar Position"] === 2 ? 265 : 0)) + "px!important;
-	right:auto!important;
-	bottom: auto !important;
-	width: 80px !important;
-	height: 16px !important;
-	z-index:14!important;
-}
-" : "") + "
 #imgControls #imageType
 {
 	margin:0!important;
@@ -2751,73 +2635,8 @@ form[name=post] #com_submit+label,
 #qr>form #spoilerLabel::after,
 #imgControls label,
 #navlinks,
-#stats .move,
 #themeoptions #toNav li label,
-#updater span,
-#updater .move,
 .preview>label::after
-{
-	line-height:16px;
-}
-#updater
-{
-	border: none !important;
-	position:fixed!important;
-	height:18px;
-	line-height:18px;
-	overflow:hidden;
-	z-index:14!important;
-	text-align: left !important;
-}
-#updater:hover
-{
-	height:auto!important;
-	padding-bottom:3px;
-}
-#updater #count.new
-{
-	background-color:transparent!important;
-}
-#updater label
-{
-	line-height:20px!important;
-	text-align:left!important;
-}
-#updater .move {
-	margin-top: 2px;
-	padding-right: 2px;
-	padding-left: 2px;
-}
-#stats {
-	margin-top: 2px;
-	padding-right: 2px;
-	padding-left: 2px;
-}
-#updater input,
-#updater .riceCheck
-{
-	float:right;
-}
-#updater input:not([type=checkbox])
-{
-	margin:1px!important;
-}
-#updater input[type=button]
-{
-	margin-right:3px!important;
-	padding:0 5px!important;
-	width:auto!important;
-}
-#updater input[type=text]
-{
-	height:19px!important;
-	width:40px!important;
-}
-#updater:not(:hover)
-{
-	background:transparent!important;
-}
-#stats
 {
 	line-height:16px;
 }
@@ -3002,8 +2821,8 @@ body>.closed
 	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
 	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
-	height: 15px !important;
-	width: 15px !important;
+	height: 13px !important;
+	width: 13px !important;
 	z-index: 5;
 }
 .catalog #OneeChanLink {
@@ -3270,7 +3089,6 @@ a[href='.././']:hover
   opacity: 1 !important;
   cursor: pointer;
 }
-.riceFile,
 #selectImage
 {
 	height:22px;
@@ -3278,7 +3096,6 @@ a[href='.././']:hover
 	overflow:hidden;
 	position:relative;
 }
-.riceFile input[type=file],
 #selectImage input[type=file]
 {
 	cursor:pointer!important;
@@ -3291,22 +3108,6 @@ a[href='.././']:hover
 	-webkit-transform:scale(20) translateX(-30%);
 	-moz-transform:scale(20) translateX(-30%);
 	-o-transform:scale(20) translateX(-30%);
-}
-.riceFile div
-{
-	display:inline-block;
-	line-height:20px!important;
-	margin:0!important;
-	padding:0 10px!important;
-}
-.riceFile span
-{
-	display:inline-block;
-	max-width:173px;
-	overflow:hidden;
-	padding:0 5px!important;
-	text-overflow:ellipsis;
-	white-space:nowrap;
 }
 ul#Alerts,
 ul#Alerts a:hover
@@ -3323,11 +3124,11 @@ a[href='.././']
 	font-size: 0px !important;
 	opacity: .6;
 }
-body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog #boardLinks>a.selectedBoard[href*='catalog'], #header-bar>a.current, #boardNavDesktopFoot>a.current
+body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog #boardLinks>a.selectedBoard[href*='catalog'], #header-bar a.current, #boardNavDesktopFoot>a.current
 {
 	font-weight: bold !important;
 }
-#header-bar>a.current:not(.selectedBoard), #boardNavDesktopFoot>a.current
+#header-bar a.current, #boardNavDesktopFoot>a.current
 {
 	font-size: 13px !important;
 }
@@ -3364,6 +3165,10 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	-webkit-transition:opacity .2s ease-in-out 1s;
 	-moz-transition:opacity .2s ease-in-out 1s;
 	-o-transition:opacity .2s ease-in-out 1s;" : "")) + "
+}
+#qr-filerm {
+	margin-right: -7px !important;
+	bottom: 7px !important;
 }
 " + ($SS.conf["Post Form"] === 1 ? "
 #qr.autohide.dump:not(.focus):not(:hover)
@@ -3413,11 +3218,18 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	bottom: 0px !important;
 }
 " : "") + "
-#qr>form>.captchaimg>img
+#qr>form>.captcha-img>img
 {
-	height:48px!important;
-	max-width:300px;
 	width:100%;
+}
+.captcha-img {
+	min-width: 0px !important;
+	min-height: 0px !important;
+	border: none !important;
+	margin-bottom: 0px !important;
+}
+.captcha-input {
+	margin-top: 1px !important;
 }
 #qr textarea
 {
@@ -3434,7 +3246,12 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	-o-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
     " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
 }
-#qr:not(.captcha)>.move
+#qr-filename-container {
+	min-width: 74% !important;
+	max-width: 74% !important;
+	margin-top: 0px !important;
+}
+#qr:not(.has-captcha)>.move
 {
 	height: 26px !important;
 }
@@ -3453,73 +3270,48 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 #qr>.move select
 {
 	height:19px!important;
+	margin-top: -2px;
+	margin-bottom: 2px;
 }
 #qr>form>div
 {
 	position:relative;
 }
-#qr>form>div:first-child #dump,
-#qr>form>.captchaimg>img,
-#qr>form input[type=submit],
-#qr>form input[type=file],
-#qr>form .riceFile
+#qr>form>.captcha-img>img,
+#qr>form input[type=submit]
 {
 	margin-top:0!important;
-}
-#qr>form .riceFile,
-#qr>form input[type=file]
-{
-	float:right;
-	width:100%;
 }
 #qr>form>div:first-child
 {
 	position:relative;
 }
-#qr>form>div:first-child #dump
-{
-	float:left;
-    height:22px!important;
-	width:24px!important;
+#dump-button {
+	width: 10.4% !important;
 }
-#qr>form>div:first-child .field:not(#dump)
+.persona .field
 {
 	float:left;
     height:22px;
     padding:3px 4px!important;
-	" + ($SS.conf["Post Form"] !== 4 ? "margin-left:1px!important; width:76px!important;" : "width: 29%!important;") + "
-}
-#qr>form>div:first-child .field:not(#dump)+span
-{
-	color:rgba(" + $SS.theme.textColor.rgb + ",0)!important;
-	font-size:0!important;
-	position:absolute;
-	right:" + $SS.iSidebarSize + "px;
-	top:4px;
-	white-space:nowrap;
-	z-index:-1;
-}
-#qr>form>div:first-child .field[name=sub]
-{
-	margin-right:0!important;
+	" + ($SS.conf["Post Form"] !== 4 ? "margin-right:1px!important; width:75px!important; max-width: 75px !important; min-width: 75px !important;" : "width: 29%!important;") + "
 }
 #qr>form>div:first-child+div,
 #qr>form>div#replies+div,
-#qr>form>.captchaimg
+#qr>form>.captcha-img
 {
 	clear:both;
 }
-#qr>form .field,
-#qr>form>.captchaimg
+#qr>form .field
 {
 	margin-bottom:1px!important;
 }
-#qr>form>.captchaimg
+#qr>form>.captcha-img
 {
 	" + ($SS.conf["Post Form"] !== 4 ? "background: none !important;" : "") + "
 	outline:none!important;
 }
-#qr>form>.captchaimg+div
+#qr>form>.captcha-img+div
 {
 	float:left;
 	margin-right:1px;
@@ -3527,7 +3319,7 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	z-index:1;
 	" + ($SS.conf["Post Form"] !== 4 ? "" : "width: 69% !important;") + "
 }
-#qr>form>.captchaimg+div input
+#qr>form>.captcha-img+div input
 {
     height:22px;
 	" + ($SS.conf["Post Form"] !== 4 ? "width:189px!important;" : "") + "
@@ -3575,34 +3367,34 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	text-align:center;
 }
 " + ($SS.conf["Post Form"] === 4 ? "
-#qr:not(.captcha) [type='submit'] 
+#qr:not(.has-captcha) [type='submit'] 
 {
 	margin: 1px -1px 0px 0px !important;
 	width: 100% !important;
 	float: right !important;
 }
-#qr:not(.captcha) #spoilerLabel 
+#qr:not(.has-captcha) #spoilerLabel 
 {
 	bottom: 5px !important;
 }
-#qr:not(.captcha) .warning:not(:empty) 
+#qr:not(.has-captcha) .warning:not(:empty) 
 {
 	padding: 3px 2px !important;
-}" : "#qr:not(.captcha) [type='submit'] 
+}" : "#qr:not(.has-captcha) [type='submit'] 
 {
 	margin: 1px 0px 0px 0px !important;
 	width: 255px !important;
 	float: right !important;
 }
-#qr:not(.captcha) #spoilerLabel 
+#qr:not(.has-captcha) #spoilerLabel 
 {
 	bottom: 3px !important;
 }
-#qr:not(.captcha) textarea 
+#qr:not(.has-captcha) textarea 
 {
 	height: 174px !important;
 }
-#qr:not(.captcha) .warning:not(:empty) 
+#qr:not(.has-captcha) .warning:not(:empty) 
 {
 	padding: 3px 2px !important;
 }") + "
@@ -3977,39 +3769,26 @@ div.reply.lastmuInfo p {
 {
     color:transparent!important;
 }
-#qr>form>div:first-child .field:not(#dump):focus
+.persona .field:focus
 {
 	background:rgba(" + $SS.theme.inputColor.hover + ",.98)!important;
 	left:24px!important;
 	position:absolute;
 	width:230px!important;
 }
-#qr>form>div:first-child .field:not(#dump):focus+span
-{
-	color:rgba(" + $SS.theme.textColor.rgb + ",.4)!important;
-	right:6px;
-	z-index:3;
-	-webkit-transition:right .3s ease-in-out,color .3s ease-in-out;
-	-moz-transition:right .3s ease-in-out,color .3s ease-in-out;
-	-o-transition:right .3s ease-in-out,color .3s ease-in-out;
-}
 #qr textarea:focus,
-#qr>form>div:first-child .field:not(#dump):focus
+.persona .field:focus
 {
 	-webkit-transition:box-shadow .2s,width .2s ease-in-out!important;
 	-moz-transition:box-shadow .2s,width .2s ease-in-out!important;
 	-o-transition:box-shadow .2s,width .2s ease-in-out!important;
 }
-#qr.captcha #replies+div
+#qr.has-captcha #replies+div
 {
     height:128px!important;
 }
-#qr:not(.captcha) #replies+div {
+#qr:not(.has-captcha) #replies+div {
 	height: 175px !important;
-}
-#qr textarea
-{
-    position:absolute;
 }
 #qr textarea:focus
 {
