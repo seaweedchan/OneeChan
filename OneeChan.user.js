@@ -63,19 +63,6 @@
             999,
             true
         ],
-        "Navigation Bar Position":
-        [
-            1, "Sets the position of the navigation bar",
-            [
-                { name: "Top",    value: 1 },
-                { name: "Bottom", value: 2 },
-                { name: "Normal", value: 3 },
-                { name: "Hidden", value: 4 }
-            ]
-        ],
-        "Custom Navigation Links":  [ true,  "Use specified links instead of showing all boards", null, true ],
-        "Use Title Text for Selected Board": [ false, "Use the title specified in Nav Links for the text of a selected board", "Custom Navigation Links", true, true ],
-        "Replace links with catalog versions on the catalog": [ true, "Adds catalog to the end of all custom nav links inside the catalog", "Custom Navigation Links", true, true ],
         "Underline Links":    [ false, "Underlines links" ],
         "Pages Position":
         [
@@ -90,23 +77,6 @@
         "Expanded Images Cover QR": [ true, "Lets expanded images overlap the quick reply" ],
         "Menu-Only Mode":           [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
         "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
-        "Updater and Stats Position":
-        [
-            1, "Set the updater/stats position",
-            [
-                { name: "Fixed Top Right",       value: 1    },
-                { name: "Fixed Top Left",    value: 2   },
-                { name: "Floating", value: 3 }
-            ], true
-        ],
-        "Add Background to Updater/Stats": 
-        [ 
-            false, 
-            "Adds a background over the updater and stats for positioning over other elements", 
-            "Updater and Stats Position", 
-            3, 
-            true 
-        ],
         "--Sidebar--":                     [ "header",  "" ],
         "Sidebar Position":
         [
@@ -208,25 +178,6 @@
         ],
         "Smart Tripcode Hider":     [ false, "Hides the name field if the value contains a tripcode" ],
         "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
-        "--Emoji--":                  [ "header",  "" ],
-        "Emoji Icons":              [ true, "Show icons for different e-mails.\nList of words, case-insensitive:\n\nneko\nmadotsuki\nsega\nsakamoto\nbaka\nponyo\nrabite\nyuno\narch\ncentos\ndebian\nfreebsd\nopenbsd\nfedora\ngentoo\nmint\nosx\nrhel\nsabayon\ntrisquel\nslackware\nubuntu\nwindows\ngnu\nplan\ncrunchbang" ],
-        "Emoji Position":
-        [
-            1, "Changes the location of emoji icons",
-            [
-                { name: "Before", value: 1 },
-                { name: "After",  value: 2 }
-            ]
-        ],
-        "Sage Identification":
-        [
-            3, "Adds identification to posts that do not bump threads.",
-            [
-                { name: "None", value: 1 },
-                { name: "Text", value: 2 },
-                { name: "Icon", value: 3 }
-            ]
-        ],
         "--Icons--":                     [ "header",  "" ],
         "Icon Theme":
         [
@@ -258,7 +209,6 @@
         "Hide Button RVO": [ "0", "" ],
         "--Script Settings--":                     [ "header",  "" ],
         "Disable Ads":              [ true, "Disables ads on 4chan" ],
-        "Show/Hide Menu Entry":     [ true, "Replaces the hide/show post button with a menu entry" ],
         "--Font--":                     [ "header",  "" ],
         "Font":
         [
@@ -278,73 +228,6 @@
         ],
         "Font Size": [ 12, "Set the general size of text (Pixels)" ],
         "Bitmap Font": [ false, "Check this if you are using a bitmap font" ],
-        "Nav Links":
-        [
-            { text: "a", title: "Anime & Manga", link: "boards.4chan.org/a/"  },
-            { text: "b", title: "Random",     link: "boards.4chan.org/b/"  },
-            { text: "c", title: "Anime/Cute",     link: "boards.4chan.org/c/"  },
-            { text: "d", title: "Hentai/Alternative",    link: "boards.4chan.org/d/"  },
-            { text: "e", title: "Ecchi",  link: "boards.4chan.org/e/" },
-            { text: "f", title: "Flash",  link: "boards.4chan.org/f/" },
-            { text: "g", title: "Technology",  link: "boards.4chan.org/g/" },
-            { text: "gif", title: "Animated GIF",  link: "boards.4chan.org/gif/" },
-            { text: "h", title: "Hentai",  link: "boards.4chan.org/h/" },
-            { text: "hr", title: "High Resolution",  link: "boards.4chan.org/hr/" },
-            { text: "k", title: "Weapons",  link: "boards.4chan.org/k/" },
-            { text: "m", title: "Mecha",  link: "boards.4chan.org/m/" },
-            { text: "o", title: "Auto",  link: "boards.4chan.org/o/" },
-            { text: "p", title: "Photo",  link: "boards.4chan.org/p/" },
-            { text: "r", title: "Request",  link: "boards.4chan.org/r/" },
-            { text: "s", title: "Sexy Beautiful Women",  link: "boards.4chan.org/s/" },
-            { text: "t", title: "Torrents",  link: "boards.4chan.org/t/" },
-            { text: "u", title: "Yuri",  link: "boards.4chan.org/u/" },
-            { text: "v", title: "Video Games",  link: "boards.4chan.org/v/" },
-            { text: "vg", title: "Video Game Generals",  link: "boards.4chan.org/vg/" },
-            { text: "w", title: "Anime/Wallpapers",  link: "boards.4chan.org/w/" },
-            { text: "wg", title: "Wallpapers/General",  link: "boards.4chan.org/wg/" },
-            { text: "i", title: "Oekaki",  link: "boards.4chan.org/i/" },
-            { text: "ic", title: "Artwork/Critique",  link: "boards.4chan.org/ic/" },
-            { text: "r9k", title: "ROBOT9001",  link: "boards.4chan.org/r9k/" },
-            { text: "cm", title: "Cute/Males",  link: "boards.4chan.org/cm/" },
-            { text: "hm", title: "Handsome Men",  link: "boards.4chan.org/hm/" },
-            { text: "y", title: "Yaoi",  link: "boards.4chan.org/y/" },
-            { text: "3", title: "3DCG",  link: "boards.4chan.org/3/" },
-            { text: "adv", title: "Advice",  link: "boards.4chan.org/adv/" },
-            { text: "an", title: "Animals & Nature",  link: "boards.4chan.org/an/" },
-            { text: "cgl", title: "Cosplay & EGL",  link: "boards.4chan.org/cgl/" },
-            { text: "ck", title: "Food & Cooking",  link: "boards.4chan.org/ck/" },
-            { text: "co", title: "Comics & Cartoons",  link: "boards.4chan.org/co/" },
-            { text: "diy", title: "Do-It-Yourself",  link: "boards.4chan.org/diy/" },
-            { text: "fa", title: "Fashion",  link: "boards.4chan.org/fa/" },
-            { text: "fit", title: "Health & Fitness",  link: "boards.4chan.org/fit/" },
-            { text: "hc", title: "Hardcore",  link: "boards.4chan.org/hc/" },
-            { text: "int", title: "International",  link: "boards.4chan.org/int/" },
-            { text: "jp", title: "Otaku Culture",  link: "boards.4chan.org/jp/" },
-            { text: "lit", title: "Literature",  link: "boards.4chan.org/lit/" },
-            { text: "mlp", title: "Pony",  link: "boards.4chan.org/mlp/" },
-            { text: "mu", title: "Music",  link: "boards.4chan.org/mu/" },
-            { text: "n", title: "Transportation",  link: "boards.4chan.org/n/" },
-            { text: "po", title: "Papercraft & Origami",  link: "boards.4chan.org/po/" },
-            { text: "pol", title: "Politically Incorrect",  link: "boards.4chan.org/pol/" },
-            { text: "sci", title: "Science & Math",  link: "boards.4chan.org/sci/" },
-            { text: "soc", title: "Social",  link: "boards.4chan.org/soc/" },
-            { text: "sp", title: "Sports",  link: "boards.4chan.org/sp/" },
-            { text: "tg", title: "Traditional Games",  link: "boards.4chan.org/tg/" },
-            { text: "toy", title: "Toys",  link: "boards.4chan.org/toy/" },
-            { text: "trv", title: "Travel",  link: "boards.4chan.org/trv/" },
-            { text: "tv", title: "Television & Film",  link: "boards.4chan.org/tv/" },
-            { text: "vp", title: "Pokémon",  link: "boards.4chan.org/vp/" },
-            { text: "wsg", title: "Worksafe GIF",  link: "boards.4chan.org/wsg/" },
-            { text: "x", title: "Paranormal",  link: "boards.4chan.org/x/" },
-            { text: "rs", title: "Rapidshares",  link: "rs.4chan.org" },
-            { text: "status", title: "4chan Status",  link: "status.4chan.org" },
-            { text: "q", title: "4chan Discussion",  link: "boards.4chan.org/q/" },
-            { text: "@", title: "4chan Twitter",  link: "twitter.com/4chan" }
-        ],
-        "Nav Link Delimiter":
-        [
-            "&nbsp;", "Sets the character which will separate navigation links"
-        ],
         "Themes"          : [],
         "Hidden Themes"   : [],
         "Selected Theme"  : 0,
@@ -960,11 +843,8 @@
 
                 });
             }
-
-            $SS.nav.init();
+            
             $SS.pages.init();
-
-            $SS.menuEntries.init();
 
             $SS.riceInputs.init();
             $SS.logoReflect.init();
@@ -986,18 +866,6 @@
                 // and the number defaults has changed.
                 if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION)
                 {
-                    if (/^1\.[0-6].*/.test(m_VERSION))
-                    {
-                        /* fix old nav links that had hard coded protocols */
-                        var links = $SS.Config.get("Nav Links");
-
-                        for (var i = 0, MAX = links.length; i < MAX; ++i)
-                            if (/^https?:\/\/.*/.test(links[i].link))
-                                links[i].link = links[i].link.replace(/^https?:\/\//, "");
-
-                        $SS.Config.set("Nav Links", links);
-                    }
-
                     var ntMascots = $SS.Mascots.defaults.length, // new total
                         ntThemes  = $SS.Themes.defaults.length,
                         otMascots = $SS.Config.get("Total Mascots"), // old total
@@ -1188,7 +1056,7 @@
             init: function()
             {
                 var a = $("<a id='OneeChanLink' title='OneeChan Settings'>").bind("click", $SS.options.show);
-                return $("div#bottom").replace(a);
+                return $("#shortcuts>.shortcut:last-of-type").before(a);
             },
             show: function()
             {
@@ -1202,7 +1070,6 @@
                         "<li><label class=selected for=tcbMain>Main</label></li>" +
                         "<li><label for=tcbThemes>Themes</label></li>" +
                         "<li><label for=tcbMascots>Mascots</label></li>" +
-                        "<li><label for=tcbNavLinks>Nav Links</label></li>" +
                         "</ul><div id=toWrapper><input type=radio name=toTab id=tcbMain hidden checked><div id=tMain>" +
                         "<p><a class=trbtn name=loadSysFonts title='Reqiures flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
                         "<span id=SSVersion>OneeChan v" + VERSION + "</span>" +
@@ -1383,22 +1250,6 @@
                         {
                             optionsHTML += "</div><input type=radio name=toTab id=tcbMascots hidden><div id=tMascot>";
                         }
-                        else if (key === "Nav Links")
-                        {
-                            var links = $SS.conf["Nav Links"];
-                            optionsHTML += "</div><input type=radio name=toTab id=tcbNavLinks hidden><div id=tNavLinks>" +
-                                           "<p><a class=trbtn name=addLink>Add</a>" +
-                                           "<label>Delimiter: " +
-                                           "<input type=text name='Nav Link Delimiter' value='" + $SS.conf["Nav Link Delimiter"] +
-                                           "' style='width:40px' title='" + defaultConfig["Nav Link Delimiter"][1] + "'> Suggestions: \" \", \" - \", \"\/ \/\", \" • \"</p>";
-
-                            if (links != undefined)
-                                for (var i = 0, MAX = links.length; i < MAX; ++i)
-                                    optionsHTML += "<div id=navlink" + i + " class=navlink><label>Text: <input type=text value='" + links[i].text + "'></label>" +
-                                                   "<label style='float:left;'>Title: <input type=text value='" + links[i].title + "'></label>" +
-                                                   "<label style='float:left;'>Link: <input type=text value='" + links[i].link + "'></label>" +
-                                                   "<a class=trbtn name=delLink>remove</a><div class=handle draggable=true style='margin-top:1px;'></div></div>";
-                        }
                         else // checkbox
                             optionsHTML += "<label class=mOption title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") +
                                            " name='" + key + "' " + (defaultConfig[key][3] === true ? " hasSub" : "")  + " type=checkbox></label>";
@@ -1452,19 +1303,6 @@
 
                     // mascots tab
                     $SS.options.createMascotsTab(tOptions);
-
-                    // nav links tab
-                    $("a[name=addLink]", tOptions).bind("click", function()
-                    {
-                        var el = $("<div id=navlink" + $("#tNavLinks>.navlink").length() + " class=navlink>")
-                                .html("<label>Text: <input type=text></label>" +
-                                      "<label style='float:left;'>Title: <input type=text></label>" +
-                                      "<label style='float:left;'>Link: <input type=text value='boards.4chan.org/'></label>" +
-                                      "<a class=trbtn name=delLink>remove</a><div class=handle draggable=true></div>");
-                        bindNavLinks(el);
-                        $("#tNavLinks").append(el);
-                    });
-                    $("#tNavLinks .navlink", tOptions).each(function(){ bindNavLinks(this); });
 
                     return $(document.body).append(overlay);
                 }
@@ -1724,26 +1562,6 @@
                 $SS.Config.set("Mascots", mascots);
                 $SS.Config.set("Selected Mascots", selectedMascots);
                 $SS.Config.set("Hidden Mascots", $SS.conf["Hidden Mascots"]);
-
-                // Save nav links
-                $("#themeoptions #tNavLinks>.navlink").each(function()
-                {
-                    var nLink = {};
-
-                    $(this).children("input").each(function(index)
-                    {
-                        if (index === 0)
-                            nLink.text = $(this).val();
-                        else if (index === 1)
-                            nLink.title = $(this).val();
-                            nLink.link = $(this).val();
-                    });
-
-                    if (nLink.text !== "" && nLink.link !== "" && nLink.link !== "")
-                        links.push(nLink);
-                });
-
-                $SS.Config.set("Nav Links", links);
 
                 if ($SS.options.saveAndClose)
                     $SS.options.close();
@@ -2907,59 +2725,6 @@
             }
         },
 
-        nav:
-        {
-            hasInit: false,
-            init: function()
-            {
-                if (!this.hasInit)
-                {
-                    var select = $("#boardSelectMobile"),
-                    links      = $SS.conf["Nav Links"],
-                    div, a     = [];
-
-                    if (!$("#bNavWrapper").exists())
-                    {
-                        div = $("#boardNavDesktop").prepend(select.bind("change", function(e)
-                        {
-                            location.href = location.href.replace(/(\.org\/).+\/.*$/, "$1" + e.target.value + "/");
-                        }));
-
-                        $("option[value=" + $SS.location.board + "]", select).attr("selected", "true");
-                        $(document.body).prepend($("<div id=bNavWrapper>").append(div));
-                    }
-
-                    if ($SS.conf["Custom Navigation Links"])
-                    {
-                        if (links == undefined) return;
-
-                        for (var i = 0, MAX = links.length; i < MAX; ++i)
-                            a.push("<a title='" + links[i].title + "' href='" + window.location.protocol + "//" + links[i].link + (($SS.conf["Replace links with catalog versions on the catalog"]) && ((div = $("#ctxmenu-main")).exists()) ? "catalog" : "") + "'" +
-                                ($SS.location.board == $SS.getLocation(links[i].link).board ? " class=selectedBoard" : "") + ">" + (($SS.conf["Use Title Text for Selected Board"]) && (links[i].title !== "undefined") && (links[i].title !== "") ? "" + ($SS.location.board == $SS.getLocation(links[i].link).board ? "" + links[i].title + "" : "" + links[i].text + "") + "" : "" + links[i].text + "") + "</a>");
-
-                        if ((div = $("#boardLinks")).exists())
-                            return div.html(a.join($SS.conf["Nav Link Delimiter"]));
-
-                        if ((div = $("#pagesDrop")).exists())
-                            return div.after($("<div id=boardLinks>").html(a.join($SS.conf["Nav Link Delimiter"])));
-
-                        $("#boardNavDesktop").prepend($("<div id=boardLinks>").html(a.join($SS.conf["Nav Link Delimiter"])));
-                        return this.hasInit = true;
-                    }
-                }
-                else if ((div = $("#boardLinks")).exists())
-                {
-                    div.remove();
-
-                    if (!$SS.conf["Custom Navigation Links"])
-                        return this.hasInit = false;
-
-                    this.hasInit = false;
-                    return this.init();
-                }
-            }
-        },
-
         pages:
         {
             hasInit: false,
@@ -3002,61 +2767,6 @@
                     $this.addClass("tripping");
                 else if (!check && $this.hasClass("tripping"))
                     $this.removeClass("tripping");
-            }
-        },
-
-        menuEntries:
-        {
-            hasInit: false,
-            init: function()
-            {
-                if (!this.hasInit && $SS.conf["Show/Hide Menu Entry"])
-                {
-                    var a = document.createElement("a");
-                    var onclick;
-                    a.href = "javascript:;";
-
-                    var open = function(post)
-                    {
-                        if (post.isInlined)
-                            return false;
-
-                        var p         = $(post.el),
-                            bIsHidden = p.attr("hidden") !== null;
-
-                        if (p.hasClass("op") && p.parent().previousSibling(".hidden_thread").exists())
-                            bIsHidden = true;
-
-                        a.textContent = (bIsHidden ? "Show" : "Hide") + " this post";
-
-                        a.removeEventListener("click", onclick);
-                        onclick = function()
-                        {
-                            var pc = $("#pc" + post.ID);
-
-                            if (pc.hasClass("opContainer"))
-                                pc.previousSibling().click();
-                            else
-                                pc.children(".hide_reply_button:first-child>a").click();
-                        };
-                        a.addEventListener("click", onclick);
-
-                        return true;
-                    };
-
-                    this.createEntry(a, open);
-                    return this.hasInit = true;
-                }
-            },
-            createEntry: function(a, func)
-            {
-                return document.dispatchEvent(new CustomEvent("AddMenuEntry",
-                {
-                    detail: {
-                        el   : a,
-                        open : func
-                    }
-                }));
             }
         },
 
