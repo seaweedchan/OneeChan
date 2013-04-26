@@ -654,16 +654,11 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 body:not(.catalog)
 {
 	
-	margin:0px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0" :
+	margin:2px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0" :
                 (!$SS.bHideSidebar && $SS.conf["Sidebar Position"] !== 3 ? "0 0 261px " + $SS.iSidebarSize + "px" : "0 0 0")) + "!important;
     margin-bottom:23px!important;
     " + ($SS.conf["Sidebar Position"] == 2 ? "margin-left: 261px !important" : "") + ";
 	padding:0!important;
-	" + ((($SS.conf["Navigation Bar Position"] === 2) || ($SS.conf["Navigation Bar Position"] === 4)) && ($SS.conf["Pages Position"] !== 2) ? "margin-top: -15px !important;" : "") + "
-}
-" + ($SS.conf["Navigation Bar Position"] !== 1 ? "#boardLinks" : "") + " {
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px !important;
-	padding-" + $SS.conf["Sidebar Position String"] + ":  " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px !important;
 }
 div[style^='text-align: center'] img
 {
@@ -699,7 +694,7 @@ body::before {
 	height:100%;
 	width:261px;
 	position:fixed;
-	top:" + ($SS.conf["Navigation Bar Position"] === 1 ? 0 : -19) + "px!important;
+	top:-19px!important;
 }" : "") +
 ($SS.conf["Sidebar Position"] !== 3 || $SS.conf["Show Mascot"] ? "
 body::after
@@ -709,7 +704,7 @@ body::after
 	height:100%;
 	width:" + ($SS.mascot.overflow ? "100%" : "26" + ($SS.conf["SS-like Sidebar"] ? 0 : 3) + "px") + ";
 	" + (!$SS.mascot.small ? "background-size:contain;" : "") + "
-    bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 0 : -1) + "px!important;
+    bottom: 0px!important;
 	margin-bottom:" + $SS.mascot.offset + "px;
 	position:fixed;
 	z-index:2;
@@ -718,6 +713,9 @@ body::after
 	-webkit-transform:scaleX(-1);
 	-moz-transform:scaleX(-1);
 	-o-transform:scaleX(-1);" : "") + "
+}
+.bottom:not(.autohide) body::after {
+	bottom: 22px !important;
 }" : "") : "") + "
 " + ($SS.conf["Sidebar Position"] === 2 && $SS.mascot.flip ? "
 label[title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option']::after {
@@ -763,7 +761,7 @@ body::before
 " + ($SS.conf["Sidebar Position"] === 3 ? ".globalMessage," : "") + "
 #delform
 {
-    margin-top:18px!important;
+    margin-top:22px!important;
 }
 " + ($SS.conf["Sidebar Position"] === 2 ? ".postingMode ~ #delform {
 	margin-top: 10px !important;
@@ -1169,7 +1167,7 @@ form[name=delform]
 " + (($SS.conf["Layout"] === 3) && !($SS.conf["Show Logo"]) ? ".webkit form[name=delform] {
 	z-index: 1;
 }" : "") + "
-.thread>div>.post
+.thread>div>.post, .threadContainer>div>.post
 {
 	" + ($SS.conf["Layout"] !== 2 ? "width:100% !important;" : "") + "
 }
@@ -1198,8 +1196,19 @@ form[name=delform]
 }
 .threadContainer
 {
-    border-left:1px solid rgba(" + $SS.theme.brderColor.shiftRGB(-16) + ", .4)!important;
-    padding-left:5px!important;
+    border-left:1px solid rgba(" + $SS.theme.brderColor.shiftRGB(16) + ", .8)!important;
+    padding-left: 20px!important;
+    margin-left: 1px !important;
+}
+.threadContainer > .replyContainer::before {
+	content: '-----';
+	float: left;
+	position: relative;
+	width: 0px;
+	right: 20px;
+	top: " + ($SS.conf["Slim Replies"] ? 2 : 3) + "5px;
+	color: rgba(" + $SS.theme.brderColor.shiftRGB(16) + ", .8)!important;
+	font-size: 12px !important;
 }
 div.post
 {
@@ -1369,6 +1378,9 @@ html .reply.highlight,
 {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(4, true) + "," + $SS.theme.replyOp + ")!important;
 	border:1px solid " + $SS.theme.linkColor.hex + "!important;
+}
+.threadContainer .reply {
+	min-width: 300px !important;
 }
 .opContainer.qphl
 {
@@ -1815,7 +1827,7 @@ td.doubledash
 	position:fixed;
 	" + $SS.conf["Sidebar Position String"] + ":1px;
 	text-align:center;
-	top:20px;
+	top:23px;
 	" + (!$SS.conf["Sidebar Postion"] === 3 ? "z-index: 3;" : "") + "
 }
 .boardBanner,
@@ -2928,12 +2940,14 @@ body>.closed
 	border: none !important;
 	float: none !important;
 	clear:both;
-	margin-bottom: 10px !important;
 	height: 15px !important;
 	position: fixed !important;
-" + ($SS.conf["Navigation Bar Position"] !== 2 ? "bottom: -10px !important;" : "
-	top: 0px !important;") + "
 	z-index: 3;
+	bottom: 0px !important;
+}
+.bottom:not(.autohide) .pagelist {
+	top: 0px !important;
+	bottom: auto !important;
 }
 .pages 
 {
@@ -3132,6 +3146,28 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 {
 	font-size: 13px !important;
 }
+#full-board-list {
+	font-size: 0px !important;
+}
+#full-board-list a:not(.current) {
+	font-size: 12px !important;
+}
+#full-board-list a {
+	margin-right: 2px;
+	word-spacing: 2px;
+}
+.hide-board-list-button::before {
+	content: '[';
+	font-size: 12px !important;
+	position: relative !important;
+	right: 1px;
+	color: " + $SS.theme.textColor.hex + " !important;
+}
+.hide-board-list-button::after {
+	content: ']';
+	font-size: 12px !important;
+	color: " + $SS.theme.textColor.hex + " !important;
+}
 #qr
 {
 	height:auto!important;
@@ -3152,6 +3188,9 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	min-width:261px!important;
 	z-index:5!important;
 	width:261px!important;") + "
+}
+.bottom:not(.autohide) #qr {
+	bottom:22px !important;
 }
 #qr.autohide
 {
@@ -3179,7 +3218,6 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 #qr.focus
 {
 	bottom:0!important;
-    z-index:11!important;
 	" + ($SS.conf["Post Form"] === 1 ? "
 	-webkit-transition:bottom .2s ease-in-out;
 	-moz-transition:bottom .2s ease-in-out;
@@ -3447,7 +3485,7 @@ form[name=delform][action$='/f/up.php'] tr
 .ys_playerContainer
 {
     position:fixed!important;
-    bottom:" + ($SS.conf["Navigation Bar Position"] !== 2 ? 262 : 287) + "px!important;
+    bottom:262px!important;
     margin:0!important;
     width:262px!important;
     " + $SS.conf["Sidebar Position String"] + ":0!important;
@@ -3555,10 +3593,10 @@ margin-right: 3px !important;
 	padding-top: 0px !important;
 	padding-left: 0px !important;
 }
-.thread>.replyContainer>.reply>div.postInfo {
+.replyContainer>.reply>div.postInfo {
 	background: rgba(" + $SS.theme.pinfoColor.rgb + "," + $SS.theme.replyOp + ")!important;
 	border-bottom: 1px solid " + $SS.theme.pinfobColor.hex + " !important;
-	padding: " + ($SS.conf["Slim Replies"] ? 2 : 4) + "px 50px " + ($SS.conf["Slim Replies"] ? 2 : 4) + "px 10px !important;
+	padding: 2px 50px 1px 8px !important;
 	marigin-top: -1px !important;
 }
 div.post div.postInfo {
@@ -3566,7 +3604,7 @@ div.post div.postInfo {
 	display: block !important;
 }
 " + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? "
-.thread>.replyContainer>.reply>div.postInfo {
+.replyContainer>.reply>div.postInfo {
 	box-shadow: 0px 2px 3px " + ($SS.theme.bgColor.isLight ? "#999" : "#111") + " !important;
 	margin-bottom: 3px !important;
 }" : "") + "
