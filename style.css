@@ -152,7 +152,7 @@ h3,
 }
 a,
 span>a.replylink,
-" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
+#header-bar>a,
 blockquote a.quotelink,
 span.typ, 
 span.atn,
@@ -169,7 +169,7 @@ span.atn,
 	text-decoration:line-through" + ($SS.conf["Underline Links"] ? " underline" : "") + "!important;
 }
 a:hover,
-" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a:hover," : "") + "
+#header-bar>a:hover,
 div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
 .backlink:hover,
@@ -383,9 +383,10 @@ margin-top: 100px !important;
 	top: 30% !important;
 }
 " + ($SS.conf["Pages Position"] === 2 ? ".pagelist," : "") + "
-#boardNavDesktop
+#header-bar
 {
 	background:rgba(" + $SS.theme.bgColor.rgb + "," + $SS.theme.navOp + ")!important;
+	border: none !important;
 }
 " + (($SS.conf["Updater and Stats Position"] === 3) && ($SS.conf["Add Background to Updater/Stats"]) ? "#updater .move, #stats {
 	background:rgba(" + $SS.theme.bgColor.rgb + ",0.7)!important;
@@ -421,7 +422,6 @@ form[name=post] tr:nth-of-type(3)>td:nth-of-type(3),
 img[alt=Closed],
 img[alt=Sticky],
 .deleteform,
-#boardNavDesktop,
 #navtopright,
 #imageType+label,
 #qr>form #spoilerLabel,
@@ -449,16 +449,10 @@ textarea,
 #updater span,
 #boardNavDesktopFoot,
 #boardNavDesktopFoot a,
-#boardNavDesktop>a:not(#lastmuSettingsWindowLink):not(.current),
 #toggleCatalog
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
 }
-" + ($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a, #boardNavDesktop>select
-{
-	color:transparent!important;
-	font-size:0!important;
-}" : "") + "
 #qr>form #spoilerLabel::after,
 button,
 form[name=post] input[name=email]+label,
@@ -507,9 +501,7 @@ form[action='https://sys.4chan.org/f/post'] ~ div[style='text-align: center'],
 form[action='https://sys.4chan.org/f/up.php']>div[style='text-align: center;']," : "
 div.center img:not(.middlead)," ) + 
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pages:not(.cataloglink)," : "" ) +
-($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
-($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : "") + "
-#boardNavDesktop>select,
+($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") + "
 #imgControls .riceCheck,
 [hidden],
 .hidden:not(.postContainer),
@@ -527,7 +519,6 @@ body>div.closed,
 .postingMode,
 .sideArrows:not(.hide_reply_button),
 #delform>hr,
-" + ($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") + "
 body>.closed>br,
 .board>hr:nth-last-child(2),
 #imageExpand,
@@ -586,7 +577,7 @@ tr,
 .mPagelist .pages span strong,	
 body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']),
 .catalog #boardLinks>a.selectedBoard[href*='catalog'],
-#boardNavDesktop>a.current,
+#header-bar>a.current,
 #boardNavDesktopFoot>a.current,
 table.postForm > tbody > tr > td:first-child,
 table.exif td,
@@ -1179,9 +1170,7 @@ html .inline .report_button, html .inline .menu_button
 }
 
 " + ($SS.conf["Layout"] === 1 ?
-($SS.conf["Show/Hide Menu Entry"] ? "
-.hidden_thread>.menu_button," : "") + "
-.thread>a.hide_thread_button>span
+".thread>a.hide_thread_button>span
 {
     right:2px!important;
 }" : "") + "
@@ -1411,7 +1400,7 @@ html .reply.highlight,
 }
 .stub
 {
-    margin:1px 0 0 " + ($SS.conf["Layout"] === 2 && !$SS.conf["Show/Hide Menu Entry"] ? 16 : 0) + "px!important;
+    margin:1px 0 0 " + ($SS.conf["Layout"] === 2 ? 16 : 0) + "px!important;
 	padding:0!important;
 }
 .thread.stub
@@ -2708,16 +2697,6 @@ content: 'Prefetch?' !important;
 	z-index:14!important;
 }
 " : "") + "
-.webkit #imgControls #imageType,
-.webkit #boardNavDesktop>select
-{
-	border:0!important;
-	padding:1px 1px 1px 0;
-}
-.webkit #boardNavDesktop>select
-{
-    background:none!important;
-}
 #imgControls #imageType
 {
 	margin:0!important;
@@ -2729,11 +2708,6 @@ content: 'Prefetch?' !important;
 	float:  " + $SS.conf["Sidebar Position String"] + " !important;
 }
 
-.webkit #boardNavDesktop>select
-{
-    padding:0 4px!important;
-    width:auto!important;
-}
 #imgControls label:first-of-type input
 {
   display: none !important;
@@ -3001,101 +2975,7 @@ body>.closed
     line-height:18px;
     padding:0!important;
 }
-" + ($SS.conf["Navigation Bar Position"] === 1 ? "
-body:not(.catalog) #bNavWrapper
-{
-    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + ($SS.iSidebarSize - 3) + "px!important;" : "") + "
-}
-#bNavWrapper
-{
-    height:19px;
-	left:0!important;
-    line-height:18px;
-    overflow:hidden !important;
-	position:fixed!important;
-	text-align:center;
-    top:0!important;
-	width:100%!important;
-	z-index:14!important;
-}
-" + (!$SS.conf["Custom Navigation Links"] ? "
-" + ($SS.conf["Sidebar Position"] === 2 ? "
-body:not(.catalog) #bNavWrapper {
-    margin-left:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}
-body:not(.catalog) #boardNavDesktop
-{
-    height:19px!important;
-    margin-right:" + ($SS.iSidebarSize - 3) + "px!important;
-    position:relative;
-}
-" : "
-body:not(.catalog) #boardNavDesktop
-{
-    height:19px!important;
-    margin-left:" + ($SS.iSidebarSize - 3) + "px!important;
-    position:relative;
-}
 
-") + "
-" : "
-" + ($SS.conf["Sidebar Position"] === 2 ? "
-body:not(.catalog) #bNavWrapper {
-    margin-left:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}
-body:not(.catalog) #boardLinks
-{
-    margin-right:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}
-" : "
-body:not(.catalog) #boardLinks
-{
-    margin-left:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}
-
-") + "
-
-
-") + "
-" : "
-body:not(.catalog) #bNavWrapper
-{
-    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + ($SS.iSidebarSize - 3) + "px!important;" : "") + "
-}
-#bNavWrapper
-{
-    height:19px;
-	left:0!important;
-    line-height:18px;
-    overflow-y:hidden;
-	position:fixed!important;
-	text-align:center;
-    bottom:0!important;
-	width:100%!important;
-	z-index:14!important;
-}
-" + (!$SS.conf["Custom Navigation Links"] ? "
-body:not(.catalog) #boardNavDesktop
-{
-	margin-left:" + $SS.iSidebarSize + "px!important;
-}
-#boardNavDesktop
-{
-    height:19px!important;
-    position:relative;
-}
-" : "
-body:not(.catalog) #boardLinks
-{
-    margin-left:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}
-") + "
-") + "
 
 #navtop,
 #navtopright
@@ -3136,85 +3016,8 @@ body:not(.catalog) #boardLinks
   opacity: 1 !important;
   cursor: pointer;
 }
-" + ($SS.conf["Navigation Bar Position"] === 3 ? "
-#bNavWrapper
-{
-    " + ($SS.conf["Sidebar Position"] !== 2 ? "margin-left:-" + $SS.iSidebarSize + "px!important;" : "") + "
-    height:19px;
-	left:0!important;
-    line-height:18px;
-    overflow-y:hidden;
-	position:static!important;
-	text-align:center;
-	width:100%!important;
-	z-index:14!important;
-	position: absolute !important;
-	top: 0px !important;
-}
-" + (!$SS.conf["Custom Navigation Links"] ? "#boardNavDesktop
-{
-    height:18px!important;
-    margin-left:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}" : "
 
-#boardLinks
-{
-    margin-left:" + $SS.iSidebarSize + "px!important;
-    position:relative;
-}
-") + "
-" : "") + "
-" + ($SS.conf["Navigation Bar Position"] === 4 ? "#boardNavDesktop, #bNavWrapper {
-position: fixed !important;
-top: -1000px !important;
-bottom: auto !important;
-}" : "") + "
-" + (!$SS.conf["Custom Navigation Links"] ? "
-#boardNavDesktop a 
-{
-	margin: 0 1px 0 2px !important;
-}
-#navtop
-{
-	bottom:0;
-	display:inline-block!important;
-	height:20px;
-	padding:3px 6px 6px;
-	position:relative;
-	width:500px;
-	-webkit-transition:all .1s ease-in-out;
-	-moz-transition:all .1s ease-in-out;
-	-o-transition:all .1s ease-in-out;
-}
-#navtop::before
-{
-	color:" + $SS.theme.jlinkColor.hex + ";
-	content:'Navigation';
-	display:block;
-	font-size:" + $SS.conf["Small Font Size"] + "px;
-	line-height:14px!important;
-}
-#navtop:hover
-{
-	background:rgb(" + $SS.theme.mainColor.rgb + ");
-	bottom:48px;
-	height:64px;
-	line-height:0!important;
-	border-radius:3px;
-	box-shadow:rgba(0,0,0,.2) 0 0 5px;
-}
-#navtop>a
-{
-	padding:2px!important;
-}
-#navtop>a,
-#navtop>span
-{
-	display:inline!important;
-	line-height:18px;
-}
-" : "") + ($SS.conf["Pages Position"] !== 4 ?
+" + ($SS.conf["Pages Position"] !== 4 ?
 ($SS.conf["Pages Position"] === 1 ? "
 .pagelist 
 {
@@ -3520,11 +3323,11 @@ a[href='.././']
 	font-size: 0px !important;
 	opacity: .6;
 }
-body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog #boardLinks>a.selectedBoard[href*='catalog'], #boardNavDesktop>a.current, #boardNavDesktopFoot>a.current
+body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog #boardLinks>a.selectedBoard[href*='catalog'], #header-bar>a.current, #boardNavDesktopFoot>a.current
 {
 	font-weight: bold !important;
 }
-#boardNavDesktop>a.current:not(.selectedBoard), #boardNavDesktopFoot>a.current
+#header-bar>a.current:not(.selectedBoard), #boardNavDesktopFoot>a.current
 {
 	font-size: 13px !important;
 }
@@ -4249,199 +4052,6 @@ div.reply.lastmuInfo p {
 	border-radius:5px;
 }
 ": "") +
-($SS.conf["Sage Identification"] !== 1 ? "
-a.useremail[href*='sage']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Sage']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='SAGE']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    color:" + $SS.theme.sageColor.hex + "!important;
-	content:" + ($SS.conf["Sage Identification"] === 2 ? "' (SAGE)'" : "url('"+$SS.theme.emoji.sage+"')") + ";
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}" : "") +
-($SS.conf["Emoji Icons"] ? "
-a.useremail[href*='neko']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Neko']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='NEKO']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.neko+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='madotsuki']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Madotsuki']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='MADOTSUKI']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.madotsuki+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='sega']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Sega']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='SEGA']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.sega+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Sakamoto']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='sakamoto']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='SAKAMOTO']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.sakamoto+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='baka']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Baka']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='BAKA']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.baka+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='PONYO']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='ponyo']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Ponyo']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.ponyo+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='RABITE']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='rabite']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Rabite']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.rabite+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='yuno']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='YUNO']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Yuno']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-	content:url('"+$SS.theme.emoji.yuno+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Arch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='ARCH']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='arch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.arch+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Centos']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='CENTOS']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='centos']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.centos+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Debian']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='DEBIAN']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='debian']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url("+$SS.theme.emoji.debian+"); 
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Fedora']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='FEDORA']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='fedora']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.fedora+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Freebsd']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='FREEBSD']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='freebsd']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.freebsd+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Gentoo']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='GENTOO']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='gentoo']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.gentoo+"');
-  	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-
-a.useremail[href*='Mint']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='MINT']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='mint']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.mint+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='OSX']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='osx']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.osx+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Rhel']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='RHEL']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='rhel']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.rhel+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Sabayon']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='SABAYON']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='sabayon']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.sabayon+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Slackware']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='SLACKWARE']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='slackware']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.slackware+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Trisquel']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='TRISQUEL']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='trisquel']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.trisquel+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Ubuntu']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='UBUNTU']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='ubuntu']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.ubuntu+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Windows']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='WINDOWS']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='windows']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.windows+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='OPENBSD']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='OpenBSD']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='openbsd']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.openbsd+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='GNU']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='gnu']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Gnu']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.gnu+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='PLAN']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='Plan']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.plannine+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-a.useremail[href*='Crunch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='CRUNCH']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + ",
-a.useremail[href*='crunch']:last-of-type::" + ($SS.conf["Emoji Position"] === 1 ? "before" : "after") + "
-{
-    content:url('"+$SS.theme.emoji.crunchbang+"');
-	margin-" + ($SS.conf["Emoji Position"] === 1 ? "right" : "left") + ": 4px !important;
-}
-" : "") +
 ($SS.location.sub === "sys" ? "
 body
 {
