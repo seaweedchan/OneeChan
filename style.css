@@ -187,12 +187,25 @@ span.lit,
 	-moz-transition:none;
 	-o-transition:none;
 }
-#navtopright .settingsWindowLink {
-	position: fixed !important;
-	background-image: url('');
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 24px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
+.shortcut {
+	font-size: 0px !important;
+}
+.shortcut>span, .shortcut>#lastmuSettingsWindowLink {
+	font-size: 9pt !important;
+}
+#updater::before, #thread-stats::before {
+	content: '[';
+}
+#updater::after, #thread-stats::after {
+	content: ']';
+}
+#updater {
+	margin-right: 4px !important;
+}
+.settings-link {
+	position: relative !important;
+	bottom: 4px;
+	padding: 8px !important;
 	opacity: .6 !important;
 	height: 14px !important;
 	width: 15px !important;
@@ -200,7 +213,7 @@ span.lit,
 	font-size: 0 !important;
 	color: transparent !important;
 }
-#navtopright .settingsWindowLink:hover {
+.settings-link:hover {
   opacity: 1 !important;
   cursor: pointer;
 }
@@ -208,8 +221,7 @@ a:not([href]),
 #playerDiv a,
 #playerDiv a:hover,
 a[href='javascript:;'],
-#navtopright #settingsWindowLink,
-#navtopright .settingsWindowLink::before,
+.settings-link::before,
 #menu>.entry
 {
 	color:" + $SS.theme.jlinkColor.hex + "!important;
@@ -287,7 +299,7 @@ table.flashListing tr:nth-of-type(2n+1),
 " + ($SS.conf["Recolor Even Posts"] ? ".replyContainer:nth-of-type(even) > div:not(.qphl):not(.sideArrows):not(.lastmuInfo) {background-color:rgba(" + $SS.theme.mainColor.rgb + ", " + ($SS.theme.mainColor.isLight ? "0.7" : "0.5")  + ")!important;
 border:1px solid rgba(" + $SS.theme.brderColor.rgb + ", 0.8) !important;
 }" : "") + "
-.globalMessage, #boardNavDesktopFoot
+.globalMessage
 {
 	background:" + $SS.theme.mainColor.hex + "!important;
 }
@@ -420,7 +432,6 @@ form[name=post] tr:nth-of-type(3)>td:nth-of-type(3),
 img[alt=Closed],
 img[alt=Sticky],
 .deleteform,
-#navtopright,
 #imageType+label,
 #qr>form #spoilerLabel,
 .preview>label,
@@ -441,10 +452,7 @@ textarea,
 #themeoptions label:not(.header),
 #themeoptions .mOption:not(.header),
 #themeoptions .mOption:not(.header)>span,
-#themeoptions #tMascot div a,
-#boardNavDesktopFoot,
-#boardNavDesktopFoot a,
-#toggleCatalog
+#themeoptions #tMascot div a
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
 }
@@ -513,7 +521,7 @@ body>.closed>br,
 #imageExpand,
 .hidden_thread+div.opContainer,
 .stub+div+div.post,
-#navtopright a:not([class]):not(#lastmuSettingsWindowLink),
+#navtopright,
 #first-run,
 .mobile" + ($SS.conf["Pages Position"] === 3 ? ":not(.mPagelist)" : "") + ",
 .mobileinline,
@@ -524,9 +532,9 @@ iframe[src='about:blank'],
 .catalog .boardBanner,
 body.catalog::after,
 body.catalog::before,
-.catalog #navtopright > a:not(#OneeChanLink),
-.catalog #boardNavDesktopFoot,
-.catalog hr
+#boardNavDesktopFoot,
+.catalog hr,
+#header-bar .menu-button i
 {
 	display:none!important;
 }
@@ -551,7 +559,6 @@ input:not(.jsColor),
 .webkit select,
 textarea,
 tr,
-#navtopright>a:last-child::before,
 #qr>.move,
 #qr>form #spoilerLabel::after,
 #themeoptions #toNav li label.selected,
@@ -567,7 +574,6 @@ tr,
 body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']),
 .catalog #boardLinks>a.selectedBoard[href*='catalog'],
 #header-bar a.current,
-#boardNavDesktopFoot>a.current,
 table.postForm > tbody > tr > td:first-child,
 table.exif td,
 label#prefetch::after,
@@ -610,7 +616,7 @@ div.reply.highlight,
 {
 	border-radius: 3px !important;
 }
-.globalMessage, #boardNavDesktopFoot 
+.globalMessage
 {
 	border-radius: 3px !important;
 }
@@ -754,7 +760,7 @@ body::before
 	border-" + $SS.conf["Sidebar Position oString"] + ":1px solid " + $SS.theme.brderColor.hex + "!important;
 	border-bottom:1px solid " + $SS.theme.brderColor.hex + "!important;
 }
-.globalMessage, #boardNavDesktopFoot 
+.globalMessage
 {
 	border: 1px solid " + $SS.theme.brderColor.hex + "!important;
 }
@@ -840,7 +846,7 @@ s:hover, s:focus {
 }
 #watcher>.move:only-child::after 
 {
-	content: 'Click the hearts to watch threads:  ' url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"') !important;
+	content: 'Click the hearts to watch threads:  ' url('data:image/svg+xml,"+$SS.theme.icons.watcher+"') !important;
 	font-size: 12px !important;
 	color: " + $SS.theme.textColor.hex + " !important;
 	text-decoration: none !important;
@@ -906,96 +912,6 @@ s:hover, s:focus {
     position: fixed !important;
     z-index: 99 !important;
 }
-#boardNavDesktopFoot::after 
-{
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
-	border: none !important;
-	position: fixed !important;
-	" + $SS.conf["Sidebar Position String"] + ": 45px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-	z-index: 6 !important;
-	opacity: 0.6;
-}
-#boardNavDesktopFoot:hover::after 
-{
-	opacity: 1;
-	cursor: pointer;
-}
-#boardNavDesktopFoot 
-{
-	visibility: visible !important;
-	position: absolute !important;
-	overflow-y: scroll !important;
-	top: -1000px !important;
-	bottom: auto !important;
-	width: 238px !important;
-	color: transparent !important;
-	padding: 3px 10px 35px 10px !important;
-	height: 50px !important;
-	text-align: center !important;
-	word-spacing: -3px !important;
-}
-#boardNavDesktopFoot:hover 
-{
-	z-index: 99 !important;
-	top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 19) : 0))) + "px !important;
-	position: fixed !important;
-}
-" + ($SS.conf["Slideout Navigation Type"] === 1 ? "
-#boardNavDesktopFoot a 
-{
-	position: relative;
-	z-index: 1;
-	display: block !important;
-	margin-bottom: -15px !important;
-}
-#boardNavDesktopFoot 
-{
-	height: 300px !important;
-	padding-bottom: 0px !important;
-	padding-top: 0px !important;
-	word-spacing: 0px !important;
-	text-rendering: geometricPrecision !important;
-}
-#boardNavDesktopFoot a[href*='/a/'] 
-{
-	margin-top: -12px !important;
-}
-#boardNavDesktopFoot a::after
-{
-	content: ' - ' attr(title) !important;
-	font-size: 12px !important;
-}
-#boardNavDesktopFoot a[href*='//boards.4chan.org/']::after,
-#boardNavDesktopFoot a[href*='//rs.4chan.org/']::after
-{
-	content: '/ - ' attr(title) !important;
-	font-size: 12px !important;
-}
-#boardNavDesktopFoot a[href*='//boards.4chan.org/']::before,
-#boardNavDesktopFoot a[href*='//rs.4chan.org/']::before 
-{
-	content: '/' !important;
-	font-size: 12px !important;
-}
-#boardNavDesktopFoot 
-{
-  	" + $SS.conf["Sidebar Position String"] + ": 2px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-}
-" : "
-#boardNavDesktopFoot 
-{
-		overflow-y: hidden !important;
-  	" + $SS.conf["Sidebar Position String"] + ": 20px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-}
-#boardNavDesktopFoot:hover 
-{
-  	" + $SS.conf["Sidebar Position String"] + ": 2px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-}
-") + "
 " + ($SS.conf["Layout"] !== 2 ? "
 div.postContainer, div.replyContainer
 {
@@ -1215,14 +1131,15 @@ div.post
     margin:2px 0!important;
 }
 .favicon {
-	padding-top: 15px !important;
-	width: 15px !important;
+	padding-top: 20px !important;
+	width: 20px !important;
 	height: 0px !important;
 	display: inline-block !important;
-	margin-right: 5px !important;
+	margin-right: 0px !important;
 	background-repeat: no-repeat !important;
 	position: relative !important;
-	top: 4px !important;
+	top: 5px !important;
+	margin-top: -5px;
 }
 .favicon[src^='data'] {
 	opacity: 0." + ($SS.theme.bgColor.isLight ? 3 : 2) + " !important;
@@ -1604,7 +1521,7 @@ img[alt=Closed],
 img[alt=Sticky],
 .remove
 {
-	background-image:" + $SS.theme.icons.get() + "!important;
+	background-image:" + $SS.theme.dIcons.get() + "!important;
 	background-color:transparent!important;
 	background-repeat:no-repeat;
 	display:inline-block;
@@ -2495,152 +2412,39 @@ input[name=customIMGB64]+a[name=clearIMG]
 	border-radius:5px;
 	box-shadow:inset rgba(" + ($SS.theme.mainColor.isLight ? "255,255,255" : "155,155,155") + ",.3) 0 0 5px;
 }
-" + ($SS.conf["Icon Position"] === 2 ? "
-#imgControls
-{
-	height:18px;
-	position:fixed!important;
-	top:0;
-	width:100px!important;
-	" + $SS.conf["Sidebar Position String"] + ":" + (($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["SS-like Sidebar"]) ? 159 : 162) + "px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-	z-index:14;
-}
-label#prefetch
-{
-    bottom:auto!important;
-    line-height:16px!important;
-    position:fixed!important;
-    " + $SS.conf["Sidebar Position String"] + ":" + (($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["SS-like Sidebar"]) ? 133 : 136) + "px!important;
-    " + $SS.conf["Sidebar Position oString"] + ":auto!important;
-    top: 2px !important;
-    z-index:15!important;
-}
-label#prefetch::after {
-content: 'P' !important;
-}
-.webkit #imgControls #imageType
-{
-    background:none!important;
-}
-" : "
-#imgControls
-{
-	height:24px;
-	z-index:14;
-}
-#imgControls:not(:hover) {
-    width: 20px !important;
-	position: fixed;
-	top: -500px;
-}
-#imgControls:hover {
-	width:130px!important;
-}
-#imgControls:hover {
-	position: fixed !important;
-	top: 15px !important;
-	" + $SS.conf["Sidebar Position String"] + ":130px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-}
-#imgControls:hover #imageType {
-	position: fixed !important;
-	top: 18px !important;
-	" + $SS.conf["Sidebar Position String"] + ":181px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-}
-#imgControls:not(:hover) label:first-of-type {
-	position:fixed!important;
-	top:-1px;
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-	right:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
-	left:auto!important;
-	" : "
-	left:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
-	right:auto!important;
-	") + "	
-}
-#imgControls:hover label:first-of-type {
-	position: fixed !important;
-	top: -1px !important;
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-	right:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
-	left:auto!important;
-	" : "
-	left:24" + ($SS.conf["SS-like Sidebar"] ? 3 : 5) + "px!important;
-	right:auto!important;
-	") + "	
-}
-#imgControls:not(:hover) > #imageType {
-	display: none !important;
-}
-#imgControls:not(:hover) + #prefetch:not(:hover) {
-	display: none !important;
-	position: fixed;
-	top: -500px;
-}
-#imgControls:hover + #prefetch, #prefetch:not([type='checkbox']):hover {
-	width: 70px !important;
-	padding-left: 3px !important;
-	padding-right: 3px !important;
-	position: fixed !important;
-	top: 19px !important;
-	" + $SS.conf["Sidebar Position String"] + ":102px!important;
-	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
-	background-color:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important;
-}
-label#prefetch::after {
-content: 'Prefetch?' !important;
-}
-") + "
-#imgControls #imageType
-{
-	margin:0!important;
-	height:18px!important;
-	width:77px!important;
-}
-#imgControls #imageType
-{
-	float:  " + $SS.conf["Sidebar Position String"] + " !important;
-}
-
-#imgControls label:first-of-type input
-{
-  display: none !important;
-}
-#imgControls label:first-of-type::after
+.expand-all-shortcut, .contract-all-shortcut
 {
 	position: relative !important;
-	top: 4px !important;
+	bottom: 4px;
+	margin-right: 4px !important;
+	margin-left: 6px !important;
 	z-index: 10 !important;
-	margin:1px;
+	font-size: 0px !important;
+	padding: 7px !important;
 	overflow:hidden;
 	opacity: 0.6 !important;
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "left: 3px !important;" : "") + "
 }
-#imgControls label:hover:first-of-type::after
+.expand-all-shortcut:hover, .contract-all-shortcut
 {
   opacity: 1 !important;
 }
-#imgControls .preload,
-label#prefetchz`
+#header-bar .menu-button
 {
-    height:15px;
-    " + $SS.conf["Sidebar Position oString"] + ":24px;
-    padding:1px 5px 3px!important;
-    position:absolute;
-}
-label#prefetch
-{
-    line-height:16px!important;
-    z-index:15!important;
-}
-
-#prefetch .riceCheck, #prefetch input 
-{
-	float: left !important;
 	position: relative !important;
-	bottom: 1px !important;
+	bottom: 5px;
+	z-index: 10 !important;
+	font-size: 0px !important;
+	padding: 7px !important;
+	overflow:hidden;
+	opacity: 0.6 !important;
+	border-radius: 0px !important;
+	border: none !important;
+	display: inline !important;
+	margin-right: 2px !important;
+}
+#header-bar .menu-button:hover
+{
+  opacity: 1 !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
@@ -2807,41 +2611,14 @@ body>.closed
     padding:0!important;
 }
 
-
-#navtop,
-#navtopright
-{
-	float:none!important;
-	height:18px;
-}
-#navtop a
-{
-	text-shadow:rgba(0,0,0,.2) 0 0 3px;
-}
-#navtop>div
-{
-	line-height:20px;
-}
-#navtopright
-{
-	margin-top: 1px !important;
-	font-size: 0 !important;
-}
 #OneeChanLink {
-	position: fixed !important;
-	top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": 5px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
 	opacity: .6 !important;
 	height: 13px !important;
 	width: 13px !important;
 	z-index: 5;
-}
-.catalog #OneeChanLink {
-	top: 2px !important;
-	right: 5px !important;
-	left: auto !important;
-	z-index: 15;
+	padding: 1px 8px 0px 7px !important;
+	margin-left: 1px !important;
+	margin-right: 2px !important;
 }
 #OneeChanLink:hover {
   opacity: 1 !important;
@@ -2988,20 +2765,6 @@ body>div[style='width: 100%;']+form[name=delform]
 	margin-top:43px!important;
 	position:fixed;
 }
-#navtopright>.sight4
-{
-	font-size: 0px !important;
-	float: " + $SS.conf["Sidebar Position oString"] + " !important;
-	width: 15px !important;
-	height: 15px !important;
-	opacity: 0.6 !important;
-	background-repeat: no-repeat !important;
-}
-
-#navtopright>.sight4:hover
-{
-  opacity: 1 !important;
-}
 
 body>div[style='width: 100%;']+form[name=delform] {
 	display:block!important;
@@ -3058,14 +2821,6 @@ a[href='.././']:hover
 {
 	border-top:0!important;
 }
-#navtopright {
-	display: block !important;
-	position: fixed !important;
-	width: " + ($SS.conf["Sidebar Position"] !== 2 ? "131" : "135") + "px !important;
-	top: " + (1 + (($SS.conf["Icon Position"] === 2  ? ($SS.conf["Show Logo"] ? 106 : 19): 0))) + "px !important;
-	" + $SS.conf["Sidebar Position String"] + ": " + ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["SS-like Sidebar"]) ? 105 : 108) + (($SS.conf["Icon Position"] === 2 ? 20 : 0))) + "px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-}
 .settingsWindowLinkBot, .exlinksOptionsLink {
 	position: static !important;
 	display: inline-block !important;
@@ -3079,9 +2834,6 @@ a[href='.././']:hover
 .exlinksOptionsLink:hover {
 	opacity: 1;
 }
-#navtopright>a:not(.settingsWindowLink) {
-	margin-right: 6px !important;
-}
 #playerDiv {
 	padding:2px;
 }
@@ -3091,18 +2843,7 @@ a[href='.././']:hover
 #playerClose {
 	right:2px!important;
 }
-#navtopright .settingsWindowLinkBot {
-	opacity: .6 !important;
-	height: 13px !important;
-	width: 14px !important;
-	z-index: 5;
-	font-size: 0 !important;
-	color: transparent !important;
-}
-#navtopright .settingsWindowLinkBot:hover {
-  opacity: 1 !important;
-  cursor: pointer;
-}
+
 #selectImage
 {
 	height:22px;
@@ -3138,11 +2879,11 @@ a[href='.././']
 	font-size: 0px !important;
 	opacity: .6;
 }
-body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog #boardLinks>a.selectedBoard[href*='catalog'], #header-bar a.current, #boardNavDesktopFoot>a.current
+#header-bar a.current
 {
 	font-weight: bold !important;
 }
-#header-bar a.current, #boardNavDesktopFoot>a.current
+#header-bar a.current
 {
 	font-size: 13px !important;
 }
@@ -3190,7 +2931,7 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	width:261px!important;") + "
 }
 .bottom:not(.autohide) #qr {
-	bottom:22px !important;
+	bottom:23px !important;
 }
 #qr.autohide
 {
@@ -3309,7 +3050,7 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 {
 	height:19px!important;
 	margin-top: -2px;
-	margin-bottom: 2px;
+	margin-bottom: 1px;
 }
 #qr>form>div
 {
@@ -3372,23 +3113,13 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 	right:0;
 	top:0;
 }
-#spoilerLabel .riceCheck
-{
-	position: relative !important;
-	bottom:1px !important;
+#qr-spoiler-label {
+	position: absolute !important;
+	right: 5px !important;
+	bottom: 26px !important;
+	background-color: rgba(" + $SS.theme.inputColor.rgb + ",0.5) !important;
 }
-#qr>form #spoilerLabel
-{
-	bottom:1px;
-	position:absolute;
-	right:8px;
-	z-index:2;
-}
-#qr>form #spoilerLabel::after,
-.preview>label::after
-{
-	content:'Spoiler?';
-}
+
 .preview>label
 {
 	background:rgba(0,0,0,.75)!important;
@@ -3440,7 +3171,6 @@ body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']), .catalog 
 .subMenu
 {
     border:1px solid " + $SS.theme.brderColor.hex + "!important;
-    z-index:16;
 }
 .hasSubMenu:after
 {
@@ -3626,88 +3356,34 @@ pre.prettyprint
 }
 " : "") + "
 /* Icons */
-#navtopright .settingsWindowLinkBot {
-	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].soundp+"') !important;
+.expand-all-shortcut {
+	background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.imgExpand+"\")!important;
 }
-.exlinksOptionsLink {
-	background: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" : "darkIcons"].exlinks+"') !important;
-}
-#imgControls label:first-of-type::after {
-	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].expand+"')!important;
-}
-#watcher::before {
-	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcherb+"')!important;
-}
-#navtopright>.sight4 {
-	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].foursight+"') !important;
-}
-a[href='.././'] {
-	background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].returnb+"')!important;
+.contract-all-shortcut {
+	background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.imgContract+"\")!important;
 }
 .globalMessage::before {
-	content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].gmessage+"')!important;
+	content: url(\"data:image/svg+xml,"+$SS.theme.icons.announcement+"\")!important;
 }
 #OneeChanLink
 {
-  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].oclink+"') !important;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons._4chanSS + "\")!important;
 }
-#navtopright .settingsWindowLink
+.settings-link
 {
-  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].navtopr+"') !important;
-}
-#boardNavDesktopFoot::after {  
-  content: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].slidenav+"') !important;
-}
-#lastmuSettingsWindowLink 
-{
-  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" : "darkIcons"].lastmu+"') !important;
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons._4chanX+"\")!important;
 }
 .favicon
 {
-  background-image: url('"+$SS.theme[$SS.theme.bgColor.isLight ? "lightIcons" + ($SS.conf['Icon Theme']) + "" : "darkIcons" + ($SS.conf['Icon Theme']) + ""].watcher+"') !important;
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.heart+"\")!important;
 }
-" + ($SS.conf["Icon Theme"] === "SS" ? "
-.globalMessage::before {
-	margin-right:6px !important
+#header-bar .menu-button
+{
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.menuButtonTop+"\")!important;
 }
-.globalMessage::before, a[href='.././'] {
-	margin-top:1px !important
-}
-#watcher::before {
-	margin-right:4px !important
-}
-#OneeChanLink,#navtopright .settingsWindowLink,#boardNavDesktopFoot::after {
-	height:15px !important
-}
-#OneeChanLink {
-	width:13px !important;
-	margin-right:1px !important
-}
-#navtopright .settingsWindowLink {
-	width:16px !important;
-}
-a[href='.././'] {
-	width:18px !important;
-}
-a[href='.././'],#imgControls label:first-of-type::after {
-	height:13px !important
-}
-#imgControls label:first-of-type::after {
-	margin-top:-5px !important
-}
-#navtopright .settingsWindowLinkBot {
-	width:15px !important
-}
-.catalog #OneeChanLink {
-	width: 12px !important;
-}
-" : "
-.catalog #OneeChanLink {
-	width: 13px !important;
-}
-") + "
-.catalog #OneeChanLink {
-	height: 13px !important;
+.bottom #header-bar .menu-button
+{
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.menuButtonBot+"\")!important;
 }
 /* Last.mu */
 #delform div.reply.lastmuInfo
