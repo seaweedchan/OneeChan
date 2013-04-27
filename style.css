@@ -2921,16 +2921,12 @@ a[href='.././']
 {
 	min-height:127px !important;
     position:relative;
-    " + $SS.conf["Sidebar Position String"] + ":0;
+    " + $SS.conf["Sidebar Position String"] + ":0px !important;
 	" + ($SS.conf["Post Form"] !== 4 ? "resize:none;" : "") + "
     width:255px;
     z-index:1;
-	-webkit-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
-    " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
-	-moz-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
-    " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
-	-o-transition:background .2s,box-shadow .2s,width .2s ease-in-out,
-    " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
+    min-width: 255px !important;
+	max-width: 255px !important;
 }
 #qr-filename-container {
 	min-width: 74% !important;
@@ -3408,7 +3404,14 @@ div.reply.lastmuInfo p {
     width:415px!important;
     min-width: 415px !important;
 	max-width: 415px !important;
-    " + $SS.conf["Sidebar Position String"] + ": 160px!important;
+	" + ($SS.conf["Sidebar Position"] === 1 ?"
+    " + $SS.conf["Sidebar Position String"] + ": 160px!important;" : "") + "
+  	-webkit-transition:background .2s,box-shadow .2s,width .2s ease-in-out,min-width .2s ease-in-out, max-width .2s ease-in-out,
+    " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
+	-moz-transition:background .2s,box-shadow .2s,width .2s ease-in-out,min-width .2s ease-in-out, max-width .2s ease-in-out,
+    " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
+	-o-transition:background .2s,box-shadow .2s,width .2s ease-in-out,min-width .2s ease-in-out, max-width .2s ease-in-out,
+    " + $SS.conf["Sidebar Position String"] + " .2s ease-in-out!important;
 }" : "") +
 (!$SS.conf["Show Logo"] ? "
 .boardBanner img
