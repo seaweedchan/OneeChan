@@ -171,6 +171,9 @@ span.atn,
 	-moz-transition:all .1s;
 	-o-transition:all .1s;
 }
+strong, strong>a {
+	font-weight: bold !important;
+}
 .filtered {
 	text-decoration:line-through" + ($SS.conf["Underline Links"] ? " underline" : "") + "!important;
 }
@@ -197,6 +200,9 @@ span.lit,
 }
 .shortcut>span, .shortcut>#lastmuSettingsWindowLink {
 	font-size: 9pt !important;
+}
+#updater, #thread-stats {
+	opacity: 0.7;
 }
 #updater::before, #thread-stats::before {
 	content: '[';
@@ -358,6 +364,9 @@ box-shadow: none !important;
 html[xmlns] > body {
 margin-top: 100px !important;
 }
+#shortcuts {
+	margin-top: 1px !important;
+}
 #ft ul {
 	border-top: none !important;
 }
@@ -382,8 +391,8 @@ margin-top: 100px !important;
 	font-weight: bold !important; 
 	color:" + $SS.theme.titleColor.hex + "!important;
 }
-.catalog>#content {
-	margin-top: 18px !important;
+.top:not(.autohide) .catalog>#content {
+	margin-top: 20px !important;
 }
 .catalog kbd {
 	box-shadow: none !important;
@@ -519,7 +528,7 @@ body>div.closed,
 .absBotText,
 #navbotr,	
 .postingMode,
-.sideArrows:not(.hide_reply_button),
+.sideArrows:not(.hide-reply-button),
 #delform>hr,
 body>.closed>br,
 .board>hr:nth-last-child(2),
@@ -531,15 +540,13 @@ body>.closed>br,
 .mobile" + ($SS.conf["Pages Position"] === 3 ? ":not(.mPagelist)" : "") + ",
 .mobileinline,
 iframe[src='about:blank'],
-.catalog #globalMessage,
 #styleSwitcher,
 #toggleMsgBtn,
-.catalog .boardBanner,
-body.catalog::after,
-body.catalog::before,
 #boardNavDesktopFoot,
 .catalog hr,
-#header-bar .menu-button i
+.menu-button i,
+.next span,
+.prev span
 {
 	display:none!important;
 }
@@ -576,7 +583,6 @@ tr,
 .replymode,
 #delform[action='https://sys.4chan.org/f/up.php'] .postblock,
 .mPagelist .pages span strong,	
-body:not(.catalog) #boardLinks>a.selectedBoard:not([href*='catalog']),
 .catalog #boardLinks>a.selectedBoard[href*='catalog'],
 #header-bar a.current,
 table.postForm > tbody > tr > td:first-child,
@@ -665,7 +671,7 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 { 
 	display: none !important;
 }" : "") + "
-body:not(.catalog)
+body
 {
 	
 	margin:2px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0" :
@@ -775,12 +781,14 @@ body::before
 " + ($SS.conf["Sidebar Position"] === 3 ? ".globalMessage," : "") + "
 #delform
 {
-    margin-top:22px!important;
+    margin-top:24px!important;
+}
+.postingMode ~ #delform {
+	margin-top:22px!important;
 }
 " + (!$SS.conf["Pages Position"] === 2 ? ".bottom #delform {
 	margin-top: -10px !important;
 }
-
 " : "
 .bottom #delform {
 	margin-top: 22px !important;
@@ -848,39 +856,6 @@ s:hover, s:focus {
 	top:1.75em!important;
 	right:auto!important;
 }
-" + ($SS.conf["Auto Hide Thread Watcher"] ? "
-#watcher::before
-{
-    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
-}
-#watcher:hover
-{
-    top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : 0))) + "px !important;
-}
-" : "
-#watcher
-{
-    top: " + (20 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 104 : 19) : ($SS.conf["Updater and Stats Position"] === 1 ? ($SS.conf["Show Logo"] ? 102 : 17) : 0)))) + "px !important;
-}
-#watcher>.move 
-{
-	text-decoration: none !important;
-	cursor: auto !important;
-}
-#watcher>.move:only-child 
-{
-	height: 16px !important;
-	text-align: center !important;
-}
-#watcher>.move:only-child::after 
-{
-	content: 'Click the hearts to watch threads:  ' url('data:image/svg+xml,"+$SS.theme.icons.watcher+"') !important;
-	font-size: 12px !important;
-	color: " + $SS.theme.textColor.hex + " !important;
-	text-decoration: none !important;
-	opacity: 0.4;
-}
-") + "
 #watcher
 {
     position: fixed !important;
@@ -945,27 +920,27 @@ div.postContainer, div.replyContainer
 {
     position: relative !important;
 }
-.sideArrows a, .sideArrows span
+.hide-reply-button span
 {
     position: static !important;
     width: 20px !important;
     height: 10px !important;
 }
-.sideArrows
+.hide-reply-button
 {
     width: 20px !important;
     padding-top: 1px !important;
 }
-div.reply .report_button, .sideArrows, div.reply .menu_button
+div.reply .report_button, .hide-reply-button, div.reply .menu-button
 {
     opacity: 0 !important;
 }
-form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu_button, form .replyContainer:not(:hover) .sideArrows {
+form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu-button, form .replyContainer:not(:hover) .hide-reply-button {
     -webkit-transition: opacity .3s ease-out 0s !important;
     -moz-transition: opacity .3s ease-out 0s !important;
     -o-transition: opacity .3s ease-out 0s !important;
 }
-  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu_button, form .replyContainer:hover .sideArrows
+  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu-button, form .replyContainer:hover .hide-reply-button
 {
     opacity: 1 !important;
     -webkit-transition: opacity .3s ease-in .5s !important;
@@ -976,28 +951,28 @@ form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:
 {
     opacity: 1 !important;
 }
-div.reply .report_button, div.reply .menu_button
+div.reply .report_button, div.reply .menu-button
 {
     position: absolute !important;
     right: 33px !important;
     right: 13px !important;
     top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
 }
-.thread > .hide_thread_button:not(.hidden_thread) 
+.thread > .hide-thread-button:not(.hidden_thread) 
 {
 	position: absolute !important;
 	top: 0px !important;
 	right: 31px !important;
 	opacity: 0.6 !important;
 }
-.thread > .opContainer > .op > .postInfo > .menu_button
+.thread > .opContainer > .op > .postInfo > .menu-button
 {
 	position: absolute !important;
 	top: 1px !important;
 	right: 15px !important;
 	opacity: 0.6 !important;
 }
-.thread > .opContainer > .op > .postInfo > .menu_button:hover, .thread > .hide_thread_button:not(.hidden_thread):hover {
+.thread > .opContainer > .op > .postInfo > .menu-button:hover, .thread > .hide-thread-button:not(.hidden_thread):hover {
 	opacity: 1.0 !important;
 }
 .hidden_thread {
@@ -1008,7 +983,7 @@ div.reply .report_button, div.reply .menu_button
 	left: -121% !important;
 	width: 120px !important;
 }" : "") + "
-.hidden_thread > .menu_button {
+.hidden_thread > .menu-button {
 	position: absolute !important;
 	right: 18px !important;
 	font-size: 0px !important;
@@ -1020,24 +995,24 @@ div.reply .report_button, div.reply .menu_button
 	font-size: 14px !important;
 	text-align: center !important;
 	}
-.sideArrows a
+.hide-reply-button
 {
     position: absolute !important;
     right: 27px !important;
     top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
 }
 " + ($SS.conf["Sidebar Position"] === 3 ? "
-.thread:first-of-type>.hide_thread_button
+.thread:first-of-type>.hide-thread-button
 {
 	right: 256px !important;
 	top: 1px !important;
 }
-.thread:first-of-type>.opContainer>.op>.postInfo>.menu_button
+.thread:first-of-type>.opContainer>.op>.postInfo>.menu-button
 {
 	right: 240px !important;
 	top: 2px !important;
 }
-.thread:first-of-type>.hidden_thread>.menu_button
+.thread:first-of-type>.hidden_thread>.menu-button
 {
 	right: 240px !important;
 	top: 5px !important;
@@ -1076,14 +1051,14 @@ body:not(.catalog) .thread
 	position:relative;
 	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
 }
-.hide_thread_button:not(.hidden_thread)
+.hide-thread-button:not(.hidden_thread)
 {
     float: left !important;
     margin-right: 5px !important;
     margin-left: 5px !important;
     z-index: 2;
 }
-html .inline .report_button, html .inline .menu_button 
+html .inline .report_button, html .inline .menu-button 
 {
 	opacity: 1 !important;
 	position: relative !important;
@@ -1092,7 +1067,7 @@ html .inline .report_button, html .inline .menu_button
 }
 
 " + ($SS.conf["Layout"] === 1 ?
-".thread>a.hide_thread_button>span
+".thread>a.hide-thread-button>span
 {
     right:2px!important;
 }" : "") + "
@@ -1205,13 +1180,13 @@ div.post:not(#qp):not([hidden]):not(#exlinks-options):not(#exdetails);
 	position:static!important;
 	vertical-align:middle!important;
 }
-a.hide_thread_button>span,
+a.hide-thread-button>span,
 #settingsBox,
 .replyContainer>.reply input[type=checkbox],
 .replyContainer>.reply .riceCheck,
 .container,
 .hidden_thread a:first-child>span,
-.hide_reply_button,
+.hide-reply-button,
 .report_button
 {
 	z-index:2!important;
@@ -1235,7 +1210,7 @@ a.hide_thread_button>span,
     width:auto!important;
 }
 " + ($SS.conf["Layout"] !== 2 ?
-".stub>.menu_button
+".stub>.menu-button
 {
 	position:absolute;
 	right:16px;
@@ -1246,8 +1221,8 @@ a.hide_thread_button>span,
 position: relative !important;
 bottom: 1px !important;
 }" : "") + "
-a.hide_thread_button>span,
-.hide_reply_button:not(.stub)>a:first-child>span
+a.hide-thread-button>span,
+.hide-reply-button:not(.stub)>span
 {
 	background-position:-80px 0;
 }
@@ -1269,14 +1244,14 @@ a.hide_thread_button>span,
 {
 	padding:0!important;
 }
-.menu_button
+.menu-button
 {
     background-position:-32px -16px!important;
     display: inline !important;
 }
 .remove,
-.hide_reply_button:not(.stub)>a:first-child>span,
-a.hide_thread_button>span,
+.hide-reply-button>span,
+a.hide-thread-button>span,
 .hidden_thread a:first-child>span,
 .hidden_thread>span,
 .stub>a:first-child>span
@@ -1327,12 +1302,12 @@ html .reply.highlight,
 .threadContainer .reply {
 	min-width: 300px !important;
 }
-.opContainer.qphl
+.op.qphl
 {
 	background: none !important;
 	border:1px solid " + $SS.theme.linkColor.hex + "!important;
 }
-.opContainer:not(.qphl) {
+.op:not(.qphl) {
 	border:1px solid transparent !important;
 }
 .stub
@@ -1503,7 +1478,7 @@ a.summary
 }
 " : "") + "
 table,
-td:not(.hide_reply_button):not(.deleteform)
+td:not(.hide-reply-button):not(.deleteform)
 {
 	border:0!important;
 	border-spacing:0!important;
@@ -1576,7 +1551,7 @@ input:not([type=checkbox]):not([type=radio]),
 " + ($SS.conf["Post Form"] !== 4 ? "#qr>form>.captcha-img>img," : "#qr>form>.captcha-img,") + "
 .catalog kbd
 {
-	border:1px solid " + $SS.theme.inputbColor.hex + "!important;
+	border:1px solid " + $SS.theme.inputbColor.hex + ";
 }
 button,
 input[type=button],
@@ -1645,9 +1620,8 @@ input.field:focus,
 {
 	background:rgba(" + $SS.theme.inputColor.hover + "," + $SS.theme.replyOp + ")!important;
 }
-button,
 input[type=button],
-input[type=submit]
+#qr input[type=submit]
 {
 	height:22px!important;
 	padding:0!important;
@@ -2287,7 +2261,7 @@ textarea
 #themeoptions input[type=text],
 #themeoptions select
 {
-	height:20px;
+	max-height:22px;
 	margin:0!important;
 	padding:1px 3px!important;
 }
@@ -2487,68 +2461,13 @@ form[name=post] #com_submit+label,
 {
 	line-height:16px;
 }
-" + ($SS.conf["Navlinks Position"] == 1 ? "
 #navlinks
 {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:" + (130 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px !important;" : "
-	left:" + (130 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px;
-	right:auto!important;") + "
-	top:2px !important;
+	right: 230px !important;
+	top:5px !important;
 	height:18px;
 	z-index:14!important;
 }
-.next, .prev {
-	" + (!$SS.conf["Disable Pages Navlinks"] ? "display: inline !important;" : "display: none !important;") + "
-	position: fixed !important;
-	top: 2px !important;
-	z-index: 14 !important;
-}
-.next input, .prev input {
-	display: none !important;
-}
-.next {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:" + (114 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px !important;" : "
-	left:" + (162- ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px;
-	right:auto!important;") + "
-}
-.prev {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:" + (162 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px !important;" : "
-	left:" + (114 - ($SS.conf["Icon Position"] === 2 ? 30 : 0)) + "px;
-	right:auto!important;") + "
-	top: 2px !important;
-}
-" : "
-#navlinks
-{
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:280px !important;" : "
-	left:280px;
-	right:auto!important;") + "
-	bottom: -1px !important;
-	top: auto !important;
-	height:18px;
-	z-index:14!important;
-}
-.next, .prev {
-	display: inline !important;
-	position: fixed !important;
-	bottom: 4px !important;
-	z-index: 14 !important;
-}
-.next input, .prev input {
-	display: none !important;
-}
-.next {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:264px !important;" : "
-	left:312px;
-	right:auto!important;") + "
-}
-.prev {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "right:312px !important;" : "
-	left:264px;
-	right:auto!important;") + "
-	bottom: 4px !important;
-}
-" ) + "
 #ihover
 {
 	padding-bottom:21px;
@@ -2593,33 +2512,6 @@ margin-bottom: 20px !important;
 .globalMessage b
 {
     font-weight: 100 !important;
-}
-.globalMessage::before
-{
-    height: 9px !important;
-    position: fixed !important;
-	" + $SS.conf["Sidebar Position String"] + ": " + (85 - ($SS.conf["Auto Hide Thread Watcher"] ? 0 : 18)) + "px !important;
-	" + $SS.conf["Sidebar Position oString"] + ": auto !important;
-    min-width: 15px !important;
-    max-width: 15px !important;
-    padding-botom: 5px !important;
-    opacity:0.6;
-    z-index: 5 !important;
-}
-.globalMessage::before
-{
-    top: 108px !important;
-    top: " + (2 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 106 : 19) : 0))) + "px !important;
-}
-.globalMessage:hover
-{
-    top: " + (17 + (($SS.conf["Icon Position"] === 2 ? ($SS.conf["Show Logo"] ? 105 : 19) : 0))) + "px !important;
-    position: fixed !important;
-}
-.globalMessage:hover::before
-{
-    opacity: 1;
-    cursor: pointer;
 }
 table.postForm > tbody > tr > td:first-child
 {
@@ -2666,13 +2558,36 @@ body>.closed
 	border: none !important;
 	float: none !important;
 	clear:both;
+	text-align: center !important;
 	margin-bottom: 10px !important;
 	height: 10px !important;
 	position: absolute !important;
 }
+.pages, .prev, .next {
+	display: inline-block !important;
+	position: relative !important;
+	bottom: 10px !important;
+	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
+}
+.prev {
+	margin-right: 4px !important;
+}
+.next {
+	margin-left: 4px !important;
+}
+.next input, .next input:hover, .prev input, .prev input:hover {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.next input, .prev input {
+	color: " + $SS.theme.linkColor.hex + " !important;
+}
+.next input:hover, .prev input:hover  {
+	color: " + $SS.theme.linkHColor.hex + " !important;
+}
 .pages 
 {
-	width: 500px !important;
 	text-align: center !important;
 	border-spacing: 0 !important;
 	margin: auto !important;
@@ -2680,9 +2595,6 @@ body>.closed
 	z-index: 1;
 	float: none !important;
 	clear:both;
-	position: relative !important;
-	bottom: 5px !important;
-	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
 	word-spacing: 10px !important;
 	font-size: 0px !important;
 	color: transparent !important;
@@ -2691,11 +2603,11 @@ body>.closed
 {
 	color:" + $SS.theme.linkColor.hex + "!important;
 }
-.pagelist .pages strong
+.pagelist .pages strong>a
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
-.pages a, .pages strong 
+.pages a, .pages strong>a
 {
 	font-size: 12px !important;
 }
@@ -2752,14 +2664,37 @@ body>.closed
 	position: fixed !important;
 	z-index: 3;
 	bottom: 0px !important;
+	text-align: center !important;
 }
 .bottom .pagelist {
 	top: 0px !important;
 	bottom: auto !important;
 }
+.pages, .prev, .next {
+	display: inline-block !important;
+	position: relative !important;
+	bottom: 10px !important;
+	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
+}
+.prev {
+	margin-right: 4px !important;
+}
+.next {
+	margin-left: 4px !important;
+}
+.next input, .next input:hover, .prev input, .prev input:hover {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.next input, .prev input {
+	color: " + $SS.theme.linkColor.hex + " !important;
+}
+.next input:hover, .prev input:hover  {
+	color: " + $SS.theme.linkHColor.hex + " !important;
+}
 .pages 
 {
-	width: 500px !important;
 	text-align: center !important;
 	border-spacing: 0 !important;
 	margin: auto !important;
@@ -2767,23 +2702,20 @@ body>.closed
 	z-index: 1;
 	float: none !important;
 	clear:both;
-	position: relative !important;
-    bottom: 3px !important;
-	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
 	word-spacing: 10px !important;
 	font-size: 0px !important;
 	color: transparent !important;
 	height: 15px !important;
 }
-.pages a 
+.pages>a 
 {
 	color:" + $SS.theme.linkColor.hex + "!important;
 }
-.pagelist .pages strong
+.pagelist .pages strong>a
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
-.pages a, .pages strong 
+.pages a, .pages strong>a
 {
 	font-size: 12px !important;
 }
@@ -2914,14 +2846,10 @@ a[href='.././']
 {
 	font-weight: bold !important;
 }
-#header-bar a.current
-{
-	font-size: 13px !important;
-}
 #full-board-list {
 	font-size: 0px !important;
 }
-#full-board-list a:not(.current) {
+#full-board-list a {
 	font-size: 12px !important;
 }
 #full-board-list a {
@@ -3274,76 +3202,76 @@ div.post > blockquote .prettyprint span
 {
     color:" + $SS.theme.textColor.hex + ";
 }
-.sideArrows span, .hide_thread_button span, .menu_button {
+.hide-reply-button span, .hide-thread-button span, .menu-button {
 	font-size: 0px !important;
 }
-.sideArrows span::after, .hide_thread_button:not(.hidden_thread) span::after {
+.hide-reply-button span::after, .hide-thread-button:not(.hidden_thread) span::after {
 	content: " + ($SS.conf["Hide Button Content"].indexOf("http") === 0 ? "url(" + $SS.conf["Hide Button Content"] + ")" : "'" + $SS.conf["Hide Button Content"] + "'") + ";
 	font-size: 12px !important;
 }
-.menu_button::after {
+#delform .menu-button::after {
 	content: " + ($SS.conf["Menu Button Content"].indexOf("http") === 0 ? "url(" + $SS.conf["Menu Button Content"] + ")" : "'" + $SS.conf["Menu Button Content"] + "'") + ";
 	font-size: 12px !important;
 }
 " + ($SS.conf["Layout"] !== 2 ? "
-.replyContainer>.sideArrows span::after {
+.replyContainer>.hide-reply-button span::after {
 	position: relative;
 	bottom: " + (2 + $SS.conf["Hide Button RVO"]) + "px !important;
 	left: " + (1 + $SS.conf["Hide Button RHO"]) + "px !important;
 }
-.webkit .sideArrows span::after {
+.webkit .hide-reply-button span::after {
 	right: -9px !important;
 }
-.hide_thread_button span::after {
+.hide-thread-button span::after {
 	position: relative;
 	bottom: " + $SS.conf["Hide Button OVO"] + "px !important;
 	left: " + (-2 + $SS.conf["Hide Button OHO"]) + "px !important;
 }
-.op>.postInfo>.menu_button::after {
+.op>.postInfo>.menu-button::after {
 	position: relative;
 	bottom: " + (2 + $SS.conf["Menu Button OVO"]) + "px !important;
 	left: " + $SS.conf["Menu Button OHO"] + "px !important;
 }
-.replyContainer>.reply>.postInfo>.menu_button::after {
+.replyContainer>.reply>.postInfo>.menu-button::after {
 	position: relative;
 	bottom: " + (2 + $SS.conf["Menu Button RVO"]) + "px !important;
 	left: " + (-2 + ($SS.conf["Menu Button RHO"])) + "px !important;
 }
-.inline .menu_button::after {
+.inline .menu-button::after {
 	bottom: " + $SS.conf["Menu Button RVO"] + "px !important;
 	left: " + $SS.conf["Menu Button RHO"] + "px !important;
 	top: 1px !important;
 }
 " : "
-.menu_button {
+#delform .menu-button {
 margin-right: 3px !important;
 }
-.op>.postInfo>.menu_button::after {
+.op>.postInfo>.menu-button::after {
 	position: relative;
 	bottom: " + $SS.conf["Menu Button OVO"] + "px !important;
 	left: " + $SS.conf["Menu Button OHO"] + "px !important;
 }
-.replyContainer>.reply>.postInfo>.menu_button::after {
+.replyContainer>.reply>.postInfo>.menu-button::after {
 	position: relative;
 	bottom: " + (1 + $SS.conf["Menu Button RVO"]) + "px !important;
 	left: " + $SS.conf["Menu Button RHO"] + "px !important;
 }
-.postingMode ~ #delform>.board>.thread>.opContainer>.op>.postInfo>.menu_button::after {
+.postingMode ~ #delform>.board>.thread>.opContainer>.op>.postInfo>.menu-button::after {
 	position: relative;
 	top: -1px !important;
 }
-.sideArrows span::after {
+.hide-reply-button span::after {
 	position: relative;
 	bottom: " + (2 + $SS.conf["Hide Button RVO"]) + "px !important;
 	left: " + $SS.conf["Hide Button RHO"] + "px !important;
 }
-.hide_thread_button span::after {
+.hide-thread-button span::after {
 	position: relative;
 	bottom: " + (-2 + $SS.conf["Hide Button OVO"]) + "px !important;
 	right: 4px !important;
 	left: " + $SS.conf["Hide Button OHO"] + "px !important;
 }
-.inline .menu_button::after {
+.inline .menu-button::after {
 	bottom: " + $SS.conf["Menu Button RVO"] + "px !important;
 	left: " + $SS.conf["Menu Button RHO"] + "px !important;
 	top: 1px !important;
