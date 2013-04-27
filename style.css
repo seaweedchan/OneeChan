@@ -290,6 +290,7 @@ span[style='color:#FF0000;font-weight:normal'],
 	text-shadow:none!important;
 }
 .reply,
+.dialog,
 .hidden_thread,
 #fs_data tr[style],
 .stub>a:first-child,
@@ -764,6 +765,7 @@ body::before
 #qr,
 #themeoptions #toWrapper,
 .reply,
+.dialog,
 .hidden_thread,
 .stub>a:first-child
 {
@@ -1545,13 +1547,13 @@ img[alt=Sticky]
 }
 textarea,
 button,
-input:not([type=checkbox]):not([type=radio]),
+input:not([type=checkbox]):not([type=radio]):not([value='Next']):not([value='Previous']),
 #qr-filename-container,
 .webkit select,
 " + ($SS.conf["Post Form"] !== 4 ? "#qr>form>.captcha-img>img," : "#qr>form>.captcha-img,") + "
 .catalog kbd
 {
-	border:1px solid " + $SS.theme.inputbColor.hex + ";
+	border:1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 button,
 input[type=button],
@@ -3138,6 +3140,9 @@ a[href='.././']
 #menu .focused.entry
 {
     background:rgba(" + $SS.theme.mainColor.shiftRGB(16, true) + ", .5)!important;
+}
+.entry {
+	border: none !important;
 }
 input[name=name].tripping:not(:hover):not(:focus)
 {
