@@ -1569,6 +1569,7 @@ textarea
 	-o-transition:background .2s,box-shadow .2s;
 }
 button:hover,
+#qr-filename-container:hover,
 input[type=button]:hover,
 input[type=password]:hover,
 input[type=submit]:hover,
@@ -2886,6 +2887,8 @@ a[href='.././']
 .bottom:not(.autohide) #qr {
 	bottom:23px !important;
 }
+
+
 #qr.autohide
 {
 	" + ($SS.conf["Post Form"] === 1 ? "
@@ -2899,15 +2902,15 @@ a[href='.././']
 	-moz-transition:opacity .2s ease-in-out 1s;
 	-o-transition:opacity .2s ease-in-out 1s;" : "")) + "
 }
+" + ($SS.conf["Post Form"] === 1 ? "
+.bottom:not(.autohide) #qr.autohide {
+	bottom:-225px !important;
+}
+" : "") + "
 #qr-filerm {
 	margin-right: -7px !important;
 	bottom: 7px !important;
 }
-" + ($SS.conf["Post Form"] === 1 ? "
-#qr.autohide.dump:not(.focus):not(:hover)
-{
-	bottom:-341px!important;
-}" : "") + "
 #qr:hover,
 #qr.focus
 {
@@ -2921,6 +2924,9 @@ a[href='.././']
 	-webkit-transition:opacity .2s ease-in-out;
 	-moz-transition:opacity .2s ease-in-out;
 	-o-transition:opacity .2s ease-in-out;" : "")) + "
+}
+.bottom:not(.autohide) #qr:hover, .bottom:not(.autohide) #qr:focus {
+	bottom:23px !important;
 }
 #qr.autohide>form
 {
