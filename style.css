@@ -3387,7 +3387,7 @@ div.reply.lastmuInfo p {
 	min-width: 255px !important;
 	max-width: 255px !important;
 }
-#qr textarea:focus,
+
 .persona .field:focus
 {
 	-webkit-transition:box-shadow .2s,width .2s ease-in-out,max-width .2s ease-in-out,min-width .2s ease-in-out!important;
@@ -3395,6 +3395,7 @@ div.reply.lastmuInfo p {
 	-o-transition:box-shadow .2s,width .2s ease-in-out,max-width .2s ease-in-out,min-width .2s ease-in-out!important;
 
 }
+
 #qr.has-captcha #replies+div
 {
     height:128px!important;
@@ -3405,7 +3406,9 @@ div.reply.lastmuInfo p {
 #qr textarea:focus
 {
     width:415px!important;
-    right: 160px!important;
+    min-width: 415px !important;
+	max-width: 415px !important;
+    " + $SS.conf["Sidebar Position String"] + ": 160px!important;
 }" : "") +
 (!$SS.conf["Show Logo"] ? "
 .boardBanner img
