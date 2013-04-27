@@ -284,6 +284,9 @@ span[style='color:#FF0000;font-weight:normal'],
 	color:" + $SS.theme.sageColor.hex + "!important;
 	text-shadow:none!important;
 }
+.pages strong>a {
+	color:" + $SS.theme.textColor.hex + "!important;
+}
 .reply,
 .dialog,
 .hidden_thread,
@@ -2542,69 +2545,7 @@ body>.closed
 }
 
 " + ($SS.conf["Pages Position"] !== 4 ?
-($SS.conf["Pages Position"] === 1 ? "
-.pagelist 
-{
-	width: 100% !important;
-	padding: 3px 0px !important;
-	background: none !important;
-	border: none !important;
-	float: none !important;
-	clear:both;
-	text-align: center !important;
-	margin-bottom: 10px !important;
-	height: 10px !important;
-	position: absolute !important;
-}
-.pages, .prev, .next {
-	display: inline-block !important;
-	position: relative !important;
-	bottom: 10px !important;
-	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
-}
-.prev {
-	margin-right: 4px !important;
-}
-.next {
-	margin-left: 4px !important;
-}
-.next input, .next input:hover, .prev input, .prev input:hover {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-.next input, .prev input {
-	color: " + $SS.theme.linkColor.hex + " !important;
-}
-.next input:hover, .prev input:hover  {
-	color: " + $SS.theme.linkHColor.hex + " !important;
-}
-.pages 
-{
-	text-align: center !important;
-	border-spacing: 0 !important;
-	margin: auto !important;
-	padding-right: 0 !important;
-	z-index: 1;
-	float: none !important;
-	clear:both;
-	word-spacing: 10px !important;
-	font-size: 0px !important;
-	color: transparent !important;
-}
-.pages a 
-{
-	color:" + $SS.theme.linkColor.hex + "!important;
-}
-.pagelist .pages strong>a
-{
-	color:" + $SS.theme.textColor.hex + "!important;
-}
-.pages a, .pages strong>a
-{
-	font-size: 12px !important;
-}
-" : "
+($SS.conf["Pages Position"] === 3 ? "
 .mPagelist.mobile
 {
 	background:transparent!important;
@@ -2644,8 +2585,15 @@ body>.closed
 .mPagelist a {
 	color: " + $SS.theme.linkColor.hex + " !important;
 }
-") : "") + "
-" + ($SS.conf["Pages Position"] === 2 ? "
+.mPagelist span[style] {
+	display: inline-block !important;
+	margin-top: 0px !important;
+}
+.prev, .next {
+	display: none !important;
+}
+" : "
+
 .pagelist 
 {
 	width: 100% !important;
@@ -2654,9 +2602,13 @@ body>.closed
 	float: none !important;
 	clear:both;
 	height: 15px !important;
-	position: fixed !important;
 	z-index: 3;
-	bottom: 0px !important;
+" + ($SS.conf["Pages Position"] === 2 ? "
+	position: fixed !important;
+	bottom: 0px !important;" : "
+	position: absolute !important;
+	" + $SS.conf["Sidebar Position oString"] + ": 0px !important;
+	" + $SS.conf["Sidebar Position String"] + ": " + $SS.iSidebarSize + " !important; ") + "
 	text-align: center !important;
 }
 .bottom .pagelist {
@@ -2667,7 +2619,7 @@ body>.closed
 	display: inline-block !important;
 	position: relative !important;
 	bottom: 10px !important;
-	" + ($SS.conf["Post Form"] !== 4 ? "right: 131px !important;" : "") + "
+	" + ($SS.conf["Post Form"] !== 4 ? "" + ($SS.conf["Pages Position"] === 1 ? $SS.conf["Sidebar Position String"] : "right") + ": 131px !important;" : "") + "
 }
 .prev {
 	margin-right: 4px !important;
@@ -2700,21 +2652,15 @@ body>.closed
 	color: transparent !important;
 	height: 15px !important;
 }
-.pages>a 
-{
-	color:" + $SS.theme.linkColor.hex + "!important;
-}
-.pagelist .pages strong>a
-{
-	color:" + $SS.theme.textColor.hex + "!important;
-}
 .pages a, .pages strong>a
 {
 	font-size: 12px !important;
 }
 .mPagelist.mobile {
 display: none !important;
-}" : "") + "
+}
+") : "") + "
+
 body>div[style='width: 100%;']+form[name=delform]
 {
 	display:block!important;
@@ -3408,27 +3354,6 @@ div.reply.lastmuInfo p {
 	(Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : "
 	" + ($SS.conf["Sidebar Position"] === 3 ? "25" : "263") + "px") + "!important;
 	top:47%;
-	width:auto!important;
-	z-index:6!important;
-	-webkit-transform:rotate(90deg);
-	-webkit-transform-origin:bottom right;
-	-moz-transform:rotate(90deg);
-	-moz-transform-origin:bottom right;
-	-o-transform:rotate(90deg);
-	-o-transform-origin:bottom right;
-}
-.cataloglink
-{
-	bottom:auto!important;
-	left:auto!important;
-	margin:0!important;
-	opacity:.75;
-	padding:0!important;
-    position:fixed;
-	right:" + ($SS.conf["Layout"] === 3 ?
-	(Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : "
-	" + ($SS.conf["Sidebar Position"] === 3 ? "20" : "263") + "px") + "!important;
-	top:49%;
 	width:auto!important;
 	z-index:6!important;
 	-webkit-transform:rotate(90deg);
