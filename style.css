@@ -69,11 +69,6 @@ span.spoiler {
 span.spoiler:hover, span.spoiler:focus {
     color: rgb(255, 255, 255) !important;
 }
-" + (!$SS.conf["Use Post Info Color"] ? "#delform div.reply
-{
-    padding-top: " + ($SS.conf["Slim Replies"] ? 4 : 8) + "px !important;
-    padding-left: 10px !important;
-}" : "") + "
 /* End */
 #delform .sideArrows[hidden], #delform div.post[hidden] {
 	display: none !important;
@@ -810,6 +805,9 @@ html:not(.fixed) #header-bar {
 	z-index: 2;
 	padding: 2px;
 }
+#board-list {
+	vertical-align: middle;
+}
 .closed~#delform
 {
     margin-top:0!important;
@@ -958,7 +956,7 @@ div.reply .report_button, div.reply .menu-button
     position: absolute !important;
     right: 33px !important;
     right: 13px !important;
-    top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
+    top: 5px !important;
 }
 .thread > .hide-thread-button:not(.hidden_thread) 
 {
@@ -1001,7 +999,7 @@ div.reply .report_button, div.reply .menu-button
 {
     position: absolute !important;
     right: 27px !important;
-    top: " + ($SS.conf["Use Post Info Color"] ? 5 : 7) + "px !important;
+    top: 5px !important;
 }
 " + ($SS.conf["Sidebar Position"] === 3 ? "
 .thread:first-of-type>.hide-thread-button
@@ -1287,10 +1285,6 @@ a.hide-thread-button>span,
 	border-radius:" + ($SS.conf["Layout"] !== 3 && !($SS.conf["Sidebar Position"] !== 2 && $SS.conf["Layout"] === 2) ?
 	($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
 }
-" + (!$SS.conf["Use Post Info Color"] ? ".replyContainer>.reply
-{
-    padding-top:2px!important;
-}" : "") + "
 .highlightPost,
 .qphl,
 .replyContainer>.post:target,
@@ -1491,18 +1485,12 @@ blockquote
 	margin:0!important;
 	padding:" + ($SS.conf["Slim Replies"] ? ($SS.conf["Backlinks Position"] !== 1 ? 8 : 4) + "px 16px" : "12px 22px") + "!important;
 }
-" + (!$SS.conf["Use Post Info Color"] ? "#delform div.reply
-{
-    padding-top: " + ($SS.conf["Slim Replies"] ? 4 : 8) + "px !important;
-    padding-left: 10px !important;
-}" : "
 blockquote, .fileInfo {
 	margin-left: 10px !important;
 }
 #qp div.reply {
 	padding: 0px !important;
 }
-") + "
 blockquote>div[style]
 {
 	border-color:" + $SS.theme.sageColor.hex + "!important;
@@ -2847,11 +2835,12 @@ a[href='.././']
 #header-bar a.current
 {
 	font-weight: bold !important;
+	font-size: 13px !important;
 }
 #full-board-list {
 	font-size: 0px !important;
 }
-#full-board-list a {
+#full-board-list a:not(.current) {
 	font-size: 12px !important;
 }
 #full-board-list a {
@@ -2890,6 +2879,9 @@ a[href='.././']
 	min-width:261px!important;
 	z-index:5!important;
 	width:261px!important;") + "
+}
+#qr>.move>label {
+	cursor: text !important;
 }
 .bottom:not(.autohide) #qr {
 	bottom:23px !important;
@@ -3282,27 +3274,33 @@ margin-right: 3px !important;
 	top: 1px !important;
 }
 ") + "
-" + ($SS.conf["Use Post Info Color"] ? "
 .reply {
 	padding-top: 0px !important;
 	padding-left: 0px !important;
 }
 .replyContainer>.reply>div.postInfo {
-	background: rgba(" + $SS.theme.pinfoColor.rgb + "," + $SS.theme.replyOp + ")!important;
-	border-bottom: 1px solid " + $SS.theme.pinfobColor.hex + " !important;
-	padding: 2px 50px 1px 8px !important;
+	padding: 2px 50px 1px 12px !important;
 	marigin-top: -1px !important;
 }
 div.post div.postInfo {
 	width: 100% !important;
 	display: block !important;
 }
+" + ($SS.conf["Use Post Info Color"] ? "
+.replyContainer>.reply>div.postInfo {
+	background: rgba(" + $SS.theme.pinfoColor.rgb + "," + $SS.theme.replyOp + ")!important;
+	border-bottom: 1px solid " + $SS.theme.pinfobColor.hex + " !important;
+}
 " + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? "
 .replyContainer>.reply>div.postInfo {
 	box-shadow: 0px 2px 3px " + ($SS.theme.bgColor.isLight ? "#999" : "#111") + " !important;
 	margin-bottom: 3px !important;
 }" : "") + "
-" : "") + "
+" : "
+.reply {
+	padding-top: 2px !important;
+}
+") + "
 .thread>.replyContainer>.reply>.postInfo {
 	padding-right: 50px !important;
 }
