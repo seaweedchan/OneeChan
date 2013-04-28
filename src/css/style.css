@@ -1,6 +1,6 @@
 html, body, input, select, textarea, div.boardBanner > div.boardSubtitle, #boardLinks, #qr-filename-container
 {
-	font-family:" + $SS.formatFont($SS.conf["Font"]) + ";
+	font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
 	font-size:" + $SS.conf["Font Size"] + "px;
 }
 #themeoptions #toNav li label, .trbtn, #themeoptions #toWrapper > div > p {
@@ -380,7 +380,7 @@ margin-top: 100px !important;
 .mOption.header {
 	cursor: auto !important;
 	font-size:" + $SS.conf["Small Font Size"] + "px;
-	font-family:" + $SS.formatFont($SS.conf["Font"]) + "!important;
+	font-family:" + $SS.formatFont($SS.conf["Font Family"]) + "!important;
 	font-weight: bold !important;
 }
 .mOption.header>span {
@@ -468,7 +468,7 @@ textarea,
 #themeoptions .mOption:not(.header)>span,
 #themeoptions #tMascot div a
 {
-	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font"]) + "!important;
+	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font Family"]) + "!important;
 }
 #qr>form #spoilerLabel::after,
 button,
@@ -676,8 +676,8 @@ background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 body
 {
 	
-	margin:2px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0" :
-                (!$SS.bHideSidebar && $SS.conf["Sidebar Position"] !== 3 ? "0 0 261px " + $SS.iSidebarSize + "px" : "0 0 0")) + "!important;
+	margin:2px " + ((!$SS.bHideSidebar  && $SS.conf["Sidebar Position"] === 1) ? "261px 0 0
+	" : (!$SS.bHideSidebar && $SS.conf["Sidebar Position"] !== 3 ? "0 0 261px " + $SS.iSidebarSize + "px" : "0 0 0")) + "!important;
     margin-bottom:23px!important;
     " + ($SS.conf["Sidebar Position"] == 2 ? "margin-left: 261px !important" : "") + ";
 	padding:0!important;
@@ -706,8 +706,7 @@ div.center a:hover
 {
 	opacity: 1.0 !important;
 }
-" + (!$SS.bHideSidebar ?
-(($SS.conf["Sidebar Position"] !== 3) && $SS.conf["SS-like Sidebar"] ? "
+" + (!$SS.bHideSidebar ? (($SS.conf["Sidebar Position"] !== 3) && $SS.conf["SS-like Sidebar"] ? "
 body::before {
 	background:rgba(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
 	border-" + $SS.conf["Sidebar Position oString"] + ":2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
@@ -754,7 +753,7 @@ body::before
 	" + $SS.conf["Sidebar Position String"] + ":0!important;
 	" + $SS.conf["Sidebar Position oString"] + ":auto!important;
 }
-" + ($SS.conf["Layout"] === 2 ? ".op," : "") + "
+" + ($SS.conf["Page Layout"] === 2 ? ".op," : "") + "
 #jsmath_button,
 #jsMath_panel,
 #jsMath_float,
@@ -921,7 +920,7 @@ s:hover, s:focus {
     position: fixed !important;
     z-index: 99 !important;
 }
-" + ($SS.conf["Layout"] !== 2 ? "
+" + ($SS.conf["Page Layout"] !== 2 ? "
 div.postContainer, div.replyContainer
 {
     position: relative !important;
@@ -1028,16 +1027,16 @@ float: left !important; }") + "
 body:not(.catalog) .thread
 {
 	clear:both;
-	margin:1px" + ($SS.conf["Layout"] === 1 ? ($SS.conf["Sidebar Position"] !== 2 ? " 0 1px 1px" : " 1px 1px 0") : ($SS.conf["Layout"] === 2 ? " 0 1px" : "")) + "!important;
+	margin:1px" + ($SS.conf["Page Layout"] === 1 ? ($SS.conf["Sidebar Position"] !== 2 ? " 0 1px 1px" : " 1px 1px 0") : ($SS.conf["Page Layout"] === 2 ? " 0 1px" : "")) + "!important;
     overflow:visible!important;
 	padding:0!important;
-    " + ($SS.conf["Layout"] !== 3 ? "padding-" + $SS.conf["Sidebar Position String"] + ":2px!important;" : "") + "
+    " + ($SS.conf["Page Layout"] !== 3 ? "padding-" + $SS.conf["Sidebar Position String"] + ":2px!important;" : "") + "
 	position:relative;
-	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
+	border-radius:" + ($SS.conf["Page Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
 }
 #addMascot>label::after,
 #qr>form>div::after,
-" + ($SS.conf["Layout"] !== 2 ? ".thread .op::after," : "") + "
+" + ($SS.conf["Page Layout"] !== 2 ? ".thread .op::after," : "") + "
 .thread::after
 {
 	clear:both;
@@ -1048,7 +1047,7 @@ body:not(.catalog) .thread
 {
 	border:0!important;
 	position:relative;
-	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
+	border-radius:" + ($SS.conf["Page Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
 }
 .hide-thread-button:not(.hidden_thread)
 {
@@ -1058,29 +1057,28 @@ body:not(.catalog) .thread
     z-index: 2;
 }
 
-" + ($SS.conf["Layout"] === 1 ?
-".thread>a.hide-thread-button>span
+" + ($SS.conf["Page Layout"] === 1 ? "
+.thread>a.hide-thread-button>span
 {
     right:2px!important;
 }" : "") + "
 form[name=delform]
 {
-	" + ($SS.conf["Layout"] !== 2 ? "
-	" + ($SS.conf["Layout"] === 1 ? "border-" + $SS.conf["Sidebar Position String"] + ":0!important;" : "") : "") + "
-	margin:" + ($SS.conf["Layout"] !== 3 ?
-	($SS.conf["Sidebar Position"] !== 2 ? "0 " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px 0 " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px" :
-    "0 " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px 0 " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px") :
-    "0 " + (Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "% 0") + ";
+	" + ($SS.conf["Page Layout"] !== 2 ? "
+	" + ($SS.conf["Page Layout"] === 1 ? "border-" + $SS.conf["Sidebar Position String"] + ":0!important;" : "") : "") + "
+	margin:" + ($SS.conf["Page Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "0 " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px 0 " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px" : "
+    0 " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px 0 " + ($SS.conf["Sidebar Side Margin"] !== 999 ? ""+ $SS.conf["Sidebar Side Margin"] + "" : "" + $SS.conf["Sidebar Side Custom Margin"] + "") + "px") : "
+    0 " + (Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "% 0") + ";
 	padding:0!important;
 	position:relative;
-	border-radius:" + ($SS.conf["Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "4px 0 0 4px" : "0 4px 4px 0") : "4px") + ";
+	border-radius:" + ($SS.conf["Page Layout"] !== 3 ? ($SS.conf["Sidebar Position"] !== 2 ? "4px 0 0 4px" : "0 4px 4px 0") : "4px") + ";
 }
-" + (($SS.conf["Layout"] === 3) && !($SS.conf["Show Logo"]) ? ".webkit form[name=delform] {
+" + (($SS.conf["Page Layout"] === 3) && !($SS.conf["Show Logo"]) ? ".webkit form[name=delform] {
 	z-index: 1;
 }" : "") + "
 .thread>div>.post, .threadContainer>div>.post
 {
-	" + ($SS.conf["Layout"] !== 2 ? "width:100% !important;" : "") + "
+	" + ($SS.conf["Page Layout"] !== 2 ? "width:100% !important;" : "") + "
 }
 .thread:last-child>.postContainer:last-child>.reply
 {
@@ -1142,7 +1140,7 @@ div.post
 .favicon[src$='ico'] {
 	opacity: 0.8 !important;
 }
-" + ($SS.conf["Layout"] !== 2 ? "
+" + ($SS.conf["Page Layout"] !== 2 ? "
 hr
 {
     margin:0!important;
@@ -1192,8 +1190,7 @@ a.hide-thread-button>span,
 	z-index:10!important;
     width:auto!important;
 }
-" + ($SS.conf["Layout"] !== 2 ?
-"
+" + ($SS.conf["Page Layout"] !== 2 ? "
 .stub > a:not([class]) > span {
 position: relative !important;
 bottom: 1px !important;
@@ -1243,9 +1240,8 @@ a.hide-thread-button>span,
 .hidden_thread,
 {
 	padding:5px!important;
-	" + ($SS.conf["Layout"] !== 2 ? "width:100% !important;" : ($SS.conf["Sidebar Position"] !== 2 ? "margin-right:1px!important;" : "")) + "
-	border-radius:" + ($SS.conf["Layout"] !== 3 && !($SS.conf["Sidebar Position"] !== 2 && $SS.conf["Layout"] === 2) ?
-	($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
+	" + ($SS.conf["Page Layout"] !== 2 ? "width:100% !important;" : ($SS.conf["Sidebar Position"] !== 2 ? "margin-right:1px!important;" : "")) + "
+	border-radius:" + ((($SS.conf["Sidebar Position"] === 2) && ($SS.conf["Page Layout"] === 2)) ? ($SS.conf["Sidebar Position"] !== 2 ? "2px 0 0 2px" : "0 2px 2px 0") : "2px") + ";
 }
 .highlightPost,
 .qphl,
@@ -1270,7 +1266,7 @@ html .reply.highlight,
 }
 .stub
 {
-    margin:1px 0 0 " + ($SS.conf["Layout"] === 2 ? 16 : 0) + "px!important;
+    margin:1px 0 0 " + ($SS.conf["Page Layout"] === 2 ? 16 : 0) + "px!important;
 	padding:0!important;
 }
 .thread.stub
@@ -1281,7 +1277,7 @@ html .reply.highlight,
 .hidden_thread,
 .stub>a:first-child
 {
-	display:" + ($SS.conf["Layout"] === 2 ? "inline-" : "") + "block;
+	display:" + ($SS.conf["Page Layout"] === 2 ? "inline-" : "") + "block;
 	padding:5px;
 }
 .container
@@ -1356,12 +1352,11 @@ a.summary
 	padding:2px 2px 0 18px!important;
 	position:fixed;
 	" + ($SS.conf["Sidebar Position"] === 3 ? "
-	right:" + ($SS.conf["Post Form"] === 4 ? 0 : 262) +"px;" :
-	$SS.conf["Sidebar Position String"] + ":260px;") + "
+	right:" + ($SS.conf["Post Form"] === 4 ? 0 : 262) +"px;" : $SS.conf["Sidebar Position String"] + ":260px;") + "
 	width:0;
 	white-space:nowrap;
 	z-index:12!important;
-	" + ($SS.conf["Layout"] !== 1 ? "border-radius:" + ($SS.conf["Sidebar Position"] !== 2 ? "3px 0 0 0" : "0 3px 0 0") : "") + ";
+	" + ($SS.conf["Page Layout"] !== 1 ? "border-radius:" + ($SS.conf["Sidebar Position"] !== 2 ? "3px 0 0 0" : "0 3px 0 0") : "") + ";
 	-webkit-transition:all .2s ease-in-out;
 	-moz-transition:all .2s ease-in-out;
 	-o-transition:all .2s ease-in-out;
@@ -1369,10 +1364,7 @@ a.summary
 }
 .deleteform:hover
 {
-	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-	padding-left:2px!important;
-	" + ($SS.conf["Sidebar Position"] === 3 ? "padding-right:4px!important;" : "") :
-	"padding-left:0!important;
+	" + ($SS.conf["Sidebar Position"] !== 2 ? "padding-left:2px!important;" + ($SS.conf["Sidebar Position"] === 3 ? "padding-right:4px!important;" : "") : "padding-left:0!important;
 	padding-right:3px!important;") + "
 	width:238px;
 	-webkit-transition:all .2s ease-in-out;
@@ -1782,7 +1774,7 @@ div.autohide>a[title='Auto-hide dialog box']
 .op .filesize
 {
 	display:inline-block!important;
-	margin:2px " + ($SS.conf["Layout"] !== 2 ? 6 : 0) + "px!important;
+	margin:2px " + ($SS.conf["Page Layout"] !== 2 ? 6 : 0) + "px!important;
 }
 body>span[style]~form .op .filesize
 {
@@ -1970,7 +1962,7 @@ textarea
 {
 	border-bottom:0!important;
 }
-#themeoptions #tMain select[name=Font] option
+#themeoptions #tMain select[name='Font Family'] option
 {
 	max-width:150px;
 	overflow:hidden;
@@ -2496,8 +2488,7 @@ body>.closed
   cursor: pointer;
 }
 
-" + ($SS.conf["Pages Position"] !== 4 ?
-($SS.conf["Pages Position"] === 3 ? "
+" + ($SS.conf["Pages Position"] !== 4 ? ($SS.conf["Pages Position"] === 3 ? "
 .mPagelist.mobile
 {
 	background:transparent!important;
@@ -2795,8 +2786,7 @@ a[href='.././']
 	bottom:-248px!important;
 	-webkit-transition:bottom .2s ease-in-out 1s;
 	-moz-transition:bottom .2s ease-in-out 1s;
-	-o-transition:bottom .2s ease-in-out 1s;" :
-	($SS.conf["Post Form"] === 2 ? "
+	-o-transition:bottom .2s ease-in-out 1s;" : ($SS.conf["Post Form"] === 2 ? "
 	opacity:.2;
 	-webkit-transition:opacity .2s ease-in-out 1s;
 	-moz-transition:opacity .2s ease-in-out 1s;
@@ -2818,8 +2808,7 @@ a[href='.././']
 	" + ($SS.conf["Post Form"] === 1 ? "
 	-webkit-transition:bottom .2s ease-in-out;
 	-moz-transition:bottom .2s ease-in-out;
-	-o-transition:bottom .2s ease-in-out;" :
-	($SS.conf["Post Form"] === 2 ? "
+	-o-transition:bottom .2s ease-in-out;" : ($SS.conf["Post Form"] === 2 ? "
 	opacity:1!important;
 	-webkit-transition:opacity .2s ease-in-out;
 	-moz-transition:opacity .2s ease-in-out;
@@ -3230,9 +3219,7 @@ div.reply.lastmuInfo p {
 	opacity:.75;
 	padding:0!important;
     position:fixed;
-	right:" + ($SS.conf["Layout"] === 3 ?
-	(Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : "
-	" + ($SS.conf["Sidebar Position"] === 3 ? "25" : "263") + "px") + "!important;
+	right:" + ($SS.conf["Page Layout"] === 3 ? (Math.min($SS.conf["Non-Sidebar Margin"], 40) / 2 * ($SS.conf["Non-Sidebar Margin"] < 10 ? 3 : 1)) + "%" : ($SS.conf["Sidebar Position"] === 3 ? "25" : "263")) + "px !important;
 	top:47%;
 	width:auto!important;
 	z-index:6!important;

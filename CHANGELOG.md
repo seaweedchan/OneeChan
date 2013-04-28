@@ -1,12 +1,9 @@
-OneeChan changelog
-As of v4.0.9, releases are based on new or redesigned features.
-Items under [Post-Update] are bug fixes added into the official version after the version was initially released.
-
-v4.4.0:
+### v4.4.0:
 -Crunchbang and Yuno emoji
 
-v4.3.9:
+### v4.3.9:
 -Give spoiler styling to <s> elements since moot doesn't know HTML apparently
+
 [Post-Update]
 -Fix "None" and "Overlapping Borders" in Margin Between Replies
 -Fix "Minimal" hopefully
@@ -14,15 +11,17 @@ v4.3.9:
 ahdesuka:
 	-Fix options menu becoming unresponsive when deleting mascot
 
-v4.3.8:
+### v4.3.8:
 -Unmoot /b/
+
 [Post-Update]
 ahodesuka:
 	-Fix mascot adding and deleting
 	-Fix QR field in FF19
 
-v4.3.7:
+### v4.3.7:
 -Support for new catalog links -- subject to change with 4chan X support, I'm sure.
+
 [Post-Update]
 -Get rid of sidebar and sidebar elements on catalog
 -Don't move sticky nav with left sidebar
@@ -38,13 +37,14 @@ Hupotronic:
 -Make Reveal All Spoilers affect catalog
 -Add support for catalog settings menu
 
-v4.3.6:
+### v4.3.6:
 -New option under Updater and Stats Position: Fixed Top Left (default option renamed to Fixed Top Right)
 
-v4.3.5:
+### v4.3.5:
 -Fix issue with #stats and #updater in some cases covering up icons.
 -Fix incorrect not-autohide watcher positioning.
 -Add options for menu / hide button content that accepts text or a URL
+
 [Post-Update]
 -Add tip to empty watcher when auto-hide is disabled
 -Remove gap from former watcher position when auto-hide disabled
@@ -53,52 +53,56 @@ v4.3.5:
 -Max font size changed to 18
 -Capitalize all button names in options, and rename the "Edit" button to "Save" when inside the theme editor
 
-v4.3.4:
+### v4.3.4:
 -New option: Icon Position
 -New option: Updater and Stats Position
 -Defaults reverted to the old layout
 -Expand icon in OneeChan icon theme edited slightly
+
 [Post-Update]
 -NSFW button added. Click anywhere but the button to change SFW theme, click NSFW button to change NSFW theme. Add indicator for SFW and NSFW themes
 -Added SFW button as well. Removed SFW/NSFW Themes option as it is now redundant. Non-button click sets both.
 
-v4.3.3:
+### v4.3.3:
 -#stats and #updater now floating to allow for manual positioning
 -All toolbox icons moved up to the top
 -Expand image controls now autohide
 -New expand icon for OneeChan (to fit in when with the rest of the icons)
 -New option: "Add Background to Stats/Updater"
 
-v4.3.2:
+### v4.3.2:
 -New category: Icons
 -New option: Icon Theme
 -New icon theme: 4chan SS (Raphael)
+
 [Post-Update]
 -Plan 9, GNU, and OpenBSD emoji
 
-v4.3.1:
+### v4.3.1:
 -Redo menu
 
-v4.3.0:
+### v4.3.0:
 -Now allowed to pick "Custom" for Sidebar Side Margin and Non-Sidebar Margin. The latter of which had to be renamed due to bugs.
 -Moved mascot and name down on Float
 
-v4.2.9:
+### v4.2.9:
 -New option: SS-like Sidebar
 -Dont let navtopright overlap menu
 -Only switch placement of submenu if not using right sidebar
 
-v4.2.8:
+### v4.2.8:
 -Added new mascots from /cm/
 -Fix margin for cut-off mascots
+
 [Post-Update]
 -Disable overflow when flipped + left sidebar (buggy)
 -Reduce top padding of slim replies
 -On Fit Width, switch placement of submenu
 -Fix left sidebar + flipped mascot + overflow
 
-v4.2.7:
+### v4.2.7:
 -New theme option: Navigation Opacity
+
 [Post-Update]
 -Move bottom board name depending on QR position
 -Renamed 4chan Rewired to 4chan Rewired Modded, credit given to ahodesuka. Style based on REAL 4chan Rewired coming eventually.
@@ -110,9 +114,10 @@ v4.2.7:
 -Fix .filter_highlight not matching sage color as intended
 -Add default colors to admin/moot
 
-v4.2.6:
+### v4.2.6:
 -Option to disable pages navlinks
 -Option to disable navigation bar
+
 [Post-Update]
 -Fully fix vertical pages
 -Allow reclicking of hide thread button on expanded image
@@ -122,31 +127,34 @@ v4.2.6:
 -Make Yotsuba B's backlink color its original color
 -Fix mobile pagelist showing on normal
 
-v4.2.5:
+### v4.2.5:
 -Added back previous/next links, styled around 4chan X's Index Navigation
+
 [Post-Update]
 -Minimize the effect of partial flashing in Firefox
 -Fix width difference in QR
 -Fix Yotsubas not recoloring html::after
 -Dont hide fixed vertical pages
 
-v4.2.4:
+### v4.2.4:
 -Change #navtopright to make extension buttons position vary depending on whats installed
 -Add background to icons if sidebar is disabled
 
-v4.2.3:
+### v4.2.3:
 -Changed "Side Margin" to "Non-Sidebar Side Margin"
 -Added new option: "Sidebar Side Margin" to customize the other side
 -When sidebar is disabled, reserve edge is disabled, and Layout is set to Fit Width, move the hide thread button and menu button abut 250px to the right to not be hidden behind the OneeChan buttons
+
 [Post-Update]
 -Fully center pagelist of Post Form is set to Float
 -Outline Persistent QR and Auto Hide QR options in 4chan X if unchecked
 
-v4.2.2:
+### v4.2.2:
 -New option: Use Post Info Color
 -New sub-option: Add Shadow?
 -New theme options: Post Info Background Color, Post Info Border Color
 -Added 10px margin underneath ad
+
 [Post-Update]
 -Use new icon for watcher
 -Add unicode icons for 4chan X buttons
@@ -155,11 +163,12 @@ v4.2.2:
 -Fix buttons covered up by backlinks
 -Fix non-default Backlink position being incorrectly positioned
 
-v4.2.1:
+### v4.2.1:
 ahodesuka:
 	- Fix whitespace-only delimiter
 -Added "title" section to Nav Links, controls the on-hover title of custom links
 -Changed all custom nav links defaults to what they'd be without custom nav links enabled -- to be used as a board hider
+
 [Post-Update]
 -New option: Use Title Text for Selected Board (sub-option for Custom Navigation Links)
 -Fix YouTube Link Title
@@ -169,19 +178,21 @@ ahodesuka:
 -Fix Chrome quotelinks not applying line-through
 -Give /f/ columns a border, edit BakaBT for /f/
 
-v4.2.0:
+### v4.2.0:
 ahodesuka:
 	 - Settings window will now close when clicking outside of the window.
 
-v4.1.9:
+### v4.1.9:
 -Unload default 4chan CSS file for slight performance increase
+
 [Post-Update]
 -Remove all ads but one if ads are not disabled
 -New option: Recolor Even Posts
 
-v4.1.8:
+### v4.1.8:
 -Slight performance increase from removal of * selector
 -New option: Navlinks Position
+
 [Post-Update]
 -Rehost all mascots on a secure server -- minus.com -- that supports TLS
 -Fix delimiter
@@ -189,8 +200,9 @@ v4.1.8:
 -Recenter ads
 -Reduce ads to one ad... No reason for three
 
-v4.1.7:
+### v4.1.7:
 -Restyle QR if 4chan Pass is detected (Make SURE you have Mayhem's 4chan X 2.35.3 or higher / ihavenoface's 4chan X 2.35.5 or higher or you will have issues.)
+
 [Post-Update]
 -Fix visibility of Pass-related messages (on login) as well as Pass page colors
 -Remove Mayhem's default box-shadow for .qphl (It was made for Opera but OneeChan does not support Opera)
@@ -202,16 +214,18 @@ ahodesuka:
 	-Don't hide scrollbars when opening options
 -Style /p/ exif data
 
-v4.1.6:
+### v4.1.6:
 -Fix spoiler text overlapping with file input text
 -Stop truncating quick reply error message
+
 [Post-Update]
 -Only reposition non-inline OP menu button
 -Reduce OP menu/hide button opacity so its not as intrusive
 -Apply sage color to #errmsg
 
-v4.1.5:
+### v4.1.5:
 -Add Monokai theme
+
 [Post-Update]
 -Make quick reply .move height and padding consistent
 -Fix top nav color not showing right on hover without custom nav links
@@ -219,15 +233,17 @@ v4.1.5:
 -Use same textarea height in both browsers
 -Fix issue with Consolas and Monospace messing with spacing in options
 
-v4.1.4:
+### v4.1.4:
 -Allow floating QR resizing
+
 [Post-Update]
 -Removed pointer-events of #bBanner when sidebar is disabled
 
-v4.1.3:
+### v4.1.3:
 -Add back in BakaBT color scheme from old OneeChan
 -Make mascot positions more consistent
 -Add "Overlapping Borders" option for Margin Between Replies
+
 [Post-Update]
 -Fix up 4sight
 -Add 4chan Sound Player support from SS
@@ -238,39 +254,43 @@ v4.1.3:
 -Fix board-specific mascots
 -Fix Chrome mascot alignment
 
-v4.1.2:
+### v4.1.2:
 -Change navtopr to navtopright for 4chan X settings button
+
 [Post-Update]
 -Remove regular links in navtopright
 -Fix scrollbar appearing
 Zixaphir:
 	-Automatically disable 4chan's "extension"
 
-v4.1.1:
+### v4.1.1:
 -Fix greentext in Reveal All Spoilers option
 -Add option to disable ads, ads enabled by default (AdBlock users wont see a difference)
 -Fix Backlink font size not abiding by font size option
 -Fix slideout navigation scaling by font size causing some links to be hidden
 -Set expanded images to be covered up by board navigation
 -Add option to toggle slideout announcement
+
 [Post-Update]
 ahodesuka:
   -Fix announcement color
 -Fix size of hide thread button in Opera
 
-v4.1.0:
+### v4.1.0:
 -Fix hidden mascots being selected with Select All
 -Add "Reveal All Spoilers" option
 -Add update, changelog, and issues links
+
 [Post-Update]
 -Added in pinku theme from DrooidKun
 -Fix new links overlapping in other tabs
 -Fix Firefox selection appearance
 -Fix flashing of pink on old highlighted posts
 
-v4.0.9:
+### v4.0.9:
 -Change "Hide Checkboxes" to "Menu-Only Mode" which hides the deleteform as well as checkboxes, for full replacement by 4chan X menu
 -Fix issue where #imgControls checkbox is not hidden (Linux only)
+
 [Post-Update]
 -Fix issue where certain highlighted posts in Chrom* wouldn't get styled
 -Fix issue where body would wait to style
@@ -281,37 +301,37 @@ v4.0.9:
 -Remove background from OP qphl
 -Fix issue with certain themes not apply .qphl border if they have no border
 
-v4.0.8:
+### v4.0.8:
 -Add "Reply Opacity" option in themes' settings for control and possibly speed, defaults to 1.0 except on 安心院なじみ and 4chan Rewired. Edit this to a value of 0.0 to 0.9 if you want transparent replies, 0.0 being fully transparent.
 -Edit colors of Yotsuba/B/P's navigation to look less out of place at the top of the page
 
-v4.0.7:
+### v4.0.7:
 -Fixed a few z-index issues
 -Re-added back in Slideout Navigation with a new option to switch between "List" and "Compact", default to List.
 -Changed 4chan X link to a wrench icon, and OneeChan link to a gear icon
 -Auto detection of light or dark icons based on background color, rather than relying on custom CSS sections
 -Fix /f/ replies ignoring sidebar
 
-v4.0.6:
+### v4.0.6:
 ahokadesuka:
   -Emoji position option
   -SFW/NSFW separate themes option
   -Madotsuki emoji
   -Fixed issues with deleting mascot defaults, and slightly redesigned mascot dialog
 
-v4.0.5:
+### v4.0.5:
 -Bring back navigation/pages styling from userstyle
 
-v4.0.4:
+### v4.0.4:
 -Fix /f/
 -Revert Hide Tripcode option for Smart Tripcode Hider
 -Add "Hide Filtered 4chan X Links" option
 -Fix autohide thread watcher option when disabled
 
-v4.0.3:
+### v4.0.3:
 -z-index tweaks
 
-v4.0.2:
+### v4.0.2:
 -Add zenburned theme
 -Add new Patchouli mascot
 -Tweak prefetch label
@@ -321,30 +341,30 @@ v4.0.2:
 -Move navigation links based on side bar and side margin
 
 
-v4.0.0:
+### v4.0.0:
 -Moved to userscript, forked now from 4chan Style Script rather than AppChan
 -New Themes: Original Minimalistic Mayhem, Solarized Light, Blackboard, Vimyanized Dark, and everything that was already in 4chan SS
 
-v3.4
+### v3.4
 -New icons to replace old ones
 -Operating System emoji
 -Support for new 4chan X menu
 -Performance improvements
 -New option: Hide Checkboxes?
 
-v3.3
+### v3.3
 -Code tag support
 -YouTube URL Replacer / Link Title support
 -New option: Reveal All Spoilers
 
-v3.2
+### v3.2
 -Fix for Chrome users for many colors being off due to Moot adding !important everywhere
 
-v3.1
+### v3.1
 -Updated for the new HTML
 -Expand Textarea on Focus -> Expand Inputs on Focus (with just textarea as an option)
 
-v3.0
+### v3.0
 -New mascots: Fluttershy, Dawn, Tardis
 -New option: Margin Between Replies
 -New option: Remove filtered backlinks
@@ -366,7 +386,7 @@ v3.0
 -Bottom padding made more consistent and aligned with quick reply
 -Remove white/green backgrounds from text board sections
 
-v2.9
+### v2.9
 -New option: Underline links ([Reply], etc)
 -New option: Slimmer Replies
 -New option: Slideout Navigation (for those who want to remove it)
@@ -378,7 +398,7 @@ v2.9
 -New QR selection: Horizontal Tabbed Slideout (ala Dark Flat)
 -Mascot, delete button, and return button are now repositioned depending on QR type. Use Custom OneeChan Mascot if you'd like to change your mascot's position rather than editing it from OneeChan itself.
 
-v2.8
+### v2.8
 -Non-Compact mode fixed with new QR previews section
 -Delete/Return buttons moved and redone so as to not cover Submit button on hover -- Now hovering delete icon immediately brings up the delete button at the cursor
 -Fix issue where image thumbnails overlap QR
@@ -387,7 +407,7 @@ v2.8
 -New option: Current Board Highlighting. No longer has the color it did when the option existed in AppChan, so that it fits in in all color schemes.
 -New option: reCAPTCHA Opacity. Selections are values from 0.1 til 1.0, letting you choose your own.
 
-v2.7
+### v2.7
 -Muted color scheme redone and added in
 -PaisleyChan split into Lite and full versions, the full being closer to the original PaisleyChan, Lite being the colors only.
 -Terminal color scheme added in for pretending to be Viper
@@ -397,17 +417,17 @@ v2.7
 -New QR replies section (after you click the +) moved down near the button
 -Firefox Browse button moved to the left, away from the Submit button
 
-v2.6
+### v2.6
 -Bugfixes and polish for last update
 -PaisleyChan color scheme added (open to suggestions for it -- sorry, no cool name effects without hurting performance)
 -Navigation links moved so as to not overlap header
 
-v2.5
+### v2.5
 -Post Area and Quick Reply options merged
 -Quick Reply redone for new Quick Reply, which is made optional
 -TextareaHeight removed to keep mascot support in both old and new QR
 
-v2.4:
+### v2.4:
 seaweed:
 -"Toolbox" toolbar redone, icons made smaller and moved to be less intrusive
 -New Margin Style option: "Match Sidebar"
@@ -419,13 +439,13 @@ seaweed:
 zixaphir:
 -4sight changed to take up window
 
-v2.3:
+### v2.3:
 -New color scheme: Minimalistic Mayhem
 -Miku mascot changed
 -Gasai Yuno mascot added
 -Stickies and closed threads given better indication
 
-v2.2:
+### v2.2:
 -Fixed toolbox color looking off in Yotsuba
 -New "Normal (4chan default)" added to Margin Style option
 -Fixed issues with moot's announcements on the error page
@@ -454,7 +474,7 @@ v2.2:
 -Shana mascot edited to remove bottom padding
 -Fixed issue where pages links were centered for the whole page and not just the posts instead
 
-v2.1:
+### v2.1:
 -Opera support! Lots of bug fixes and design updates for Opera.
 -Moot's Announcement bug fixes when not button-only
 -Various improvements for the toolbox
@@ -465,7 +485,7 @@ v2.1:
 -Fixed issue where quote highlighting is disabled despite 4chan X options in a few light color schemes
 -Fix text selecting issue in a few color schemes where selected text would have drop shadows
 
-v2.0:
+### v2.0:
 -New toolbox! Icons added to replace delete buttons, slideout nav, thread watcher, etc.
 -4chan X option animations nuked because they don't work very well
 -Green background from 4chan X's updater on new count removed
@@ -478,7 +498,7 @@ v2.0:
 -Removed resize grip from textarea since it doesn't do anything
 -Slideout Watcher and Moot's Announcements options redone for toolbox
 
-v1.1:
+### v1.1:
 -New option: Slideout Watcher?
 -Noko/Sega Identifiers moved into their own option, separate from Sage Identifier
 -Sans-serif removed, replaced with separate Arial and Helvetica fonts
@@ -489,7 +509,7 @@ v1.1:
 -Report button redesign removed because it doesn't work with Chrome
 -Fixes for 4sight
 
-v1.0:
+### v1.0:
 -Slideout navigation support for box-shadow and border-radius added
 -Announcement issues from AppChan fixed, font sizes reduced
 -Front page centering issue from AppChan fixed (issue was Firefox only)
@@ -505,25 +525,25 @@ v1.0:
 -New mascots added (Azusa, Seraphim, Asuka, Patchouli)
 -Made #header slightly transparent
 
-v0.5:
+### v0.5:
 -New option: Textarea height
 -Redesigned report button
 -Slideout navigation word spacing fix
 
-v0.4:
+### v0.4:
 -Thread watcher redone
 -Positioning changes to eliminate awkward empty space
 
-v0.3:
+### v0.3:
 -Removed risque mascots to make OneeChan appropriate for Userstyles.org
 -Fixed #navbot positioning issue
 -Modified #header and #navbot colors in every color scheme
 
-v0.2:
+### v0.2:
 -Removed Majics Mode
 -Removed Transparent Replies option
 -Moved Sage/Noko/Sega identifiers (from Majics Mode and Sage Identifier) into new option: Sage/Noko/Sega Identifiers
 -Moved custom board names into new option: Custom Board Names
 
-v0.1:
+### v0.1:
 -OneChan is created!
