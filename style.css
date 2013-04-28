@@ -208,13 +208,15 @@ span.lit,
 #updater {
 	margin-right: 4px !important;
 }
+#updater, #thread-stats {
+	position: relative !important;
+	bottom: 1px;
+}
 .settings-link {
 	position: relative !important;
-	bottom: 4px;
-	padding: 8px !important;
+	bottom: 5px;
+	padding: 9px !important;
 	opacity: .6 !important;
-	height: 14px !important;
-	width: 15px !important;
 	z-index: 5;
 	font-size: 0 !important;
 	color: transparent !important;
@@ -227,8 +229,7 @@ a:not([href]),
 #playerDiv a,
 #playerDiv a:hover,
 a[href='javascript:;'],
-.settings-link::before,
-#menu>.entry
+.settings-link::before
 {
 	color:" + $SS.theme.jlinkColor.hex + "!important;
 }
@@ -587,7 +588,9 @@ tr,
 table.postForm > tbody > tr > td:first-child,
 table.exif td,
 label#prefetch::after,
-strong[style='color:#000'] 
+strong[style='color:#000'],
+div.entry,
+label.entry
 {
 	color:" + $SS.theme.textColor.hex + "!important;
 }
@@ -934,21 +937,13 @@ div.postContainer, div.replyContainer
     width: 20px !important;
     padding-top: 1px !important;
 }
-div.reply .report_button, .hide-reply-button, div.reply .menu-button
+div.reply .report_button, .hide-reply-button, div.reply .menu-button:not(:hover)
 {
     opacity: 0 !important;
 }
-form .replyContainer:not(:hover) div.reply .report_button, form .replyContainer:not(:hover) div.reply .menu-button, form .replyContainer:not(:hover) .hide-reply-button {
-    -webkit-transition: opacity .3s ease-out 0s !important;
-    -moz-transition: opacity .3s ease-out 0s !important;
-    -o-transition: opacity .3s ease-out 0s !important;
-}
-  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu-button, form .replyContainer:hover .hide-reply-button
+  form .replyContainer:hover div.reply .report_button, form .replyContainer:hover div.reply .menu-button:not(:hover), form .replyContainer:hover .hide-reply-button
 {
-    opacity: 1 !important;
-    -webkit-transition: opacity .3s ease-in .5s !important;
-    -moz-transition: opacity .3s ease-in .5s !important;
-    -o-transition: opacity .3s ease-in .5s !important;
+    opacity: 0.6 !important;
 }
  div.reply input:checked
 {
@@ -958,8 +953,10 @@ div.reply .report_button, div.reply .menu-button
 {
     position: absolute !important;
     right: 33px !important;
-    right: 13px !important;
-    top: 5px !important;
+    right: 10px !important;
+    top: 3px !important;
+    bottom: auto !important;
+	left: auto !important;
 }
 .thread > .hide-thread-button:not(.hidden_thread) 
 {
@@ -974,9 +971,8 @@ div.reply .report_button, div.reply .menu-button
 	top: 1px !important;
 	right: 15px !important;
 	opacity: 0.6 !important;
-}
-.thread > .opContainer > .op > .postInfo > .menu-button:hover, .thread > .hide-thread-button:not(.hidden_thread):hover {
-	opacity: 1.0 !important;
+	bottom: auto !important;
+	left: auto !important;
 }
 .hidden_thread {
 	padding: 4px !important;
@@ -1060,13 +1056,6 @@ body:not(.catalog) .thread
     margin-right: 5px !important;
     margin-left: 5px !important;
     z-index: 2;
-}
-html .inline .report_button, html .inline .menu-button 
-{
-	opacity: 1 !important;
-	position: relative !important;
-	top: -2px !important;
-	right: 1px !important;
 }
 
 " + ($SS.conf["Layout"] === 1 ?
@@ -1168,15 +1157,6 @@ div.post:not(#qp):not([hidden]):not(#exlinks-options):not(#exdetails);
     margin:0!important;
     vertical-align:top;
 }
-.report_button
-{
-	background-position:0 -16px;
-    vertical-align:top!important;
-	" + ($SS.conf["Layout"] !== 2 ? "
-	position:absolute;
-	right:12px;
-    top:0;" : "") + "
-}
 .inline .report_button,
 #qp .report_button
 {
@@ -1213,44 +1193,23 @@ a.hide-thread-button>span,
     width:auto!important;
 }
 " + ($SS.conf["Layout"] !== 2 ?
-".stub>.menu-button
-{
-	position:absolute;
-	right:16px;
-	top:6px;
-    z-index:3;
-}
+"
 .stub > a:not([class]) > span {
 position: relative !important;
 bottom: 1px !important;
 }" : "") + "
-a.hide-thread-button>span,
-.hide-reply-button:not(.stub)>span
-{
-	background-position:-80px 0;
-}
 .stub>a:first-child>span,
 .hidden_thread a:first-child>span
 {
-	background-position:-80px -16px;
 	vertical-align:middle!important;
 	-webkit-transition:all .1s ease-in-out;
 	-moz-transition:all .1s ease-in-out;
 	-o-transition:all .1s ease-in-out;
 }
-.remove
-{
-	background-position:-16px -16px!important;
-}
 .remove,
 #boardNavDesktop>a
 {
 	padding:0!important;
-}
-.menu-button
-{
-    background-position:-32px -16px!important;
-    display: inline !important;
 }
 .remove,
 .hide-reply-button>span,
@@ -1527,14 +1486,6 @@ img[alt=Sticky],
 }
 .close {
 	height:0!important;
-}
-img[alt=Closed]
-{
-	background-position:0 0!important;
-}
-img[alt=Sticky]
-{
-	background-position:-16px 0!important;
 }
 textarea,
 button,
@@ -2414,12 +2365,12 @@ input[name=customIMGB64]+a[name=clearIMG]
 .expand-all-shortcut, .contract-all-shortcut
 {
 	position: relative !important;
-	bottom: 4px;
+	bottom: 5px;
 	margin-right: 4px !important;
 	margin-left: 6px !important;
 	z-index: 10 !important;
 	font-size: 0px !important;
-	padding: 7px !important;
+	padding: 9px !important;
 	overflow:hidden;
 	opacity: 0.6 !important;
 }
@@ -2427,21 +2378,24 @@ input[name=customIMGB64]+a[name=clearIMG]
 {
   opacity: 1 !important;
 }
+.menu-button {
+	font-size: 0 !important;
+	padding: 7px !important;
+	opacity: 0.6 !important;
+	border-radius: 0px !important;
+	border: none !important;
+}
 #header-bar .menu-button
 {
 	position: relative !important;
 	bottom: 5px;
+	font-size: 0 !important;
 	z-index: 10 !important;
-	font-size: 0px !important;
-	padding: 7px !important;
-	overflow:hidden;
-	opacity: 0.6 !important;
-	border-radius: 0px !important;
-	border: none !important;
 	display: inline !important;
 	margin-right: 2px !important;
+	margin-left: 2px !important;
 }
-#header-bar .menu-button:hover
+.menu-button:hover
 {
   opacity: 1 !important;
 }
@@ -2530,14 +2484,12 @@ body>.closed
 
 #OneeChanLink {
 	opacity: .6 !important;
-	height: 13px !important;
-	width: 13px !important;
 	z-index: 5;
-	padding: 1px 8px 0px 7px !important;
-	margin-left: 1px !important;
-	margin-right: 2px !important;
+	padding: 8px !important;
+	font-size: 0 !important;
 	position: relative;
-	top: 1px;
+	bottom: 5px;
+	margin-left: 4px;
 }
 #OneeChanLink:hover {
   opacity: 1 !important;
@@ -3149,81 +3101,13 @@ div.post > blockquote .prettyprint span
 {
     color:" + $SS.theme.textColor.hex + ";
 }
-.hide-reply-button span, .hide-thread-button span, .menu-button {
+.hide-reply-button span, .hide-thread-button span {
 	font-size: 0px !important;
 }
 .hide-reply-button span::after, .hide-thread-button:not(.hidden_thread) span::after {
 	content: " + ($SS.conf["Hide Button Content"].indexOf("http") === 0 ? "url(" + $SS.conf["Hide Button Content"] + ")" : "'" + $SS.conf["Hide Button Content"] + "'") + ";
 	font-size: 12px !important;
 }
-#delform .menu-button::after {
-	content: " + ($SS.conf["Menu Button Content"].indexOf("http") === 0 ? "url(" + $SS.conf["Menu Button Content"] + ")" : "'" + $SS.conf["Menu Button Content"] + "'") + ";
-	font-size: 12px !important;
-}
-" + ($SS.conf["Layout"] !== 2 ? "
-.replyContainer>.hide-reply-button span::after {
-	position: relative;
-	bottom: 2px !important;
-	left: 1px !important;
-}
-.webkit .hide-reply-button span::after {
-	right: -9px !important;
-}
-.hide-thread-button span::after {
-	position: relative;
-	bottom: 0px !important;
-	left: -2px !important;
-}
-.op>.postInfo>.menu-button::after {
-	position: relative;
-	bottom: 2px !important;
-	left: 0px !important;
-}
-.replyContainer>.reply>.postInfo>.menu-button::after {
-	position: relative;
-	bottom: 2px !important;
-	left: -2px !important;
-}
-.inline .menu-button::after {
-	bottom: 0px !important;
-	left: 0px !important;
-	top: 1px !important;
-}
-" : "
-#delform .menu-button {
-margin-right: 3px !important;
-}
-.op>.postInfo>.menu-button::after {
-	position: relative;
-	bottom: 0px !important;
-	left: 0px !important;
-}
-.replyContainer>.reply>.postInfo>.menu-button::after {
-	position: relative;
-	bottom: 1px !important;
-	left: 0px !important;
-}
-.postingMode ~ #delform>.board>.thread>.opContainer>.op>.postInfo>.menu-button::after {
-	position: relative;
-	top: -1px !important;
-}
-.hide-reply-button span::after {
-	position: relative;
-	bottom: 2px !important;
-	left: 0px !important;
-}
-.hide-thread-button span::after {
-	position: relative;
-	bottom: -2px !important;
-	right: 4px !important;
-	left: 0px !important;
-}
-.inline .menu-button::after {
-	bottom: 0px !important;
-	left: 0px !important;
-	top: 1px !important;
-}
-") + "
 .reply {
 	padding-top: 0px !important;
 	padding-left: 0px !important;
@@ -3279,7 +3163,7 @@ pre.prettyprint
 }
 #OneeChanLink
 {
-  background-image: url(\"data:image/svg+xml," + $SS.theme.icons._4chanSS + "\")!important;
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.OneeChan+"\")!important;
 }
 .settings-link
 {
@@ -3289,7 +3173,7 @@ pre.prettyprint
 {
   background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.heart+"\")!important;
 }
-#header-bar .menu-button
+.menu-button
 {
   background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.menuButtonTop+"\")!important;
 }
