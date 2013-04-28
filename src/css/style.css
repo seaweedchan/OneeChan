@@ -73,7 +73,7 @@ span.spoiler:hover, span.spoiler:focus {
 #delform .sideArrows[hidden], #delform div.post[hidden] {
 	display: none !important;
 }
-" + (!$SS.conf["Disable Ads"] ? "img.middlead {
+" + (!$SS.conf["Disable Ads"] ? "div.middlead a img {
 	width: 468px;
 	height: 60px;
 	max-width: 100%;
@@ -505,12 +505,12 @@ a.useremail[href='mailto:sage']:last-of-type::before,
 ($SS.conf["Pages Position"] === 4 ? ".pages," : "" ) +
 ($SS.conf["Disable Ads"] ? "div.center,
 body > div.center:not(:nth-of-type(2)),
-img.topad,
-img.bottomad,
-img.middlead,
+div.topad img,
+div.bottomad img,
+div.middlead img,
 form[action='https://sys.4chan.org/f/post'] ~ div[style='text-align: center'],
 form[action='https://sys.4chan.org/f/up.php']>div[style='text-align: center;']," : "
-div.center img:not(.middlead)," ) + 
+div.center:not(.middlead) img," ) +
 (($SS.conf["Pages Position"] === 3) || ($SS.conf["Pages Position"] === 4) ? ".pages:not(.cataloglink)," : "" ) +
 ($SS.conf["Menu-Only Mode"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") + "
 #imgControls .riceCheck,
