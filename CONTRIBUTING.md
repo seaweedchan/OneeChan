@@ -1,4 +1,3 @@
-# Get OneeChan [HERE](http://seaweedchan.github.io/OneeChan/).
 
 ## Reporting bugs and suggestions
 
