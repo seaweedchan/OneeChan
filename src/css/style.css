@@ -1699,7 +1699,7 @@ td.doubledash
 {
 	height:auto!important;
 	margin:0!important;
-	" + (!$SS.conf["Lighter Logo"] ? "" : "opacity:.5;") + "
+	" + ($SS.conf["Lighter Logo"] ? "" : "opacity:.5;") + "
 	position:relative;
 	z-index:1;
 }
