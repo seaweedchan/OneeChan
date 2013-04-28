@@ -33,7 +33,7 @@
   "author": "seaweedchan",
   "namespace": "seaweedchan.github.com",
   "license": "GPLv3",
-  "readmeFilename": "Readme.md",
+  "readmeFilename": "README.md",
   "engines": {
     "node": ">=0.8"
   }
