@@ -42,25 +42,19 @@ $.queueTask = do ->
     ->
       taskQueue.push arguments
       setTimeout execTask, 0
+$.frag = ->
+  d.createDocumentFragment()
 
-$.debounce = (wait, fn) ->
-  lastCall = 0
-  timeout  = null
-  that     = null
-  args     = null
-  exec = ->
-    lastCall = Date.now()
-    fn.apply that, args
-  ->
-    args = arguments
-    that = this
-    if lastCall < Date.now() - wait
-      return exec()
-    # stop current reset
-    clearTimeout timeout
-    # after wait, let next invocation execute immediately
-    timeout = setTimeout exec, wait
-
+$.nodes = (nodes) ->
+  unless nodes instanceof Array
+    return nodes
+  frag = $.frag()
+  for node in nodes
+    frag.appendChild node
+  frag
+  
+$.add = (parent, el) ->
+  parent.appendChild $.nodes el
 
 $.addClass = (el, className) ->
   el.classList.add className
@@ -70,6 +64,25 @@ $.rm = do ->
     (el) -> el.remove()
   else
     (el) -> el.parentNode?.removeChild el
+
+$.el = (tag, properties) ->
+  el = d.createElement tag
+  $.extend el, properties if properties
+  el
+
+$.asap = (test, cb) ->
+  if test()
+    cb()
+  else
+    setTimeout $.asap, 25, test, cb
+
+$.addStyle = (css, id) ->
+  style = $.el 'style',
+    id: id
+    textContent: css
+  $.asap (-> d.head), ->
+    $.add d.head, style
+  style
 
 $.rmAll = (root) ->
   # jsperf.com/emptify-element

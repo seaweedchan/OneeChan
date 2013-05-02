@@ -20,8 +20,6 @@ Main =
       if div = $('.closeIcon')
         div.textContent = 'x'
 
-      console.log("hello")
-
 #   Pages.init();
 #   RiceInputs.init();
 #   LogoReflect.init();
@@ -69,17 +67,19 @@ Main =
     Mascots.init()
     ###
 
-    if reload
-      # insertCSS()
-      Main.DOMLoaded true
-    else
-      # unless $("link[rel='stylesheet']", d.head) or ($(doc.head) and Main.browser.gecko)
-      # $.ready =>
-      #   insertCSS()
-      #else
-      #  insertCSS()
+    if Main.browser.gecko or $ "link[rel='stylesheet']", d.head
+      Main.insertCSS()
+    else 
       $.ready =>
-        Main.DOMLoaded()
+        Main.insertCSS()
+    $.ready =>
       Main.DOMLoaded()
+
+  insertCSS: ->
+    # $SS.bHideSidebar = $SS.location.sub isnt "boards" or $SS.location.board is "f"
+    # $SS.iSidebarSize = (if $SS.conf["Sidebar Position"] is 3 then 265 else 262)
+    css = ""
+    unless $.id("ch4SS")
+      $.addStyle css, 'ch4SS'
 
 Main.init()

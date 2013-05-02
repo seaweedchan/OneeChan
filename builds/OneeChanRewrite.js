@@ -92,26 +92,26 @@
     }
   })();
 
-  $.debounce = function(wait, fn) {
-    var args, exec, lastCall, that, timeout;
+  $.frag = function() {
+    return d.createDocumentFragment();
+  };
 
-    lastCall = 0;
-    timeout = null;
-    that = null;
-    args = null;
-    exec = function() {
-      lastCall = Date.now();
-      return fn.apply(that, args);
-    };
-    return function() {
-      args = arguments;
-      that = this;
-      if (lastCall < Date.now() - wait) {
-        return exec();
-      }
-      clearTimeout(timeout);
-      return timeout = setTimeout(exec, wait);
-    };
+  $.nodes = function(nodes) {
+    var frag, node, _i, _len;
+
+    if (!(nodes instanceof Array)) {
+      return nodes;
+    }
+    frag = $.frag();
+    for (_i = 0, _len = nodes.length; _i < _len; _i++) {
+      node = nodes[_i];
+      frag.appendChild(node);
+    }
+    return frag;
+  };
+
+  $.add = function(parent, el) {
+    return parent.appendChild($.nodes(el));
   };
 
   $.addClass = function(el, className) {
@@ -131,6 +131,39 @@
       };
     }
   })();
+
+  $.el = function(tag, properties) {
+    var el;
+
+    el = d.createElement(tag);
+    if (properties) {
+      $.extend(el, properties);
+    }
+    return el;
+  };
+
+  $.asap = function(test, cb) {
+    if (test()) {
+      return cb();
+    } else {
+      return setTimeout($.asap, 25, test, cb);
+    }
+  };
+
+  $.addStyle = function(css, id) {
+    var style;
+
+    style = $.el('style', {
+      id: id,
+      textContent: css
+    });
+    $.asap((function() {
+      return d.head;
+    }), function() {
+      return $.add(d.head, style);
+    });
+    return style;
+  };
 
   $.rmAll = function(root) {
     var node;
@@ -186,9 +219,8 @@
           div.textContent = 'C';
         }
         if (div = $('.closeIcon')) {
-          div.textContent = 'x';
+          return div.textContent = 'x';
         }
-        return console.log("hello");
       }
     },
     init: function(reload) {
@@ -204,50 +236,60 @@
         Main.browser.webkit = /AppleWebKit/.test(navigator.userAgent);
         Main.browser.gecko = /Gecko\//.test(navigator.userAgent);
         /*
-        	    Main.location = getLocation()
-        	    
-        	    correct selected theme/mascot after updating
-        	    and the number defaults has changed.
+        Main.location = getLocation()
         
-        	    if (m_VERSION = Config.get("VERSION")) isnt VERSION
-        	      ntMascots = Mascots.defaults.length # new total
-        	      ntThemes = Themes.defaults.length
-        	      otMascots = Config.get("Total Mascots") # old total
-        	      otThemes = Config.get("Total Themes")
-        	      sMascots = Config.get("Selected Mascots")
-        	      sTheme = Config.get("Selected Theme")
-        	      if otMascots isnt ntMascots and otMascots isnt `undefined`
-        	        mDiff = ntMascots - otMascots
-        	        i = 0
-        	        MAX = sMascots.length
+        correct selected theme/mascot after updating
+        and the number defaults has changed.
         
-        	        while i < MAX
-        	          if sMascots[i] < otMascots
-        	            break
-        	          else
-        	            sMascots[i] += mDiff
-        	          ++i
-        	        Config.set "Selected Mascots", sMascots
-        	      if otThemes isnt ntThemes and otThemes isnt `undefined` and sTheme >= otThemes
-        	        sTheme += ntThemes - otThemes
-        	        Config.set "Selected Theme", sTheme
-        	      Config.set "VERSION", VERSION
-        	      Config.set "Total Mascots", ntMascots
-        	      Config.set "Total Themes", ntThemes
-        	  Config.init()
-        	  Themes.init()
-        	  Mascots.init()
+        if (m_VERSION = Config.get("VERSION")) isnt VERSION
+          ntMascots = Mascots.defaults.length # new total
+          ntThemes = Themes.defaults.length
+          otMascots = Config.get("Total Mascots") # old total
+          otThemes = Config.get("Total Themes")
+          sMascots = Config.get("Selected Mascots")
+          sTheme = Config.get("Selected Theme")
+          if otMascots isnt ntMascots and otMascots isnt `undefined`
+            mDiff = ntMascots - otMascots
+            i = 0
+            MAX = sMascots.length
+        
+            while i < MAX
+              if sMascots[i] < otMascots
+                break
+              else
+                sMascots[i] += mDiff
+              ++i
+            Config.set "Selected Mascots", sMascots
+          if otThemes isnt ntThemes and otThemes isnt `undefined` and sTheme >= otThemes
+            sTheme += ntThemes - otThemes
+            Config.set "Selected Theme", sTheme
+          Config.set "VERSION", VERSION
+          Config.set "Total Mascots", ntMascots
+          Config.set "Total Themes", ntThemes
+            Config.init()
+            Themes.init()
+            Mascots.init()
         */
 
       }
-      if (reload) {
-        Main.DOMLoaded(true);
+      if (Main.browser.gecko || $("link[rel='stylesheet']", d.head)) {
+        Main.insertCSS();
       } else {
         $.ready(function() {
-          return Main.DOMLoaded();
+          return Main.insertCSS();
         });
       }
-      return Main.DOMLoaded();
+      return $.ready(function() {
+        return Main.DOMLoaded();
+      });
+    },
+    insertCSS: function() {
+      var css;
+
+      css = "";
+      if (!$.id("ch4SS")) {
+        return $.addStyle(css, 'ch4SS');
+      }
     }
   };
 
