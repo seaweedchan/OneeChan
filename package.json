@@ -1,9 +1,9 @@
 {
-  "name": "OneeChan",
+  "name": "OneeChanRewrite",
   "version": "5.0.0",
   "description": "Customize 4chan to your liking right on the page itself.",
   "meta": {
-    "name": "OneeChan",
+    "name": "OneeChanRewrite",
     "repo": "https://github.com/seaweedchan/OneeChan/",
     "page": "http://seaweedchan.github.io/4chan-x/",
     "mainBranch": "master",
@@ -22,8 +22,11 @@
     "grunt-bump": "~0.0.2",
     "grunt-concurrent": "~0.2.0",
     "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-concat": "~0.2.0",
-    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-compress": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-watch": "~0.3.1",
     "grunt-shell": "~0.2.2"
   },
   "repository": {
