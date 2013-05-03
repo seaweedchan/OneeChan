@@ -1,24 +1,34 @@
 Main = 
   browser: {}
 
-  DOMLoaded: (reload) ->
+  DOMLoaded: ->
     # Options.init()
 
-    unless reload
-      unless $('*[xmlns]') or $.id ('ctxmenu-main')
-        $.rm $ "link[rel='stylesheet']", d.head
+    unless $('*[xmlns]') or $.id ('ctxmenu-main')
+      $.rm $ "link[rel='stylesheet']", d.head
 
-      if div = $('#globalMessage *[style]')
-        div.removeAttribute 'style'
+    if div = $('#globalMessage *[style]')
+      div.removeAttribute 'style'
 
-      if div = $.id('ctxmenu-main')
-        $.addClass doc, 'catalog'
+    if div = $.id('ctxmenu-main')
+      $.addClass doc, 'catalog'
 
-      if div = $('.cataloglink>a')
-        div.textContent = 'C'
+    if div = $('.cataloglink>a')
+      div.textContent = 'C'
 
-      if div = $('.closeIcon')
-        div.textContent = 'x'
+    if div = $('.closeIcon')
+      div.textContent = 'x'
+
+    ###
+    unless Main.browser.webkit
+      checkbox = $$ "input[type=checkbox]", d.body
+      checkbox.RiceCheck()
+
+    if Conf["Smart Tripcode Hider"]
+      name = $("input[name=name]")
+      TripHider.init name
+      TripHider.handle name
+    ###
 
 #   Pages.init();
 #   RiceInputs.init();
@@ -76,9 +86,9 @@ Main =
       Main.DOMLoaded()
 
   insertCSS: ->
-    # $SS.bHideSidebar = $SS.location.sub isnt "boards" or $SS.location.board is "f"
+    # bHideSidebar = $SS.location.sub isnt "boards" or $SS.location.board is "f"
     # $SS.iSidebarSize = (if $SS.conf["Sidebar Position"] is 3 then 265 else 262)
-    css = ""
+    css = ".mobile { display: none; }"
     unless $.id("ch4SS")
       $.addStyle css, 'ch4SS'
 

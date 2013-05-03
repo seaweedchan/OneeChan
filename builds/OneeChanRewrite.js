@@ -2,14 +2,6 @@
   var $, $$, Conf, Config, Main, c, d, doc, g,
     __slice = [].slice;
 
-  Config = {
-    Main: {
-      'Miscellaneous': {
-        'Test': [true, 'This option is a placeholder.']
-      }
-    }
-  };
-
   Conf = {};
 
   c = console;
@@ -202,26 +194,35 @@
 
   Main = {
     browser: {},
-    DOMLoaded: function(reload) {
+    DOMLoaded: function() {
       var div;
 
-      if (!reload) {
-        if (!($('*[xmlns]') || $.id('ctxmenu-main'))) {
-          $.rm($("link[rel='stylesheet']", d.head));
-        }
-        if (div = $('#globalMessage *[style]')) {
-          div.removeAttribute('style');
-        }
-        if (div = $.id('ctxmenu-main')) {
-          $.addClass(doc, 'catalog');
-        }
-        if (div = $('.cataloglink>a')) {
-          div.textContent = 'C';
-        }
-        if (div = $('.closeIcon')) {
-          return div.textContent = 'x';
-        }
+      if (!($('*[xmlns]') || $.id('ctxmenu-main'))) {
+        $.rm($("link[rel='stylesheet']", d.head));
       }
+      if (div = $('#globalMessage *[style]')) {
+        div.removeAttribute('style');
+      }
+      if (div = $.id('ctxmenu-main')) {
+        $.addClass(doc, 'catalog');
+      }
+      if (div = $('.cataloglink>a')) {
+        div.textContent = 'C';
+      }
+      if (div = $('.closeIcon')) {
+        return div.textContent = 'x';
+      }
+      /*
+      unless Main.browser.webkit
+        checkbox = $$ "input[type=checkbox]", d.body
+        checkbox.RiceCheck()
+      
+      if Conf["Smart Tripcode Hider"]
+        name = $("input[name=name]")
+        TripHider.init name
+        TripHider.handle name
+      */
+
     },
     init: function(reload) {
       var m_VERSION,
@@ -286,7 +287,7 @@
     insertCSS: function() {
       var css;
 
-      css = "";
+      css = ".mobile { display: none; }";
       if (!$.id("ch4SS")) {
         return $.addStyle(css, 'ch4SS');
       }
@@ -294,5 +295,69 @@
   };
 
   Main.init();
+
+  Config = {
+    hasGM: typeof GM_deleteValue !== "undefined",
+    init: function() {
+      var key, parseVal;
+
+      parseVal = function(key, val) {
+        var MAX, i, ret;
+
+        if (/^(Selected|Hidden)+\s(Mascots|Themes?)+$/.test(key)) {
+          if (key === "Selected Theme") {
+            return parseInt(val);
+          } else if (key === "NSFW Theme") {
+            return parseInt(val);
+          } else {
+            if (key === "Selected Mascots" && val === 0) {
+              return 0;
+            }
+          }
+          i = 0;
+          MAX = val.length;
+          ret = [];
+          while (i < MAX) {
+            ret[i] = parseInt(val[i]);
+            ++i;
+          }
+          return ret;
+        }
+        if (Array.isArray(val) && typeof val[0] !== "object") {
+          return val[0];
+        } else {
+          return val;
+        }
+      };
+      Conf = [];
+      for (key in defaultConfig) {
+        Conf[key] = parseVal(key, this.get(key));
+      }
+      Conf["Small Font Size"] = (Conf["Font Size"] > 11 && !Conf["Bitmap Font"] ? 12 : Conf["Font Size"]);
+      Conf["Sidebar Position String"] = (Conf["Sidebar Position"] !== 2 ? "right" : "left");
+      return Conf["Sidebar Position oString"] = (Conf["Sidebar Position"] !== 2 ? "left" : "right");
+    },
+    get: function(name) {
+      var val;
+
+      val = (this.hasGM ? GM_getValue(NAMESPACE + name) : localStorage.getItem(NAMESPACE + name));
+      if (val !== undefined) {
+        return JSON.parse(val);
+      }
+      return defaultConfig[name];
+    },
+    set: function(name, val) {
+      name = NAMESPACE + name;
+      if (typeof val !== "number") {
+        val = JSON.stringify(val);
+      }
+      if (this.hasGM) {
+        GM_setValue(name, val);
+      } else {
+        localStorage.removeItem(name, val);
+      }
+      return localStorage.setItem(name, val);
+    }
+  };
 
 }).call(this);
