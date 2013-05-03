@@ -1,10 +1,13 @@
 Options =
   saveAndClose: true
   init: ->
-    a = $("<a id='OneeChanLink' title='OneeChan Settings'>").bind("click", $SS.options.show)
-    $("#shortcuts>.shortcut:last-of-type").before a
+    a = $.el 'span',
+      className: 'shortcut'
+      innerHTML: '[<a href=javascript:; id=OneeChanLink title="OneeChan Settings">OneeChan</a>]'
+    $.on a, 'click', Options.show()
+    $.before $("#shortcuts>.shortcut:last-of-type"), a
 
-  show: ->
+  show: -> # Still gotta rewrite this shit
     unless $("#overlay").exists()
       overlay = $("<div id=overlay>").bind("click", $SS.options.close)
       tOptions = $("<div id=themeoptions class=reply>").bind("click", (e) ->
@@ -55,10 +58,6 @@ Options =
           optionsHTML += "</select></span>"
         else if key is "Font Size"
           optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" + "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></span>"
-        else if key is "Menu Button Content"
-          optionsHTML += "<span class=mOption title='" + des + "'><span>" + key + "</span>" + "<input type=text name='" + key + "' value=" + $SS.conf["Menu Button Content"] + "></span>"
-        else if key is "Hide Button Content"
-          optionsHTML += "<span class=mOption title='" + des + "'><span>" + key + "</span>" + "<input type=text name='" + key + "' value='" + $SS.conf["Hide Button Content"] + "'></span>"
         else if key is "Themes"
           optionsHTML += "</div><input type=radio name=toTab id=tcbThemes hidden><div id=tThemes>"
         else if key is "Mascots"

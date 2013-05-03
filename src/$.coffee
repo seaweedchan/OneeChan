@@ -52,7 +52,7 @@ $.nodes = (nodes) ->
   for node in nodes
     frag.appendChild node
   frag
-  
+
 $.add = (parent, el) ->
   parent.appendChild $.nodes el
 
@@ -64,6 +64,21 @@ $.rm = do ->
     (el) -> el.remove()
   else
     (el) -> el.parentNode?.removeChild el
+
+$.add = (parent, el) ->
+  parent.appendChild $.nodes el
+
+$.prepend = (parent, el) ->
+  parent.insertBefore $.nodes(el), parent.firstChild
+
+$.after = (root, el) ->
+  root.parentNode.insertBefore $.nodes(el), root.nextSibling
+
+$.before = (root, el) ->
+  root.parentNode.insertBefore $.nodes(el), root
+
+$.replace = (root, el) ->
+  root.parentNode.replaceChild $.nodes(el), root
 
 $.el = (tag, properties) ->
   el = d.createElement tag

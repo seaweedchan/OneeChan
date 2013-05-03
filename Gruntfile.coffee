@@ -22,6 +22,7 @@ module.exports = (grunt) ->
           'src/$.coffee'
           'src/Main.coffee'
           'src/Config.coffee'
+          'src/Options.coffee'
         ]
         dest: 'tmp-<%= pkg.type %>/script.coffee'
 

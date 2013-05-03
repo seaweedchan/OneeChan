@@ -1,5 +1,5 @@
 (function() {
-  var $, $$, Conf, Config, Main, c, d, doc, g,
+  var $, $$, Conf, Config, Main, Options, c, d, doc, g,
     __slice = [].slice;
 
   Conf = {};
@@ -124,6 +124,26 @@
     }
   })();
 
+  $.add = function(parent, el) {
+    return parent.appendChild($.nodes(el));
+  };
+
+  $.prepend = function(parent, el) {
+    return parent.insertBefore($.nodes(el), parent.firstChild);
+  };
+
+  $.after = function(root, el) {
+    return root.parentNode.insertBefore($.nodes(el), root.nextSibling);
+  };
+
+  $.before = function(root, el) {
+    return root.parentNode.insertBefore($.nodes(el), root);
+  };
+
+  $.replace = function(root, el) {
+    return root.parentNode.replaceChild($.nodes(el), root);
+  };
+
   $.el = function(tag, properties) {
     var el;
 
@@ -197,6 +217,7 @@
     DOMLoaded: function() {
       var div;
 
+      Options.init();
       if (!($('*[xmlns]') || $.id('ctxmenu-main'))) {
         $.rm($("link[rel='stylesheet']", d.head));
       }
@@ -357,6 +378,135 @@
         localStorage.removeItem(name, val);
       }
       return localStorage.setItem(name, val);
+    }
+  };
+
+  Options = {
+    saveAndClose: true,
+    init: function() {
+      var a;
+
+      a = $.el('span', {
+        className: 'shortcut',
+        innerHTML: '[<a href=javascript:; id=OneeChanLink title="OneeChan Settings">OneeChan</a>]'
+      });
+      return $.before($("#shortcuts>.shortcut:last-of-type"), a);
+    },
+    show: function() {
+      var MAX, cFonts, des, i, id, key, name, optionsHTML, opts, overlay, pVal, tOptions, val, value;
+
+      if (!$("#overlay").exists()) {
+        overlay = $("<div id=overlay>").bind("click", $SS.options.close);
+        tOptions = $("<div id=themeoptions class=reply>").bind("click", function(e) {
+          return e.stopPropagation();
+        });
+        optionsHTML = "<ul id=toNav>" + "<li><label class=selected for=tcbMain>Main</label></li>" + "<li><label for=tcbThemes>Themes</label></li>" + "<li><label for=tcbMascots>Mascots</label></li>" + "</ul><div id=toWrapper><input type=radio name=toTab id=tcbMain hidden checked><div id=tMain>" + "<p><a class=trbtn name=loadSysFonts title='Reqiures flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" + "<span id=SSVersion>OneeChan v" + VERSION + "</span>" + "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=updatelink target='_blank'>Update</a><span class=linkdelimiter> | </span>" + "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changeloglink target='_blank'>Changelog</a><span class=linkdelimiter> | </span>" + "<a href='https://github.com/seaweedchan/OneeChan/issues' id=issueslink target='_blank'>Issues</a></p>";
+        key = void 0;
+        val = void 0;
+        des = void 0;
+        for (key in defaultConfig) {
+          if ((key === "Style Scrollbars" && !$SS.browser.webkit) || key === "Nav Link Delimiter" || /^(Selected|Hidden)+\s(Mascots|Themes?)+$/.test(key)) {
+            continue;
+          }
+          val = $SS.conf[key];
+          des = defaultConfig[key][1];
+          if ((defaultConfig[key][4] === true) && (key === "Non-Sidebar Custom Margin")) {
+            pVal = $SS.conf[defaultConfig[key][2]];
+            id = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
+            optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" + (pVal !== defaultConfig[key][3] ? "hidden" : "") + "><span>" + key + "</span><input name='Non-Sidebar Custom Margin' type=text value=" + $SS.conf["Non-Sidebar Custom Margin"] + "px></label>";
+          } else if ((defaultConfig[key][4] === true) && (key === "Sidebar Side Custom Margin")) {
+            pVal = $SS.conf[defaultConfig[key][2]];
+            id = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
+            optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" + (pVal !== defaultConfig[key][3] ? "hidden" : "") + "><span>" + key + "</span><input name='Sidebar Side Custom Margin' type=text value=" + $SS.conf["Sidebar Side Custom Margin"] + "px></label>";
+          } else if (val === "header") {
+            optionsHTML += "<label class='mOption header'><span>" + key + "</span></label>";
+          } else if (defaultConfig[key][4] === true) {
+            pVal = $SS.conf[defaultConfig[key][2]];
+            id = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
+            optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" + (pVal !== defaultConfig[key][3] ? "hidden" : "") + "><span>" + key + "</span><input" + (val ? " checked" : "") + " name='" + key + "' type=checkbox></label>";
+          } else if (Array.isArray(defaultConfig[key][2])) {
+            opts = (key === "Font Family" ? $SS.fontList || defaultConfig[key][2] : defaultConfig[key][2]);
+            cFonts = [];
+            optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" + "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " hasSub" : "") + ">";
+            i = 0;
+            MAX = opts.length;
+            while (i < MAX) {
+              name = void 0;
+              value = void 0;
+              if (typeof opts[i] === "object") {
+                name = opts[i].name;
+                value = opts[i].value;
+              } else {
+                name = value = opts[i];
+              }
+              if (key === "Font Family") {
+                cFonts.push(value);
+              }
+              optionsHTML += "<option" + (key === "Font Family" ? " style=\"font-family:" + $SS.formatFont(value) + "!important\"" : "") + " value='" + value + "'" + (value === val ? " selected" : "") + ">" + name + "</option>";
+              ++i;
+            }
+            if (key === "Font Family" && cFonts.indexOf($SS.conf["Font Family"]) === -1) {
+              optionsHTML += "<option style=\"font-family:" + $SS.formatFont($SS.conf["Font Family"]) + "!important\" value='" + $SS.conf["Font Family"] + "' selected>" + $SS.conf["Font Family"] + "</option>";
+            }
+            optionsHTML += "</select></span>";
+          } else if (key === "Font Size") {
+            optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" + "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></span>";
+          } else if (key === "Themes") {
+            optionsHTML += "</div><input type=radio name=toTab id=tcbThemes hidden><div id=tThemes>";
+          } else if (key === "Mascots") {
+            optionsHTML += "</div><input type=radio name=toTab id=tcbMascots hidden><div id=tMascot>";
+          } else {
+            optionsHTML += "<label class=mOption title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") + " name='" + key + "' " + (defaultConfig[key][3] === true ? " hasSub" : "") + " type=checkbox></label>";
+          }
+        }
+        optionsHTML += "</div></div><div><a class=trbtn name=save title='Hold any modifier to prevent window from closing'>Save</a><a class=trbtn name=cancel>Cancel</a></div>";
+        tOptions.html(optionsHTML);
+        overlay.append(tOptions);
+        $("#toNav li label", tOptions).bind("click", function(e) {
+          if ($(this).hasClass("selected")) {
+            return;
+          }
+          $("#toNav li label.selected").removeClass("selected");
+          return $(this).addClass("selected");
+        });
+        $("[hasSub]", tOptions).bind("change", function() {
+          var sub;
+
+          id = this.name.replace(/\s/g, "_") + $(this).val();
+          sub = $("." + id);
+          if (sub.exists()) {
+            return sub.each(function() {
+              return $(this).show();
+            });
+          } else {
+            return $("[class*='" + this.name.replace(/\s/g, "_") + "']").each(function() {
+              return $(this).hide();
+            });
+          }
+        });
+        $("a[name=save]", tOptions).bind("click", $SS.options.save);
+        $("a[name=cancel]", tOptions).bind("click", $SS.options.close);
+        $(document).bind("keydown", $SS.options.keydown).bind("keyup", $SS.options.keyup);
+        $("input[name='Font Size']", tOptions).bind("keydown", function(e) {
+          var bitmap;
+
+          val = parseInt($(this).val());
+          bitmap = $(this).parent().nextSibling().children("input[name='Bitmap Font']").val();
+          if (e.keyCode === 38 && (val < MAX_FONT_SIZE || bitmap)) {
+            return $(this).val(++val + "px");
+          } else {
+            if (e.keyCode === 40 && (val > MIN_FONT_SIZE || bitmap)) {
+              return $(this).val(--val + "px");
+            }
+          }
+        });
+        if (!$SS.fontList) {
+          $("a[name=loadSysFonts]", tOptions).bind("click", $SS.options.loadSystemFonts);
+        }
+        $SS.options.createThemesTab(tOptions);
+        $SS.options.createMascotsTab(tOptions);
+        return $(document.body).append(overlay);
+      }
     }
   };
 

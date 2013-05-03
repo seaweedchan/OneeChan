@@ -2,7 +2,7 @@ Main =
   browser: {}
 
   DOMLoaded: ->
-    # Options.init()
+    Options.init()
 
     unless $('*[xmlns]') or $.id ('ctxmenu-main')
       $.rm $ "link[rel='stylesheet']", d.head
