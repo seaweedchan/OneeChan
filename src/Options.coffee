@@ -4,7 +4,7 @@ Options =
     a = $.el 'span',
       className: 'shortcut'
       innerHTML: '[<a href=javascript:; id=OneeChanLink title="OneeChan Settings">OneeChan</a>]'
-    $.on a, 'click', Options.show()
+    # $.on a, 'click', Options.show()
     $.before $("#shortcuts>.shortcut:last-of-type"), a
 
   show: -> # Still gotta rewrite this shit
@@ -107,3 +107,6 @@ Options =
       # mascots tab
       $SS.options.createMascotsTab tOptions
       $(document.body).append overlay
+
+# <~Zixaphir> for el in $$("#themeoptions input[name]:not([name=toTab]), #themeoptions select")
+# <~Zixaphir> name = el.name

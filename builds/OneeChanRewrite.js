@@ -294,13 +294,9 @@
         */
 
       }
-      if (Main.browser.gecko || $("link[rel='stylesheet']", d.head)) {
-        Main.insertCSS();
-      } else {
-        $.ready(function() {
-          return Main.insertCSS();
-        });
-      }
+      $.asap((function() {
+        return $("link[rel='stylesheet']", d.head);
+      }), Main.insertCSS());
       return $.ready(function() {
         return Main.DOMLoaded();
       });

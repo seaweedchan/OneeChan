@@ -77,11 +77,7 @@ Main =
     Mascots.init()
     ###
 
-    if Main.browser.gecko or $ "link[rel='stylesheet']", d.head
-      Main.insertCSS()
-    else 
-      $.ready =>
-        Main.insertCSS()
+    $.asap (-> $("link[rel='stylesheet']", d.head)), Main.insertCSS()
     $.ready =>
       Main.DOMLoaded()
 
