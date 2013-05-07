@@ -84,7 +84,9 @@ Main =
   insertCSS: ->
     # bHideSidebar = $SS.location.sub isnt "boards" or $SS.location.board is "f"
     # $SS.iSidebarSize = (if $SS.conf["Sidebar Position"] is 3 then 265 else 262)
-    css = ".mobile { display: none; }"
+    css = """
+<%= grunt.file.read('src/css/style.css') %>
+    """
     unless $.id("ch4SS")
       $.addStyle css, 'ch4SS'
 

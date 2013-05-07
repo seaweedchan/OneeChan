@@ -322,7 +322,7 @@
     insertCSS: function() {
       var css;
 
-      css = ".mobile { display: none; }";
+      css = ".mobile {\n	display: none;\n}\n/* Some original Yotsuba CSS */\ndiv.post div.file .fileThumb {\n	float: left;\n	margin-left: 20px;\n	margin-right: 20px;\n	margin-top: 3px;\n	margin-bottom: 5px;\n}\n.postContainer {\n	display: block;\n}\ndiv.post blockquote.postMessage {\n	display: block;\n}\ndiv.post {\n	margin: 4px 0;\n}\n#delform div.reply:not([hidden]), div.image_expanded {\n	display: table;\n}\ndiv.thread {\n	margin: 0px;\n	clear: both;\n}\ntable.flashListing {\n	border-spacing: 1px;\n	margin-left: auto;\n	margin-right: auto;\n}\ndiv.pagelist div.pages {\n	padding: 4px;\n}\n.globalMessage {\n	text-align: center;\n}\n.prettyprint {\n    padding: 5px;\n    display: inline-block;\n    max-height: 400px;\n    overflow-x: auto;\n    max-width: 600px;\n}\nspan.spoiler {\n    color: rgb(0, 0, 0) !important;\n    background: none repeat scroll 0% 0% rgb(0, 0, 0) !important;\n}\nspan.spoiler:hover, span.spoiler:focus {\n    color: rgb(255, 255, 255) !important;\n}";
       if (!$.id("ch4SS")) {
         return $.addStyle(css, 'ch4SS');
       }
