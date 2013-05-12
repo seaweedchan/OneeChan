@@ -207,6 +207,17 @@ span.lit,
 #updater {
 	margin-right: 4px !important;
 }
+.expand-all-shortcut::after {
+	content: '';
+	border-left: 1px solid " + $SS.theme.textColor.hex + ";
+	height: 23px;
+	position: absolute;
+	right: 87px;
+	opacity: 0.1;
+}
+#header-bar #thread-stats {
+	margin-right: 8px;
+}
 #header-bar #updater, #header-bar #thread-stats {
 	position: relative !important;
 	top: 4px;
