@@ -182,7 +182,6 @@ a:hover,
 #header-bar>a:hover,
 div.post div.postInfo span~span.postNum a:hover,
 .quotelink:hover,
-.backlink:hover,
 span.lit,
 .useremail>.name:hover,
 .catalog .button:hover
@@ -656,14 +655,6 @@ textarea:-moz-placeholder
 html, body {
 background:" + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex +"!important;
 }
-" + (($SS.conf["Hide Filtered 4chan X Links"] === 1) || ($SS.conf["Hide Filtered 4chan X Links"] === 3) ? ".filtered.backlink
-{ 
-	display: none !important;
-}" : "") + "
-" + (($SS.conf["Hide Filtered 4chan X Links"] === 2) || ($SS.conf["Hide Filtered 4chan X Links"] === 3) ? ".quotelink.filtered
-{ 
-	display: none !important;
-}" : "") + "
 body
 {
 	
@@ -1182,7 +1173,11 @@ a.hide-thread-button>span,
 .stub > a:not([class]) > span {
 position: relative !important;
 bottom: 1px !important;
-}" : "") + "
+}" : "
+.reply {
+	position: relative !important;
+}
+") + "
 .stub>a:first-child>span,
 .hidden_thread a:first-child>span
 {
@@ -1273,9 +1268,8 @@ html .reply.highlight,
 	" + ($SS.conf["Backlinks Position"] !== 1 ? "
 	bottom:2px;
 	position:absolute;
-	" + ($SS.conf["Backlinks Position"] === 2 ? "right" : "left") + ":2px;
+	right:2px;
 	z-index:1;" : "") + "
-	margin-left:-2px;
 }
 #qp .container 
 {
@@ -1284,18 +1278,6 @@ html .reply.highlight,
 #qp div.reply 
 {
 	display: table !important;
-}
-" + ($SS.conf["Backlinks Position"] !== 1 ? "
-.container::before
-{
-	color:rgba(" + $SS.theme.textColor.rgb + ",.4)!important;
-	content:'REPLIES:';
-	padding-right:2px;
-}
-	" : "") + "
-.container>a
-{
-	color:" + $SS.theme.blinkColor.hex + "!important;
 }
 input[type=checkbox]:active,
 input[type=checkbox]:focus,
@@ -1633,13 +1615,6 @@ input[type=radio]:active,
 	background:rgba(" + $SS.theme.inputColor.shiftRGB(40, true) + "," + $SS.theme.replyOp + ")!important;
 	box-shadow:inset rgba(" + $SS.theme.inputColor.shiftRGB(100, true) + ",.4) 0 0 3px,rgba(" + $SS.theme.mainColor.shiftRGB(64) + ",.6) 0 1px!important;
 }
-input[name='Persistent QR']:not([checked]), 
-input[name='Auto Hide QR']:not([checked]),
-input[name='Persistent QR']:not([checked]) + .riceCheck, 
-input[name='Auto Hide QR']:not([checked]) + .riceCheck 
-{
-	outline: 1px solid red !important;
-}
 .replyContainer>.reply input[type=checkbox],
 .replyContainer>.reply .riceCheck,
 {
@@ -1795,6 +1770,12 @@ textarea
 {
 	cursor:default!important;
 }
+#fourchanx-settings .tab-selected {
+	font-weight: 700 !important;
+}
+#fourchanx-settings > nav a {
+	text-decoration: none !important;
+}
 #overlay,
 #overlay2
 {
@@ -1815,6 +1796,7 @@ textarea
 	height:100%;
 	vertical-align:middle;
 }
+
 #addMascot,
 #addTheme,
 #themeoptions
@@ -2378,6 +2360,18 @@ input[name=customIMGB64]+a[name=clearIMG]
 .menu-button:hover
 {
   opacity: 1 !important;
+}
+.backlink {
+	font-size: 0px !important;
+	padding: 6px !important;
+	margin-right: 0px !important;
+	opacity: 0.6 !important;
+	position: relative;
+	bottom: 5px;
+	right: 2px;
+}
+.backlink:hover {
+	opacity: 1 !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
@@ -3025,7 +3019,7 @@ div.post > blockquote .prettyprint span
 	padding-left: 0px !important;
 }
 .replyContainer>.reply>div.postInfo {
-	padding: 2px 50px 1px 12px !important;
+	padding: 2px 0px 1px 12px !important;
 	marigin-top: -1px !important;
 }
 div.post div.postInfo {
@@ -3047,9 +3041,6 @@ div.post div.postInfo {
 	padding-top: 2px !important;
 }
 ") + "
-.thread>.replyContainer>.reply>.postInfo {
-	padding-right: 50px !important;
-}
 .capcodeAdmin>span.name, .capcodeAdmin>strong.capcode {
 	color: red !important;
 }
@@ -3089,6 +3080,9 @@ pre.prettyprint
 .bottom #header-bar .menu-button
 {
   background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.menuButtonBot+"\")!important;
+}
+.backlink {
+	background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.backlink+"\")!important;
 }
 /* Last.mu */
 #delform div.reply.lastmuInfo

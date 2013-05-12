@@ -125,21 +125,10 @@
         ],
         "Backlinks Position":
         [
-            1, "Change the position of 4chan x backlinks",
+            2, "Change the position of 4chan x backlinks",
             [
                 { name: "Default",      value: 1 },
-                { name: "Bottom Right", value: 2 },
-                { name: "Bottom Left",  value: 3 }
-            ]
-        ],
-        "Hide Filtered 4chan X Links":
-        [
-            4, "Hide Backlinks or Quotelinks that are filtered through 4chan X",
-            [
-                { name: "Backlinks",      value: 1 },
-                { name: "Quotelinks", value: 2 },
-                { name: "Both",  value: 3 },
-                { name: "Disabled",  value: 4 }
+                { name: "Bottom Right", value: 2 }
             ]
         ],
         "--Posting--":                  [ "header",  "" ],
@@ -3373,6 +3362,8 @@
                                "<path fill='rgb(" + this.textColor.rgb + ")' d='M12.751,8.042v6.041v9.862c-0.677-0.45-1.636-0.736-2.708-0.736c-2.048,0-3.708,1.025-3.708,2.292c0,1.265,1.66,2.291,3.708,2.291s3.708-1.026,3.708-2.291V13.786l10.915-3.24v9.565c-0.678-0.45-1.635-0.736-2.708-0.736c-2.048,0-3.708,1.025-3.708,2.292c0,1.265,1.66,2.291,3.708,2.291s3.708-1.026,3.708-2.291V10.249V4.208L12.751,8.042z'/></svg>",
                  heart:        "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                                "<path fill='rgb(" + this.textColor.rgb + ")' d='M24.132,7.971c-2.203-2.205-5.916-2.098-8.25,0.235L15.5,8.588l-0.382-0.382c-2.334-2.333-6.047-2.44-8.25-0.235c-2.204,2.203-2.098,5.916,0.235,8.249l8.396,8.396l8.396-8.396C26.229,13.887,26.336,10.174,24.132,7.971z'/></svg>",
+                 backlink:     "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
+                               "<path fill='rgb(" + this.blinkColor.rgb + ")' d='M12.981,9.073V6.817l-12.106,6.99l12.106,6.99v-2.422c3.285-0.002,9.052,0.28,9.052,2.269c0,2.78-6.023,4.263-6.023,4.263v2.132c0,0,13.53,0.463,13.53-9.823C29.54,9.134,17.952,8.831,12.981,9.073z'/></svg>",
             };
 
             if (theme.customCSS)
