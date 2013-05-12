@@ -1427,7 +1427,7 @@ blockquote
 	margin:0!important;
 	padding:" + ($SS.conf["Slim Replies"] ? ($SS.conf["Backlinks Position"] !== 1 ? 8 : 4) + "px 16px" : "12px 22px") + "!important;
 }
-blockquote, .fileInfo {
+blockquote {
 	margin-left: 10px !important;
 }
 #qp div.reply {
@@ -1439,7 +1439,9 @@ blockquote>div[style]
 }
 .fileInfo
 {
-    padding-left:3px!important;
+	font-size: " + (($SS.conf["Font Size"]) - 2) + "px !important;
+	margin-left: 20px;
+	opacity: 0.8;
 }
 .op,
 .thread.hidden
