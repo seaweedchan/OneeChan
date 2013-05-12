@@ -215,6 +215,9 @@ span.lit,
 	right: 87px;
 	opacity: 0.1;
 }
+.reply:not(:hover) .fileInfo>a {
+	opacity: 0;
+}
 #header-bar #thread-stats {
 	margin-right: 8px;
 }
@@ -494,7 +497,6 @@ label#prefetch::after
 #themeoptions #tMascot div a,
 #themeoptions #tThemes>div p a,
 a.useremail[href='mailto:sage']:last-of-type::before,
-.container::before,
 .deleteform::before,
 .trbtn,
 #SSVersion,
@@ -1284,7 +1286,7 @@ html .reply.highlight,
 	" + ($SS.conf["Backlinks Position"] !== 1 ? "
 	bottom:2px;
 	position:absolute;
-	right:2px;
+	right:10px;
 	z-index:1;" : "") + "
 }
 #qp .container 
