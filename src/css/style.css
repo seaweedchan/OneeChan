@@ -207,13 +207,11 @@ span.lit,
 #updater {
 	margin-right: 4px !important;
 }
-#updater, #thread-stats {
+#header-bar #updater, #header-bar #thread-stats {
 	position: relative !important;
-	bottom: 1px;
+	top: 4px;
 }
 .settings-link {
-	position: relative !important;
-	bottom: 5px;
 	padding: 9px !important;
 	opacity: .6 !important;
 	z-index: 5;
@@ -360,7 +358,11 @@ html[xmlns] > body {
 margin-top: 100px !important;
 }
 #shortcuts {
-	margin-top: 1px !important;
+	position: relative;
+	bottom: 2px;
+}
+.gecko #shortcuts {
+	bottom: 3px !important;
 }
 #ft ul {
 	border-top: none !important;
@@ -788,6 +790,9 @@ html:not(.fixed) #header-bar {
 	top: 0px;
 	z-index: 2;
 	padding: 2px;
+}
+.fixed.webkit #header-bar {
+	padding: 1px 4px 4px !important;
 }
 #board-list {
 	vertical-align: middle;
@@ -2326,9 +2331,6 @@ input[name=customIMGB64]+a[name=clearIMG]
 }
 .expand-all-shortcut, .contract-all-shortcut
 {
-	position: relative !important;
-	bottom: 5px;
-	margin-right: 4px !important;
 	margin-left: 6px !important;
 	z-index: 10 !important;
 	font-size: 0px !important;
@@ -2349,8 +2351,6 @@ input[name=customIMGB64]+a[name=clearIMG]
 }
 #header-bar .menu-button
 {
-	position: relative !important;
-	bottom: 5px;
 	font-size: 0 !important;
 	z-index: 10 !important;
 	display: inline !important;
@@ -2411,9 +2411,6 @@ body>.closed
 	z-index: 5;
 	padding: 8px !important;
 	font-size: 0 !important;
-	position: relative;
-	bottom: 5px;
-	margin-left: 4px;
 }
 #OneeChanLink:hover {
   opacity: 1 !important;
@@ -2903,10 +2900,6 @@ a[href='.././']
 	width: 100% !important;
 	float: right !important;
 }
-#qr:not(.has-captcha) #spoilerLabel 
-{
-	bottom: 5px !important;
-}
 #qr:not(.has-captcha) .warning:not(:empty) 
 {
 	padding: 3px 2px !important;
@@ -2924,10 +2917,7 @@ a[href='.././']
 {
 	height: 174px !important;
 }
-#qr:not(.has-captcha) .warning:not(:empty) 
-{
-	padding: 3px 2px !important;
-}") + "
+") + "
 #menu,
 .subMenu
 {

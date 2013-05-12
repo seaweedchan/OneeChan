@@ -688,7 +688,7 @@
                 if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
                     if ((link = $("*[rel='stylesheet']")).exists())
                         link.each(function() { $(this).attr("href", ""); });
-                    
+
                 if ((div = $("#globalMessage *[style]")).exists())
                     div.each(function() { $(this).attr("style", ""); });
 
@@ -947,7 +947,7 @@
             saveAndClose  : true,
             init: function()
             {
-                var a = $("<a id='OneeChanLink' title='OneeChan Settings'>").bind("click", $SS.options.show);
+                var a = $("<a id='OneeChanLink' title='OneeChan Settings' class='shortcut'>").bind("click", $SS.options.show);
                 return $("#shortcuts>.shortcut:last-of-type").before(a);
             },
             show: function()
