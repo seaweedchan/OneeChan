@@ -672,9 +672,6 @@
         browser: { },
         DOMLoaded: function(reload)
         {
-            if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
-                $("link[rel='stylesheet']").remove();
-
             if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
                 document.head.innerHTML = document.head.innerHTML;
 
@@ -688,6 +685,10 @@
                            .bind("QRPostSuccessful", $SS.QRPostSuccessfulHandler)
                            .bind("DOMNodeInserted",  $SS.nodeInsertedHandler);
 
+                if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
+                    if ((link = $("*[rel='stylesheet']")).exists())
+                        link.each(function() { $(this).attr("href", ""); });
+                    
                 if ((div = $("#globalMessage *[style]")).exists())
                     div.each(function() { $(this).attr("style", ""); });
 
@@ -1309,7 +1310,6 @@
                 var div             = $("#themeoptions"),
                     themes          = [],
                     mascots         = [],
-                    links           = [],
                     selectedMascots = [],
                     nsfwTheme,
                     selectedTheme;
@@ -1327,8 +1327,6 @@
                         if (!$("input[name='Bitmap Font']", div).val())
                             val = Math.max(Math.min(val, MAX_FONT_SIZE), MIN_FONT_SIZE);
                     }
-                    else if (name === "Nav Link Delimiter")
-                        val = val.replace(/\s/g, "&nbsp;");
                     else if (name === "Sidebar Side Custom Margin")
                     {
                         val = parseInt(val);
