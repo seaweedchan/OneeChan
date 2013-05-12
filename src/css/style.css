@@ -54,6 +54,16 @@ div.pagelist div.pages {
 }
 .globalMessage {
 	text-align: center;
+	margin-top: 40px;
+}
+.globalMessage strong, .globalMessage h3 {
+	font-weight: normal;
+}
+.hide-announcement {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	margin-top: 20px;
 }
 .prettyprint {
     padding: 5px !important;
@@ -145,7 +155,6 @@ h5
 	margin:.4em 0!important;
 }
 b,
-h3,
 .postInfo .name,
 .postInfo .subject
 {
@@ -165,9 +174,6 @@ span.atn,
 	-webkit-transition:all .1s;
 	-moz-transition:all .1s;
 	-o-transition:all .1s;
-}
-strong, strong>a {
-	font-weight: bold !important;
 }
 .filtered {
 	text-decoration:line-through" + ($SS.conf["Underline Links"] ? " underline" : "") + "!important;
@@ -198,12 +204,6 @@ span.lit,
 }
 #updater, #thread-stats {
 	opacity: 0.7;
-}
-#updater::before, #thread-stats::before {
-	content: '[';
-}
-#updater::after, #thread-stats::after {
-	content: ']';
 }
 #updater {
 	margin-right: 4px !important;
@@ -310,10 +310,6 @@ table.flashListing tr:nth-of-type(2n+1),
 " + ($SS.conf["Recolor Even Posts"] ? ".replyContainer:nth-of-type(even) > div:not(.qphl):not(.sideArrows):not(.lastmuInfo) {background-color:rgba(" + $SS.theme.mainColor.rgb + ", " + ($SS.theme.mainColor.isLight ? "0.7" : "0.5")  + ")!important;
 border:1px solid rgba(" + $SS.theme.brderColor.rgb + ", 0.8) !important;
 }" : "") + "
-.globalMessage
-{
-	background:" + $SS.theme.mainColor.hex + "!important;
-}
 .boxcontent, .top-box, .left-box, .box-outer, .yui-skin-sam .yuimenu .bd
 {
 	background:" + $SS.theme.mainColor.hex + "!important;
@@ -482,7 +478,6 @@ label#prefetch::after
 {
 	font-size:" + ($SS.conf["Bitmap Font"] ? $SS.conf["Font Size"] : 12) + "px!important;
 }
-.globalMessage::before,
 #qr>.move,
 #themeoptions #tMascot div a,
 #themeoptions #tThemes>div p a,
@@ -632,10 +627,6 @@ div.reply.highlight,
 {
 	border-radius: 3px !important;
 }
-.globalMessage
-{
-	border-radius: 3px !important;
-}
 " + ($SS.conf["Post Form"] !== 4 ? "#qr" : "") + "
 { 
 	border-radius: " + ($SS.conf["Sidebar Position"] === 2 ? "0 3px 0 0px" : "3px 0 0 0") + " !important;
@@ -767,7 +758,8 @@ body::before
 .reply,
 .dialog,
 .hidden_thread,
-.stub>a:first-child
+.stub>a:first-child,
+fieldset
 {
 	border:1px solid " + $SS.theme.brderColor.hex + "!important;
 }
@@ -775,10 +767,6 @@ body::before
 {
 	border-" + $SS.conf["Sidebar Position oString"] + ":1px solid " + $SS.theme.brderColor.hex + "!important;
 	border-bottom:1px solid " + $SS.theme.brderColor.hex + "!important;
-}
-.globalMessage
-{
-	border: 1px solid " + $SS.theme.brderColor.hex + "!important;
 }
 " + ($SS.conf["Sidebar Position"] === 3 ? ".globalMessage," : "") + "
 #delform
@@ -2417,56 +2405,6 @@ body>center:nth-of-type(2)
 {
 	position:relative;
 }
-" + (!$SS.conf["Slideout Announcement"] ? "
-.globalMessage 
-{
-	padding-" + $SS.conf["Sidebar Position oString"] + ": " + ($SS.conf["Non-Sidebar Margin"] !== 999 ? ""+ $SS.conf["Non-Sidebar Margin"] + "" : "" + $SS.conf["Non-Sidebar Custom Margin"] + "") + "px !important;
-	margin-top: 40px !important;
-	position: static !important;
-	background: none !important;
-	border: none !important;
-}
-.globalMessage::before 
-{
-	display: none !important;
-}
-div.closed ~ .globalMessage 
-{
-margin-bottom: 20px !important;
-}
-" : "
-.globalMessage 
-{
-    position: absolute !important;													
-    top: -1000px !important;
- 	" + ($SS.conf["Sidebar Position"] !== 2 ? "
-    right: 2px !important;
-    left: auto !important;
-	" : "
-    right: auto !important;
-    left: 2px !important;
-	") + "
-    bottom: auto !important;
-    padding: 10px 5px 10px 5px !important;
-}
-.globalMessage b
-{
-    font-weight: 100 !important;
-}
-table.postForm > tbody > tr > td:first-child
-{
-	background-color: transparent !important;
-}
- .globalMessage:hover
-{
-    position: fixed !important;
-    z-index: 99 !important;
-}
-.globalMessage
-{
-    width: 248px !important;
-}
-") + "
 body>.closed
 {
     height:18px;
@@ -2727,7 +2665,6 @@ a[href='.././']
 #header-bar a.current
 {
 	font-weight: bold !important;
-	font-size: 13px !important;
 }
 #full-board-list {
 	font-size: 0px !important;
@@ -2735,21 +2672,12 @@ a[href='.././']
 #full-board-list a:not(.current) {
 	font-size: 12px !important;
 }
+#full-board-list .fourchanx-link::after,
+#full-board-list .fourchanx-link::before {
+	font-size: 12px !important;
+}
 #full-board-list a {
 	margin-right: 2px;
-	word-spacing: 2px;
-}
-.hide-board-list-button::before {
-	content: '[';
-	font-size: 12px !important;
-	position: relative !important;
-	right: 1px;
-	color: " + $SS.theme.textColor.hex + " !important;
-}
-.hide-board-list-button::after {
-	content: ']';
-	font-size: 12px !important;
-	color: " + $SS.theme.textColor.hex + " !important;
 }
 #qr
 {
@@ -2797,10 +2725,6 @@ a[href='.././']
 	bottom:-225px !important;
 }
 " : "") + "
-#qr-filerm {
-	margin-right: -7px !important;
-	bottom: 7px !important;
-}
 #qr:hover,
 #qr.focus
 {
@@ -2917,7 +2841,6 @@ a[href='.././']
 	float:left;
     height:22px;
     padding:3px 4px!important;
-	" + ($SS.conf["Post Form"] !== 4 ? "margin-right:1px!important; width:75px!important; max-width: 75px !important; min-width: 75px !important;" : "width: 29%!important;") + "
 }
 #qr>form>div:first-child+div,
 #qr>form>div#replies+div,
@@ -3146,9 +3069,6 @@ pre.prettyprint
 }
 .contract-all-shortcut {
 	background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.imgContract+"\")!important;
-}
-.globalMessage::before {
-	content: url(\"data:image/svg+xml,"+$SS.theme.icons.announcement+"\")!important;
 }
 #OneeChanLink
 {

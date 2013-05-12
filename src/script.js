@@ -97,7 +97,6 @@
         "Show Logo Reflection":     [ true,  "Toggle visibility of the logo reflection", "Show Logo", true, true ],
         "Lighter Logo":             [ false, "Toggle opacity of the logo", "Show Logo", true, true ],
         "Auto Hide Thread Watcher": [ true,  "Hides watched threads unless the mouse is over the watcher" ],
-        "Slideout Announcement":    [ true, "Condense the announcement into a button in the sidebar" ],
         "Slideout Navigation Type":
         [
             1, "Change the format of the slideout navigation links",
