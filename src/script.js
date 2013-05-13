@@ -830,7 +830,7 @@
 
             $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                                $SS.location.board === "f";
-            $SS.iSidebarSize = $SS.conf["Sidebar Position"] === 3 ? 265 : 262;
+            $SS.iSidebarSize = $SS.conf["Sidebar Position"] === 3 ? 315 : 312;
             css = "<%= grunt.file.read('tmp/style.min.css') %>";
             if ($("#ch4SS").exists())
                 $("#ch4SS").text(css);

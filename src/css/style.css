@@ -215,9 +215,6 @@ span.lit,
 	right: 87px;
 	opacity: 0.1;
 }
-.reply:not(:hover) .fileInfo>a {
-	opacity: 0;
-}
 #header-bar #thread-stats {
 	margin-right: 8px;
 }
@@ -457,9 +454,6 @@ form[name=post] tr:nth-of-type(3)>td:nth-of-type(3),
 img[alt=Closed],
 img[alt=Sticky],
 .deleteform,
-#imageType+label,
-#qr>form #spoilerLabel,
-.preview>label,
 .remove,
 .mPagelist .pages span,
 div.navLinks,
@@ -481,7 +475,6 @@ textarea,
 {
 	font:" + $SS.conf["Small Font Size"] + "px " + $SS.formatFont($SS.conf["Font Family"]) + "!important;
 }
-#qr>form #spoilerLabel::after,
 button,
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
@@ -581,7 +574,6 @@ input:not(.jsColor),
 textarea,
 tr,
 #qr>.move,
-#qr>form #spoilerLabel::after,
 #themeoptions #toNav li label.selected,
 #themeoptions #toNav li label:hover,
 .deleteform::before,
@@ -1179,13 +1171,13 @@ a.hide-thread-button>span,
 {
     background:rgba(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
 	border:1px solid rgba(" + $SS.theme.brderColor.rgb + ",.4)!important;
-	padding:5px!important;
+	padding:0px!important;
 	border-radius:3px!important;
 	box-shadow:rgba(" + $SS.theme.mainColor.shiftRGB(16) + ",.9) 0 1px 3px;
-    overflow:visible!important;
+  overflow:visible!important;
 	position:relative;
 	z-index:10!important;
-    width:auto!important;
+  width:auto!important;
 }
 " + ($SS.conf["Page Layout"] !== 2 ? "
 .stub > a:not([class]) > span {
@@ -1437,9 +1429,9 @@ blockquote>div[style]
 {
 	border-color:" + $SS.theme.sageColor.hex + "!important;
 }
-.fileInfo
+.reply .fileInfo
 {
-	font-size: " + (($SS.conf["Font Size"]) - 2) + "px !important;
+	font-size: 11px !important;
 	margin-left: 20px;
 	opacity: 0.8;
 }
@@ -1489,7 +1481,6 @@ input#fs_search,
 input.field,
 .webkit select,
 textarea,
-#qr.has-captcha > form #spoilerLabel,
 #options input,
 #qr-filename-container,
 .catalog kbd
@@ -1547,8 +1538,7 @@ input.field:focus,
 {
 	background:rgba(" + $SS.theme.inputColor.hover + "," + $SS.theme.replyOp + ")!important;
 }
-input[type=button],
-#qr input[type=submit]
+input[type=button]
 {
 	height:22px!important;
 	padding:0!important;
@@ -1792,6 +1782,7 @@ textarea
 }
 #fourchanx-settings .tab-selected {
 	font-weight: 700 !important;
+	color: " + $SS.theme.textColor.hex + " !important;
 }
 #fourchanx-settings > nav a {
 	text-decoration: none !important;
@@ -2385,12 +2376,11 @@ input[name=customIMGB64]+a[name=clearIMG]
 	bottom: 5px;
 	right: 2px;
 }
-.backlink:hover {
+.backlink:hover, .backlink.inlined {
 	opacity: 1 !important;
 }
 form[name=post] input[name=email]+label,
 form[name=post] #com_submit+label,
-#qr>form #spoilerLabel::after,
 #imgControls label,
 #navlinks,
 #themeoptions #toNav li label,
@@ -2788,25 +2778,25 @@ a[href='.././']
 .captcha-input {
 	margin-top: 1px !important;
 }
+#qr>form .field:not(textarea)
+{
+	margin-bottom:1px !important;
+}
 #qr textarea
 {
 	min-height:127px !important;
     position:relative;
     " + $SS.conf["Sidebar Position String"] + ":0px !important;
-	" + ($SS.conf["Post Form"] !== 4 ? "resize:none;" : "") + "
+		" + ($SS.conf["Post Form"] !== 4 ? "resize:none;" : "") + "
     width:255px;
     z-index:1;
     min-width: 255px !important;
-	max-width: 255px !important;
+		max-width: 255px !important;
+		margin-bottom: 0px !important;
 }
 #qr-filename-container {
-	min-width: 74% !important;
-	max-width: 74% !important;
 	margin-top: 0px !important;
-}
-#qr:not(.has-captcha)>.move
-{
-	height: 26px !important;
+	height: 24px !important;
 }
 #qr>.move
 {
@@ -2854,10 +2844,6 @@ a[href='.././']
 {
 	clear:both;
 }
-#qr>form .field
-{
-	margin-bottom:1px!important;
-}
 #qr>form>.captcha-img
 {
 	" + ($SS.conf["Post Form"] !== 4 ? "background: none !important;" : "") + "
@@ -2876,28 +2862,6 @@ a[href='.././']
     height:22px;
 	" + ($SS.conf["Post Form"] !== 4 ? "width:189px!important;" : "") + "
 }
-#qr>form input[type=submit]
-{
-	" + ($SS.conf["Post Form"] !== 4 ? "width:65px!important;" : "width: 31% !important; margin: 0px -1px !important;") + "
-}
-#qr>form input[type=file]+input[type=submit]
-{
-	position:absolute;
-	right:0;
-	top:0;
-}
-#qr-spoiler-label {
-	position: absolute !important;
-	right: 5px !important;
-	bottom: 26px !important;
-	background-color: rgba(" + $SS.theme.inputColor.rgb + ",0.5) !important;
-}
-
-.preview>label
-{
-	background:rgba(0,0,0,.75)!important;
-	color:#fff!important;
-}
 #addReply
 {
 	font-size:3.5em!important;
@@ -2908,31 +2872,11 @@ a[href='.././']
 	padding: 1px 2px;
 	text-align:center;
 }
-" + ($SS.conf["Post Form"] === 4 ? "
-#qr:not(.has-captcha) [type='submit'] 
-{
-	margin: 1px -1px 0px 0px !important;
-	width: 100% !important;
-	float: right !important;
-}
-#qr:not(.has-captcha) .warning:not(:empty) 
-{
-	padding: 3px 2px !important;
-}" : "#qr:not(.has-captcha) [type='submit'] 
-{
-	margin: 1px 0px 0px 0px !important;
-	width: 255px !important;
-	float: right !important;
-}
-#qr:not(.has-captcha) #spoilerLabel 
-{
-	bottom: 3px !important;
-}
+" + ($SS.conf["Post Form"] !== 4 ? "
 #qr:not(.has-captcha) textarea 
 {
 	height: 174px !important;
-}
-") + "
+}" : "") + "
 #menu,
 .subMenu
 {
