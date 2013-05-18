@@ -1,32 +1,32 @@
 /* Some original Yotsuba CSS */
 div.post div.file .fileThumb {
-	float: left;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 3px;
-	margin-bottom: 5px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 3px;
+  margin-bottom: 5px;
 }
 .postContainer {
-	display: block;
+  display: block;
 }
 div.post {
-	margin: 4px 0;
+  margin: 4px 0;
 }
 #delform div.reply:not([hidden]), 
 div.image_expanded {
-	display: table !important;
+  display: table !important;
 }
 div.thread {
-	margin: 0px;
-	clear: both;
+  margin: 0px;
+  clear: both;
 }
 table.flashListing {
-	border-spacing: 1px;
-	margin-left: auto;
-	margin-right: auto;
+  border-spacing: 1px;
+  margin-left: auto;
+  margin-right: auto;
 }
 div.pagelist div.pages {
-	padding: 4px;
+  padding: 4px;
 }
 div.pagelist,
 div.pagelist>div {
