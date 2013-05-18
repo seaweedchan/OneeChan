@@ -3,6 +3,7 @@
 .fourchanx-link:not(.hide-board-list-container)::before,
 .fourchanx-link:not(.hide-board-list-container)::after,
 .tab-select:not(:checked) + div,
+iframe[src='about:blank'],
 #absbot {
   display: none;
 }
