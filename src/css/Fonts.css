@@ -1,0 +1,10 @@
+body {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
+  font-size:" + $SS.conf["Font Size"] + "px;
+}
+#themeoptions #toNav li label, 
+.trbtn, 
+#themeoptions #toWrapper > div > p {
+  font-family:sans-serif !important;
+  font-size:12px !important;
+}

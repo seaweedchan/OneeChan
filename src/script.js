@@ -681,9 +681,7 @@
             {
                 $SS.options.init();
 
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
-                           .bind("QRPostSuccessful", $SS.QRPostSuccessfulHandler)
-                           .bind("DOMNodeInserted",  $SS.nodeInsertedHandler);
+                $(document).bind("DOMNodeInserted",  $SS.nodeInsertedHandler);
 
                 if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
                     if ((link = $("*[rel='stylesheet']")).exists())
@@ -692,54 +690,9 @@
                 if ((div = $("#globalMessage *[style]")).exists())
                     div.each(function() { $(this).attr("style", ""); });
 
-                if ((div = $("#ctxmenu-main")).exists()) {
-                    $("body").addClass("catalog");
-                };
-
-                if ((div = $(".cataloglink>a")).exists()) {
-                    div.text("C");
-                };
-
-                if (((style = $("body>style")).exists()) && ($SS.location.board === "b")) {
-                    style.remove();
-                };
-
-                if ((div = $(".cataloglink>a")).exists() && ($SS.conf["Pages Position"] !== 3)) {
-                    $(".pagelist>.pages:not(.cataloglink)").append(div);
-                };
-
-
                 if ((div = $(".closeIcon")).exists()) {
                     div.text("x");
                 };
-
-                if ((div = $("body>a[style='cursor: pointer; float: right;']")).exists())
-                {
-                    div.addClass("sight4");
-                    div.text("");
-                    $("#navtopright").append(div);
-                };
-                setTimeout(function()
-                {
-                    if (!$SS.QRhandled && (div = $("#qr")).exists())
-                        $SS.QRDialogCreationHandler({ target: div });
-
-                    if ((div = $("#imageType+label")).exists())
-                        div.bind("change", function()
-                        {
-                            $(this).toggleClass("imgExpanded");
-                        });
-
-                    if ((div = $("#fs_regex")).exists())
-                        div.riceCheck();
-
-                    if ((a = $(".exlinksOptionsLink")).exists())
-                    {
-                        $("#navtopright").append(a);
-                    };
-
-
-                });
             }
             
             $SS.pages.init();
@@ -830,7 +783,6 @@
 
             $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                                $SS.location.board === "f";
-            $SS.iSidebarSize = $SS.conf["Sidebar Position"] === 3 ? 315 : 312;
             css = "<%= grunt.file.read('tmp/style.min.css') %>";
             if ($("#ch4SS").exists())
                 $("#ch4SS").text(css);
@@ -854,31 +806,6 @@
                 if (!$SS.browser.webkit)
                     $("input[type=checkbox]", e.target).riceCheck();
             }
-        },
-        QRDialogCreationHandler: function(e)
-        {
-            var qr = e.target;
-
-            if ($SS.conf["Post Form"] !== 4)
-                $(".move", qr).bind("click", function(){ $("form :focus", qr).blur(); });
-
-            if ($SS.conf["Expanding Form Inputs"])
-                $("#dump~input", qr).each(function(){ $(this).after($("<span>" + $(this).attr("placeholder"))); });
-
-            $("input,textarea,select", qr).bind("focus", function(){ $("#qr").addClass("focus"); })
-                                          .bind("blur", function(){ $("#qr").removeClass("focus"); });
-
-            if ($SS.conf["Smart Tripcode Hider"])
-                $("input[name=name]").each(function()
-                {
-                    $SS.tripHider.init($(this));
-                    $SS.tripHider.handle(this);
-                });
-
-            if (!$SS.browser.webkit)
-                $("input[type=checkbox]", qr).riceCheck();
-
-            $SS.QRhandled = true;
         },
 
         /* CONFIG */
@@ -947,8 +874,23 @@
             saveAndClose  : true,
             init: function()
             {
-                var a = $("<a id='OneeChanLink' title='OneeChan Settings' class='shortcut'>").bind("click", $SS.options.show);
-                return $("#shortcuts>.shortcut:last-of-type").before(a);
+                var a = document.createElement("a");
+                a.textContent = "OneeChan";
+                a.href = "javascript:;";
+                a.addEventListener("click", this.show);
+
+                this.createEntry(a);
+            },
+            createEntry: function(a)
+            {
+                return document.dispatchEvent(new CustomEvent("AddMenuEntry",
+                {
+                    detail: {
+                        el   : a,
+                        order : 112,
+                        type : "header"
+                    }
+                }));
             },
             show: function()
             {

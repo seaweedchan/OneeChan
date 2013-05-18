@@ -1,0 +1,21 @@
+/* Hide things we don't want */
+.mobile,
+#header-bar .fourchanx-link::before,
+#header-bar .fourchanx-link::after,
+#absbot {
+  display: none;
+}
+/* Get rid of Chrome input outlines, and link outlines */
+input:focus, 
+textarea:focus, 
+a
+{
+  outline:none!important;
+  -moz-outline:none!important;
+  -moz-user-focus:none!important;
+}
+/* Hide unwanted horizontal lines, while keeping them */
+body>hr,
+#delform>hr {
+  border-width: 0px;
+}

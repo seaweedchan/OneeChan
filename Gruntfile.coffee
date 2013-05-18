@@ -23,6 +23,10 @@ module.exports = (grunt) ->
             'src/meta/metadata.js'
             'src/script.js'
           ]
+      style:
+        options: concatOptions
+        files:
+          'tmp/style.css': 'src/style.js' 
 
 #      css:
 #        options: concatOptions
@@ -45,7 +49,7 @@ module.exports = (grunt) ->
 #
     cssmin:
       minify:
-        src: 'src/css/style.css'
+        src: 'tmp/style.css'
         dest: 'tmp/style.min.css'
 
     shell:
@@ -81,6 +85,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'build', [
+    'concat:style'
     'cssmin:minify'
     'concat:userscript'
     'clean:tmp'

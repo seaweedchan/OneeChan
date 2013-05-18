@@ -1,0 +1,65 @@
+/* Some original Yotsuba CSS */
+div.post div.file .fileThumb {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+.postContainer {
+	display: block;
+}
+div.post {
+	margin: 4px 0;
+}
+#delform div.reply:not([hidden]), 
+div.image_expanded {
+	display: table !important;
+}
+div.thread {
+	margin: 0px;
+	clear: both;
+}
+table.flashListing {
+	border-spacing: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.pagelist div.pages {
+	padding: 4px;
+}
+div.pagelist,
+div.pagelist>div {
+  float: left;
+}
+.prettyprint {
+  padding: 5px !important;
+  display: inline-block;
+  max-height: 400px;
+  overflow-x: auto;
+  max-width: 600px;
+}
+span.spoiler {
+  color: rgb(0, 0, 0) !important;
+  background: none repeat scroll 0% 0% rgb(0, 0, 0) !important;
+}
+span.spoiler:hover, 
+span.spoiler:focus {
+  color: rgb(255, 255, 255) !important;
+}
+#globalMessage,
+.boardBanner {
+  text-align: center;
+}
+div.sideArrows {
+  float: left;
+  margin-right: 2px;
+  margin-top: 0px;
+  margin-left: 2px;
+}
+hr {
+  clear: both;
+}
+#boardNavDesktopFoot {
+  clear: both;
+}
