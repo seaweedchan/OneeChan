@@ -892,7 +892,10 @@
         var a = document.createElement("a");
         a.textContent = "OneeChan";
         a.href = "javascript:;";
-        a.addEventListener("click", this.show);
+        a.addEventListener("click", function() {
+          $SS.options.show();
+          return $("#menu").remove();
+        });
 
         this.createEntry(a);
       },
