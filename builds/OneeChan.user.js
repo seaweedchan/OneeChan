@@ -919,7 +919,7 @@
             "<li><label class=selected for=tcbMain>Main</label></li>" +
             "<li><label for=tcbThemes>Themes</label></li>" +
             "<li><label for=tcbMascots>Mascots</label></li>" +
-            "</ul><div id=toWrapper><input type=radio class=tab-select name=toTab id=tcbMain hidden checked><div id=tMain>" +
+            "</ul><form id=toWrapper><input type=radio class=tab-select name=toTab id=tcbMain hidden checked><div id=tMain>" +
             "<p><a class=trbtn name=loadSysFonts title='Reqiures flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
             "<span id=SSVersion>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=updatelink target='_blank'>Update</a><span class=linkdelimiter> | </span>" +
@@ -1035,7 +1035,7 @@
             }
             else if (key === "Themes")
             {
-              optionsHTML += "</div><input type=radio class=tab-select name=class=tab-select  id=tcbThemes hidden><div id=tThemes>";
+              optionsHTML += "</div><input type=radio class=tab-select name=toTab class=tab-select  id=tcbThemes hidden><div id=tThemes>";
             }
             else if (key === "Mascots")
             {
@@ -1046,7 +1046,7 @@
                       " name='" + key + "' " + (defaultConfig[key][3] === true ? " hasSub" : "")  + " type=checkbox></label>";
           }
 
-          optionsHTML += "</div></div><div><a class=trbtn name=save title='Hold any modifier to prevent window from closing'>Save</a><a class=trbtn name=cancel>Cancel</a></div>";
+          optionsHTML += "</div></form><div><a class=trbtn name=save title='Hold any modifier to prevent window from closing'>Save</a><a class=trbtn name=cancel>Cancel</a></div>";
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
 
