@@ -32,6 +32,10 @@ div.pagelist,
 div.pagelist>div {
   float: left;
 }
+div.pagelist>div span {
+  padding: 4px;
+  display: inline-block;
+}
 .prettyprint {
   padding: 5px !important;
   display: inline-block;

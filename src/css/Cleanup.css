@@ -1,7 +1,7 @@
 /* Hide things we don't want */
 .mobile,
-#header-bar .fourchanx-link::before,
-#header-bar .fourchanx-link::after,
+.fourchanx-link:not(.hide-board-list-container)::before,
+.fourchanx-link:not(.hide-board-list-container)::after,
 #absbot {
   display: none;
 }
