@@ -2,6 +2,7 @@
 .mobile,
 .fourchanx-link:not(.hide-board-list-container)::before,
 .fourchanx-link:not(.hide-board-list-container)::after,
+.tab-select:not(:checked) + div,
 #absbot {
   display: none;
 }

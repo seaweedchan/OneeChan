@@ -62,7 +62,7 @@
       ]
     ],
     "Expanded Images Cover QR": [ true, "Lets expanded images overlap the quick reply" ],
-    "Menu-Only Mode":           [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Hide Checkboxes":           [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
@@ -144,9 +144,6 @@
     ],
     "Smart Tripcode Hider":     [ false, "Hides the name field if the value contains a tripcode" ],
     "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
-    "--Icons--":                     [ "header",  "" ],
-    "Menu Button Content": [ "❖", "http://url.com/link.png or ❖" ],
-    "Hide Button Content": [ "✗", "http://url.com/link.png or ✗" ],
     "--Script Settings--":                     [ "header",  "" ],
     "Disable Ads":              [ true, "Disables ads on 4chan" ],
     "--Font--":                     [ "header",  "" ],
@@ -904,7 +901,7 @@
             "<li><label class=selected for=tcbMain>Main</label></li>" +
             "<li><label for=tcbThemes>Themes</label></li>" +
             "<li><label for=tcbMascots>Mascots</label></li>" +
-            "</ul><div id=toWrapper><input type=radio name=toTab id=tcbMain hidden checked><div id=tMain>" +
+            "</ul><div id=toWrapper><input type=radio class=tab-select name=toTab id=tcbMain hidden checked><div id=tMain>" +
             "<p><a class=trbtn name=loadSysFonts title='Reqiures flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
             "<span id=SSVersion>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=updatelink target='_blank'>Update</a><span class=linkdelimiter> | </span>" +
@@ -1018,24 +1015,13 @@
               optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" +
                       "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></span>";
             }
-      
-            else if (key === "Menu Button Content")
-            {
-              optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + "</span>" +
-                      "<input type=text name='" + key + "' value=" + $SS.conf["Menu Button Content"] + "></span>";
-            }
-            else if (key === "Hide Button Content")
-            {
-              optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + "</span>" +
-                      "<input type=text name='" + key + "' value='" + $SS.conf["Hide Button Content"] + "'></span>";
-            }
             else if (key === "Themes")
             {
-              optionsHTML += "</div><input type=radio name=toTab id=tcbThemes hidden><div id=tThemes>";
+              optionsHTML += "</div><input type=radio class=tab-select name=class=tab-select  id=tcbThemes hidden><div id=tThemes>";
             }
             else if (key === "Mascots")
             {
-              optionsHTML += "</div><input type=radio name=toTab id=tcbMascots hidden><div id=tMascot>";
+              optionsHTML += "</div><input type=radio class=tab-select name=toTab id=tcbMascots hidden><div id=tMascot>";
             }
             else // checkbox
               optionsHTML += "<label class=mOption title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") +

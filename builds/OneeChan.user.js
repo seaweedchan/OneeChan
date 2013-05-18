@@ -80,7 +80,7 @@
       ]
     ],
     "Expanded Images Cover QR": [ true, "Lets expanded images overlap the quick reply" ],
-    "Menu-Only Mode":           [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Hide Checkboxes":           [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
@@ -162,9 +162,6 @@
     ],
     "Smart Tripcode Hider":     [ false, "Hides the name field if the value contains a tripcode" ],
     "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
-    "--Icons--":                     [ "header",  "" ],
-    "Menu Button Content": [ "❖", "http://url.com/link.png or ❖" ],
-    "Hide Button Content": [ "✗", "http://url.com/link.png or ✗" ],
     "--Script Settings--":                     [ "header",  "" ],
     "Disable Ads":              [ true, "Disables ads on 4chan" ],
     "--Font--":                     [ "header",  "" ],
@@ -801,7 +798,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}";
+      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -922,7 +919,7 @@
             "<li><label class=selected for=tcbMain>Main</label></li>" +
             "<li><label for=tcbThemes>Themes</label></li>" +
             "<li><label for=tcbMascots>Mascots</label></li>" +
-            "</ul><div id=toWrapper><input type=radio name=toTab id=tcbMain hidden checked><div id=tMain>" +
+            "</ul><div id=toWrapper><input type=radio class=tab-select name=toTab id=tcbMain hidden checked><div id=tMain>" +
             "<p><a class=trbtn name=loadSysFonts title='Reqiures flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
             "<span id=SSVersion>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=updatelink target='_blank'>Update</a><span class=linkdelimiter> | </span>" +
@@ -1036,24 +1033,13 @@
               optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" +
                       "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></span>";
             }
-      
-            else if (key === "Menu Button Content")
-            {
-              optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + "</span>" +
-                      "<input type=text name='" + key + "' value=" + $SS.conf["Menu Button Content"] + "></span>";
-            }
-            else if (key === "Hide Button Content")
-            {
-              optionsHTML += "<span class=mOption title=\'" + des + "\'><span>" + key + "</span>" +
-                      "<input type=text name='" + key + "' value='" + $SS.conf["Hide Button Content"] + "'></span>";
-            }
             else if (key === "Themes")
             {
-              optionsHTML += "</div><input type=radio name=toTab id=tcbThemes hidden><div id=tThemes>";
+              optionsHTML += "</div><input type=radio class=tab-select name=class=tab-select  id=tcbThemes hidden><div id=tThemes>";
             }
             else if (key === "Mascots")
             {
-              optionsHTML += "</div><input type=radio name=toTab id=tcbMascots hidden><div id=tMascot>";
+              optionsHTML += "</div><input type=radio class=tab-select name=toTab id=tcbMascots hidden><div id=tMascot>";
             }
             else // checkbox
               optionsHTML += "<label class=mOption title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") +
