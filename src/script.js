@@ -1235,7 +1235,7 @@
       },
       save: function()
       {
-        var div             = $("#themeoptions"),
+        var div             = $("#oneechan-options"),
           themes          = [],
           mascots         = [],
           selectedMascots = [],
@@ -1243,7 +1243,7 @@
           selectedTheme;
 
         // Save main
-        $("#themeoptions input[name]:not(.tab-select), #themeoptions select").each(function()
+        $("#oneechan-options input[name]:not(.tab-select), #oneechan-options select").each(function()
         {
           var name = $(this).attr("name"),
             val  = $(this).val();
@@ -1269,17 +1269,17 @@
         });
 
         // Save Themes
-        $("#themeoptions #themes-section>div").each(function(index)
+        $("#oneechan-options #themes-section>div").each(function(index)
         {
           var oldIndex = parseInt(this.id.substr(5));
           if (!$SS.conf["Themes"][oldIndex].default)
             themes.push($SS.conf["Themes"][oldIndex]);
         });
 
-        selectedTheme = (selectedTheme = $("#themeoptions #themes-section>div.selected")).exists() ?
+        selectedTheme = (selectedTheme = $("#oneechan-options #themes-section>div.selected")).exists() ?
           parseInt(selectedTheme.attr("id").substr(5)) : 0;
 
-        nsfwTheme = (nsfwTheme = $("#themeoptions #themes-section>div.nsfw")).exists() ?
+        nsfwTheme = (nsfwTheme = $("#oneechan-options #themes-section>div.nsfw")).exists() ?
           parseInt(nsfwTheme.attr("id").substr(5)) : 0;
 
         $SS.Config.set("Themes", themes);
@@ -1288,7 +1288,7 @@
         $SS.Config.set("Hidden Themes", $SS.conf["Hidden Themes"]);
 
         // Save Mascots
-        $("#themeoptions #mascot-section>div").each(function(index)
+        $("#oneechan-options #mascot-section>div").each(function(index)
         {
           var oldIndex = parseInt(this.id.substr(6));
           if ($(this).hasClass("selected"))
@@ -1327,7 +1327,7 @@
           }
         }
 
-        div = $("<div id=addTheme>");
+        div = $("<div id='add-theme'>");
 
         var innerHTML = "<label>" +
         "<span>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
@@ -1501,7 +1501,7 @@
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
 
-        div = $("<div id=addMascot>").html("<label><span>Image:</span><input type=text name=customIMG value='" +
+        div = $("<div id='add-mascot'>").html("<label><span>Image:</span><input type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "[Base 64 Encoded Image]' disabled=true") : "'") +
             "></label>" +
             "<label title='Auto goes according to the post forms position' for=null><span>Alignment/Offset:</span>" +
@@ -2517,7 +2517,7 @@
         if (!this.hasInit)
         {
           if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"])
-            $("input[type=checkbox]:not(#imageExpand)").riceCheck();
+            $("input[type=checkbox]").riceCheck();
           else if (!$SS.browser.webkit)
             $("input#prefetch").riceCheck();
 
@@ -2527,7 +2527,7 @@
              !$SS.conf["Hide Checkboxes"] &&
              !$(".postInfo>.riceCheck").exists())
         {
-          $("input[type=checkbox]:not(#imageExpand)").riceCheck();
+          $("input[type=checkbox]").riceCheck();
           return this.hasInit = false;
         }
       }

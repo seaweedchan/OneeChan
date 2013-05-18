@@ -798,7 +798,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}";
+      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}#add-mascot,#add-theme,#oneechan-options{border:0!important;text-align:right!important;width:600px;padding:5px!important;border-radius:5px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:442px}#add-mascot{height:125px}#oneechan-options>div{padding:5px}.options-button{color:" + $SS.theme.jlinkColor.hex + ";display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;background:-webkit-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(20)) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-moz-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-o-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));border-radius:3px;box-shadow:rgba(0,0,0,.3) 0 0 2px}.options-button:hover,#selectImage>input[type=file]:hover+.options-button{background:rgba(60,60,60," + $SS.theme.replyOp + ");background:-webkit-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(40) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-moz-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(40) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-o-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(40) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "))}.options-button:active,#selectImage>input[type=file]:active+.options-button{box-shadow:inset rgba(0,0,0,.3) 0 0 2px,rgba(0,0,0,.3) 0 0 2px}#selectImage{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}#selectImage input[type=file]{position:absolute;visibility:hidden;cursor:pointer}.options-button-small{padding:2px 5px;min-width:30px}#oneechan-options #options-nav{list-style:none;margin:0;padding:0;position:absolute;top:-26px}#oneechan-options #options-nav li{float:left;margin:0;padding:0}#oneechan-options #options-nav li label{background:rgba(" + $SS.theme.mainColor.shiftRGB(-10) + "," + $SS.theme.replyOp + ");color:#888!important;display:block;height:16px;margin:0 2px;padding:5px 10px;text-align:center;width:75px;border-radius:5px 5px 0 0;-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out}#oneechan-version{opacity:.5;padding-right:5px;padding-left:35px}.link-delim{opacity:.4}#issues-link{padding-right:10px}#oneechan-options #options-container{background:rgb(" + $SS.theme.mainColor.shiftRGB(-12) + ");box-shadow:inset rgba(0,0,0,.3) 0 0 5px,rgba(" + $SS.theme.mainColor.shiftRGB(32) + ",.6) 0 1px 3px;border-radius:5px}#oneechan-options #options-container,#oneechan-options #options-container>div{height:400px}#oneechan-options #options-container>div{overflow:auto}#oneechan-options #options-container>[name=toTab]:not(:checked)+div{display:none}#oneechan-options #main-section .option{display:block;border-bottom:1px solid rgba(" + $SS.theme.mainColor.rgb + ",.3);border-top:1px solid rgba(0,0,0,.1);height:20px;padding:0 3px;vertical-align:top}#oneechan-options #main-section .option span{float:left;line-height:20px!important}#oneechan-options #main-section .option:first-child{border-top:0!important}#oneechan-options #main-section .option:last-child{border-bottom:0!important}#oneechan-options #main-section select[name='Font Family'] option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}#oneechan-options #main-section .suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}#oneechan-options #main-section .suboption{margin-left:16px}#oneechan-options #themes-section>div{opacity:.5;-webkit-transition:all .1s;-moz-transition:all .1s;-o-transition:all .1s}#oneechan-options #themes-section>div:hover,#oneechan-options #themes-section>div.selected,#oneechan-options #themes-section>div.nsfw{opacity:1}#oneechan-options #themes-section .reply{margin:2px 0!important;padding:2px!important;position:relative;text-align:left;width:100%;border-radius:2px!important}#oneechan-options #themes-section>div p{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}#oneechan-options #themes-section>div:hover p{opacity:1}#oneechan-options #themes-section>div p a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}#oneechan-options #themes-section>div h3{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s}#oneechan-options #themes-section>div.nsfw .h3nsfw{opacity:1;right:3px;z-index:1}#oneechan-options #themes-section>div.selected .h3sfw{opacity:1;right:3px;z-index:1}#oneechan-options #themes-section>div.selected.nsfw h3:not(.h3both){opacity:0!important;right:300px!important;z-index:0!important}#oneechan-options #themes-section>div.selected.nsfw .h3both{opacity:1;right:3px;z-index:1}#oneechan-options #mascot-section{text-align:center}#oneechan-options #options-container>div>p{bottom:10px;left:10px;position:absolute}#oneechan-options #options-container>div>p{margin:0}#oneechan-options #mascot-section div{background-position:center top!important;background-repeat:no-repeat!important;background-size:cover!important;display:inline-block;height:257px;margin:2px;opacity:.75;position:relative;width:185px;border-radius:10px;-webkit-transition:all .1s;-moz-transition:all .1s;-o-transition:all .1s}#oneechan-options #mascot-section div:hover{opacity:1}#oneechan-options #mascot-section div.selected,#oneechan-options #mascot-section div.nsfw{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;opacity:1;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}#oneechan-options #mascot-section div a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3)}#oneechan-options #mascot-section div a:not([href]):hover{background:rgba(0,0,0,.5)}#oneechan-options #mascot-section div a[title=Delete],#oneechan-options #mascot-section div a[title=Hide]{left:0;border-radius:10px 0}#oneechan-options #mascot-section div a[title=Edit]{right:0;border-radius:0 10px}#oneechan-options label>input[type=checkbox],#oneechan-options label>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}#oneechan-options span>select,#oneechan-options span>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin:0!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#add-mascot{width:350px!important}#add-mascot>div{padding:5px}#add-mascot>label{display:block}#add-mascot>label>span,#add-theme>label>span{float:left;line-height:22px;padding-left:5px}#add-mascot>label>input[type=text],#add-mascot>label>select,#add-mascot>label>textarea{margin-top:1px!important;width:200px}#add-mascot select[name=mPosition],#add-mascot input[name=mOffset][type=text]{width:80px}#add-mascot>label>textarea{height:20px;line-height:20px;overflow:hidden;resize:none}#add-mascot>label>input[type=checkbox],#add-mascot>label>.riceCheck{margin-top:5px}";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -1253,7 +1253,7 @@
       },
       save: function()
       {
-        var div             = $("#themeoptions"),
+        var div             = $("#oneechan-options"),
           themes          = [],
           mascots         = [],
           selectedMascots = [],
@@ -1261,7 +1261,7 @@
           selectedTheme;
 
         // Save main
-        $("#themeoptions input[name]:not(.tab-select), #themeoptions select").each(function()
+        $("#oneechan-options input[name]:not(.tab-select), #oneechan-options select").each(function()
         {
           var name = $(this).attr("name"),
             val  = $(this).val();
@@ -1287,17 +1287,17 @@
         });
 
         // Save Themes
-        $("#themeoptions #themes-section>div").each(function(index)
+        $("#oneechan-options #themes-section>div").each(function(index)
         {
           var oldIndex = parseInt(this.id.substr(5));
           if (!$SS.conf["Themes"][oldIndex].default)
             themes.push($SS.conf["Themes"][oldIndex]);
         });
 
-        selectedTheme = (selectedTheme = $("#themeoptions #themes-section>div.selected")).exists() ?
+        selectedTheme = (selectedTheme = $("#oneechan-options #themes-section>div.selected")).exists() ?
           parseInt(selectedTheme.attr("id").substr(5)) : 0;
 
-        nsfwTheme = (nsfwTheme = $("#themeoptions #themes-section>div.nsfw")).exists() ?
+        nsfwTheme = (nsfwTheme = $("#oneechan-options #themes-section>div.nsfw")).exists() ?
           parseInt(nsfwTheme.attr("id").substr(5)) : 0;
 
         $SS.Config.set("Themes", themes);
@@ -1306,7 +1306,7 @@
         $SS.Config.set("Hidden Themes", $SS.conf["Hidden Themes"]);
 
         // Save Mascots
-        $("#themeoptions #mascot-section>div").each(function(index)
+        $("#oneechan-options #mascot-section>div").each(function(index)
         {
           var oldIndex = parseInt(this.id.substr(6));
           if ($(this).hasClass("selected"))
@@ -1345,7 +1345,7 @@
           }
         }
 
-        div = $("<div id=addTheme>");
+        div = $("<div id='add-theme'>");
 
         var innerHTML = "<label>" +
         "<span>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
@@ -1519,7 +1519,7 @@
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
 
-        div = $("<div id=addMascot>").html("<label><span>Image:</span><input type=text name=customIMG value='" +
+        div = $("<div id='add-mascot'>").html("<label><span>Image:</span><input type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "[Base 64 Encoded Image]' disabled=true") : "'") +
             "></label>" +
             "<label title='Auto goes according to the post forms position' for=null><span>Alignment/Offset:</span>" +
@@ -2535,7 +2535,7 @@
         if (!this.hasInit)
         {
           if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"])
-            $("input[type=checkbox]:not(#imageExpand)").riceCheck();
+            $("input[type=checkbox]").riceCheck();
           else if (!$SS.browser.webkit)
             $("input#prefetch").riceCheck();
 
@@ -2545,7 +2545,7 @@
              !$SS.conf["Hide Checkboxes"] &&
              !$(".postInfo>.riceCheck").exists())
         {
-          $("input[type=checkbox]:not(#imageExpand)").riceCheck();
+          $("input[type=checkbox]").riceCheck();
           return this.hasInit = false;
         }
       }
