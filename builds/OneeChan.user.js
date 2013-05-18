@@ -798,7 +798,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}#add-mascot,#add-theme,#oneechan-options{border:0!important;text-align:right!important;width:600px;padding:5px!important;border-radius:5px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:442px}#add-mascot{height:125px}#oneechan-options>div{padding:5px}.options-button{color:" + $SS.theme.jlinkColor.hex + ";display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;background:-webkit-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(20)) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-moz-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-o-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));border-radius:3px;box-shadow:rgba(0,0,0,.3) 0 0 2px}.options-button:hover,#selectImage>input[type=file]:hover+.options-button{background:rgba(60,60,60," + $SS.theme.replyOp + ");background:-webkit-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(40) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-moz-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(40) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "));background:-o-linear-gradient(top,rgba(" + $SS.theme.mainColor.shiftRGB(40) + "," + $SS.theme.replyOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + "))}.options-button:active,#selectImage>input[type=file]:active+.options-button{box-shadow:inset rgba(0,0,0,.3) 0 0 2px,rgba(0,0,0,.3) 0 0 2px}#selectImage{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}#selectImage input[type=file]{position:absolute;visibility:hidden;cursor:pointer}.options-button-small{padding:2px 5px;min-width:30px}#oneechan-options #options-nav{list-style:none;margin:0;padding:0;position:absolute;top:-26px}#oneechan-options #options-nav li{float:left;margin:0;padding:0}#oneechan-options #options-nav li label{background:rgba(" + $SS.theme.mainColor.shiftRGB(-10) + "," + $SS.theme.replyOp + ");color:#888!important;display:block;height:16px;margin:0 2px;padding:5px 10px;text-align:center;width:75px;border-radius:5px 5px 0 0;-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out}#oneechan-version{opacity:.5;padding-right:5px;padding-left:35px}.link-delim{opacity:.4}#issues-link{padding-right:10px}#oneechan-options #options-container{background:rgb(" + $SS.theme.mainColor.shiftRGB(-12) + ");box-shadow:inset rgba(0,0,0,.3) 0 0 5px,rgba(" + $SS.theme.mainColor.shiftRGB(32) + ",.6) 0 1px 3px;border-radius:5px}#oneechan-options #options-container,#oneechan-options #options-container>div{height:400px}#oneechan-options #options-container>div{overflow:auto}#oneechan-options #options-container>[name=toTab]:not(:checked)+div{display:none}#oneechan-options #main-section .option{display:block;border-bottom:1px solid rgba(" + $SS.theme.mainColor.rgb + ",.3);border-top:1px solid rgba(0,0,0,.1);height:20px;padding:0 3px;vertical-align:top}#oneechan-options #main-section .option span{float:left;line-height:20px!important}#oneechan-options #main-section .option:first-child{border-top:0!important}#oneechan-options #main-section .option:last-child{border-bottom:0!important}#oneechan-options #main-section select[name='Font Family'] option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}#oneechan-options #main-section .suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}#oneechan-options #main-section .suboption{margin-left:16px}#oneechan-options #themes-section>div{opacity:.5;-webkit-transition:all .1s;-moz-transition:all .1s;-o-transition:all .1s}#oneechan-options #themes-section>div:hover,#oneechan-options #themes-section>div.selected,#oneechan-options #themes-section>div.nsfw{opacity:1}#oneechan-options #themes-section .reply{margin:2px 0!important;padding:2px!important;position:relative;text-align:left;width:100%;border-radius:2px!important}#oneechan-options #themes-section>div p{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}#oneechan-options #themes-section>div:hover p{opacity:1}#oneechan-options #themes-section>div p a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}#oneechan-options #themes-section>div h3{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s}#oneechan-options #themes-section>div.nsfw .h3nsfw{opacity:1;right:3px;z-index:1}#oneechan-options #themes-section>div.selected .h3sfw{opacity:1;right:3px;z-index:1}#oneechan-options #themes-section>div.selected.nsfw h3:not(.h3both){opacity:0!important;right:300px!important;z-index:0!important}#oneechan-options #themes-section>div.selected.nsfw .h3both{opacity:1;right:3px;z-index:1}#oneechan-options #mascot-section{text-align:center}#oneechan-options #options-container>div>p{bottom:10px;left:10px;position:absolute}#oneechan-options #options-container>div>p{margin:0}#oneechan-options #mascot-section div{background-position:center top!important;background-repeat:no-repeat!important;background-size:cover!important;display:inline-block;height:257px;margin:2px;opacity:.75;position:relative;width:185px;border-radius:10px;-webkit-transition:all .1s;-moz-transition:all .1s;-o-transition:all .1s}#oneechan-options #mascot-section div:hover{opacity:1}#oneechan-options #mascot-section div.selected,#oneechan-options #mascot-section div.nsfw{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;opacity:1;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}#oneechan-options #mascot-section div a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3)}#oneechan-options #mascot-section div a:not([href]):hover{background:rgba(0,0,0,.5)}#oneechan-options #mascot-section div a[title=Delete],#oneechan-options #mascot-section div a[title=Hide]{left:0;border-radius:10px 0}#oneechan-options #mascot-section div a[title=Edit]{right:0;border-radius:0 10px}#oneechan-options label>input[type=checkbox],#oneechan-options label>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}#oneechan-options span>select,#oneechan-options span>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin:0!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#add-mascot{width:350px!important}#add-mascot>div{padding:5px}#add-mascot>label{display:block}#add-mascot>label>span,#add-theme>label>span{float:left;line-height:22px;padding-left:5px}#add-mascot>label>input[type=text],#add-mascot>label>select,#add-mascot>label>textarea{margin-top:1px!important;width:200px}#add-mascot select[name=mPosition],#add-mascot input[name=mOffset][type=text]{width:80px}#add-mascot>label>textarea{height:20px;line-height:20px;overflow:hidden;resize:none}#add-mascot>label>input[type=checkbox],#add-mascot>label>.riceCheck{margin-top:5px}";
+      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}.reply,.dialog{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important}#add-mascot,#add-theme,#oneechan-options{border:0!important;text-align:right!important;width:600px;padding:5px!important;border-radius:5px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:432px}.options-close,.options-container{padding:5px}#add-mascot{height:125px}#options-container{background:rgb(" + $SS.theme.mainColor.shiftRGB(-12) + ");box-shadow:inset rgba(0,0,0,.3) 0 0 5px,rgba(" + $SS.theme.mainColor.shiftRGB(32) + ",.6) 0 1px 3px;border-radius:5px}#options-container,.options-section{height:400px}.options-section{overflow:auto}#main-section .option{display:block;border-bottom:1px solid rgba(" + $SS.theme.mainColor.rgb + ",.3);border-top:1px solid rgba(0,0,0,.1);height:20px;padding:0 6px;vertical-align:top}.option-title{float:left;line-height:20px!important}#main-section .option:first-child{border-top:0!important}#main-section .option:last-child{border-bottom:0!important}select[name='Font Family']>option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}.suboption{margin-left:16px}.theme-preview{cursor:default;opacity:.5;transition:all .1s;-webkit-transition:all .1s}.theme-preview:hover,.theme-preview.selected,.theme-preview.nsfw{opacity:1}#themes-section .reply{margin:2px 0!important;padding:2px!important;position:relative;text-align:left;width:100%;border-radius:2px!important}.theme-buttons-container{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}.theme-preview:hover .theme-buttons-container{opacity:1}.theme-buttons-container>a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}.theme-preview .sfw-label{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;transition:all .3s;-webkit-transition:all .3s}.theme-preview.nsfw .notsafe{opacity:1;right:3px;z-index:1}.theme-preview.selected .safe{opacity:1;right:3px;z-index:1}.theme-preview.selected.nsfw .sfw-label:not(.both){opacity:0!important;right:300px!important;z-index:0!important}.theme-preview.selected.nsfw .both{opacity:1;right:3px;z-index:1}#mascot-section{text-align:center}.mascot-preview{background-position:center top!important;background-repeat:no-repeat!important;background-size:cover!important;display:inline-block;height:257px;margin:2px;opacity:.75;position:relative;width:185px;border-radius:10px;transition:all .1s;-webkit-transition:all .1s}.mascot-preview:hover{opacity:1}.mascot-preview.selected{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;opacity:1;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}.mascot-preview a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3)}.mascot-preview a:not([href]):hover{background:rgba(0,0,0,.5)}.mascot-link.delete{left:0;border-radius:10px 0}.mascot-link.edit{right:0;border-radius:0 10px}#add-mascot{width:350px!important}#mascot-buttons-container{padding:5px}.add-mascot-label{display:block}#add-mascot .option-title,#add-theme .option-title{float:left;line-height:22px;padding-left:5px}.mascot-input,.mascot-select{margin-top:1px!important;width:200px}.mascot-select,.mascot-input.offset{width:80px}.add-mascot-label>input[type=checkbox],.add-mascot-label>.riceCheck{margin-top:5px}#options-tabs{list-style:none;margin:0;padding:0;position:absolute;top:-26px}.tab-item{float:left;margin:0;padding:0}.tab-label{background:rgb(" + $SS.theme.mainColor.rgb + ");color:#888!important;display:block;height:16px;margin:0 2px;padding:5px 10px;text-align:center;width:75px;border-radius:5px 5px 0 0;transition:all .1s ease-in-out;-webkit-transition:all .1s ease-in-out}.tab-label:not(.selected):not(:hover){opacity:.8}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}.buttons-container{bottom:10px;left:10px;position:absolute}.buttons-container{margin:0}.options-button{color:" + $SS.theme.jlinkColor.hex + ";display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;cursor:pointer;background:linear-gradient(rgb(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));background:-webkit-linear-gradient(top,rgb(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));border-radius:3px;box-shadow:rgba(0,0,0,.3) 0 0 2px}.options-button:hover,.import-input:hover+.options-button{background:rgb(" + $SS.theme.mainColor.shiftRGB(20) + ")}.options-button:active,.import-input:active+.options-button{box-shadow:inset rgba(0,0,0,.3) 0 0 2px,rgba(0,0,0,.3) 0 0 2px}.options-button-small{padding:2px 5px;min-width:30px}#import-link{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}.import-input{position:absolute;visibility:hidden;cursor:pointer}label.option>input[type=checkbox],label.option>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}span.option>select,.option>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin:0!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#oneechan-version{opacity:.5;padding-right:5px;padding-left:35px}.link-delim{opacity:.4}#issues-link{padding-right:10px}";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -915,12 +915,12 @@
         {
           var overlay     = $("<div id=overlay>").bind("click", $SS.options.close),
             tOptions    = $("<div id='oneechan-options' class=dialog>").bind("click", function(e) { return e.stopPropagation(); }),
-            optionsHTML = "<ul id=options-nav>" +
-            "<li><label class=selected for=main-select>Main</label></li>" +
-            "<li><label for=themes-select>Themes</label></li>" +
-            "<li><label for=mascots-select>Mascots</label></li>" +
-            "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id=main-section>" +
-            "<p><a class='options-button' name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
+            optionsHTML = "<ul id=options-tabs>" +
+            "<li class='tab-item'><label class='tab-label selected' for=main-select>Main</label></li>" +
+            "<li class='tab-item'><label class='tab-label' for=themes-select>Themes</label></li>" +
+            "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
+            "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
+            "<p class='buttons-container'><a class='options-button' name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
             "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
@@ -976,7 +976,7 @@
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
               optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
-                      (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
+                      (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
                       "</span><input name='Non-Sidebar Custom Margin' type=text value=" + $SS.conf["Non-Sidebar Custom Margin"] + "px></label>";
             }
             else if ((defaultConfig[key][4] === true) && (key === "Sidebar Side Custom Margin"))
@@ -984,25 +984,25 @@
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
               optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
-                      (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
+                      (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
                       "</span><input name='Sidebar Side Custom Margin' type=text value=" + $SS.conf["Sidebar Side Custom Margin"] + "px></label>";
             }
             else if (val === "header") {
-              optionsHTML += "<label class='option header'><span>" + key + "</span></label>";
+              optionsHTML += "<label class='option header'><span class='option-title'>" + key + "</span></label>";
             }
             else if (defaultConfig[key][4] === true) // sub-option
             {
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
               optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
-                      (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
+                      (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
                       "</span><input" + (val ? " checked" : "") + " name='" + key + "' type=checkbox></label>";
             }
             else if (Array.isArray(defaultConfig[key][2])) // select
             {
               var opts = key === "Font Family" ? $SS.fontList || defaultConfig[key][2] : defaultConfig[key][2],
                 cFonts = [];
-              optionsHTML += "<span class=option title=\"" + des + "\"><span>" + key + "</span>" +
+              optionsHTML += "<span class=option title=\"" + des + "\"><span class='option-title'>" + key + "</span>" +
                       "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "")  + ">";
 
               for (var i = 0, MAX = opts.length; i < MAX; ++i)
@@ -1030,33 +1030,33 @@
             }
             else if (key === "Font Size")
             {
-              optionsHTML += "<span class=option title=\"" + des + "\"><span>" + key + "</span>" +
+              optionsHTML += "<span class=option title=\"" + des + "\"><span class='option-title'>" + key + "</span>" +
                       "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></span>";
             }
             else if (key === "Themes")
             {
-              optionsHTML += "</div><input type=radio class=tab-select name=tab-select class=tab-select  id=themes-select hidden><div id=themes-section>";
+              optionsHTML += "</div><input type=radio class=tab-select name=tab-select class=tab-select  id=themes-select hidden><div id='themes-section' class='options-section'>";
             }
             else if (key === "Mascots")
             {
-              optionsHTML += "</div><input type=radio class=tab-select name=tab-select id=mascots-select hidden><div id=mascot-section>";
+              optionsHTML += "</div><input type=radio class=tab-select name=tab-select id=mascots-select hidden><div id='mascot-section' class='options-section'>";
             }
             else // checkbox
-              optionsHTML += "<label class=option title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") +
+              optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + "</span><input" + (val ? " checked" : "") +
                       " name='" + key + "' " + (defaultConfig[key][3] === true ? " has-suboption" : "")  + " type=checkbox></label>";
           }
 
-          optionsHTML += "</div></div><div><a class='options-button' name=save title='Hold any modifier to prevent window from closing'>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
+          optionsHTML += "</div></div><div class='options-close'><a class='options-button' name=save title='Hold any modifier to prevent window from closing'>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
 
 
           // options window
-          $("#options-nav li label", tOptions).bind("click", function(e)
+          $(".tab-label", tOptions).bind("click", function(e)
           {
             if ($(this).hasClass("selected")) return;
 
-            $("#options-nav li label.selected").removeClass("selected");
+            $(".tab-label.selected").removeClass("selected");
             $(this).addClass("selected");
           });
           $("[has-suboption]", tOptions).bind("change", function()
@@ -1101,11 +1101,11 @@
       createThemesTab: function(tOptions)
       {
         var themes = $("#themes-section", tOptions).html(""),
-          p      = $("<p style='bottom:8px!important'>");
+          p      = $("<p class='buttons-container'>");
 
         p.append($("<a class='options-button' name=addTheme>Add", tOptions).bind("click", $SS.options.showTheme));
         p.append($("<a class='options-button' href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
-        p.append($("<div id=selectImage>").append($("<input type=file riced=true>")
+        p.append($("<div id='import-link'>").append($("<input type=file class='import-input' riced=true>")
          .bind("change", function()
         {
           var file = this.files[0],
@@ -1164,7 +1164,7 @@
       createMascotsTab: function(tOptions)
       {
         var mascots = $("#mascot-section", tOptions).html(""),
-          p       = $("<p>");
+          p       = $("<p class='buttons-container'>");
 
         p.append($("<a class='options-button' name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
         p.append($("<a class='options-button' name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
@@ -1348,40 +1348,40 @@
         div = $("<div id='add-theme'>");
 
         var innerHTML = "<label>" +
-        "<span>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
+        "<span class='option-title'>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
         "</label><label>" +
-        "<span>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "'" :
+        "<span class='option-title'>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "'" :
         ($SS.validBase64(tEdit.bgImg) ? "[Base 64 Encoded Image]' disabled=true" : "'")) : "'") + "></label><label>" +
-        "<span>BG Repeat:</span><select name=bgR>" +
+        "<span class='option-title'>BG Repeat:</span><select name=bgR>" +
         "<option" + (bEdit && themeR === "no-repeat" ? " selected" : "") + ">no-repeat</option>" +
         "<option" + (bEdit && themeR === "repeat" ? " selected" : "") + ">repeat</option>" +
         "<option" + (bEdit && themeR === "repeat-x" ? " selected" : "") + ">repeat-x</option>" +
         "<option" + (bEdit && themeR === "repeat-y" ? " selected" : "") + ">repeat-y</option>" +
         "</select></label><label>" +
-        "<span>BG Attachment:</span><select name=bgA>" +
+        "<span class='option-title'>BG Attachment:</span><select name=bgA>" +
         "<option" + (bEdit && themeA === "fixed" ? " selected" : "") + ">fixed</option>" +
         "<option" + (bEdit && themeA === "scroll" ? " selected" : "") + ">scroll</option>" +
         "</select></label><label>" +
-        "<span>BG Position-X:</span><select name=bgPX>" +
+        "<span class='option-title'>BG Position-X:</span><select name=bgPX>" +
         "<option" + (bEdit && themePX === "left" ? " selected" : "") + ">left</option>" +
         "<option" + (bEdit && themePX === "center" ? " selected" : "") + ">center</option>" +
         "<option" + (bEdit && themePX === "right" ? " selected" : "") + ">right</option>" +
         "</select></label><label>" +
-        "<span>BG Position-Y:</span><select name=bgPY>" +
+        "<span class='option-title'>BG Position-Y:</span><select name=bgPY>" +
         "<option" + (bEdit && themePY === "top" ? " selected" : "") + ">top</option>" +
         "<option" + (bEdit && themePY === "center" ? " selected" : "") + ">center</option>" +
         "<option" + (bEdit && themePY === "bottom" ? " selected" : "") + ">bottom</option>" +
         "</select></label><label>" +
-        "<span>Reply Opacity:</span><input type=text name=replyOp value='" + (bEdit ? tEdit.replyOp : "1.0") + "'></label><label>" +
-        "<span>Navigation Opacity:</span><input type=text name=navOp value='" + (bEdit ? tEdit.navOp : "0.9") + "'>" +
+        "<span class='option-title'>Reply Opacity:</span><input type=text name=replyOp value='" + (bEdit ? tEdit.replyOp : "1.0") + "'></label><label>" +
+        "<span class='option-title'>Navigation Opacity:</span><input type=text name=navOp value='" + (bEdit ? tEdit.navOp : "0.9") + "'>" +
         "</label>";
 
         for (var i = 0, MAX = themeInputs.length; i < MAX; ++i)
-          innerHTML += "<label><span>" + themeInputs[i].dName + ":</span>" +
+          innerHTML += "<label><span class='option-title'>" + themeInputs[i].dName + ":</span>" +
           "<input type=text class=jsColor name=" + themeInputs[i].name + " value=" + (bEdit ? tEdit[themeInputs[i].name] : "") + "></label>";
 
-        innerHTML += "<label id=customCSS><span>Custom CSS:</span><textarea name=customCSS>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
-        "</label><div><div id=selectImage><input type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
+        innerHTML += "<label id=customCSS><span class='option-title'>Custom CSS:</span><textarea name=customCSS>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
+        "</label><div><div id='import-link'><input class='import-input' type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
         "<span class='options-button'>Select Image</span></div>" +
         "" + (bEdit && $SS.validBase64(tEdit.bgImg) ? "<input type=hidden name=customIMGB64 value='" + tEdit.bgImg + "'>" : "") + "" +
         "<a class='options-button' name=clearIMG>Clear Image</a>" +
@@ -1393,7 +1393,7 @@
 
         overlay = $("<div id=overlay2>").append(div);
 
-        $("#selectImage>input[type=file]", div).bind("change", $SS.options.SelectImage);
+        $(".import-input", div).bind("change", $SS.options.SelectImage);
         $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
 
         $("a[name=export]", div).bind("click", function()
@@ -1519,27 +1519,27 @@
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
 
-        div = $("<div id='add-mascot'>").html("<label><span>Image:</span><input type=text name=customIMG value='" +
+        div = $("<div id='add-mascot'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "[Base 64 Encoded Image]' disabled=true") : "'") +
             "></label>" +
-            "<label title='Auto goes according to the post forms position' for=null><span>Alignment/Offset:</span>" +
-            "<select name=mPosition>" +
+            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Alignment/Offset:</span>" +
+            "<select class='mascot-select' name=mPosition>" +
               "<option" + ((bEdit && !mEdit.position) || !bEdit ? " selected" : "") + ">Auto</option>" +
               "<option" + (bEdit && mEdit.position === "top" ? " selected" : "") + ">Top</option>" +
               "<option" + (bEdit && mEdit.position === "center" ? " selected" : "") + ">Center</option>" +
               "<option" + (bEdit && mEdit.position === "bottom" ? " selected" : "") + ">Bottom</option>" +
             "</select>" +
-            "<input type=text name=mOffset value='" + (bEdit && mEdit.position ? mEdit.offset + "px" : "") + "'></label>" +
-            "<label title='Prevent streching with smaller images (Width < 313px)'><span>Prevent stretching:</span>" +
+            "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.position ? mEdit.offset + "px" : "") + "'></label>" +
+            "<label class='add-mascot-label' title='Prevent streching with smaller images (Width < 313px)'><span class='option-title'>Prevent stretching:</span>" +
             "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
-            "<label title='Horizontally flip the mascot when sidebar is on the left'><span>Flip with sidebar:</span>" +
+            "<label class='add-mascot-label' title='Horizontally flip the mascot when sidebar is on the left'><span class='option-title'>Flip with sidebar:</span>" +
             "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip == undefined)) ? " checked" : "") + "></label>" +
-            "<label title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option'>" +
-            "<span>Allow overflow:</span><input type=checkbox name=mOverflow" + (bEdit && mEdit.overflow ? " checked" : "") + "></label>" +
-            "<label title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span>Boards:</span>" +
-            "<input type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
-            "<div>" +
-            "<div id=selectImage><input type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
+            "<label class='add-mascot-label' title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option'>" +
+            "<span class='option-title'>Allow overflow:</span><input type=checkbox name=mOverflow" + (bEdit && mEdit.overflow ? " checked" : "") + "></label>" +
+            "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
+            "<input class='mascot-input mascot-boards' type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
+            "<div id='mascot-buttons-container'>" +
+            "<div id='import-link'><input class='import-input' type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
             "<span class='options-button'>Select Image</span></div>" +
             "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
             "<a class='options-button' name=clearIMG>Clear Image</a>" +
@@ -1547,7 +1547,7 @@
 
         overlay = $("<div id=overlay2>").append(div);
 
-        $("#selectImage>input[type=file]", div).bind("change", $SS.options.SelectImage);
+        $(".import-input", div).bind("change", $SS.options.SelectImage);
         $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
 
         if (bEdit)
@@ -3203,18 +3203,18 @@
       this.preview  = function()
       {
         var div = $("<div " + (this.hidden ? "hidden=true " : "") +
-              "id=mascot" + this.index + (this.enabled ? " class=selected" : "") +
-              " style=\"background:" + this.img.get() + "\">")
-              .html("<a title=Delete>X</a><a title=Edit>E</a>");
+              "id=mascot" + this.index + " class=\'mascot-preview" + (this.enabled ? " selected" : "") +
+              "\' style=\"background:" + this.img.get() + "\">")
+              .html("<a class='mascot-link delete' title=Delete>X</a><a class='mascot-link edit' title=Edit>E</a>");
 
         $(div).bind("click", function(){ $(this).toggleClass("selected"); });
 
-        $("a[title=Delete]", div).bind("click", function(e)
+        $(".mascot-link.delete", div).bind("click", function(e)
         {
           e.stopPropagation();
           $SS.options.deleteMascot(index);
         });
-        $("a[title=Edit]", div).bind("click", function(e)
+        $(".mascot-link.edit", div).bind("click", function(e)
         {
           e.stopPropagation();
           $SS.options.showMascot(index);
@@ -3236,7 +3236,7 @@
       this.index       = index;
       this.hidden      = $SS.conf["Hidden Themes"].indexOf(index) !== -1;
       this.name        = theme.name;
-      this.author      = theme.author || "ahodesuka";
+      this.author      = theme.author || "seaweedchan";
       this.default     = theme.default;
       this.replyBrder  = theme.replyBrder;
       this.bgImg       = new $SS.Image(theme.bgImg, theme.bgRPA);
@@ -3333,7 +3333,7 @@
       this.preview = function()
       {
         var div = $("<div " + (this.hidden ? "hidden=true " : "") +
-            " id=theme" + this.index + " class=\'" + (($SS.conf["Selected Theme"] == $SS.conf["NSFW Theme"]) && ($SS.conf["Selected Theme"] == this.index) ? "selected nsfw" : ($SS.conf["Selected Theme"] == this.index ? "selected " : "") + ($SS.conf["NSFW Theme"] == this.index ? "nsfw " : "")) + "\'>").html("<div class=reply " +
+            " id=theme" + this.index + " class=\'theme-preview " + (($SS.conf["Selected Theme"] == $SS.conf["NSFW Theme"]) && ($SS.conf["Selected Theme"] == this.index) ? "selected nsfw" : ($SS.conf["Selected Theme"] == this.index ? "selected " : "") + ($SS.conf["NSFW Theme"] == this.index ? "nsfw " : "")) + "\'>").html("<div class=reply " +
             "style='background-color:" + this.mainColor.hex + "!important;border:1px solid " + this.brderColor.hex + "!important;color:" + this.textColor.hex + "!important'>" +
             "<div class=riceCheck style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;box-shadow:rgba(" + this.mainColor.shiftRGB(64) + ",.3) 0 1px;'></div>" +
             "<span style='color:" + this.titleColor.hex + "!important; font-weight: 700 !important'>" + this.name + "</span> " +
@@ -3345,14 +3345,14 @@
             "onmouseover='this.setAttribute(\"style\",\"color:" + this.linkHColor.hex + "!important\")' " +
             "onmouseout='this.setAttribute(\"style\",\"color:" + this.linkColor.hex + "!important\")'>No.22772469</a>" +
             "<br><blockquote>Post content is right here.</blockquote>" +
-            "<p>" +
-            "<a title='Sets the SFW theme.' style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>SFW</a>" +
-            "<a title='Sets the NSFW theme.' style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>NSFW</a>" +
-            "<a title=Edit style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>Edit</a>" +
-            "<a title=Delete style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>Delete</a></p>" +
-            "<h3 class=h3nsfw>NSFW</h3>" +
-            "<h3 class=h3sfw>SFW</h3>" +
-            "<h3 class=h3both>SFW & NSFW</h3>" +
+            "<p class='theme-buttons-container'>" +
+            "<a href='javascript:;' title='Sets the SFW theme.' style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>SFW</a>" +
+            "<a href='javascript:;' title='Sets the NSFW theme.' style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>NSFW</a>" +
+            "<a href='javascript:;' title=Edit style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>Edit</a>" +
+            "<a href='javascript:;' title=Delete style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;color:" + this.textColor.hex + "!important'>Delete</a></p>" +
+            "<h3 class='sfw-label notsafe'>NSFW</h3>" +
+            "<h3 class='sfw-label safe'>SFW</h3>" +
+            "<h3 class='sfw-label both'>SFW & NSFW</h3>" +
           "</div>");
 
         $(div).bind("click", function()

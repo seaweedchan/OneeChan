@@ -1,0 +1,4 @@
+.reply,
+.dialog {
+  background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
+}
