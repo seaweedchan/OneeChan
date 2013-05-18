@@ -892,16 +892,12 @@
             saveAndClose  : true,
             init: function()
             {
+                var a = document.createElement("a");
+                a.textContent = "OneeChan";
+                a.href = "javascript:;";
+                a.addEventListener("click", this.show);
 
-                var div;
-                div = $("<a href='javascript:;' id='OneeChanLink' title='OneeChan Settings'>OneeChan");
-
-                    var a = document.createElement("a");
-                    a.textContent = "OneeChan";
-                    a.href = "javascript:;";
-                    a.addEventListener("click", this.show);
-
-                    this.createEntry(a);
+                this.createEntry(a);
             },
             createEntry: function(a)
             {
