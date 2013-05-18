@@ -798,7 +798,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}";
+      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr{border-width:0}";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -914,17 +914,17 @@
         else
         {
           var overlay     = $("<div id=overlay>").bind("click", $SS.options.close),
-            tOptions    = $("<div id=themeoptions class=reply>").bind("click", function(e) { return e.stopPropagation(); }),
-            optionsHTML = "<ul id=toNav>" +
-            "<li><label class=selected for=tcbMain>Main</label></li>" +
-            "<li><label for=tcbThemes>Themes</label></li>" +
-            "<li><label for=tcbMascots>Mascots</label></li>" +
-            "</ul><form id=toWrapper><input type=radio class=tab-select name=toTab id=tcbMain hidden checked><div id=tMain>" +
-            "<p><a class=trbtn name=loadSysFonts title='Reqiures flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
-            "<span id=SSVersion>OneeChan v" + VERSION + "</span>" +
-            "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=updatelink target='_blank'>Update</a><span class=linkdelimiter> | </span>" +
-            "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changeloglink target='_blank'>Changelog</a><span class=linkdelimiter> | </span>" +
-            "<a href='https://github.com/seaweedchan/OneeChan/issues' id=issueslink target='_blank'>Issues</a></p>",
+            tOptions    = $("<div id='oneechan-options' class=dialog>").bind("click", function(e) { return e.stopPropagation(); }),
+            optionsHTML = "<ul id=options-nav>" +
+            "<li><label class=selected for=main-select>Main</label></li>" +
+            "<li><label for=themes-select>Themes</label></li>" +
+            "<li><label for=mascots-select>Mascots</label></li>" +
+            "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id=main-section>" +
+            "<p><a class='options-button' name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
+            "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
+            "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
+            "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
+            "<a href='https://github.com/seaweedchan/OneeChan/issues' id=issues-link target='_blank'>Issues</a></p>",
             bindNavLinks = function(el)
             {
               $(".handle", el).bind("dragstart", function(e)
@@ -975,7 +975,7 @@
             {
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
-              optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" +
+              optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
                       (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
                       "</span><input name='Non-Sidebar Custom Margin' type=text value=" + $SS.conf["Non-Sidebar Custom Margin"] + "px></label>";
             }
@@ -983,18 +983,18 @@
             {
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
-              optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" +
+              optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
                       (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
                       "</span><input name='Sidebar Side Custom Margin' type=text value=" + $SS.conf["Sidebar Side Custom Margin"] + "px></label>";
             }
             else if (val === "header") {
-              optionsHTML += "<label class='mOption header'><span>" + key + "</span></label>";
+              optionsHTML += "<label class='option header'><span>" + key + "</span></label>";
             }
             else if (defaultConfig[key][4] === true) // sub-option
             {
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
-              optionsHTML += "<label class='mOption subOption " + id + "' title=\"" + des + "\"" +
+              optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
                       (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span>" + key +
                       "</span><input" + (val ? " checked" : "") + " name='" + key + "' type=checkbox></label>";
             }
@@ -1002,8 +1002,8 @@
             {
               var opts = key === "Font Family" ? $SS.fontList || defaultConfig[key][2] : defaultConfig[key][2],
                 cFonts = [];
-              optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" +
-                      "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " hasSub" : "")  + ">";
+              optionsHTML += "<span class=option title=\"" + des + "\"><span>" + key + "</span>" +
+                      "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "")  + ">";
 
               for (var i = 0, MAX = opts.length; i < MAX; ++i)
               {
@@ -1030,36 +1030,36 @@
             }
             else if (key === "Font Size")
             {
-              optionsHTML += "<span class=mOption title=\"" + des + "\"><span>" + key + "</span>" +
+              optionsHTML += "<span class=option title=\"" + des + "\"><span>" + key + "</span>" +
                       "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></span>";
             }
             else if (key === "Themes")
             {
-              optionsHTML += "</div><input type=radio class=tab-select name=toTab class=tab-select  id=tcbThemes hidden><div id=tThemes>";
+              optionsHTML += "</div><input type=radio class=tab-select name=tab-select class=tab-select  id=themes-select hidden><div id=themes-section>";
             }
             else if (key === "Mascots")
             {
-              optionsHTML += "</div><input type=radio class=tab-select name=toTab id=tcbMascots hidden><div id=tMascot>";
+              optionsHTML += "</div><input type=radio class=tab-select name=tab-select id=mascots-select hidden><div id=mascot-section>";
             }
             else // checkbox
-              optionsHTML += "<label class=mOption title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") +
-                      " name='" + key + "' " + (defaultConfig[key][3] === true ? " hasSub" : "")  + " type=checkbox></label>";
+              optionsHTML += "<label class=option title=\"" + des + "\"><span>" + key + "</span><input" + (val ? " checked" : "") +
+                      " name='" + key + "' " + (defaultConfig[key][3] === true ? " has-suboption" : "")  + " type=checkbox></label>";
           }
 
-          optionsHTML += "</div></form><div><a class=trbtn name=save title='Hold any modifier to prevent window from closing'>Save</a><a class=trbtn name=cancel>Cancel</a></div>";
+          optionsHTML += "</div></div><div><a class='options-button' name=save title='Hold any modifier to prevent window from closing'>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
 
 
           // options window
-          $("#toNav li label", tOptions).bind("click", function(e)
+          $("#options-nav li label", tOptions).bind("click", function(e)
           {
             if ($(this).hasClass("selected")) return;
 
-            $("#toNav li label.selected").removeClass("selected");
+            $("#options-nav li label.selected").removeClass("selected");
             $(this).addClass("selected");
           });
-          $("[hasSub]", tOptions).bind("change", function()
+          $("[has-suboption]", tOptions).bind("change", function()
           {
             var id  = this.name.replace(/\s/g, "_") + $(this).val(),
               sub = $("." + id);
@@ -1100,11 +1100,11 @@
       },
       createThemesTab: function(tOptions)
       {
-        var themes = $("#tThemes", tOptions).html(""),
+        var themes = $("#themes-section", tOptions).html(""),
           p      = $("<p style='bottom:8px!important'>");
 
-        p.append($("<a class=trbtn name=addTheme>Add", tOptions).bind("click", $SS.options.showTheme));
-        p.append($("<a class=trbtn href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
+        p.append($("<a class='options-button' name=addTheme>Add", tOptions).bind("click", $SS.options.showTheme));
+        p.append($("<a class='options-button' href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
         p.append($("<div id=selectImage>").append($("<input type=file riced=true>")
          .bind("change", function()
         {
@@ -1135,18 +1135,18 @@
               index = $SS.conf["Themes"].push(theme);
               theme = new $SS.Theme(--index);
               div   = theme.preview();
-              $("#overlay #tThemes").append(div);
+              $("#overlay #themes-section").append(div);
               div.fire("click").scrollIntoView(true);
             }
           })(file);
 
           reader.readAsText(file);
-        })).append($("<span class=trbtn>Import")));
-        p.append($("<a class=trbtn name=restoreThemes title='Restore hidden default themes'>restore", tOptions)
+        })).append($("<span class='options-button'>Import")));
+        p.append($("<a class='options-button' name=restoreThemes title='Restore hidden default themes'>restore", tOptions)
           .bind("click", function()
           {
             $SS.conf["Hidden Themes"] = [];
-            $("#tThemes>div[hidden]").show();
+            $("#themes-section>div[hidden]").show();
           })
         );
 
@@ -1163,25 +1163,25 @@
       },
       createMascotsTab: function(tOptions)
       {
-        var mascots = $("#tMascot", tOptions).html(""),
+        var mascots = $("#mascot-section", tOptions).html(""),
           p       = $("<p>");
 
-        p.append($("<a class=trbtn name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
-        p.append($("<a class=trbtn name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
+        p.append($("<a class='options-button' name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
+        p.append($("<a class='options-button' name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
           .bind("click", function()
           {
             $SS.conf["Hidden Mascots"] = [];
-            $("#tMascot>div[hidden]").show();
+            $("#mascot-section>div[hidden]").show();
           })
         );
 
         if ($SS.conf["Hidden Mascots"].length === 0)
           $("a[name=restoreMascots]", p).hide();
 
-        p.append($("<a class=trbtn name=selectAll>Select All", tOptions)
-          .bind("click", function(){ $("#tMascot>div:not([hidden])").each(function(){ $(this).addClass("selected") }); }));
-        p.append($("<a class=trbtn name=selectNone>Select None", tOptions)
-          .bind("click", function(){ $("#tMascot>div").each(function(){ $(this).removeClass("selected") }); }));
+        p.append($("<a class='options-button' name=selectAll>Select All", tOptions)
+          .bind("click", function(){ $("#mascot-section>div:not([hidden])").each(function(){ $(this).addClass("selected") }); }));
+        p.append($("<a class='options-button' name=selectNone>Select None", tOptions)
+          .bind("click", function(){ $("#mascot-section>div").each(function(){ $(this).removeClass("selected") }); }));
 
         mascots.append(p);
 
@@ -1261,7 +1261,7 @@
           selectedTheme;
 
         // Save main
-        $("#themeoptions input[name]:not([name=toTab]), #themeoptions select").each(function()
+        $("#themeoptions input[name]:not(.tab-select), #themeoptions select").each(function()
         {
           var name = $(this).attr("name"),
             val  = $(this).val();
@@ -1287,17 +1287,17 @@
         });
 
         // Save Themes
-        $("#themeoptions #tThemes>div").each(function(index)
+        $("#themeoptions #themes-section>div").each(function(index)
         {
           var oldIndex = parseInt(this.id.substr(5));
           if (!$SS.conf["Themes"][oldIndex].default)
             themes.push($SS.conf["Themes"][oldIndex]);
         });
 
-        selectedTheme = (selectedTheme = $("#themeoptions #tThemes>div.selected")).exists() ?
+        selectedTheme = (selectedTheme = $("#themeoptions #themes-section>div.selected")).exists() ?
           parseInt(selectedTheme.attr("id").substr(5)) : 0;
 
-        nsfwTheme = (nsfwTheme = $("#themeoptions #tThemes>div.nsfw")).exists() ?
+        nsfwTheme = (nsfwTheme = $("#themeoptions #themes-section>div.nsfw")).exists() ?
           parseInt(nsfwTheme.attr("id").substr(5)) : 0;
 
         $SS.Config.set("Themes", themes);
@@ -1306,7 +1306,7 @@
         $SS.Config.set("Hidden Themes", $SS.conf["Hidden Themes"]);
 
         // Save Mascots
-        $("#themeoptions #tMascot>div").each(function(index)
+        $("#themeoptions #mascot-section>div").each(function(index)
         {
           var oldIndex = parseInt(this.id.substr(6));
           if ($(this).hasClass("selected"))
@@ -1382,11 +1382,11 @@
 
         innerHTML += "<label id=customCSS><span>Custom CSS:</span><textarea name=customCSS>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
         "</label><div><div id=selectImage><input type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
-        "<span class=trbtn>Select Image</span></div>" +
+        "<span class='options-button'>Select Image</span></div>" +
         "" + (bEdit && $SS.validBase64(tEdit.bgImg) ? "<input type=hidden name=customIMGB64 value='" + tEdit.bgImg + "'>" : "") + "" +
-        "<a class=trbtn name=clearIMG>Clear Image</a>" +
-        "<a class=trbtn name=export>Export</a>" +
-        "<a class=trbtn name=" + (bEdit ? "edit" : "add") + ">Save</a><a class=trbtn name=cancel>Cancel</a></div>";
+        "<a class='options-button' name=clearIMG>Clear Image</a>" +
+        "<a class='options-button' name=export>Export</a>" +
+        "<a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div>";
 
         div.html(innerHTML);
         $(".jsColor", div).jsColor();
@@ -1495,7 +1495,7 @@
           tTheme        = new $SS.Theme(--tIndex);
           div           = tTheme.preview();
 
-          $("#overlay #tThemes").append(div);
+          $("#overlay #themes-section").append(div);
         }
 
         div.fire("click").scrollIntoView(true);
@@ -1506,7 +1506,7 @@
       {
         if ($SS.conf["Themes"][tIndex].default &&
           $SS.conf["Hidden Themes"].push(tIndex) === 1)
-          $("#tThemes a[name=restoreThemes]").show();
+          $("#themes-section a[name=restoreThemes]").show();
 
         return $SS.conf["Themes"][tIndex].default ?
           $("#theme" + tIndex).removeClass("selected").hide() : $("#theme" + tIndex).remove();
@@ -1540,10 +1540,10 @@
             "<input type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
             "<div>" +
             "<div id=selectImage><input type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
-            "<span class=trbtn>Select Image</span></div>" +
+            "<span class='options-button'>Select Image</span></div>" +
             "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
-            "<a class=trbtn name=clearIMG>Clear Image</a>" +
-            "<a class=trbtn name=" + (bEdit ? "edit" : "add") + ">Save</a><a class=trbtn name=cancel>Cancel</a></div></div>");
+            "<a class='options-button' name=clearIMG>Clear Image</a>" +
+            "<a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
 
         overlay = $("<div id=overlay2>").append(div);
 
@@ -1620,7 +1620,7 @@
 
           mIndex = $SS.conf["Mascots"].push(tMascot);
           tMascot = new $SS.Mascot(--mIndex).preview();
-          $("#tMascot").append(tMascot);
+          $("#mascot-section").append(tMascot);
           tMascot.fire("click").scrollIntoView(true);
         }
 
@@ -1630,7 +1630,7 @@
       {
         if ($SS.conf["Mascots"][mIndex].default &&
           $SS.conf["Hidden Mascots"].push(mIndex) === 1)
-          $("#tMascot a[name=restoreMascots]").show();
+          $("#mascot-section a[name=restoreMascots]").show();
 
         return $SS.conf["Mascots"][mIndex].default ?
           $("#mascot" + mIndex).removeClass("selected").hide() : $("#mascot" + mIndex).remove();
