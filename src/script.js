@@ -880,6 +880,7 @@
         });
 
         this.createEntry(a);
+        $(document).bind("keydown", $SS.options.keydown);
       },
       createEntry: function(a)
       {
@@ -1031,7 +1032,7 @@
                       " name='" + key + "' " + (defaultConfig[key][3] === true ? " has-suboption" : "")  + " type=checkbox></label>";
           }
 
-          optionsHTML += "</div></div><div class='options-close'><a class='options-button' name=save title='Hold any modifier to prevent window from closing'>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
+          optionsHTML += "</div></div><div class='options-close'><a class='options-button' name=save>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
 
@@ -1061,8 +1062,6 @@
             $SS.options.saveAndClose = false;
           });
           $("a[name=cancel]",tOptions).bind("click", $SS.options.close);
-          $(document).bind("keydown", $SS.options.keydown)
-                .bind("keyup",   $SS.options.keyup);
 
           // main tab
           $("input[name='Font Size']", tOptions).bind("keydown", function(e)
@@ -1182,23 +1181,15 @@
       },
       close: function()
       {
-        $(document).unbind("keydown", $SS.options.keydown)
-              .unbind("keyup", $SS.options.keydown);
-
         return $("#overlay").remove();
       },
       keydown: function(e)
       {
-        if (e.keyCode >= 16 && e.keyCode <= 18)
+        if (e.ctrlKey && e.keyCode === 79)
         {
-          $("a[name=save]").text("Apply");
-        }
-      },
-      keyup: function(e)
-      {
-        if (!$SS.options.saveAndClose)
-        {
-          $("a[name=save]").text("Save");
+          e.preventDefault();
+          e.stopPropagation();
+          $SS.options.show();
         }
       },
       loadSystemFonts: function(evt)
