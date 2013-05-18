@@ -868,7 +868,7 @@
     /* OPTIONS */
     options:
     {
-      saveAndClose  : true,
+      saveAndClose  : false,
       init: function()
       {
         var a = document.createElement("a");
@@ -1052,7 +1052,11 @@
               $("[class*='" + this.name.replace(/\s/g, "_") + "']")
                 .each(function(){ $(this).hide(); });
           });
-          $("a[name=save]", tOptions).bind("click", $SS.options.save);
+          $("a[name=save]", tOptions).bind("click", function() {
+            $SS.options.saveAndClose = true;
+            $SS.options.save();
+            $SS.options.saveAndClose = false;
+          });
           $("a[name=cancel]",tOptions).bind("click", $SS.options.close);
           $(document).bind("keydown", $SS.options.keydown)
                 .bind("keyup",   $SS.options.keyup);
@@ -1184,7 +1188,6 @@
       {
         if (e.keyCode >= 16 && e.keyCode <= 18)
         {
-          $SS.options.saveAndClose = false;
           $("a[name=save]").text("Apply");
         }
       },
@@ -1192,7 +1195,6 @@
       {
         if (!$SS.options.saveAndClose)
         {
-          $SS.options.saveAndClose = true;
           $("a[name=save]").text("Save");
         }
       },
@@ -3346,6 +3348,7 @@
           $this.parent().children(".selected").removeClass("selected");
           $this.parent().children(".nsfw").removeClass("nsfw");
           $this.addClass("selected nsfw");
+          $SS.options.save();
         });
 
         $("a[title='Sets the SFW theme.']", div).bind("click", function(e)

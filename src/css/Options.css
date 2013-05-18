@@ -231,7 +231,6 @@ select[name='Font Family']>option {
   padding:0;
 }
 .tab-label {
-  background:rgb(" + $SS.theme.mainColor.rgb + ");
   color:#888!important;
   display:block;
   height:16px;
