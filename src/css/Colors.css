@@ -23,11 +23,11 @@ div.boardBanner,
 a {
   color: rgb(" + $SS.theme.linkColor.rgb + ") !important;
 }
-a:hover {
-  color: rgb(" + $SS.theme.linkHColor.rgb + ") !important;
-}
 a.current {
   color: rgb(" + $SS.theme.textColor.rgb + ") !important;
+}
+a:hover {
+  color: rgb(" + $SS.theme.linkHColor.rgb + ") !important;
 }
 /* Greentext */
 .quote {

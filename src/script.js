@@ -152,7 +152,7 @@
     "Bitmap Font": [ false, "Check this if you are using a bitmap font" ],
     "Themes"          : [],
     "Hidden Themes"   : [],
-    "Selected Theme"  : 0,
+    "Selected Theme"  : 1,
     "NSFW Theme"      : 8,
     "Selected Mascots": 1,
     "Mascots"         : [],
