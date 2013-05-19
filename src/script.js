@@ -5,7 +5,7 @@
     "--Main Rice--":                     [ "header",  "" ],
     "Page Layout":
     [
-      1, "Change the layout of the main content",
+      2, "Change the layout of the main content",
       [
         { name: "Fit Width",   value: 1 },
         { name: "Fit Content", value: 2 },
@@ -61,8 +61,8 @@
         { name: "Hidden",         value: 4 }
       ]
     ],
-    "Expanded Images Cover QR": [ true, "Lets expanded images overlap the quick reply" ],
-    "Hide Checkboxes":           [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],
+    "Hide Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
@@ -95,8 +95,7 @@
     "Show Text Board":          [ true,  "Toggle visibility of the text board link" ],
     "Show Logo":                [ true,  "Toggle visibility of the logo", null, true ],
     "Show Logo Reflection":     [ true,  "Toggle visibility of the logo reflection", "Show Logo", true, true ],
-    "Lighter Logo":             [ false, "Toggle opacity of the logo", "Show Logo", true, true ],
-    "Auto Hide Thread Watcher": [ true,  "Hides watched threads unless the mouse is over the watcher" ],
+    "Lower Logo Opacity":       [ false, "Toggle opacity of the logo", "Show Logo", true, true ],
     "Slideout Navigation Type":
     [
       1, "Change the format of the slideout navigation links",
@@ -106,9 +105,7 @@
       ]
     ],
     "--Replies--":                  [ "header",  "" ],
-    "Slim Replies":             [ false,  "Reduces the size of replies" ],
     "Rounded Corners":          [ true,  "Styles a few elements to have subtly rounded coreners" ], 
-    "Reveal All Spoilers":      [ false, "Makes all spoilers look as if you were hovering over them" ],
     "Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
     "Use Post Info Color":      [ true, "Separate the post info by the post info colors defined in themes", null, true ],
     "Add Shadow?":              [ false, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
@@ -125,27 +122,15 @@
     ],
     "Backlinks Position":
     [
-      2, "Change the position of 4chan x backlinks",
+      1, "Change the position of 4chan x backlinks",
       [
         { name: "Default",      value: 1 },
         { name: "Bottom Right", value: 2 }
       ]
     ],
-    "--Posting--":                  [ "header",  "" ],
-    "Post Form":
-    [
-      3, "Change the transition for the post form",
-      [
-        { name: "Slide Up",  value: 1 },
-        { name: "Fade",      value: 2 },
-        { name: "Fixed",     value: 3 },
-        { name: "Float",     value: 4 }
-      ]
-    ],
-    "Smart Tripcode Hider":     [ false, "Hides the name field if the value contains a tripcode" ],
+    "Backlink Icons":          [ false,  "Use icons for backlinks instead of text." ], 
+    "--Quick Reply--":                  [ "header",  "" ],
     "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
-    "--Script Settings--":                     [ "header",  "" ],
-    "Disable Ads":              [ true, "Disables ads on 4chan" ],
     "--Font--":                     [ "header",  "" ],
     "Font Family":
     [
@@ -2478,7 +2463,9 @@
     {
       init: function()
       {
+        /* Function arguments: ("Option Name", value, "class-name") */
         $("html").toggleClass("Underline Links", false, "underline-disabled");
+        $("html").toggleClass("Rounded Corners", true, "rounded-corners");
       }
     },
 
@@ -3196,7 +3183,7 @@
         " " + (this.position || "bottom"));
       this.small    = mascot.small || this.overflow;
       this.bOffset  = typeof mascot.offset === "number";
-      this.offset   = this.bOffset ? mascot.offset : ($SS.conf["Post Form"] !== 1 ? "" + ($SS.conf["Post Form"] !== 4 ? 273 : 0) + "" : 24);
+      this.offset   = this.bOffset ? mascot.offset : 24;
       this.boards   = mascot.boards;
       this.enabled  = $SS.conf["Selected Mascots"] === 0 || $SS.conf["Selected Mascots"].indexOf(index) !== -1;
 

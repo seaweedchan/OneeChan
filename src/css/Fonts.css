@@ -1,5 +1,7 @@
-/* Anything we need at 0px */
-.stylechanger {
+/* Font Size/Family */
+
+/* Anything we need 0px */
+div[style='float: right;'] {
   font-size: 0px !important;
 }
 /* Anything we need !important */
@@ -18,10 +20,16 @@ body {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
   font-size:" + $SS.conf["Font Size"] + "px;
 }
+
 /* Text decoration */
 :root.underline-disabled a {
   text-decoration: none;
 }
 :root.underline-disabled .filtered {
   text-decoration: line-through;
+}
+
+/* Font weight */
+.name {
+  font-weight: 700;
 }

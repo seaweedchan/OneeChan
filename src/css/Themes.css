@@ -1,16 +1,28 @@
 /* Colors */
+
+/* Anything we need transparent */
+div[style='float: right;'] {
+  color: transparent;
+}
+/* Text */
 html,
 body,
 div.boardBanner,
 #menu {
   color: rgb(" + $SS.theme.textColor.rgb + ") !important;
 }
+/* Links */
 a {
   color: rgb(" + $SS.theme.linkColor.rgb + ") !important;
 }
 a:hover {
   color: rgb(" + $SS.theme.linkHColor.rgb + ") !important;
 }
+/* Greentext */
+.quote {
+  color: rgb(" + $SS.theme.quoteColor.rgb + ");
+}
+
 /* Backgrounds */
 .reply,
 .dialog,
@@ -23,4 +35,19 @@ a:hover {
 html,
 body {
   background: rgb(" + $SS.theme.bgColor.rgb + ") !important;
+}
+
+/* Borders */
+.reply {
+  border-width: 1px;
+  border-style: solid;
+}
+:root.rounded-corners .reply,
+:root.rounded-corners .dialog:not(#header-bar) {
+  border-radius: 3px;
+}
+.reply,
+#watcher,
+#header-bar {
+  border-color: rgb(" + $SS.theme.brderColor.rgb + ");
 }

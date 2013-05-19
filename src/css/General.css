@@ -1,0 +1,10 @@
+/* Delete form */
+div[style='float: right;'] {
+  float: none !important;
+  display: inline-block;
+}
+.navLinksBot,
+.deleteform,
+.stylechanger {
+  display: inline-block;
+}

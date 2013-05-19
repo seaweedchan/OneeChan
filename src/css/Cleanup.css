@@ -5,7 +5,11 @@
 .tab-select:not(:checked) + div,
 iframe[src='about:blank'],
 #absbot,
-#styleSelector {
+#styleSelector,
+.topad.center,
+.middlead.center,
+.bottomad.center,
+#delPassword {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */
@@ -19,6 +23,7 @@ a
 }
 /* Hide unwanted horizontal lines, while keeping them */
 body>hr,
-#delform>hr {
+#delform>hr,
+.board>hr:last-of-type {
   border-width: 0px;
 }

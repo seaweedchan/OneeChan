@@ -3,3 +3,4 @@
 <%= grunt.file.read('src/css/Cleanup.css') %>
 <%= grunt.file.read('src/css/Themes.css') %>
 <%= grunt.file.read('src/css/Options.css') %>
+<%= grunt.file.read('src/css/General.css') %>
