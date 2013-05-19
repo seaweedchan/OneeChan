@@ -4,7 +4,8 @@
 .fourchanx-link:not(.hide-board-list-container)::after,
 .tab-select:not(:checked) + div,
 iframe[src='about:blank'],
-#absbot {
+#absbot,
+#styleSelector {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */

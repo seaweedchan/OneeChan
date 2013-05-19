@@ -1,10 +1,21 @@
-body {
-  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
-  font-size:" + $SS.conf["Font Size"] + "px;
+/* Anything we need at 0px */
+.stylechanger {
+  font-size: 0px !important;
 }
+/* Anything we need !important */
+.stylechanger a {
+  font-size:" + $SS.conf["Font Size"] + "px !important;
+}
+/* Options */
 #themeoptions #toNav li label, 
 .trbtn, 
 #themeoptions #toWrapper > div > p {
   font-family:sans-serif !important;
   font-size:12px !important;
 }
+/* Everything else */
+body {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
+  font-size:" + $SS.conf["Font Size"] + "px;
+}
+

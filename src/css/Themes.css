@@ -1,5 +1,26 @@
+/* Colors */
+html,
+body,
+div.boardBanner,
+#menu {
+  color: rgb(" + $SS.theme.textColor.rgb + ") !important;
+}
+a {
+  color: rgb(" + $SS.theme.linkColor.rgb + ") !important;
+}
+a:hover {
+  color: rgb(" + $SS.theme.linkHColor.rgb + ") !important;
+}
+/* Backgrounds */
 .reply,
 .dialog,
 .tab-label {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
+}
+#header-bar {
+  background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important;
+}
+html,
+body {
+  background: rgb(" + $SS.theme.bgColor.rgb + ") !important;
 }
