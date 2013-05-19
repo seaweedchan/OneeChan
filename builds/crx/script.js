@@ -492,7 +492,7 @@
             $(this).removeClass(classNames[j]);
       });
     },
-    toggleClass: function(optionName, optionValue, classNames) {
+    optionClass: function(optionName, optionValue, classNames) {
       return this.each(function()
       {
         classNames = classNames.split(" ");
@@ -2290,8 +2290,8 @@
       init: function()
       {
         /* Function arguments: ("Option Name", value, "class-name") */
-        $("html").toggleClass("Underline Links", false, "underline-disabled");
-        $("html").toggleClass("Rounded Corners", true, "rounded-corners");
+        $("html").optionClass("Underline Links", false, "underline-disabled");
+        $("html").optionClass("Rounded Corners", true, "rounded-corners");
       }
     },
 
