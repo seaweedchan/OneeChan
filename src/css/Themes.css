@@ -11,6 +11,14 @@ div.boardBanner,
 #menu {
   color: rgb(" + $SS.theme.textColor.rgb + ") !important;
 }
+/* Names */
+.name {
+  color: rgb(" + $SS.theme.nameColor.rgb + ") !important;
+}
+/* Tripcodes */
+.postertrip {
+  color: rgb(" + $SS.theme.tripColor.rgb + ") !important;
+}
 /* Links */
 a {
   color: rgb(" + $SS.theme.linkColor.rgb + ") !important;
@@ -26,6 +34,8 @@ a:hover {
 .option.header .option-title {
   color: rgb(" + $SS.theme.titleColor.rgb + ")!important;
 }
+
+
 /* Backgrounds */
 .reply,
 .dialog,
