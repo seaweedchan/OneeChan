@@ -524,23 +524,15 @@
             $(this).removeClass(classNames[j]);
       });
     },
-    toggleClass: function(option, enabled, classNames) {
+    toggleClass: function(optionName, optionValue, classNames) {
       return this.each(function()
       {
         classNames = classNames.split(" ");
         for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-          if (enabled) {
-            if ($SS.conf[option])
-              $(this).addClass(classNames[j]);
-            else
-              $(this).removeClass(classNames[j]);
-          }
-          else {
-            if (!$SS.conf[option])
-              $(this).addClass(classNames[j]);
-            else
-              $(this).removeClass(classNames[j]);   
-          }
+          if ($SS.conf[optionName] === optionValue)
+            $(this).addClass(classNames[j]);
+          else
+            $(this).removeClass(classNames[j]);
       });
     },
     remove: function()
