@@ -511,9 +511,9 @@
       {
         classNames = classNames.split(" ");
         for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-          if ($SS.conf[optionName] === optionValue)
+          if ($SS.conf[optionName] === optionValue && !$(this).hasClass(classNames[j]))
             $(this).addClass(classNames[j]);
-          else
+          else if ($(this).hasClass(classNames[j]))
             $(this).removeClass(classNames[j]);
       });
     },
