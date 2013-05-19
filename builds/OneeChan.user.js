@@ -532,8 +532,10 @@
         for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
           if ($SS.conf[optionName] === optionValue && !$(this).hasClass(classNames[j]))
             $(this).addClass(classNames[j]);
-          else if ($(this).hasClass(classNames[j]))
+          else if ($SS.conf[optionName] !== optionValue && $(this).hasClass(classNames[j]))
             $(this).removeClass(classNames[j]);
+          else
+            return
       });
     },
     remove: function()
