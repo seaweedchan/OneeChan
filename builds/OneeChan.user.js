@@ -124,7 +124,7 @@
       ]
     ],*/
     "--Replies--":                  [ "header",  "" ],
-    "Rounded Corners":          [ true,  "Styles a few elements to have subtly rounded coreners" ], 
+    "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     /*"Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
     "Use Post Info Color":      [ true, "Separate the post info by the post info colors defined in themes", null, true ],
     "Add Shadow?":              [ false, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
@@ -167,7 +167,7 @@
         { name: "Helvetica",     value: "Helvetica"     }
       ]
     ],
-    "Font Size": [ 12, "Set the general size of text (Pixels)" ],
+    "Font Size": [ 13, "Set the general size of text (Pixels)" ],
     "Bitmap Font": [ false, "Check this if you are using a bitmap font" ],
     "Themes"          : [],
     "Hidden Themes"   : [],
@@ -798,7 +798,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}div[style='float: right;']{font-size:0!important}.option.header .option-title{font-size:11px!important}.stylechanger a{font-size:" + $SS.conf["Font Size"] + "px!important}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}:root.underline-disabled a{text-decoration:none}:root.underline-disabled .filtered{text-decoration:line-through}.name,.option.header .option-title{font-weight:700}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot,#styleSelector,.topad.center,.middlead.center,.bottomad.center,#delPassword{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr,.board>hr:last-of-type{border-width:0}div[style='float: right;']{color:transparent}html,body,div.boardBanner,#menu{color:rgb(" + $SS.theme.textColor.rgb + ")!important}.name{color:rgb(" + $SS.theme.nameColor.rgb + ")!important}.postertrip{color:rgb(" + $SS.theme.tripColor.rgb + ")!important}a{color:rgb(" + $SS.theme.linkColor.rgb + ")!important}a:hover{color:rgb(" + $SS.theme.linkHColor.rgb + ")!important}.quote{color:rgb(" + $SS.theme.quoteColor.rgb + ")}.option.header .option-title{color:rgb(" + $SS.theme.titleColor.rgb + ")!important}.reply,.dialog,.tab-label{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important}#header-bar{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important}html,body{background:rgb(" + $SS.theme.bgColor.rgb + ")!important}.reply{border-width:1px;border-style:solid}:root.rounded-corners .reply,:root.rounded-corners .dialog:not(#header-bar){border-radius:3px}.reply,#watcher,#header-bar{border-color:rgb(" + $SS.theme.brderColor.rgb + ")}#add-mascot,#add-theme,#oneechan-options{border:0!important;text-align:right!important;width:600px;padding:5px!important;border-radius:5px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:432px}.options-close,.options-container{padding:5px}#add-mascot{height:125px}#options-container{background:rgb(" + $SS.theme.mainColor.shiftRGB(-12) + ");box-shadow:inset rgba(0,0,0,.3) 0 0 5px,rgba(" + $SS.theme.mainColor.shiftRGB(32) + ",.6) 0 1px 3px;border-radius:5px}#options-container,.options-section{height:400px}.options-section{overflow:auto}#main-section .option{display:block;border-bottom:1px solid rgba(" + $SS.theme.mainColor.rgb + ",.3);border-top:1px solid rgba(0,0,0,.1);height:20px;padding:0 6px;vertical-align:top}.option-title{float:left;line-height:20px!important}#main-section .option:first-child{border-top:0!important}#main-section .option:last-child{border-bottom:0!important}select[name='Font Family']>option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}.suboption{margin-left:16px}.option.header{cursor:auto!important}.option.header .option-title{font-size:" + $SS.conf["Small Font Size"] + "px;font-family:" + $SS.formatFont($SS.conf["Font Family"]) + "!important;font-weight:700!important;color:" + $SS.theme.titleColor.hex + "!important}.theme-preview{cursor:default;opacity:.5;transition:all .1s;-webkit-transition:all .1s}.theme-preview:hover,.theme-preview.selected,.theme-preview.nsfw{opacity:1}#themes-section .reply{margin:2px 0!important;padding:2px!important;position:relative;text-align:left;width:100%;border-radius:2px!important}.theme-buttons-container{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}.theme-preview:hover .theme-buttons-container{opacity:1}.theme-buttons-container>a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}.theme-preview .sfw-label{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;transition:all .3s;-webkit-transition:all .3s}.theme-preview.nsfw .notsafe{opacity:1;right:3px;z-index:1}.theme-preview.selected .safe{opacity:1;right:3px;z-index:1}.theme-preview.selected.nsfw .sfw-label:not(.both){opacity:0!important;right:300px!important;z-index:0!important}.theme-preview.selected.nsfw .both{opacity:1;right:3px;z-index:1}#mascot-section{text-align:center}.mascot-preview{background-position:center top!important;background-repeat:no-repeat!important;background-size:cover!important;display:inline-block;height:257px;margin:2px;opacity:.75;position:relative;width:185px;border-radius:10px;transition:all .1s;-webkit-transition:all .1s}.mascot-preview:hover{opacity:1}.mascot-preview.selected{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;opacity:1;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}.mascot-preview a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3)}.mascot-preview a:not([href]):hover{background:rgba(0,0,0,.5)}.mascot-link.delete{left:0;border-radius:10px 0}.mascot-link.edit{right:0;border-radius:0 10px}#add-mascot{width:350px!important}#mascot-buttons-container{padding:5px}.add-mascot-label{display:block}#add-mascot .option-title,#add-theme .option-title{float:left;line-height:22px;padding-left:5px}.mascot-input,.mascot-select{margin-top:1px!important;width:200px}.mascot-select,.mascot-input.offset{width:80px}.add-mascot-label>input[type=checkbox],.add-mascot-label>.riceCheck{margin-top:5px}#options-tabs{list-style:none;margin:0;padding:0;position:absolute;top:-26px}.tab-item{float:left;margin:0;padding:0}.tab-label{color:#888!important;display:block;height:16px;margin:0 2px;padding:5px 10px;text-align:center;width:75px;border-radius:5px 5px 0 0;transition:all .1s ease-in-out;-webkit-transition:all .1s ease-in-out}.tab-label:not(.selected):not(:hover){opacity:.8}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}.buttons-container{bottom:10px;left:10px;position:absolute}.buttons-container{margin:0}.options-button{color:" + $SS.theme.jlinkColor.hex + ";display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;cursor:pointer;background:linear-gradient(rgb(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));background:-webkit-linear-gradient(top,rgb(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));border-radius:3px;box-shadow:rgba(0,0,0,.3) 0 0 2px}.options-button:hover,.import-input:hover+.options-button{background:rgb(" + $SS.theme.mainColor.shiftRGB(20) + ")}.options-button:active,.import-input:active+.options-button{box-shadow:inset rgba(0,0,0,.3) 0 0 2px,rgba(0,0,0,.3) 0 0 2px}.options-button-small{padding:2px 5px;min-width:30px}#import-link{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}.import-input{position:absolute;opacity:0;cursor:pointer}label.option>input[type=checkbox],label.option>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}span.option>select,.option>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin:0!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#oneechan-version{opacity:.5;padding-right:5px;padding-left:35px}.link-delim{opacity:.4}#issues-link{padding-right:10px}div[style='float: right;']{float:none!important;display:inline-block}.navLinksBot,.deleteform,.stylechanger{display:inline-block}";
+      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}#delform div.reply:not([hidden]),div.image_expanded{display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}span.spoiler{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,span.spoiler:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}div[style='float: right;']{font-size:0!important}.fileInfo{font-size:11px!important}.stylechanger a{font-size:" + $SS.conf["Font Size"] + "px!important}#themeoptions #toNav li label,.trbtn,#themeoptions #toWrapper>div>p{font-family:sans-serif!important;font-size:12px!important}body{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}:root.underline-disabled a{text-decoration:none}:root.underline-disabled .filtered{text-decoration:line-through}.name,.subject,.option.header .option-title{font-weight:700}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot,#styleSelector,.topad.center,.middlead.center,.bottomad.center,#delPassword{display:none}input:focus,textarea:focus,a{outline:0!important;-moz-outline:0!important;-moz-user-focus:none!important}body>hr,#delform>hr,.board>hr:last-of-type{border-width:0}div[style='float: right;']{color:transparent}html,body,div.boardBanner,#menu{color:rgb(" + $SS.theme.textColor.rgb + ")!important}.name{color:rgb(" + $SS.theme.nameColor.rgb + ")!important}.postertrip{color:rgb(" + $SS.theme.tripColor.rgb + ")!important}a{color:rgb(" + $SS.theme.linkColor.rgb + ")!important}a:hover{color:rgb(" + $SS.theme.linkHColor.rgb + ")!important}.quote{color:rgb(" + $SS.theme.quoteColor.rgb + ")}.subject,.option.header .option-title{color:rgb(" + $SS.theme.titleColor.rgb + ")!important}.reply,.dialog,.tab-label{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important}#header-bar{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")!important}html,body{background:rgb(" + $SS.theme.bgColor.rgb + ")!important}.reply{border-width:0 1px 1px 0;border-style:solid}:root.rounded-corners .reply,:root.rounded-corners .dialog:not(#header-bar){border-radius:3px}.reply,#watcher,#header-bar{border-color:rgb(" + $SS.theme.brderColor.rgb + ")}#add-mascot,#add-theme,#oneechan-options{border:0!important;text-align:right!important;width:600px;padding:5px!important;border-radius:5px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:432px}.options-close,.options-container{padding:5px}#add-mascot{height:125px}#options-container{background:rgb(" + $SS.theme.mainColor.shiftRGB(-12) + ");box-shadow:inset rgba(0,0,0,.3) 0 0 5px,rgba(" + $SS.theme.mainColor.shiftRGB(32) + ",.6) 0 1px 3px;border-radius:5px}#options-container,.options-section{height:400px}.options-section{overflow:auto}#main-section .option{display:block;border-bottom:1px solid rgba(" + $SS.theme.mainColor.rgb + ",.3);border-top:1px solid rgba(0,0,0,.1);height:20px;padding:0 6px;vertical-align:top}.option-title{float:left;line-height:20px!important}#main-section .option:first-child{border-top:0!important}#main-section .option:last-child{border-bottom:0!important}select[name='Font Family']>option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}.suboption{margin-left:16px}.option.header{cursor:auto!important}.option.header .option-title{font-size:" + $SS.conf["Small Font Size"] + "px;font-family:" + $SS.formatFont($SS.conf["Font Family"]) + "!important;font-weight:700!important;color:" + $SS.theme.titleColor.hex + "!important}.theme-preview{cursor:default;opacity:.5;transition:all .1s;-webkit-transition:all .1s}.theme-preview:hover,.theme-preview.selected,.theme-preview.nsfw{opacity:1}#themes-section .reply{margin:2px 0!important;padding:2px!important;position:relative;text-align:left;width:100%;border-radius:2px!important}.theme-buttons-container{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}.theme-preview:hover .theme-buttons-container{opacity:1}.theme-buttons-container>a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}.theme-preview .sfw-label{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;transition:all .3s;-webkit-transition:all .3s}.theme-preview.nsfw .notsafe{opacity:1;right:3px;z-index:1}.theme-preview.selected .safe{opacity:1;right:3px;z-index:1}.theme-preview.selected.nsfw .sfw-label:not(.both){opacity:0!important;right:300px!important;z-index:0!important}.theme-preview.selected.nsfw .both{opacity:1;right:3px;z-index:1}#mascot-section{text-align:center}.mascot-preview{background-position:center top!important;background-repeat:no-repeat!important;background-size:cover!important;display:inline-block;height:257px;margin:2px;opacity:.75;position:relative;width:185px;border-radius:10px;transition:all .1s;-webkit-transition:all .1s}.mascot-preview:hover{opacity:1}.mascot-preview.selected{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;opacity:1;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}.mascot-preview a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3)}.mascot-preview a:not([href]):hover{background:rgba(0,0,0,.5)}.mascot-link.delete{left:0;border-radius:10px 0}.mascot-link.edit{right:0;border-radius:0 10px}#add-mascot{width:350px!important}#mascot-buttons-container{padding:5px}.add-mascot-label{display:block}#add-mascot .option-title,#add-theme .option-title{float:left;line-height:22px;padding-left:5px}.mascot-input,.mascot-select{margin-top:1px!important;width:200px}.mascot-select,.mascot-input.offset{width:80px}.add-mascot-label>input[type=checkbox],.add-mascot-label>.riceCheck{margin-top:5px}#options-tabs{list-style:none;margin:0;padding:0;position:absolute;top:-26px}.tab-item{float:left;margin:0;padding:0}.tab-label{color:#888!important;display:block;height:16px;margin:0 2px;padding:5px 10px;text-align:center;width:75px;border-radius:5px 5px 0 0;transition:all .1s ease-in-out;-webkit-transition:all .1s ease-in-out}.tab-label:not(.selected):not(:hover){opacity:.8}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}.buttons-container{bottom:10px;left:10px;position:absolute}.buttons-container{margin:0}.options-button{color:" + $SS.theme.jlinkColor.hex + ";display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;cursor:pointer;background:linear-gradient(rgb(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));background:-webkit-linear-gradient(top,rgb(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));border-radius:3px;box-shadow:rgba(0,0,0,.3) 0 0 2px}.options-button:hover,.import-input:hover+.options-button{background:rgb(" + $SS.theme.mainColor.shiftRGB(20) + ")}.options-button:active,.import-input:active+.options-button{box-shadow:inset rgba(0,0,0,.3) 0 0 2px,rgba(0,0,0,.3) 0 0 2px}.options-button-small{padding:2px 5px;min-width:30px}#import-link{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}.import-input{position:absolute;opacity:0;cursor:pointer}label.option>input[type=checkbox],label.option>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}span.option>select,.option>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin:0!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#oneechan-version{opacity:.5;padding-right:5px;padding-left:35px}.link-delim{opacity:.4}#issues-link{padding-right:10px}div[style='float: right;']{float:none!important;display:inline-block}.navLinksBot,.deleteform,.stylechanger{display:inline-block}.postInfo{padding:4px 12px 2px;display:block!important}.fileInfo{margin-left:20px;margin-right:10px}.useremail::before{margin-bottom:-20px;display:inline-block}";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -1683,11 +1683,10 @@
       [
         {
           name:       "Vimyanized Dark",
-          author:      "seaweed",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0", 
-          navOp:      "0.9",
+          navOp:      "1.0",
           bgColor:    "090d0f",
           mainColor:  "0d1114",
           brderColor: "0b1316",
@@ -1705,16 +1704,14 @@
           sageColor:  "4f4f4f",
           tripColor:  "d4b63c",
           titleColor: "b88cd1",
-          timeColor:  "dddddd",
-          customCSS:  '" + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? ".thread>.replyContainer>.reply>div.postInfo { box-shadow: 0px 2px 3px #0A0A0A !important; }" : "") + "'
+          timeColor:  "dddddd"
         },
         {
           name:        "Muted",
-          author:      "seaweed",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "ffffff",
           mainColor:   "f5f2e9",
           brderColor:  "cccccc",
@@ -1732,16 +1729,16 @@
           sageColor:   "990000",
           tripColor:   "cc6563",
           timeColor:   "333333",
-          titleColor:  "111111",
-          customCSS:   "\n\n\n\n\n\n.boardTitle {color: #BC312A !important;text-shadow: 1px 1px 1px #772E28 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a {color: #111111 !important;}div.reply a.quotelink {color: #bc312a !important;}"
+          titleColor:  "111111"
         },
         {
           name:       "Minimalistic Mayhem",
-          author:      "!MayhemxaEo",
+          authorName:  "Mayhem",
+          authorTrip:  "!MayhemxaEo",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0",
-          navOp:       "0.9",  
+          navOp:       "1.0",  
           bgColor:    "191919",
           mainColor:  "222222",
           brderColor: "292929",
@@ -1759,15 +1756,14 @@
           sageColor:  "7c2d2d",
           tripColor:  "96562c",
           titleColor: "987d3e",
-          timeColor:  "bbbbbb",
+          timeColor:  "bbbbbb"
         },
         {
           name:       "Blackboard",
-          author:      "seaweed",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0",
-          navOp:       "0.9",  
+          navOp:       "1.0",  
           bgColor:    "0a0d1c",
           mainColor:  "0c1021",
           brderColor: "0e1228",
@@ -1785,15 +1781,15 @@
           sageColor:  "4f4f4f",
           tripColor:  "ff6400",
           titleColor: "ff6400",
-          timeColor:  "dddddd",
-          customCSS:  '" + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? ".thread>.replyContainer>.reply>div.postInfo { box-shadow: 0px 2px 3px #0A0A0A !important; }" : "") + "'
+          timeColor:  "dddddd"
         },
         {
           name:        "Dark Flat",
+          authorName:  "ahodesuka",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
-          navOp:       "0.9",  
+          navOp:       "1.0",  
           bgRPA:       "repeat top left fixed",
           bgColor:     "1C1D1E",
           mainColor:   "232425",
@@ -1812,15 +1808,14 @@
           sageColor:   "c99090",
           tripColor:   "d4c095",
           titleColor:  "9390c9",
-          timeColor:   "dddddd",
+          timeColor:   "dddddd"
         },
         {
           name:        "Photon",
-          author:      "seaweed",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
-          navOp:       "0.9",  
+          navOp:       "1.0",  
           bgColor:     "eeeeee",
           mainColor:   "dddddd",
           brderColor:  "cccccc",
@@ -1838,17 +1833,17 @@
           sageColor:   "990000",
           tripColor:   "ff3300",
           timeColor:   "333333",
-          titleColor:  "002244",
-          customCSS:   "\n\n\n\n\n\n.boardTitle {color: #004a99 !important;text-shadow: 1px 1px 1px #222 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a {color: #111111 !important;}"
+          titleColor:  "002244"
         },
         {
           name:        "Original Minimalistic Mayhem",
-          author:      "!MayhemxaEo",
+          authorName:  "Mayhem",
+          authorTrip:  "!MayhemxaEo",
           "default":   true,
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAAAAACoBHk5AAAAFUlEQVQIW2NgYJCRkUEmGMAsBjAXABi6AaXXHST3AAAAAElFTkSuQmCC",
           bgRPA:       "repeat top left fixed",
           replyOp:     "1.0",
-          navOp:       "0.9",  
+          navOp:       "1.0",  
           bgColor:     "191919",
           mainColor:   "333333",
           brderColor:  "111111",
@@ -1866,16 +1861,14 @@
           sageColor:   "7c2d2d",
           tripColor:   "8c5d2a",
           titleColor:  "486273",
-          timeColor:   "dddddd",
-          customCSS:   "\n\n\n\n\n\n#delform {background-color: #222 !important;\n}\n.subject:hover, div.post:hover .subject {\n  color: #3F8DBF !important;\n}\n.postertrip:hover, div.post:hover .postertrip {\ncolor: #CC7212 !important;\n}\n.name:hover, div.post:hover .name {\n  color: #0AAEE7 !important;\n}\n\n.name, .subject, .postertrip {\n  -webkit-transition: color .3s ease-in-out;\n  -moz-transition: color .3s ease-in-out;\n}"
+          timeColor:   "dddddd"
         },
         {
-          name:        "Tomorrow Night", // Originally by Chris Kempson @ https://github.com/ChrisKempson/Tomorrow-Theme
-          author:      "Chris Kempson",
+          name:        "Tomorrow",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "1d1f21",
           mainColor:   "282a2e",
           brderColor:  "373b41",
@@ -1893,15 +1886,17 @@
           sageColor:   "cc6666",
           tripColor:   "8abeb7",
           titleColor:  "b294bb",
-          timeColor:   "c5c8c6",
+          timeColor:   "c5c8c6"
         },
         {
           name:        "Yotsuba",
+          authorName:  "moot",
+          authorTrip:  "!Εр8рui8Vw2",
           "default":   true,
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFxJREFUKJFj+ndtPRMDAwMSZmRiYGTAFEPmM2IRg/EZcenBop4otYw47MSinxw16HYRZQYBPfjkUdRims1ItNmE/EOcfSTLEx2GBNTgSkc41eGLF3S7cKQr0tM2AO8LBH073E/fAAAAAElFTkSuQmCC",
           bgRPA:       "repeat-x top center scroll",
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "ffffee",
           mainColor:   "f0e0d6",
           brderColor:  "d9bFb7",
@@ -1919,16 +1914,17 @@
           sageColor:   "cc1111",
           tripColor:   "228854",
           titleColor:  "cc1105",
-          timeColor:   "800000",
-          customCSS:   '\n\n\n\n\n\n#boardNavDesktop a, .pages a, .postNum a { color: #800000 !important; } a.summary { color: #0000ee !important; } #boardNavDesktop,.pagelist,#imgControls,#id_css::after{background:rgba(254, 215, 176," + this.navOp + ")!important;}#delform,.reply,.hidden_thread,.stub{border-radius:0!important}\n.reply,.hidden_thread,.stub"+($SS.conf["Recolor Even Posts"] ? ",.replyContainer:nth-of-type(even)>div:not(.qphl):not(.sideArrows):not(.lastmuInfo)" : "")+"{border-left:1px solid "+this.mainColor.hex+"!important;border-top:1px solid "+this.mainColor.hex+"!important;}.boardTitle { text-shadow: 1px 1px 1px #772E28 !important; }.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}'
-        },                                                              
+          timeColor:   "800000"
+        },                                                             
         {
           name:        "Yotsuba B",
+          authorName:  "moot",
+          authorTrip:  "!Εр8рui8Vw2",
           "default":   true,
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUKJFjunj1HRMDAwNWzMiILsZIpDpcarDrx28GI17zUeUYiXITLrdg08PISKyfGfGYgT38cLkRm50Dbx9944KYdIUrbohNV0SoAwD1FwRwgMmDbgAAAABJRU5ErkJggg==",
           bgRPA:       "repeat-x top center scroll",
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "eef2ff",
           mainColor:   "d6daf0",
           brderColor:  "b7c5d9",
@@ -1946,17 +1942,15 @@
           sageColor:   "990000",
           tripColor:   "228854",
           titleColor:  "0f0c5d",
-          timeColor:   "000000",
-          customCSS:   '\n\n\n\n\n\na.quotelink:not(:hover){color:#cc2200!important;}#boardNavDesktop,.pagelist,#imgControls,#id_css::after{background:rgba(210, 214, 239," + this.navOp + ")!important;}#delform,.reply,.hidden_thread,.stub{border-radius:0!important}.reply,.hidden_thread,.stub"+($SS.conf["Recolor Even Posts"] ? ",.replyContainer:nth-of-type(even)>div:not(.qphl):not(.sideArrows):not(.lastmuInfo)" : "")+"{border-left:1px solid "+this.mainColor.hex+"!important;border-top:1px solid "+this.mainColor.hex+"!important;}.boardTitle {color: #AF0A0F !important;text-shadow: 1px 1px 1px #7A070D !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a { color: #000000 !important; }'
+          timeColor:   "000000"
         },
         {
           name:        "Yotsuba Purple",
-          author:      "seaweed",
           "default":   true,
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAPVJREFUOE91i1lywjAQROf+VySEhMW7kazFNhhSTM9YxoUrH69ed49El52lRLbrCEj/MorkVZesZGCPdzA6/2cvHduKfO8o/8YbBXmLvikOeisO7l/KH73BierXS4Yr+BPe6+NMyjA4JYLk5hSEtEs+8/ZBe47UXCIlIyfaDLmnt3u65pHBxhlIHsSCbOgDmUJBtvlIBi7ZxUiWEXPvKu1v3yR3Jbu+kdtwJ8+br+/kKrX0BuYNnTPssCXmXXqrhHZaspecwH3dJwrXbce2JtoHRTMJwXBGT8y73h/Ud0+F74uRpc+2Txoc+FPzDkaPrmjWd8gzL82jLtr9nlP8AAAAAElFTkSuQmCC",
           bgRPA:       "repeat-x top center scroll",
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "f8f3fe",
           mainColor:   "eeddff",
           brderColor:  "cab7d9",
@@ -1974,16 +1968,15 @@
           sageColor:   "990000",
           tripColor:   "b22caa",
           titleColor:  "0f0c5d",
-          timeColor:   "000000",
-          customCSS:   '\n\n\n\n\n\n#boardNavDesktop,.pagelist,#imgControls,#id_css::after{background:rgba(229, 219, 240," + this.navOp + ")!important;}#delform,.reply,.hidden_thread,.stub{border-radius:0!important}.reply,.hidden_thread,.stub"+($SS.conf["Recolor Even Posts"] ? ",.replyContainer:nth-of-type(even)>div:not(.qphl):not(.sideArrows):not(.lastmuInfo)" : "")+"{border-left:1px solid "+this.mainColor.hex+"!important;border-top:1px solid "+this.mainColor.hex+"!important;}.boardTitle {color: #591177 !important;text-shadow: 1px 1px 1px #222 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a { color: #000000 !important; }'
+          timeColor:   "000000"
         },
         {
           name:        "安心院なじみ",
+          authorName:  "ahodesuka",
           "default":   true,
-          bgImg:       "http://i.imgur.com/RewHm.png",
-          bgRPA:       "no-repeat right bottom fixed",
-          replyOp:     "0.9", 
-          navOp:       "0.9", 
+          bgImg:       false,
+          replyOp:     "1.0", 
+          navOp:       "1.0", 
           bgColor:     "ffffff",
           mainColor:   "efefef",
           brderColor:  "d6d6d6",
@@ -2004,38 +1997,13 @@
           timeColor:   "4d4d4c"
         },
         {
-          name:        "Midnight Caek",
-          author:      "zixaphir",
-          "default":   true,
-          bgImg:       false,
-          replyOp:     "1.0", 
-          navOp:       "0.9", 
-          bgColor:     "101010",
-          mainColor:   "1c1c1c",
-          brderColor:  "1c1c1c",
-          inputColor:  "1c1c1c",
-          inputbColor: "101010",
-          pinfoColor:  "191919",
-          pinfobColor: "1c1c1c",
-          blinkColor:  "47475b",
-          jlinkColor:  "57577b",
-          linkColor:   "57577b",
-          linkHColor:  "47475b",
-          nameColor:   "7c2d2d",
-          quoteColor:  "71793e",
-          textColor:   "909090",
-          sageColor:   "7c2d2d",
-          tripColor:   "3e7157",
-          titleColor:  "aaaaaa",
-          timeColor:   "909090",
-        },
-        {
           name:        "Solarized Dark", // http://ethanschoonover.com/solarized
-          author:      "Ubuntufriend",
+          authorName:  "ubuntufriend",
+          authorTrip:  "!UbuntuBReY!!iizPaxgtRk3",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "073642",
           mainColor:   "032b36",
           brderColor:  "133942",
@@ -2053,44 +2021,15 @@
           sageColor:   "cc6666",
           tripColor:   "2aa198",
           titleColor:  "bec2c4",
-          timeColor:   "93a1a1",
-          customCSS:   '.reply:not(.qphl){border-color:"+this.mainColor.hex+" !important}" + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? ".thread>.replyContainer>.reply>div.postInfo { box-shadow: 0px 2px 3px #0d272e !important; }" : "") + "'
-        },
-        {
-          name:"Solarized Light",
-          author:      "seaweed",
-          "default":   true,
-          bgImg:       false,
-          replyOp:     "1.0", 
-          navOp:       "0.9", 
-          bgColor:     "f0f0f0",
-          mainColor:   "fdf6e3",
-          brderColor:  "e6dfce",
-          inputColor:  "ffffff",
-          inputbColor: "cccccc",
-          pinfoColor:  "fffbf0",
-          pinfobColor: "e6dfce",
-          blinkColor:  "6c71c4",
-          jlinkColor:  "657b83",
-          linkColor:   "6c71c4",
-          linkHColor:  "d33682",
-          nameColor:   "657b83",
-          quoteColor:  "859900",
-          textColor:   "657b83",
-          sageColor:   "990000",
-          tripColor:   "2aa198",
-          titleColor:  "b58900",
-          timeColor:   "657b83",
-          customCSS:   ".boardTitle {color: #b58900 !important;text-shadow: 1px 1px 1px #999 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a {color: #657b83 !important;}"
+          timeColor:   "93a1a1"
         },
         {
           name:        "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
-          author:      "ahodesuka",
+          authorName:  "ahodesuka",
           "default":   true,
-          bgImg:       "http://oi39.tinypic.com/2h51rb4.jpg",
-          bgRPA:       "no-repeat bottom right fixed",
-          replyOp:     "0.8", 
-          navOp:       "0.9", 
+          bgImg:       false,
+          replyOp:     "1.0", 
+          navOp:       "1.0", 
           bgColor:     "f4f4f4",
           mainColor:   "efefef",
           brderColor:  "d4d4d4",
@@ -2108,43 +2047,16 @@
           sageColor:   "cc6666",
           tripColor:   "bf7f3f",
           titleColor:  "4c4c4c",
-          timeColor:   "4c4c4c",
-          customCSS:   '\n\n\n\n\n\n"+($SS.conf["Page Layout"]===2?".opContainer{display:block!important;border:1px solid "+this.brderColor.hex+"!important;"+($SS.conf["Sidebar Position"]===3?"margin-left:-"+($SS.conf["Side Margin"]+2)+"px!important;padding-left:"+($SS.conf["Side Margin"]+2)+"px!important}.opContainer,":"}"):"")+".post.reply{background:-webkit-linear-gradient(top,rgba(244,244,244," + this.replyOp + "),rgba(239,239,239," + this.replyOp + "))!important;background:-moz-linear-gradient(top,rgba(244,244,244," + this.replyOp + "),rgba(239,239,239," + this.replyOp + "))!important;background:-o-linear-gradient(top,rgba(244,244,244," + this.replyOp + "),rgba(239,239,239," + this.replyOp + "))!important;box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}'
-        },
-        {
-          name:        "violaceous",
-          author:      "!MaSoOdDwDw",
-          "default":   true,
-          bgImg:       false,
-          replyOp:     "1.0", 
-          navOp:       "0.9", 
-          bgColor:     "121314",
-          mainColor:   "1b1b1b",
-          brderColor:  "292a2b",
-          inputColor:  "18191a",
-          inputbColor: "121314",
-          pinfoColor:  "191919",
-          pinfobColor: "1b1b1b",
-          blinkColor:  "db95e5",
-          jlinkColor:  "db95e5",
-          linkColor:   "2a7fa0",
-          linkHColor:  "3090b5",
-          nameColor:   "a497b0",
-          quoteColor:  "5aab24",
-          textColor:   "dddddd",
-          sageColor:   "4f4f4f",
-          tripColor:   "bd2b83",
-          titleColor:  "06989a",
-          timeColor:   "dddddd",
-          customCSS:   '\n\n\n\n\n\n.reply:not(.qphl){border-color:"+this.mainColor.hex+" !important}'
+          timeColor:   "4c4c4c"
         },
         {
           name:        "4chan Dark Upgrade",
+          authorName:  "ahodesuka",
           "default":   true,
           bgImg:       "http://img85.imageshack.us/img85/4162/4chbg.gif",
           bgRPA:       "repeat top left fixed",
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "242424",
           mainColor:   "333333",
           brderColor:  "3a3a3a",
@@ -2170,11 +2082,11 @@
         },
         {
           name:        "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
-          author:      "Zixaphir",
+          authorName:  "Zixaphir",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "2c2c2c",
           mainColor:   "333333",
           brderColor:  "333333",
@@ -2192,16 +2104,15 @@
           sageColor:   "aaaaaa",
           tripColor:   "aaaaaa",
           titleColor:  "aaaaaa",
-          timeColor:   "aaaaaa",
-          customCSS:   '" + ($SS.conf["Use Post Info Color"] && $SS.conf["Add Shadow?"] ? ".thread>.replyContainer>.reply>div.postInfo { box-shadow: 0px 2px 3px #2c2c2c !important; }" : "") + "'
+          timeColor:   "aaaaaa"
         },
         {
           name:        "Zenburned",
-          author:      "lazy",
+          authorName:  "lazy",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "3f3f3f",
           mainColor:   "575757",
           brderColor:  "5e5e5e",
@@ -2219,69 +2130,13 @@
           sageColor:   "aaaaaa",
           tripColor:   "8cd0d3",
           titleColor:  "aaaaaa",
-          timeColor:   "dcdccc",
-        },
-        {
-          name:        "ピンク",
-          author:      "DrooidKun",
-          "default":   true,
-          bgImg:       false,
-          replyOp:     "1.0",
-          navOp:       "0.9", 
-          bgColor:     "ffffff",
-          mainColor:   "f2f2f2",
-          brderColor:  "f0f0f0",
-          inputColor:  "f0f0f0",
-          inputbColor: "dedede",
-          pinfoColor:  "ffdbed",
-          pinfobColor: "f0f0f0",
-          blinkColor:  "bf7ab4",
-          jlinkColor:  "bf7ab4",
-          linkColor:   "bf7ab4",
-          linkHColor:  "c669c9",
-          nameColor:   "cc5ec1",
-          quoteColor:  "718c00",
-          textColor:   "4d4d4c",
-          sageColor:   "c82829",
-          tripColor:   "c669c9",
-          titleColor:  "4d4d4d",
-          timeColor:   "4d4d4c",
-          customCSS:   ".boardTitle {color: #cc5ec1 !important;text-shadow: 1px 1px 1px #772E28 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}"
-        },
-        {
-          name:        "BakaBT",
-          author:      "seaweed",
-          "default":   true,
-          bgImg:       "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",
-          bgRPA:       "repeat top left fixed",
-          replyOp:     "1.0",
-          navOp:       "0.9", 
-          bgColor:     "f8f3fe",
-          mainColor:   "eeddff",
-          brderColor:  "c8aedd",
-          inputColor:  "ffffff",
-          inputbColor: "cab7d9",
-          pinfoColor:  "e4d4f5",
-          pinfobColor: "c8aedd",
-          blinkColor:  "83678f",
-          jlinkColor:  "962594",
-          linkColor:   "724f87",
-          linkHColor:  "b22caa",
-          nameColor:   "795c8c",
-          quoteColor:  "789922",
-          textColor:   "000000",
-          sageColor:   "990000",
-          tripColor:   "925c8d",
-          titleColor:  "0f0c5d",
-          timeColor:   "000000",
-          customCSS:   ".boardTitle {color: #854C9E !important;text-shadow: 1px 1px 1px #222 !important;}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.postNum a { color: #83678F !important; }\n\n\nform[name='delform'], .flashListing {\nbackground-color: #FFF !important;\nborder: 1px solid #CCC !important;\npadding-left: 20px !important;\npadding-right: 20px !important;\n  -webkit-box-shadow: 5px 5px 5px rgba(128,128,128,0.5) !important;\n  box-shadow: 0px 10px 10px 2px rgba(128,128,128,0.5) !important;\n  border-radius: 3px !important;\npadding-bottom: 2px !important;\nmargin-bottom: -4px !important;\n}",
+          timeColor:   "dcdccc"
         },
         {
           name:        "Monokai",
-          author:      "seaweed",
           "default":   true,
           replyOp:     "1.0",
-          navOp:       "0.9", 
+          navOp:       "1.0", 
           bgColor:     "20211c",
           mainColor:   "272822",
           brderColor:  "2d2e27",
@@ -2299,42 +2154,13 @@
           sageColor:   "4f4f4f",
           tripColor:   "fa8220",
           titleColor:  "ae81ff",
-          timeColor:   "f8f8f2",
-        },
-        {
-          name:        "Yotsuba B Rewired",
-          author:      "seaweed",
-          "default":   true,
-          bgImg:       "https://goput.it/01d.png",
-          replyOp:     "0.9",
-          navOp:       "0.9",
-          bgColor:     "eef2ff",
-          mainColor:   "b7c5d9",
-          brderColor:  "b7c5d9",
-          inputColor:  "ffffff",
-          inputbColor: "aaaaaa",
-          pinfoColor:  "cfd3e8",
-          pinfobColor: "b7c5d9",
-          blinkColor:  "34345c",
-          jlinkColor:  "34345c",
-          linkColor:   "34345c",
-          linkHColor:  "dd0000",
-          nameColor:   "117743",
-          quoteColor:  "789922",
-          textColor:   "000000",
-          sageColor:   "990000",
-          tripColor:   "228854",
-          titleColor:  "0f0c5d",
-          timeColor:   "000000",
-          customCSS:   '.op .postInfo { width: 100% !important;\ndisplay: block !important;\nbackground: rgba(255,255,255," + this.replyOp + ") !important;\n" + ($SS.conf["Rounded Corners"] ? "border-radius: 3px 3px 0px 0px !important;\n" : "") + "}.op blockquote{" + ($SS.conf["Rounded Corners"] ? "border-radius: 0px 0px 3px 3px !important;\n" : "") + "background:-webkit-linear-gradient(top,rgba(255,255,255," + this.replyOp + "),rgba(242,242,242," + this.replyOp + "))!important;\nbackground:-moz-linear-gradient(top,rgba(255,255,255," + this.replyOp + "),rgba(242,242,242," + this.replyOp + "))!important;\nbackground:-o-linear-gradient(top,rgba(255,255,255," + this.replyOp + "),rgba(242,242,242," + this.replyOp + "))!important;\nbox-shadow:0 2px 2px rgba(0,0,0,.05)!important}.thread>.replyContainer>.reply{background:-webkit-linear-gradient(top,rgba(204,214,228," + this.replyOp + "),rgba(183,197,217," + this.replyOp + "))!important;\nbackground:-moz-linear-gradient(top,rgba(204,214,228," + this.replyOp + "),rgba(183,197,217," + this.replyOp + "))!important;\nbackground:-o-linear-gradient(top,rgba(204,214,228," + this.replyOp + "),rgba(183,197,217," + this.replyOp + "))!important;\nbox-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}"+($SS.conf["Page Layout"]===2?".opContainer{display:block!important;\nborder:1px solid "+this.brderColor.hex+"!important;\n"+($SS.conf["Sidebar Position"]===3?"margin-left:-"+($SS.conf["Side Margin"]+2)+"px!important;\npadding-left:"+($SS.conf["Side Margin"]+2)+"px!important}.opContainer,":"}"):"")+"box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important}a.quotelink:not(:hover){color:#cc2200!important;\n}.boardTitle {color: #AF0A0F !important;\ntext-shadow: 1px 1px 1px #7A070D !important;\n}.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;\n}.postNum a { color: #000000 !important;\n }',
-          bgRPA:       "no-repeat bottom right fixed"
+          timeColor:   "f8f8f2"
         },
         {
           name:        "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
-          author:      "seaweed",
           "default":   true,
           replyOp:     "1.0",
-          navOp:       "0.9",
+          navOp:       "1.0",
           bgColor:     "e9eced",
           mainColor:   "e3e7e8",
           brderColor:  "cccccc",
@@ -2352,8 +2178,7 @@
           sageColor:   "92afc2",
           tripColor:   "5d6678",
           titleColor:  "617d6f",
-          timeColor:   "4c4c4c",
-          customCSS:   '.boardSubtitle, .boardBanner .boardSubtitle > a{text-shadow: none !important;}.boardTitle {color: #477085 !important;text-shadow: 1px 1px 1px #772E28 !important;}.post.reply{background:-webkit-linear-gradient(top,#E5E8E9,#E3E7E8)!important;background:-moz-linear-gradient(top,#E5E8E9,#E3E7E8)!important;background:-o-linear-gradient(top,#E5E8E9,#E3E7E8)!important;box-shadow:0 2px 5px rgba(0,0,0,.05)!important}.reply.highlight,.qphl{border-color:rgba("+this.linkHColor.rgb+",.6)!important} #qp .reply { box-shadow: none !important; }',
+          timeColor:   "4c4c4c"
         }
       ],
 
@@ -3242,7 +3067,8 @@
       this.index       = index;
       this.hidden      = $SS.conf["Hidden Themes"].indexOf(index) !== -1;
       this.name        = theme.name;
-      this.author      = theme.author || "seaweedchan";
+      this.authorName  = theme.authorName || "Seaweed";
+      this.authorTrip  = theme.authorTrip || "!!lq+3fff+/ev";
       this.default     = theme.default;
       this.replyBrder  = theme.replyBrder;
       this.bgImg       = new $SS.Image(theme.bgImg, theme.bgRPA);
@@ -3343,9 +3169,8 @@
             "style='background-color:" + this.mainColor.hex + "!important;border:1px solid " + this.brderColor.hex + "!important;color:" + this.textColor.hex + "!important'>" +
             "<div class=riceCheck style='background-color:" + this.inputColor.hex + "!important;border:1px solid " + this.inputbColor.hex + "!important;box-shadow:rgba(" + this.mainColor.shiftRGB(64) + ",.3) 0 1px;'></div>" +
             "<span style='color:" + this.titleColor.hex + "!important; font-weight: 700 !important'>" + this.name + "</span> " +
-            "<span style='color:" + this.nameColor.hex + "!important; font-weight: 700 !important'>" + this.author + "</span>" +
-            "<span style='color:" + this.sageColor.hex + "!important'> (SAGE)</span>" +
-            "<span style='color:" + this.tripColor.hex + "!important'> !POMF.9waa</span>" +
+            "<span style='color:" + this.nameColor.hex + "!important; font-weight: 700 !important'>" + this.authorName + "</span>" +
+            "<span style='color:" + this.tripColor.hex + "!important'> " + this.authorTrip + "</span>" +
             "<time style='color:" + this.timeColor.hex + "'> 20XX.01.01 12:00 </time>" +
             "<a href='javascript:;' style='color:" + this.linkColor.hex + "!important' " +
             "onmouseover='this.setAttribute(\"style\",\"color:" + this.linkHColor.hex + "!important\")' " +

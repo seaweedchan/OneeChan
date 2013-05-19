@@ -8,3 +8,16 @@ div[style='float: right;'] {
 .stylechanger {
   display: inline-block;
 }
+/* Reply */
+.postInfo {
+  padding:4px 12px 2px;
+  display: block !important;
+}
+.fileInfo {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.useremail::before {
+  margin-bottom: -20px;
+  display: inline-block;
+}

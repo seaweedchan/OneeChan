@@ -31,6 +31,7 @@ a:hover {
   color: rgb(" + $SS.theme.quoteColor.rgb + ");
 }
 /* Subject and Option labels */
+.subject,
 .option.header .option-title {
   color: rgb(" + $SS.theme.titleColor.rgb + ")!important;
 }
@@ -52,7 +53,7 @@ body {
 
 /* Borders */
 .reply {
-  border-width: 1px;
+  border-width: 0px 1px 1px 0px;
   border-style: solid;
 }
 :root.rounded-corners .reply,
