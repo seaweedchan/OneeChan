@@ -312,7 +312,7 @@ select[name='Font Family']>option {
 }
 .import-input {
   position:absolute;
-  visibility: hidden;
+  opacity: 0;
   cursor: pointer;
 }
 /* Inputs */
