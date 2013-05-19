@@ -524,6 +524,25 @@
             $(this).removeClass(classNames[j]);
       });
     },
+    toggleClass: function(option, enabled, classNames) {
+      return this.each(function()
+      {
+        classNames = classNames.split(" ");
+        for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+          if (enabled) {
+            if ($SS.conf[option])
+              $(this).addClass(classNames[j]);
+            else
+              $(this).removeClass(classNames[j]);
+          }
+          else {
+            if (!$SS.conf[option])
+              $(this).addClass(classNames[j]);
+            else
+              $(this).removeClass(classNames[j]);   
+          }
+      });
+    },
     remove: function()
     {
       return this.each(function(){ this.parentNode.removeChild(this); });
@@ -709,12 +728,13 @@
           div.text("x");
         };
       }
+
+      $SS.classes.init();
       
       $SS.pages.init();
 
       $SS.riceInputs.init();
       $SS.logoReflect.init();
-
     },
     init: function(reload)
     {
@@ -2475,6 +2495,14 @@
         }
 
         $SS.mascot = new $SS.Mascot(mIndex); // Set the active mascot.
+      }
+    },
+
+    classes:
+    {
+      init: function()
+      {
+        $("html").toggleClass("Underline Links", false, "underline-disabled");
       }
     },
 
