@@ -24,6 +24,19 @@
 #add-mascot {
   height: 125px;
 }
+#add-theme {
+  height: 445px;
+}
+#add-mascot .option-title,
+#add-theme .option-title {
+  float:left;
+  line-height:22px;
+  padding-left:5px;
+}
+#add-mascot>label,
+#add-theme>label {
+  line-height:22px;
+}
 /* Main */
 #options-container {
   /* Backslash for syntax highlighting, removed on compile */
@@ -77,12 +90,6 @@ select[name='Font Family']>option {
 }
 .option.header {
   cursor: auto !important;
-}
-.option.header .option-title {
-  font-size:" + $SS.conf["Small Font Size"] + "px;
-  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + "!important;
-  font-weight: bold !important; 
-  color:" + $SS.theme.titleColor.hex + "!important;
 }
 /* Themes */
 .theme-preview {
@@ -154,6 +161,38 @@ select[name='Font Family']>option {
   right:3px;
   z-index:1;  
 }
+/* Add THeme */
+#add-theme
+{
+  text-align:left!important;
+  width:500px!important;
+}
+#add-theme>label
+{
+  display:inline-block;
+  text-align:right;
+  width:50%;
+}
+#add-theme>label#customCSS
+{
+  width:100%;
+}
+#add-theme>label#customCSS>textarea
+{
+  height:100px;
+  resize:vertical;
+  width:100%;
+}
+#add-theme>label>input[type=text],
+#add-theme>label>select
+{
+  width:100px;
+}
+#add-theme>div
+{
+  margin-top:.6em;
+  text-align:right;
+}
 /* Mascots */
 #mascot-section {
   text-align:center;
@@ -206,12 +245,6 @@ select[name='Font Family']>option {
 }
 .add-mascot-label {
   display:block;
-}
-#add-mascot .option-title,
-#add-theme .option-title {
-  float:left;
-  line-height:22px;
-  padding-left:5px;
 }
 .mascot-input,
 .mascot-select {
@@ -284,7 +317,6 @@ select[name='Font Family']>option {
   margin:0;
 }
 .options-button {
-  color:" + $SS.theme.jlinkColor.hex + ";
   display:inline-block;
   line-height:18px;
   margin:0 2px;
@@ -292,8 +324,6 @@ select[name='Font Family']>option {
   padding:2px 10px;
   text-align:center;
   cursor: pointer;
-  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
-  background:-webkit-linear-gradient(top, rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
   border-radius:3px;
   box-shadow:rgba(0,0,0,.3) 0 0 2px;
 }

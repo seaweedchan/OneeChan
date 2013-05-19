@@ -1,13 +1,3 @@
-/* Delete form */
-div[style='float: right;'] {
-  float: none !important;
-  display: inline-block;
-}
-.navLinksBot,
-.deleteform,
-.stylechanger {
-  display: inline-block;
-}
 /* Reply */
 .postInfo {
   padding:4px 12px 2px;
@@ -19,5 +9,51 @@ div[style='float: right;'] {
 }
 .useremail::before {
   margin-bottom: -20px;
+  display: inline-block;
+}
+/* Checkboxes */
+input[type=checkbox],
+.riceCheck
+{
+  display: inline-block;
+  height: 10px !important;
+  margin: 1px 3px 0px 0px;
+  position: relative;
+  vertical-align: top;
+  width: 10px!important;
+  border-radius: 2px!important;
+  -webkit-appearance: none;
+}
+input[type=checkbox]:checked::before,
+input[type=checkbox]:checked+.riceCheck::before
+{
+  content: '';
+  display: block;
+  height: 8px;
+  margin: 1px;
+  width: 8px;
+}
+input[type=checkbox]:checked::before,
+input[type=checkbox]:checked+.riceCheck::before
+{
+  background: " + $SS.theme.checkMark.get() + " !important;
+}
+/* Header */
+:root.fixed #header-bar {
+  padding: 4px 4px 5px !important;
+}
+/* Menu button */
+.reply .menu-button i {
+  position: relative;
+  bottom: 1px;
+}
+/* Delete form */
+div[style='float: right;'] {
+  float: none !important;
+  display: inline-block;
+}
+.navLinksBot,
+.deleteform,
+.stylechanger {
   display: inline-block;
 }

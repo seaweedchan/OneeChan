@@ -1,0 +1,93 @@
+/* Text */
+
+/* Anything we need transparent */
+div[style='float: right;'] {
+  color: transparent;
+}
+/* Text */
+html,
+body,
+div.boardBanner,
+#menu {
+  color: rgb(" + $SS.theme.textColor.rgb + ") !important;
+}
+/* Names */
+.name {
+  color: rgb(" + $SS.theme.nameColor.rgb + ") !important;
+}
+/* Tripcodes */
+.postertrip {
+  color: rgb(" + $SS.theme.tripColor.rgb + ") !important;
+}
+/* Links */
+a {
+  color: rgb(" + $SS.theme.linkColor.rgb + ") !important;
+}
+a:hover {
+  color: rgb(" + $SS.theme.linkHColor.rgb + ") !important;
+}
+a.current {
+  color: rgb(" + $SS.theme.textColor.rgb + ") !important;
+}
+/* Greentext */
+.quote {
+  color: rgb(" + $SS.theme.quoteColor.rgb + ");
+}
+/* Subject and Option labels */
+.subject,
+.option.header .option-title {
+  color: rgb(" + $SS.theme.titleColor.rgb + ")!important;
+}
+/* 4chan X links and Options Buttons */
+.options-button {
+  color:" + $SS.theme.jlinkColor.hex + ";
+}
+
+
+/* Backgrounds */
+html,
+body {
+  background: rgb(" + $SS.theme.bgColor.rgb + ") !important;
+}
+.reply,
+.dialog,
+.tab-label {
+  background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
+}
+#header-bar {
+  background:linear-gradient(rgba\(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.navOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
+  background:-webkit-linear-gradient(top, rgba\(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.navOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
+}
+.options-button {
+  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
+  background:-webkit-linear-gradient(top, rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
+}
+input,
+textarea,
+.riceCheck {
+  background: rgb(" + $SS.theme.inputColor.rgb + ");
+}
+
+/* Borders */
+.reply {
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+}
+:root.rounded-corners .reply,
+:root.rounded-corners .dialog:not(#header-bar) {
+  border-radius: 3px;
+}
+.reply,
+#watcher,
+#header-bar {
+  border-color: rgb(" + $SS.theme.brderColor.rgb + ");
+}
+input,
+textarea,
+.riceCheck {
+  border:1px solid rgb(" + $SS.theme.inputbColor.rgb + ") !important;
+}
+input:focus,
+textarea:focus {
+  border:1px solid rgb(" + $SS.theme.linkColor.rgb + ") !important;
+}

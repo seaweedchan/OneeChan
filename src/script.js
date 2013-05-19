@@ -61,9 +61,9 @@
         { name: "Hidden",         value: 4 }
       ]
     ],
-    "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],
+    "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
     "Hide Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
-    "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
+    /*"Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
     /*"--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
@@ -1320,7 +1320,7 @@
           }
         }
 
-        div = $("<div id='add-theme'>");
+        div = $("<div id='add-theme' class='dialog'>");
 
         var innerHTML = "<label>" +
         "<span class='option-title'>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
@@ -1494,7 +1494,7 @@
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
 
-        div = $("<div id='add-mascot'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
+        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "[Base 64 Encoded Image]' disabled=true") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Alignment/Offset:</span>" +
@@ -1693,11 +1693,11 @@
           navOp:       "1.0", 
           bgColor:     "ffffff",
           mainColor:   "f5f2e9",
-          brderColor:  "cccccc",
+          brderColor:  "dddddd",
           inputColor:  "ffffff",
-          inputbColor: "cccccc",
+          inputbColor: "dddddd",
           pinfoColor:  "ebe8df",
-          pinfobColor: "cccccc",
+          pinfobColor: "dddddd",
           blinkColor:  "111111",
           jlinkColor:  "bc312a",
           linkColor:   "bc312a",
@@ -2289,6 +2289,7 @@
         /* Function arguments: ("Option Name", value, "class-name") */
         $("html").optionClass("Underline Links", false, "underline-disabled");
         $("html").optionClass("Rounded Corners", true, "rounded-corners");
+        $("html").optionClass("Hide Checkboxes", true, "hide-checkboxes");
       }
     },
 

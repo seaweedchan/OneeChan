@@ -9,7 +9,10 @@ iframe[src='about:blank'],
 .topad.center,
 .middlead.center,
 .bottomad.center,
-#delPassword {
+#delPassword,
+:root.hide-checkboxes .post input[type=checkbox],
+:root.hide-checkboxes .post .riceCheck,
+:root.hide-checkboxes .deleteform {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */
