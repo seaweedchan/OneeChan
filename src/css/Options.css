@@ -75,6 +75,15 @@ select[name='Font Family']>option {
 .suboption {
   margin-left:16px;
 }
+.option.header {
+  cursor: auto !important;
+}
+.option.header .option-title {
+  font-size:" + $SS.conf["Small Font Size"] + "px;
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + "!important;
+  font-weight: bold !important; 
+  color:" + $SS.theme.titleColor.hex + "!important;
+}
 /* Themes */
 .theme-preview {
   cursor: default;

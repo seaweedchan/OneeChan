@@ -3,7 +3,7 @@
   var defaultConfig =
   {
     "--Main Rice--":                     [ "header",  "" ],
-    "Page Layout":
+    /*"Page Layout":
     [
       2, "Change the layout of the main content",
       [
@@ -49,9 +49,9 @@
       "Sidebar Side Margin", 
       999,
       true
-    ],
+    ],*/
     "Underline Links":    [ false, "Underlines links" ],
-    "Pages Position":
+    /*"Pages Position":
     [
       2, "Change the location of the page links",
       [
@@ -63,8 +63,8 @@
     ],
     "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],
     "Hide Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
-    "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],
-    "--Sidebar--":                     [ "header",  "" ],
+    "Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
+    /*"--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
       1, "Change the position of the sidebar",
@@ -103,10 +103,10 @@
         { name: "List",      value: 1 },
         { name: "Compact",          value: 2 }
       ]
-    ],
+    ],*/
     "--Replies--":                  [ "header",  "" ],
     "Rounded Corners":          [ true,  "Styles a few elements to have subtly rounded coreners" ], 
-    "Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
+    /*"Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
     "Use Post Info Color":      [ true, "Separate the post info by the post info colors defined in themes", null, true ],
     "Add Shadow?":              [ false, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
     "Margin Between Replies":
@@ -128,9 +128,9 @@
         { name: "Bottom Right", value: 2 }
       ]
     ],
-    "Backlink Icons":          [ false,  "Use icons for backlinks instead of text." ], 
-    "--Quick Reply--":                  [ "header",  "" ],
-    "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
+    "Backlink Icons":          [ false,  "Use icons for backlinks instead of text." ], */
+    /*"--Quick Reply--":                  [ "header",  "" ],
+    "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],*/
     "--Font--":                     [ "header",  "" ],
     "Font Family":
     [

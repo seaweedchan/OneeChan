@@ -22,7 +22,10 @@ a:hover {
 .quote {
   color: rgb(" + $SS.theme.quoteColor.rgb + ");
 }
-
+/* Subject and Option labels */
+.option.header .option-title {
+  color: rgb(" + $SS.theme.titleColor.rgb + ")!important;
+}
 /* Backgrounds */
 .reply,
 .dialog,

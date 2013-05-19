@@ -4,6 +4,10 @@
 div[style='float: right;'] {
   font-size: 0px !important;
 }
+/* Anything we need small */
+.option.header .option-title {
+  font-size: 11px !important;
+}
 /* Anything we need !important */
 .stylechanger a {
   font-size:" + $SS.conf["Font Size"] + "px !important;
@@ -30,6 +34,7 @@ body {
 }
 
 /* Font weight */
-.name {
+.name,
+.option.header .option-title {
   font-weight: 700;
 }
