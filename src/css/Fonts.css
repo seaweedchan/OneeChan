@@ -18,4 +18,10 @@ body {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
   font-size:" + $SS.conf["Font Size"] + "px;
 }
-
+/* Text decoration */
+:root.underline-disabled a {
+  text-decoration: none;
+}
+:root.underline-disabled .filtered {
+  text-decoration: line-through;
+}
