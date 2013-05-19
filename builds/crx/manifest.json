@@ -1,0 +1,22 @@
+{
+  "name": "OneeChan",
+  "version": "5.0.0",
+  "manifest_version": 2,
+  "description": "Customize 4chan to your liking right on the page itself.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [{
+    "js": ["script.js"],
+    "matches": ["*://www.4chan.org/","*://boards.4chan.org/*","*://sys.4chan.org/*"],
+    "all_frames": true,
+    "run_at": "document_start"
+  }],
+  "homepage_url": "http://seaweedchan.github.io/4chan-x/",
+  "minimum_chrome_version": "25",
+  "permissions": [
+    "storage"
+  ]
+}

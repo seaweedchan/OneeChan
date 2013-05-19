@@ -15,18 +15,27 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: pkg
     concat:
+      style:
+        options: concatOptions
+        files:
+          'tmp/style.css': 'src/style.js' 
       userscript:
         options: concatOptions
         files:
           'builds/<%= pkg.name %>.meta.js': 'src/meta/metadata.js'
           'builds/<%= pkg.name %>.user.js': [
+            'src/meta/botproc.js'
             'src/meta/metadata.js'
             'src/script.js'
           ]
-      style:
+      crx:
         options: concatOptions
         files:
-          'tmp/style.css': 'src/style.js' 
+          'builds/crx/manifest.json': 'src/meta/manifest.json'
+          'builds/crx/script.js': [
+            'src/meta/botproc.js'
+            'src/script.js'
+          ]
 
 #      css:
 #        options: concatOptions
@@ -67,6 +76,16 @@ module.exports = (grunt) ->
         options: shellOptions
         command: 'git push origin --tags -f && git push origin --all' 
 
+    compress:
+      crx:
+        options:
+          archive: 'builds/4chan-X.zip'
+          level: 9
+          pretty: true
+        expand: true
+        cwd: 'builds/crx/'
+        src: '**'
+
     clean:
       tmp:        'tmp/'
 
@@ -74,7 +93,7 @@ module.exports = (grunt) ->
   # grunt.loadNpmTasks 'grunt-concurrent'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   # grunt.loadNpmTasks 'grunt-contrib-coffee'
-  # grunt.loadNpmTasks 'grunt-contrib-compress'
+  grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-concat'
   # grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-shell'
@@ -87,12 +106,14 @@ module.exports = (grunt) ->
   grunt.registerTask 'build', [
     'concat:style'
     'cssmin:minify'
+    'concat:crx'
     'concat:userscript'
     'clean:tmp'
   ]
 
   grunt.registerTask 'release', [
     'default'
+    'compress:crx'
     'shell:commit'
     'shell:push'
   ]
