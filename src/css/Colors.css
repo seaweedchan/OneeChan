@@ -9,45 +9,46 @@ html,
 body,
 div.boardBanner,
 #menu {
-  color: rgb(" + $SS.theme.textColor.rgb + ") !important;
+  color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
 .name {
-  color: rgb(" + $SS.theme.nameColor.rgb + ") !important;
+  color: " + $SS.theme.nameColor.hex + " !important;
 }
 /* Tripcodes */
 .postertrip {
-  color: rgb(" + $SS.theme.tripColor.rgb + ") !important;
+  color: " + $SS.theme.tripColor.hex + " !important;
 }
 /* Links */
 a {
-  color: rgb(" + $SS.theme.linkColor.rgb + ") !important;
+  color: " + $SS.theme.linkColor.hex + " !important;
 }
 a.current {
-  color: rgb(" + $SS.theme.textColor.rgb + ") !important;
+  color: " + $SS.theme.textColor.hex + " !important;
 }
 a:hover {
-  color: rgb(" + $SS.theme.linkHColor.rgb + ") !important;
+  color: " + $SS.theme.linkHColor.hex + " !important;
 }
 /* Greentext */
 .quote {
-  color: rgb(" + $SS.theme.quoteColor.rgb + ");
+  color: " + $SS.theme.quoteColor.hex + ";
 }
 /* Subject and Option labels */
 .subject,
 .option.header .option-title {
-  color: rgb(" + $SS.theme.titleColor.rgb + ")!important;
+  color: " + $SS.theme.titleColor.hex + " !important;
 }
 /* 4chan X links and Options Buttons */
-.options-button {
-  color:" + $SS.theme.jlinkColor.hex + ";
+.options-button,
+.qr-link {
+  color: " + $SS.theme.jlinkColor.hex + ";
 }
 
 
 /* Backgrounds */
 html,
 body {
-  background: rgb(" + $SS.theme.bgColor.rgb + ") !important;
+  background: " + $SS.theme.bgColor.hex + " !important;
 }
 .reply,
 .dialog,
@@ -55,19 +56,33 @@ body {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
 #header-bar {
-  background:linear-gradient(rgba\(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.navOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
+  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
   background:-webkit-linear-gradient(top, rgba\(" + $SS.theme.mainColor.shiftRGB(20) + "," + $SS.theme.navOp + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
 }
-.options-button {
+.options-button,
+.qr-link {
+  background-color:rgb\(" + $SS.theme.mainColor.shiftRGB(20) + ");
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
   background:-webkit-linear-gradient(top, rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
+}
+.options-button:hover,
+.import-input:hover + .options-button,
+.qr-link:hover {
+  background:rgb\(" + $SS.theme.mainColor.shiftRGB(20) + ");
 }
 input,
 textarea,
 .riceCheck {
-  background: rgb(" + $SS.theme.inputColor.rgb + ");
+  background: " + $SS.theme.inputColor.hex + ";
 }
-
+hr {
+  background-image: -webkit-linear-gradient(left, rgba(" + $SS.theme.brderColor.rgb + ",0), rgb(" + $SS.theme.brderColor.rgb + "), rgba(" + $SS.theme.brderColor.rgb + ",0));       
+  background-image: linear-gradient(to left, rgba(" + $SS.theme.brderColor.rgb + ",0), rgb(" + $SS.theme.brderColor.rgb + "), rgba(" + $SS.theme.brderColor.rgb + ",0)); 
+}
+#unread-line {
+  background-image: -webkit-linear-gradient(left, rgba(" + $SS.theme.jlinkColor.rgb + ",0), rgb(" + $SS.theme.jlinkColor.rgb + "), rgba(" + $SS.theme.jlinkColor.rgb + ",0));       
+  background-image: linear-gradient(to left, rgba(" + $SS.theme.jlinkColor.rgb + ",0), rgb(" + $SS.theme.jlinkColor.rgb + "), rgba(" + $SS.theme.jlinkColor.rgb + ",0)); 
+}
 /* Borders */
 .reply {
   border-width: 0px 1px 1px 0px;
@@ -78,16 +93,16 @@ textarea,
   border-radius: 3px;
 }
 .reply,
-#watcher,
-#header-bar {
-  border-color: rgb(" + $SS.theme.brderColor.rgb + ");
+.dialog {
+  border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
 textarea,
-.riceCheck {
-  border:1px solid rgb(" + $SS.theme.inputbColor.rgb + ") !important;
+.riceCheck,
+.qr-link {
+  border:1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 input:focus,
 textarea:focus {
-  border:1px solid rgb(" + $SS.theme.linkColor.rgb + ") !important;
+  border:1px solid " + $SS.theme.linkColor.hex + " !important;
 }

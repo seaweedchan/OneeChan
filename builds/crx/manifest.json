@@ -2,7 +2,7 @@
   "name": "OneeChan",
   "version": "5.0.0",
   "manifest_version": 2,
-  "description": "Customize 4chan to your liking right on the page itself.",
+  "description": "Customizable rice and themes for 4chan and 4chan X.",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

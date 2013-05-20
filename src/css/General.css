@@ -47,6 +47,12 @@ input[type=checkbox]:checked+.riceCheck::before
   position: relative;
   bottom: 1px;
 }
+/* QR link */
+.qr-link {
+  border-radius: 3px;
+  vertical-align: middle;
+  padding: 7px 12px 6px;
+}
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
@@ -56,4 +62,11 @@ div[style='float: right;'] {
 .deleteform,
 .stylechanger {
   display: inline-block;
+}
+/* HRs */
+hr {
+  height: 2px;
+  width: 600px;
+  margin: auto !important;
+  border: none !important;
 }

@@ -777,7 +777,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\/g, '') %>";
+      css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -869,7 +869,7 @@
       init: function()
       {
         var a = document.createElement("a");
-        a.textContent = "OneeChan";
+        a.textContent = "Style Settings";
         a.href = "javascript:;";
         a.addEventListener("click", function() {
           $SS.options.show();
@@ -1665,7 +1665,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0", 
-          navOp:      "1.0",
+          navOp:      "0.9",
           bgColor:    "090d0f",
           mainColor:  "0d1114",
           brderColor: "0b1316",
@@ -1690,7 +1690,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "ffffff",
           mainColor:   "f5f2e9",
           brderColor:  "dddddd",
@@ -1717,7 +1717,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0",
-          navOp:       "1.0",  
+          navOp:       "0.9",  
           bgColor:    "191919",
           mainColor:  "222222",
           brderColor: "292929",
@@ -1742,7 +1742,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0",
-          navOp:       "1.0",  
+          navOp:       "0.9",  
           bgColor:    "0a0d1c",
           mainColor:  "0c1021",
           brderColor: "0e1228",
@@ -1768,7 +1768,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
-          navOp:       "1.0",  
+          navOp:       "0.9",  
           bgRPA:       "repeat top left fixed",
           bgColor:     "1C1D1E",
           mainColor:   "232425",
@@ -1794,7 +1794,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
-          navOp:       "1.0",  
+          navOp:       "0.9",  
           bgColor:     "eeeeee",
           mainColor:   "dddddd",
           brderColor:  "cccccc",
@@ -1822,7 +1822,7 @@
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAAAAACoBHk5AAAAFUlEQVQIW2NgYJCRkUEmGMAsBjAXABi6AaXXHST3AAAAAElFTkSuQmCC",
           bgRPA:       "repeat top left fixed",
           replyOp:     "1.0",
-          navOp:       "1.0",  
+          navOp:       "0.9",  
           bgColor:     "191919",
           mainColor:   "333333",
           brderColor:  "111111",
@@ -1847,7 +1847,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "1d1f21",
           mainColor:   "282a2e",
           brderColor:  "373b41",
@@ -1875,7 +1875,7 @@
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFxJREFUKJFj+ndtPRMDAwMSZmRiYGTAFEPmM2IRg/EZcenBop4otYw47MSinxw16HYRZQYBPfjkUdRims1ItNmE/EOcfSTLEx2GBNTgSkc41eGLF3S7cKQr0tM2AO8LBH073E/fAAAAAElFTkSuQmCC",
           bgRPA:       "repeat-x top center scroll",
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "ffffee",
           mainColor:   "f0e0d6",
           brderColor:  "d9bFb7",
@@ -1903,7 +1903,7 @@
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUKJFjunj1HRMDAwNWzMiILsZIpDpcarDrx28GI17zUeUYiXITLrdg08PISKyfGfGYgT38cLkRm50Dbx9944KYdIUrbohNV0SoAwD1FwRwgMmDbgAAAABJRU5ErkJggg==",
           bgRPA:       "repeat-x top center scroll",
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "eef2ff",
           mainColor:   "d6daf0",
           brderColor:  "b7c5d9",
@@ -1929,7 +1929,7 @@
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAPVJREFUOE91i1lywjAQROf+VySEhMW7kazFNhhSTM9YxoUrH69ed49El52lRLbrCEj/MorkVZesZGCPdzA6/2cvHduKfO8o/8YbBXmLvikOeisO7l/KH73BierXS4Yr+BPe6+NMyjA4JYLk5hSEtEs+8/ZBe47UXCIlIyfaDLmnt3u65pHBxhlIHsSCbOgDmUJBtvlIBi7ZxUiWEXPvKu1v3yR3Jbu+kdtwJ8+br+/kKrX0BuYNnTPssCXmXXqrhHZaspecwH3dJwrXbce2JtoHRTMJwXBGT8y73h/Ud0+F74uRpc+2Txoc+FPzDkaPrmjWd8gzL82jLtr9nlP8AAAAAElFTkSuQmCC",
           bgRPA:       "repeat-x top center scroll",
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "f8f3fe",
           mainColor:   "eeddff",
           brderColor:  "cab7d9",
@@ -1955,7 +1955,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "ffffff",
           mainColor:   "efefef",
           brderColor:  "d6d6d6",
@@ -1982,7 +1982,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "073642",
           mainColor:   "032b36",
           brderColor:  "133942",
@@ -2008,7 +2008,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "f4f4f4",
           mainColor:   "efefef",
           brderColor:  "d4d4d4",
@@ -2035,7 +2035,7 @@
           bgImg:       "http://img85.imageshack.us/img85/4162/4chbg.gif",
           bgRPA:       "repeat top left fixed",
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "242424",
           mainColor:   "333333",
           brderColor:  "3a3a3a",
@@ -2065,7 +2065,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "2c2c2c",
           mainColor:   "333333",
           brderColor:  "333333",
@@ -2091,7 +2091,7 @@
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "3f3f3f",
           mainColor:   "575757",
           brderColor:  "5e5e5e",
@@ -2115,7 +2115,7 @@
           name:        "Monokai",
           "default":   true,
           replyOp:     "1.0",
-          navOp:       "1.0", 
+          navOp:       "0.9", 
           bgColor:     "20211c",
           mainColor:   "272822",
           brderColor:  "2d2e27",
@@ -2139,7 +2139,7 @@
           name:        "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
           "default":   true,
           replyOp:     "1.0",
-          navOp:       "1.0",
+          navOp:       "0.9",
           bgColor:     "e9eced",
           mainColor:   "e3e7e8",
           brderColor:  "cccccc",
@@ -3116,7 +3116,7 @@
                 "<path fill='rgb(" + this.textColor.rgb + ")' d='M16,4.938c-7.732,0-14,4.701-14,10.5c0,1.981,0.741,3.833,2.016,5.414L2,25.272l5.613-1.44c2.339,1.316,5.237,2.106,8.387,2.106c7.732,0,14-4.701,14-10.5S23.732,4.938,16,4.938zM16.868,21.375h-1.969v-1.889h1.969V21.375zM16.772,18.094h-1.777l-0.176-8.083h2.113L16.772,18.094z'/></svg>",
          lastmu:       "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='18' width='18' xmlns='http://www.w3.org/2000/svg'>" +
                 "<path fill='rgb(" + this.textColor.rgb + ")' d='M12.751,8.042v6.041v9.862c-0.677-0.45-1.636-0.736-2.708-0.736c-2.048,0-3.708,1.025-3.708,2.292c0,1.265,1.66,2.291,3.708,2.291s3.708-1.026,3.708-2.291V13.786l10.915-3.24v9.565c-0.678-0.45-1.635-0.736-2.708-0.736c-2.048,0-3.708,1.025-3.708,2.292c0,1.265,1.66,2.291,3.708,2.291s3.708-1.026,3.708-2.291V10.249V4.208L12.751,8.042z'/></svg>",
-         heart:        "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
+         heart:        "<svg viewBox='0 0 26 26' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                 "<path fill='rgb(" + this.textColor.rgb + ")' d='M24.132,7.971c-2.203-2.205-5.916-2.098-8.25,0.235L15.5,8.588l-0.382-0.382c-2.334-2.333-6.047-2.44-8.25-0.235c-2.204,2.203-2.098,5.916,0.235,8.249l8.396,8.396l8.396-8.396C26.229,13.887,26.336,10.174,24.132,7.971z'/></svg>",
          backlink:     "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                 "<path fill='rgb(" + this.blinkColor.rgb + ")' d='M12.981,9.073V6.817l-12.106,6.99l12.106,6.99v-2.422c3.285-0.002,9.052,0.28,9.052,2.269c0,2.78-6.023,4.263-6.023,4.263v2.132c0,0,13.53,0.463,13.53-9.823C29.54,9.134,17.952,8.831,12.981,9.073z'/></svg>",

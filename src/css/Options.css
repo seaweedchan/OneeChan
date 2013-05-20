@@ -108,7 +108,7 @@ select[name='Font Family']>option {
   padding:2px!important;
   position:relative;
   text-align:left;
-  width:100%;
+  width:99%;
   border-radius:2px!important;
 }
 .theme-buttons-container {
@@ -326,10 +326,6 @@ select[name='Font Family']>option {
   cursor: pointer;
   border-radius:3px;
   box-shadow:rgba(0,0,0,.3) 0 0 2px;
-}
-.options-button:hover,
-.import-input:hover + .options-button {
-  background:rgb\(" + $SS.theme.mainColor.shiftRGB(20) + ");
 }
 .options-button:active,
 .import-input:active + .options-button {

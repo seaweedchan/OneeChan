@@ -4,3 +4,4 @@
 <%= grunt.file.read('src/css/Colors.css') %>
 <%= grunt.file.read('src/css/Options.css') %>
 <%= grunt.file.read('src/css/General.css') %>
+<%= grunt.file.read('src/css/Icons.css') %>

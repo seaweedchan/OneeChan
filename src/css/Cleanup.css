@@ -25,8 +25,12 @@ a
   -moz-user-focus:none!important;
 }
 /* Hide unwanted horizontal lines, while keeping them */
+hr {
+
+}
 body>hr,
 #delform>hr,
 .board>hr:last-of-type {
-  border-width: 0px;
+  background: none !important;
 }
+
