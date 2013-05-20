@@ -167,24 +167,25 @@
   fontListSWF   = "http://ahodesuka.github.com/FontList.swf",
   themeInputs   =
   [
-    { dName: "Body Background",  name: "bgColor",     property: "background-color" },
     { dName: "Reply Background", name: "mainColor",   property: "background-color" },
     { dName: "Reply Border",     name: "brderColor",  property: "border-color"     },
     { dName: "Input Background", name: "inputColor",  property: "background-color" },
     { dName: "Input Border",     name: "inputbColor", property: "border-color"     },
-    { dName: "Post Info Background", name: "pinfoColor", property: "background-color" },
-    { dName: "Post Info Border", name: "pinfobColor", property: "border-color" },
-    { dName: "Backlinks",        name: "blinkColor",  property: "color"            },
-    { dName: "4chan x Links",    name: "jlinkColor",  property: "color"            },
-    { dName: "Links",            name: "linkColor",   property: "color"            },
-    { dName: "Links Hovered",    name: "linkHColor",  property: "color"            },
-    { dName: "Names",            name: "nameColor",   property: "color"            },
-    { dName: "Quote",            name: "quoteColor",  property: "color"            },
+    { dName: "Header BG Top", name: "headerTopColor",   property: "background-color" },
+    { dName: "Header BG Bottom", name: "headerBotColor",   property: "background-color" },
+    { dName: "Header Text",     name: "headerColor", property: "color"     },
+    { dName: "Header Border",     name: "headerbColor", property: "border-color"     },
+    { dName: "Board Title",     name: "boardColor", property: "color"     },
+    { dName: "Board Title Shadow",     name: "boardsColor", property: "color"     },
+    { dName: "Body Background",  name: "bgColor",     property: "background-color" },
     { dName: "Text",             name: "textColor",   property: "color"            },
-    { dName: "Sage",             name: "sageColor",   property: "color"            },
-    { dName: "Tripcodes",        name: "tripColor",   property: "color"            },
-    { dName: "Titles",           name: "titleColor",  property: "color"            },
-    { dName: "Timestamps",       name: "timeColor",   property: "color"            }
+    { dName: "Backlink",        name: "blinkColor",  property: "color"            },
+    { dName: "4chan x Link",    name: "jlinkColor",  property: "color"            },
+    { dName: "Link",            name: "linkColor",   property: "color"            },
+    { dName: "Link Hover",    name: "linkHColor",  property: "color"            },
+    { dName: "Name",            name: "nameColor",   property: "color"            },
+    { dName: "Tripcode",        name: "tripColor",   property: "color"            },
+    { dName: "Subject",           name: "titleColor",  property: "color"            }
   ],
   $lib, $SS;
 
@@ -1348,7 +1349,7 @@
         "<option" + (bEdit && themePY === "bottom" ? " selected" : "") + ">bottom</option>" +
         "</select></label><label>" +
         "<span class='option-title'>Reply Opacity:</span><input type=text name=replyOp value='" + (bEdit ? tEdit.replyOp : "1.0") + "'></label><label>" +
-        "<span class='option-title'>Navigation Opacity:</span><input type=text name=navOp value='" + (bEdit ? tEdit.navOp : "0.9") + "'>" +
+        "<span class='option-title'>Header Opacity:</span><input type=text name=navOp value='" + (bEdit ? tEdit.navOp : "0.9") + "'>" +
         "</label>";
 
         for (var i = 0, MAX = themeInputs.length; i < MAX; ++i)
@@ -1671,8 +1672,6 @@
           brderColor: "0b1316",
           inputColor: "090d0f",
           inputbColor:"0d1114",
-          pinfoColor: "0f1417",
-          pinfobColor:"0b1316",
           blinkColor: "4797cc",
           jlinkColor: "4270b2",
           linkColor:  "53bdb1",
@@ -1680,10 +1679,10 @@
           nameColor:  "d63e34",
           quoteColor: "96c83b",
           textColor:  "f8f8f8",
-          sageColor:  "4f4f4f",
           tripColor:  "d4b63c",
           titleColor: "b88cd1",
-          timeColor:  "dddddd"
+          headerColor:"",
+          boardColor: ""
         },
         {
           name:        "Muted",
@@ -1696,8 +1695,6 @@
           brderColor:  "dddddd",
           inputColor:  "ffffff",
           inputbColor: "dddddd",
-          pinfoColor:  "ebe8df",
-          pinfobColor: "dddddd",
           blinkColor:  "111111",
           jlinkColor:  "bc312a",
           linkColor:   "bc312a",
@@ -1705,10 +1702,10 @@
           nameColor:   "2c64a0",
           quoteColor:  "789922",
           textColor:   "393735",
-          sageColor:   "990000",
           tripColor:   "cc6563",
-          timeColor:   "333333",
-          titleColor:  "111111"
+          titleColor:  "111111",
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:       "Minimalistic Mayhem",
@@ -1723,8 +1720,6 @@
           brderColor: "292929",
           inputColor: "222222",
           inputbColor:"151515",
-          pinfoColor: "262626",
-          pinfobColor:"191919",
           blinkColor: "897399",
           jlinkColor: "897399",
           linkColor:  "897399",
@@ -1732,10 +1727,10 @@
           nameColor:  "a34443",
           quoteColor: "8ba446",
           textColor:  "bbbbbb",
-          sageColor:  "7c2d2d",
           tripColor:  "96562c",
           titleColor: "987d3e",
-          timeColor:  "bbbbbb"
+          headerColor:"",
+          boardColor: ""
         },
         {
           name:       "Blackboard",
@@ -1748,8 +1743,6 @@
           brderColor: "0e1228",
           inputColor: "0c1021",
           inputbColor:"080b16",
-          pinfoColor: "0d1124",
-          pinfobColor:"0c1021",
           blinkColor: "54b12e",
           jlinkColor: "8da6ce",
           linkColor:  "fbde2d",
@@ -1757,10 +1750,10 @@
           nameColor:  "8da6ce",
           quoteColor: "9acf08",
           textColor:  "f8f8f8",
-          sageColor:  "4f4f4f",
           tripColor:  "ff6400",
           titleColor: "ff6400",
-          timeColor:  "dddddd"
+          headerColor:"",
+          boardColor: ""
         },
         {
           name:        "Dark Flat",
@@ -1775,8 +1768,6 @@
           brderColor:  "292a2b",
           inputColor:  "18191a",
           inputbColor: "121314",
-          pinfoColor:  "222324",
-          pinfobColor: "292a2b",
           blinkColor:  "6f99b4",
           jlinkColor:  "ac9bb0",
           linkColor:   "ac9bb0",
@@ -1784,10 +1775,10 @@
           nameColor:   "a8c6d9",
           quoteColor:  "b3c45e",
           textColor:   "dddddd",
-          sageColor:   "c99090",
           tripColor:   "d4c095",
           titleColor:  "9390c9",
-          timeColor:   "dddddd"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Photon",
@@ -1800,8 +1791,6 @@
           brderColor:  "cccccc",
           inputColor:  "ffffff",
           inputbColor: "cccccc",
-          pinfoColor:  "dbdbdb",
-          pinfobColor: "cccccc",
           blinkColor:  "111111",
           jlinkColor:  "ff6600",
           linkColor:   "ff6600",
@@ -1809,10 +1798,9 @@
           nameColor:   "004a99",
           quoteColor:  "789922",
           textColor:   "333333",
-          sageColor:   "990000",
           tripColor:   "ff3300",
-          timeColor:   "333333",
-          titleColor:  "002244"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Original Minimalistic Mayhem",
@@ -1828,8 +1816,6 @@
           brderColor:  "111111",
           inputColor:  "222222",
           inputbColor: "151515",
-          pinfoColor:  "2b2b2b",
-          pinfobColor: "111111",
           blinkColor:  "559c7a",
           jlinkColor:  "559c7a",
           linkColor:   "559c7a",
@@ -1837,10 +1823,10 @@
           nameColor:   "2e88a6",
           quoteColor:  "8ba446",
           textColor:   "dddddd",
-          sageColor:   "7c2d2d",
           tripColor:   "8c5d2a",
           titleColor:  "486273",
-          timeColor:   "dddddd"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Tomorrow",
@@ -1853,8 +1839,6 @@
           brderColor:  "373b41",
           inputColor:  "282a2e",
           inputbColor: "1d1f21",
-          pinfoColor:  "26282b",
-          pinfobColor: "373b41",
           blinkColor:  "cc6666",
           jlinkColor:  "81a2be",
           linkColor:   "81a2be",
@@ -1862,10 +1846,10 @@
           nameColor:   "81a2be",
           quoteColor:  "b5bd68",
           textColor:   "c5c8c6",
-          sageColor:   "cc6666",
           tripColor:   "8abeb7",
           titleColor:  "b294bb",
-          timeColor:   "c5c8c6"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Yotsuba",
@@ -1881,8 +1865,6 @@
           brderColor:  "d9bFb7",
           inputColor:  "ffffff",
           inputbColor: "aaaaaa",
-          pinfoColor:  "e8d8cf",
-          pinfobColor: "d9bfb7",
           blinkColor:  "0000ee",
           jlinkColor:  "0000ee",
           linkColor:   "0000ee",
@@ -1890,11 +1872,11 @@
           nameColor:   "117743",
           quoteColor:  "789922",
           textColor:   "800000",
-          sageColor:   "cc1111",
           tripColor:   "228854",
           titleColor:  "cc1105",
-          timeColor:   "800000"
-        },                                                             
+          headerColor: "",
+          boardColor:  ""
+        },                                                           
         {
           name:        "Yotsuba B",
           authorName:  "moot",
@@ -1909,8 +1891,6 @@
           brderColor:  "b7c5d9",
           inputColor:  "ffffff",
           inputbColor: "aaaaaa",
-          pinfoColor:  "cfd3e8",
-          pinfobColor: "b7c5d9",
           blinkColor:  "34345C",
           jlinkColor:  "34345C",
           linkColor:   "34345c",
@@ -1918,10 +1898,10 @@
           nameColor:   "117743",
           quoteColor:  "789922",
           textColor:   "000000",
-          sageColor:   "990000",
           tripColor:   "228854",
           titleColor:  "0f0c5d",
-          timeColor:   "000000"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Yotsuba Purple",
@@ -1935,8 +1915,6 @@
           brderColor:  "cab7d9",
           inputColor:  "ffffff",
           inputbColor: "cab7d9",
-          pinfoColor:  "e7d6f7",
-          pinfobColor: "cab7d9",
           blinkColor:  "000000",
           jlinkColor:  "962594",
           linkColor:   "962594",
@@ -1944,10 +1922,10 @@
           nameColor:   "591177",
           quoteColor:  "789922",
           textColor:   "000000",
-          sageColor:   "990000",
           tripColor:   "b22caa",
           titleColor:  "0f0c5d",
-          timeColor:   "000000"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "安心院なじみ",
@@ -1961,8 +1939,6 @@
           brderColor:  "d6d6d6",
           inputColor:  "cccccc",
           inputbColor: "bbbbbb",
-          pinfoColor:  "efefef",
-          pinfobColor: "d6d6d6",
           blinkColor:  "f5871f",
           jlinkColor:  "bf8040",
           linkColor:   "bf8040",
@@ -1970,10 +1946,10 @@
           nameColor:   "2b80c2",
           quoteColor:  "718c00",
           textColor:   "4d4d4c",
-          sageColor:   "c82829",
           tripColor:   "3e999f",
           titleColor:  "4d4d4d",
-          timeColor:   "4d4d4c"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Solarized Dark", // http://ethanschoonover.com/solarized
@@ -1988,8 +1964,6 @@
           brderColor:  "133942",
           inputColor:  "073642",
           inputbColor: "0d272e",
-          pinfoColor:  "042e3b",
-          pinfobColor: "0d272e",
           blinkColor:  "4f5f8f",
           jlinkColor:  "696fc0",
           linkColor:   "696bba",
@@ -1997,10 +1971,10 @@
           nameColor:   "586e75",
           quoteColor:  "859900",
           textColor:   "93a1a1",
-          sageColor:   "cc6666",
           tripColor:   "2aa198",
           titleColor:  "bec2c4",
-          timeColor:   "93a1a1"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
@@ -2014,8 +1988,6 @@
           brderColor:  "d4d4d4",
           inputColor:  "e4e4e4",
           inputbColor: "cccccc",
-          pinfoColor:  "ffffff",
-          pinfobColor: "ffffff",
           blinkColor:  "bf7f3f",
           jlinkColor:  "bf7f3f",
           linkColor:   "bf7f3f",
@@ -2023,10 +1995,10 @@
           nameColor:   "4c4c4c",
           quoteColor:  "6b7a1e",
           textColor:   "4c4c4c",
-          sageColor:   "cc6666",
           tripColor:   "bf7f3f",
           titleColor:  "4c4c4c",
-          timeColor:   "4c4c4c"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "4chan Dark Upgrade",
@@ -2041,8 +2013,6 @@
           brderColor:  "3a3a3a",
           inputColor:  "2f2f2f",
           inputbColor: "0f0f0f",
-          pinfoColor:  "303030",
-          pinfobColor: "3a3a3a",
           blinkColor:  "cccccc",
           jlinkColor:  "cccccc",
           linkColor:   "dddddd",
@@ -2050,10 +2020,10 @@
           nameColor:   "ffffff",
           quoteColor:  "63995b",
           textColor:   "ffffff",
-          sageColor:   "b17385",
           tripColor:   "a7dce7",
           titleColor:  "999999",
-          timeColor:   "aaaaaa",
+          headerColor: "",
+          boardColor:  "",
           customCSS:   "\n\n\n\n\n\n#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}" +
                  ".postContainer>.reply{background-image:url(http://img714.imageshack.us/img714/3969/4ch2.gif)!important;" +
                  "border-bottom:#1f1f1f!important;border-radius:5px!important}" +
@@ -2071,8 +2041,6 @@
           brderColor:  "333333",
           inputColor:  "333333",
           inputbColor: "2c2c2c",
-          pinfoColor:  "303030",
-          pinfobColor: "333333",
           blinkColor:  "4f5f8f",
           jlinkColor:  "6688aa",
           linkColor:   "6688aa",
@@ -2080,10 +2048,10 @@
           nameColor:   "aaaaaa",
           quoteColor:  "789922",
           textColor:   "aaaaaa",
-          sageColor:   "aaaaaa",
           tripColor:   "aaaaaa",
           titleColor:  "aaaaaa",
-          timeColor:   "aaaaaa"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Zenburned",
@@ -2097,8 +2065,6 @@
           brderColor:  "5e5e5e",
           inputColor:  "454545",
           inputbColor: "888888",
-          pinfoColor:  "4d4d4d",
-          pinfobColor: "5e5e5e",
           blinkColor:  "dca3a3",
           jlinkColor:  "93b3a3",
           linkColor:   "efdcbc",
@@ -2106,10 +2072,10 @@
           nameColor:   "c0bed1",
           quoteColor:  "7f9f7f",
           textColor:   "dcdccc",
-          sageColor:   "aaaaaa",
           tripColor:   "8cd0d3",
           titleColor:  "aaaaaa",
-          timeColor:   "dcdccc"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Monokai",
@@ -2121,8 +2087,6 @@
           brderColor:  "2d2e27",
           inputColor:  "20211c",
           inputbColor: "171713",
-          pinfoColor:  "252621",
-          pinfobColor: "20211c",
           blinkColor:  "f92672",
           jlinkColor:  "e2db74",
           linkColor:   "e2db74",
@@ -2130,10 +2094,10 @@
           nameColor:   "5ac0cc",
           quoteColor:  "a2cc28",
           textColor:   "f8f8f2",
-          sageColor:   "4f4f4f",
           tripColor:   "fa8220",
           titleColor:  "ae81ff",
-          timeColor:   "f8f8f2"
+          headerColor: "",
+          boardColor:  ""
         },
         {
           name:        "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
@@ -2145,8 +2109,6 @@
           brderColor:  "cccccc",
           inputColor:  "e9eced",
           inputbColor: "cccccc",
-          pinfoColor:  "ffffff",
-          pinfobColor: "ffffff",
           blinkColor:  "477085",
           jlinkColor:  "477085",
           linkColor:   "477085",
@@ -2154,10 +2116,10 @@
           nameColor:   "4c4c4c",
           quoteColor:  "6b7a1e",
           textColor:   "4c4c4c",
-          sageColor:   "92afc2",
           tripColor:   "5d6678",
           titleColor:  "617d6f",
-          timeColor:   "4c4c4c"
+          headerColor: "",
+          boardColor:  ""
         }
       ],
 
@@ -3059,19 +3021,21 @@
       this.brderColor  = new $SS.Color(theme.brderColor);
       this.inputColor  = new $SS.Color(theme.inputColor, true);
       this.inputbColor = new $SS.Color(theme.inputbColor);
-      this.pinfoColor  = new $SS.Color(theme.pinfoColor);
-      this.pinfobColor = new $SS.Color(theme.pinfobColor);
       this.blinkColor  = new $SS.Color(theme.blinkColor);
       this.jlinkColor  = new $SS.Color(theme.jlinkColor);
       this.linkColor   = new $SS.Color(theme.linkColor);
       this.linkHColor  = new $SS.Color(theme.linkHColor);
       this.nameColor   = new $SS.Color(theme.nameColor);
       this.quoteColor  = new $SS.Color(theme.quoteColor);
-      this.sageColor   = new $SS.Color(theme.sageColor);
       this.textColor   = new $SS.Color(theme.textColor);
       this.titleColor  = new $SS.Color(theme.titleColor);
       this.tripColor   = new $SS.Color(theme.tripColor);
-      this.timeColor   = new $SS.Color(theme.timeColor || theme.textColor);
+      this.boardColor  = new $SS.Color(theme.boardColor);
+      this.boardsColor = new $SS.Color(theme.boardsColor);
+      this.headerColor = new $SS.Color(theme.headerColor);
+      this.headerTopColor = new $SS.Color(theme.headerTopColor);
+      this.headerBotColor = new $SS.Color(theme.headerBotColor);
+      this.headerbColor= new $SS.Color(theme.headerbColor); 
       this.checkMark   = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? 0 : -8) + "px");
       this.radioCheck  = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? -16 : -24) + "px");
       this.dIcons      = new $SS.Image(theme.dIcons || defaultIcons);
@@ -3079,9 +3043,9 @@
       this.icons       =
       {
         closeButton:   "<svg viewBox='0 0 30 30' hpreserveAspectRatio='true' eight='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
-                "<path fill='rgb(" + this.sageColor.rgb + ")' d='M24.778,21.419 19.276,15.917 24.777,10.415 21.949,7.585 16.447,13.087 10.945,7.585 8.117,10.415 13.618,15.917 8.116,21.419 10.946,24.248 16.447,18.746 21.948,24.248z'/></svg>",
+                "<path fill='rgb(" + this.jlinkColor.rgb + ")' d='M24.778,21.419 19.276,15.917 24.777,10.415 21.949,7.585 16.447,13.087 10.945,7.585 8.117,10.415 13.618,15.917 8.116,21.419 10.946,24.248 16.447,18.746 21.948,24.248z'/></svg>",
         closedThread:  "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
-                "<path fill='rgb(" + this.sageColor.rgb + ")' d='M22.335,12.833V9.999h-0.001C22.333,6.501,19.498,3.666,16,3.666S9.666,6.502,9.666,10h0v2.833H7.375V25h17.25V12.833H22.335zM11.667,10C11.667,10,11.667,10,11.667,10c0-2.39,1.944-4.334,4.333-4.334c2.391,0,4.335,1.944,4.335,4.333c0,0,0,0,0,0v2.834h-8.668V10z'/></svg>",
+                "<path fill='rgb(" + this.jlinkColor.rgb + ")' d='M22.335,12.833V9.999h-0.001C22.333,6.501,19.498,3.666,16,3.666S9.666,6.502,9.666,10h0v2.833H7.375V25h17.25V12.833H22.335zM11.667,10C11.667,10,11.667,10,11.667,10c0-2.39,1.944-4.334,4.333-4.334c2.391,0,4.335,1.944,4.335,4.333c0,0,0,0,0,0v2.834h-8.668V10z'/></svg>",
          stuckThread:  "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                 "<path fill='rgb(" + this.tripColor.rgb + ")' d='M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z'/></svg>",
          imgExpand:    "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='18' width='18' xmlns='http://www.w3.org/2000/svg'>" +
@@ -3151,7 +3115,7 @@
             "<span style='color:" + this.titleColor.hex + "!important; font-weight: 700 !important'>" + this.name + "</span> " +
             "<span style='color:" + this.nameColor.hex + "!important; font-weight: 700 !important'>" + this.authorName + "</span>" +
             "<span style='color:" + this.tripColor.hex + "!important'> " + this.authorTrip + "</span>" +
-            "<time style='color:" + this.timeColor.hex + "'> 20XX.01.01 12:00 </time>" +
+            "<time style='color:" + this.textColor.hex + "'> 20XX.01.01 12:00 </time>" +
             "<a href='javascript:;' style='color:" + this.linkColor.hex + "!important' " +
             "onmouseover='this.setAttribute(\"style\",\"color:" + this.linkHColor.hex + "!important\")' " +
             "onmouseout='this.setAttribute(\"style\",\"color:" + this.linkColor.hex + "!important\")'>No.22772469</a>" +

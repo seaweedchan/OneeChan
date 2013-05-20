@@ -1,14 +1,17 @@
-/* Text */
+/* Text Colors */
 
 /* Anything we need transparent */
 div[style='float: right;'] {
   color: transparent;
 }
-/* Text */
+/* General */
 html,
 body,
 div.boardBanner,
-#menu {
+#menu,
+input:not(.jsColor),
+textarea,
+#qr-filename-container {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -40,10 +43,9 @@ a:hover {
 }
 /* 4chan X links and Options Buttons */
 .options-button,
-.qr-link {
-  color: " + $SS.theme.jlinkColor.hex + ";
+a.qr-link {
+  color: " + $SS.theme.jlinkColor.hex + " !important;
 }
-
 
 /* Backgrounds */
 html,
@@ -66,14 +68,17 @@ body {
   background:-webkit-linear-gradient(top, rgb\(" + $SS.theme.mainColor.shiftRGB(20) + "),rgb(" + $SS.theme.mainColor.rgb + "));
 }
 .options-button:hover,
-.import-input:hover + .options-button,
-.qr-link:hover {
+.import-input:hover + .options-button {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(20) + ");
 }
-input,
+.qr-link:hover {
+  background:rgb\(" + $SS.theme.mainColor.rgb + ");
+}
+input:not(.jsColor),
 textarea,
-.riceCheck {
-  background: " + $SS.theme.inputColor.hex + ";
+.riceCheck,
+#qr-filename-container {
+  background: " + $SS.theme.inputColor.hex + " !important;
 }
 hr {
   background-image: -webkit-linear-gradient(left, rgba(" + $SS.theme.brderColor.rgb + ",0), rgb(" + $SS.theme.brderColor.rgb + "), rgba(" + $SS.theme.brderColor.rgb + ",0));       
@@ -83,6 +88,7 @@ hr {
   background-image: -webkit-linear-gradient(left, rgba(" + $SS.theme.jlinkColor.rgb + ",0), rgb(" + $SS.theme.jlinkColor.rgb + "), rgba(" + $SS.theme.jlinkColor.rgb + ",0));       
   background-image: linear-gradient(to left, rgba(" + $SS.theme.jlinkColor.rgb + ",0), rgb(" + $SS.theme.jlinkColor.rgb + "), rgba(" + $SS.theme.jlinkColor.rgb + ",0)); 
 }
+
 /* Borders */
 .reply {
   border-width: 0px 1px 1px 0px;
@@ -93,16 +99,19 @@ hr {
   border-radius: 3px;
 }
 .reply,
-.dialog {
+.dialog,
+.entry {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
 textarea,
 .riceCheck,
-.qr-link {
+.qr-link,
+#qr-filename-container {
   border:1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 input:focus,
-textarea:focus {
+textarea:focus,
+#qr-filename-container:focus {
   border:1px solid " + $SS.theme.linkColor.hex + " !important;
 }
