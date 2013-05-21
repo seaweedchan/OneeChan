@@ -1,17 +1,15 @@
 /* Font Size/Family */
 
 /* Anything we need 0px */
-div[style='float: right;'] {
+.deleteform {
   font-size: 0px !important;
 }
 /* Anything we need small */
-.fileInfo {
+.fileInfo,
+.summary {
   font-size: 11px !important;
 }
 /* Anything we need !important */
-.stylechanger a {
-  font-size:" + $SS.conf["Font Size"] + "px !important;
-}
 .qr-link {
   font-size: 14px !important;
 }
@@ -50,4 +48,12 @@ body {
 .subject,
 .option.header .option-title {
   font-weight: 700;
+}
+.qr-link {
+  font-weight: normal;
+}
+
+/* Font Style */
+.summary {
+  font-style: italic;
 }

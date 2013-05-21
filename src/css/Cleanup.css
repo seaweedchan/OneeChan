@@ -5,7 +5,7 @@
 .tab-select:not(:checked) + div,
 iframe[src='about:blank'],
 #absbot,
-#styleSelector,
+.stylechanger,
 .topad.center,
 .middlead.center,
 .bottomad.center,
@@ -13,7 +13,13 @@ iframe[src='about:blank'],
 :root.hide-checkboxes .post input[type=checkbox],
 :root.hide-checkboxes .post .riceCheck,
 :root.hide-checkboxes .deleteform,
-body>hr {
+:root.hide-board-name .boardTitle,
+:root.hide-board-name .boardSubtitle,
+:root.hide-text-board .boardSubtitle,
+:root.hide-banner #bBanner,
+:root.hide-reply-button .qr-link-container,
+body>hr,
+.navLinks {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */
@@ -22,8 +28,6 @@ textarea:focus,
 a
 {
   outline:none!important;
-  -moz-outline:none!important;
-  -moz-user-focus:none!important;
 }
 /* Hide unwanted horizontal lines, while keeping them */
 #delform>hr,

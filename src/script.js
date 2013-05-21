@@ -62,7 +62,11 @@
       ]
     ],
     "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
-    "Hide Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Show Banner":              [ true,  "Toggle visibility of the logo banner"/*, null, true*/ ],
+    "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
+    "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
+    "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
+    "Show Checkboxes":          [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     /*"Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
     /*"--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
@@ -83,18 +87,7 @@
       true
     ],
     "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
-    "Board Name Position":
-    [
-      1, "Change the position of the board name/text board link",
-      [
-        { name: "Top",      value: 1 },
-        { name: "Bottom", value: 2 }
-      ],
-    ],
-    "Show Board Name":          [ true,  "Toggle visibility of the board name" ],
-    "Show Text Board":          [ true,  "Toggle visibility of the text board link" ],
-    "Show Logo":                [ true,  "Toggle visibility of the logo", null, true ],
-    "Show Logo Reflection":     [ true,  "Toggle visibility of the logo reflection", "Show Logo", true, true ],
+    "Show Logo Reflection":     [ true,  "Toggle visibility of the logo reflection", "Show Logo", true, true ],*
     "Lower Logo Opacity":       [ false, "Toggle opacity of the logo", "Show Logo", true, true ],
     "Slideout Navigation Type":
     [
@@ -788,7 +781,7 @@
     {
       if ($(e.target).hasClass("postContainer"))
       {
-        if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"])
+        if (!$SS.browser.webkit && $SS.conf["Show Checkboxes"])
           $("input[type=checkbox]", e.target).riceCheck();
       }
       else if (e.target.className === "thumbnail" ||
@@ -2251,7 +2244,11 @@
         /* Function arguments: ("Option Name", value, "class-name") */
         $("html").optionClass("Underline Links", false, "underline-disabled");
         $("html").optionClass("Rounded Corners", true, "rounded-corners");
-        $("html").optionClass("Hide Checkboxes", true, "hide-checkboxes");
+        $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
+        $("html").optionClass("Show Board Name", false, "hide-board-name");
+        $("html").optionClass("Show Text Board", false, "hide-text-board");
+        $("html").optionClass("Show Banner",     false, "hide-banner");
+        $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
       }
     },
 

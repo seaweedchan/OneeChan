@@ -1,4 +1,4 @@
-/* Reply */
+/* Replies */
 .postInfo {
   padding:4px 12px 2px;
   display: block !important;
@@ -11,6 +11,10 @@
   margin-bottom: -20px;
   display: inline-block;
 }
+.summary {
+  margin-left: 20px;
+}
+
 /* Checkboxes */
 input[type=checkbox],
 .riceCheck
@@ -45,21 +49,30 @@ input[type=checkbox]:checked+.riceCheck::before
 {
   background: " + $SS.theme.checkMark.get() + " !important;
 }
+
 /* Header */
 :root.fixed #header-bar {
   padding: 4px 4px 5px !important;
 }
+
 /* Menu button */
 .reply .menu-button i {
   position: relative;
   bottom: 1px;
 }
+
+/* Delform */
+#delform {
+  margin-top: -15px;
+}
+
 /* QR link */
 .qr-link {
   border-radius: 3px;
   vertical-align: middle;
   padding: 7px 12px 6px;
 }
+
 /* Quick Reply */
 #qr .close {
   padding: 2px 3px 2px 4px !important;
@@ -68,22 +81,23 @@ input[type=checkbox]:checked+.riceCheck::before
   height: 22px;
   margin-top: 1px;
 }
+
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
-  display: inline-block;
 }
-.navLinksBot,
-.deleteform,
-.stylechanger {
-  display: inline-block;
+.deleteform input[type=checkbox],
+.deleteform .riceCheck {
+  top: 3px;
 }
+
 /* HRs */
 hr {
   height: 2px;
   width: 600px;
   border: none !important;
 }
+
 /* Board Title */
 .boardBanner .boardTitle {
   cursor:default;
