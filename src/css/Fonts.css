@@ -24,6 +24,13 @@ textarea {
   font-family:sans-serif !important;
   font-size:12px !important;
 }
+/* Board Title */
+.boardBanner .boardTitle {
+  font-weight: 400 !important;
+  font-family: sans-serif !important;
+  font-size:28px !important;
+}
+
 /* Everything else */
 body {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";

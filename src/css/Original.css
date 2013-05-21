@@ -43,12 +43,18 @@ div.pagelist>div span {
   overflow-x: auto;
   max-width: 600px;
 }
-span.spoiler {
+s {
+  text-decoration: none !important;
+}
+span.spoiler,
+s {
   color: rgb(0, 0, 0) !important;
   background: none repeat scroll 0% 0% rgb(0, 0, 0) !important;
 }
 span.spoiler:hover, 
-span.spoiler:focus {
+s:hover,
+span.spoiler:focus,
+s:focus {
   color: rgb(255, 255, 255) !important;
 }
 #globalMessage,

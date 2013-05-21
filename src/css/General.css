@@ -84,3 +84,8 @@ hr {
   width: 600px;
   border: none !important;
 }
+/* Board Title */
+.boardBanner .boardTitle {
+  cursor:default;
+  letter-spacing:-3px;
+}

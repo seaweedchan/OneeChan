@@ -12,7 +12,8 @@ iframe[src='about:blank'],
 #delPassword,
 :root.hide-checkboxes .post input[type=checkbox],
 :root.hide-checkboxes .post .riceCheck,
-:root.hide-checkboxes .deleteform {
+:root.hide-checkboxes .deleteform,
+body>hr {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */
@@ -25,10 +26,6 @@ a
   -moz-user-focus:none!important;
 }
 /* Hide unwanted horizontal lines, while keeping them */
-hr {
-
-}
-body>hr,
 #delform>hr,
 .board>hr:last-of-type {
   background: none !important;
