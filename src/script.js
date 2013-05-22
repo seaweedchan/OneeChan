@@ -53,13 +53,13 @@
       ]
     ],
     "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
-    "Show Banner":              [ true,  "Toggle visibility of the logo banner"/*, null, true*/ ],
+    "Show Banner":              [ true,  "Toggle visibility of the logo banner", null, true ],
     "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
     "Reduce Banner Opacity":       [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
     "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
     "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
     "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
-    "Show Checkboxes":          [ true,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     /*"Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
     /*"--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":

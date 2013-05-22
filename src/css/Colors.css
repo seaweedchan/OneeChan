@@ -27,7 +27,8 @@ a {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
 a.current,
-a.summary {
+a.summary,
+.pages strong>a {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 a:hover {
@@ -48,6 +49,7 @@ a.qr-link {
   color: " + $SS.theme.jlinkColor.hex + " !important;
 }
 
+
 /* Backgrounds */
 html,
 body {
@@ -62,11 +64,13 @@ body {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
 }
 .options-button,
-.qr-link {
+.qr-link,
+.pages strong>a {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + "));
 }
 .options-button:hover,
-.import-input:hover + .options-button {
+.import-input:hover + .options-button,
+.pages strong>a:hover {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }
 .qr-link:hover {
@@ -132,10 +136,11 @@ textarea,
   border:1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
-.qr-link {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;
+.qr-link,
+.pages strong>a {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;
 }
 input:focus,
 textarea:focus,

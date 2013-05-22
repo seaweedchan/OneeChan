@@ -1,7 +1,9 @@
 /* Font Size/Family */
 
 /* Anything we need 0px */
-.deleteform {
+.deleteform,
+.pagelist, 
+.pagelist input {
   font-size: 0px !important;
 }
 /* Anything we need small */
@@ -30,7 +32,12 @@ textarea {
 }
 
 /* Everything else */
-body {
+body,
+.prev span::after, 
+.prev form::after,
+.next span::after,
+.next form::after,
+.pages a {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
   font-size:" + $SS.conf["Font Size"] + "px;
 }
