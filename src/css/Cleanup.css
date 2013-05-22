@@ -18,6 +18,7 @@ iframe[src='about:blank'],
 :root.hide-text-board .boardSubtitle,
 :root.hide-banner #bBanner,
 :root.hide-reply-button .qr-link-container,
+:root.fit-width .sideArrows,
 body>hr,
 .navLinks {
   display: none;

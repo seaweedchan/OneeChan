@@ -18,6 +18,9 @@
   display: block !important;
   overflow: hidden;
 }
+:root.fit-width body {
+  margin: 0;
+}
 
 /* Checkboxes */
 input[type=checkbox],
@@ -82,6 +85,19 @@ input[type=checkbox]:checked+.riceCheck::before
   position: relative;
   bottom: 1px;
 }
+:root.fit-width .reply .container {
+  margin-left: -4px !important;
+  padding-right: 5px;
+}
+:root.fit-width .post .menu-button {
+  float: right;
+  margin-left: 0px;
+  position: relative;
+  left: 5px;
+}
+:root.fit-width .post:not(:hover) .menu-button {
+  opacity: 0;
+}
 
 /* Delform */
 :root.fixed:not(.autohide):not(.bottom) #delform {
@@ -120,9 +136,43 @@ hr {
   width: 600px;
   border: none !important;
 }
+:root.fit-width #unread-line {
+  margin: auto;
+  width: 100%;
+}
+#unread-line {
+  margin-top: -3px !important;
+  margin-bottom: -3px !important;
+}
 
 /* Board Title */
 .boardBanner .boardTitle {
   cursor:default;
   letter-spacing:-3px;
+}
+
+/* Banner Reflection */
+.boardBanner>img {
+  border: none !important;
+}
+:root.banner-reflect.gecko:not(.hide-banner) #bBanner {
+    position: relative !important;
+}
+:root.banner-reflect.gecko:not(.hide-banner) #bBanner::after
+{
+  background-image:-moz-element(#banner);
+  bottom:-93%;
+  content:'';
+  left:0;
+  mask:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KCTxkZWZzPg0KCQk8bGluZWFyR3JhZGllbnQgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJncmFkaWVudCIgeDI9IjAiIHkyPSIxIj4NCgkJCTxzdG9wIHN0b3Atb2Zmc2V0PSIwIi8+DQoJCQk8c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgb2Zmc2V0PSIxIi8+DQoJCTwvbGluZWFyR3JhZGllbnQ+DQoJCTxtYXNrIGlkPSJtYXNrIiBtYXNrVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiBtYXNrQ29udGVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+DQoJCQk8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPg0KCQk8L21hc2s+DQoJPC9kZWZzPg0KPC9zdmc+#mask');
+  opacity: .2;
+  position:absolute;
+  right:0;
+  top:97%;
+  -moz-transform:scaleY(-1);
+  width: 300px !important;
+  margin: auto !important;
+}
+:root.banner-reflect.webkit:not(.hide-banner) .boardBanner img {
+  -webkit-box-reflect: below 0 -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(.1,transparent),to(rgba(255,255,255,.2)));
 }

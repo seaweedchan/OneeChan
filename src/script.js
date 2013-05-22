@@ -54,6 +54,7 @@
     ],
     "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
     "Show Banner":              [ true,  "Toggle visibility of the logo banner"/*, null, true*/ ],
+    "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
     "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
     "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
     "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
@@ -78,7 +79,6 @@
       true
     ],
     "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
-    "Show Logo Reflection":     [ true,  "Toggle visibility of the logo reflection", "Show Logo", true, true ],*
     "Lower Logo Opacity":       [ false, "Toggle opacity of the logo", "Show Logo", true, true ],
     "Slideout Navigation Type":
     [
@@ -652,7 +652,7 @@
     DOMLoaded: function(reload)
     {
       $SS.classes.init();
-      
+
       if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
         document.head.innerHTML = document.head.innerHTML;
 
@@ -2241,6 +2241,7 @@
         $("html").optionClass("Fit Width", true, "fit-width");
         $("html").optionClass("Show Text Board", false, "hide-text-board");
         $("html").optionClass("Show Banner",     false, "hide-banner");
+        $("html").optionClass("Show Banner Reflection", true, "banner-reflect");
         $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
 
       }
