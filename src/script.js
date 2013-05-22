@@ -3,16 +3,7 @@
   var defaultConfig =
   {
     "--Main Rice--":                     [ "header",  "" ],
-    /*"Page Layout":
-    [
-      2, "Change the layout of the main content",
-      [
-        { name: "Fit Width",   value: 1 },
-        { name: "Fit Content", value: 2 },
-        { name: "Centered",    value: 3 }
-      ]
-    ],
-    "Non-Sidebar Margin":
+    /*"Non-Sidebar Margin":
     [
       25, "Change the size of the margin opposite of the sidebar",
       [
@@ -99,6 +90,7 @@
     ],*/
     "--Replies--":                  [ "header",  "" ],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
+    "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
     /*"Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
     "Use Post Info Color":      [ true, "Separate the post info by the post info colors defined in themes", null, true ],
     "Add Shadow?":              [ false, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
@@ -659,6 +651,8 @@
     browser: { },
     DOMLoaded: function(reload)
     {
+      $SS.classes.init();
+      
       if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
         document.head.innerHTML = document.head.innerHTML;
 
@@ -732,7 +726,7 @@
           $SS.Config.set("Total Themes", ntThemes);
         }
       }
-
+      
       $SS.Config.init();
       $SS.Themes.init();
       $SS.Mascots.init();
@@ -761,8 +755,6 @@
     insertCSS: function()
     {
       var css;
-
-      $SS.classes.init();
 
       if ($("link[rel=stylesheet]", document.head).exists() || 
         ($(document.head).exists() && $SS.browser.gecko))
@@ -2246,9 +2238,11 @@
         $("html").optionClass("Rounded Corners", true, "rounded-corners");
         $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
         $("html").optionClass("Show Board Name", false, "hide-board-name");
+        $("html").optionClass("Fit Width", true, "fit-width");
         $("html").optionClass("Show Text Board", false, "hide-text-board");
         $("html").optionClass("Show Banner",     false, "hide-banner");
         $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
+
       }
     },
 
