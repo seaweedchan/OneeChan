@@ -78,6 +78,10 @@ textarea,
 #qr-filename-container {
   background: " + $SS.theme.inputColor.hex + " !important;
 }
+input[type=checkbox],
+.riceCheck {
+  background: rgb\(" + $SS.theme.inputColor.shiftRGB(20) + ") !important;
+}
 hr {     
   background-image: linear-gradient(to left, rgba(" + $SS.theme.brderColor.rgb + ",0), rgb(" + $SS.theme.brderColor.rgb + "), rgba(" + $SS.theme.brderColor.rgb + ",0)); 
 }
@@ -99,6 +103,7 @@ hr {
 }
 .reply,
 .dialog,
+#header-bar,
 .entry,
 .inline,
 fieldset {
@@ -107,9 +112,14 @@ fieldset {
 input,
 textarea,
 .riceCheck,
-.qr-link,
 #qr-filename-container {
   border:1px solid " + $SS.theme.inputbColor.hex + " !important;
+}
+.options-button,
+.qr-link {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;
 }
 input:focus,
 textarea:focus,

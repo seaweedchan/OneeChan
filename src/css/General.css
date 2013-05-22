@@ -51,8 +51,26 @@ input[type=checkbox]:checked+.riceCheck::before
 }
 
 /* Header */
-:root.fixed #header-bar {
+#header-bar {
   padding: 4px 4px 5px !important;
+}
+:root:not(.fixed) #header-bar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid;
+}
+:root:not(.fixed) body {
+  padding-top: 2em;
+}
+:root.index.bottom:not(.autohide) body {
+  padding-bottom: 4em !important;
+}
+:root.autohide body {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Menu button */
@@ -62,7 +80,7 @@ input[type=checkbox]:checked+.riceCheck::before
 }
 
 /* Delform */
-#delform {
+:root.fixed:not(.autohide):not(.bottom) #delform {
   margin-top: -15px;
 }
 
@@ -71,6 +89,7 @@ input[type=checkbox]:checked+.riceCheck::before
   border-radius: 3px;
   vertical-align: middle;
   padding: 7px 12px 6px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.05);
 }
 
 /* Quick Reply */

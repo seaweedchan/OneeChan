@@ -681,8 +681,6 @@
           div.text("x");
         };
       }
-
-      $SS.classes.init();
       
       $SS.pages.init();
 
@@ -763,6 +761,8 @@
     insertCSS: function()
     {
       var css;
+
+      $SS.classes.init();
 
       if ($("link[rel=stylesheet]", document.head).exists() || 
         ($(document.head).exists() && $SS.browser.gecko))
