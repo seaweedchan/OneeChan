@@ -91,6 +91,9 @@ hr {
 .inline {
   background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
 }
+:root.post-info .reply>.postInfo {
+  background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2);
+}
 
 /* Borders */
 .reply {
@@ -98,8 +101,15 @@ hr {
   border-style: solid;
 }
 :root.rounded-corners .reply,
-:root.rounded-corners .dialog:not(#header-bar) {
+:root.rounded-corners .dialog:not(#header-bar),
+:root.rounded-corners .inline {
   border-radius: 3px;
+}
+:root.post-info .reply>.postInfo {
+  border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
+}
+:root.post-info.rounded-corners .reply>.postInfo {
+  border-radius: 3px 3px 0 0;
 }
 .reply,
 .dialog,

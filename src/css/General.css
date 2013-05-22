@@ -21,6 +21,17 @@
 :root.fit-width body {
   margin: 0;
 }
+:root.post-info .reply>.postInfo {
+  background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2);
+  border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
+  margin:0!important;
+  box-shadow: inset rgba(0,0,0,.15) 0 0px 2px;
+  padding-top: 2px !important;
+  border-radius: 3px 3px 0px 0px !important;
+}
+:root.post-info .inline .reply {
+  padding: 0 !important;
+}
 
 /* Checkboxes */
 input[type=checkbox],

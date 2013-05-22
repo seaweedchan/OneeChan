@@ -88,12 +88,11 @@
         { name: "Compact",          value: 2 }
       ]
     ],*/
-    "--Replies--":                  [ "header",  "" ],
+    "--Replies--":              [ "header",  "" ],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
+    "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
     /*"Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
-    "Use Post Info Color":      [ true, "Separate the post info by the post info colors defined in themes", null, true ],
-    "Add Shadow?":              [ false, "Adds a shadow under the post info", "Use Post Info Color", true, true ],
     "Margin Between Replies":
     [
       0, "Change the position of 4chan x backlinks",
@@ -2244,6 +2243,7 @@
         $("html").optionClass("Show Banner Reflection", true, "banner-reflect");
         $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
         $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
+        $("html").optionClass("Style Post Info",     true, "post-info");
 
       }
     },
