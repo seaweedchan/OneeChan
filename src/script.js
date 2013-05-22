@@ -92,6 +92,15 @@
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
     "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
+    "Borders":
+    [
+      1, "Changes which sides of replies have borders",
+      [
+        { name: "Normal",      value: 1 },
+        { name: "On all sides",          value: 2 },
+        { name: "None", value: 3 }
+      ]
+    ],
     /*"Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
     "Margin Between Replies":
     [
@@ -2244,6 +2253,8 @@
         $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
         $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
         $("html").optionClass("Style Post Info",     true, "post-info");
+        $("html").optionClass("Borders",     2, "borders-all");
+        $("html").optionClass("Borders",     3, "borders-none");
 
       }
     },
