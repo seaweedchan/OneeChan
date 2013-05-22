@@ -55,6 +55,7 @@
     "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
     "Show Banner":              [ true,  "Toggle visibility of the logo banner"/*, null, true*/ ],
     "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
+    "Reduce Banner Opacity":       [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
     "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
     "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
     "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
@@ -79,7 +80,6 @@
       true
     ],
     "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
-    "Lower Logo Opacity":       [ false, "Toggle opacity of the logo", "Show Logo", true, true ],
     "Slideout Navigation Type":
     [
       1, "Change the format of the slideout navigation links",
@@ -2242,6 +2242,7 @@
         $("html").optionClass("Show Text Board", false, "hide-text-board");
         $("html").optionClass("Show Banner",     false, "hide-banner");
         $("html").optionClass("Show Banner Reflection", true, "banner-reflect");
+        $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
         $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
 
       }
