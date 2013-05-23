@@ -15,12 +15,13 @@
   margin-left: 20px;
 }
 /* Fit Width option */
-:root.fit-width .reply.post {
+:root.reply-fit-width .reply.post {
   display: block !important;
   overflow: hidden;
 }
-:root.fit-width body {
-  margin: 0;
+:root.reply-fit-width body {
+  margin-left: 0;
+  margin-right: 0;
 }
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {
@@ -100,17 +101,17 @@ input[type=checkbox]:checked+.riceCheck::before
   position: relative;
   bottom: 1px;
 }
-:root.fit-width .reply .container {
+:root.reply-fit-width .reply .container {
   margin-left: -4px !important;
   padding-right: 5px;
 }
-:root.fit-width .post .menu-button {
+:root.reply-fit-width .post .menu-button {
   float: right;
   margin-left: 0px;
   position: relative;
   left: 5px;
 }
-:root.fit-width .post:not(:hover) .menu-button {
+:root.reply-fit-width .post:not(:hover) .menu-button {
   opacity: 0;
 }
 
@@ -150,7 +151,7 @@ hr {
   width: 600px;
   border: none !important;
 }
-:root.fit-width #unread-line {
+:root.reply-fit-width #unread-line {
   margin: auto;
   width: 100%;
 }

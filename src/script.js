@@ -71,23 +71,7 @@
         { name: "Disabled", value: 3 }
       ], true
     ],
-    "Show Mascot":
-    [
-      false,
-      "Still shows a mascot on the right side",
-      "Sidebar Position",
-      3,
-      true
-    ],
-    "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
-    "Slideout Navigation Type":
-    [
-      1, "Change the format of the slideout navigation links",
-      [
-        { name: "List",      value: 1 },
-        { name: "Compact",          value: 2 }
-      ]
-    ],*/
+    "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],*/
     "--Replies--":              [ "header",  "" ],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
@@ -2246,7 +2230,7 @@
         $("html").optionClass("Rounded Corners", true, "rounded-corners");
         $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
         $("html").optionClass("Show Board Name", false, "hide-board-name");
-        $("html").optionClass("Fit Width", true, "fit-width");
+        $("html").optionClass("Fit Width", true, "reply-fit-width");
         $("html").optionClass("Show Text Board", false, "hide-text-board");
         $("html").optionClass("Show Banner",     false, "hide-banner");
         $("html").optionClass("Show Banner Reflection", true, "banner-reflect");

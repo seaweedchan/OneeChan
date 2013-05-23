@@ -12,7 +12,7 @@ div.post div.file .fileThumb {
 div.post {
   margin: 4px 0;
 }
-:root:not(.fit-width) #delform div.reply:not([hidden]) {
+:root:not(.reply-fit-width) #delform div.reply:not([hidden]) {
   display: table !important;
 }
 div.thread {
