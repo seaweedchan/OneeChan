@@ -1,3 +1,9 @@
+/* Side Margins */
+body {
+  margin-left: " + $SS.conf["Margin Left"] + "px;
+  margin-right: " + $SS.conf["Margin Right"] + "px;
+}
+
 /* Replies */
 .postInfo {
   padding:4px 12px 2px;
@@ -19,9 +25,9 @@
   display: block !important;
   overflow: hidden;
 }
-:root.reply-fit-width body {
-  margin-left: 0;
-  margin-right: 0;
+:root.reply-fit-width .threadContainer {
+  margin-left: 0px !important;
+  padding-left: 20px !important;
 }
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {

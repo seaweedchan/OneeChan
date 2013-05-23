@@ -3,28 +3,28 @@
   var defaultConfig =
   {
     "--Main Rice--":                     [ "header",  "" ],
-    /*"Non-Sidebar Margin":
+    "Left Margin":
     [
-      25, "Change the size of the margin opposite of the sidebar",
+      5, "Change the size of the margin opposite of the sidebar",
       [
         { name: "Large",    value: 65 },
         { name: "Medium",   value: 25 },  
         { name: "Small",    value: 5  },
-        { name: "None",     value: 1  },
+        { name: "None",     value: 0  },
         { name: "Custom",   value: 999  }
       ], true
     ],
-    "Non-Sidebar Custom Margin": 
+    "Custom Left Margin": 
     [ 
       0, 
-      "Non-Sidebar margin custom width (pixels)", 
-      "Non-Sidebar Margin", 
+      "Left margin custom width (pixels)", 
+      "Left Margin", 
       999,
       true
     ],
-    "Sidebar Side Margin":
+    "Right Margin":
     [
-      0, "Change the size of the margin opposite of the sidebar",
+      5, "Change the size of the margin opposite of the sidebar",
       [
         { name: "Large",    value: 65 },
         { name: "Medium",   value: 25 },
@@ -33,26 +33,16 @@
         { name: "Custom",   value: 999  }
       ], true
     ],
-    "Sidebar Side Custom Margin": 
+    "Custom Right Margin": 
     [ 
       0, 
-      "Sidebar side margin custom width (pixels)", 
-      "Sidebar Side Margin", 
+      "Right side margin custom width (pixels)", 
+      "Right Margin", 
       999,
       true
-    ],*/
-    "Underline Links":    [ false, "Underlines links" ],
-    /*"Pages Position":
-    [
-      2, "Change the location of the page links",
-      [
-        { name: "Normal",      value: 1 },
-        { name: "Fixed",          value: 2 },
-        { name: "Fixed Vertical", value: 3 },
-        { name: "Hidden",         value: 4 }
-      ]
     ],
-    "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
+    "Underline Links":    [ false, "Underlines links" ],
+    /*"Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
     "Show Banner":              [ true,  "Toggle visibility of the logo banner", null, true ],
     "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
     "Reduce Banner Opacity":       [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
@@ -60,7 +50,6 @@
     "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
     "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
     "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
-    /*"Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
@@ -811,7 +800,8 @@
         for (var key in defaultConfig)
           $SS.conf[key] = parseVal(key, this.get(key));
 
-        $SS.conf["Small Font Size"]          = $SS.conf["Font Size"] > 11 && !$SS.conf["Bitmap Font"] ? 12 : $SS.conf["Font Size"];
+        $SS.conf["Margin Left"]  = $SS.conf["Left Margin"] !== 999 ? $SS.conf["Left Margin"] : $SS.conf["Custom Left Margin"];
+        $SS.conf["Margin Right"]  = $SS.conf["Right Margin"] !== 999 ? $SS.conf["Right Margin"] : $SS.conf["Custom Right Margin"];
       },
       get: function(name)
       {
@@ -930,21 +920,21 @@
             val = $SS.conf[key];
             des = defaultConfig[key][1];
 
-            if ((defaultConfig[key][4] === true) && (key === "Non-Sidebar Custom Margin"))
+            if ((defaultConfig[key][4] === true) && (key === "Custom Left Margin"))
             {
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
               optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
                       (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
-                      "</span><input name='Non-Sidebar Custom Margin' type=text value=" + $SS.conf["Non-Sidebar Custom Margin"] + "px></label>";
+                      "</span><input name='Custom Left Margin' type=text value=" + $SS.conf["Custom Left Margin"] + "px></label>";
             }
-            else if ((defaultConfig[key][4] === true) && (key === "Sidebar Side Custom Margin"))
+            else if ((defaultConfig[key][4] === true) && (key === "Custom Right Margin"))
             {
               var pVal = $SS.conf[defaultConfig[key][2]];
                 id   = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
               optionsHTML += "<label class='option suboption " + id + "' title=\"" + des + "\"" +
                       (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
-                      "</span><input name='Sidebar Side Custom Margin' type=text value=" + $SS.conf["Sidebar Side Custom Margin"] + "px></label>";
+                      "</span><input name='Custom Right Margin' type=text value=" + $SS.conf["Custom Right Margin"] + "px></label>";
             }
             else if (val === "header") {
               optionsHTML += "<label class='option header'><span class='option-title'>" + key + "</span></label>";
@@ -1224,11 +1214,11 @@
             if (!$("input[name='Bitmap Font']", div).val())
               val = Math.max(Math.min(val, MAX_FONT_SIZE), MIN_FONT_SIZE);
           }
-          else if (name === "Sidebar Side Custom Margin")
+          else if (name === "Custom Right Margin")
           {
             val = parseInt(val);
           }
-          else if (name === "Non-Sidebar Custom Margin")
+          else if (name === "Custom Left Margin")
           {
             val = parseInt(val);
           }
