@@ -3,10 +3,7 @@
 #add-theme,
 #oneechan-options {
   border:0!important;
-  text-align:right!important;
-  width:600px;
-  padding:5px !important;
-  border-radius:5px!important;
+  border-radius:3px!important;
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -15,17 +12,26 @@
   margin: auto;
 }
 #oneechan-options {
-  height: 432px;
+  height: 532px;
+  width: 900px;
+  text-align:left!important;
 }
 .options-close,
 .options-container {
   padding:5px;
 }
+.options-close {
+  text-align: right !important;
+}
 #add-mascot {
   height: 125px;
+  width: 600px;
+  text-align:right!important;
 }
 #add-theme {
   height: 470px;
+  width: 600px;
+  text-align:right!important;
 }
 #add-mascot .option-title,
 #add-theme .option-title {
@@ -39,28 +45,29 @@
 }
 /* Main */
 #options-container {
-  /* Backslash for syntax highlighting, removed on compile */
-  background:rgb\(" + $SS.theme.mainColor.shiftRGB(-12) + ");
-  box-shadow:inset rgba(0,0,0,.3) 0 0 5px,rgba\(" + $SS.theme.mainColor.shiftRGB(32) + ",.6) 0 1px 3px;
   border-radius:5px;
 }
 #options-container,
 .options-section {
-  height:400px;
+  height:500px;
 }
 .options-section {
   overflow:auto;
 }
 #main-section .option {
   display:block;
-  border-bottom:1px solid rgba(" + $SS.theme.mainColor.rgb + ",.3);
   border-top:1px solid rgba(0,0,0,.1);
-  height:20px;
+  height:22px;
   padding:0 6px;
-  vertical-align:top;
+  vertical-align:middle;
+}
+#main-section>.option:nth-child(odd) {
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(-5) + ") !important
+}
+#main-section .buttons-container+.option {
+  border-top: none !important;
 }
 .option-title {
-  float:left;
   line-height:20px!important;
 }
 #main-section .option:first-child {
@@ -68,6 +75,14 @@
 }
 #main-section .option:last-child {
   border-bottom:0!important;
+}
+#main-section input, #main-section select {
+  float: right !important;
+}
+#main-section input[type=checkbox], 
+#main-section .riceCheck {
+  float: left !important;
+  margin-right: 5px !important;
 }
 select[name='Font Family']>option {
   max-width:150px;
@@ -86,7 +101,7 @@ select[name='Font Family']>option {
   width:6px;
 }
 .suboption {
-  margin-left:16px;
+  padding-left:16px !important;
 }
 .option.header {
   cursor: auto !important;
@@ -103,12 +118,12 @@ select[name='Font Family']>option {
   opacity:1;
 }
 #themes-section .reply {
-  margin:2px 0!important;
-  padding:2px!important;
+  margin-bottom: 1px !important;
+  padding: 2px!important;
   position:relative;
   text-align:left;
-  width:99%;
-  border-radius:2px!important;
+  width:99.4%;
+  border-radius: 0 !important;
 }
 .theme-buttons-container {
   bottom:4px;
@@ -211,6 +226,9 @@ select[name='Font Family']>option {
 .mascot-preview:hover {
   opacity:1;
 }
+.mascot-preview:not(:hover) a {
+  opacity: 0;
+}
 .mascot-preview.selected {
   background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;
   opacity:1;
@@ -221,6 +239,7 @@ select[name='Font Family']>option {
   top:0;
   padding:5px 8px;
   background:rgba(0,0,0,.3);
+  cursor: pointer;
 }
 .mascot-preview a:not([href]):hover {
   background:rgba(0,0,0,.5);
@@ -262,7 +281,8 @@ select[name='Font Family']>option {
   margin:0;
   padding:0;
   position:absolute;
-  top:-26px;
+  top:-24px;
+  left: -1px;
 }
 .tab-item {
   float:left;
@@ -273,11 +293,11 @@ select[name='Font Family']>option {
   color:#888!important;
   display:block;
   height:16px;
-  margin:0 2px;
-  padding:5px 10px;
+  margin:0 1px;
+  padding: 5px;
   text-align:center;
   width:75px;
-  border-radius:5px 5px 0 0;
+  border-radius:3px 3px 0 0;
   transition: all .1s ease-in-out;
 }
 .tab-label:not(.selected):not(:hover) {
@@ -305,8 +325,8 @@ select[name='Font Family']>option {
 }
 /* Buttons */
 .buttons-container {
-  bottom:10px;
-  left:10px;
+  bottom:3px;
+  left:5px;
   position:absolute;
 }
 .buttons-container {
@@ -354,7 +374,7 @@ span.option>select,
 #oneechan-options input[type=text],
 #oneechan-options select {
   max-height:22px;
-  margin:0!important;
+  margin-top: 1px!important;
   padding:1px 3px!important;
 }
 #oneechan-options select {
@@ -371,7 +391,7 @@ span.option>select,
 #oneechan-version {
   opacity:.5;
   padding-right:5px;
-  padding-left: 35px;
+  margin-left: 160px;
 }
 .link-delim {
   opacity:.4;

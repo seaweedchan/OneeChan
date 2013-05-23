@@ -221,14 +221,14 @@ hr {
   right: 5px;
 }
 .prev span::after, .prev form::after {
-  content: '<<';
+  content: '<';
   position: absolute;
   top: 4px;
   left: 1px;
   pointer-events: none;
 }
 .next span::after, .next form::after {
-  content: '>>';
+  content: '>';
   position: absolute;
   top: 4px;
   right: 2px;
