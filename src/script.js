@@ -1564,6 +1564,7 @@
           {
             tMascot.position = cPosition;
             tMascot.offset   = cOffset;
+            tMascot.overflow = cOverflow;
           }
 
           if (bDefault)
@@ -2128,21 +2129,13 @@
         { img: "https://i.minus.com/iDNDSbUD5pXHZ.png",                                                          "default":   true }, // Hatsune Miku 2
         { img: "https://i.minus.com/iLkr2EDaYmknX.png", offset: -120, position: "center",                        "default":   true }, // Hatsune Miku (big)
         { img: "https://i.minus.com/idk1cr4HEhd9C.png",                                                          "default":   true }, // Hirasawa Yui
-        { img: "https://i.minus.com/iRRJ5VCJGpuZg.png",                                                          "default":   true }, // Horo sil (light color schemes)
-        { img: "https://i.minus.com/ijEdbJABjfwzl.png",                                                          "default":   true }, // Horo sil (dark color schemes)
-        { img: "https://i.minus.com/ivlNMrvf0ujOP.png",                                                          "default":   true }, // Horo sil 2 (light color schemes)
-        { img: "https://i.minus.com/iRBIRu25ULJIU.png",                                                          "default":   true }, // Horo sil 2 (dark color schemes)
         { img: "https://i.minus.com/i8B0jpOGGqr8F.png",                                                          "default":   true }, // Ika Musume
         { img: "https://i.minus.com/iIKosmoehVEsl.png",                                                          "default":   true }, // Ika Musume 2
         { img: "https://i.minus.com/ibrwcAB72agjkn.png",                                                         "default":   true }, // Iwakura Lain 2
         { img: "https://i.minus.com/ib022yxCvyGw5z.png",                                                         "default":   true }, // Kagamine Rin
         { img: "https://i.minus.com/iben2goxAmh7aV.png",                                                         "default":   true }, // Kaname Madoka
         { img: "https://i.minus.com/ihyDfRynJ25vD.png",                                                          "default":   true }, // Koiwai Yotsuba
-        { img: "https://i.minus.com/ijJber6Ts4www.png",                                                          "default":   true }, // Nagato Yuki
-        { img: "https://i.minus.com/iAWR9o9UW5rBq.png",                                                          "default":   true }, // Nagato Yuki sil (light color schemes)
-        { img: "https://i.minus.com/iM8VOtV3OIp9u.png",                                                          "default":   true }, // Nagato Yuki sil (dark color schemes)
-        { img: "https://i.minus.com/ifFwGKSB0VsEh.png",                                                          "default":   true }, // Nagato Yuki + Pantsu (light color schemes)
-        { img: "https://i.minus.com/ibwZZ5FlIefqwS.png",                                                         "default":   true }, // Nagato Yuki + Pantsu (dark color schemes)
+        { img: "https://i.minus.com/ijJber6Ts4www.png",                                                          "default":   true }, // Nagato Yuki 
         { img: "https://i.minus.com/ibtRMzjF9MS6oy.png", overflow: true,                                         "default":   true }, // Nakano Azusa
         { img: "http://i.minus.com/i87u3AnyzlVnb.png", small: true,                                              "default":   true }, // Patchouli Knowledge
         { img: "https://i.minus.com/izQNQ4akphZWn.png",                                                          "default":   true }, // Shana
@@ -2953,7 +2946,7 @@
       this.overflow = mascot.overflow;
       this.flip     = mascot.flip == undefined ? true : mascot.flip;
       this.img      = new $SS.Image(mascot.img,
-        "no-repeat " + (this.overflow ? $SS.conf["Sidebar Position " + ($SS.conf["Sidebar Position"] === 2 && this.flip ? "o" : "") + "String"] : "center") +
+        "no-repeat " + ("center") +
         " " + (this.position || "bottom"));
       this.small    = mascot.small || this.overflow;
       this.bOffset  = typeof mascot.offset === "number";

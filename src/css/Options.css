@@ -211,27 +211,22 @@ select[name='Font Family']>option {
   text-align:center;
 }
 .mascot-preview {
-  background-position:center top!important;
+  background-position:center !important;
   background-repeat:no-repeat!important;
-  background-size:cover!important;
+  background-size: contain !important;
   display:inline-block;
   height:257px;
   margin:2px;
-  opacity:.75;
   position:relative;
-  width:185px;
+  width:210px;
   border-radius:10px;
   transition:all .1s;
-}
-.mascot-preview:hover {
-  opacity:1;
 }
 .mascot-preview:not(:hover) a {
   opacity: 0;
 }
 .mascot-preview.selected {
   background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;
-  opacity:1;
   box-shadow:inset rgba(0,0,0,.15) 0 0 15px, rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px;
 }
 .mascot-preview a {
