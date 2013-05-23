@@ -36,7 +36,7 @@ a:hover {
 }
 /* Greentext */
 .quote {
-  color: " + $SS.theme.quoteColor.hex + ";
+  color: " + $SS.theme.quoteColor.hex + " !important;
 }
 /* Subject and Option labels */
 .subject,
@@ -72,6 +72,9 @@ body {
 .import-input:hover + .options-button,
 .pages strong>a:hover {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
+}
+.focused.entry {
+  background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
 }
 .qr-link:hover {
   background:rgb\(" + $SS.theme.mainColor.rgb + ");

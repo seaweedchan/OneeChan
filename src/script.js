@@ -3076,7 +3076,7 @@
           if (theme.customCSS[theme.customCSS.length-1] === ")")
             theme.customCSS += "+\"";
 
-          this.customCSS = eval($SS.trimLineBreaks(new String('"'+theme.customCSS+'"')));
+          this.customCSS = eval($SS.trimLineBreaks(new String('"'+theme.customCSS.replace(/\"/g, "\\\"") +'"')));
         }
         catch (e)
         {
