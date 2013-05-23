@@ -61,16 +61,16 @@
     "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
     "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     /*"Style Scrollbars":         [ false,  "Make the scroll bar match the theme" ],*/
-    /*"--Sidebar--":                     [ "header",  "" ],
+    "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
-      1, "Change the position of the sidebar",
+      3, "Change the position of the sidebar",
       [
         { name: "Right",    value: 1 },
         { name: "Left",     value: 2 },
         { name: "Disabled", value: 3 }
       ], true
-    ],
+    ],/*
     "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],*/
     "--Replies--":              [ "header",  "" ],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
@@ -812,8 +812,6 @@
           $SS.conf[key] = parseVal(key, this.get(key));
 
         $SS.conf["Small Font Size"]          = $SS.conf["Font Size"] > 11 && !$SS.conf["Bitmap Font"] ? 12 : $SS.conf["Font Size"];
-        $SS.conf["Sidebar Position String"]  = $SS.conf["Sidebar Position"] !== 2 ? "right" : "left";
-        $SS.conf["Sidebar Position oString"] = $SS.conf["Sidebar Position"] !== 2 ? "left" : "right";
       },
       get: function(name)
       {
@@ -2235,10 +2233,12 @@
         $("html").optionClass("Show Banner",     false, "hide-banner");
         $("html").optionClass("Show Banner Reflection", true, "banner-reflect");
         $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
-        $("html").optionClass("Show Reply to Thread Button",     false, "hide-reply-button");
+        $("html").optionClass("Show Reply to Thread Button",     false, "hide-button");
         $("html").optionClass("Style Post Info",     true, "post-info");
         $("html").optionClass("Borders",     2, "borders-all");
         $("html").optionClass("Borders",     3, "borders-none");
+        $("html").optionClass("Sidebar Position",     1, "right-sidebar");
+        $("html").optionClass("Sidebar Position",     2, "left-sidebar");
 
       }
     },

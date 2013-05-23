@@ -1,0 +1,53 @@
+/* Sidebar */
+/* CSS here is only added if Sidebar Position is not 3 (Disabled) */
+:root:not(.fixed) #header-bar {
+  z-index: 10;
+}
+:root.left-sidebar body {
+  padding-left: 309px;
+}
+:root.right-sidebar body {
+  padding-right: 309px;
+}
+.boardBanner {
+  position: fixed;
+  top: 1px;
+  width: 306px;
+}
+:root.left-sidebar .boardBanner {
+  left: 1px;
+}
+:root.right-sidebar .boardBanner {
+  right: 1px;
+}
+:root.fixed:not(.autohide):not(.bottom) .boardBanner {
+  margin-top: 25px;
+}
+#banner {
+  width: 100%;
+}
+#bBanner {
+  margin-bottom: 40px;
+}
+#bBanner::after {
+  width: 100% !important;
+}
+.qr-link-container {
+  margin-top: -15px;
+}
+#qr {
+  bottom: 0px !important;
+  top: auto !important;
+  min-width: 304px !important;
+}
+:root.left-sidebar #qr {
+  left: 0px !important;
+  right: auto !important;
+}
+:root.right-sidebar #qr {
+  right: 0px !important;
+  left: auto !important;
+}
+:root.fixed.bottom:not(.autohide) #qr {
+  margin-bottom: 26px;
+}

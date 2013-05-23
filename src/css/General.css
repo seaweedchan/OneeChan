@@ -185,7 +185,7 @@ hr {
   right:0;
   top:97%;
   -moz-transform:scaleY(-1);
-  width: 300px !important;
+  width: 300px;
   margin: auto !important;
   pointer-events: none;
 }

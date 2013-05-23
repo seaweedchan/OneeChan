@@ -5,3 +5,4 @@
 <%= grunt.file.read('src/css/Options.css') %>
 <%= grunt.file.read('src/css/General.css') %>
 <%= grunt.file.read('src/css/Icons.css') %>
+" + ($SS.conf["Sidebar Position"] !== 3 ? "<%= grunt.file.read('src/css/Sidebar.css') %>" : "") + "
