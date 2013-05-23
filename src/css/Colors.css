@@ -60,6 +60,9 @@ body {
 .tab-label {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
+:root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post {
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(-10) + ") !important;
+}
 #header-bar {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
 }

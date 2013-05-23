@@ -76,6 +76,7 @@
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
     "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
+    "Recolor Even Replies":       [ false,  "Makes every other post a darker color. Not compatible with Quote Threading." ],
     "Borders":
     [
       1, "Changes which sides of replies have borders",
@@ -85,8 +86,7 @@
         { name: "None", value: 3 }
       ]
     ],
-    /*"Recolor Even Posts":       [ false,  "Makes every other post a darker color" ],
-    "Margin Between Replies":
+    /*"Margin Between Replies":
     [
       0, "Change the position of 4chan x backlinks",
       [
@@ -2232,6 +2232,7 @@
         $("html").optionClass("Borders",     3, "borders-none");
         $("html").optionClass("Sidebar Position",     1, "right-sidebar");
         $("html").optionClass("Sidebar Position",     2, "left-sidebar");
+        $("html").optionClass("Recolor Even Replies",     true, "recolor-even");
 
       }
     },
