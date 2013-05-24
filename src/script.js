@@ -1064,7 +1064,7 @@
         {
           var file = this.files[0],
             reader = new FileReader(),
-            val, first, valid = true, theme, div, index;
+            val, first, valid = true, theme, div, index, imported;
 
           reader.onload = (function(tFile)
           {
@@ -1080,8 +1080,28 @@
                 return;
               }
 
-              if (theme.bgColor == undefined)
-              {
+              /* Check if this is an OneeChan v5 file, do nothing if so */
+              if (theme["headerColor"] !== undefined) {
+              }
+
+              /* Old OneeChan */
+              else if (theme["navOp"] !== undefined) {
+              }
+
+              /* 4chan Style Script */
+              else if (theme["timeColor"] !== undefined) {
+                theme.replyOp = "1.0";
+                theme.navOp = "0.6";
+              }
+
+              /* Appchan X */
+              else if (theme["Theme"] !== undefined) {
+                theme.name = theme["Theme"];
+                theme.bgColor = $SS.colorToHex(theme["Background Color"]);
+              }
+
+              /* Can't be exported from the main scripts, so toss an error */
+              else {
                 alert("Invalid theme file!");
                 return;
               }
@@ -1343,8 +1363,10 @@
         $("a[name=export]", div).bind("click", function()
         {
           var theme = $SS.options.addTheme(tIndex, true);
-          window.open("data:application/json," +
-            encodeURIComponent(JSON.stringify(theme)), "Export " + theme.name);
+          if ($("a[download]", div).exists())
+            return;
+          var exportalert = $("<a class='options-button'download='" + theme.name +".json' href='data:application/json," + encodeURIComponent(JSON.stringify(theme)) + "'>Save me!");
+          return $(this).replace(exportalert);
         });
 
         if (bEdit)
@@ -2909,6 +2931,22 @@
 
       if (incHover)
         this.hover = this.shiftRGB(16, true);
+    },
+    colorToHex: function(color) {
+      var digits, hex;
+
+      if (color.substr(0, 1) === '#') {
+        return color.slice(1, color.length);
+      }
+      if (digits = color.match(/(.*?)rgba?\((\d+), ?(\d+), ?(\d+)(.*?)\)/)) {
+        hex = ((parseInt(digits[2], 10) << 16) | (parseInt(digits[3], 10) << 8) | (parseInt(digits[4], 10))).toString(16);
+        while (hex.length < 6) {
+          hex = "0" + hex;
+        }
+        return hex;
+      } else {
+        return false;
+      }
     },
     Image: function(img, RPA)
     {
