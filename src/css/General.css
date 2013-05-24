@@ -20,6 +20,15 @@ body {
 .summary {
   margin-left: 20px;
 }
+.expanded-image {
+  position: relative;
+}
+:root.expand-cover #qr {
+  z-index: 8 !important;
+}
+:root.expand-cover .expanded-image {
+  z-index: 9 !important;
+}
 /* Fit Width option */
 :root.reply-fit-width .reply.post {
   display: block !important;
@@ -216,11 +225,11 @@ hr {
 .next {
   position: relative;
   float: right !important;
-  width: 23px;
+  width: 10px;
 }
 .prev {
   position: relative;
-  width: 23px;
+  width: 10px;
 }
 .prev span {
   position: relative;

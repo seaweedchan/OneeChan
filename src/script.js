@@ -42,7 +42,7 @@
       true
     ],
     "Underline Links":    [ false, "Underlines links" ],
-    /*"Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],*/
+    "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],
     "Show Banner":              [ true,  "Toggle visibility of the logo banner", null, true ],
     "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
     "Reduce Banner Opacity":       [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
@@ -2219,7 +2219,7 @@
         $("html").optionClass("Recolor Even Replies",     true, "recolor-even");
         $("html").optionClass("Backlink Icons",     true, "backlink-icon");
         $("html").optionClass("Backlinks on Bottom",     true, "backlink-bottom");
-
+        $("html").optionClass("Expanded Images Cover QR",     true, "expand-cover");
       }
     },
 
