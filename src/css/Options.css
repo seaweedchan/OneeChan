@@ -27,11 +27,13 @@
   height: 125px;
   width: 600px;
   text-align:right!important;
+  padding: 5px !important;
 }
 #add-theme {
   height: 470px;
   width: 600px;
   text-align:right!important;
+  padding: 5px !important;
 }
 #add-mascot .option-title,
 #add-theme .option-title {
@@ -61,7 +63,7 @@
   padding:0 6px;
   vertical-align:middle;
 }
-#main-section>.option:nth-child(odd) {
+#main-section>.option:nth-of-type(even) {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-5) + ") !important
 }
 #main-section .buttons-container+.option {
@@ -109,16 +111,9 @@ select[name='Font Family']>option {
 /* Themes */
 .theme-preview {
   cursor: default;
-  opacity:.5;
   transition:all .1s;
 }
-.theme-preview:hover,
-.theme-preview.selected,
-.theme-preview.nsfw {
-  opacity:1;
-}
 #themes-section .reply {
-  margin-bottom: 1px !important;
   padding: 2px!important;
   position:relative;
   text-align:left;

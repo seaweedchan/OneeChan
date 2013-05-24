@@ -6,3 +6,17 @@
   bottom: 4px !important;
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.heart + "\") !important;
 }
+/* Backlinks */
+:root.backlink-icon .backlink {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.backlink+"\")!important;
+  font-size: 0px !important;
+  padding: 6px !important;
+  margin-right: 0px !important;
+  opacity: 0.6 !important;
+  position: relative;
+  bottom: 5px;
+  right: 2px;
+}
+:root.backlink-icon .backlink:hover, :root.backlink-icon .backlink.inlined {
+  opacity: 1 !important;
+}

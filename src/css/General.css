@@ -255,3 +255,15 @@ hr {
 .cataloglink {
   margin-left: -10px;
 }
+
+/* Backlinks */
+:root.backlink-bottom .post {
+  position: relative;
+  padding-bottom: 2px;
+}
+:root.backlink-bottom .container
+{
+  position:absolute;
+  bottom:2px;
+  right:6px;
+}
