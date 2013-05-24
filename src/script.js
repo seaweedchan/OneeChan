@@ -59,8 +59,8 @@
         { name: "Left",     value: 2 },
         { name: "Disabled", value: 3 }
       ], true
-    ],/*
-    "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],*/
+    ],
+    "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
     "--Replies--":              [ "header",  "" ],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
@@ -87,9 +87,18 @@
         { name: "None",  value: -2 },
         { name: "Overlapping Borders", value: -3 }
       ]
+    ],*/
+    "--Quick Reply--":                  [ "header",  "" ],
+    "Autohide Style":
+    [
+      1, "Changes the style of the quick reply.",
+      [
+        { name: "Normal",      value: 1 },
+        { name: "Vertical Tabbed",          value: 2 },
+        { name: "Fade", value: 3 }
+      ]
     ],
-    /*"--Quick Reply--":                  [ "header",  "" ],
-    "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],*/
+    /*"Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],*/
     "--Font--":                     [ "header",  "" ],
     "Font Family":
     [
@@ -2201,25 +2210,28 @@
       init: function()
       {
         /* Function arguments: ("Option Name", value, "class-name") */
-        $("html").optionClass("Underline Links", false, "underline-disabled");
-        $("html").optionClass("Rounded Corners", true, "rounded-corners");
-        $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
-        $("html").optionClass("Show Board Name", false, "hide-board-name");
-        $("html").optionClass("Fit Width", true, "reply-fit-width");
-        $("html").optionClass("Show Text Board", false, "hide-text-board");
-        $("html").optionClass("Show Banner",     false, "hide-banner");
-        $("html").optionClass("Show Banner Reflection", true, "banner-reflect");
-        $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
-        $("html").optionClass("Show Reply to Thread Button",     false, "hide-button");
-        $("html").optionClass("Style Post Info",     true, "post-info");
-        $("html").optionClass("Borders",     2, "borders-all");
-        $("html").optionClass("Borders",     3, "borders-none");
-        $("html").optionClass("Sidebar Position",     1, "right-sidebar");
-        $("html").optionClass("Sidebar Position",     2, "left-sidebar");
-        $("html").optionClass("Recolor Even Replies",     true, "recolor-even");
-        $("html").optionClass("Backlink Icons",     true, "backlink-icon");
-        $("html").optionClass("Backlinks on Bottom",     true, "backlink-bottom");
-        $("html").optionClass("Expanded Images Cover QR",     true, "expand-cover");
+        $("html").optionClass("Underline Links",              false,  "underline-disabled" );
+        $("html").optionClass("Rounded Corners",              true,   "rounded-corners" );
+        $("html").optionClass("Show Checkboxes",              false,  "hide-checkboxes" );
+        $("html").optionClass("Show Board Name",              false,  "hide-board-name" );
+        $("html").optionClass("Fit Width",                    true,   "reply-fit-width" );
+        $("html").optionClass("Show Text Board",              false,  "hide-text-board" );
+        $("html").optionClass("Show Banner",                  false,  "hide-banner" );
+        $("html").optionClass("Show Banner Reflection",       true,   "banner-reflect" );
+        $("html").optionClass("Reduce Banner Opacity",        true,   "banner-opacity" );
+        $("html").optionClass("Show Reply to Thread Button",  false,  "hide-button" );
+        $("html").optionClass("Style Post Info",              true,   "post-info" );
+        $("html").optionClass("Borders",                      2,      "borders-all" );
+        $("html").optionClass("Borders",                      3,      "borders-none" );
+        $("html").optionClass("Sidebar Position",             1,      "right-sidebar" );
+        $("html").optionClass("Sidebar Position",             2,      "left-sidebar" );
+        $("html").optionClass("Recolor Even Replies",         true,   "recolor-even" );
+        $("html").optionClass("Backlink Icons",               true,   "backlink-icon" );
+        $("html").optionClass("Backlinks on Bottom",          true,   "backlink-bottom" );
+        $("html").optionClass("Expanded Images Cover QR",     true,   "expand-cover" );
+        $("html").optionClass("Autohide Style",               2,      "vertical-qr" );
+        $("html").optionClass("Autohide Style",               3,      "fade-qr" );
+        $("html").optionClass("SS-like Sidebar",              true,   "ss-sidebar" );
       }
     },
 

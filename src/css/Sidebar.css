@@ -4,15 +4,14 @@
   z-index: 10;
 }
 :root.left-sidebar body {
-  padding-left: 309px;
+  padding-left: 303px;
 }
 :root.right-sidebar body {
-  padding-right: 309px;
+  padding-right: 303px;
 }
 .boardBanner {
   position: fixed;
   top: 1px;
-  width: 306px;
 }
 :root.left-sidebar .boardBanner {
   left: 1px;
@@ -38,7 +37,7 @@
 #qr {
   bottom: 0px !important;
   top: auto !important;
-  min-width: 304px !important;
+  min-width: 297px !important;
 }
 :root.left-sidebar #qr {
   left: 0px !important;
@@ -50,4 +49,28 @@
 }
 :root.fixed.bottom:not(.autohide) #qr {
   margin-bottom: 26px;
+}
+.captcha-img, 
+.captcha-img img {
+  min-width: 100% !important;
+  height: 56px !important;
+}
+
+/* SS-like Sidebar */
+:root.ss-sidebar body::before {
+  background:rgba\(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
+  border-left:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
+  box-shadow:inset " + $SS.theme.brderColor.hex + " 1px 0 0,inset " + $SS.theme.brderColor.hex + " -1px 0 0;
+  content:'';
+  height:100%;
+  width:302px;
+  position:fixed;
+  top:0px;
+  right: 0px;
+}
+:root.ss-sidebar.left-sidebar body::before {
+  border-right:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
+  border-left: none !important;
+  left: 0px;
+  right: auto !Important;
 }
