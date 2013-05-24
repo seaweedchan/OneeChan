@@ -14,7 +14,7 @@
   margin-right: 0px !important;
   opacity: 0.6 !important;
   position: relative;
-  bottom: 5px;
+  bottom: 6px;
   right: 2px;
 }
 :root.backlink-icon .backlink:hover, :root.backlink-icon .backlink.inlined {

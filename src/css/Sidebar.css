@@ -58,7 +58,7 @@
 
 /* SS-like Sidebar */
 :root.ss-sidebar body::before {
-  background:rgba\(" + $SS.theme.mainColor.shiftRGB(-18) + ",.8);
+  background:rgba\(" + $SS.theme.mainColor.shiftRGB(-18) + ",." + ($SS.theme.mainColor.isDark ? 9 : 2) + ");
   border-left:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
   box-shadow:inset " + $SS.theme.brderColor.hex + " 1px 0 0,inset " + $SS.theme.brderColor.hex + " -1px 0 0;
   content:'';
