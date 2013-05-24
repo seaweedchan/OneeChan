@@ -30,8 +30,7 @@
   padding: 5px !important;
 }
 #add-theme {
-  height: 470px;
-  width: 600px;
+  height: 377px;
   text-align:right!important;
   padding: 5px !important;
 }
@@ -173,13 +172,13 @@ select[name='Font Family']>option {
 #add-theme
 {
   text-align:left!important;
-  width:500px!important;
+  width:800px!important;
 }
 #add-theme>label
 {
   display:inline-block;
   text-align:right;
-  width:50%;
+  width:33.3%;
 }
 #add-theme>label#customCSS
 {

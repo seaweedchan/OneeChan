@@ -139,16 +139,15 @@
     { dName: "Reply Border",     name: "brderColor",  property: "border-color"     },
     { dName: "Input Background", name: "inputColor",  property: "background-color" },
     { dName: "Input Border",     name: "inputbColor", property: "border-color"     },
-    { dName: "Header BG Top", name: "headerTopColor",   property: "background-color" },
-    { dName: "Header BG Bottom", name: "headerBotColor",   property: "background-color" },
+    { dName: "Header Background", name: "headerBGColor",   property: "background-color" },
     { dName: "Header Text",     name: "headerColor", property: "color"     },
-    { dName: "Header Border",     name: "headerbColor", property: "border-color"     },
     { dName: "Board Title",     name: "boardColor", property: "color"     },
-    { dName: "Board Title Shadow",     name: "boardsColor", property: "color"     },
     { dName: "Body Background",  name: "bgColor",     property: "background-color" },
     { dName: "Text",             name: "textColor",   property: "color"            },
     { dName: "Backlink",        name: "blinkColor",  property: "color"            },
-    { dName: "4chan x Link",    name: "jlinkColor",  property: "color"            },
+    { dName: "4chan X Link",    name: "jlinkColor",  property: "color"            },
+    { dName: "Header Link",            name: "headerLColor",   property: "color"            },
+    { dName: "Header Link Hover",            name: "headerLHColor",   property: "color"            },
     { dName: "Link",            name: "linkColor",   property: "color"            },
     { dName: "Link Hover",    name: "linkHColor",  property: "color"            },
     { dName: "Name",            name: "nameColor",   property: "color"            },
@@ -1086,18 +1085,50 @@
 
               /* Old OneeChan */
               else if (theme["navOp"] !== undefined) {
+                theme.headerColor = theme["textColor"];
+                theme.headerBGColor = theme["mainColor"];
+                theme.headerLColor = theme["linkColor"];
+                theme.headerLHColor = theme["linkHColor"];
+                theme.boardColor = theme["textColor"];
               }
 
               /* 4chan Style Script */
               else if (theme["timeColor"] !== undefined) {
                 theme.replyOp = "1.0";
-                theme.navOp = "0.6";
+                theme.navOp = "0.9";
+                theme.headerColor = theme["textColor"];
+                theme.headerBGColor = theme["mainColor"];
+                theme.headerLColor = theme["linkColor"];
+                theme.headerLHColor = theme["linkHColor"];
+                theme.boardColor = theme["textColor"];
               }
 
               /* Appchan X */
               else if (theme["Theme"] !== undefined) {
                 theme.name = theme["Theme"];
+                theme.authorName = theme["Author"];
+                theme.authorTrip = theme["Author Tripcode"];
+                theme.replyOp = "1.0";
+                theme.navOp = "0.9";
+                theme.mainColor = $SS.colorToHex(theme["Reply Background"]);
+                theme.textColor = $SS.colorToHex(theme["Text"]);
+                theme.linkColor = $SS.colorToHex(theme["Links"]);
+                theme.linkHColor = $SS.colorToHex(theme["Hovered Links"]);
+                theme.headerColor = $SS.colorToHex(theme["Text"]);
+                theme.headerBGColor = $SS.colorToHex(theme["Navigation Background"]);
+                theme.headerLColor = $SS.colorToHex(theme["Navigation Links"]);
+                theme.headerLHColor = $SS.colorToHex(theme["Hovered Navigation Links"]);
+                theme.boardColor = $SS.colorToHex(theme["Board Title"]);
+                theme.brderColor = $SS.colorToHex(theme["Reply Border"]);
+                theme.inputColor = $SS.colorToHex(theme["Input Background"]);
+                theme.inputbColor = $SS.colorToHex(theme["Input Border"]);
                 theme.bgColor = $SS.colorToHex(theme["Background Color"]);
+                theme.blinkColor = $SS.colorToHex(theme["Backlinks"]);
+                theme.jlinkColor = $SS.colorToHex(theme["Links"]);
+                theme.nameColor = $SS.colorToHex(theme["Names"]);
+                theme.tripColor = $SS.colorToHex(theme["Tripcodes"]);
+                theme.titleColor = $SS.colorToHex(theme["Subjects"]);
+                theme.quoteColor = $SS.colorToHex(theme["Greentext"]);
               }
 
               /* Can't be exported from the main scripts, so toss an error */
@@ -1313,6 +1344,10 @@
 
         var innerHTML = "<label>" +
         "<span class='option-title'>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
+        "</label><label>" +
+        "<span class='option-title'>Author Name:</span><input type=text name=authorName value='" + (bEdit ? (tEdit.authorName !== undefined ? tEdit.authorName : "") : "") + "'>" +
+        "</label><label>" +
+        "<span class='option-title'>Author Tripcode:</span><input type=text name=authorTrip value='" + (bEdit ? (tEdit.authorTrip !== undefined ? tEdit.authorTrip : "")  : "") + "'>" +
         "</label><label>" +
         "<span class='option-title'>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "'" :
         ($SS.validBase64(tEdit.bgImg) ? "[Base 64 Encoded Image]' disabled=true" : "'")) : "'") + "></label><label>" +
@@ -1654,6 +1689,8 @@
       [
         {
           name:       "Vimyanized Dark",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0", 
@@ -1672,11 +1709,16 @@
           textColor:  "f8f8f8",
           tripColor:  "d4b63c",
           titleColor: "b88cd1",
-          headerColor:"",
-          boardColor: ""
+          headerColor: "f8f8f8",
+          headerLColor: "53bdb1",
+          headerLHColor: "3090b5",
+          headerBGColor: "0d1114",
+          boardColor:  "f8f8f8"
         },
         {
           name:        "Muted",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
@@ -1695,8 +1737,11 @@
           textColor:   "393735",
           tripColor:   "cc6563",
           titleColor:  "111111",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "393735",
+          headerLColor: "bc312a",
+          headerLHColor: "8e2220",
+          headerBGColor: "f5f2e9",
+          boardColor:  "bc312a"
         },
         {
           name:       "Minimalistic Mayhem",
@@ -1720,11 +1765,16 @@
           textColor:  "bbbbbb",
           tripColor:  "96562c",
           titleColor: "987d3e",
-          headerColor:"",
-          boardColor: ""
+          headerColor: "bbbbbb",
+          headerLColor: "897399",
+          headerLHColor: "c617e6",
+          headerBGColor: "222222",
+          boardColor:  "bbbbbb"
         },
         {
           name:       "Blackboard",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0",
@@ -1743,12 +1793,16 @@
           textColor:  "f8f8f8",
           tripColor:  "ff6400",
           titleColor: "ff6400",
-          headerColor:"",
-          boardColor: ""
+          headerColor: "f8f8f8",
+          headerLColor: "fbde2d",
+          headerLHColor: "4b65cc",
+          headerBGColor: "0c1021",
+          boardColor:  "f8f8f8"
         },
         {
           name:        "Dark Flat",
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
@@ -1768,11 +1822,16 @@
           textColor:   "dddddd",
           tripColor:   "d4c095",
           titleColor:  "9390c9",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "dddddd",
+          headerLColor: "ac9bb0",
+          headerLHColor: "6f99b4",
+          headerBGColor: "232425",
+          boardColor:  "dddddd"
         },
         {
           name:        "Photon",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
@@ -1790,8 +1849,11 @@
           quoteColor:  "789922",
           textColor:   "333333",
           tripColor:   "ff3300",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "333333",
+          headerLColor: "ff6600",
+          headerLHColor: "ff3300",
+          headerBGColor: "dddddd",
+          boardColor:  "004a99"
         },
         {
           name:        "Original Minimalistic Mayhem",
@@ -1816,11 +1878,16 @@
           textColor:   "dddddd",
           tripColor:   "8c5d2a",
           titleColor:  "486273",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "dddddd",
+          headerLColor: "559c7a",
+          headerLHColor: "c7de1a",
+          headerBGColor: "333333",
+          boardColor:  "dddddd"
         },
         {
           name:        "Tomorrow",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -1839,8 +1906,11 @@
           textColor:   "c5c8c6",
           tripColor:   "8abeb7",
           titleColor:  "b294bb",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "c5c8c6",
+          headerLColor: "81a2be",
+          headerLHColor: "cc6666",
+          headerBGColor: "282a2e",
+          boardColor:  "c5c8c6"
         },
         {
           name:        "Yotsuba",
@@ -1865,8 +1935,11 @@
           textColor:   "800000",
           tripColor:   "228854",
           titleColor:  "cc1105",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "800000",
+          headerLColor: "0000ee",
+          headerLHColor: "dd0000",
+          headerBGColor: "f0e0d6",
+          boardColor:  "800000"
         },                                                           
         {
           name:        "Yotsuba B",
@@ -1891,11 +1964,16 @@
           textColor:   "000000",
           tripColor:   "228854",
           titleColor:  "0f0c5d",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "000000",
+          headerLColor: "34345c",
+          headerLHColor: "dd0000",
+          headerBGColor: "d6daf0",
+          boardColor:  "000000"
         },
         {
           name:        "Yotsuba Purple",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAPVJREFUOE91i1lywjAQROf+VySEhMW7kazFNhhSTM9YxoUrH69ed49El52lRLbrCEj/MorkVZesZGCPdzA6/2cvHduKfO8o/8YbBXmLvikOeisO7l/KH73BierXS4Yr+BPe6+NMyjA4JYLk5hSEtEs+8/ZBe47UXCIlIyfaDLmnt3u65pHBxhlIHsSCbOgDmUJBtvlIBi7ZxUiWEXPvKu1v3yR3Jbu+kdtwJ8+br+/kKrX0BuYNnTPssCXmXXqrhHZaspecwH3dJwrXbce2JtoHRTMJwXBGT8y73h/Ud0+F74uRpc+2Txoc+FPzDkaPrmjWd8gzL82jLtr9nlP8AAAAAElFTkSuQmCC",
           bgRPA:       "repeat-x top center scroll",
@@ -1915,12 +1993,16 @@
           textColor:   "000000",
           tripColor:   "b22caa",
           titleColor:  "0f0c5d",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "000000",
+          headerLColor: "962594",
+          headerLHColor: "b22caa",
+          headerBGColor: "eeddff",
+          boardColor:  "591177"
         },
         {
           name:        "安心院なじみ",
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -1939,8 +2021,11 @@
           textColor:   "4d4d4c",
           tripColor:   "3e999f",
           titleColor:  "4d4d4d",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "4d4d4c",
+          headerLColor: "bf8040",
+          headerLHColor: "bf8040",
+          headerBGColor: "efefef",
+          boardColor:  "4d4d4c"
         },
         {
           name:        "Solarized Dark", // http://ethanschoonover.com/solarized
@@ -1964,12 +2049,16 @@
           textColor:   "93a1a1",
           tripColor:   "2aa198",
           titleColor:  "bec2c4",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "93a1a1",
+          headerLColor: "696bba",
+          headerLHColor: "d33682",
+          headerBGColor: "032b36",
+          boardColor:  "93a1a1"
         },
         {
           name:        "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -1988,12 +2077,16 @@
           textColor:   "4c4c4c",
           tripColor:   "bf7f3f",
           titleColor:  "4c4c4c",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "4c4c4c",
+          headerLColor: "bf7f3f",
+          headerLHColor: "d33682",
+          headerBGColor: "efefef",
+          boardColor:  "4c4c4c"
         },
         {
           name:        "4chan Dark Upgrade",
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       "http://img85.imageshack.us/img85/4162/4chbg.gif",
           bgRPA:       "repeat top left fixed",
@@ -2013,8 +2106,11 @@
           textColor:   "ffffff",
           tripColor:   "a7dce7",
           titleColor:  "999999",
-          headerColor: "",
-          boardColor:  "",
+          headerColor: "ffffff",
+          headerLColor: "dddddd",
+          headerLHColor: "eeeeee",
+          headerBGColor: "333333",
+          boardColor:  "ffffff",
           customCSS:   "\n\n\n\n\n\n#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}" +
                  ".postContainer>.reply{background-image:url(http://img714.imageshack.us/img714/3969/4ch2.gif)!important;" +
                  "border-bottom:#1f1f1f!important;border-radius:5px!important}" +
@@ -2023,6 +2119,7 @@
         {
           name:        "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
           authorName:  "Zixaphir",
+          authorTrip:  "!M.........",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -2041,8 +2138,11 @@
           textColor:   "aaaaaa",
           tripColor:   "aaaaaa",
           titleColor:  "aaaaaa",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "aaaaaa",
+          headerLColor: "6688aa",
+          headerLHColor: "6688aa",
+          headerBGColor: "333333",
+          boardColor:  "aaaaaa"
         },
         {
           name:        "Zenburned",
@@ -2065,11 +2165,16 @@
           textColor:   "dcdccc",
           tripColor:   "8cd0d3",
           titleColor:  "aaaaaa",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "dcdccc",
+          headerLColor: "efdcbc",
+          headerLHColor: "f8f893",
+          headerBGColor: "575757",
+          boardColor:  "dcdccc"
         },
         {
           name:        "Monokai",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           replyOp:     "1.0",
           navOp:       "0.9", 
@@ -2087,11 +2192,16 @@
           textColor:   "f8f8f2",
           tripColor:   "fa8220",
           titleColor:  "ae81ff",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "f8f8f2",
+          headerLColor: "e2db74",
+          headerLHColor: "ae81ff",
+          headerBGColor: "272822",
+          boardColor:  "f8f8f2"
         },
         {
           name:        "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           replyOp:     "1.0",
           navOp:       "0.9",
@@ -2109,8 +2219,11 @@
           textColor:   "4c4c4c",
           tripColor:   "5d6678",
           titleColor:  "617d6f",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "4c4c4c",
+          headerLColor: "477085",
+          headerLHColor: "5d6678",
+          headerBGColor: "e3e7e8",
+          boardColor:  "477085"
         }
       ],
 
@@ -3027,8 +3140,8 @@
       this.index       = index;
       this.hidden      = $SS.conf["Hidden Themes"].indexOf(index) !== -1;
       this.name        = theme.name;
-      this.authorName  = theme.authorName || "Seaweed";
-      this.authorTrip  = theme.authorTrip || "!!lq+3fff+/ev";
+      this.authorName  = theme.authorName || "Anonymous";
+      this.authorTrip  = theme.authorTrip || "!..NoTrip..";
       this.default     = theme.default;
       this.replyBrder  = theme.replyBrder;
       this.bgImg       = new $SS.Image(theme.bgImg, theme.bgRPA);
@@ -3049,10 +3162,10 @@
       this.titleColor  = new $SS.Color(theme.titleColor);
       this.tripColor   = new $SS.Color(theme.tripColor);
       this.boardColor  = new $SS.Color(theme.boardColor);
-      this.boardsColor = new $SS.Color(theme.boardsColor);
       this.headerColor = new $SS.Color(theme.headerColor);
-      this.headerTopColor = new $SS.Color(theme.headerTopColor);
-      this.headerBotColor = new $SS.Color(theme.headerBotColor);
+      this.headerLColor = new $SS.Color(theme.headerLColor);
+      this.headerLHColor = new $SS.Color(theme.headerLHColor);
+      this.headerBGColor = new $SS.Color(theme.headerBGColor);
       this.headerbColor= new $SS.Color(theme.headerbColor); 
       this.checkMark   = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? 0 : -8) + "px");
       this.radioCheck  = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? -16 : -24) + "px");

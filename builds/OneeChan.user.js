@@ -158,16 +158,15 @@
     { dName: "Reply Border",     name: "brderColor",  property: "border-color"     },
     { dName: "Input Background", name: "inputColor",  property: "background-color" },
     { dName: "Input Border",     name: "inputbColor", property: "border-color"     },
-    { dName: "Header BG Top", name: "headerTopColor",   property: "background-color" },
-    { dName: "Header BG Bottom", name: "headerBotColor",   property: "background-color" },
+    { dName: "Header Background", name: "headerBGColor",   property: "background-color" },
     { dName: "Header Text",     name: "headerColor", property: "color"     },
-    { dName: "Header Border",     name: "headerbColor", property: "border-color"     },
     { dName: "Board Title",     name: "boardColor", property: "color"     },
-    { dName: "Board Title Shadow",     name: "boardsColor", property: "color"     },
     { dName: "Body Background",  name: "bgColor",     property: "background-color" },
     { dName: "Text",             name: "textColor",   property: "color"            },
     { dName: "Backlink",        name: "blinkColor",  property: "color"            },
-    { dName: "4chan x Link",    name: "jlinkColor",  property: "color"            },
+    { dName: "4chan X Link",    name: "jlinkColor",  property: "color"            },
+    { dName: "Header Link",            name: "headerLColor",   property: "color"            },
+    { dName: "Header Link Hover",            name: "headerLHColor",   property: "color"            },
     { dName: "Link",            name: "linkColor",   property: "color"            },
     { dName: "Link Hover",    name: "linkHColor",  property: "color"            },
     { dName: "Name",            name: "nameColor",   property: "color"            },
@@ -766,7 +765,7 @@
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}:root:not(.reply-fit-width) #delform div.reply:not([hidden]){display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}s{text-decoration:none!important}span.spoiler,s{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,s:hover,span.spoiler:focus,s:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px;opacity:.3}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}.deleteform,.pagelist,.pagelist input{font-size:0!important}.fileInfo,.summary{font-size:11px!important}.qr-link{font-size:14px!important}.tab-label,.options-button,.theme-preview,#oneechan-options input,textarea{font-family:sans-serif!important;font-size:12px!important}.boardBanner .boardTitle{font-weight:400!important;font-family:sans-serif!important;font-size:28px!important}body,.prev span::after,.prev form::after,.next span::after,.next form::after,.pages a{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}:root.underline-disabled a{text-decoration:none}:root.underline-disabled .filtered{text-decoration:line-through}.name,.subject,.option.header .option-title{font-weight:700}.qr-link{font-weight:400}.summary{font-style:italic}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot,.stylechanger,.topad.center,.middlead.center,.bottomad.center,#delPassword,:root.hide-checkboxes .post input[type=checkbox],:root.hide-checkboxes .post .riceCheck,:root.hide-checkboxes .deleteform,:root.hide-board-name .boardTitle,:root.hide-board-name .boardSubtitle,:root.hide-text-board .boardSubtitle,:root.hide-banner #bBanner,:root.hide-button .qr-link-container,:root.reply-fit-width .sideArrows,body>hr,.navLinks{display:none}input:focus,textarea:focus,a{outline:0!important}#delform>hr,.board>hr:last-of-type{background:none!important}div[style='float: right;']{color:transparent}html,body,div.boardBanner,#menu,input:not(.jsColor),textarea,#qr-filename-container{color:" + $SS.theme.textColor.hex + "!important}.name{color:" + $SS.theme.nameColor.hex + "!important}.postertrip{color:" + $SS.theme.tripColor.hex + "!important}a{color:" + $SS.theme.linkColor.hex + "!important}a.current,a.summary,.pages strong>a{color:" + $SS.theme.textColor.hex + "!important}a:hover{color:" + $SS.theme.linkHColor.hex + "!important}.quote{color:" + $SS.theme.quoteColor.hex + "!important}.subject,.option.header .option-title{color:" + $SS.theme.titleColor.hex + "!important}.options-button,a.qr-link{color:" + $SS.theme.jlinkColor.hex + "!important}html,body{background:" + $SS.theme.bgColor.hex + "!important}.reply,.dialog,.tab-label{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important}:root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post{background:rgb\(" + $SS.theme.mainColor.shiftRGB(-10) + ")!important}#header-bar{background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + "))!important}.options-button,.qr-link,.pages strong>a{background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + "))}.options-button:hover,.import-input:hover+.options-button,.pages strong>a:hover{background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ")}.focused.entry{background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ")!important}.qr-link:hover{background:rgb\(" + $SS.theme.mainColor.rgb + ")}input:not(.jsColor),textarea,.riceCheck,#qr-filename-container{background:" + $SS.theme.inputColor.hex + "!important}input[type=checkbox],.riceCheck{background:rgb\(" + $SS.theme.inputColor.shiftRGB(20) + ")!important}hr{background-image:linear-gradient(to left,rgba(" + $SS.theme.brderColor.rgb + ",0),rgb(" + $SS.theme.brderColor.rgb + "),rgba(" + $SS.theme.brderColor.rgb + ",0))}#unread-line{background-image:linear-gradient(to left,rgba(" + $SS.theme.jlinkColor.rgb + ",0),rgb(" + $SS.theme.jlinkColor.rgb + "),rgba(" + $SS.theme.jlinkColor.rgb + ",0))}.inline{background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important}:root.post-info .reply>.postInfo{background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2)}.reply{border-width:0 1px 1px 0;border-style:solid}:root.borders-all .reply{border-width:1px}:root.borders-none .reply{border-width:0}:root.rounded-corners .reply,:root.rounded-corners .dialog:not(#header-bar),:root.rounded-corners .inline{border-radius:3px}:root.post-info .reply>.postInfo{border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ")}:root.post-info.rounded-corners .reply>.postInfo{border-radius:3px 3px 0 0}.reply,.dialog,#header-bar,.entry,.inline,fieldset{border-color:" + $SS.theme.brderColor.hex + "!important}input,textarea,.riceCheck,#qr-filename-container{border:1px solid " + $SS.theme.inputbColor.hex + "!important}.options-button,.qr-link,.pages strong>a{border-style:solid;border-width:1px;border-color:rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ")!important}input:focus,textarea:focus,#qr-filename-container:focus{border:1px solid " + $SS.theme.linkColor.hex + "!important}.qphl{outline:2px solid rgba(" + $SS.theme.linkColor.rgb + ",.5)!important}#add-mascot,#add-theme,#oneechan-options{border:0!important;border-radius:3px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:532px;width:900px;text-align:left!important}.options-close,.options-container{padding:5px}.options-close{text-align:right!important}#add-mascot{height:125px;width:600px;text-align:right!important;padding:5px!important}#add-theme{height:470px;width:600px;text-align:right!important;padding:5px!important}#add-mascot .option-title,#add-theme .option-title{float:left;line-height:22px;padding-left:5px}#add-mascot>label,#add-theme>label{line-height:22px}#options-container{border-radius:5px}#options-container,.options-section{height:500px}.options-section{overflow:auto}#main-section .option{display:block;border-top:1px solid rgba(0,0,0,.1);height:22px;padding:0 6px;vertical-align:middle}#main-section>.option:nth-of-type(even){background:rgb\(" + $SS.theme.mainColor.shiftRGB(-5) + ")!important}#main-section .buttons-container+.option{border-top:0!important}.option-title{line-height:20px!important}#main-section .option:first-child{border-top:0!important}#main-section .option:last-child{border-bottom:0!important}#main-section input,#main-section select{float:right!important}#main-section input[type=checkbox],#main-section .riceCheck{float:left!important;margin-right:5px!important}select[name='Font Family']>option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}.suboption{padding-left:16px!important}.option.header{cursor:auto!important}.theme-preview{cursor:default;transition:all .1s}#themes-section .reply{padding:2px!important;position:relative;text-align:left;width:99.4%;border-radius:0!important}.theme-buttons-container{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}.theme-preview:hover .theme-buttons-container{opacity:1}.theme-buttons-container>a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}.theme-preview .sfw-label{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;transition:all .3s}.theme-preview.nsfw .notsafe{opacity:1;right:3px;z-index:1}.theme-preview.selected .safe{opacity:1;right:3px;z-index:1}.theme-preview.selected.nsfw .sfw-label:not(.both){opacity:0!important;right:300px!important;z-index:0!important}.theme-preview.selected.nsfw .both{opacity:1;right:3px;z-index:1}#add-theme{text-align:left!important;width:500px!important}#add-theme>label{display:inline-block;text-align:right;width:50%}#add-theme>label#customCSS{width:100%}#add-theme>label#customCSS>textarea{height:100px;resize:vertical;width:100%}#add-theme>label>input[type=text],#add-theme>label>select{width:100px}#add-theme>div{margin-top:.6em;text-align:right}#mascot-section{text-align:center}.mascot-preview{background-position:center!important;background-repeat:no-repeat!important;background-size:contain!important;display:inline-block;height:257px;margin:2px;position:relative;width:210px;border-radius:10px;transition:all .1s}.mascot-preview:not(:hover) a{opacity:0}.mascot-preview.selected{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}.mascot-preview a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3);cursor:pointer}.mascot-preview a:not([href]):hover{background:rgba(0,0,0,.5)}.mascot-link.delete{left:0;border-radius:10px 0}.mascot-link.edit{right:0;border-radius:0 10px}#add-mascot{width:350px!important}#mascot-buttons-container{padding:5px}.add-mascot-label{display:block}.mascot-input,.mascot-select{margin-top:1px!important;width:200px}.mascot-select,.mascot-input.offset{width:80px}.add-mascot-label>input[type=checkbox],.add-mascot-label>.riceCheck{margin-top:5px}#options-tabs{list-style:none;margin:0;padding:0;position:absolute;top:-24px;left:-1px}.tab-item{float:left;margin:0;padding:0}.tab-label{color:#888!important;display:block;height:16px;margin:0 1px;padding:5px;text-align:center;width:75px;border-radius:3px 3px 0 0;transition:all .1s ease-in-out}.tab-label:not(.selected):not(:hover){opacity:.8}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}.buttons-container{bottom:3px;left:5px;position:absolute}.buttons-container{margin:0}.options-button{display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;cursor:pointer;border-radius:3px}.options-button-small{padding:2px 5px;min-width:30px}#import-link{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}.import-input{position:absolute;opacity:0;cursor:pointer}label.option>input[type=checkbox],label.option>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}span.option>select,.option>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin-top:1px!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#oneechan-version{opacity:.5;padding-right:5px;margin-left:160px}.link-delim{opacity:.4}#issues-link{padding-right:10px}body{margin-left:" + $SS.conf["Margin Left"] + "px;margin-right:" + $SS.conf["Margin Right"] + "px}.postInfo{padding:4px 12px 2px;display:block!important}.fileInfo{margin-left:20px;margin-right:10px}.useremail::before{margin-bottom:-20px;display:inline-block}.summary{margin-left:20px}.expanded-image{position:relative}.fileThumb img{border-radius:2px}:root.expand-cover #qr{z-index:8!important}:root.expand-cover .expanded-image{z-index:9!important}:root.reply-fit-width .reply.post{display:block!important;overflow:hidden}:root.reply-fit-width .threadContainer{margin-left:0!important;padding-left:20px!important}:root.post-info .reply>.postInfo{box-shadow:inset rgba(0,0,0,.05) 0 -1px 2px;padding-top:2px!important}:root.post-info .inline .reply{padding:0!important}:root.backlink-bottom .post{position:relative;padding-bottom:2px}:root.backlink-bottom .container{position:absolute;bottom:2px;right:6px}.reply .menu-button i{position:relative;bottom:1px}:root.reply-fit-width .reply .container{margin-left:-4px!important;padding-right:5px}:root.reply-fit-width .post .menu-button{float:right;margin-left:0;position:relative;left:5px}:root.reply-fit-width .post .menu-button{opacity:0}:root.reply-fit-width .post:not(:hover) .menu-button{transition:opacity .3s ease-out 0s!important}:root.reply-fit-width .post:hover .menu-button{opacity:1;transition:opacity .3s ease-in .1s!important}input[type=checkbox],input[type=submit],.riceCheck{cursor:pointer}input[type=checkbox],.riceCheck{display:inline-block;height:10px!important;margin:2px 3px 0 0;position:relative;vertical-align:top;width:10px!important;border-radius:2px!important;-webkit-appearance:none}#qr .riceCheck,#qr input[type=checkbox]{margin:3px 4px 0!important;vertical-align:baseline;position:relative;top:1px}input[type=checkbox]:checked::before,input[type=checkbox]:checked+.riceCheck::before{content:'';display:block;height:8px;margin:1px;width:8px}input[type=checkbox]:checked::before,input[type=checkbox]:checked+.riceCheck::before{background:" + $SS.theme.checkMark.get() + "!important}#header-bar{padding:4px 4px 5px!important}:root:not(.fixed) #header-bar{position:absolute;top:0;right:0;left:0;box-shadow:0 1px 2px rgba(0,0,0,.15);border-bottom:1px solid}:root:not(.fixed) body{padding-top:2em}:root.index.bottom:not(.autohide) body{padding-bottom:4em!important}:root.autohide body{padding-top:0!important;padding-bottom:0!important}:root.fixed:not(.autohide):not(.bottom) #delform{margin-top:-15px}.qr-link{border-radius:3px;vertical-align:middle;padding:7px 12px 6px}#qr .close{padding:2px 3px 2px 4px!important}#qr [type=submit]{height:22px;margin-top:1px}:root.vertical-qr #qr{position:fixed!important;right:0!important;bottom:0!important}:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus){position:fixed!important;transform:rotate(-90deg);transform-origin:bottom right;right:0!important;bottom:300px!important;min-width:240px!important;width:240px!important}:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) select{max-width:120px!important}:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.has-focus){transform:rotate(90deg);left:-244px!important;bottom:50px!important;right:auto!important}:root.fade-qr #qr form{display:block!important}:root.fade-qr #qr.autohide:not(.has-focus):not(:hover){opacity:.2!important;transition:opacity .2s ease-in-out 1s}div[style='float: right;']{float:none!important}.deleteform input[type=checkbox],.deleteform .riceCheck{top:3px}hr{height:2px;width:600px;border:0!important}:root.reply-fit-width #unread-line{margin:auto;width:100%}#unread-line{margin-top:-3px!important;margin-bottom:-3px!important}.boardBanner .boardTitle{cursor:default;letter-spacing:-3px}.boardBanner>img{border:0!important}:root.banner-reflect.gecko:not(.hide-banner) #bBanner{position:relative!important}:root.banner-reflect.gecko:not(.hide-banner) #bBanner::after{background-image:-moz-element(#banner);bottom:-93%;content:'';left:0;mask:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KCTxkZWZzPg0KCQk8bGluZWFyR3JhZGllbnQgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJncmFkaWVudCIgeDI9IjAiIHkyPSIxIj4NCgkJCTxzdG9wIHN0b3Atb2Zmc2V0PSIwIi8+DQoJCQk8c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgb2Zmc2V0PSIxIi8+DQoJCTwvbGluZWFyR3JhZGllbnQ+DQoJCTxtYXNrIGlkPSJtYXNrIiBtYXNrVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiBtYXNrQ29udGVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+DQoJCQk8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPg0KCQk8L21hc2s+DQoJPC9kZWZzPg0KPC9zdmc+#mask);opacity:.1;position:absolute;right:0;top:97%;-moz-transform:scaleY(-1);width:300px;margin:auto!important;pointer-events:none}:root.banner-reflect.webkit:not(.hide-banner) #banner{-webkit-box-reflect:below 0 -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(.1,transparent),to(rgba(255,255,255,.1)))}:root.banner-opacity #banner{opacity:.5}.pages strong>a{border-radius:3px}.pagelist{margin:0 10px 20px 100px}.pages a{padding:5px 10px;margin-left:-1px}.next{position:relative;float:right!important;width:10px}.prev{position:relative;width:10px}.prev span{position:relative;right:5px}.prev span::after,.prev form::after{content:'<';position:absolute;top:4px;left:1px;pointer-events:none}.next span::after,.next form::after{content:'>';position:absolute;top:4px;right:2px;pointer-events:none}.pagelist input{background:none!important;border:0!important;box-shadow:none!important;-moz-appearance:none!important;-webkit-appearance:none!important;height:20px;width:20px}.pagelist span{opacity:.2}.cataloglink{margin-left:-10px}.watch-thread-link{margin-bottom:-6px;margin-right:6px;top:auto!important;bottom:4px!important;background-image:url(\"data:image/svg+xml," + $SS.theme.icons.heart + "\")!important}:root.backlink-icon .backlink{background-image:url(\"data:image/svg+xml,"+$SS.theme.icons.backlink+"\")!important;font-size:0!important;padding:6px!important;margin-right:0!important;opacity:.6!important;position:relative;bottom:6px;right:2px}:root.backlink-icon .backlink:hover,:root.backlink-icon .backlink.inlined{opacity:1!important}" + ($SS.conf["Sidebar Position"] !== 3 ? " :root:not(.fixed) #header-bar{z-index:10}:root.left-sidebar body{padding-left:303px}:root.right-sidebar body{padding-right:303px}.boardBanner{position:fixed;top:1px}:root.left-sidebar .boardBanner{left:1px}:root.right-sidebar .boardBanner{right:1px}:root.fixed:not(.autohide):not(.bottom) .boardBanner{margin-top:25px}#banner{width:100%}#bBanner{margin-bottom:40px}#bBanner::after{width:100%!important}.qr-link-container{margin-top:-15px}#qr{bottom:0!important;top:auto!important;min-width:297px!important}:root.left-sidebar #qr{left:0!important;right:auto!important}:root.right-sidebar #qr{right:0!important;left:auto!important}:root.fixed.bottom:not(.autohide) #qr{margin-bottom:26px}.captcha-img,.captcha-img img{min-width:100%!important;height:56px!important}:root.ss-sidebar body::before{background:rgba\(" + $SS.theme.mainColor.shiftRGB(-18) + ",." + ($SS.theme.mainColor.isDark ? 9 : 2) + ");border-left:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);box-shadow:inset " + $SS.theme.brderColor.hex + " 1px 0 0,inset " + $SS.theme.brderColor.hex + " -1px 0 0;content:'';height:100%;width:302px;position:fixed;top:0;right:0}:root.ss-sidebar.left-sidebar body::before{border-right:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);border-left:0!important;left:0;right:auto!Important}" : "") + " " + $SS.theme.customCSS + "";
+      css = "div.post div.file .fileThumb{float:left;margin-left:20px;margin-right:20px;margin-top:3px;margin-bottom:5px}.postContainer{display:block}div.post{margin:4px 0}:root:not(.reply-fit-width) #delform div.reply:not([hidden]){display:table!important}div.thread{margin:0;clear:both}table.flashListing{border-spacing:1px;margin-left:auto;margin-right:auto}div.pagelist div.pages{padding:4px}div.pagelist,div.pagelist>div{float:left}div.pagelist>div span{padding:4px;display:inline-block}.prettyprint{padding:5px!important;display:inline-block;max-height:400px;overflow-x:auto;max-width:600px}s{text-decoration:none!important}span.spoiler,s{color:#000!important;background:none repeat scroll 0 0 #000!important}span.spoiler:hover,s:hover,span.spoiler:focus,s:focus{color:#fff!important}#globalMessage,.boardBanner{text-align:center}div.sideArrows{float:left;margin-right:2px;margin-top:0;margin-left:2px;opacity:.3}hr{clear:both}#boardNavDesktopFoot{clear:both}table{border-spacing:1px;margin-left:auto;margin-right:auto}.deleteform,.pagelist,.pagelist input{font-size:0!important}.fileInfo,.summary{font-size:11px!important}.qr-link{font-size:14px!important}.tab-label,.options-button,.theme-preview,#oneechan-options input,textarea{font-family:sans-serif!important;font-size:12px!important}.boardBanner .boardTitle{font-weight:400!important;font-family:sans-serif!important;font-size:28px!important}body,.prev span::after,.prev form::after,.next span::after,.next form::after,.pages a{font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";font-size:" + $SS.conf["Font Size"] + "px}:root.underline-disabled a{text-decoration:none}:root.underline-disabled .filtered{text-decoration:line-through}.name,.subject,.option.header .option-title{font-weight:700}.qr-link{font-weight:400}.summary{font-style:italic}.mobile,.fourchanx-link:not(.hide-board-list-container)::before,.fourchanx-link:not(.hide-board-list-container)::after,.tab-select:not(:checked)+div,iframe[src='about:blank'],#absbot,.stylechanger,.topad.center,.middlead.center,.bottomad.center,#delPassword,:root.hide-checkboxes .post input[type=checkbox],:root.hide-checkboxes .post .riceCheck,:root.hide-checkboxes .deleteform,:root.hide-board-name .boardTitle,:root.hide-board-name .boardSubtitle,:root.hide-text-board .boardSubtitle,:root.hide-banner #bBanner,:root.hide-button .qr-link-container,:root.reply-fit-width .sideArrows,body>hr,.navLinks{display:none}input:focus,textarea:focus,a{outline:0!important}#delform>hr,.board>hr:last-of-type{background:none!important}div[style='float: right;']{color:transparent}html,body,div.boardBanner,#menu,input:not(.jsColor),textarea,#qr-filename-container{color:" + $SS.theme.textColor.hex + "!important}.name{color:" + $SS.theme.nameColor.hex + "!important}.postertrip{color:" + $SS.theme.tripColor.hex + "!important}a{color:" + $SS.theme.linkColor.hex + "!important}a.summary,.pages strong>a{color:" + $SS.theme.textColor.hex + "!important}a:hover{color:" + $SS.theme.linkHColor.hex + "!important}#header-bar,a.current{color:" + $SS.theme.headerColor.hex + "!important}#header-bar a:not(.current){color:" + $SS.theme.headerLColor.hex + "!important}#header-bar a:hover{color:" + $SS.theme.headerLHColor.hex + "!important}.quote{color:" + $SS.theme.quoteColor.hex + "!important}.subject,.option.header .option-title{color:" + $SS.theme.titleColor.hex + "!important}.options-button,a.qr-link{color:" + $SS.theme.jlinkColor.hex + "!important}html,body{background:" + $SS.theme.bgColor.hex + "!important}.reply,.dialog,.tab-label{background:rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important}:root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post{background:rgb\(" + $SS.theme.mainColor.shiftRGB(-10) + ")!important}#header-bar{background:linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + "))!important}.options-button,.qr-link,.pages strong>a{background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + "))}.options-button:hover,.import-input:hover+.options-button,.pages strong>a:hover{background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ")}.focused.entry{background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ")!important}.qr-link:hover{background:rgb\(" + $SS.theme.mainColor.rgb + ")}input:not(.jsColor),textarea,.riceCheck,#qr-filename-container{background:" + $SS.theme.inputColor.hex + "!important}input[type=checkbox],.riceCheck{background:rgb\(" + $SS.theme.inputColor.shiftRGB(20) + ")!important}hr{background-image:linear-gradient(to left,rgba(" + $SS.theme.brderColor.rgb + ",0),rgb(" + $SS.theme.brderColor.rgb + "),rgba(" + $SS.theme.brderColor.rgb + ",0))}#unread-line{background-image:linear-gradient(to left,rgba(" + $SS.theme.jlinkColor.rgb + ",0),rgb(" + $SS.theme.jlinkColor.rgb + "),rgba(" + $SS.theme.jlinkColor.rgb + ",0))}.inline{background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important}:root.post-info .reply>.postInfo{background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2)}.reply{border-width:0 1px 1px 0;border-style:solid}:root.borders-all .reply{border-width:1px}:root.borders-none .reply{border-width:0}:root.rounded-corners .reply,:root.rounded-corners .dialog:not(#header-bar),:root.rounded-corners .inline{border-radius:3px}:root.post-info .reply>.postInfo{border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ")}:root.post-info.rounded-corners .reply>.postInfo{border-radius:3px 3px 0 0}.reply,.dialog,.entry,.inline,fieldset{border-color:" + $SS.theme.brderColor.hex + "!important}input,textarea,.riceCheck,#qr-filename-container{border:1px solid " + $SS.theme.inputbColor.hex + "!important}.options-button,.qr-link,.pages strong>a{border-style:solid;border-width:1px;border-color:rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ")!important}input:focus,textarea:focus,#qr-filename-container:focus{border:1px solid " + $SS.theme.linkColor.hex + "!important}#header-bar{border:0!important}.qphl{outline:2px solid rgba(" + $SS.theme.linkColor.rgb + ",.5)!important}#add-mascot,#add-theme,#oneechan-options{border:0!important;border-radius:3px!important;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto}#oneechan-options{height:532px;width:900px;text-align:left!important}.options-close,.options-container{padding:5px}.options-close{text-align:right!important}#add-mascot{height:125px;width:600px;text-align:right!important;padding:5px!important}#add-theme{height:377px;text-align:right!important;padding:5px!important}#add-mascot .option-title,#add-theme .option-title{float:left;line-height:22px;padding-left:5px}#add-mascot>label,#add-theme>label{line-height:22px}#options-container{border-radius:5px}#options-container,.options-section{height:500px}.options-section{overflow:auto}#main-section .option{display:block;border-top:1px solid rgba(0,0,0,.1);height:22px;padding:0 6px;vertical-align:middle}#main-section>.option:nth-of-type(even){background:rgb\(" + $SS.theme.mainColor.shiftRGB(-5) + ")!important}#main-section .buttons-container+.option{border-top:0!important}.option-title{line-height:20px!important}#main-section .option:first-child{border-top:0!important}#main-section .option:last-child{border-bottom:0!important}#main-section input,#main-section select{float:right!important}#main-section input[type=checkbox],#main-section .riceCheck{float:left!important;margin-right:5px!important}select[name='Font Family']>option{max-width:150px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.suboption::before{border-bottom:1px solid rgba(0,0,0,.1);border-left:1px solid rgba(0,0,0,.1);content:'';display:inline-block;float:left;margin-right:2px;height:50%;width:6px}.suboption{padding-left:16px!important}.option.header{cursor:auto!important}.theme-preview{cursor:default;transition:all .1s}#themes-section .reply{padding:2px!important;position:relative;text-align:left;width:99.4%;border-radius:0!important}.theme-buttons-container{bottom:4px;right:2px;margin:0;opacity:0;position:absolute;z-index:3}.theme-preview:hover .theme-buttons-container{opacity:1}.theme-buttons-container>a{display:inline-block;margin:0 2px;padding:2px 5px;text-align:center;width:50px;border-radius:3px}.theme-preview .sfw-label{bottom:-5px;font-size:32px!important;margin:0!important;opacity:0;position:absolute;right:300px;transition:all .3s}.theme-preview.nsfw .notsafe{opacity:1;right:3px;z-index:1}.theme-preview.selected .safe{opacity:1;right:3px;z-index:1}.theme-preview.selected.nsfw .sfw-label:not(.both){opacity:0!important;right:300px!important;z-index:0!important}.theme-preview.selected.nsfw .both{opacity:1;right:3px;z-index:1}#add-theme{text-align:left!important;width:800px!important}#add-theme>label{display:inline-block;text-align:right;width:33.3%}#add-theme>label#customCSS{width:100%}#add-theme>label#customCSS>textarea{height:100px;resize:vertical;width:100%}#add-theme>label>input[type=text],#add-theme>label>select{width:100px}#add-theme>div{margin-top:.6em;text-align:right}#mascot-section{text-align:center}.mascot-preview{background-position:center!important;background-repeat:no-repeat!important;background-size:contain!important;display:inline-block;height:257px;margin:2px;position:relative;width:210px;border-radius:10px;transition:all .1s}.mascot-preview:not(:hover) a{opacity:0}.mascot-preview.selected{background-color:rgba(" + $SS.theme.linkColor.rgb + ",.6)!important;box-shadow:inset rgba(0,0,0,.15) 0 0 15px,rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px}.mascot-preview a{position:absolute;top:0;padding:5px 8px;background:rgba(0,0,0,.3);cursor:pointer}.mascot-preview a:not([href]):hover{background:rgba(0,0,0,.5)}.mascot-link.delete{left:0;border-radius:10px 0}.mascot-link.edit{right:0;border-radius:0 10px}#add-mascot{width:350px!important}#mascot-buttons-container{padding:5px}.add-mascot-label{display:block}.mascot-input,.mascot-select{margin-top:1px!important;width:200px}.mascot-select,.mascot-input.offset{width:80px}.add-mascot-label>input[type=checkbox],.add-mascot-label>.riceCheck{margin-top:5px}#options-tabs{list-style:none;margin:0;padding:0;position:absolute;top:-24px;left:-1px}.tab-item{float:left;margin:0;padding:0}.tab-label{color:#888!important;display:block;height:16px;margin:0 1px;padding:5px;text-align:center;width:75px;border-radius:3px 3px 0 0;transition:all .1s ease-in-out}.tab-label:not(.selected):not(:hover){opacity:.8}#overlay{text-align:center}#overlay2{background:rgba(0,0,0,.5);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;z-index:999!important}#overlay2::before{content:'';display:inline-block;height:100%;vertical-align:middle}.buttons-container{bottom:3px;left:5px;position:absolute}.buttons-container{margin:0}.options-button{display:inline-block;line-height:18px;margin:0 2px;min-width:40px;padding:2px 10px;text-align:center;cursor:pointer;border-radius:3px}.options-button-small{padding:2px 5px;min-width:30px}#import-link{height:22px;line-height:22px;overflow:hidden;position:relative;float:left;height:24px!important;margin-top:-2px;padding-top:2px}.import-input{position:absolute;opacity:0;cursor:pointer}label.option>input[type=checkbox],label.option>.riceCheck{margin:4px 2px 0!important;vertical-align:bottom!important}span.option>select,.option>input[type=text]{width:125px}#oneechan-options input[type=text],#oneechan-options select{max-height:22px;margin-top:1px!important;padding:1px 3px!important}#oneechan-options select{padding:1px 1px 1px 0!important}#oneechan-options textarea{background:transparent!important;border:0!important;height:100%!important;width:100%!important;resize:none}#oneechan-version{opacity:.5;padding-right:5px;margin-left:160px}.link-delim{opacity:.4}#issues-link{padding-right:10px}body{margin-left:" + $SS.conf["Margin Left"] + "px;margin-right:" + $SS.conf["Margin Right"] + "px}.postInfo{padding:4px 12px 2px;display:block!important}.fileInfo{margin-left:20px;margin-right:10px}.useremail::before{margin-bottom:-20px;display:inline-block}.summary{margin-left:20px}.expanded-image{position:relative}.fileThumb img{border-radius:2px}:root.expand-cover #qr{z-index:8!important}:root.expand-cover .expanded-image{z-index:9!important}:root.reply-fit-width .reply.post{display:block!important;overflow:hidden}:root.reply-fit-width .threadContainer{margin-left:0!important;padding-left:20px!important}:root.post-info .reply>.postInfo{box-shadow:inset rgba(0,0,0,.05) 0 -1px 2px;padding-top:2px!important}:root.post-info .inline .reply{padding:0!important}:root.backlink-bottom .post{position:relative;padding-bottom:2px}:root.backlink-bottom .container{position:absolute;bottom:2px;right:6px}.reply .menu-button i{position:relative;bottom:1px}:root.reply-fit-width .reply .container{margin-left:-4px!important;padding-right:5px}:root.reply-fit-width .post .menu-button{float:right;margin-left:0;position:relative;left:5px}:root.reply-fit-width .post .menu-button{opacity:0}:root.reply-fit-width .post:not(:hover) .menu-button{transition:opacity .3s ease-out 0s!important}:root.reply-fit-width .post:hover .menu-button{opacity:1;transition:opacity .3s ease-in .1s!important}input[type=checkbox],input[type=submit],.riceCheck{cursor:pointer}input[type=checkbox],.riceCheck{display:inline-block;height:10px!important;margin:2px 3px 0 0;position:relative;vertical-align:top;width:10px!important;border-radius:2px!important;-webkit-appearance:none}#qr .riceCheck,#qr input[type=checkbox]{margin:3px 4px 0!important;vertical-align:baseline;position:relative;top:1px}input[type=checkbox]:checked::before,input[type=checkbox]:checked+.riceCheck::before{content:'';display:block;height:8px;margin:1px;width:8px}input[type=checkbox]:checked::before,input[type=checkbox]:checked+.riceCheck::before{background:" + $SS.theme.checkMark.get() + "!important}#header-bar{padding:4px 4px 5px!important}:root:not(.fixed) #header-bar{position:absolute;top:0;right:0;left:0;box-shadow:0 1px 2px rgba(0,0,0,.15);border-bottom:1px solid}:root:not(.fixed) body{padding-top:2em}:root.index.bottom:not(.autohide) body{padding-bottom:4em!important}:root.autohide body{padding-top:0!important;padding-bottom:0!important}:root.fixed:not(.autohide):not(.bottom) #delform{margin-top:-15px}.qr-link{border-radius:3px;vertical-align:middle;padding:7px 12px 6px}#qr .close{padding:2px 3px 2px 4px!important}#qr [type=submit]{height:22px;margin-top:1px}:root.vertical-qr #qr{position:fixed!important;right:0!important;bottom:0!important}:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus){position:fixed!important;transform:rotate(-90deg);transform-origin:bottom right;right:0!important;bottom:300px!important;min-width:240px!important;width:240px!important}:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) select{max-width:120px!important}:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.has-focus){transform:rotate(90deg);left:-244px!important;bottom:50px!important;right:auto!important}:root.fade-qr #qr form{display:block!important}:root.fade-qr #qr.autohide:not(.has-focus):not(:hover){opacity:.2!important;transition:opacity .2s ease-in-out 1s}div[style='float: right;']{float:none!important}.deleteform input[type=checkbox],.deleteform .riceCheck{top:3px}hr{height:2px;width:600px;border:0!important}:root.reply-fit-width #unread-line{margin:auto;width:100%}#unread-line{margin-top:-3px!important;margin-bottom:-3px!important}.boardBanner .boardTitle{cursor:default;letter-spacing:-3px}.boardBanner>img{border:0!important}:root.banner-reflect.gecko:not(.hide-banner) #bBanner{position:relative!important}:root.banner-reflect.gecko:not(.hide-banner) #bBanner::after{background-image:-moz-element(#banner);bottom:-93%;content:'';left:0;mask:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KCTxkZWZzPg0KCQk8bGluZWFyR3JhZGllbnQgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJncmFkaWVudCIgeDI9IjAiIHkyPSIxIj4NCgkJCTxzdG9wIHN0b3Atb2Zmc2V0PSIwIi8+DQoJCQk8c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgb2Zmc2V0PSIxIi8+DQoJCTwvbGluZWFyR3JhZGllbnQ+DQoJCTxtYXNrIGlkPSJtYXNrIiBtYXNrVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiBtYXNrQ29udGVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+DQoJCQk8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPg0KCQk8L21hc2s+DQoJPC9kZWZzPg0KPC9zdmc+#mask);opacity:.1;position:absolute;right:0;top:97%;-moz-transform:scaleY(-1);width:300px;margin:auto!important;pointer-events:none}:root.banner-reflect.webkit:not(.hide-banner) #banner{-webkit-box-reflect:below 0 -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(.1,transparent),to(rgba(255,255,255,.1)))}:root.banner-opacity #banner{opacity:.5}.pages strong>a{border-radius:3px}.pagelist{margin:0 10px 20px 100px}.pages a{padding:5px 10px;margin-left:-1px}.next{position:relative;float:right!important;width:10px}.prev{position:relative;width:10px}.prev span{position:relative;right:5px}.prev span::after,.prev form::after{content:'<';position:absolute;top:4px;left:1px;pointer-events:none}.next span::after,.next form::after{content:'>';position:absolute;top:4px;right:2px;pointer-events:none}.pagelist input{background:none!important;border:0!important;box-shadow:none!important;-moz-appearance:none!important;-webkit-appearance:none!important;height:20px;width:20px}.pagelist span{opacity:.2}.cataloglink{margin-left:-10px}.watch-thread-link{margin-bottom:-6px;margin-right:6px;top:auto!important;bottom:4px!important;background-image:url(\"data:image/svg+xml," + $SS.theme.icons.heart + "\")!important}:root.backlink-icon .backlink{background-image:url(\"data:image/svg+xml,"+$SS.theme.icons.backlink+"\")!important;font-size:0!important;padding:6px!important;margin-right:0!important;opacity:.6!important;position:relative;bottom:6px;right:2px}:root.backlink-icon .backlink:hover,:root.backlink-icon .backlink.inlined{opacity:1!important}" + ($SS.conf["Sidebar Position"] !== 3 ? " :root:not(.fixed) #header-bar{z-index:10}:root.left-sidebar body{padding-left:303px}:root.right-sidebar body{padding-right:303px}.boardBanner{position:fixed;top:1px}:root.left-sidebar .boardBanner{left:1px}:root.right-sidebar .boardBanner{right:1px}:root.fixed:not(.autohide):not(.bottom) .boardBanner{margin-top:25px}#banner{width:100%}#bBanner{margin-bottom:40px}#bBanner::after{width:100%!important}.qr-link-container{margin-top:-15px}#qr{bottom:0!important;top:auto!important;min-width:297px!important}:root.left-sidebar #qr{left:0!important;right:auto!important}:root.right-sidebar #qr{right:0!important;left:auto!important}:root.fixed.bottom:not(.autohide) #qr{margin-bottom:26px}.captcha-img,.captcha-img img{min-width:100%!important;height:56px!important}:root.ss-sidebar body::before{background:rgba\(" + $SS.theme.mainColor.shiftRGB(-18) + ",." + ($SS.theme.mainColor.isDark ? 9 : 2) + ");border-left:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);box-shadow:inset " + $SS.theme.brderColor.hex + " 1px 0 0,inset " + $SS.theme.brderColor.hex + " -1px 0 0;content:'';height:100%;width:302px;position:fixed;top:0;right:0}:root.ss-sidebar.left-sidebar body::before{border-right:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);border-left:0!important;left:0;right:auto!Important}" : "") + " " + $SS.theme.customCSS + "";
       if ($("#ch4SS").exists())
         $("#ch4SS").text(css);
       else
@@ -1105,18 +1104,50 @@
 
               /* Old OneeChan */
               else if (theme["navOp"] !== undefined) {
+                theme.headerColor = theme["textColor"];
+                theme.headerBGColor = theme["mainColor"];
+                theme.headerLColor = theme["linkColor"];
+                theme.headerLHColor = theme["linkHColor"];
+                theme.boardColor = theme["textColor"];
               }
 
               /* 4chan Style Script */
               else if (theme["timeColor"] !== undefined) {
                 theme.replyOp = "1.0";
-                theme.navOp = "0.6";
+                theme.navOp = "0.9";
+                theme.headerColor = theme["textColor"];
+                theme.headerBGColor = theme["mainColor"];
+                theme.headerLColor = theme["linkColor"];
+                theme.headerLHColor = theme["linkHColor"];
+                theme.boardColor = theme["textColor"];
               }
 
               /* Appchan X */
               else if (theme["Theme"] !== undefined) {
                 theme.name = theme["Theme"];
+                theme.authorName = theme["Author"];
+                theme.authorTrip = theme["Author Tripcode"];
+                theme.replyOp = "1.0";
+                theme.navOp = "0.9";
+                theme.mainColor = $SS.colorToHex(theme["Reply Background"]);
+                theme.textColor = $SS.colorToHex(theme["Text"]);
+                theme.linkColor = $SS.colorToHex(theme["Links"]);
+                theme.linkHColor = $SS.colorToHex(theme["Hovered Links"]);
+                theme.headerColor = $SS.colorToHex(theme["Text"]);
+                theme.headerBGColor = $SS.colorToHex(theme["Navigation Background"]);
+                theme.headerLColor = $SS.colorToHex(theme["Navigation Links"]);
+                theme.headerLHColor = $SS.colorToHex(theme["Hovered Navigation Links"]);
+                theme.boardColor = $SS.colorToHex(theme["Board Title"]);
+                theme.brderColor = $SS.colorToHex(theme["Reply Border"]);
+                theme.inputColor = $SS.colorToHex(theme["Input Background"]);
+                theme.inputbColor = $SS.colorToHex(theme["Input Border"]);
                 theme.bgColor = $SS.colorToHex(theme["Background Color"]);
+                theme.blinkColor = $SS.colorToHex(theme["Backlinks"]);
+                theme.jlinkColor = $SS.colorToHex(theme["Links"]);
+                theme.nameColor = $SS.colorToHex(theme["Names"]);
+                theme.tripColor = $SS.colorToHex(theme["Tripcodes"]);
+                theme.titleColor = $SS.colorToHex(theme["Subjects"]);
+                theme.quoteColor = $SS.colorToHex(theme["Greentext"]);
               }
 
               /* Can't be exported from the main scripts, so toss an error */
@@ -1332,6 +1363,10 @@
 
         var innerHTML = "<label>" +
         "<span class='option-title'>Theme Name:</span><input type=text name=name value='" + (bEdit ? tEdit.name : "") + "'>" +
+        "</label><label>" +
+        "<span class='option-title'>Author Name:</span><input type=text name=authorName value='" + (bEdit ? (tEdit.authorName !== undefined ? tEdit.authorName : "") : "") + "'>" +
+        "</label><label>" +
+        "<span class='option-title'>Author Tripcode:</span><input type=text name=authorTrip value='" + (bEdit ? (tEdit.authorTrip !== undefined ? tEdit.authorTrip : "")  : "") + "'>" +
         "</label><label>" +
         "<span class='option-title'>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "'" :
         ($SS.validBase64(tEdit.bgImg) ? "[Base 64 Encoded Image]' disabled=true" : "'")) : "'") + "></label><label>" +
@@ -1673,6 +1708,8 @@
       [
         {
           name:       "Vimyanized Dark",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0", 
@@ -1691,11 +1728,16 @@
           textColor:  "f8f8f8",
           tripColor:  "d4b63c",
           titleColor: "b88cd1",
-          headerColor:"",
-          boardColor: ""
+          headerColor: "f8f8f8",
+          headerLColor: "53bdb1",
+          headerLHColor: "3090b5",
+          headerBGColor: "0d1114",
+          boardColor:  "f8f8f8"
         },
         {
           name:        "Muted",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
@@ -1714,8 +1756,11 @@
           textColor:   "393735",
           tripColor:   "cc6563",
           titleColor:  "111111",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "393735",
+          headerLColor: "bc312a",
+          headerLHColor: "8e2220",
+          headerBGColor: "f5f2e9",
+          boardColor:  "bc312a"
         },
         {
           name:       "Minimalistic Mayhem",
@@ -1739,11 +1784,16 @@
           textColor:  "bbbbbb",
           tripColor:  "96562c",
           titleColor: "987d3e",
-          headerColor:"",
-          boardColor: ""
+          headerColor: "bbbbbb",
+          headerLColor: "897399",
+          headerLHColor: "c617e6",
+          headerBGColor: "222222",
+          boardColor:  "bbbbbb"
         },
         {
           name:       "Blackboard",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:    "1.0",
@@ -1762,12 +1812,16 @@
           textColor:  "f8f8f8",
           tripColor:  "ff6400",
           titleColor: "ff6400",
-          headerColor:"",
-          boardColor: ""
+          headerColor: "f8f8f8",
+          headerLColor: "fbde2d",
+          headerLHColor: "4b65cc",
+          headerBGColor: "0c1021",
+          boardColor:  "f8f8f8"
         },
         {
           name:        "Dark Flat",
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
@@ -1787,11 +1841,16 @@
           textColor:   "dddddd",
           tripColor:   "d4c095",
           titleColor:  "9390c9",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "dddddd",
+          headerLColor: "ac9bb0",
+          headerLHColor: "6f99b4",
+          headerBGColor: "232425",
+          boardColor:  "dddddd"
         },
         {
           name:        "Photon",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0",
@@ -1809,8 +1868,11 @@
           quoteColor:  "789922",
           textColor:   "333333",
           tripColor:   "ff3300",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "333333",
+          headerLColor: "ff6600",
+          headerLHColor: "ff3300",
+          headerBGColor: "dddddd",
+          boardColor:  "004a99"
         },
         {
           name:        "Original Minimalistic Mayhem",
@@ -1835,11 +1897,16 @@
           textColor:   "dddddd",
           tripColor:   "8c5d2a",
           titleColor:  "486273",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "dddddd",
+          headerLColor: "559c7a",
+          headerLHColor: "c7de1a",
+          headerBGColor: "333333",
+          boardColor:  "dddddd"
         },
         {
           name:        "Tomorrow",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -1858,8 +1925,11 @@
           textColor:   "c5c8c6",
           tripColor:   "8abeb7",
           titleColor:  "b294bb",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "c5c8c6",
+          headerLColor: "81a2be",
+          headerLHColor: "cc6666",
+          headerBGColor: "282a2e",
+          boardColor:  "c5c8c6"
         },
         {
           name:        "Yotsuba",
@@ -1884,8 +1954,11 @@
           textColor:   "800000",
           tripColor:   "228854",
           titleColor:  "cc1105",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "800000",
+          headerLColor: "0000ee",
+          headerLHColor: "dd0000",
+          headerBGColor: "f0e0d6",
+          boardColor:  "800000"
         },                                                           
         {
           name:        "Yotsuba B",
@@ -1910,11 +1983,16 @@
           textColor:   "000000",
           tripColor:   "228854",
           titleColor:  "0f0c5d",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "000000",
+          headerLColor: "34345c",
+          headerLHColor: "dd0000",
+          headerBGColor: "d6daf0",
+          boardColor:  "000000"
         },
         {
           name:        "Yotsuba Purple",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAPVJREFUOE91i1lywjAQROf+VySEhMW7kazFNhhSTM9YxoUrH69ed49El52lRLbrCEj/MorkVZesZGCPdzA6/2cvHduKfO8o/8YbBXmLvikOeisO7l/KH73BierXS4Yr+BPe6+NMyjA4JYLk5hSEtEs+8/ZBe47UXCIlIyfaDLmnt3u65pHBxhlIHsSCbOgDmUJBtvlIBi7ZxUiWEXPvKu1v3yR3Jbu+kdtwJ8+br+/kKrX0BuYNnTPssCXmXXqrhHZaspecwH3dJwrXbce2JtoHRTMJwXBGT8y73h/Ud0+F74uRpc+2Txoc+FPzDkaPrmjWd8gzL82jLtr9nlP8AAAAAElFTkSuQmCC",
           bgRPA:       "repeat-x top center scroll",
@@ -1934,12 +2012,16 @@
           textColor:   "000000",
           tripColor:   "b22caa",
           titleColor:  "0f0c5d",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "000000",
+          headerLColor: "962594",
+          headerLHColor: "b22caa",
+          headerBGColor: "eeddff",
+          boardColor:  "591177"
         },
         {
           name:        "安心院なじみ",
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -1958,8 +2040,11 @@
           textColor:   "4d4d4c",
           tripColor:   "3e999f",
           titleColor:  "4d4d4d",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "4d4d4c",
+          headerLColor: "bf8040",
+          headerLHColor: "bf8040",
+          headerBGColor: "efefef",
+          boardColor:  "4d4d4c"
         },
         {
           name:        "Solarized Dark", // http://ethanschoonover.com/solarized
@@ -1983,12 +2068,16 @@
           textColor:   "93a1a1",
           tripColor:   "2aa198",
           titleColor:  "bec2c4",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "93a1a1",
+          headerLColor: "696bba",
+          headerLHColor: "d33682",
+          headerBGColor: "032b36",
+          boardColor:  "93a1a1"
         },
         {
           name:        "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -2007,12 +2096,16 @@
           textColor:   "4c4c4c",
           tripColor:   "bf7f3f",
           titleColor:  "4c4c4c",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "4c4c4c",
+          headerLColor: "bf7f3f",
+          headerLHColor: "d33682",
+          headerBGColor: "efefef",
+          boardColor:  "4c4c4c"
         },
         {
           name:        "4chan Dark Upgrade",
           authorName:  "ahodesuka",
+          authorTrip:  "!.pC/AHOKAg",
           "default":   true,
           bgImg:       "http://img85.imageshack.us/img85/4162/4chbg.gif",
           bgRPA:       "repeat top left fixed",
@@ -2032,8 +2125,11 @@
           textColor:   "ffffff",
           tripColor:   "a7dce7",
           titleColor:  "999999",
-          headerColor: "",
-          boardColor:  "",
+          headerColor: "ffffff",
+          headerLColor: "dddddd",
+          headerLHColor: "eeeeee",
+          headerBGColor: "333333",
+          boardColor:  "ffffff",
           customCSS:   "\n\n\n\n\n\n#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}" +
                  ".postContainer>.reply{background-image:url(http://img714.imageshack.us/img714/3969/4ch2.gif)!important;" +
                  "border-bottom:#1f1f1f!important;border-radius:5px!important}" +
@@ -2042,6 +2138,7 @@
         {
           name:        "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
           authorName:  "Zixaphir",
+          authorTrip:  "!M.........",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
@@ -2060,8 +2157,11 @@
           textColor:   "aaaaaa",
           tripColor:   "aaaaaa",
           titleColor:  "aaaaaa",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "aaaaaa",
+          headerLColor: "6688aa",
+          headerLHColor: "6688aa",
+          headerBGColor: "333333",
+          boardColor:  "aaaaaa"
         },
         {
           name:        "Zenburned",
@@ -2084,11 +2184,16 @@
           textColor:   "dcdccc",
           tripColor:   "8cd0d3",
           titleColor:  "aaaaaa",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "dcdccc",
+          headerLColor: "efdcbc",
+          headerLHColor: "f8f893",
+          headerBGColor: "575757",
+          boardColor:  "dcdccc"
         },
         {
           name:        "Monokai",
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           replyOp:     "1.0",
           navOp:       "0.9", 
@@ -2106,11 +2211,16 @@
           textColor:   "f8f8f2",
           tripColor:   "fa8220",
           titleColor:  "ae81ff",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "f8f8f2",
+          headerLColor: "e2db74",
+          headerLHColor: "ae81ff",
+          headerBGColor: "272822",
+          boardColor:  "f8f8f2"
         },
         {
           name:        "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
+          authorName:  "Seaweed",
+          authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
           replyOp:     "1.0",
           navOp:       "0.9",
@@ -2128,8 +2238,11 @@
           textColor:   "4c4c4c",
           tripColor:   "5d6678",
           titleColor:  "617d6f",
-          headerColor: "",
-          boardColor:  ""
+          headerColor: "4c4c4c",
+          headerLColor: "477085",
+          headerLHColor: "5d6678",
+          headerBGColor: "e3e7e8",
+          boardColor:  "477085"
         }
       ],
 
@@ -3046,8 +3159,8 @@
       this.index       = index;
       this.hidden      = $SS.conf["Hidden Themes"].indexOf(index) !== -1;
       this.name        = theme.name;
-      this.authorName  = theme.authorName || "Seaweed";
-      this.authorTrip  = theme.authorTrip || "!!lq+3fff+/ev";
+      this.authorName  = theme.authorName || "Anonymous";
+      this.authorTrip  = theme.authorTrip || "!..NoTrip..";
       this.default     = theme.default;
       this.replyBrder  = theme.replyBrder;
       this.bgImg       = new $SS.Image(theme.bgImg, theme.bgRPA);
@@ -3068,10 +3181,10 @@
       this.titleColor  = new $SS.Color(theme.titleColor);
       this.tripColor   = new $SS.Color(theme.tripColor);
       this.boardColor  = new $SS.Color(theme.boardColor);
-      this.boardsColor = new $SS.Color(theme.boardsColor);
       this.headerColor = new $SS.Color(theme.headerColor);
-      this.headerTopColor = new $SS.Color(theme.headerTopColor);
-      this.headerBotColor = new $SS.Color(theme.headerBotColor);
+      this.headerLColor = new $SS.Color(theme.headerLColor);
+      this.headerLHColor = new $SS.Color(theme.headerLHColor);
+      this.headerBGColor = new $SS.Color(theme.headerBGColor);
       this.headerbColor= new $SS.Color(theme.headerbColor); 
       this.checkMark   = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? 0 : -8) + "px");
       this.radioCheck  = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? -16 : -24) + "px");

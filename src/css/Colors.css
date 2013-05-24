@@ -22,17 +22,27 @@ textarea,
 .postertrip {
   color: " + $SS.theme.tripColor.hex + " !important;
 }
+
 /* Links */
 a {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
-a.current,
 a.summary,
 .pages strong>a {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 a:hover {
   color: " + $SS.theme.linkHColor.hex + " !important;
+}
+/* Header */
+#header-bar, a.current {
+  color: " + $SS.theme.headerColor.hex + " !important;
+}
+#header-bar a:not(.current) {
+  color: " + $SS.theme.headerLColor.hex + " !important;
+}
+#header-bar a:hover {
+  color: " + $SS.theme.headerLHColor.hex + " !important;
 }
 /* Greentext */
 .quote {
@@ -64,7 +74,7 @@ body {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-10) + ") !important;
 }
 #header-bar {
-  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.navOp + ")) !important;
+  background:linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ")) !important;
 }
 .options-button,
 .qr-link,
@@ -129,7 +139,6 @@ hr {
 }
 .reply,
 .dialog,
-#header-bar,
 .entry,
 .inline,
 fieldset {
@@ -152,6 +161,9 @@ input:focus,
 textarea:focus,
 #qr-filename-container:focus {
   border:1px solid " + $SS.theme.linkColor.hex + " !important;
+}
+#header-bar {
+  border: none !important;
 }
 
 /* Outlines */
