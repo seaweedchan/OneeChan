@@ -2147,6 +2147,7 @@
         {
           name:        "Zenburned",
           authorName:  "lazy",
+          authorTrip:  "!HONKYn7h1.",
           "default":   true,
           bgImg:       false,
           replyOp:     "1.0", 
