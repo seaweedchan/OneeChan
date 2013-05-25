@@ -58,6 +58,11 @@ a:hover {
 a.qr-link {
   color: " + $SS.theme.jlinkColor.hex + " !important;
 }
+/* Board Title */
+.boardTitle {
+  color: " + $SS.theme.boardColor.hex + " !important;
+  text-shadow:1px 1px 1px " + $SS.theme.boardColor.hex + " !important;
+}
 
 
 /* Backgrounds */
