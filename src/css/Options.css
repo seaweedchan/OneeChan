@@ -350,6 +350,14 @@ select[name='Font Family']>option {
   margin-top:-2px;
   padding-top:2px;
 }
+#import-settings {
+  position: relative;
+  overflow:hidden;
+  vertical-align: bottom;
+}
+#import-settings>.import-input {
+  left: 0px;
+}
 .import-input {
   position:absolute;
   opacity: 0;

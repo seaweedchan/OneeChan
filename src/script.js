@@ -900,7 +900,7 @@
             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
             "<p class='buttons-container'>" +
-            "<a class='options-button' name=Export>Export</a><a class='options-button' name=Import>Import</a>" +
+            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true>Import</a>" +
             "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
@@ -994,6 +994,38 @@
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
 
+          $(".import-input", tOptions).bind("change", function()
+          {
+            var file = this.files[0],
+              reader = new FileReader(),
+              key, imported, val;
+            if (!confirm('Your current settings will be entirely overwritten, are you sure?')) {
+              return;
+            } 
+            reader.onload = (function(tFile) {
+              return function(e) {
+                try {
+                  imported = JSON.parse(e.target.result);
+                }
+                catch (err) {
+                  alert("Invalid settings file!");
+                  return;
+                }
+
+                for (key in imported) {
+                  val = imported[key];
+                  $SS.Config.set(key, val);
+                }
+
+                if (confirm('Import successful. Refresh now?')) {
+                  return window.location.reload();
+                } 
+
+              }
+            })(file);
+
+            reader.readAsText(file);
+          });
           $("a[name=Export]", tOptions).bind("click", function()
           {
             if ($("a[download]", tOptions).exists())
