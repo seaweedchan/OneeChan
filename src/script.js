@@ -666,7 +666,8 @@
             nodes = mutations[i].addedNodes;
 
             for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
-              $("input[type=checkbox]", nodes[j]).riceCheck()
+              if (nodes[j].nodeType !== 3)
+                $("input[type=checkbox]", nodes[j]).riceCheck();
 
           }
         });
@@ -897,47 +898,11 @@
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/seaweedchan/OneeChan/issues' id=issues-link target='_blank'>Issues</a></p>",
-            bindNavLinks = function(el)
-            {
-              $(".handle", el).bind("dragstart", function(e)
-              {
-                $(this.parentNode).addClass("moving");
-                e.dataTransfer.effectAllowed = "move";
-                e.dataTransfer.setData("text/plain", this.parentNode.id);
-              })
-              .bind("dragend", function(e){ $(this.parentNode).delay(function(){ $(this).removeClass("moving"); }, 1); })
-              .bind("dragenter", function(e){ $(this.parentNode).addClass("over"); })
-              .bind("dragleave", function(e){ $(this.parentNode).removeClass("over"); });
-              $(el).bind("drop", function(e)
-              {
-                var node = $("#tNavLinks>#" + e.dataTransfer.getData("text/plain"));
-
-                if (e.dataTransfer.getData("text/plain") !== this.id)
-                {
-
-                  if ($(this).nextSibling(node).exists())
-                    $(this).before(node);
-                  else
-                    $(this).after(node);
-                }
-
-                $(this).removeClass("over");
-                e.preventDefault();
-              })
-              .bind("dragover", function(e)
-              {
-                e.preventDefault();
-                e.dataTransfer.dropEffect = "move";
-              });
-              $("a[name=delLink]", el).bind("click", function(){ $(this).parent().remove(); });
-            },
             key, val, des;
 
           for (key in defaultConfig)
           {
-            if ((key === "Style Scrollbars" && !$SS.browser.webkit) ||
-              key === "Nav Link Delimiter" ||
-              /^(Selected|Hidden)+\s(Mascots|Themes?)+$/.test(key))
+            if (/^(Selected|Hidden)+\s(Mascots|Themes?)+$/.test(key))
               continue;
 
             val = $SS.conf[key];
@@ -1021,7 +986,6 @@
           optionsHTML += "</div></div><div class='options-close'><a class='options-button' name=save>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
-
 
           // options window
           $(".tab-label", tOptions).bind("click", function(e)
