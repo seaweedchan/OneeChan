@@ -900,7 +900,7 @@
             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
             "<p class='buttons-container'>" +
-            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true>Import</a>" +
+            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
             "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
