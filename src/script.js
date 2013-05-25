@@ -147,7 +147,6 @@
     { dName: "Body Background",  name: "bgColor",     property: "background-color" },
     { dName: "Text",             name: "textColor",   property: "color"            },
     { dName: "Backlink",        name: "blinkColor",  property: "color"            },
-    { dName: "4chan X Link",    name: "jlinkColor",  property: "color"            },
     { dName: "Header Link",            name: "headerLColor",   property: "color"            },
     { dName: "Header Link Hover",            name: "headerLHColor",   property: "color"            },
     { dName: "Link",            name: "linkColor",   property: "color"            },
@@ -155,7 +154,8 @@
     { dName: "Name",            name: "nameColor",   property: "color"            },
     { dName: "Tripcode",        name: "tripColor",   property: "color"            },
     { dName: "Subject",           name: "titleColor",  property: "color"            },
-    { dName: "Greentext",           name: "quoteColor",  property: "color"            }
+    { dName: "Greentext",           name: "quoteColor",  property: "color"            },
+    { dName: "Unread Line",    name: "unreadColor",  property: "color"            }
   ],
   $lib, $SS;
 
@@ -1071,6 +1071,7 @@
 
               /* Old OneeChan */
               else if (theme["navOp"] !== undefined) {
+                theme.unreadColor = theme["jlinkColor"];
                 theme.headerColor = theme["textColor"];
                 theme.headerBGColor = theme["mainColor"];
                 theme.headerLColor = theme["linkColor"];
@@ -1082,6 +1083,7 @@
               else if (theme["timeColor"] !== undefined) {
                 theme.replyOp = "1.0";
                 theme.navOp = "0.9";
+                theme.unreadColor = theme["jlinkColor"];
                 theme.headerColor = theme["textColor"];
                 theme.headerBGColor = theme["mainColor"];
                 theme.headerLColor = theme["linkColor"];
@@ -1110,7 +1112,7 @@
                 theme.inputbColor = $SS.colorToHex(theme["Input Border"]);
                 theme.bgColor = $SS.colorToHex(theme["Background Color"]);
                 theme.blinkColor = $SS.colorToHex(theme["Backlinks"]);
-                theme.jlinkColor = $SS.colorToHex(theme["Links"]);
+                theme.unreadColor = $SS.colorToHex(theme["Links"]);
                 theme.nameColor = $SS.colorToHex(theme["Names"]);
                 theme.tripColor = $SS.colorToHex(theme["Tripcodes"]);
                 theme.titleColor = $SS.colorToHex(theme["Subjects"]);
@@ -1687,7 +1689,7 @@
           inputColor: "090d0f",
           inputbColor:"0d1114",
           blinkColor: "4797cc",
-          jlinkColor: "4270b2",
+          unreadColor: "4270b2",
           linkColor:  "53bdb1",
           linkHColor: "3090b5",
           nameColor:  "d63e34",
@@ -1715,7 +1717,7 @@
           inputColor:  "ffffff",
           inputbColor: "dddddd",
           blinkColor:  "bc312a",
-          jlinkColor:  "bc312a",
+          unreadColor:  "bc312a",
           linkColor:   "bc312a",
           linkHColor:  "8e2220",
           nameColor:   "2c64a0",
@@ -1747,7 +1749,7 @@
           bgColor:      "f2f2f2",
           textColor:    "717171",
           blinkColor:   "999999",
-          jlinkColor:   "999999",
+          unreadColor:   "999999",
           headerLColor: "babcbe",
           headerLHColor:"999999",
           linkColor:    "999999",
@@ -1772,7 +1774,7 @@
           inputColor: "222222",
           inputbColor:"151515",
           blinkColor: "897399",
-          jlinkColor: "897399",
+          unreadColor: "897399",
           linkColor:  "897399",
           linkHColor: "c617e6",
           nameColor:  "a34443",
@@ -1800,7 +1802,7 @@
           inputColor: "0c1021",
           inputbColor:"080b16",
           blinkColor: "54b12e",
-          jlinkColor: "8da6ce",
+          unreadColor: "8da6ce",
           linkColor:  "fbde2d",
           linkHColor: "4b65cc",
           nameColor:  "8da6ce",
@@ -1829,7 +1831,7 @@
           inputColor:  "18191a",
           inputbColor: "121314",
           blinkColor:  "6f99b4",
-          jlinkColor:  "ac9bb0",
+          unreadColor:  "ac9bb0",
           linkColor:   "ac9bb0",
           linkHColor:  "6f99b4",
           nameColor:   "a8c6d9",
@@ -1857,7 +1859,7 @@
           inputColor:  "ffffff",
           inputbColor: "cccccc",
           blinkColor:  "111111",
-          jlinkColor:  "ff6600",
+          unreadColor:  "ff6600",
           linkColor:   "ff6600",
           linkHColor:  "ff3300",
           nameColor:   "004a99",
@@ -1885,7 +1887,7 @@
           inputColor:  "222222",
           inputbColor: "151515",
           blinkColor:  "559c7a",
-          jlinkColor:  "559c7a",
+          unreadColor:  "559c7a",
           linkColor:   "559c7a",
           linkHColor:  "c7de1a",
           nameColor:   "2e88a6",
@@ -1913,7 +1915,7 @@
           inputColor:  "282a2e",
           inputbColor: "1d1f21",
           blinkColor:  "cc6666",
-          jlinkColor:  "81a2be",
+          unreadColor:  "81a2be",
           linkColor:   "81a2be",
           linkHColor:  "cc6666",
           nameColor:   "81a2be",
@@ -1942,7 +1944,7 @@
           inputColor:  "ffffff",
           inputbColor: "aaaaaa",
           blinkColor:  "0000ee",
-          jlinkColor:  "0000ee",
+          unreadColor:  "0000ee",
           linkColor:   "0000ee",
           linkHColor:  "dd0000",
           nameColor:   "117743",
@@ -1971,7 +1973,7 @@
           inputColor:  "ffffff",
           inputbColor: "aaaaaa",
           blinkColor:  "34345C",
-          jlinkColor:  "34345C",
+          unreadColor:  "34345C",
           linkColor:   "34345c",
           linkHColor:  "dd0000",
           nameColor:   "117743",
@@ -2000,7 +2002,7 @@
           inputColor:  "ffffff",
           inputbColor: "cab7d9",
           blinkColor:  "000000",
-          jlinkColor:  "962594",
+          unreadColor:  "962594",
           linkColor:   "962594",
           linkHColor:  "b22caa",
           nameColor:   "591177",
@@ -2028,7 +2030,7 @@
           inputColor:  "cccccc",
           inputbColor: "bbbbbb",
           blinkColor:  "f5871f",
-          jlinkColor:  "bf8040",
+          unreadColor:  "bf8040",
           linkColor:   "bf8040",
           linkHColor:  "bf8040",
           nameColor:   "2b80c2",
@@ -2056,7 +2058,7 @@
           inputColor:  "073642",
           inputbColor: "0d272e",
           blinkColor:  "4f5f8f",
-          jlinkColor:  "696fc0",
+          unreadColor:  "696fc0",
           linkColor:   "696bba",
           linkHColor:  "d33682",
           nameColor:   "586e75",
@@ -2084,7 +2086,7 @@
           inputColor:  "e4e4e4",
           inputbColor: "cccccc",
           blinkColor:  "bf7f3f",
-          jlinkColor:  "bf7f3f",
+          unreadColor:  "bf7f3f",
           linkColor:   "bf7f3f",
           linkHColor:  "d33682",
           nameColor:   "4c4c4c",
@@ -2113,7 +2115,7 @@
           inputColor:  "2f2f2f",
           inputbColor: "0f0f0f",
           blinkColor:  "cccccc",
-          jlinkColor:  "cccccc",
+          unreadColor:  "cccccc",
           linkColor:   "dddddd",
           linkHColor:  "eeeeee",
           nameColor:   "ffffff",
@@ -2145,7 +2147,7 @@
           inputColor:  "333333",
           inputbColor: "2c2c2c",
           blinkColor:  "4f5f8f",
-          jlinkColor:  "6688aa",
+          unreadColor:  "6688aa",
           linkColor:   "6688aa",
           linkHColor:  "6688aa",
           nameColor:   "aaaaaa",
@@ -2173,7 +2175,7 @@
           inputColor:  "454545",
           inputbColor: "888888",
           blinkColor:  "dca3a3",
-          jlinkColor:  "93b3a3",
+          unreadColor:  "93b3a3",
           linkColor:   "efdcbc",
           linkHColor:  "f8f893",
           nameColor:   "c0bed1",
@@ -2200,7 +2202,7 @@
           inputColor:  "20211c",
           inputbColor: "171713",
           blinkColor:  "f92672",
-          jlinkColor:  "e2db74",
+          unreadColor:  "e2db74",
           linkColor:   "e2db74",
           linkHColor:  "ae81ff",
           nameColor:   "5ac0cc",
@@ -2227,7 +2229,7 @@
           inputColor:  "e9eced",
           inputbColor: "cccccc",
           blinkColor:  "477085",
-          jlinkColor:  "477085",
+          unreadColor:  "477085",
           linkColor:   "477085",
           linkHColor:  "5d6678",
           nameColor:   "4c4c4c",
@@ -3138,7 +3140,7 @@
       this.inputColor  = new $SS.Color(theme.inputColor, true);
       this.inputbColor = new $SS.Color(theme.inputbColor);
       this.blinkColor  = new $SS.Color(theme.blinkColor);
-      this.jlinkColor  = new $SS.Color(theme.jlinkColor);
+      this.unreadColor  = new $SS.Color(theme.unreadColor);
       this.linkColor   = new $SS.Color(theme.linkColor);
       this.linkHColor  = new $SS.Color(theme.linkHColor);
       this.nameColor   = new $SS.Color(theme.nameColor);
@@ -3161,9 +3163,9 @@
       this.icons       =
       {
         closeButton:   "<svg viewBox='0 0 30 30' hpreserveAspectRatio='true' eight='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
-                "<path fill='rgb(" + this.jlinkColor.rgb + ")' d='M24.778,21.419 19.276,15.917 24.777,10.415 21.949,7.585 16.447,13.087 10.945,7.585 8.117,10.415 13.618,15.917 8.116,21.419 10.946,24.248 16.447,18.746 21.948,24.248z'/></svg>",
+                "<path fill='rgb(" + this.unreadColor.rgb + ")' d='M24.778,21.419 19.276,15.917 24.777,10.415 21.949,7.585 16.447,13.087 10.945,7.585 8.117,10.415 13.618,15.917 8.116,21.419 10.946,24.248 16.447,18.746 21.948,24.248z'/></svg>",
         closedThread:  "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
-                "<path fill='rgb(" + this.jlinkColor.rgb + ")' d='M22.335,12.833V9.999h-0.001C22.333,6.501,19.498,3.666,16,3.666S9.666,6.502,9.666,10h0v2.833H7.375V25h17.25V12.833H22.335zM11.667,10C11.667,10,11.667,10,11.667,10c0-2.39,1.944-4.334,4.333-4.334c2.391,0,4.335,1.944,4.335,4.333c0,0,0,0,0,0v2.834h-8.668V10z'/></svg>",
+                "<path fill='rgb(" + this.unreadColor.rgb + ")' d='M22.335,12.833V9.999h-0.001C22.333,6.501,19.498,3.666,16,3.666S9.666,6.502,9.666,10h0v2.833H7.375V25h17.25V12.833H22.335zM11.667,10C11.667,10,11.667,10,11.667,10c0-2.39,1.944-4.334,4.333-4.334c2.391,0,4.335,1.944,4.335,4.333c0,0,0,0,0,0v2.834h-8.668V10z'/></svg>",
          stuckThread:  "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                 "<path fill='rgb(" + this.tripColor.rgb + ")' d='M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z'/></svg>",
          imgExpand:    "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='18' width='18' xmlns='http://www.w3.org/2000/svg'>" +

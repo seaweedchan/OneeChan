@@ -33,7 +33,8 @@ textarea,
 a,
 .typ, 
 .atn,
-:root.catalog .button {
+:root.catalog .button,
+.options-button {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
 a.summary,
@@ -58,7 +59,8 @@ a:hover,
 /* Greentext */
 .quote,
 .str, 
-.atv {
+.atv,
+.new {
   color: " + $SS.theme.quoteColor.hex + " !important;
 }
 /* Subject and Option labels */
@@ -67,11 +69,6 @@ a:hover,
 .option.header .option-title,
 .kwd {
   color: " + $SS.theme.titleColor.hex + " !important;
-}
-/* 4chan X links and Options Buttons */
-.options-button,
-a.qr-link {
-  color: " + $SS.theme.jlinkColor.hex + " !important;
 }
 /* Board Title */
 .boardTitle {
@@ -92,9 +89,9 @@ a.qr-link {
 }
 
 /* Backgrounds */
-html,
+html, 
 body {
-  background: " + $SS.theme.bgColor.hex + " !important;
+  background: " + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex + " !important;
 }
 .reply,
 :root.catalog .panel,
@@ -148,7 +145,7 @@ hr {
   background-image: linear-gradient(to left, rgba(" + $SS.theme.brderColor.rgb + ",0), rgb(" + $SS.theme.brderColor.rgb + "), rgba(" + $SS.theme.brderColor.rgb + ",0)); 
 }
 #unread-line {      
-  background-image: linear-gradient(to left, rgba(" + $SS.theme.jlinkColor.rgb + ",0), rgb(" + $SS.theme.jlinkColor.rgb + "), rgba(" + $SS.theme.jlinkColor.rgb + ",0)); 
+  background-image: linear-gradient(to left, rgba(" + $SS.theme.unreadColor.rgb + ",0), rgb(" + $SS.theme.unreadColor.rgb + "), rgba(" + $SS.theme.unreadColor.rgb + ",0)); 
 }
 .inline {
   background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
