@@ -965,7 +965,7 @@
             {
               var opts = key === "Font Family" ? $SS.fontList || defaultConfig[key][2] : defaultConfig[key][2],
                 cFonts = [];
-              optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + (key === "Font Family" ? " (<a name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "loaded!" : "load") + "</a>)" : "") + "</span>" +
+              optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + (key === "Font Family" ? " (<a name=loadSysFonts title='Load fonts from system. Requires flash from external site to run.'>" + ($SS.fontList ? "loaded!" : "load") + "</a>)" : "") + "</span>" +
                       "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "") + ">";
 
               for (var i = 0, MAX = opts.length; i < MAX; ++i)
