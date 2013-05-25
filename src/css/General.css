@@ -290,6 +290,9 @@ hr {
 }
 
 /* Banner */
+.boardBanner {
+  width: 300px;
+}
 .boardBanner>img {
   border: none !important;
 }

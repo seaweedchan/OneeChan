@@ -821,9 +821,14 @@
         };
 
         $SS.conf = [];
+        $SS.exportOptions = {};
 
-        for (var key in defaultConfig)
+        for (var key in defaultConfig) {
           $SS.conf[key] = parseVal(key, this.get(key));
+          if (!(/^(Hidden|Themes|Selected Mascots|--)/.test(key))) {
+            $SS.exportOptions[key] = $SS.conf[key]; 
+          };
+        };
 
         $SS.conf["Margin Left"]  = $SS.conf["Left Margin"] !== 999 ? $SS.conf["Left Margin"] : $SS.conf["Custom Left Margin"];
         $SS.conf["Margin Right"]  = $SS.conf["Right Margin"] !== 999 ? $SS.conf["Right Margin"] : $SS.conf["Custom Right Margin"];
@@ -895,6 +900,7 @@
             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
             "<p class='buttons-container'><a class='options-button' name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
+            "<a class='options-button' name=Export>Export</a><a class='options-button' name=Import>Import</a>" +
             "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/master/changelog' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
@@ -988,6 +994,13 @@
           tOptions.html(optionsHTML);
           overlay.append(tOptions);
 
+          $("a[name=Export]", tOptions).bind("click", function()
+          {
+            if ($("a[download]", tOptions).exists())
+              return;
+            var exportalert = $("<a class='options-button'download='OneeChan Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions)) + "'>Save me!").bind("click", $SS.options.close);
+            return $(this).replace(exportalert);
+          });
           // options window
           $(".tab-label", tOptions).bind("click", function(e)
           {
