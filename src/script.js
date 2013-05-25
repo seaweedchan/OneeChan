@@ -78,17 +78,17 @@
         { name: "None", value: 3 }
       ]
     ],
-    /*"Margin Between Replies":
+    "Margin Between Replies":
     [
-      0, "Change the position of 4chan x backlinks",
+      -2, "Change the position of 4chan x backlinks",
       [
         { name: "Large",      value: 6 },
-        { name: "Normal (4chan default)", value: 4 },
-        { name: "Minimal",  value: 0 },
-        { name: "None",  value: -2 },
-        { name: "Overlapping Borders", value: -3 }
+        { name: "Normal (4chan default)", value: '' },
+        { name: "Minimal",  value: -2 },
+        { name: "None",  value: -4 },
+        { name: "Overlapping Borders", value: -5 }
       ]
-    ],*/
+    ],
     "--Quick Reply--":                  [ "header",  "" ],
     "Autohide Style":
     [

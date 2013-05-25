@@ -61,7 +61,7 @@ a.qr-link {
 /* Board Title */
 .boardTitle {
   color: " + $SS.theme.boardColor.hex + " !important;
-  text-shadow:1px 1px 1px rgb\(" + $SS.theme.boardColor.shiftRGB(-30) + ") !important;
+  text-shadow:1px 1px 1px rgb\(" + $SS.theme.boardColor.shiftRGB(-100) + ") !important;
 }
 /* Backlinks */
 .backlink {
