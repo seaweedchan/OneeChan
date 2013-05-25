@@ -5,7 +5,7 @@
     "--Main Rice--":                     [ "header",  "" ],
     "Left Margin":
     [
-      5, "Change the size of the left margin.",
+      0, "Change the size of the left margin.",
       [
         { name: "Large",    value: 65 },
         { name: "Medium",   value: 25 },  
@@ -24,7 +24,7 @@
     ],
     "Right Margin":
     [
-      5, "Change the size of the right margin.",
+      0, "Change the size of the right margin.",
       [
         { name: "Large",    value: 65 },
         { name: "Medium",   value: 25 },
@@ -42,13 +42,13 @@
       true
     ],
     "Underline Links":    [ false, "Underlines links" ],
-    "Expanded Images Cover QR": [ false, "Lets expanded images overlap the quick reply" ],
+    "Expanded Images Cover QR": [ true, "Lets expanded images overlap the quick reply" ],
     "Show Banner":              [ true,  "Toggle visibility of the logo banner", null, true ],
     "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
     "Reduce Banner Opacity":       [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
     "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
     "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
-    "Show Reply to Thread Button": [ true, "Toggle visibility of the Start a Thread / Reply to Thread button"],
+    "Show Reply to Thread Button": [ false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
     "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
@@ -60,18 +60,18 @@
         { name: "Disabled", value: 3 }
       ], true
     ],
-    "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
+    "SS-like Sidebar":          [ true, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
     "--Replies--":              [ "header",  "" ],
-    "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
+    "Fit Width":                [ true,  "Makes the replies stretch to the width of the page" ],
     "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
-    "Allow Wrapping Around OP": [ true, "Allow for replies to wrap around the OP instead of forced onto their own line. "],
+    "Allow Wrapping Around OP": [ false, "Allow for replies to wrap around the OP instead of forced onto their own line. "],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Recolor Even Replies":       [ false,  "Makes every other post a darker color. Not compatible with Quote Threading." ],
-    "Backlink Icons":          [ false,  "Use icons for backlinks instead of text." ],
+    "Backlink Icons":          [ true,  "Use icons for backlinks instead of text." ],
     "Backlinks on Bottom":          [ false,  "Move backlinks to the bottom right of replies." ],
     "Borders":
     [
-      1, "Changes which sides of replies have borders",
+      2, "Changes which sides of replies have borders",
       [
         { name: "Normal",      value: 1 },
         { name: "On all sides",          value: 2 },
@@ -92,7 +92,7 @@
     "--Quick Reply--":                  [ "header",  "" ],
     "Autohide Style":
     [
-      1, "Changes the style of the quick reply.",
+      3, "Changes the style of the quick reply.",
       [
         { name: "Normal",      value: 1 },
         { name: "Vertical Tabbed",          value: 2 },
