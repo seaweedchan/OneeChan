@@ -1743,7 +1743,7 @@
           brderColor:  "dddddd",
           inputColor:  "ffffff",
           inputbColor: "dddddd",
-          blinkColor:  "111111",
+          blinkColor:  "bc312a",
           jlinkColor:  "bc312a",
           linkColor:   "bc312a",
           linkHColor:  "8e2220",

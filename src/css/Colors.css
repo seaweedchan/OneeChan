@@ -61,9 +61,12 @@ a.qr-link {
 /* Board Title */
 .boardTitle {
   color: " + $SS.theme.boardColor.hex + " !important;
-  text-shadow:1px 1px 1px " + $SS.theme.boardColor.hex + " !important;
+  text-shadow:1px 1px 1px rgb\(" + $SS.theme.boardColor.shiftRGB(-30) + ") !important;
 }
-
+/* Backlinks */
+.backlink {
+  color: " + $SS.theme.blinkColor.hex + " !important;
+}
 
 /* Backgrounds */
 html,
@@ -102,10 +105,18 @@ textarea,
 .riceCheck,
 #qr-filename-container {
   background: " + $SS.theme.inputColor.hex + " !important;
+  transition: background .2s;
 }
 input[type=checkbox],
 .riceCheck {
   background: rgb\(" + $SS.theme.inputColor.shiftRGB(20) + ") !important;
+}
+input:not(.jsColor):hover,
+.riceCheck:hover,
+#qr-filename-container:hover,
+textarea:hover {
+  background: rgb(" + $SS.theme.inputColor.hover + ") !important;
+  transition: background .2s;
 }
 hr {     
   background-image: linear-gradient(to left, rgba(" + $SS.theme.brderColor.rgb + ",0), rgb(" + $SS.theme.brderColor.rgb + "), rgba(" + $SS.theme.brderColor.rgb + ",0)); 
