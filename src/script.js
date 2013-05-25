@@ -100,7 +100,7 @@
       ]
     ],
     "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
-    "Secret Tripcode":     [ false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling." ],
+    "Secret Name Field":     [ false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling." ],
     "--Font--":                     [ "header",  "" ],
     "Font Family":
     [
@@ -785,7 +785,7 @@
       if (!$SS.browser.webkit)
         $("input[type=checkbox]", qr).riceCheck();
 
-      if ($SS.conf["Secret Tripcode"])
+      if ($SS.conf["Secret Name Field"])
         $(".field[name=name]").each(function() {
           $(this).after($("<input class='tripcode field' placeholder=Name>"));
         });
@@ -2391,7 +2391,7 @@
         $("html").optionClass("SS-like Sidebar",              true,   "ss-sidebar" );
         $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
         $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
-        $("html").optionClass("Secret Tripcode",              true,   "hide-tripcode" );
+        $("html").optionClass("Secret Name Field",              true,   "hide-name" );
       }
     },
 
