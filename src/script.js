@@ -184,6 +184,7 @@
   };
 
   /* From 4chan X, unchainable */
+  /* https://github.com/seaweedchan/4chan-x/blob/master/LICENSE */
   $.asap = function(test, cb) {
     if (test()) {
       return cb();
