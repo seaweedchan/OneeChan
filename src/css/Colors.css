@@ -15,23 +15,28 @@ textarea,
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
-.name {
+.name,
+.com {
   color: " + $SS.theme.nameColor.hex + " !important;
 }
 /* Tripcodes */
-.postertrip {
+.postertrip,
+.tag {
   color: " + $SS.theme.tripColor.hex + " !important;
 }
 
 /* Links */
-a {
+a,
+.typ, 
+.atn {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
 a.summary,
 .pages strong>a {
   color: " + $SS.theme.textColor.hex + " !important;
 }
-a:hover {
+a:hover,
+.lit {
   color: " + $SS.theme.linkHColor.hex + " !important;
 }
 /* Header */
@@ -45,12 +50,15 @@ a:hover {
   color: " + $SS.theme.headerLHColor.hex + " !important;
 }
 /* Greentext */
-.quote {
+.quote,
+.str, 
+.atv {
   color: " + $SS.theme.quoteColor.hex + " !important;
 }
 /* Subject and Option labels */
 .subject,
-.option.header .option-title {
+.option.header .option-title,
+.kwd {
   color: " + $SS.theme.titleColor.hex + " !important;
 }
 /* 4chan X links and Options Buttons */
@@ -66,6 +74,14 @@ a.qr-link {
 /* Backlinks */
 .backlink {
   color: " + $SS.theme.blinkColor.hex + " !important;
+}
+/* Code Tags */
+.prettyprint {
+  background: none repeat scroll 0% 0% rgba(" + $SS.theme.codeBackground + ") !important;
+  border: 1px solid rgba(" + $SS.theme.codeBorder + ") !important;
+}
+.pun {
+  color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
 
 /* Backgrounds */

@@ -874,7 +874,7 @@
         {
           detail: {
             el   : a,
-            order : 112,
+            order : 150,
             type : "header"
           }
         }));
@@ -3160,6 +3160,8 @@
       this.headerbColor= new $SS.Color(theme.headerbColor); 
       this.checkMark   = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? 0 : -8) + "px");
       this.radioCheck  = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? -16 : -24) + "px");
+      this.codeBackground = (this.bgColor.isLight ? "255, 255, 255, 0.2" : "0, 0, 0, 0.2");
+      this.codeBorder = (this.bgColor.isLight ? "204, 204, 204, 1.0" : "204, 204, 204, 0.1");
       this.dIcons      = new $SS.Image(theme.dIcons || defaultIcons);
       this.header      = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA";
       this.icons       =

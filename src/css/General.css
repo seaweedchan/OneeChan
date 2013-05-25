@@ -105,6 +105,16 @@ body {
   transition: opacity .3s ease-in .1s !important;
 }
 
+/* Code Tags */
+.prettyprint {
+  padding: 5px !important;
+  display: inline-block;
+  max-height: 400px;
+  overflow-x: auto;
+  max-width: 100%;
+  vertical-align:middle;
+}
+
 /* Checkboxes */
 input[type=checkbox],
 input[type=submit],

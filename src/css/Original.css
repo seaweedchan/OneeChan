@@ -35,13 +35,6 @@ div.pagelist>div span {
   padding: 4px;
   display: inline-block;
 }
-.prettyprint {
-  padding: 5px !important;
-  display: inline-block;
-  max-height: 400px;
-  overflow-x: auto;
-  max-width: 600px;
-}
 s {
   text-decoration: none !important;
 }
