@@ -194,7 +194,7 @@ input[type=checkbox]:checked+.riceCheck::before
   padding: 2px 3px 2px 4px !important;
 }
 #qr [type='submit'] {
-  height: 22px;
+  height: 22px !important;
   margin-top: 1px;
 }
 :root.vertical-qr #qr {
@@ -227,7 +227,17 @@ input[type=checkbox]:checked+.riceCheck::before
   opacity: 0.2 !important;
   transition:opacity .2s ease-in-out 1s;
 }
-
+:root.expand-inputs .persona .field {
+  transition: width ease-in-out 1s, max-width ease-in-out 1s;
+}
+:root.expand-inputs .persona .field:focus {
+  position: absolute;
+  right: 2px;
+  left: 2px;
+  width: 99% !important;
+  min-width: 99% !important;
+  transition: width ease-in-out 1s, max-width ease-in-out 1s;
+}
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;

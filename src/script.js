@@ -99,7 +99,7 @@
         { name: "Fade", value: 3 }
       ]
     ],
-    /*"Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],*/
+    "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
     "--Font--":                     [ "header",  "" ],
     "Font Family":
     [
@@ -2384,6 +2384,7 @@
         $("html").optionClass("Autohide Style",               3,      "fade-qr" );
         $("html").optionClass("SS-like Sidebar",              true,   "ss-sidebar" );
         $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
+        $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
       }
     },
 
