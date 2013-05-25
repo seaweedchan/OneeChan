@@ -100,6 +100,7 @@
       ]
     ],
     "Expanding Form Inputs":    [ false,  "Makes certain form elements expand on focus" ],
+    "Secret Tripcode":     [ false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling." ],
     "--Font--":                     [ "header",  "" ],
     "Font Family":
     [
@@ -783,6 +784,11 @@
 
       if (!$SS.browser.webkit)
         $("input[type=checkbox]", qr).riceCheck();
+
+      if ($SS.conf["Secret Tripcode"])
+        $(".field[name=name]").each(function() {
+          $(this).after($("<input class='tripcode field' placeholder=Name>"));
+        });
 
       $SS.QRhandled = true;
     },
@@ -2385,6 +2391,7 @@
         $("html").optionClass("SS-like Sidebar",              true,   "ss-sidebar" );
         $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
         $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
+        $("html").optionClass("Secret Tripcode",              true,   "hide-tripcode" );
       }
     },
 
@@ -2398,38 +2405,6 @@
           $("#pagesDrop").remove();
           return this.hasInit = false;
         }
-      }
-    },
-
-    tripHider:
-    {
-      hasInit: false,
-      init: function(input)
-      {
-        if (this.hasInit && !$SS.conf["Smart Tripcode Hider"])
-        {
-          $("input[name=name]").each(function()
-          {
-            $(this).unbind("blur", $SS.tripHider.handle)
-                .removeClass("tripping");
-          });
-          return this.hasInit = false;
-        }
-        else
-        {
-          input.bind("blur", this.handle);
-          return this.hasInit = true;
-        }
-      },
-      handle: function(e)
-      {
-        var $this = this.nodeName ? $(this) : $(e),
-          check = /^.*##?.+/.test($this.val());
-
-        if (check && !$this.hasClass("tripping"))
-          $this.addClass("tripping");
-        else if (!check && $this.hasClass("tripping"))
-          $this.removeClass("tripping");
       }
     },
 

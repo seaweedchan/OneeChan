@@ -2,7 +2,7 @@
 
 /* Anything we need transparent */
 div[style='float: right;'] {
-  color: transparent;
+  color: transparent !important;
 }
 /* General */
 html,

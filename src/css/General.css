@@ -246,7 +246,18 @@ div[style='float: right;'] {
 .deleteform .riceCheck {
   top: 3px;
 }
-
+:root.hide-tripcode .tripcode {
+  position: absolute;
+  left: 1px !important;
+  pointer-events: none;
+  width: 33.2% !important;
+  min-width: 33.2% !important;
+}
+:root.hide-tripcode .field[name=name]:hover + .tripcode,
+:root.hide-tripcode .field[name=name]:focus + .tripcode,
+:root.hide-tripcode .tripcode:hover {
+  display: none !important;
+}
 /* HRs */
 hr {
   height: 2px;
