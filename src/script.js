@@ -787,7 +787,7 @@
 
       if ($SS.conf["Secret Name Field"])
         $(".field[name=name]").each(function() {
-          $(this).after($("<input class='tripcode field' placeholder=Name>"));
+          $(this).after($("<input class='secret field' placeholder=Name>"));
         });
 
       $SS.QRhandled = true;

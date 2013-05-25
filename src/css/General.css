@@ -246,16 +246,16 @@ div[style='float: right;'] {
 .deleteform .riceCheck {
   top: 3px;
 }
-:root.hide-name .tripcode {
+:root.hide-name .secret {
   position: absolute;
   left: 1px !important;
   pointer-events: none;
   width: 33.2% !important;
   min-width: 33.2% !important;
 }
-:root.hide-name .field[name=name]:hover + .tripcode,
-:root.hide-name .field[name=name]:focus + .tripcode,
-:root.hide-name .tripcode:hover {
+:root.hide-name .field[name=name]:hover + .secret,
+:root.hide-name .field[name=name]:focus + .secret,
+:root.hide-name .secret:hover {
   display: none !important;
 }
 /* HRs */
