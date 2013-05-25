@@ -899,7 +899,7 @@
             "<li class='tab-item'><label class='tab-label' for=themes-select>Themes</label></li>" +
             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
-            "<p class='buttons-container'><a class='options-button' name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "System Fonts Loaded!" : "Load System Fonts") + "</a>" +
+            "<p class='buttons-container'>" +
             "<a class='options-button' name=Export>Export</a><a class='options-button' name=Import>Import</a>" +
             "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
             "<a href='https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
@@ -946,8 +946,8 @@
             {
               var opts = key === "Font Family" ? $SS.fontList || defaultConfig[key][2] : defaultConfig[key][2],
                 cFonts = [];
-              optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + "</span>" +
-                      "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "")  + ">";
+              optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + (key === "Font Family" ? " (<a name=loadSysFonts title='Requires flash'>" + ($SS.fontList ? "loaded!" : "load") + "</a>)" : "") + "</span>" +
+                      "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "") + ">";
 
               for (var i = 0, MAX = opts.length; i < MAX; ++i)
               {
@@ -1240,12 +1240,12 @@
 
           $("#fontListSWF").remove();
           window.removeEventListener("message", getFontMessage);
-          loadFontBTN.text("System Fonts Loaded!").unbind("click", $SS.options.loadSystemFonts);
+          loadFontBTN.text("loaded!").unbind("click", $SS.options.loadSystemFonts);
         }, false);
 
         $(document.body).append($("<div id=fontListSWF hidden><object type='application/x-shockwave-flash'" +
                      " data='" + fontListSWF + "'><param name=allowScriptAccess value=always></object>"));
-        return loadFontBTN.text("Loading...");
+        return loadFontBTN.text("loading...");
       },
       save: function()
       {
