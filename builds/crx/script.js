@@ -1072,6 +1072,7 @@
 
               /* Old OneeChan */
               else if (theme["navOp"] !== undefined) {
+                theme.unreadColor = theme["jlinkColor"];
                 theme.headerColor = theme["textColor"];
                 theme.headerBGColor = theme["mainColor"];
                 theme.headerLColor = theme["linkColor"];
@@ -1083,6 +1084,7 @@
               else if (theme["timeColor"] !== undefined) {
                 theme.replyOp = "1.0";
                 theme.navOp = "0.9";
+                theme.unreadColor = theme["jlinkColor"];
                 theme.headerColor = theme["textColor"];
                 theme.headerBGColor = theme["mainColor"];
                 theme.headerLColor = theme["linkColor"];
@@ -2108,8 +2110,8 @@
           bgRPA:       "repeat top left fixed",
           replyOp:     "1.0", 
           navOp:       "0.9", 
-          bgColor:     "242424",
-          mainColor:   "333333",
+          bgColor:     "191919",
+          mainColor:   "303030",
           brderColor:  "3a3a3a",
           inputColor:  "2f2f2f",
           inputbColor: "0f0f0f",
@@ -2126,11 +2128,7 @@
           headerLColor: "dddddd",
           headerLHColor: "eeeeee",
           headerBGColor: "333333",
-          boardColor:  "ffffff",
-          customCSS:   "\n\n\n\n\n\n#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}" +
-                 ".postContainer>.reply{background-image:url(http://img714.imageshack.us/img714/3969/4ch2.gif)!important;" +
-                 "border-bottom:#1f1f1f!important;border-radius:5px!important}" +
-                 ".thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
+          boardColor:  "ffffff"
         },
         {
           name:        "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
@@ -3214,7 +3212,7 @@
           if (theme.customCSS[theme.customCSS.length-1] === ")")
             theme.customCSS += "+\"";
 
-          this.customCSS = eval($SS.trimLineBreaks(new String('"'+theme.customCSS.replace(/\"/g, "\\\"") +'"')));
+          this.customCSS = eval($SS.trimLineBreaks(new String('"'+theme.customCSS.replace(/\"/g, "\\\"").replace(/\'/g, "\\\'") +'"')));
         }
         catch (e)
         {
