@@ -62,9 +62,10 @@
     ],
     "SS-like Sidebar":          [ false, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
     "--Replies--":              [ "header",  "" ],
-    "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Fit Width":                [ false,  "Makes the replies stretch to the width of the page" ],
     "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
+    "Allow Wrapping Around OP": [ true, "Allow for replies to wrap around the OP instead of forced onto their own line. "],
+    "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Recolor Even Replies":       [ false,  "Makes every other post a darker color. Not compatible with Quote Threading." ],
     "Backlink Icons":          [ false,  "Use icons for backlinks instead of text." ],
     "Backlinks on Bottom":          [ false,  "Move backlinks to the bottom right of replies." ],
@@ -179,6 +180,15 @@
   {
     return this instanceof $lib ?
       this.init(selector, root) : new $lib(selector, root);
+  };
+
+  /* From 4chan X, unchainable */
+  $.asap = function(test, cb) {
+    if (test()) {
+      return cb();
+    } else {
+      return setTimeout($.asap, 25, test, cb);
+    }
   };
 
   $lib.prototype =
@@ -645,7 +655,20 @@
       {
         $SS.options.init();
 
-        $(document).bind("DOMNodeInserted",  $SS.nodeInsertedHandler);
+        var MutationObserver = window.MutationObserver;
+        var observer = new MutationObserver(function(mutations) {
+          var i, j, MAX, _MAX, nodes;
+
+          for (i = 0, MAX = mutations.length; i < MAX; ++i) {
+            nodes = mutations[i].addedNodes;
+
+            for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
+              $SS.handleMutation(nodes[j]);
+
+          }
+        });
+
+        observer.observe(document, { childList: true, subtree: true });
 
         if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
           if ((link = $("*[rel='stylesheet']")).exists())
@@ -714,6 +737,8 @@
       $SS.Themes.init();
       $SS.Mascots.init();
 
+      
+
       if (reload)
       {
         $SS.insertCSS();
@@ -721,28 +746,19 @@
       }
       else
       {
-        if (!$("link[rel=stylesheet]", document.head).exists() ||
-          ($(document.head).exists() && $SS.browser.gecko))
-          $(document).bind("DOMNodeInserted", $SS.insertCSS);
-        else
-          $SS.insertCSS();
-
+        $.asap((function() { return $("link[rel=stylesheet]", document.head).exists();}), $SS.insertCSS);
         if (/complete|interactive/.test(document.readyState))
           $SS.DOMLoaded();
         else
           $(document).bind("DOMContentLoaded", $SS.DOMLoaded);
       }
+
     },
 
     /* STYLING & DOM */
     insertCSS: function()
     {
       var css;
-
-      if ($("link[rel=stylesheet]", document.head).exists() || 
-        ($(document.head).exists() && $SS.browser.gecko))
-        $(document).unbind("DOMNodeInserted", $SS.insertCSS);
-      else return;
 
       $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
@@ -752,23 +768,12 @@
       else
         $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
     },
-    nodeInsertedHandler: function(e)
-    {
-      if ($(e.target).hasClass("postContainer"))
-      {
-        if (!$SS.browser.webkit && $SS.conf["Show Checkboxes"])
-          $("input[type=checkbox]", e.target).riceCheck();
-      }
-      else if (e.target.className === "thumbnail" ||
-           e.target.nodeName === "DIV" ||
-           e.target.id === "prefetch")
-      {
-        if (e.target.className === "thumbnail")
-          $(".riceFile>span", $("#qr")).text("");
+    handleMutation: function(el) {
+      if (el.className === "thumbnail")
+        $(".riceFile>span", $("#qr")).text("");
 
-        if (!$SS.browser.webkit)
-          $("input[type=checkbox]", e.target).riceCheck();
-      }
+      if (!$SS.browser.webkit)
+        $("input[type=checkbox]", el).riceCheck();
     },
 
     /* CONFIG */
@@ -2368,6 +2373,7 @@
         $("html").optionClass("Autohide Style",               2,      "vertical-qr" );
         $("html").optionClass("Autohide Style",               3,      "fade-qr" );
         $("html").optionClass("SS-like Sidebar",              true,   "ss-sidebar" );
+        $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
       }
     },
 
@@ -3391,5 +3397,4 @@
   /* END STYLE SCRIPT CLASSES */
 
   $SS.init();
-  console.log();
 })();

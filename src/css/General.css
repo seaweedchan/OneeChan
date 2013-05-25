@@ -32,10 +32,24 @@ body {
 :root.expand-cover .expanded-image {
   z-index: 9 !important;
 }
+:root.force-op .op::after
+{
+  clear:both;
+  content:'';
+  display:block;
+}
 /* Fit Width option */
 :root.reply-fit-width .reply.post {
   display: block !important;
   overflow: hidden;
+}
+:root.reply-fit-width .expanded-image>.post {
+  overflow: visible !important;
+}
+:root.reply-fit-width .expanded-image>.post::after {
+  clear:both !important;
+  content:'' !important;
+  display:block !important;
 }
 :root.reply-fit-width .threadContainer {
   margin-left: 0px !important;
