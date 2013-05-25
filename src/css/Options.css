@@ -170,6 +170,9 @@ select[name='Font Family']>option {
   right:3px;
   z-index:1;  
 }
+:root.catalog blockquote {
+  margin: 12px 40px !important;
+}
 /* Add THeme */
 #add-theme
 {

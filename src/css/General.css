@@ -317,6 +317,11 @@ hr {
 }
 :root.banner-opacity #banner {
   opacity: 0.5;
+  transition: opacity .3s ease-out 0s;
+}
+:root.banner-opacity #banner:hover {
+  opacity: 1.0 !important;
+  transition: opacity .3s ease-in 0s;
 }
 
 /* Pages */

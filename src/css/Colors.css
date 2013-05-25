@@ -11,16 +11,20 @@ div.boardBanner,
 #menu,
 input:not(.jsColor),
 textarea,
-#qr-filename-container {
+#qr-filename-container,
+#post-preview,
+.post-last {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
 .name,
-.com {
+.com,
+.post-author {
   color: " + $SS.theme.nameColor.hex + " !important;
 }
 /* Tripcodes */
 .postertrip,
+.post-tripcode,
 .tag {
   color: " + $SS.theme.tripColor.hex + " !important;
 }
@@ -28,7 +32,8 @@ textarea,
 /* Links */
 a,
 .typ, 
-.atn {
+.atn,
+:root.catalog .button {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
 a.summary,
@@ -36,6 +41,7 @@ a.summary,
   color: " + $SS.theme.textColor.hex + " !important;
 }
 a:hover,
+:root.catalog .button:hover,
 .lit {
   color: " + $SS.theme.linkHColor.hex + " !important;
 }
@@ -57,6 +63,7 @@ a:hover,
 }
 /* Subject and Option labels */
 .subject,
+.replytitle,
 .option.header .option-title,
 .kwd {
   color: " + $SS.theme.titleColor.hex + " !important;
@@ -90,8 +97,10 @@ body {
   background: " + $SS.theme.bgColor.hex + " !important;
 }
 .reply,
+:root.catalog .panel,
 .dialog,
 .tab-label,
+#post-preview,
 .flashListing tr:nth-of-type(2n+1) {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
@@ -175,6 +184,7 @@ hr {
 .entry,
 .inline,
 fieldset,
+#post-preview,
 .flashListing td:not(:last-of-type):not(.postblock) {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }

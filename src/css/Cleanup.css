@@ -6,6 +6,7 @@
 iframe[src='about:blank'],
 #absbot,
 .stylechanger,
+#styleSwitcher,
 .topad.center,
 .middlead.center,
 .bottomad.center,
@@ -22,6 +23,7 @@ iframe[src='about:blank'],
 :root.hide-button .qr-link-container,
 :root.reply-fit-width .sideArrows,
 body>hr,
+:root.catalog hr,
 .navLinks {
   display: none;
 }
