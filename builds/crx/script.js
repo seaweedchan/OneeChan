@@ -1744,7 +1744,7 @@
           inputbColor:  "dedede",
           headerBGColor:"3d444e",
           headerColor:  "ffffff",
-          boardColor:   "5f5f65",
+          boardColor:   "999999",
           bgColor:      "f2f2f2",
           textColor:    "717171",
           blinkColor:   "999999",
