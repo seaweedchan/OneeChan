@@ -75,7 +75,8 @@ body {
 }
 .reply,
 .dialog,
-.tab-label {
+.tab-label,
+.flashListing tr:nth-of-type(2n+1) {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
 :root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post {
@@ -157,7 +158,8 @@ hr {
 .dialog,
 .entry,
 .inline,
-fieldset {
+fieldset,
+.flashListing td:not(:last-of-type):not(.postblock) {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
@@ -180,6 +182,10 @@ textarea:focus,
 }
 #header-bar {
   border: none !important;
+}
+.flashListing td:not(:last-of-type):not(.postblock) {
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* Outlines */

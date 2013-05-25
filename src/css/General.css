@@ -330,3 +330,31 @@ hr {
 .cataloglink {
   margin-left: -10px;
 }
+
+/* /f/ */
+table.flashListing {
+  margin: auto !important;
+}
+table.flashListing .highlightPost {
+  background: none !important;
+}
+table.flashListing .highlightPost::after {
+  content: '●';
+  color: rgb(214, 149, 149);
+  position: relative;
+  left: 12px;
+  margin-left: -10px;
+}
+.flashListing > tbody {
+  padding-top: 200px;
+}
+.flashListing td {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  text-align: center !important;
+}
+#delform[action='https://sys.4chan.org/f/up.php'], #delform[action='https://sys.4chan.org/f/up.php'] .postblock {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
