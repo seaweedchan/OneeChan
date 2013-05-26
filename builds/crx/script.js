@@ -1584,7 +1584,7 @@
             "<span class='options-button'>Select Image</span></div>" +
             "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
             "<a class='options-button' name=clearIMG>Clear Image</a>" +
-            "<a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
+            " " + (!(bEdit) ? "<a class='options-button' name=add>Save</a>" : "") + "<a class='options-button' name=cancel>Cancel</a></div></div>");
         
         overlay = $("<div id=overlay2>").append(div);
 
@@ -1607,7 +1607,12 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"),
-          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault, noClose;
+
+        noClose = false;
+
+        if (mIndex !== undefined)
+          noClose = true;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
         cOffset   = parseInt($("input[name=mOffset]", overlay).val());
@@ -1657,9 +1662,9 @@
 
         overlay.remove();
 
-        if (!mIndex) {
+        if (noClose)
           $SS.options.showMascot($SS.conf["Mascots"].length-1);
-        }
+
 
         return;
       },
