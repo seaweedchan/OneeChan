@@ -41,9 +41,13 @@ a.summary,
 .pages strong>a {
   color: " + $SS.theme.textColor.hex + " !important;
 }
+#header-bar #notifications a {
+  color: #ffffff !important;
+}
 a:hover,
 :root.catalog .button:hover,
-.lit {
+.lit,
+#header-bar #notifications a:hover {
   color: " + $SS.theme.linkHColor.hex + " !important;
 }
 /* Header */

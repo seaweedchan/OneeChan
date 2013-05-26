@@ -251,6 +251,7 @@ input[type=checkbox]:checked+.riceCheck::before
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
+  margin-left: 10px;
 }
 .deleteform input[type=checkbox],
 .deleteform .riceCheck {
