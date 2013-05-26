@@ -1569,7 +1569,7 @@
             "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.position ? mEdit.offset + "px" : "") + "'></label>" +
             "<label class='add-mascot-label' title='Prevent streching with smaller images (Width < 313px)'><span class='option-title'>Prevent stretching:</span>" +
             "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
-            "<label class='add-mascot-label' title='Horizontally flip the mascot when sidebar is on the left'><span class='option-title'>Flip with sidebar:</span>" +
+            "<label class='add-mascot-label' title='Horizontally flip the mascot when sidebar is on the left'><span class='option-title'>Flip image:</span>" +
             "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip == undefined)) ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option'>" +
             "<span class='option-title'>Allow overflow:</span><input type=checkbox name=mOverflow" + (bEdit && mEdit.overflow ? " checked" : "") + "></label>" +
@@ -1640,7 +1640,7 @@
           }
 
           tMascot = new $SS.Image(cIMG);
-          $("#mascot" + mIndex).attr("style", "background:" + tMascot.get());
+          $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
         }
         else
         {
@@ -3106,7 +3106,7 @@
         else
           ret = this.img;
 
-        return ret;
+        return (this.RPA !== undefined ? "url('" : "") + ret + (this.RPA !== undefined ? "')" + this.RPA : "");
       };
     },
     Mascot: function(index)
@@ -3126,10 +3126,8 @@
       this.position = mascot.position;
       this.overflow = mascot.overflow;
       this.getOverflow = mascot.overflow ? "auto" : "302px";
-      this.flip     = mascot.flip == undefined ? true : mascot.flip;
-      this.img      = new $SS.Image(mascot.img,
-        "no-repeat " + ("center") +
-        " " + (this.position || "bottom"));
+      this.flip     = mascot.flip ? "scaleX(-1); -webkit-transform: scaleX(-1)" : "";
+      this.img      = new $SS.Image(mascot.img);
       this.small    = mascot.small || this.overflow;
       this.getSmall = mascot.small ? "": "contain";
       this.bOffset  = typeof mascot.offset === "number";
