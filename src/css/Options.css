@@ -53,7 +53,8 @@
   height:500px;
 }
 .options-section {
-  overflow:auto;
+  overflow-y:auto;
+  overflow-x:hidden;
 }
 #main-section .option {
   display:block;
