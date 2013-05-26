@@ -687,9 +687,6 @@
           div.text("x");
         };
 
-        var createMascot = $("<div id=mascot><img src=" + $SS.mascot.img.get() + ">");
-        $(document.body).append(createMascot);
-
         // things that need to change after 4chan X loads.
         setTimeout(function() {
           if (!$SS.QRhandled && (div = $("#qr")).exists())
@@ -698,8 +695,8 @@
 
       }
       
+      $SS.insertMascot()
       $SS.pages.init();
-
       $SS.riceInputs.init();
       $SS.logoReflect.init();
     },
@@ -783,9 +780,16 @@
         $("#ch4SS").text(css);
       else
         $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
+    },
+    insertMascot: function()
+    {
+      var createMascot;
 
-      var createMascot = $("<div id=mascot><img src=" + $SS.mascot.img.get() + ">");
-      $("#mascot").replace(createMascot);
+      createMascot = $("<div id=mascot><img src=" + $SS.mascot.img.get() + ">");
+      if ((div = $("#mascot")).exists())
+        div.replace(createMascot);
+      else
+        $(document.body).append(createMascot);
     },
     QRDialogCreationHandler: function(e)
     {
