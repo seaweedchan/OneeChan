@@ -784,7 +784,7 @@
     {
       var createMascot;
 
-      createMascot = $("<div id=mascot><img src=" + $SS.mascot.img.get() + ">");
+      createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
       if ((div = $("#mascot")).exists())
         div.replace(createMascot);
       else
