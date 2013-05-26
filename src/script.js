@@ -1566,14 +1566,8 @@
         div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "[Base 64 Encoded Image]' disabled=true") : "'") +
             "></label>" +
-            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Alignment/Offset:</span>" +
-            "<select class='mascot-select' name=mPosition>" +
-              "<option" + ((bEdit && !mEdit.position) || !bEdit ? " selected" : "") + ">Auto</option>" +
-              "<option" + (bEdit && mEdit.position === "top" ? " selected" : "") + ">Top</option>" +
-              "<option" + (bEdit && mEdit.position === "center" ? " selected" : "") + ">Center</option>" +
-              "<option" + (bEdit && mEdit.position === "bottom" ? " selected" : "") + ">Bottom</option>" +
-            "</select>" +
-            "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.position ? mEdit.offset + "px" : "") + "'></label>" +
+            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Offset:</span>" +
+            "<input class='mascot-input offset' type=text name=mOffset value='" + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px'></label>" +
             "<label class='add-mascot-label' title='Prevent streching with smaller images'><span class='option-title'>Prevent stretching:</span>" +
             "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
@@ -1606,16 +1600,14 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"),
-          bSetPos, cIMG, cPosition, cOffset, cSmall, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
-        cPosition = $("select[name=mPosition]", overlay).val().toLowerCase();
         cOffset   = parseInt($("input[name=mOffset]", overlay).val()) || 0;
         cSmall    = $("input[name=mSmall]", overlay).val();
         cFlip     = $("input[name=mFlip]", overlay).val();
         cOverflow = $("input[name=mOverflow]", overlay).val();
         cBoards   = $("input[name=mBoards]", overlay).val();
-        bSetPos   = cPosition !== "auto";
 
         if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
           return alert("Invalid image URL/base64.");
@@ -1635,16 +1627,7 @@
           else
             delete $SS.conf["Mascots"][mIndex].boards;
 
-          if (bSetPos)
-          {
-            $SS.conf["Mascots"][mIndex].position = cPosition;
-            $SS.conf["Mascots"][mIndex].offset   = cOffset;
-          }
-          else
-          {
-            delete $SS.conf["Mascots"][mIndex].position;
-            delete $SS.conf["Mascots"][mIndex].offset;
-          }
+          $SS.conf["Mascots"][mIndex].offset   = cOffset;
 
           tMascot = new $SS.Image(cIMG);
           $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
@@ -1653,12 +1636,8 @@
         {
           var tMascot = { img: cIMG, small: cSmall, flip: cFlip, overflow: cOverflow, boards: (cBoards === "" ? undefined : cBoards) };
 
-          if (bSetPos)
-          {
-            tMascot.position = cPosition;
-            tMascot.offset   = cOffset;
-            tMascot.overflow = cOverflow;
-          }
+          tMascot.offset   = cOffset;
+          tMascot.overflow = cOverflow;
 
           if (bDefault)
             $SS.options.deleteMascot(mIndex);
@@ -2324,7 +2303,7 @@
         { img: "https://i.minus.com/irXtk9ydjWtsl.png",                                                          "default":   true }, // Hasekura Youko
         { img: "https://i.minus.com/i3B8dszlW3Mfw.png",                                                          "default":   true }, // Hatsune Miku
         { img: "https://i.minus.com/iDNDSbUD5pXHZ.png",                                                          "default":   true }, // Hatsune Miku 2
-        { img: "https://i.minus.com/iLkr2EDaYmknX.png", offset: -120, position: "center",                        "default":   true }, // Hatsune Miku (big)
+        { img: "https://i.minus.com/iLkr2EDaYmknX.png", offset: -120,                                            "default":   true }, // Hatsune Miku (big)
         { img: "https://i.minus.com/idk1cr4HEhd9C.png",                                                          "default":   true }, // Hirasawa Yui
         { img: "https://i.minus.com/i8B0jpOGGqr8F.png",                                                          "default":   true }, // Ika Musume
         { img: "https://i.minus.com/iIKosmoehVEsl.png",                                                          "default":   true }, // Ika Musume 2
@@ -2338,17 +2317,17 @@
         { img: "https://i.minus.com/izQNQ4akphZWn.png",                                                          "default":   true }, // Shana
         { img: "https://i.minus.com/iMUgBG7BdvMUU.png",                                                          "default":   true }, // Shinonome Hakase
         { img: "https://i.minus.com/iYuOeiFWnqP9i.png",                                                          "default":   true }, // Suzumiya Haruhi
-        { img: "https://i.minus.com/iWUx3OHgNeyrS.png", offset: -120, position: "center",                        "default":   true }, // Suzumiya Haruhi 2
+        { img: "https://i.minus.com/iWUx3OHgNeyrS.png", offset: -120,                                            "default":   true }, // Suzumiya Haruhi 2
         { img: "https://i.minus.com/iortvyiEFHVQi.png", overflow: true,                                          "default":   true }, // asuka
         { img: "https://i.minus.com/ir1jBydJsjYtX.png",                                                          "default":   true }, // erio
         { img: "https://i.minus.com/iIoEVlv6PpsZt.png",                                                          "default":   true }, // homu
-        { img: "https://i.minus.com/ilMeKtSdD4Ih9.png", offset: -90, position: "center", small: true,            "default":   true }, // kuroneko
+        { img: "https://i.minus.com/ilMeKtSdD4Ih9.png", offset: -90,                     small: true,            "default":   true }, // kuroneko
         { img: "https://i.minus.com/i40A8T1uvg833.png", small: true,                                             "default":   true }, // lain
         { img: "https://i.minus.com/iHnv6bBdH3ElF.png",                                                          "default":   true }, // luka
-        { img: "https://i.minus.com/iqVknxajfDzAD.png", offset: -90, position: "center",                         "default":   true }, // madotsuki
+        { img: "https://i.minus.com/iqVknxajfDzAD.png", offset: -90,                                             "default":   true }, // madotsuki
         { img: "https://i.minus.com/ibkEnN35Yaewt2.png", overflow: true,                                         "default":   true }, // ムゥ～りさ
         { img: "https://i.minus.com/iiEOIF7u05fIr.png", flip: false, overflow: true,                             "default":   true }, // mio
-        { img: "https://i.minus.com/ieZPtyTynlwBK.png", offset: 0, position: "center",                           "default":   true }, // mokou
+        { img: "https://i.minus.com/ieZPtyTynlwBK.png", offset: 0,                                               "default":   true }, // mokou
         { img: "https://i.minus.com/ib1pOfjwSD53sl.png", flip: false, small: true,                               "default":   true }, // shana
         { img: "https://i.minus.com/iRA9OW02HVchv.png",                                                          "default":   true }, // shiki
         { img: "https://i.minus.com/ik0hNJ61QjgD0.png",                                                          "default":   true }, // yin
@@ -3130,7 +3109,6 @@
       this.index    = index;
       this.hidden   = $SS.conf["Hidden Mascots"].indexOf(index) !== -1;
       this.default  = mascot.default;
-      this.position = mascot.position;
       this.overflow = mascot.overflow;
       this.getOverflow = mascot.overflow ? "auto" : "302px";
       this.flip     = mascot.flip ? "scaleX(-1); -webkit-transform: scaleX(-1)" : "";
