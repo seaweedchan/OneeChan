@@ -783,6 +783,9 @@
         $("#ch4SS").text(css);
       else
         $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
+
+      var createMascot = $("<div id=mascot><img src=" + $SS.mascot.img.get() + ">");
+      $("#mascot").replace(createMascot);
     },
     QRDialogCreationHandler: function(e)
     {
@@ -1568,9 +1571,9 @@
               "<option" + (bEdit && mEdit.position === "bottom" ? " selected" : "") + ">Bottom</option>" +
             "</select>" +
             "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.position ? mEdit.offset + "px" : "") + "'></label>" +
-            "<label class='add-mascot-label' title='Prevent streching with smaller images (Width < 313px)'><span class='option-title'>Prevent stretching:</span>" +
+            "<label class='add-mascot-label' title='Prevent streching with smaller images'><span class='option-title'>Prevent stretching:</span>" +
             "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
-            "<label class='add-mascot-label' title='Horizontally flip the mascot when sidebar is on the left'><span class='option-title'>Flip image:</span>" +
+            "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
             "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip == undefined)) ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option'>" +
             "<span class='option-title'>Allow overflow:</span><input type=checkbox name=mOverflow" + (bEdit && mEdit.overflow ? " checked" : "") + "></label>" +
@@ -1642,6 +1645,7 @@
 
           tMascot = new $SS.Image(cIMG);
           $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
+          $("#mascot img").attr("src", "" + tMascot.get() + "");
         }
         else
         {
