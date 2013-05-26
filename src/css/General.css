@@ -409,3 +409,27 @@ table.flashListing .highlightPost::after {
   border: none !important;
   box-shadow: none !important;
 }
+
+/* Mascot */
+#mascot img {
+  height:auto;
+  width:" + $SS.mascot.getOverflow + ";
+  background-size:" + $SS.mascot.getSmall + ";
+  bottom: 0px!important;
+  margin-bottom:" + $SS.mascot.offset + "px;
+  position:fixed;
+  z-index:2;
+  pointer-events: none;
+  right: 0px;
+}
+#delform {
+  z-index: 3;
+  position: relative;
+}
+.bottom:not(.autohide) #mascot img{
+  bottom: 22px !important;
+}
+:root.left-sidebar #mascot img {
+  left: 0px;
+  right: auto !important;
+}

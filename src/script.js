@@ -686,6 +686,9 @@
           div.text("x");
         };
 
+        var createMascot = $("<div id=mascot><img src=" + $SS.mascot.img.get() + ">");
+        $(document.body).append(createMascot);
+
         // things that need to change after 4chan X loads.
         setTimeout(function() {
           if (!$SS.QRhandled && (div = $("#qr")).exists())
@@ -3097,13 +3100,13 @@
       {
         if (!this.img) return "none ";
 
-        var ret = "url('";
+        var ret = "";
         if ($SS.validBase64(this.img))
-          ret += "data:image/" + $SS.typeofBase64(this.img) + ";base64," + this.img;
+          ret = "data:image/" + $SS.typeofBase64(this.img) + ";base64," + this.img;
         else
-          ret += this.img;
+          ret = this.img;
 
-        return ret + "')" + (this.RPA != undefined ? " " + this.RPA : "");
+        return ret;
       };
     },
     Mascot: function(index)
@@ -3122,13 +3125,15 @@
       this.default  = mascot.default;
       this.position = mascot.position;
       this.overflow = mascot.overflow;
+      this.getOverflow = mascot.overflow ? "auto" : "302px";
       this.flip     = mascot.flip == undefined ? true : mascot.flip;
       this.img      = new $SS.Image(mascot.img,
         "no-repeat " + ("center") +
         " " + (this.position || "bottom"));
       this.small    = mascot.small || this.overflow;
+      this.getSmall = mascot.small ? "": "contain";
       this.bOffset  = typeof mascot.offset === "number";
-      this.offset   = this.bOffset ? mascot.offset : 24;
+      this.offset   = this.bOffset ? mascot.offset : ($SS.conf["Sidebar Position"] !== 3 ? 300 : 0);
       this.boards   = mascot.boards;
       this.enabled  = $SS.conf["Selected Mascots"] === 0 || $SS.conf["Selected Mascots"].indexOf(index) !== -1;
 
@@ -3136,7 +3141,7 @@
       {
         var div = $("<div " + (this.hidden ? "hidden=true " : "") +
               "id=mascot" + this.index + " class=\'mascot-preview" + (this.enabled ? " selected" : "") +
-              "\' style=\"background:" + this.img.get() + "\">")
+              "\' style=\"background: url(\'" + this.img.get() + "\')\">")
               .html("<a class='mascot-link delete' title=Delete>X</a><a class='mascot-link edit' title=Edit>E</a>");
 
         $(div).bind("click", function(){ $(this).toggleClass("selected"); });
