@@ -1564,13 +1564,13 @@
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
 
-        div = $("<div id='add-mascot' class='dialog'>").html("<div id=mascotprev>" + ((mEdit.img !== undefined) ? "<img src='" + mEdit.img + "' " +
+        div = $("<div id='add-mascot' class='dialog'>").html("<div id=mascotprev>" + (bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
             "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px !important;'>" : "") + 
             "</div><label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
-            "<input class='mascot-input offset' type=text name=mOffset value='" + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px'></label>" +
+            "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px'></label>" +
             "<label class='add-mascot-label' title='Prevent streching with smaller images'><span class='option-title'>Prevent stretching:</span>" +
             "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
@@ -1592,10 +1592,9 @@
         $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
 
         if (bEdit) {
-          $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex, true); });
+          $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex); });
           $("input", div).bind("change", function(){ 
-            $SS.options.addMascot(mIndex, true); 
-            $SS.options.showMascot($SS.conf["Mascots"].length-1); 
+            $SS.options.addMascot(false);  
           });
         }
         else
@@ -1605,10 +1604,13 @@
 
         return $(document.body).append(overlay);
       },
-      addMascot: function(mIndex, close)
+      addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"),
-          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault, noClose;
+
+        if (!(mIndex))
+          noClose = true;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
         cOffset   = parseInt($("input[name=mOffset]", overlay).val());
@@ -1617,10 +1619,10 @@
         cOverflow = $("input[name=mOverflow]", overlay).val();
         cBoards   = $("input[name=mBoards]", overlay).val();
 
-        if (cIMG !== undefined)
-          cIMG     = $SS.cleanBase64(cIMG);
-        else
-          cIMG = "";
+        if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
+          return alert("Must be an image file!");
+
+        cIMG     = $SS.cleanBase64(cIMG);
         bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
 
         if (typeof mIndex === "number" && !bDefault)
@@ -1656,8 +1658,13 @@
           tMascot.fire("click").scrollIntoView(true);
         }
 
-        if (close)
-          return overlay.remove();
+        overlay.remove();
+
+        if (noClose) {
+          $SS.options.showMascot($SS.conf["Mascots"].length-1);
+        }
+
+        return;
       },
       deleteMascot: function(mIndex)
       {
