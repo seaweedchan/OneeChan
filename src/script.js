@@ -1594,8 +1594,10 @@
         else
           $("a[name=add]", div).bind("click", $SS.options.addMascot);
 
-        $("a[name=cancel]", div).bind("click", function(){ $("#overlay2").remove(); });
+        $("a[name=cancel]", div).bind("click", function(){ $("#overlay2").remove(); $("#mascot").removeClass("previewing"); $("#overlay").removeClass("previewing"); });
 
+        $("#overlay").addClass("previewing");
+        $("#mascot").addClass("previewing");
         return $(document.body).append(overlay);
       },
       addMascot: function(mIndex)
@@ -1644,6 +1646,8 @@
           tMascot.fire("click").scrollIntoView(true);
         }
 
+        $("#overlay").removeClass("previewing");
+        $("#mascot").removeClass("previewing");
         return overlay.remove();
       },
       editMascot: function(mIndex)

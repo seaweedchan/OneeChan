@@ -34,6 +34,7 @@
   width: 600px;
   text-align:right!important;
   padding: 5px !important;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3) !important;
 }
 #add-theme {
   text-align:right!important;
@@ -320,6 +321,12 @@ select[name='Font Family']>option {
   display:inline-block;
   height:100%;
   vertical-align:middle;
+}
+#overlay.previewing {
+  opacity: 0 !important;
+}
+#overlay.previewing + #overlay2 {
+  background-color: rgba(0, 0, 0, 0.15) !important;
 }
 /* Buttons */
 .buttons-container {
