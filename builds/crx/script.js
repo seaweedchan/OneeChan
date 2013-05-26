@@ -1594,7 +1594,7 @@
         if (bEdit) {
           $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex); });
           $("input", div).bind("change", function(){ 
-            $SS.options.addMascot(false);  
+            $SS.options.addMascot(mIndex, false);  
           });
         }
         else
@@ -1607,10 +1607,7 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"),
-          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault, noClose;
-
-        if (!(mIndex))
-          noClose = true;
+          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
         cOffset   = parseInt($("input[name=mOffset]", overlay).val());
@@ -1660,7 +1657,7 @@
 
         overlay.remove();
 
-        if (noClose) {
+        if (!mIndex) {
           $SS.options.showMascot($SS.conf["Mascots"].length-1);
         }
 
