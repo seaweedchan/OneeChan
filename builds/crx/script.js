@@ -1612,10 +1612,10 @@
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
           bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
 
-        cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
-        cOffset   = parseInt($("input[name=mOffset]", overlay).val());
-        cFlip     = $("input[name=mFlip]", overlay).val();
-        cBoards   = $("input[name=mBoards]", overlay).val();
+        cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+        cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
+        cFlip     = $("input[name=mFlip]", mascotAdd).val();
+        cBoards   = $("input[name=mBoards]", mascotAdd).val();
 
         if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
           return alert("Must be an image file!");
@@ -1665,10 +1665,10 @@
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
           bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
 
-        cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
-        cOffset   = parseInt($("input[name=mOffset]", overlay).val());
-        cFlip     = $("input[name=mFlip]", overlay).val();
-        cBoards   = $("input[name=mBoards]", overlay).val();
+        cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+        cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
+        cFlip     = $("input[name=mFlip]", mascotAdd).val();
+        cBoards   = $("input[name=mBoards]", mascotAdd).val();
 
         if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
           return alert("Must be an image file!");
