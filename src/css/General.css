@@ -425,6 +425,9 @@ table.flashListing .highlightPost::after {
   right: 0px;
   bottom: 0px;
 }
+#mascotprev img {
+  z-index: 900 !important;
+}
 #mascot.previewing img {
   display: none;
 }

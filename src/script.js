@@ -1557,15 +1557,17 @@
       },
       showMascot: function(mIndex)
       {
-        var div, overlay, pOffset;
+        var div, overlay, pOffset, preview;
 
         if (typeof mIndex === "number")
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
+        if (bEdit && $SS.validImageURL(mEdit.img)) {
+          preview = $("<div id=mascotprev>").html((bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
+            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px !important; " + (bEdit && (mEdit.flip || mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
+        };
 
-        div = $("<div id='add-mascot' class='dialog'>").html("<div id=mascotprev>" + (bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
-            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px !important; " + (bEdit && (mEdit.flip || mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : "") + 
-            "</div><label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
+        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
@@ -1580,8 +1582,9 @@
             "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
             "<a class=options-button name=apply " + (bEdit ? "" : "hidden") + ">Apply</a><a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
         
-        overlay = $("<div id=overlay2>").append(div);
+        overlay = $("<div id=overlay2>");
         $("input[type=checkbox]", div).riceCheck();
+        
 
         $(".import-input", div).bind("change", $SS.options.SelectImage);
         $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
@@ -1595,15 +1598,17 @@
         else
           $("a[name=add]", div).bind("click", $SS.options.addMascot);
 
-        $("a[name=cancel]", div).bind("click", function(){ $("#overlay2").remove(); $("#mascot").removeClass("previewing"); $("#overlay").removeClass("previewing"); });
+        $("a[name=cancel]", div).bind("click", function(){ div.remove(); overlay.remove(); preview.remove(); $("#mascot").removeClass("previewing"); $("#overlay").removeClass("previewing"); });
 
         $("#overlay").addClass("previewing");
         $("#mascot").addClass("previewing");
+        $(document.body).append(preview);
+        $(document.body).append(div);
         return $(document.body).append(overlay);
       },
       addMascot: function(mIndex)
       {
-        var overlay = $("#overlay2"),
+        var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
           bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
@@ -1649,11 +1654,14 @@
 
         $("#overlay").removeClass("previewing");
         $("#mascot").removeClass("previewing");
+
+        preview.remove();
+        mascotAdd.remove();
         return overlay.remove();
       },
       editMascot: function(mIndex)
       {
-        var overlay = $("#overlay2"),
+        var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
           bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
@@ -1697,6 +1705,8 @@
           tMascot.fire("click").scrollIntoView(true);
         }
 
+        preview.remove();
+        mascotAdd.remove();
         overlay.remove();
           
         return $SS.options.showMascot($SS.conf["Mascots"].length-1);

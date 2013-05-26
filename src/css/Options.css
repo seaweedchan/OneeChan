@@ -31,6 +31,7 @@
   border: 0 !important;
   border-radius: 3px !important;
   right: 0px;
+  z-index: 999 !important;
   width: 600px;
   text-align:right!important;
   padding: 5px !important;
@@ -323,10 +324,11 @@ select[name='Font Family']>option {
   vertical-align:middle;
 }
 #overlay.previewing {
-  opacity: 0 !important;
+  display: none;
 }
-#overlay.previewing + #overlay2 {
+#overlay.previewing ~ #overlay2 {
   background-color: rgba(0, 0, 0, 0.15) !important;
+  z-index: 800 !important;
 }
 /* Buttons */
 .buttons-container {
