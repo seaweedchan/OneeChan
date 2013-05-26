@@ -1644,7 +1644,6 @@
 
           tMascot = new $SS.Image(cIMG);
           $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
-          $("#mascot img").attr("src", "" + tMascot.get() + "");
         }
         else
         {
