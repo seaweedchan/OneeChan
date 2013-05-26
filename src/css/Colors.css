@@ -91,6 +91,14 @@ a:hover,
 .pun {
   color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
+::-webkit-input-placeholder {
+  color:rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
+}
+#qr .field::-moz-placeholder,
+::-moz-placeholder,
+#qr-no-file {
+  color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
+}
 
 /* Backgrounds */
 html, 
