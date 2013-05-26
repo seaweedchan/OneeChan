@@ -416,8 +416,7 @@ table.flashListing .highlightPost::after {
 /* Mascot */
 #mascot img, #mascotprev img {
   height:auto;
-  width:" + $SS.mascot.getOverflow + ";
-  background-size:" + $SS.mascot.getSmall + ";
+  width:auto;
   margin-bottom:" + $SS.mascot.offset + "px;
   transform: " + $SS.mascot.flip + ";
   position:fixed;

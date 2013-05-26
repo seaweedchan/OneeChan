@@ -1564,26 +1564,21 @@
             mEdit = $SS.conf["Mascots"][mIndex];
 
         div = $("<div id='add-mascot' class='dialog'>").html("<div id=mascotprev>" + (bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
-            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px !important;'>" : "") + 
+            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px !important;'>" : "") + 
             "</div><label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
-            "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px'></label>" +
-            "<label class='add-mascot-label' title='Prevent streching with smaller images'><span class='option-title'>Prevent stretching:</span>" +
-            "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
+            "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
             "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip == undefined)) ? " checked" : "") + "></label>" +
-            "<label class='add-mascot-label' title='Allows the mascot to be shown outside the sidebar, ignores `Prevent stretching` option'>" +
-            "<span class='option-title'>Allow overflow:</span><input type=checkbox name=mOverflow" + (bEdit && mEdit.overflow ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
             "<input class='mascot-input mascot-boards' type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
             "<div id='mascot-buttons-container'>" +
             "<div id='import-link'><input class='import-input' type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
-            "<span class='options-button'>Select Image</span></div>" +
+            "<span class='options-button'>Select Image</span><a class='options-button' name=clearIMG>Clear Image</a></div>" +
             "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
-            "<a class='options-button' name=clearIMG>Clear Image</a>" +
-            " " + (!(bEdit) ? "<a class='options-button' name=add>Save</a>" : "") + "<a class='options-button' name=cancel>Cancel</a></div></div>");
+            "<a class=options-button name=apply " + (bEdit ? "" : "hidden") + ">Apply</a><a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
         
         overlay = $("<div id=overlay2>").append(div);
 
@@ -1592,8 +1587,8 @@
 
         if (bEdit) {
           $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex); });
-          $("input", div).bind("change", function(){ 
-            $SS.options.addMascot(mIndex, false);  
+          $("a[name=apply]", div).bind("click", function(){ 
+            $SS.options.editMascot(mIndex);  
           });
         }
         else
@@ -1606,18 +1601,11 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"),
-          bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault, noClose;
-
-        noClose = false;
-
-        if (mIndex !== undefined)
-          noClose = true;
+          bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
         cOffset   = parseInt($("input[name=mOffset]", overlay).val());
-        cSmall    = $("input[name=mSmall]", overlay).val();
         cFlip     = $("input[name=mFlip]", overlay).val();
-        cOverflow = $("input[name=mOverflow]", overlay).val();
         cBoards   = $("input[name=mBoards]", overlay).val();
 
         if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
@@ -1629,9 +1617,7 @@
         if (typeof mIndex === "number" && !bDefault)
         {
           $SS.conf["Mascots"][mIndex].img      = cIMG;
-          $SS.conf["Mascots"][mIndex].small    = cSmall;
           $SS.conf["Mascots"][mIndex].flip     = cFlip;
-          $SS.conf["Mascots"][mIndex].overflow = cOverflow;
 
           if (cBoards !== "")
             $SS.conf["Mascots"][mIndex].boards   = cBoards;
@@ -1645,10 +1631,57 @@
         }
         else
         {
-          var tMascot = { img: cIMG, small: cSmall, flip: cFlip, overflow: cOverflow, boards: (cBoards === "" ? undefined : cBoards) };
+          var tMascot = { img: cIMG, flip: cFlip, boards: (cBoards === "" ? undefined : cBoards) };
 
           tMascot.offset   = cOffset;
-          tMascot.overflow = cOverflow;
+
+          if (bDefault)
+            $SS.options.deleteMascot(mIndex);
+
+          mIndex = $SS.conf["Mascots"].push(tMascot);
+          tMascot = new $SS.Mascot(--mIndex).preview();
+          $("#mascot-section").append(tMascot);
+          tMascot.fire("click").scrollIntoView(true);
+        }
+
+        return overlay.remove();
+      },
+      editMascot: function(mIndex)
+      {
+        var overlay = $("#overlay2"),
+          bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
+
+        cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
+        cOffset   = parseInt($("input[name=mOffset]", overlay).val());
+        cFlip     = $("input[name=mFlip]", overlay).val();
+        cBoards   = $("input[name=mBoards]", overlay).val();
+
+        if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
+          return alert("Must be an image file!");
+
+        cIMG     = $SS.cleanBase64(cIMG);
+        bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
+
+        if (typeof mIndex === "number" && !bDefault)
+        {
+          $SS.conf["Mascots"][mIndex].img      = cIMG;
+          $SS.conf["Mascots"][mIndex].flip     = cFlip;
+
+          if (cBoards !== "")
+            $SS.conf["Mascots"][mIndex].boards   = cBoards;
+          else
+            delete $SS.conf["Mascots"][mIndex].boards;
+
+          $SS.conf["Mascots"][mIndex].offset   = cOffset;
+
+          tMascot = new $SS.Image(cIMG);
+          $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
+        }
+        else
+        {
+          var tMascot = { img: cIMG, flip: cFlip, boards: (cBoards === "" ? undefined : cBoards) };
+
+          tMascot.offset   = cOffset;
 
           if (bDefault)
             $SS.options.deleteMascot(mIndex);
@@ -1660,12 +1693,8 @@
         }
 
         overlay.remove();
-
-        if (noClose)
-          $SS.options.showMascot($SS.conf["Mascots"].length-1);
-
-
-        return;
+          
+        return $SS.options.showMascot($SS.conf["Mascots"].length-1);
       },
       deleteMascot: function(mIndex)
       {
@@ -2315,12 +2344,12 @@
         { img: "https://i.minus.com/i9fkOkQQ0Iyov.png",                                                          "default":   true }, // Asuka Langley Soryu
         { img: "https://i.minus.com/ibp4PTT2SK6I4o.png",                                                         "default":   true }, // BLACK★ROCK SHOOTER
         { img: "https://i.minus.com/iWV2iXY4AgeAz.png",                                                          "default":   true }, // Dawn / Hikari (Pokemon)
-        { img: "https://i.minus.com/iwijU3hXlJwvx.png", small: true,                                             "default":   true }, // Furudo Erika
+        { img: "https://i.minus.com/iwijU3hXlJwvx.png",                                              "default":   true }, // Furudo Erika
         { img: "https://i.minus.com/ixEW2qpW09BuX.png",                                                          "default":   true }, // Gasai Yuno
         { img: "https://i.minus.com/irXtk9ydjWtsl.png",                                                          "default":   true }, // Hasekura Youko
         { img: "https://i.minus.com/i3B8dszlW3Mfw.png",                                                          "default":   true }, // Hatsune Miku
         { img: "https://i.minus.com/iDNDSbUD5pXHZ.png",                                                          "default":   true }, // Hatsune Miku 2
-        { img: "https://i.minus.com/iLkr2EDaYmknX.png", offset: -120,                                            "default":   true }, // Hatsune Miku (big)
+        { img: "https://i.minus.com/iLkr2EDaYmknX.png",                                             "default":   true }, // Hatsune Miku (big)
         { img: "https://i.minus.com/idk1cr4HEhd9C.png",                                                          "default":   true }, // Hirasawa Yui
         { img: "https://i.minus.com/i8B0jpOGGqr8F.png",                                                          "default":   true }, // Ika Musume
         { img: "https://i.minus.com/iIKosmoehVEsl.png",                                                          "default":   true }, // Ika Musume 2
@@ -2329,32 +2358,32 @@
         { img: "https://i.minus.com/iben2goxAmh7aV.png",                                                         "default":   true }, // Kaname Madoka
         { img: "https://i.minus.com/ihyDfRynJ25vD.png",                                                          "default":   true }, // Koiwai Yotsuba
         { img: "https://i.minus.com/ijJber6Ts4www.png",                                                          "default":   true }, // Nagato Yuki 
-        { img: "https://i.minus.com/ibtRMzjF9MS6oy.png", overflow: true,                                         "default":   true }, // Nakano Azusa
-        { img: "http://i.minus.com/i87u3AnyzlVnb.png", small: true,                                              "default":   true }, // Patchouli Knowledge
+        { img: "https://i.minus.com/ibtRMzjF9MS6oy.png",                                         "default":   true }, // Nakano Azusa
+        { img: "http://i.minus.com/i87u3AnyzlVnb.png",                                               "default":   true }, // Patchouli Knowledge
         { img: "https://i.minus.com/izQNQ4akphZWn.png",                                                          "default":   true }, // Shana
         { img: "https://i.minus.com/iMUgBG7BdvMUU.png",                                                          "default":   true }, // Shinonome Hakase
         { img: "https://i.minus.com/iYuOeiFWnqP9i.png",                                                          "default":   true }, // Suzumiya Haruhi
         { img: "https://i.minus.com/iWUx3OHgNeyrS.png", offset: -120,                                            "default":   true }, // Suzumiya Haruhi 2
-        { img: "https://i.minus.com/iortvyiEFHVQi.png", overflow: true,                                          "default":   true }, // asuka
+        { img: "https://i.minus.com/iortvyiEFHVQi.png",                                           "default":   true }, // asuka
         { img: "https://i.minus.com/ir1jBydJsjYtX.png",                                                          "default":   true }, // erio
         { img: "https://i.minus.com/iIoEVlv6PpsZt.png",                                                          "default":   true }, // homu
-        { img: "https://i.minus.com/ilMeKtSdD4Ih9.png", offset: -90,                     small: true,            "default":   true }, // kuroneko
-        { img: "https://i.minus.com/i40A8T1uvg833.png", small: true,                                             "default":   true }, // lain
+        { img: "https://i.minus.com/ilMeKtSdD4Ih9.png", offset: -90,                                 "default":   true }, // kuroneko
+        { img: "https://i.minus.com/i40A8T1uvg833.png",                                              "default":   true }, // lain
         { img: "https://i.minus.com/iHnv6bBdH3ElF.png",                                                          "default":   true }, // luka
         { img: "https://i.minus.com/iqVknxajfDzAD.png", offset: -90,                                             "default":   true }, // madotsuki
-        { img: "https://i.minus.com/ibkEnN35Yaewt2.png", overflow: true,                                         "default":   true }, // ムゥ～りさ
-        { img: "https://i.minus.com/iiEOIF7u05fIr.png", flip: false, overflow: true,                             "default":   true }, // mio
+        { img: "https://i.minus.com/ibkEnN35Yaewt2.png",                                          "default":   true }, // ムゥ～りさ
+        { img: "https://i.minus.com/iiEOIF7u05fIr.png", flip: false,                              "default":   true }, // mio
         { img: "https://i.minus.com/ieZPtyTynlwBK.png", offset: 0,                                               "default":   true }, // mokou
-        { img: "https://i.minus.com/ib1pOfjwSD53sl.png", flip: false, small: true,                               "default":   true }, // shana
+        { img: "https://i.minus.com/ib1pOfjwSD53sl.png", flip: false,                                "default":   true }, // shana
         { img: "https://i.minus.com/iRA9OW02HVchv.png",                                                          "default":   true }, // shiki
         { img: "https://i.minus.com/ik0hNJ61QjgD0.png",                                                          "default":   true }, // yin
         { img: "https://i.minus.com/i0v2fCxA6msfB.png",                                                          "default":   true }, // yuzuki
-        { img: "https://i.minus.com/iBvqnYscczL3D.png", overflow: true,                                          "default":   true }, // patchouli 2
+        { img: "https://i.minus.com/iBvqnYscczL3D.png",                                           "default":   true }, // patchouli 2
         { img: "https://i.minus.com/i31h7nnelAj5C.png",                                                          "default":   true }, // kefka
         { img: "https://i.minus.com/iNB442qqEYXzn.png",                                                          "default":   true }, // ciel
         { img: "https://i.minus.com/ibc2GhW4AW6tYy.png",                                                         "default":   true }, // fubuki atsuya
         { img: "https://i.minus.com/iqIGKQS61Uydk.png",                                                          "default":   true }, // inazuma 1
-        { img: "https://i.minus.com/indbfcA4TS0Xb.png", small: true,                                             "default":   true }, // inazuma 2
+        { img: "https://i.minus.com/indbfcA4TS0Xb.png",                                              "default":   true }, // inazuma 2
         { img: "https://i.minus.com/ijdm4b711HIWs.png",                                                          "default":   true }, // inazuma 3
         { img: "https://i.minus.com/i2ODpJc3iRt3A.png",                                                          "default":   true }, // inazuma 4
         { img: "https://i.minus.com/i8FafJhXgAyWo.png",                                                          "default":   true }, // inazuma 5
@@ -2362,12 +2391,12 @@
         { img: "https://i.minus.com/igbibpeTcWQIS.png",                                                          "default":   true }, // inazuma 7
         { img: "https://i.minus.com/ibjnPNJv4QGiUn.png",                                                         "default":   true }, // inga
         { img: "https://i.minus.com/ihhgWi5dADZKx.png",                                                          "default":   true }, // knb
-        { img: "https://i.minus.com/iwp3zHABdUZn9.png", small: true,                                             "default":   true }, // knb 2
-        { img: "https://i.minus.com/iP4MQ0TblOArQ.png", small: true,                                             "default":   true }, // kuroshitsuji
+        { img: "https://i.minus.com/iwp3zHABdUZn9.png",                                              "default":   true }, // knb 2
+        { img: "https://i.minus.com/iP4MQ0TblOArQ.png",                                              "default":   true }, // kuroshitsuji
         { img: "https://i.minus.com/iboIUPbZAbNRiz.png",                                                         "default":   true }, // magi 1
         { img: "https://i.minus.com/ibptj9XtEE4yoi.png",                                                         "default":   true }, // magi 2
-        { img: "https://i.minus.com/iJlh7Ek7QGYHf.png", small: true,                                             "default":   true }, // shinji
-        { img: "https://i.minus.com/i7hTdHzxeHKuM.png", small: true,                                             "default":   true }, // shuu
+        { img: "https://i.minus.com/iJlh7Ek7QGYHf.png",                                              "default":   true }, // shinji
+        { img: "https://i.minus.com/i7hTdHzxeHKuM.png",                                              "default":   true }, // shuu
         { img: "https://i.minus.com/ibvGG8EqpN9CVW.png",                                                         "default":   true }  // uta
       ],
 
@@ -3126,13 +3155,9 @@
       this.index    = index;
       this.hidden   = $SS.conf["Hidden Mascots"].indexOf(index) !== -1;
       this.default  = mascot.default;
-      this.overflow = mascot.overflow;
-      this.getOverflow = mascot.overflow ? "auto" : "302px";
       this.flip     = mascot.flip ? "scaleX(-1); -webkit-transform: scaleX(-1)" : "";
       this.img      = new $SS.Image(mascot.img);
-      this.small    = mascot.small || this.overflow;
-      this.getSmall = mascot.small ? "": "contain";
-      this.offset   = mascot.offset !== undefined ? mascot.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0);
+      this.offset   = mascot.offset !== undefined ? mascot.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0);
       this.boards   = mascot.boards;
       this.enabled  = $SS.conf["Selected Mascots"] === 0 || $SS.conf["Selected Mascots"].indexOf(index) !== -1;
 
