@@ -1564,14 +1564,14 @@
             mEdit = $SS.conf["Mascots"][mIndex];
 
         div = $("<div id='add-mascot' class='dialog'>").html("<div id=mascotprev>" + (bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
-            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px !important;'>" : "") + 
+            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px !important; " + (bEdit && (mEdit.flip || mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : "") + 
             "</div><label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
             "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
-            "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip == undefined)) ? " checked" : "") + "></label>" +
+            "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip !== undefined)) ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
             "<input class='mascot-input mascot-boards' type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
             "<div id='mascot-buttons-container'>" +
@@ -1581,6 +1581,7 @@
             "<a class=options-button name=apply " + (bEdit ? "" : "hidden") + ">Apply</a><a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
         
         overlay = $("<div id=overlay2>").append(div);
+        $("input[type=checkbox]", div).riceCheck();
 
         $(".import-input", div).bind("change", $SS.options.SelectImage);
         $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
