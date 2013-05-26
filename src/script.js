@@ -1557,17 +1557,19 @@
       },
       showMascot: function(mIndex)
       {
-        var div, overly;
+        var div, overlay, pOffset;
 
         if (typeof mIndex === "number")
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
 
-        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
-            (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "[Base 64 Encoded Image]' disabled=true") : "'") +
+        div = $("<div id='add-mascot' class='dialog'>").html("<div id=mascotprev>" + ((mEdit.img !== undefined) ? "<img src='" + mEdit.img + "' " +
+            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px !important;'>" : "") + 
+            "</div><label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
+            (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
-            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Offset:</span>" +
-            "<input class='mascot-input offset' type=text name=mOffset value='" + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px'></label>" +
+            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
+            "<input class='mascot-input offset' type=text name=mOffset value='" + (mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0)) + "px'></label>" +
             "<label class='add-mascot-label' title='Prevent streching with smaller images'><span class='option-title'>Prevent stretching:</span>" +
             "<input type=checkbox name=mSmall" + (bEdit && mEdit.small ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
@@ -1582,14 +1584,19 @@
             "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
             "<a class='options-button' name=clearIMG>Clear Image</a>" +
             "<a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
-
+        
         overlay = $("<div id=overlay2>").append(div);
 
         $(".import-input", div).bind("change", $SS.options.SelectImage);
         $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
 
-        if (bEdit)
-          $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex); });
+        if (bEdit) {
+          $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex, true); });
+          $("input", div).bind("change", function(){ 
+            $SS.options.addMascot(mIndex, true); 
+            $SS.options.showMascot($SS.conf["Mascots"].length-1); 
+          });
+        }
         else
           $("a[name=add]", div).bind("click", $SS.options.addMascot);
 
@@ -1597,22 +1604,22 @@
 
         return $(document.body).append(overlay);
       },
-      addMascot: function(mIndex)
+      addMascot: function(mIndex, close)
       {
         var overlay = $("#overlay2"),
           bSetPos, cIMG, cOffset, cSmall, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", overlay).val() || $("input[name=customIMG]", overlay).val());
-        cOffset   = parseInt($("input[name=mOffset]", overlay).val()) || 0;
+        cOffset   = parseInt($("input[name=mOffset]", overlay).val());
         cSmall    = $("input[name=mSmall]", overlay).val();
         cFlip     = $("input[name=mFlip]", overlay).val();
         cOverflow = $("input[name=mOverflow]", overlay).val();
         cBoards   = $("input[name=mBoards]", overlay).val();
 
-        if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
-          return alert("Invalid image URL/base64.");
-
-        cIMG     = $SS.cleanBase64(cIMG);
+        if (cIMG !== undefined)
+          cIMG     = $SS.cleanBase64(cIMG);
+        else
+          cIMG = "";
         bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
 
         if (typeof mIndex === "number" && !bDefault)
@@ -1648,7 +1655,8 @@
           tMascot.fire("click").scrollIntoView(true);
         }
 
-        return overlay.remove();
+        if (close)
+          return overlay.remove();
       },
       deleteMascot: function(mIndex)
       {
@@ -3115,8 +3123,7 @@
       this.img      = new $SS.Image(mascot.img);
       this.small    = mascot.small || this.overflow;
       this.getSmall = mascot.small ? "": "contain";
-      this.bOffset  = typeof mascot.offset === "number";
-      this.offset   = this.bOffset ? mascot.offset : ($SS.conf["Sidebar Position"] !== 3 ? 300 : 0);
+      this.offset   = mascot.offset !== undefined ? mascot.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 265 : 0);
       this.boards   = mascot.boards;
       this.enabled  = $SS.conf["Selected Mascots"] === 0 || $SS.conf["Selected Mascots"].indexOf(index) !== -1;
 

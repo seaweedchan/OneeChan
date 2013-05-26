@@ -216,6 +216,8 @@ input[type=checkbox]:checked+.riceCheck::before
   position: fixed !important;
   transform: rotate(-90deg);
   transform-origin: bottom right;
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: bottom right;
   right: 0px !important;
   bottom: 300px !important;
   min-width: 240px !important;
@@ -226,6 +228,7 @@ input[type=checkbox]:checked+.riceCheck::before
 }
 :root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.has-focus) {
   transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   left: -244px !important;
   bottom: 50px !important;
   right: auto !important;
@@ -411,7 +414,7 @@ table.flashListing .highlightPost::after {
 }
 
 /* Mascot */
-#mascot img {
+#mascot img, #mascotprev img {
   height:auto;
   width:" + $SS.mascot.getOverflow + ";
   background-size:" + $SS.mascot.getSmall + ";
@@ -427,10 +430,12 @@ table.flashListing .highlightPost::after {
   z-index: 3;
   position: relative;
 }
-.bottom:not(.autohide) #mascot img{
+.bottom:not(.autohide) #mascot img, 
+.bottom:not(.autohide) #mascotprev img {
   bottom: 22px !important;
 }
-:root.left-sidebar #mascot img {
+:root.left-sidebar #mascot img,
+:root.left-sidebar #mascotprev img {
   left: 0px;
   right: auto !important;
 }
