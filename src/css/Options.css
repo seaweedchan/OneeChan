@@ -5,14 +5,15 @@
   border-radius:3px!important;
   position: fixed;
   margin: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
 }
 #oneechan-options {
   width: 900px;
   text-align:left!important;
+  height: 532px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 .options-close,
 .options-container {
@@ -40,6 +41,10 @@
 #add-theme {
   text-align:right!important;
   padding: 5px 8px 5px 5px !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 #add-mascot .option-title,
 #add-theme .option-title {
