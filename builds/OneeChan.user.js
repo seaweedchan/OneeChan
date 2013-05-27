@@ -2408,18 +2408,17 @@
       defaults:
       [
         { img: "https://i.minus.com/izqpjDX9Z88Pk.png",        "default":   true, name: "Akaza Akari" },
+        { img: "https://i.minus.com/iIoEVlv6PpsZt.png",        "default":   true, name: "Akemi Homura" },
         { img: "https://i.minus.com/ibqbz63WobNaUZ.png",       "default":   true, name: "Akiyama Mio" },
+        { img: "https://i.minus.com/iiEOIF7u05fIr.png",        "default":   true, name: "Akiyama Mio" },
         { img: "https://i.minus.com/iboIUPbZAbNRiz.png",       "default":   true, name: "Ali Baba" },
         { img: "https://i.minus.com/iortvyiEFHVQi.png",        "default":   true, name: "Asuka Langley Soryu" },
-        { img: "https://i.minus.com/ir1jBydJsjYtX.png",        "default":   true, name: "Erio" },
         { img: "https://i.minus.com/ibc2GhW4AW6tYy.png",       "default":   true, name: "Fubuki Atsuya" },
         { img: "https://i.minus.com/ixEW2qpW09BuX.png",        "default":   true, name: "Gasai Yuno", hoffset:"25" },
         { img: "https://i.minus.com/ibhc1YdPCHjxb5.png",       "default":   true, name: "Gasai Yuno", height:"460px", hoffset:"40" },
         { img: "https://i.minus.com/idk1cr4HEhd9C.png",        "default":   true, name: "Hirasawa Yui" },
         { img: "https://i.minus.com/icUNNyRQKumPz.png",        "default":   true, name: "Hitagi Senjougahara" },
-        { img: "https://i.minus.com/iIoEVlv6PpsZt.png",        "default":   true, name: "Homu" },
         { img: "https://i.minus.com/ibjnPNJv4QGiUn.png",       "default":   true, name: "Inga", width:"301px" },
-        { img: "https://i.minus.com/ioWJ4fUbplPVt.png",        "default":   true, name: "Iori Nagase" },
         { img: "https://i.minus.com/ihhgWi5dADZKx.png",        "default":   true, name: "Kagami Taiga" },
         { img: "https://i.minus.com/iben2goxAmh7aV.png",       "default":   true, name: "Kaname Madoka", hoffset:"25" },
         { img: "https://i.minus.com/indbfcA4TS0Xb.png",        "default":   true, name: "Kirino Ranmaru", hoffset:"50" },
@@ -2427,11 +2426,11 @@
         { img: "https://i.minus.com/ibnxkA58kU3iWc.png",       "default":   true, name: "Kirisame Marisa" },
         { img: "https://i2.minus.com/ikPgsoC0DBeuP.png",       "default":   true, name: "Kousaka Kirino" },
         { img: "https://i.minus.com/iwp3zHABdUZn9.png",        "default":   true, name: "Kuroko no Basuke", hoffset:"25" },
-        { img: "https://i.minus.com/iHnv6bBdH3ElF.png",        "default":   true, name: "Luka" },
         { img: "https://i.minus.com/ibwkO6nLTS8aQW.png",       "default":   true, name: "Mashiro Shiina" },
-        { img: "https://i.minus.com/iiEOIF7u05fIr.png",        "default":   true, name: "Mio" },
+        { img: "https://i.minus.com/iHnv6bBdH3ElF.png",        "default":   true, name: "Megurine Luka" },
         { img: "https://i.minus.com/irUUuK1WcX8X8.png",        "default":   true, name: "Miyamoto Konatsu" },
         { img: "https://i.minus.com/ieZPtyTynlwBK.png",        "default":   true, name: "Mokou" },
+        { img: "https://i.minus.com/ioWJ4fUbplPVt.png",        "default":   true, name: "Nagase Iori" },
         { img: "https://i.minus.com/ijJber6Ts4www.png",        "default":   true, name: "Nagato Yuki", hoffset:"25" },
         { img: "https://i.minus.com/ibtRMzjF9MS6oy.png",       "default":   true, name: "Nakano Azusa" },
         { img: "https://i.minus.com/iZmUFk9hKgNGZ.png",        "default":   true, name: "Poko Fox" },
@@ -2441,10 +2440,11 @@
         { img: "https://i.minus.com/iRA9OW02HVchv.png",        "default":   true, name: "Shiki" },
         { img: "https://i.minus.com/iSrVpiEk8XB7i.png",        "default":   true, name: "Solaire of Astora", height:"450px", hoffset:"50" },
         { img: "https://i.minus.com/iHYGiEeinZngK.png",        "default":   true, name: "Sucy Manbabalan" },
+        { img: "https://i.minus.com/ir1jBydJsjYtX.png",        "default":   true, name: "Touwa Erio" },
         { img: "https://i.minus.com/i2Fal4QJDcucB.png",        "default":   true, name: "Yin" },
         { img: "https://i.minus.com/ibkuPHnJCOVF5y.png",       "default":   true, name: "Yoko", height:"450px", hoffset:"25" },
         { img: "https://i.minus.com/iGxFTTdgRFHPi.png",        "default":   true, name: "Yuuki Asuna" },
-        { img: "https://i.minus.com/i0v2fCxA6msfB.png",        "default":   true, name: "Yuzuki", hoffset:"10" }
+        { img: "https://i.minus.com/i0v2fCxA6msfB.png",        "default":   true, name: "Yuzuki Yukari", hoffset:"10" }
       ],
 
       init: function()
