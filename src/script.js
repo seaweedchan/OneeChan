@@ -1568,18 +1568,18 @@
             "style='width: " + (mEdit.width !== undefined ? mEdit.width : "auto") + " !important; height: " + (mEdit.height !== undefined ? mEdit.height : "auto") + " !important; margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px !important; margin-" + ($SS.conf["Sidebar Position"] === 2 ? "left" : "right") + ": " + (mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px !important;" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
         };
 
-        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label' title='Set the name of the mascot' for=null><span class='option-title'>Mascot Name:</span>" +
+        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label' title='Set the name of the mascot'><span class='option-title'>Mascot Name:</span>" +
             "<input class='mascot-input mascot-name' type=text name=mName value='" + (bEdit && mEdit.name !== undefined ? mEdit.name : "Chinese Girl Cartoon") + "'></label>" +
             "<label class='add-mascot-label'><span class='option-title'>Image URL:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
-            "<label class='add-mascot-label' title='Set the height. Use auto for the full size.' for=null><span class='option-title'>Height:</span>" +
+            "<label class='add-mascot-label' title='Set the height. Use auto for the full size.'><span class='option-title'>Height:</span>" +
             "<input class='mascot-input height' type=text name=mHeight value='" + (bEdit && mEdit.height !== undefined ? mEdit.height : "auto") + "'></label>" +
-            "<label class='add-mascot-label' title='Set the width. Use 300px to fit to sidebar, or auto for the full size.' for=null><span class='option-title'>Width:</span>" +
+            "<label class='add-mascot-label' title='Set the width. Use 300px to fit to sidebar, or auto for the full size.'><span class='option-title'>Width:</span>" +
             "<input class='mascot-input width' type=text name=mWidth value='" + (bEdit && mEdit.width !== undefined ? mEdit.width : "auto") + "'></label>" +
-            "<label class='add-mascot-label' title='Set the vertical offset. A negative number will push the image down.' for=null><span class='option-title'>Vertical Offset:</span>" +
+            "<label class='add-mascot-label' title='Set the vertical offset. A negative number will push the image down.'><span class='option-title'>Vertical Offset:</span>" +
             "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : 0) + "px'></label>" +
-            "<label class='add-mascot-label' title='Set the horizontal offset. A negative number will push the image away from the side.' for=null><span class='option-title'>Horizontal Offset:</span>" +
+            "<label class='add-mascot-label' title='Set the horizontal offset. A negative number will push the image away from the side.'><span class='option-title'>Horizontal Offset:</span>" +
             "<input class='mascot-input hoffset' type=text name=mHOffset value='" + (bEdit && mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip Image:</span>" +
             "<input type=checkbox name=mFlip" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? " checked" : "") + "></label>" +
