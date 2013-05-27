@@ -1576,7 +1576,9 @@
             "style='width: " + (mEdit.width !== undefined ? mEdit.width : "auto") + " !important; height: " + (mEdit.height !== undefined ? mEdit.height : "auto") + " !important; margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px !important; margin-" + ($SS.conf["Sidebar Position"] === 2 ? "left" : "right") + ": " + (mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px !important;" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
         };
 
-        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
+        div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label' title='Set the name of the mascot' for=null><span class='option-title'>Mascot Name:</span>" +
+            "<input class='mascot-input mascot-name' type=text name=mName value='" + (bEdit && mEdit.name !== undefined ? mEdit.name : "Chinese Girl Cartoon") + "'></label>" +
+            "<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Set the height. Use auto for the full size.' for=null><span class='option-title'>Height:</span>" +
@@ -1624,11 +1626,12 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
-          bSetPos, cIMG, cOffset, cHOffset, cWidth, cHeight, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
         cHOffset   = parseInt($("input[name=mHOffset]", mascotAdd).val());
+        cName     = $("input[name=mName]", mascotAdd).val(); 
         cFlip     = $("input[name=mFlip]", mascotAdd).val();
         cWidth     = $("input[name=mWidth]", mascotAdd).val();
         cHeight     = $("input[name=mHeight]", mascotAdd).val();
@@ -1652,6 +1655,7 @@
 
           $SS.conf["Mascots"][mIndex].offset   = cOffset;
           $SS.conf["Mascots"][mIndex].hoffset   = cHOffset;
+          $SS.conf["Mascots"][mIndex].name   = cName;
           $SS.conf["Mascots"][mIndex].width   = cWidth;
           $SS.conf["Mascots"][mIndex].height   = cHeight;
 
@@ -1664,6 +1668,7 @@
 
           tMascot.offset   = cOffset;
           tMascot.hoffset   = cHOffset;
+          tMascot.name   = cName;
           tMascot.width   = cWidth;
           tMascot.height   = cHeight;
 
@@ -1686,11 +1691,12 @@
       editMascot: function(mIndex)
       {
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
-          bSetPos, cIMG, cOffset, cHOffset, cWidth, cHeight, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
         cHOffset   = parseInt($("input[name=mHOffset]", mascotAdd).val());
+        cName     = $("input[name=mName]", mascotAdd).val(); 
         cFlip     = $("input[name=mFlip]", mascotAdd).val();
         cWidth     = $("input[name=mWidth]", mascotAdd).val();
         cHeight     = $("input[name=mHeight]", mascotAdd).val();
@@ -1714,6 +1720,7 @@
 
           $SS.conf["Mascots"][mIndex].offset   = cOffset;
           $SS.conf["Mascots"][mIndex].hoffset   = cHOffset;
+          $SS.conf["Mascots"][mIndex].name   = cName;
           $SS.conf["Mascots"][mIndex].width   = cWidth;
           $SS.conf["Mascots"][mIndex].height   = cHeight;
 
@@ -1726,6 +1733,7 @@
 
           tMascot.offset   = cOffset;
           tMascot.hoffset   = cHOffset;
+          tMascot.name   = cName;
           tMascot.width   = cWidth;
           tMascot.height   = cHeight;
 
@@ -3262,6 +3270,7 @@
       this.img      = new $SS.Image(mascot.img);
       this.offset   = mascot.offset !== undefined ? mascot.offset : 0;
       this.hoffset  = mascot.hoffset !== undefined ? mascot.hoffset : 0;
+      this.name     = mascot.name !== undefined ? mascot.name : "Chinese Girl Cartoon";
       this.width    = mascot.width !== undefined ? mascot.width : "auto";
       this.height   = mascot.height !== undefined ? mascot.height : "auto";
       this.boards   = mascot.boards;
@@ -3272,7 +3281,7 @@
         var div = $("<div " + (this.hidden ? "hidden=true " : "") +
               "id=mascot" + this.index + " class=\'mascot-preview" + (this.enabled ? " selected" : "") +
               "\' style=\"background: url(\'" + this.img.get() + "\')\">")
-              .html("<a class='mascot-link delete' title=Delete>X</a><a class='mascot-link edit' title=Edit>E</a>");
+              .html("<a class='mascot-link mascot-name' title=Name>" + this.name + "</a><a class='mascot-link delete' title=Delete>Delete</a><a class='mascot-link edit' title=Edit>Edit</a>");
 
         $(div).bind("click", function(){ $(this).toggleClass("selected"); });
 
