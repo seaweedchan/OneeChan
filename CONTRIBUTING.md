@@ -12,7 +12,6 @@
 Open your console with:
 - `Ctrl + Shift + J` on Chrome.
 - `Ctrl + Shift + K` on Firefox.
-- `Ctrl + Shift + O` on Opera.
 
 ## Development & Contribution
 
@@ -37,6 +36,5 @@ Note: this is only used to release new OneeChan versions, and is **not** needed 
 
 ### Contribute
 
-- Edit the CoffeeScript sources.
-- If the edits affect regular users, edit the changelog.
+- Edit the sources.
 - Open a pull request.
