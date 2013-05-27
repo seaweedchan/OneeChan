@@ -676,7 +676,8 @@
       {
         $SS.options.init();
 
-        $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
+        $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
+                   .bind("OpenSettings", $SS.OpenSettingsHandler);
 
         var MutationObserver = window.MutationObserver;
         var observer = new MutationObserver(function(mutations) {
@@ -822,6 +823,13 @@
         });
 
       $SS.QRhandled = true;
+    },
+    OpenSettingsHandler: function(e)
+    {
+      var settings = e.target;
+
+      if (!$SS.browser.webkit)
+        $("input[type=checkbox]", settings).riceCheck();
     },
     /* CONFIG */
     Config:
