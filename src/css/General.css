@@ -369,7 +369,8 @@ hr {
   right: 2px;
   pointer-events: none;
 }
-.pagelist input {
+.pagelist input,
+.pagelist input:hover {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
