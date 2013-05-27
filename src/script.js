@@ -815,6 +815,7 @@
     },
     AddMenuHandler: function(e)
     {
+      /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
       $("#header-bar .menu-button").click();
       $("#header-bar .menu-button").click();
     },

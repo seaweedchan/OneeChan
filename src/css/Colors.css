@@ -13,7 +13,8 @@ input:not(.jsColor),
 textarea,
 #qr-filename-container,
 #post-preview,
-.post-last {
+.post-last,
+.pln {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
