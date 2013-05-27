@@ -254,6 +254,16 @@ margin-bottom: 20px !important;
   min-width: 99% !important;
   transition: width ease-in-out 1s, max-width ease-in-out 1s;
 }
+#qr:not(.has-captcha) textarea {
+  min-height: 190px !important;
+}
+:root.webkit #qr:not(.has-captcha) textarea {
+  min-height: 185px !important;
+}
+:root.webkit #qr.has-captcha textarea.field {
+  height: 8.6em;
+  min-height: 0.6em !important;
+}
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
