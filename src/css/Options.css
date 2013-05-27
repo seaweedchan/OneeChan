@@ -22,7 +22,7 @@
   text-align: right !important;
 }
 #add-mascot {
-  height: 186px;
+  height: 208px;
   top: 0px;
   bottom: 0px;
   left: 0px;
@@ -229,7 +229,7 @@ select[name='Font Family']>option {
   border-radius:10px;
   transition:all .1s;
 }
-.mascot-preview:not(:hover) a {
+.mascot-preview:not(:hover) a:not(.mascot-name) {
   opacity: 0;
 }
 .mascot-preview.selected {
@@ -237,22 +237,23 @@ select[name='Font Family']>option {
   box-shadow:inset rgba(0,0,0,.15) 0 0 15px, rgba(" + $SS.theme.linkColor.rgb + ",.6) 0 0 2px;
 }
 .mascot-preview a {
-  position:absolute;
-  top:0;
-  padding:5px 8px;
-  background:rgba(0,0,0,.3);
+  color: #ffffff !important;
+  padding:3px 8px;
   cursor: pointer;
+  border-radius: 2px;
+  background:rgba(0,0,0,.6);
 }
-.mascot-preview a:not([href]):hover {
-  background:rgba(0,0,0,.5);
-}
-.mascot-link.delete {
-  left:0;
-  border-radius:10px 0 10px 0;
+.mascot-preview a:hover {
+  background:rgba(0,0,0,.8);
 }
 .mascot-link.edit {
-  right:0;
-  border-radius:0 10px 0 10px;
+  margin-left: 1px;
+}
+.mascot-buttons {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
 }
 /* Add Mascot */
 

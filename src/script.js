@@ -1577,7 +1577,7 @@
 
         div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label' title='Set the name of the mascot' for=null><span class='option-title'>Mascot Name:</span>" +
             "<input class='mascot-input mascot-name' type=text name=mName value='" + (bEdit && mEdit.name !== undefined ? mEdit.name : "Chinese Girl Cartoon") + "'></label>" +
-            "<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
+            "<label class='add-mascot-label'><span class='option-title'>Image URL:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
             "<label class='add-mascot-label' title='Set the height. Use auto for the full size.' for=null><span class='option-title'>Height:</span>" +
@@ -1589,21 +1589,14 @@
             "<label class='add-mascot-label' title='Set the horizontal offset. A negative number will push the image away from the side.' for=null><span class='option-title'>Horizontal Offset:</span>" +
             "<input class='mascot-input hoffset' type=text name=mHOffset value='" + (bEdit && mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip Image:</span>" +
-            "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip && mEdit.flip !== undefined)) ? " checked" : "") + "></label>" +
+            "<input type=checkbox name=mFlip" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
             "<input class='mascot-input mascot-boards' type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
             "<div id='mascot-buttons-container'>" +
-            "<div id='import-link'><input class='import-input' type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
-            "<span class='options-button'>Select Image</span><a class='options-button' name=clearIMG>Clear Image</a></div>" +
-            "" + (bEdit && $SS.validBase64(mEdit.img) ? "<input type=hidden name=customIMGB64 value='" + mEdit.img + "'>" : "") + "" +
             "<a class=options-button name=apply " + (bEdit ? "" : "hidden") + ">Apply</a><a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div></div>");
         
         overlay = $("<div id=overlay2>");
         $("input[type=checkbox]", div).riceCheck();
-        
-
-        $(".import-input", div).bind("change", $SS.options.SelectImage);
-        $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
 
         if (bEdit) {
           $("a[name=edit]", div).bind("click", function(){ $SS.options.addMascot(mIndex); });
@@ -1627,7 +1620,7 @@
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
           bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
-        cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+        cIMG      = decodeURIComponent($("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
         cHOffset   = parseInt($("input[name=mHOffset]", mascotAdd).val());
         cName     = $("input[name=mName]", mascotAdd).val(); 
@@ -1636,10 +1629,9 @@
         cHeight     = $("input[name=mHeight]", mascotAdd).val();
         cBoards   = $("input[name=mBoards]", mascotAdd).val();
 
-        if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
-          return alert("Must be an image file!");
+        if (!$SS.validImageURL(cIMG))
+          return alert("Not a valid image URL!");
 
-        cIMG     = $SS.cleanBase64(cIMG);
         bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
 
         if (typeof mIndex === "number" && !bDefault)
@@ -1692,7 +1684,7 @@
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
           bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
-        cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+        cIMG      = decodeURIComponent($("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
         cHOffset   = parseInt($("input[name=mHOffset]", mascotAdd).val());
         cName     = $("input[name=mName]", mascotAdd).val(); 
@@ -1701,10 +1693,9 @@
         cHeight     = $("input[name=mHeight]", mascotAdd).val();
         cBoards   = $("input[name=mBoards]", mascotAdd).val();
 
-        if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
-          return alert("Must be an image file!");
+        if (!$SS.validImageURL(cIMG))
+          return alert("Not a valid image URL!");
 
-        cIMG     = $SS.cleanBase64(cIMG);
         bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
 
         if (typeof mIndex === "number" && !bDefault)
@@ -3280,7 +3271,7 @@
         var div = $("<div " + (this.hidden ? "hidden=true " : "") +
               "id=mascot" + this.index + " class=\'mascot-preview" + (this.enabled ? " selected" : "") +
               "\' style=\"background: url(\'" + this.img.get() + "\')\">")
-              .html("<a class='mascot-link mascot-name' title=Name>" + this.name + "</a><a class='mascot-link delete' title=Delete>Delete</a><a class='mascot-link edit' title=Edit>Edit</a>");
+              .html("<span class='mascot-buttons'><a class='mascot-link delete'>Delete</a><a class='mascot-link edit'>Edit</a><br><br><a class='mascot-link mascot-name'>" + this.name + "</a></span>");
 
         $(div).bind("click", function(){ $(this).toggleClass("selected"); });
 
