@@ -124,7 +124,7 @@
     "Themes"          : [],
     "Hidden Themes"   : [],
     "Selected Theme"  : 5,
-    "NSFW Theme"      : 8,
+    "NSFW Theme"      : 5,
     "Selected Mascots": 0,
     "Mascots"         : [],
     "Hidden Mascots"  : []
