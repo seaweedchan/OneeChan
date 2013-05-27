@@ -191,6 +191,9 @@ input[type=checkbox]:checked+.riceCheck::before
 :root.fixed:not(.autohide):not(.bottom) #delform {
   margin-top: -15px;
 }
+:root.fixed:not(.autohide):not(.bottom) #globalMessage {
+margin-bottom: 20px !important;
+}
 
 /* QR link */
 .qr-link {
@@ -433,7 +436,6 @@ table.flashListing .highlightPost::after {
   display: none;
 }
 #delform {
-  z-index: 3;
   position: relative;
 }
 .bottom:not(.autohide) #mascot img, 
