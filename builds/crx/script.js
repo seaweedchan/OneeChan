@@ -1965,7 +1965,7 @@
           headerBGColor:"1a1a1a",
           headerColor:  "dddddd",
           boardColor:   "dddddd",
-          bgColor:      "191919",
+          bgColor:      "202020",
           textColor:    "dddddd",
           blinkColor:   "c72d41",
           headerLColor: "737f88",
@@ -2389,65 +2389,65 @@
     {
       defaults:
       [
-        { img: "https://i.minus.com/ibqbz63WobNaUZ.png",                                                         "default":   true }, // akiyama mio 2
-        { img: "https://i.minus.com/itXHnhcnpzlZ0.png",                                                          "default":   true }, // akiyama mio sitting
-        { img: "https://i.minus.com/i9fkOkQQ0Iyov.png",                                                          "default":   true }, // Asuka Langley Soryu
-        { img: "https://i.minus.com/ibp4PTT2SK6I4o.png",                                                         "default":   true }, // BLACK★ROCK SHOOTER
-        { img: "https://i.minus.com/iWV2iXY4AgeAz.png",                                                          "default":   true }, // Dawn / Hikari (Pokemon)
-        { img: "https://i.minus.com/iwijU3hXlJwvx.png",                                              "default":   true }, // Furudo Erika
-        { img: "https://i.minus.com/ixEW2qpW09BuX.png",                                                          "default":   true }, // Gasai Yuno
-        { img: "https://i.minus.com/irXtk9ydjWtsl.png",                                                          "default":   true }, // Hasekura Youko
-        { img: "https://i.minus.com/i3B8dszlW3Mfw.png",                                                          "default":   true }, // Hatsune Miku
-        { img: "https://i.minus.com/iDNDSbUD5pXHZ.png",                                                          "default":   true }, // Hatsune Miku 2
-        { img: "https://i.minus.com/iLkr2EDaYmknX.png",                                             "default":   true }, // Hatsune Miku (big)
-        { img: "https://i.minus.com/idk1cr4HEhd9C.png",                                                          "default":   true }, // Hirasawa Yui
-        { img: "https://i.minus.com/i8B0jpOGGqr8F.png",                                                          "default":   true }, // Ika Musume
-        { img: "https://i.minus.com/iIKosmoehVEsl.png",                                                          "default":   true }, // Ika Musume 2
-        { img: "https://i.minus.com/ibrwcAB72agjkn.png",                                                         "default":   true }, // Iwakura Lain 2
-        { img: "https://i.minus.com/ib022yxCvyGw5z.png",                                                         "default":   true }, // Kagamine Rin
-        { img: "https://i.minus.com/iben2goxAmh7aV.png",                                                         "default":   true }, // Kaname Madoka
-        { img: "https://i.minus.com/ihyDfRynJ25vD.png",                                                          "default":   true }, // Koiwai Yotsuba
-        { img: "https://i.minus.com/ijJber6Ts4www.png",                                                          "default":   true }, // Nagato Yuki 
-        { img: "https://i.minus.com/ibtRMzjF9MS6oy.png",                                         "default":   true }, // Nakano Azusa
-        { img: "http://i.minus.com/i87u3AnyzlVnb.png",                                               "default":   true }, // Patchouli Knowledge
-        { img: "https://i.minus.com/izQNQ4akphZWn.png",                                                          "default":   true }, // Shana
-        { img: "https://i.minus.com/iMUgBG7BdvMUU.png",                                                          "default":   true }, // Shinonome Hakase
-        { img: "https://i.minus.com/iYuOeiFWnqP9i.png",                                                          "default":   true }, // Suzumiya Haruhi
-        { img: "https://i.minus.com/iWUx3OHgNeyrS.png", offset: -120,                                            "default":   true }, // Suzumiya Haruhi 2
-        { img: "https://i.minus.com/iortvyiEFHVQi.png",                                           "default":   true }, // asuka
-        { img: "https://i.minus.com/ir1jBydJsjYtX.png",                                                          "default":   true }, // erio
-        { img: "https://i.minus.com/iIoEVlv6PpsZt.png",                                                          "default":   true }, // homu
-        { img: "https://i.minus.com/ilMeKtSdD4Ih9.png", offset: -90,                                 "default":   true }, // kuroneko
-        { img: "https://i.minus.com/i40A8T1uvg833.png",                                              "default":   true }, // lain
-        { img: "https://i.minus.com/iHnv6bBdH3ElF.png",                                                          "default":   true }, // luka
-        { img: "https://i.minus.com/iqVknxajfDzAD.png", offset: -90,                                             "default":   true }, // madotsuki
-        { img: "https://i.minus.com/ibkEnN35Yaewt2.png",                                          "default":   true }, // ムゥ～りさ
-        { img: "https://i.minus.com/iiEOIF7u05fIr.png", flip: false,                              "default":   true }, // mio
-        { img: "https://i.minus.com/ieZPtyTynlwBK.png", offset: 0,                                               "default":   true }, // mokou
-        { img: "https://i.minus.com/ib1pOfjwSD53sl.png", flip: false,                                "default":   true }, // shana
-        { img: "https://i.minus.com/iRA9OW02HVchv.png",                                                          "default":   true }, // shiki
-        { img: "https://i.minus.com/ik0hNJ61QjgD0.png",                                                          "default":   true }, // yin
-        { img: "https://i.minus.com/i0v2fCxA6msfB.png",                                                          "default":   true }, // yuzuki
-        { img: "https://i.minus.com/iBvqnYscczL3D.png",                                           "default":   true }, // patchouli 2
-        { img: "https://i.minus.com/i31h7nnelAj5C.png",                                                          "default":   true }, // kefka
-        { img: "https://i.minus.com/iNB442qqEYXzn.png",                                                          "default":   true }, // ciel
-        { img: "https://i.minus.com/ibc2GhW4AW6tYy.png",                                                         "default":   true }, // fubuki atsuya
-        { img: "https://i.minus.com/iqIGKQS61Uydk.png",                                                          "default":   true }, // inazuma 1
-        { img: "https://i.minus.com/indbfcA4TS0Xb.png",                                              "default":   true }, // inazuma 2
-        { img: "https://i.minus.com/ijdm4b711HIWs.png",                                                          "default":   true }, // inazuma 3
-        { img: "https://i.minus.com/i2ODpJc3iRt3A.png",                                                          "default":   true }, // inazuma 4
-        { img: "https://i.minus.com/i8FafJhXgAyWo.png",                                                          "default":   true }, // inazuma 5
-        { img: "https://i.minus.com/i6gc70Hv8lTl6.png",                                                          "default":   true }, // inazuma 6
-        { img: "https://i.minus.com/igbibpeTcWQIS.png",                                                          "default":   true }, // inazuma 7
-        { img: "https://i.minus.com/ibjnPNJv4QGiUn.png",                                                         "default":   true }, // inga
-        { img: "https://i.minus.com/ihhgWi5dADZKx.png",                                                          "default":   true }, // knb
-        { img: "https://i.minus.com/iwp3zHABdUZn9.png",                                              "default":   true }, // knb 2
-        { img: "https://i.minus.com/iP4MQ0TblOArQ.png",                                              "default":   true }, // kuroshitsuji
-        { img: "https://i.minus.com/iboIUPbZAbNRiz.png",                                                         "default":   true }, // magi 1
-        { img: "https://i.minus.com/ibptj9XtEE4yoi.png",                                                         "default":   true }, // magi 2
-        { img: "https://i.minus.com/iJlh7Ek7QGYHf.png",                                              "default":   true }, // shinji
-        { img: "https://i.minus.com/i7hTdHzxeHKuM.png",                                              "default":   true }, // shuu
-        { img: "https://i.minus.com/ibvGG8EqpN9CVW.png",                                                         "default":   true }  // uta
+        { img: "https://i.minus.com/ibqbz63WobNaUZ.png",       "default":   true, name: "Akiyama Mio" },
+        { img: "https://i.minus.com/itXHnhcnpzlZ0.png",        "default":   true, name: "Akiyama Mio" },
+        { img: "https://i.minus.com/i9fkOkQQ0Iyov.png",        "default":   true, name: "Asuka Langley Soryu" },
+        { img: "https://i.minus.com/ibp4PTT2SK6I4o.png",       "default":   true, name: "BLACK★ROCK SHOOTER" },
+        { img: "https://i.minus.com/iWV2iXY4AgeAz.png",        "default":   true, name: "Dawn / Hikari" },
+        { img: "https://i.minus.com/iwijU3hXlJwvx.png",        "default":   true, name: "Furudo Erika" },
+        { img: "https://i.minus.com/ixEW2qpW09BuX.png",        "default":   true, name: "Gasai Yuno" },
+        { img: "https://i.minus.com/irXtk9ydjWtsl.png",        "default":   true, name: "Hasekura Youko" },
+        { img: "https://i.minus.com/i3B8dszlW3Mfw.png",        "default":   true, name: "Hatsune Miku" },
+        { img: "https://i.minus.com/iDNDSbUD5pXHZ.png",        "default":   true, name: "Hatsune Miku" },
+        { img: "https://i.minus.com/iLkr2EDaYmknX.png",        "default":   true, name: "Hatsune Miku" },
+        { img: "https://i.minus.com/idk1cr4HEhd9C.png",        "default":   true, name: "Hirasawa Yui" },
+        { img: "https://i.minus.com/i8B0jpOGGqr8F.png",        "default":   true, name: "Ika Musume" },
+        { img: "https://i.minus.com/iIKosmoehVEsl.png",        "default":   true, name: "Ika Musume" },
+        { img: "https://i.minus.com/ibrwcAB72agjkn.png",       "default":   true, name: "Iwakura Lain" },
+        { img: "https://i.minus.com/ib022yxCvyGw5z.png",       "default":   true, name: "Kagamine Rin" },
+        { img: "https://i.minus.com/iben2goxAmh7aV.png",       "default":   true, name: "Kaname Madoka" },
+        { img: "https://i.minus.com/ihyDfRynJ25vD.png",        "default":   true, name: "Koiwai Yotsuba" },
+        { img: "https://i.minus.com/ijJber6Ts4www.png",        "default":   true, name: "Nagato Yuki " },
+        { img: "https://i.minus.com/ibtRMzjF9MS6oy.png",       "default":   true, name: "Nakano Azusa" },
+        { img: "http://i.minus.com/i87u3AnyzlVnb.png",         "default":   true, name: "Patchouli Knowledge" },
+        { img: "https://i.minus.com/izQNQ4akphZWn.png",        "default":   true, name: "Shana" },
+        { img: "https://i.minus.com/iMUgBG7BdvMUU.png",        "default":   true, name: "Shinonome Hakase" },
+        { img: "https://i.minus.com/iYuOeiFWnqP9i.png",        "default":   true, name: "Suzumiya Haruhi" },
+        { img: "https://i.minus.com/iWUx3OHgNeyrS.png",        "default":   true, name: "Suzumiya Haruhi" },
+        { img: "https://i.minus.com/iortvyiEFHVQi.png",        "default":   true, name: "Asuka Langley Soryu" },
+        { img: "https://i.minus.com/ir1jBydJsjYtX.png",        "default":   true, name: "Erio" },
+        { img: "https://i.minus.com/iIoEVlv6PpsZt.png",        "default":   true, name: "Homu" },
+        { img: "https://i.minus.com/ilMeKtSdD4Ih9.png",        "default":   true, name: "Kuroneko" },
+        { img: "https://i.minus.com/i40A8T1uvg833.png",        "default":   true, name: "Lain" },
+        { img: "https://i.minus.com/iHnv6bBdH3ElF.png",        "default":   true, name: "Luka" },
+        { img: "https://i.minus.com/iqVknxajfDzAD.png",        "default":   true, name: "Madotsuki" },
+        { img: "https://i.minus.com/ibkEnN35Yaewt2.png",       "default":   true, name: "ムゥ～りさ" },
+        { img: "https://i.minus.com/iiEOIF7u05fIr.png",        "default":   true, name: "Mio" },
+        { img: "https://i.minus.com/ieZPtyTynlwBK.png",        "default":   true, name: "Mokou" },
+        { img: "https://i.minus.com/ib1pOfjwSD53sl.png",       "default":   true, name: "Shana" },
+        { img: "https://i.minus.com/iRA9OW02HVchv.png",        "default":   true, name: "Shiki" },
+        { img: "https://i.minus.com/ik0hNJ61QjgD0.png",        "default":   true, name: "Yin" },
+        { img: "https://i.minus.com/i0v2fCxA6msfB.png",        "default":   true, name: "Yuzuki" },
+        { img: "https://i.minus.com/iBvqnYscczL3D.png",        "default":   true, name: "Patchouli Knowledge" },
+        { img: "https://i.minus.com/i31h7nnelAj5C.png",        "default":   true, name: "Kefka" },
+        { img: "https://i.minus.com/iNB442qqEYXzn.png",        "default":   true, name: "Ciel" },
+        { img: "https://i.minus.com/ibc2GhW4AW6tYy.png",       "default":   true, name: "Fubuki Atsuya" },
+        { img: "https://i.minus.com/iqIGKQS61Uydk.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/indbfcA4TS0Xb.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/ijdm4b711HIWs.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/i2ODpJc3iRt3A.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/i8FafJhXgAyWo.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/i6gc70Hv8lTl6.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/igbibpeTcWQIS.png",        "default":   true, name: "Inazuma" },
+        { img: "https://i.minus.com/ibjnPNJv4QGiUn.png",       "default":   true, name: "Inga" },
+        { img: "https://i.minus.com/ihhgWi5dADZKx.png",        "default":   true, name: "KNB" },
+        { img: "https://i.minus.com/iwp3zHABdUZn9.png",        "default":   true, name: "KNB" },
+        { img: "https://i.minus.com/iP4MQ0TblOArQ.png",        "default":   true, name: "kuroshitsuji" },
+        { img: "https://i.minus.com/iboIUPbZAbNRiz.png",       "default":   true, name: "Ali Baba" },
+        { img: "https://i.minus.com/ibptj9XtEE4yoi.png",       "default":   true, name: "Magi" },
+        { img: "https://i.minus.com/iJlh7Ek7QGYHf.png",        "default":   true, name: "Shinji" },
+        { img: "https://i.minus.com/i7hTdHzxeHKuM.png",        "default":   true, name: "Shuu" },
+        { img: "https://i.minus.com/ibvGG8EqpN9CVW.png",       "default":   true, name: "Uta" }
       ],
 
       init: function()
