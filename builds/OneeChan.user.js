@@ -1623,6 +1623,7 @@
           $("a[name=apply]", div).bind("click", function(){ 
             $SS.options.editMascot(mIndex);  
           });
+          $(document.body).append(preview);
         }
         else
           $("a[name=add]", div).bind("click", $SS.options.addMascot);
@@ -1631,9 +1632,8 @@
 
         $("#overlay").addClass("previewing");
         $("#mascot").addClass("previewing");
-        $(document.body).append(preview);
         $(document.body).append(div);
-        return $(document.body).append(overlay);
+        $(document.body).append(overlay);
       },
       addMascot: function(mIndex)
       {
