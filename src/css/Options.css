@@ -327,6 +327,8 @@ select[name='Font Family']>option {
 }
 #overlay.previewing ~ #overlay2 {
   background-color: rgba(0, 0, 0, 0.15) !important;
+}
+#add-mascot + #overlay2 {
   z-index: 800 !important;
 }
 /* Buttons */

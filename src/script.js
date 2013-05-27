@@ -1605,14 +1605,14 @@
             $SS.options.editMascot(mIndex);  
           });
           $(document.body).append(preview);
+          $("#overlay").addClass("previewing");
+          $("#mascot").addClass("previewing");
         }
         else
           $("a[name=add]", div).bind("click", $SS.options.addMascot);
 
         $("a[name=cancel]", div).bind("click", function(){ div.remove(); overlay.remove(); preview.remove(); $("#mascot").removeClass("previewing"); $("#overlay").removeClass("previewing"); });
 
-        $("#overlay").addClass("previewing");
-        $("#mascot").addClass("previewing");
         $(document.body).append(div);
         $(document.body).append(overlay);
       },
