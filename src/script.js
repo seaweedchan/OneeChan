@@ -658,7 +658,8 @@
         $SS.options.init();
 
         $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
-                   .bind("OpenSettings", $SS.OpenSettingsHandler);
+                   .bind("OpenSettings", $SS.OpenSettingsHandler)
+                   .bind("AddMenuEntry", $SS.AddMenuHandler);
 
         var MutationObserver = window.MutationObserver;
         var observer = new MutationObserver(function(mutations) {
@@ -811,6 +812,11 @@
 
       if (!$SS.browser.webkit)
         $("input[type=checkbox]", settings).riceCheck();
+    },
+    AddMenuHandler: function(e)
+    {
+      $("#header-bar .menu-button").click();
+      $("#header-bar .menu-button").click();
     },
     /* CONFIG */
     Config:
