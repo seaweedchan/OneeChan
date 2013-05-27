@@ -1171,6 +1171,7 @@
                 theme.headerLColor = theme["linkColor"];
                 theme.headerLHColor = theme["linkHColor"];
                 theme.boardColor = theme["textColor"];
+                theme.bgImg = $SS.validImageURL(theme["bgImg"]) ? theme["bgImg"] : false;
               }
 
               /* Appchan X */

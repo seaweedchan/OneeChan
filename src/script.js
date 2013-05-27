@@ -1152,6 +1152,7 @@
                 theme.headerLColor = theme["linkColor"];
                 theme.headerLHColor = theme["linkHColor"];
                 theme.boardColor = theme["textColor"];
+                theme.bgImg = $SS.validImageURL(theme["bgImg"]) ? theme["bgImg"] : false;
               }
 
               /* Appchan X */
@@ -1963,7 +1964,7 @@
           headerBGColor:"1a1a1a",
           headerColor:  "dddddd",
           boardColor:   "dddddd",
-          bgColor:      "191919",
+          bgColor:      "202020",
           textColor:    "dddddd",
           blinkColor:   "c72d41",
           headerLColor: "737f88",
