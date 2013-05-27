@@ -1400,8 +1400,7 @@
         "</label><label>" +
         "<span class='option-title'>Author Tripcode:</span><input type=text name=authorTrip value='" + (bEdit ? (tEdit.authorTrip !== undefined ? tEdit.authorTrip : "")  : "") + "'>" +
         "</label><label>" +
-        "<span class='option-title'>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "'" :
-        ($SS.validBase64(tEdit.bgImg) ? "[Base 64 Encoded Image]' disabled=true" : "'")) : "'") + "></label><label>" +
+        "<span class='option-title'>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "" : "") : "") + "'></label><label>" +
         "<span class='option-title'>BG Repeat:</span><select name=bgR>" +
         "<option" + (bEdit && themeR === "no-repeat" ? " selected" : "") + ">no-repeat</option>" +
         "<option" + (bEdit && themeR === "repeat" ? " selected" : "") + ">repeat</option>" +
@@ -1431,10 +1430,7 @@
           "<input type=text class=jsColor name=" + themeInputs[i].name + " value=" + (bEdit ? tEdit[themeInputs[i].name] : "") + "></label>";
 
         innerHTML += "<label id=customCSS><span class='option-title'>Custom CSS:</span><textarea name=customCSS>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
-        "</label><div><div id='import-link'><input class='import-input' type=file riced=true accept='image/GIF,image/JPEG,image/PNG'>" +
-        "<span class='options-button'>Select Image</span></div>" +
-        "" + (bEdit && $SS.validBase64(tEdit.bgImg) ? "<input type=hidden name=customIMGB64 value='" + tEdit.bgImg + "'>" : "") + "" +
-        "<a class='options-button' name=clearIMG>Clear Image</a>" +
+        "</label><div>" +
         "<a class='options-button' name=export>Export</a>" +
         "<a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div>";
 
@@ -1442,9 +1438,6 @@
         $(".jsColor", div).jsColor();
 
         overlay = $("<div id=overlay2>").append(div);
-
-        $(".import-input", div).bind("change", $SS.options.SelectImage);
-        $("a[name=clearIMG]", div).bind("click", $SS.options.ClearImage);
 
         $("a[name=export]", div).bind("click", function()
         {
@@ -1503,13 +1496,12 @@
             var b64 = $("input[name=customIMGB64]", overlay);
             val     = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
 
-            if (val !== "" && !$SS.validImageURL(val) && !$SS.validBase64(val))
+            if (val !== "" && !$SS.validImageURL(val))
             {
               error = true;
-              return alert("Invalid image URL/base64.");
+              return alert("Not a valid image URL!");
             }
 
-            val = $SS.cleanBase64(val);
           }
           else if (this.name === "name")
           {
@@ -1750,49 +1742,6 @@
 
         return $SS.conf["Mascots"][mIndex].default ?
           $("#mascot" + mIndex).removeClass("selected").hide() : $("#mascot" + mIndex).remove();
-      },
-      SelectImage: function()
-      {
-        var div      = $("#overlay2"),
-          parent   = $(this).parent(),
-          image    = this.files[0],
-          fileName = image.name.substr(image.name.lastIndexOf("\\") + 1),
-          reader   = new FileReader(),
-          b64, val, input;
-
-        reader.onload = (function(tImage)
-        {
-          return function(evt)
-          {
-            val = $SS.cleanBase64(evt.target.result);
-
-            if (!(b64 = $("input[name=customIMGB64]", div)).exists())
-            {
-              b64 = $("<input type=hidden name=customIMGB64>").val(val);
-              parent.after(b64);
-            }
-            else
-              b64.val(val);
-
-            if ((input = $("input[name=bgImg]", div)).exists())
-              input.val(fileName).disabled(true);
-            else
-              $("input[name=customIMG]", div).val(fileName).disabled(true);
-          }
-        })(image);
-
-        reader.readAsDataURL(image);
-      },
-      ClearImage: function()
-      {
-        var div = $("#overlay2"), input;
-
-        $("input[name=customIMGB64]").remove();
-
-        if ((input = $("input[name=bgImg]", div)).exists())
-          return input.val("").disabled(false);
-
-        return $("input[name=customIMG]", div).val("").disabled(false);
       }
     },
 
@@ -2060,8 +2009,7 @@
           authorName:  "Mayhem",
           authorTrip:  "!MayhemxaEo",
           "default":   true,
-          bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAAAAACoBHk5AAAAFUlEQVQIW2NgYJCRkUEmGMAsBjAXABi6AaXXHST3AAAAAElFTkSuQmCC",
-          bgRPA:       "repeat top left fixed",
+          bgImg:       false,
           replyOp:     "1.0",
           navOp:       "0.9",  
           bgColor:     "191919",
@@ -2117,8 +2065,7 @@
           authorName:  "moot",
           authorTrip:  "!Εр8рui8Vw2",
           "default":   true,
-          bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFxJREFUKJFj+ndtPRMDAwMSZmRiYGTAFEPmM2IRg/EZcenBop4otYw47MSinxw16HYRZQYBPfjkUdRims1ItNmE/EOcfSTLEx2GBNTgSkc41eGLF3S7cKQr0tM2AO8LBH073E/fAAAAAElFTkSuQmCC",
-          bgRPA:       "repeat-x top center scroll",
+          bgImg:       false,
           replyOp:     "1.0", 
           navOp:       "0.9", 
           bgColor:     "ffffee",
@@ -2146,8 +2093,7 @@
           authorName:  "moot",
           authorTrip:  "!Εр8рui8Vw2",
           "default":   true,
-          bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUKJFjunj1HRMDAwNWzMiILsZIpDpcarDrx28GI17zUeUYiXITLrdg08PISKyfGfGYgT38cLkRm50Dbx9944KYdIUrbohNV0SoAwD1FwRwgMmDbgAAAABJRU5ErkJggg==",
-          bgRPA:       "repeat-x top center scroll",
+          bgImg:       false,
           replyOp:     "1.0", 
           navOp:       "0.9", 
           bgColor:     "eef2ff",
@@ -2175,8 +2121,7 @@
           authorName:  "Seaweed",
           authorTrip:  "!!lq+3fff+/ev",
           "default":   true,
-          bgImg:       "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAPVJREFUOE91i1lywjAQROf+VySEhMW7kazFNhhSTM9YxoUrH69ed49El52lRLbrCEj/MorkVZesZGCPdzA6/2cvHduKfO8o/8YbBXmLvikOeisO7l/KH73BierXS4Yr+BPe6+NMyjA4JYLk5hSEtEs+8/ZBe47UXCIlIyfaDLmnt3u65pHBxhlIHsSCbOgDmUJBtvlIBi7ZxUiWEXPvKu1v3yR3Jbu+kdtwJ8+br+/kKrX0BuYNnTPssCXmXXqrhHZaspecwH3dJwrXbce2JtoHRTMJwXBGT8y73h/Ud0+F74uRpc+2Txoc+FPzDkaPrmjWd8gzL82jLtr9nlP8AAAAAElFTkSuQmCC",
-          bgRPA:       "repeat-x top center scroll",
+          bgImg:       false,
           replyOp:     "1.0", 
           navOp:       "0.9", 
           bgColor:     "f8f3fe",
