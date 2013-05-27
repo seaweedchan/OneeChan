@@ -52,7 +52,7 @@
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
-      3, "Change the position of the sidebar",
+      1, "Change the position of the sidebar",
       [
         { name: "Right",    value: 1 },
         { name: "Left",     value: 2 },
@@ -2048,6 +2048,7 @@
           quoteColor:  "789922",
           textColor:   "333333",
           tripColor:   "ff3300",
+          titleColor:  "002244",
           headerColor: "333333",
           headerLColor: "ff6600",
           headerLHColor: "ff3300",

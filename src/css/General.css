@@ -299,6 +299,8 @@ hr {
 /* Banner */
 .boardBanner {
   width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 .boardBanner>img {
   border: none !important;
