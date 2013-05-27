@@ -678,7 +678,7 @@
         observer.observe(document, { childList: true, subtree: true });
 
         if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
-          if ((link = $("*[rel='stylesheet']")).exists())
+          if ((link = $("link[title][rel='stylesheet']")).exists())
             link.each(function() { $(this).attr("href", ""); });
 
         if ((div = $("#globalMessage *[style]")).exists())
