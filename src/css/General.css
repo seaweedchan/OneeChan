@@ -438,9 +438,8 @@ table.flashListing .highlightPost::after {
 #delform {
   position: relative;
 }
-.bottom:not(.autohide) #mascot img, 
-.bottom:not(.autohide) #mascotprev img {
-  bottom: 22px !important;
+:root:not(.left-sidebar):not(.right-sidebar) #delform {
+  z-index: 3;
 }
 :root.left-sidebar #mascot img,
 :root.left-sidebar #mascotprev img {
