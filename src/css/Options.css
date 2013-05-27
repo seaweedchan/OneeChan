@@ -290,7 +290,6 @@ select[name='Font Family']>option {
   padding:0;
 }
 .tab-label {
-  color:#888!important;
   display:block;
   height:16px;
   margin:0 1px;

@@ -50,10 +50,10 @@ body,
 
 /* Text decoration */
 :root.underline-disabled a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 :root.underline-disabled .filtered {
-  text-decoration: line-through;
+  text-decoration: line-through !important;
 }
 
 /* Font weight */

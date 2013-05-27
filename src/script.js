@@ -1565,14 +1565,14 @@
       },
       showMascot: function(mIndex)
       {
-        var div, overlay, pOffset, preview;
+        var div, overlay, preview;
 
         if (typeof mIndex === "number")
           var bEdit = true,
             mEdit = $SS.conf["Mascots"][mIndex];
         if (bEdit && $SS.validImageURL(mEdit.img)) {
           preview = $("<div id=mascotprev>").html((bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
-            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px !important; " + (bEdit && (mEdit.flip || mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
+            "style='margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px !important; margin-" + ($SS.conf["Sidebar Position"] === 2 ? "left" : "right") + ": " + (mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px !important;" + (bEdit && (mEdit.flip || mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
         };
 
         div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
@@ -1580,6 +1580,8 @@
             "></label>" +
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Vertical Offset:</span>" +
             "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : 0) + "px'></label>" +
+            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
+            "<input class='mascot-input hoffset' type=text name=mHOffset value='" + (bEdit && mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
             "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip !== undefined)) ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
@@ -1617,10 +1619,11 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
-          bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cHOffsetcFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
+        cHOffset   = parseInt($("input[name=mHOffset]", mascotAdd).val());
         cFlip     = $("input[name=mFlip]", mascotAdd).val();
         cBoards   = $("input[name=mBoards]", mascotAdd).val();
 
@@ -1641,6 +1644,7 @@
             delete $SS.conf["Mascots"][mIndex].boards;
 
           $SS.conf["Mascots"][mIndex].offset   = cOffset;
+          $SS.conf["Mascots"][mIndex].hoffset   = cHOffset;
 
           tMascot = new $SS.Image(cIMG);
           $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
@@ -1650,6 +1654,7 @@
           var tMascot = { img: cIMG, flip: cFlip, boards: (cBoards === "" ? undefined : cBoards) };
 
           tMascot.offset   = cOffset;
+          tMascot.hoffset   = cHOffset;
 
           if (bDefault)
             $SS.options.deleteMascot(mIndex);
@@ -1674,6 +1679,7 @@
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
+        cHOffset   = parseInt($("input[name=mHOffset]", mascotAdd).val());
         cFlip     = $("input[name=mFlip]", mascotAdd).val();
         cBoards   = $("input[name=mBoards]", mascotAdd).val();
 
@@ -1694,6 +1700,7 @@
             delete $SS.conf["Mascots"][mIndex].boards;
 
           $SS.conf["Mascots"][mIndex].offset   = cOffset;
+          $SS.conf["Mascots"][mIndex].hoffset   = cHOffset;
 
           tMascot = new $SS.Image(cIMG);
           $("#mascot" + mIndex).attr("style", "background: url('" + tMascot.get() + "')");
@@ -1703,6 +1710,7 @@
           var tMascot = { img: cIMG, flip: cFlip, boards: (cBoards === "" ? undefined : cBoards) };
 
           tMascot.offset   = cOffset;
+          tMascot.hoffset   = cHOffset;
 
           if (bDefault)
             $SS.options.deleteMascot(mIndex);
@@ -3209,6 +3217,7 @@
       this.flip     = mascot.flip ? "scaleX(-1); -webkit-transform: scaleX(-1)" : "";
       this.img      = new $SS.Image(mascot.img);
       this.offset   = mascot.offset !== undefined ? mascot.offset : 0;
+      this.hoffset  = mascot.hoffset !== undefined ? mascot.hoffset : 0;
       this.boards   = mascot.boards;
       this.enabled  = $SS.conf["Selected Mascots"] === 0 || $SS.conf["Selected Mascots"].indexOf(index) !== -1;
 
