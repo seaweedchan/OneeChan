@@ -22,7 +22,7 @@
   text-align: right !important;
 }
 #add-mascot {
-  height: 162px;
+  height: 186px;
   top: 0px;
   bottom: 0px;
   left: 0px;
@@ -32,7 +32,7 @@
   border-radius: 3px !important;
   right: 0px;
   z-index: 999 !important;
-  width: 600px;
+  width: 500px;
   text-align:right!important;
   padding: 5px !important;
   box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3) !important;
@@ -268,7 +268,10 @@ select[name='Font Family']>option {
   width:200px;
 }
 .mascot-select,
-.mascot-input.offset {
+.mascot-input.offset,
+.mascot-input.hoffset,
+.mascot-input.height,
+.mascot-input.width {
   width:80px;
 }
 .add-mascot-label>input[type=checkbox],

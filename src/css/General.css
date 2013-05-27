@@ -419,8 +419,6 @@ table.flashListing .highlightPost::after {
 
 /* Mascot */
 #mascot img, #mascotprev img {
-  height:auto;
-  width:auto;
   position:fixed;
   z-index:2;
   pointer-events: none;
@@ -430,6 +428,8 @@ table.flashListing .highlightPost::after {
 #mascot img {
   margin-bottom:" + $SS.mascot.offset + "px;
   margin-right:" + $SS.mascot.hoffset + "px;
+  height:" + $SS.mascot.height + ";
+  width:" + $SS.mascot.width + ";
   transform: " + $SS.mascot.flip + ";
 }
 :root.left-sidebar #mascot img,
