@@ -1583,7 +1583,7 @@
             "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
             "<input class='mascot-input hoffset' type=text name=mHOffset value='" + (bEdit && mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
-            "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip !== undefined)) ? " checked" : "") + "></label>" +
+            "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip && mEdit.flip !== undefined)) ? " checked" : "") + "></label>" +
             "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
             "<input class='mascot-input mascot-boards' type=text name=mBoards value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
             "<div id='mascot-buttons-container'>" +
@@ -1619,7 +1619,7 @@
       addMascot: function(mIndex)
       {
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
-          bSetPos, cIMG, cOffset, cHOffsetcFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cHOffset, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
@@ -1675,7 +1675,7 @@
       editMascot: function(mIndex)
       {
         var overlay = $("#overlay2"), mascotAdd = $("#add-mascot"), preview = $("#mascotprev"),
-          bSetPos, cIMG, cOffset, cFlip, tMascot, bDefault;
+          bSetPos, cIMG, cOffset, cHOffset, cFlip, tMascot, bDefault;
 
         cIMG      = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
         cOffset   = parseInt($("input[name=mOffset]", mascotAdd).val());
