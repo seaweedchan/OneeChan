@@ -2003,6 +2003,7 @@
           name:         "Photons + Odin",
           authorName:   "John",
           authorTrip:   "!Hu6tDS8lls",
+          "default":    true,
           bgImg:        false,
           replyOp:      "1.0",
           navOp:        "0.9",
