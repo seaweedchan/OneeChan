@@ -1597,7 +1597,7 @@
         div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label'><span class='option-title'>Image:</span><input class='mascot-input image' type=text name=customIMG value='" +
             (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
             "></label>" +
-            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Horizontal Offset:</span>" +
+            "<label class='add-mascot-label' title='Auto goes according to the post forms position' for=null><span class='option-title'>Vertical Offset:</span>" +
             "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : ((($SS.conf["Sidebar Position"] !== 3) && ($SS.conf["Autohide Style"] !== 2)) ? 260 : 0)) + "px'></label>" +
             "<label class='add-mascot-label' title='Flip the mascot image horizontally'><span class='option-title'>Flip image:</span>" +
             "<input type=checkbox name=mFlip" + (!bEdit || (bEdit && (mEdit.flip || mEdit.flip !== undefined)) ? " checked" : "") + "></label>" +
