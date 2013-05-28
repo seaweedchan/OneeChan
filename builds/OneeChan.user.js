@@ -2396,7 +2396,7 @@
           boardColor:  "477085"
         },
         {
-          name:         "氷",
+          name:         "Cold Snap",
           authorName:   "Kori",
           authorTrip:   "!STRaW/KORI",
           "default":    true,
