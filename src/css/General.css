@@ -61,14 +61,17 @@ body {
   content:'' !important;
   display:block !important;
 }
-.hide-reply-button {
+.threadContainer .hide-reply-button {
   margin-left: -12px !important;
 }
 
 /* Quote Threading */
-:root.reply-fit-width .threadContainer {
-  padding-left: 20px!important;
+.threadContainer {
   margin-left: 0px !important;
+  padding-left: 20px!important;
+}
+:root.reply-hide .thread>.threadContainer {
+   margin-left: 11px !important;
 }
 
 /* Style Post Info option */
