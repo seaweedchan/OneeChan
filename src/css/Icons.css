@@ -23,3 +23,47 @@
 :root.backlink-icon .backlink:hover, :root.backlink-icon .backlink.inlined {
   opacity: 1 !important;
 }
+" + ($SS.conf["Show Shortcut Icons"] ? "
+#header-bar #thread-stats {
+  margin-right: 6px !important;
+}
+.expand-all-shortcut, .contract-all-shortcut, .settings-link, .qr-shortcut, #watcher-link {
+  z-index: 10 !important;
+  font-size: 0px !important;
+  padding: 8px !important;
+  overflow:hidden;
+  opacity: 0.6;
+  position: relative;
+  bottom: 4px;
+}
+:root.bottom .expand-all-shortcut, :root.bottom .contract-all-shortcut, :root.bottom .settings-link, :root.bottom .qr-shortcut, :root.bottom #watcher-link {
+  bottom: 4px !important;
+}
+#watcher-link {
+  padding: 10px !important;
+}
+.expand-all-shortcut:hover, 
+.contract-all-shortcut, 
+.qr-shortcut:not(.disabled), 
+.qr-shortcut.disabled:hover, 
+#watcher-link:not(.disabled), 
+#watcher-link.disabled:hover, 
+.settings-link:hover {
+  opacity: 1 !important;
+}
+.expand-all-shortcut {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.imgExpand+"\")!important;
+}
+.contract-all-shortcut {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.imgContract+"\")!important;
+}
+.settings-link {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons._4chanX+"\")!important;
+}
+.qr-shortcut {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.quickReply+"\")!important;
+}
+#watcher-link {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.threadWatcher+"\")!important;
+}
+" : "") + ";
