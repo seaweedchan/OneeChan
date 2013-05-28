@@ -95,7 +95,7 @@ module.exports = (grunt) ->
         src: '**'
       opera:
         options:
-          archive: 'builds/OneeChan-Opera.zip'
+          archive: 'builds/OneeChan-Opera.nex'
           level: 9
           pretty: true
         expand: true
@@ -131,6 +131,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'release', [
     'default'
     'compress:crx'
+    'compress:opera'
     'shell:commit'
     'shell:push'
   ]
