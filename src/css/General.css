@@ -101,8 +101,10 @@ body {
   bottom: 1px;
 }
 :root.reply-fit-width .reply .container {
-  margin-left: -2px !important;
   padding-right: 5px;
+}
+.container {
+  margin-left: -2px !important;
 }
 :root.reply-fit-width .post .menu-button {
   float: right;
@@ -299,6 +301,7 @@ margin-bottom: 20px !important;
   height: 8.6em;
   min-height: 0.6em !important;
 }
+
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;

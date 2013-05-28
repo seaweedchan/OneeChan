@@ -17,9 +17,6 @@
   bottom: 5px;
   right: 2px;
 }
-:root.backlink-icon .container {
-  margin-left: 4px !important;
-}
 :root.backlink-icon .reply .backlink {
   bottom: 6px !important;
 }
