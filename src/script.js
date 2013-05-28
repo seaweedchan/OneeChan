@@ -2500,7 +2500,6 @@
         $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
         $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
         $("html").optionClass("Secret Name Field",              true,   "hide-name" );
-        $("html").optionClass("Show Shortcut Icons",              true,   "icons-enabled" );
       }
     },
 
