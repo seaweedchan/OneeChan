@@ -1,3 +1,14 @@
+### v5.0.1
+*2013-05-27*
+
+**ayakashi**:
+- Added 氷 theme
+
+**seaweedchan**:
+- Fix JSColor position
+- Add Greentext preview
+- Small bug fixes
+
 ## v5.0.0:
 *2013-05-27*
 
