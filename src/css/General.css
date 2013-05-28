@@ -62,7 +62,7 @@ body {
   margin-left: 0px !important;
   padding-left: 20px !important;
 }
-#delform>.replyContainer.expanded-image>.hide-reply-button + .post.reply {
+.thread>.replyContainer.expanded-image>.hide-reply-button + .post.reply {
   margin-left: 12px !important;
 }
 .threadContainer .hide-reply-button {
