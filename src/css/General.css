@@ -56,9 +56,7 @@ body {
 }
 .expanded-image .reply.post, 
 .hasInline .reply.post {
-  display: inline-block;
   overflow: visible !important;
-  clear: both !important;
 }
 :root.reply-fit-width .threadContainer {
   margin-left: 0px !important;
