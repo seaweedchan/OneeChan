@@ -79,7 +79,7 @@ module.exports = (grunt) ->
     compress:
       crx:
         options:
-          archive: 'builds/4chan-X.zip'
+          archive: 'builds/OneeChan.zip'
           level: 9
           pretty: true
         expand: true
