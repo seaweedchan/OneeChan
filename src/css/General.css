@@ -46,6 +46,9 @@ body {
   display: block !important;
   overflow: hidden;
 }
+.hasInline .reply.post {
+  overflow: visible !important;
+}
 :root.reply-fit-width .expanded-image>.post {
   overflow: visible !important;
 }
@@ -53,20 +56,6 @@ body {
   clear:both !important;
   content:'' !important;
   display:block !important;
-}
-.expanded-image .reply.post, 
-.hasInline .reply.post {
-  overflow: visible !important;
-}
-:root.reply-fit-width .threadContainer {
-  margin-left: 0px !important;
-  padding-left: 20px !important;
-}
-.thread>.replyContainer.expanded-image>.hide-reply-button + .post.reply {
-  margin-left: 12px !important;
-}
-.threadContainer .hide-reply-button {
-  margin-left: -12px !important;
 }
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {
