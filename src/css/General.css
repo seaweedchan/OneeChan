@@ -38,7 +38,8 @@ body {
   content:'';
   display:block;
 }
-.replyContainer {
+.thread>.replyContainer,
+.threadContainer>.replyContainer {
   margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
 }
 .postInfo + .inline {
