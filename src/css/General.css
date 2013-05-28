@@ -192,6 +192,12 @@ input[type=checkbox]:checked+.riceCheck::before
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+:root:not(.fixed).right-sidebar #header-bar {
+  right: 300px;
+}
+:root:not(.fixed).left-sidebar #header-bar {
+  left: 300px;
+}
 
 /* Delform */
 :root.fixed:not(.autohide):not(.bottom) #delform {
