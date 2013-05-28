@@ -41,22 +41,36 @@ body {
 .replyContainer {
   margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
 }
+.postInfo + .inline {
+  margin-left: 20px !important;
+}
 /* Fit Width option */
 :root.reply-fit-width .reply.post {
   display: block !important;
-  overflow: hidden;
 }
-.hasInline .reply.post {
-  overflow: visible !important;
-}
+.hasInline>.reply.post,
 :root.reply-fit-width .expanded-image>.post {
   overflow: visible !important;
+}
+.hasInline .inline>.replyContainer:not(.expanded-image):not(.hasInline) .reply.post,
+:root.reply-fit-width .reply.post {
+  overflow: hidden !important;
 }
 :root.reply-fit-width .expanded-image>.post::after {
   clear:both !important;
   content:'' !important;
   display:block !important;
 }
+.hide-reply-button {
+  margin-left: -12px !important;
+}
+
+/* Quote Threading */
+:root.reply-fit-width .threadContainer {
+  padding-left: 20px!important;
+  margin-left: 0px !important;
+}
+
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {
   box-shadow: inset rgba(0,0,0,.05) 0px -1px 2px;
@@ -84,7 +98,7 @@ body {
   bottom: 1px;
 }
 :root.reply-fit-width .reply .container {
-  margin-left: -4px !important;
+  margin-left: -2px !important;
   padding-right: 5px;
 }
 :root.reply-fit-width .post .menu-button {
