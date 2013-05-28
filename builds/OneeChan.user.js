@@ -712,9 +712,6 @@
         setTimeout(function() {
           if (!$SS.QRhandled && (div = $("#qr")).exists())
             $SS.QRDialogCreationHandler({ target: div });
-          if ((div = $(".hide-reply-button")).exists()) {
-            $("html").addClass("reply-hide");
-          };
         });
 
       }
