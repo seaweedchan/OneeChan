@@ -62,8 +62,11 @@ body {
   margin-left: 0px !important;
   padding-left: 20px !important;
 }
-.replyContainer.expanded-image>.hide-reply-button + .post.reply {
+#delform>.replyContainer.expanded-image>.hide-reply-button + .post.reply {
   margin-left: 12px !important;
+}
+.threadContainer .hide-reply-button {
+  margin-left: -12px !important;
 }
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {
@@ -227,6 +230,8 @@ margin-bottom: 20px !important;
   position: fixed !important;
   right: 0px !important;
   bottom: 0px !important;
+  left: auto !important;
+  top: auto !important;
 }
 :root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
   position: fixed !important;
@@ -248,6 +253,17 @@ margin-bottom: 20px !important;
   left: -244px !important;
   bottom: 50px !important;
   right: auto !important;
+}
+#qr {
+
+}
+:root.left-sidebar #qr {
+  left: 0px !important;
+  right: auto !important;
+}
+:root.right-sidebar #qr {
+  right: 0px !important;
+  left: auto !important;
 }
 :root.fade-qr #qr form {
   display: block !important;
