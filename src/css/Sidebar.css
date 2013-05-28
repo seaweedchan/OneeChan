@@ -20,7 +20,7 @@
   right: 1px;
 }
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
-  margin-top: 25px;
+  margin-top: 24px;
 }
 #banner {
   width: 100%;
