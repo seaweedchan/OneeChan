@@ -61,6 +61,11 @@ module.exports = (grunt) ->
         src: 'tmp/style.css'
         dest: 'tmp/style.min.css'
 
+    copy:
+      opera:
+        files:
+          'builds/OneeChan-Opera.nex': 'builds/OneeChan-Chrome.zip'
+
     shell:
       commit:
         options: shellOptions
@@ -85,14 +90,6 @@ module.exports = (grunt) ->
         expand: true
         cwd: 'builds/crx/'
         src: '**'
-      opera:
-        options:
-          archive: 'builds/OneeChan-Opera.nex'
-          level: 9
-          pretty: true
-        expand: true
-        cwd: 'builds/crx/'
-        src: '**'
 
     clean:
       tmp:        'tmp/'
@@ -103,7 +100,7 @@ module.exports = (grunt) ->
   # grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-concat'
-  # grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-shell'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
 
@@ -122,7 +119,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'release', [
     'default'
     'compress:crx'
-    'compress:opera'
+    'copy:opera'
     'shell:commit'
     'shell:push'
   ]
