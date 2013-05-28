@@ -1,3 +1,9 @@
+### v5.0.2
+*2013-05-28*
+
+**seaweedchan**:
+- Fixed issues with quote threading
+
 ### v5.0.1
 *2013-05-27*
 
