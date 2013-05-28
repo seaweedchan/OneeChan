@@ -2375,6 +2375,33 @@
           headerLHColor: "5d6678",
           headerBGColor: "e3e7e8",
           boardColor:  "477085"
+        },
+        {
+          name:         "氷",
+          authorName:   "Kori",
+          authorTrip:   "!STRaW/KORI",
+          "default":    true,
+          replyOp:      "1.0",
+          navOp:        "0.9",
+          mainColor:    "fcfcfc",
+          brderColor:   "ebebeb",
+          inputColor:   "ffffff",
+          inputbColor:  "ffffff",
+          headerBGColor:"ffffff",
+          headerColor:  "aaaaaa",
+          boardColor:   "6699cc",
+          bgColor:      "ffffff",
+          textColor:    "232323",
+          blinkColor:   "6699cc",
+          headerLColor: "aaaaaa",
+          headerLHColor:"6699cc",
+          linkColor:    "6699cc",
+          linkHColor:   "6699cc",
+          nameColor:    "aaaaaa",
+          tripColor:    "476b8f",
+          titleColor:   "909090",
+          quoteColor:   "83bf57",
+          unreadColor:  "6699cc"
         }
       ],
 
