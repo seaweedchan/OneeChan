@@ -49,13 +49,13 @@ body {
 :root.reply-fit-width .reply.post {
   display: block !important;
 }
-.hasInline>.reply.post,
-:root.reply-fit-width .expanded-image>.reply.post {
-  overflow: visible !important;
-}
 .hasInline .inline>.replyContainer:not(.expanded-image):not(.hasInline) .reply.post,
 :root.reply-fit-width .reply.post {
   overflow: hidden !important;
+}
+:root.reply-fit-width .hasInline>.reply.post,
+:root.reply-fit-width .expanded-image>.reply.post {
+  overflow: visible !important;
 }
 :root.reply-fit-width .expanded-image>.post::after {
   clear:both !important;
