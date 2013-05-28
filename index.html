@@ -1,89 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-	<link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
+    <meta charset=UTF-8>
+    <title>OneeChan</title>
+    <meta name=description>
+    <link rel='shortcut icon' href=favicon.png>
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/poojninacjpckfopjogaokeegibhkidi">
+    <script>
+(function(){
+  var d = document, engine = /WebKit|Presto|Gecko/.exec(navigator.userAgent)[0].toLowerCase();
+  function $(s){return d.querySelector(s, d.body)}
+  function id(i){return $('[data-id='+i+']')}
+  function a(i){return $('[href="#'+i+'"]')}
+  window.addEventListener('hashchange', function(e) {
+    var next = e.newURL.match(/#(.*)$/)[1];
+    if(id(next)) {
+      $('.active').className = null;
+      $('.on').className = null;
+      id(next).className = 'active';
+      a(next).className = 'on';
+    }
+  }, false);
+  var d = document;
+  d.addEventListener('DOMContentLoaded', function loaded() {
+    var hash, el, install;
+    d.removeEventListener('DOMContentLoaded', loaded, false);
+    hash = window.location.hash.slice(1) || 'install';
+    el = id(hash) || id('install');
+    el.className = 'active';
+    a(el.dataset.id).className = 'on';
+    install = id('installLink');
+    switch (engine) {
+      case 'webkit':
+        install.href = "https://chrome.google.com/webstore/detail/OneeChan/poojninacjpckfopjogaokeegibhkidi"
+        install.addEventListener('click', function(event) {event.preventDefault(); chrome.webstore.install();})
+        break;
+      case 'gecko':
+        install.href = "https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js"
+        break;
+      case 'presto':
+        install.href = ""
+    };
+  }, false);
+})();
     </script>
-    <title>OneeChan by seaweedchan</title>
+    <style>
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('BebasNeue-webfont.woff') format('woff'),
+       url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+::-moz-selection{background:#C65385; color: white;}
+::selection{background:#C65385; color: white;}
+body {
+  color: #373737;
+  background: #FFF6EA;
+  font-family: sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0;
+}
+a {
+  color: #538DB5;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: color .3s ease-in-out;
+  -moz-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+a:hover {
+  color: #CE618E;
+}
+a:focus {
+  text-decoration: underline;
+}
+head, title {
+  display: block;
+}
+title {
+  color: #8E3B5E;
+  cursor: default;
+  background: #7C334F;
+  background: -webkit-linear-gradient(#7C334F, #6B2C45);
+  background: -moz-linear-gradient(#7C334F, #6B2C45);
+  background: -o-linear-gradient(#7C334F, #6B2C45);
+  background: linear-gradient(#7C334F, #6B2C45);
+  font: 700 210px BebasNeueRegular, sans-serif;
+  letter-spacing: 10px;
+  text-align: center;
+  text-shadow: 0 1px 0 #6B2C45, 0 2px 0 #6B2C45, 0 3px 0 #6B2C45, 0 4px 0 #6B2C45, 0 5px 0 #6B2C45, 0 6px 0 #6B2C45, 0 7px 0 #6B2C45, 0 8px 0 #6B2C45, 0 9px 0 #6B2C45, 0 10px 0 #6B2C45, 0 22px 40px #56243A, 0 4px 10px #56243A;
+}
+title, nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+nav {
+  background: #5A7B92;
+  box-shadow: 0 0px 4px #000;
+  text-align: center;
+  border-top: 1px solid #8BB2DA;
+  border-bottom: 1px solid #8BB2DA;
+}
+nav > div {
+  width: 700px;
+  display: inline-block;
+}
+nav > div > div {
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+}
+nav a > div {
+  display: block !important;
+}
+nav a {
+  color: #EEE;
+  display: inline-block;
+  font: 1.5em BebasNeueRegular, sans-serif;
+  padding: 10px 0;
+  text-shadow: 0 1px 1px #111, 0 2px 1px #111;
+  vertical-align: text-top;
+  width: 115px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  nav a {
+    width: auto;
+  }
+}
+nav a:hover {
+  color: #CE618E;
+}
+.on {
+  color: #76AFD6;
+}
+.refugees {
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  text-shadow: 0px 1px 1px rgb(122, 122, 122);
+}
+section {
+  display: none;
+  font-size: 17px;
+  line-height: 23px;
+  margin: 10px auto 50px;
+  width: 700px;
+}
+.active {
+  display: block;
+}
+h1 {
+  text-align: center;
+}
+h1 > a {
+  font: 700 52px BebasNeueRegular, sans-serif;
+  text-shadow: 0 1px 1px #666, 0 2px 1px #666;
+}
+h5 {
+  text-align: center;
+  margin: -1.67em 0 1.67em 0;
+}
+hr {
+  background: -webkit-linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  background: -moz-linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  background: -o-linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  background: linear-gradient(left, #F0F0F0, #A040A0, #F0F0F0);
+  border: none;
+  height: 1px;
+}
+code, pre {
+  background: #EEE;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  box-shadow: inset 0 0 8px #DDD;
+  color: #555;
+  padding: 0 2px;
+  text-shadow: 0 1px 0 #FFF;
+}
+code {
+  white-space: nowrap;
+}
+.chrome::before, .firefox::before, .opera::before {
+  content: '';
+  background-image: url(data:image/png;base64,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);
+  display: inline-block;
+  margin-right: 4px;
+  height: 16px;
+  vertical-align: text-top;
+  width: 15px;
+}
+.firefox::before {
+  width: 16px;
+  background-position: -15px 0;
+}
+.opera::before {
+  background-position: -31px 0;
+}
+    </style>
   </head>
-
   <body>
-    <a id="forkme_banner" href="https://github.com/seaweedchan/OneeChan">View on GitHub</a>
-    <div class="shell">
+    <nav>
+      <div><div>
+        <a href=#install>Installation</a>
+        <a href=https://github.com/seaweedchan/OneeChan/blob/master/CHANGELOG.md target='_blank'>Changelog</a>
+        <a href=https://github.com/seaweedchan/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions target='_blank'>Bug Reports</a>
+        <a href=http://twitter.com/seaweedPOMF target='_blank'>Twitter</a>
+      </div></div>
+    </nav>
+    <section data-id=install>
+      <center><p class='authors'>A fork of 4chan Style Script with many new options and updated for the 4chan X rewrite.<br><br>Requires 1.2.12+ of <a href=http://seaweedchan.github.io/4chan-x/>Seaweedchan's 4chan X</a> (enable <code>Persistent QR</code> and <code>Autohide QR</code>). Other forks of 4chan X are not supported.</p><span>Make sure you disable your old userscript before installing version 5.</span></center>
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>OneeChan</h1>
-            <h2>A fork of 4chan Style Script, for close maintaining, bug fixing, and quality.</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+      <h1><a class=install data-id=installLink href="https://raw.github.com/seaweedchan/OneeChan/stable/4chan_x.user.js">Install OneeChan</a></h1>
+      <center style=margin-top:-20px;><a class=chrome href=https://chrome.google.com/webstore/detail/OneeChan/poojninacjpckfopjogaokeegibhkidi></a><a href=https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js class=firefox></a></center>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/seaweedchan/OneeChan/blob/master/CHANGELOG.md" class="zip"><em><br>Changelog</em></a><a class="tgz"><em>.user.js</em><s style="text-decoration: line-through !important">INSTALL</s></a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-
-<center><span>Want to leave feedback on the future 4chan X v3-based OneeChan?<br><a href="https://github.com/seaweedchan/OneeChan/issues/284">See here</a>.</span><br><br>
-<hr>
-<h3>How do I get started?</h3></center>
+      <b class=chrome>Chrome</b>:
       <ol>
- 	<li>Install 4chan X -- <a href="http://mayhemydg.github.com/4chan-x/">Mayhem's</a> or <a href="http://ihavenoface.github.com/4chan-x/">ihavenoface's</a>.</li>
- 	<li>Refresh the 4chan board and enable "Persistent QR" and "Autohide QR" in 4chan X's settings.</li>
- 	<li>Follow the instructions below for your browser, and <a href="https://github.com/seaweedchan/OneeChan/issues/new">report any issues</a> you find.</li>
+        <li>Install OneeChan. That's it.</li>
+        <li>OneeChan will be automatically updated by Chrome.</li>
       </ol>
-      <section id="chrome"><center><h3 class=chrome>Chrome</h3></center>
-      <ol>
-        <li>Install <a href="https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a>.</li>
-        <li>Install OneeChan with Tampermonkey.</li>
-      </ol></section>
+      <ul><li>Alternatively, you can install Tampermonkey and install the Firefox version of OneeChan.</li></ul>
 
-      <section id="firefox"><center><h3 class=firefox>Firefox</h3></center>
+      <b class=firefox>Firefox</b>:
       <ol>
-        <li>Install <a href=https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/>Greasemonkey</a> (Scriptish is fine, but hasn't been updated since January).</li>
-        <li>Restart Firefox.</li>
+        <li>If you don't have <a href=https://addons.mozilla.org/firefox/addon/greasemonkey/>Greasemonkey</a> installed:
+          <ol>
+            <li>Install <a href=https://addons.mozilla.org/firefox/addon/greasemonkey/>Greasemonkey</a>.</li>
+            <li>Restart Firefox.</li>
+          </ol>
+        </li>
         <li>Install OneeChan.</li>
-      </ol></section>
- <br></section>
+      </ol>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/seaweedchan">seaweedchan</a> can be found on <a href="https://github.com/seaweedchan/OneeChan">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <br>
-        <span class="octocat"></span>
-      </footer>
-
-    </div>
-
-    
+      <b class=opera>Opera</b>:
+      <ul>
+        <li>Opera is not supported. Support will be automatic in Opera 14.
+        </li>
+      </ul>
+    </section>
   </body>
-</html>	
+</html>
