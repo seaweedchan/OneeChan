@@ -41,10 +41,11 @@
 #add-theme {
   text-align:right!important;
   padding: 5px 8px 5px 5px !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 378px;
 }
 #add-mascot .option-title,
 #add-theme .option-title {
