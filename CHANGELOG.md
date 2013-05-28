@@ -1,3 +1,12 @@
+### v5.0.4
+*2013-05-28*
+
+**seaweedchan**:
+- Fix image expansion not showing with fit width
+- Make backlink margins more consistent between replies and OPs
+- Bump minimum requirement of 4chan X to 1.2.13 for Quote Threading users.
+- Fix issue where inline posts have strange bottom margins
+
 ### v5.0.3
 *2013-05-28*
 
