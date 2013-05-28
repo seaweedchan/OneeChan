@@ -20,7 +20,9 @@
 .options-button, 
 .theme-preview,
 #oneechan-options input,
-textarea {
+#oneechan-options textarea,
+.hide-reply-button,
+.hide-thread-button {
   font-family:sans-serif !important;
   font-size:12px !important;
 }
