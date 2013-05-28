@@ -47,6 +47,9 @@
   bottom: 0px;
   height: 378px;
 }
+:root.webkit #add-theme {
+  height: 403px !important;
+}
 #add-mascot .option-title,
 #add-theme .option-title {
   float:left;
