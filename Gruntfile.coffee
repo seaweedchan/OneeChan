@@ -36,6 +36,14 @@ module.exports = (grunt) ->
             'src/meta/botproc.js'
             'src/script.js'
           ]
+      opera:
+        options: concatOptions
+        files:
+          'builds/opera/manifest.json': 'src/meta/operamanifest.json'
+          'builds/opera/script.js': [
+            'src/meta/botproc.js'
+            'src/script.js'
+          ]
 
 #      css:
 #        options: concatOptions
@@ -79,11 +87,19 @@ module.exports = (grunt) ->
     compress:
       crx:
         options:
-          archive: 'builds/OneeChan.zip'
+          archive: 'builds/OneeChan-Chrome.zip'
           level: 9
           pretty: true
         expand: true
         cwd: 'builds/crx/'
+        src: '**'
+      opera:
+        options:
+          archive: 'builds/OneeChan-Opera.zip'
+          level: 9
+          pretty: true
+        expand: true
+        cwd: 'builds/opera/'
         src: '**'
 
     clean:
@@ -107,6 +123,7 @@ module.exports = (grunt) ->
     'concat:style'
     'cssmin:minify'
     'concat:crx'
+    'concat:opera'
     'concat:userscript'
     'clean:tmp'
   ]
