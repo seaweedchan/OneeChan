@@ -1,3 +1,9 @@
+**seaweedchan:**
+- Renamed 氷 to Cold Snap as per author's request
+- Added `Show Header Background Gradient` option
+- Some more image expanding bug fixes
+- Hopefully alleviate some possible flashing before 4chan X is loaded
+
 ### v5.0.4
 *2013-05-28*
 

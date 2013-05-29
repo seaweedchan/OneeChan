@@ -57,7 +57,8 @@ body {
 :root.reply-fit-width .expanded-image>.reply.post {
   overflow: visible !important;
 }
-:root.reply-fit-width .expanded-image>.post::after {
+:root.reply-fit-width .expanded-image>.post::after,
+:root.reply-fit-width .hasInline>.reply.post::after {
   clear:both !important;
   content:'' !important;
   display:block !important;
