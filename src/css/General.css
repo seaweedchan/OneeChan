@@ -211,6 +211,10 @@ input[type=checkbox]:checked+.riceCheck::before
 :root:not(.fixed).left-sidebar #header-bar {
   left: 300px;
 }
+#full-board-list>a, 
+.navSmall>a {
+  margin-left: 2px;
+}
 
 /* Delform */
 :root.fixed:not(.autohide):not(.bottom) #delform {

@@ -3,9 +3,11 @@
 /* Anything we need 0px */
 .deleteform,
 .pagelist, 
-.pagelist input {
+.pagelist input,
+#full-board-list {
   font-size: 0px !important;
 }
+
 /* Anything we need small */
 .fileInfo,
 .summary {
@@ -37,6 +39,15 @@
 .prettyprint span {
   font-family:monospace!important;
   font-size:medium!important;
+}
+
+/* Full board list */
+#full-board-list {
+  font-size: 0px !important;
+}
+#full-board-list a,
+#full-board-list .fourchanx-link {
+  font-size: 12px !important;
 }
 
 /* Everything else */
