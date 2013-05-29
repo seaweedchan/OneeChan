@@ -8,7 +8,15 @@
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mfhefenmonhpbimbegbfcpmdhmpppefl">
     <script>
 (function(){
-  var d = document, engine = /WebKit|Presto|Gecko/.exec(navigator.userAgent)[0].toLowerCase();
+  var d = document, engine;
+  if (/Next/.test(navigator.userAgent))
+    engine = "next";
+  else if (/Firefox/.test(navigator.userAgent))
+    engine = "firefox";
+  else if (/Chrome/.test(navigator.userAgent))
+    engine = "chrome";
+  else if (/Presto/.test(navigator.userAgent))
+    engine = "opera"
   function $(s){return d.querySelector(s, d.body)}
   function id(i){return $('[data-id='+i+']')}
   function a(i){return $('[href="#'+i+'"]')}
@@ -30,17 +38,14 @@
     el.className = 'active';
     a(el.dataset.id).className = 'on';
     install = id('installLink');
-    switch (engine) {
-      case 'webkit':
-        install.href = "https://chrome.google.com/webstore/detail/OneeChan/mfhefenmonhpbimbegbfcpmdhmpppefl"
-        install.addEventListener('click', function(event) {event.preventDefault(); chrome.webstore.install();})
-        break;
-      case 'gecko':
-        install.href = "https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js"
-        break;
-      case 'presto':
-        install.href = ""
-    };
+    if (engine === 'next')
+      install.href = "https://addons.opera.com/en/extensions/details/oneechan/?display=en";
+    else if (engine === 'firefox')
+      install.href = "https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js";
+    else if (engine === 'chrome')
+      install.href = "https://chrome.google.com/webstore/detail/OneeChan/mfhefenmonhpbimbegbfcpmdhmpppefl";
+    else if (engine === 'opera')
+      install.href = "";
   }, false);
 })();
     </script>
@@ -224,7 +229,7 @@ code {
       <center><p class='authors'>A fork of 4chan Style Script with many new options and updated for the 4chan X rewrite.<br><br>Requires 1.2.13+ of <a href=http://seaweedchan.github.io/4chan-x/>Seaweedchan's 4chan X</a> (enable <code>Persistent QR</code> and <code>Autohide QR</code>). Other forks of 4chan X are not supported.</p><span>Make sure you disable your old userscript before installing version 5.</span></center>
 
       <h1><a class=install data-id=installLink href="https://raw.github.com/seaweedchan/OneeChan/stable/4chan_x.user.js">Install OneeChan</a></h1>
-      <center style=margin-top:-20px;><a class=chrome href=https://chrome.google.com/webstore/detail/OneeChan/mfhefenmonhpbimbegbfcpmdhmpppefl></a><a href=https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js class=firefox></a></center>
+      <center style=margin-top:-20px;><a class=chrome href=https://chrome.google.com/webstore/detail/OneeChan/mfhefenmonhpbimbegbfcpmdhmpppefl></a><a href=https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js class=firefox></a><a href=https://addons.opera.com/en/extensions/details/oneechan/?display=en class=operanext></a></center>
 
       <b class=chrome>Chrome</b>:
       <ol>
@@ -245,11 +250,10 @@ code {
       </ol>
 
       <b class=operanext>Opera Next</b>:
-      <ul>
-        <li>Opera 1-14 are not supported. An extension for Opera Next 15 is currently awaiting approval.
-          <li>If you want OneeChan now, you can download the fork and load the <code>crx</code> folder as an "Unpacked Extension" in the Developer Mode of the extensions page.</li>
-        </li>
-      </ul>
+      <ol>
+        <li>Install OneeChan (if using Opera Next 15 or higher). That's it.</li>
+        <li>OneeChan will be automatically updated by Opera Next.</li>
+      </ol>
     </section>
   </body>
 </html>
