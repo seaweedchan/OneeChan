@@ -1,3 +1,6 @@
+### v5.0.5
+*2013-05-29*
+
 **seaweedchan:**
 - Renamed 氷 to Cold Snap as per author's request
 - Added `Show Header Background Gradient` option
