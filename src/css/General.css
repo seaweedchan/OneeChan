@@ -65,6 +65,10 @@ body {
 .threadContainer .hide-reply-button {
   margin-left: -12px !important;
 }
+:root.reply-hide .thread>.expanded-image>.reply,
+:root.reply-hide .thread>.hasInline>.reply {
+   margin-left: 12px !important;
+}
 
 /* Quote Threading */
 .threadContainer {
@@ -72,7 +76,7 @@ body {
   padding-left: 20px!important;
 }
 :root.reply-hide .thread>.threadContainer {
-   margin-left: 12px !important;
+   margin-left: 13px !important;
 }
 
 /* Style Post Info option */

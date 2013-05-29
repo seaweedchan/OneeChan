@@ -50,6 +50,7 @@
     "Show Reply to Thread Button": [ false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
     "Show Shortcut Icons":         [ true, "Shows icons instead of text links for 4chan X shortcuts in the header bar"],
     "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Show Header Background Gradient": [ true, "Gives the header bar a gradient background to be prettier" ],
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
@@ -2527,6 +2528,7 @@
         $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
         $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
         $("html").optionClass("Secret Name Field",              true,   "hide-name" );
+        $("html").optionClass("Show Header Background Gradient", true, "header-gradient" );
       }
     },
 

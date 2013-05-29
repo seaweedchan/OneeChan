@@ -117,8 +117,11 @@ body {
 :root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-10) + ") !important;
 }
-#header-bar {
-  background:linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ")) !important;
+:root:not(.header-gradient) #header-bar {
+  background: rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ") !important;
+}
+:root.header-gradient #header-bar {
+  background: linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ")) !important;
 }
 .options-button,
 .qr-link,
