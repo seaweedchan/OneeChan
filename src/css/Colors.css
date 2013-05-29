@@ -78,7 +78,7 @@ a:hover,
 /* Board Title */
 .boardTitle {
   color: " + $SS.theme.boardColor.hex + " !important;
-  text-shadow:1px 1px 1px rgb\(" + $SS.theme.boardColor.shiftRGB(-100) + ") !important;
+  text-shadow:1px 1px 1px rgba\(" + $SS.theme.boardColor.shiftRGB(-100) + ", 0.6) !important;
 }
 /* Backlinks */
 .backlink {
