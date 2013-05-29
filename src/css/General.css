@@ -85,9 +85,6 @@ body {
   box-shadow: inset rgba(0,0,0,.05) 0px -1px 2px;
   padding-top: 2px !important;
 }
-:root.post-info .inline .reply {
-  padding: 0 !important;
-}
 
 /* Backlinks */
 :root.backlink-bottom .post {
@@ -111,6 +108,9 @@ body {
 }
 .container {
   margin-left: -2px !important;
+}
+:root:not(.reply-fit-width) .menu-button {
+  margin-right: 4px !important;
 }
 :root.reply-fit-width .post .menu-button {
   float: right;
