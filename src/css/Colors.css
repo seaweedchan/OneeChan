@@ -71,6 +71,8 @@ a:hover,
 /* Subject and Option labels */
 .subject,
 .replytitle,
+.teaser b,
+.post-subject,
 .option.header .option-title,
 .kwd {
   color: " + $SS.theme.titleColor.hex + " !important;
