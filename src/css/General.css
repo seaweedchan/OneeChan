@@ -45,6 +45,10 @@ body {
 .postInfo + .inline {
   margin-left: 20px !important;
 }
+.inline .op>.postInfo,
+#qp .op>.postInfo {
+  min-width: 600px;
+}
 /* Fit Width option */
 :root.reply-fit-width .reply.post {
   display: block !important;
