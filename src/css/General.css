@@ -498,7 +498,7 @@ table.flashListing .highlightPost::after {
 }
 :root.left-sidebar #mascot img,
 :root.left-sidebar #mascotprev img {
-  margin-left:" + $SS.mascot.offset + "px;
+  margin-left:" + $SS.mascot.hoffset + "px;
   margin-right: 0px !important;
 }
 #mascotprev img {
