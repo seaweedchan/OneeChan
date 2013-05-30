@@ -1,3 +1,9 @@
+### v5.0.8
+*2013-05-30*
+
+**seaweedchan**:
+- Make OneeChan respect fonts a little more
+
 ### v5.0.7
 *2013-05-30*
 
