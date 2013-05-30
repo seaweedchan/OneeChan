@@ -3,10 +3,10 @@
 :root:not(.fixed) #header-bar {
   z-index: 10;
 }
-:root.left-sidebar body {
+:root.left-sidebar.fourchan-x body {
   padding-left: 303px;
 }
-:root.right-sidebar body {
+:root.right-sidebar.fourchan-x body {
   padding-right: 303px;
 }
 .boardBanner {

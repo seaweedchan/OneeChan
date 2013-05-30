@@ -2503,6 +2503,7 @@
       init: function()
       {
         /* Function arguments: ("Option Name", value, "class-name") */
+        $("html").addClass("oneechan");
         $("html").optionClass("Underline Links",              false,  "underline-disabled" );
         $("html").optionClass("Rounded Corners",              true,   "rounded-corners" );
         $("html").optionClass("Show Checkboxes",              false,  "hide-checkboxes" );

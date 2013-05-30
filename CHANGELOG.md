@@ -1,3 +1,10 @@
+### v5.0.7
+*2013-05-30*
+
+**seaweedchan**:
+- Added OneeChan document class
+- Fixed Cleanup CSS affecting non-boards pages likes News and Report
+
 ### v5.0.6
 *2013-05-30*
 
