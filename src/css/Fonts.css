@@ -72,8 +72,9 @@ body,
 /* Font weight */
 .name,
 .subject,
-.option.header .option-title {
-  font-weight: 700;
+.option.header .option-title,
+a.current {
+  font-weight: " + ($SS.conf["Bitmap Font"] ? 4 : 7) + "00 !important;
 }
 .qr-link {
   font-weight: normal;
