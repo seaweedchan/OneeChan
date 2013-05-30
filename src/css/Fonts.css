@@ -31,7 +31,6 @@
 /* Board Title */
 .boardBanner .boardTitle {
   font-weight: 400 !important;
-  font-family: sans-serif !important;
   font-size:28px !important;
 }
 
@@ -56,9 +55,25 @@ body,
 .prev form::after,
 .next span::after,
 .next form::after,
-.pages a {
+.pages a,
+#qr input.field,
+#qr textarea.field,
+#qr span.field,
+#qr [type=submit],
+#menu .entry,
+.boardBanner .boardTitle {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
   font-size:" + $SS.conf["Font Size"] + "px;
+}
+#qr .field::-moz-placeholder,
+::-moz-placeholder {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
+  font-size:" + $SS.conf["Font Size"] + "px !important;
+}
+#qr .field::webkit-input-placeholder,
+::webkit-input-placeholder {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
+  font-size:" + $SS.conf["Font Size"] + "px !important;
 }
 
 /* Text decoration */
