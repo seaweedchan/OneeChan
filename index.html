@@ -42,8 +42,10 @@
       install.href = "https://addons.opera.com/en/extensions/details/oneechan/?display=en";
     else if (engine === 'firefox')
       install.href = "https://github.com/seaweedchan/OneeChan/raw/stable/builds/OneeChan.user.js";
-    else if (engine === 'chrome')
+    else if (engine === 'chrome') {
       install.href = "https://chrome.google.com/webstore/detail/OneeChan/mfhefenmonhpbimbegbfcpmdhmpppefl";
+      install.addEventListener('click', function(event) {event.preventDefault(); chrome.webstore.install();});
+    }
     else if (engine === 'presto')
       install.href = "";
   }, false);
