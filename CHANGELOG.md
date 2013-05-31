@@ -1,3 +1,9 @@
+### v5.0.9
+*2013-05-31*
+
+**seaweedchan**:
+- Fix issues with hidden replies (with stubs shown)
+
 ### v5.0.8
 *2013-05-30*
 
