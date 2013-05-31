@@ -2440,7 +2440,7 @@
         { img: "https://i.minus.com/iben2goxAmh7aV.png",       "default":   true, name: "Kaname Madoka", hoffset:"25" },
         { img: "https://i.minus.com/indbfcA4TS0Xb.png",        "default":   true, name: "Kirino Ranmaru", hoffset:"50" },
         { img: "https://i.minus.com/igbibpeTcWQIS.png",        "default":   true, name: "Kirino x Kariya", hoffset:"1" },
-        { img: "https://i.minus.com/ibnxkA58kU3iWc.png",       "default":   true, name: "Kirisame Marisa" },
+        { img: "https://i7.minus.com/iRBpkeBt5JaS9.png",       "default":   true, name: "Kirisame Marisa" },
         { img: "https://i2.minus.com/ikPgsoC0DBeuP.png",       "default":   true, name: "Kousaka Kirino" },
         { img: "https://i.minus.com/iwp3zHABdUZn9.png",        "default":   true, name: "Kuroko no Basuke", hoffset:"25" },
         { img: "https://i.minus.com/ibwkO6nLTS8aQW.png",       "default":   true, name: "Mashiro Shiina" },
