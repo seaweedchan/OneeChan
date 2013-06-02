@@ -62,7 +62,8 @@ a:hover,
   color: " + $SS.theme.headerLHColor.hex + " !important;
 }
 /* Greentext */
-.quote,
+.postMessage>.quote,
+s:hover .quote,
 .str, 
 .atv,
 .new {
