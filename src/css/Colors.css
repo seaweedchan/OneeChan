@@ -18,13 +18,13 @@ textarea,
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
-.name,
+.nameBlock>.name,
 .com,
 .post-author {
   color: " + $SS.theme.nameColor.hex + " !important;
 }
 /* Tripcodes */
-.postertrip,
+.nameBlock>.postertrip,
 .post-tripcode,
 .tag {
   color: " + $SS.theme.tripColor.hex + " !important;
