@@ -27,6 +27,7 @@ iframe[src='about:blank'],
 :root:not(.oneechan) body,
 :root:not(.fourchan-x) body::before,
 #postForm,
+.forwarded,
 body>hr,
 :root.catalog hr,
 .navLinks {
