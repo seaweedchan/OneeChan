@@ -1,3 +1,12 @@
+### v5.0.10
+*2013-06-02*
+
+**seaweedchan**:
+- Changed Marisa's mascot to a version with corrected eye colors. The old image can be found [here](https://i.minus.com/ibnxkA58kU3iWc.png).
+- Fix forward reply hiding
+- Dont color names with emails
+- Fix quote coloring in spoilers
+
 ### v5.0.9
 *2013-05-31*
 
