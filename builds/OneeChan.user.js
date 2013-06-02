@@ -678,9 +678,10 @@
       {
         $SS.options.init();
 
-        $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
-                   .bind("OpenSettings", $SS.OpenSettingsHandler)
-                   .bind("AddMenuEntry", $SS.AddMenuHandler);
+        $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
+
+        if (!$SS.browser.webkit)
+          $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
         var MutationObserver = window.MutationObserver;
         var observer = new MutationObserver(function(mutations) {
@@ -827,12 +828,11 @@
 
       $SS.QRhandled = true;
     },
-    OpenSettingsHandler: function(e)
+    NodeInsertionHandler: function(e)
     {
       var settings = e.target;
 
-      if (!$SS.browser.webkit)
-        $("input[type=checkbox]", settings).riceCheck();
+      $("input[type=checkbox]", settings).riceCheck();
     },
     AddMenuHandler: function(e)
     {
