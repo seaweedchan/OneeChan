@@ -101,7 +101,7 @@
     ],
     "Margin Between Replies":
     [
-      -2, "Change the position of 4chan x backlinks",
+      -2, "Change the size of the spacing in between replies",
       [
         { name: "Large",      value: 6 },
         { name: "Normal (4chan default)", value: '' },
