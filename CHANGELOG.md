@@ -1,3 +1,10 @@
+### v5.0.11
+*2013-06-17*
+
+**seaweedchan**:
+- Added `Post Message Margin` option. Setting this to `Small` is the equivalent of `Slim Replies` in old OneeChan
+- Changed some font sizes to be larger when at fonts greater than 13px
+
 ### v5.0.10
 *2013-06-02*
 
