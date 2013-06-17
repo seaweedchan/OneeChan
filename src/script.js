@@ -91,6 +91,15 @@
         { name: "Overlapping Borders", value: -5 }
       ]
     ],
+    "Post Message Margin":
+    [
+      2, "Change the size of the margin around the post message",
+      [
+        { name: "Small", value: 1 },
+        { name: "Normal", value: 2 },
+        { name: "Large", value: 3 }
+      ]
+    ],
     "--Quick Reply--":                  [ "header",  "" ],
     "Autohide Style":
     [
@@ -859,6 +868,7 @@
 
         $SS.conf["Margin Left"]  = $SS.conf["Left Margin"] !== 999 ? $SS.conf["Left Margin"] : $SS.conf["Custom Left Margin"];
         $SS.conf["Margin Right"]  = $SS.conf["Right Margin"] !== 999 ? $SS.conf["Right Margin"] : $SS.conf["Custom Right Margin"];
+        $SS.conf["Margin Post Message"] = $SS.conf["Post Message Margin"] === 1 ? "4px 16px" : ($SS.conf["Post Message Margin"] === 3 ? "20px 40px" : "");
       },
       get: function(name)
       {

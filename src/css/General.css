@@ -49,6 +49,9 @@ body {
 #qp .op>.postInfo {
   min-width: 600px;
 }
+.postMessage {
+  margin: " + $SS.conf["Margin Post Message"] + " !important;
+}
 /* Fit Width option */
 :root.reply-fit-width .reply.post {
   display: block !important;
