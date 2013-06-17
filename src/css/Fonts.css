@@ -11,7 +11,7 @@
 /* Anything we need small */
 .fileInfo,
 .summary {
-  font-size: 11px !important;
+  font-size: " + (($SS.conf["Font Size"] < 13) ? 11 : ($SS.conf["Font Size"] - 2)) + "px !important;
 }
 /* Anything we need !important */
 .qr-link {
@@ -45,8 +45,9 @@
   font-size: 0px !important;
 }
 #full-board-list a,
+body>#header-bar,
 #full-board-list .fourchanx-link {
-  font-size: 12px !important;
+  font-size: " + (($SS.conf["Font Size"] < 13) ? 12 : ($SS.conf["Font Size"] - 1)) + "px !important;
 }
 
 /* Everything else */
