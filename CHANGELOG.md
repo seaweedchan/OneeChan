@@ -1,3 +1,9 @@
+### v5.0.13
+*2013-07-01*
+
+**seaweedchan**:
+- Fix small issue with new mobile post form link showing up.
+
 ### v5.0.12
 *2013-06-30*
 

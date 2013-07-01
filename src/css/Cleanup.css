@@ -1,5 +1,6 @@
 /* Hide things we don't want */
 .mobile,
+#delform .mobile.center,
 .fourchanx-link:not(.hide-board-list-container)::before,
 .fourchanx-link:not(.hide-board-list-container)::after,
 .tab-select:not(:checked) + div,
