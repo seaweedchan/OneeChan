@@ -30,7 +30,8 @@ iframe[src='about:blank'],
 .forwarded,
 body>hr,
 :root.catalog hr,
-.navLinks {
+.navLinks,
+.ad-plea {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */
