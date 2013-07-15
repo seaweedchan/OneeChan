@@ -1,3 +1,11 @@
+### v5.0.14
+*2013-07-15*
+
+**seaweedchan**:
+- Allow ads through `Show 4chan Ads` option. Can control which ads specifically to show, as well as reduce the opacity until hover.
+- Fix bug where some elements under the header can't be clicked
+- Fix bug where links in spoilers still showed
+
 ### v5.0.13
 *2013-07-01*
 
