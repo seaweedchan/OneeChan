@@ -945,7 +945,7 @@
             "<p class='buttons-container'>" +
             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
             "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
-            "<a href='" + ($SS.browser.gecko ? "https://raw.github.com/seaweedchan/OneeChan/stable/OneeChan.user.js" : "https://seaweedchan.github.io/OneeChan/") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
+            "<a href='" + ($SS.browser.gecko ? "https://raw.github.com/seaweedchan/OneeChan/stable/builds/OneeChan.user.js" : "https://seaweedchan.github.io/OneeChan/") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/seaweedchan/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/seaweedchan/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
             key, val, des;
