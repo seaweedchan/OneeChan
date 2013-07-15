@@ -39,7 +39,9 @@ s {
   text-decoration: none !important;
 }
 span.spoiler,
-s {
+s,
+s:not(:hover) > a,
+s:not(:hover) > .linkify {
   color: rgb(0, 0, 0) !important;
   background: none repeat scroll 0% 0% rgb(0, 0, 0) !important;
 }
@@ -70,4 +72,11 @@ table {
   border-spacing: 1px;
   margin-left: auto;
   margin-right: auto;
+}
+.center {
+  text-align: center !important;
+}
+.middlead,
+.topad {
+  margin-bottom: 20px !important;
 }

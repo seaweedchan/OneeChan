@@ -51,6 +51,11 @@
     "Show Shortcut Icons":         [ true, "Shows icons instead of text links for 4chan X shortcuts in the header bar"],
     "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "Show Header Background Gradient": [ true, "Gives the header bar a gradient background to be prettier" ],
+    "Show 4chan Ads":                      [ false, "Opts into 4chan\'s banner ads", null, true ],
+    "Show Top Ad":       [ true, "Show the top 4chan banner ad", "Show 4chan Ads", true, true ],
+    "Show Middle Ad":       [ true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true ],
+    "Show Bottom Ad":       [ true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true ],
+    "Reduce Ad Opacity":       [ false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true ],
     "--Sidebar--":                     [ "header",  "" ],
     "Sidebar Position":
     [
@@ -2540,6 +2545,11 @@
         $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
         $("html").optionClass("Secret Name Field",              true,   "hide-name" );
         $("html").optionClass("Show Header Background Gradient", true, "header-gradient" );
+        $("html").optionClass("Show 4chan Ads", true, "show-ads" );
+        $("html").optionClass("Show Top Ad", false, "hide-top" );
+        $("html").optionClass("Show Middle Ad", false, "hide-middle" );
+        $("html").optionClass("Show Bottom Ad", false, "hide-bottom" );
+        $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity" );
       }
     },
 

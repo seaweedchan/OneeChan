@@ -524,3 +524,18 @@ table.flashListing .highlightPost::after {
   left: 0px;
   right: auto !important;
 }
+
+/* Scroll Marker */
+#scroll-marker {
+  pointer-events: none !important;
+}
+
+/* Ads */
+:root.ad-opacity .center img {
+  opacity: 0.5;
+  transition: opacity .3s ease-out 0s;
+}
+:root.ad-opacity .center img:hover {
+  opacity: 1.0 !important;
+  transition: opacity .3s ease-in 0s;
+}
