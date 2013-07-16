@@ -526,7 +526,7 @@ table.flashListing .highlightPost::after {
 }
 
 /* Scroll Marker */
-#scroll-marker {
+:root:not(.autohide) #scroll-marker {
   pointer-events: none !important;
 }
 

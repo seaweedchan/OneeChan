@@ -1,3 +1,9 @@
+### v5.0.15
+*2013-07-15*
+
+**seaweedchan**:
+- Don't remove scroll-marker pointer events when header is hidden
+
 ### v5.0.14
 *2013-07-15*
 
