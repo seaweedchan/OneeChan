@@ -20,11 +20,13 @@ textarea,
 /* Names */
 .nameBlock>.name,
 .com,
-.post-author {
+.post-author,
+:root.email-color a.useremail .name {
   color: " + $SS.theme.nameColor.hex + " !important;
 }
 /* Tripcodes */
 .nameBlock>.postertrip,
+:root.email-color a.useremail .postertrip,
 .post-tripcode,
 .tag {
   color: " + $SS.theme.tripColor.hex + " !important;

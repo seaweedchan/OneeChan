@@ -71,6 +71,7 @@
     "--Replies--":              [ "header",  "" ],
     "Fit Width":                [ true,  "Makes the replies stretch to the width of the page" ],
     "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
+    "Style Emails as Links": [ true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
     "Allow Wrapping Around OP": [ false, "Allow for replies to wrap around the OP instead of forced onto their own line. "],
     "Rounded Corners":          [ false,  "Styles a few elements to have subtly rounded coreners" ], 
     "Recolor Even Replies":       [ false,  "Makes every other post a darker color. Not compatible with Quote Threading." ],
@@ -2550,6 +2551,7 @@
         $("html").optionClass("Show Middle Ad", false, "hide-middle" );
         $("html").optionClass("Show Bottom Ad", false, "hide-bottom" );
         $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity" );
+        $("html").optionClass("Style Emails as Links", false, "email-color" );
       }
     },
 

@@ -1,3 +1,9 @@
+### v5.0.16
+*2013-07-15*
+
+**seaweedchan**:
+- New option: `Style Emails as Links`. Enabled was the default behavior before.
+
 ### v5.0.15
 *2013-07-15*
 
