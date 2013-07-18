@@ -1,3 +1,10 @@
+### v5.0.17
+*2013-07-17*
+
+**seaweedchan**:
+- New option: `Reduce Mascot Opacity`. Does what it says until hover. 
+  - Do not use with mascots that overlap replies because it needs to override pointer events (making buttons underneath it unclickable).
+
 ### v5.0.16
 *2013-07-15*
 
