@@ -524,6 +524,17 @@ table.flashListing .highlightPost::after {
   left: 0px;
   right: auto !important;
 }
+:root.mascot-opacity #mascot img,
+:root.mascot-opacity #mascotprev img {
+  opacity: 0.5;
+  pointer-events: auto !important;
+  transition: opacity .3s ease-out 0s;
+}
+:root.mascot-opacity #mascot img:hover,
+:root.mascot-opacity #mascotprev img:hover {
+  opacity: 1.0 !important;
+  transition: opacity .3s ease-in 0s;
+}
 
 /* Scroll Marker */
 :root:not(.autohide) #scroll-marker {
@@ -539,3 +550,4 @@ table.flashListing .highlightPost::after {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
+

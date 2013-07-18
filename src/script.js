@@ -68,6 +68,7 @@
     ],
     "SS-like Sidebar":          [ true, "Optionally darkens the sidebar and adds a border like 4chan Style Script" ],
     "Expanded Images Cover QR": [ true, "Lets expanded images overlap the quick reply if the sidebar is enabled." ],
+    "Reduce Mascot Opacity":    [ false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots." ],
     "--Replies--":              [ "header",  "" ],
     "Fit Width":                [ true,  "Makes the replies stretch to the width of the page" ],
     "Style Post Info":          [ true, "Separate the post info by the post info colors defined in themes" ],
@@ -2551,6 +2552,7 @@
         $("html").optionClass("Show Middle Ad", false, "hide-middle" );
         $("html").optionClass("Show Bottom Ad", false, "hide-bottom" );
         $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity" );
+        $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity" );
         $("html").optionClass("Style Emails as Links", false, "email-color" );
       }
     },
