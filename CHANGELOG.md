@@ -1,3 +1,9 @@
+### v5.0.18
+*2013-07-25*
+
+**seaweedchan**:
+- Fix reply hiding with stubs enabled when Fit Width is disabled
+
 ### v5.0.17
 *2013-07-17*
 
