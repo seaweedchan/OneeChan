@@ -15,6 +15,9 @@ div.post {
 :root:not(.reply-fit-width) #delform div.reply:not([hidden]) {
   display: table !important;
 }
+:root:not(.reply-fit-width) #delform .stub ~ div.reply:not([hidden]) {
+  display: none !important;
+}
 div.thread {
   margin: 0px;
   clear: both;

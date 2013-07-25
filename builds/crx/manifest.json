@@ -16,6 +16,7 @@
   }],
   "homepage_url": "http://seaweedchan.github.io/OneeChan/",
   "minimum_chrome_version": "26",
+  "maximum_chrome_version": "29",
   "permissions": [
     "storage"
   ]
