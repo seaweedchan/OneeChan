@@ -1,3 +1,6 @@
+### v5.0.19
+*2013-08-14*
+
 **seaweedchan**:
 - Small update for class change in latest 4chan X
 - Fix for /p/ users
