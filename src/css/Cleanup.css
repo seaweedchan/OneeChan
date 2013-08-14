@@ -1,8 +1,8 @@
 /* Hide things we don't want */
 .mobile,
 #delform .mobile.center,
-.fourchanx-link:not(.hide-board-list-container)::before,
-.fourchanx-link:not(.hide-board-list-container)::after,
+.brackets-wrap:not(.hide-board-list-container)::before,
+.brackets-wrap:not(.hide-board-list-container)::after,
 .tab-select:not(:checked) + div,
 iframe[src='about:blank'],
 #absbot,

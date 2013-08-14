@@ -1,3 +1,19 @@
+**MayhemYDG**:
+- Show dice rolls that were entered into the email field on /tg/.
+- Fix flag filtering on /sp/ and /int/.
+- Minor fixes.
+- Minor optimizations.
+
+**seaweedchan**:
+- Change new error message to link to ban page just in case
+
+**Zixaphir**:
+- Linkifier Rewrite.
+- Added Twitch.tv and Vine embedding (with @ihavenoface)
+- Keybinds to scroll to posts that quote you.
+- Minor optimizations.
+- Minor fixes.
+
 ### v5.0.18
 *2013-07-25*
 
