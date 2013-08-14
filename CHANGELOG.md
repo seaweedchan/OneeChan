@@ -1,31 +1,6 @@
-**MayhemYDG**:
-- Show dice rolls that were entered into the email field on /tg/.
-- Fix flag filtering on /sp/ and /int/.
-- Minor fixes.
-- Minor optimizations.
-
 **seaweedchan**:
-- Change new error message to link to ban page just in case
-
-**Zixaphir**:
-- Linkifier Rewrite.
-- Added Twitch.tv and Vine embedding (with @ihavenoface)
-- Keybinds to scroll to posts that quote you.
-- Minor optimizations.
-- Minor fixes.
-
-### v5.0.18
-*2013-07-25*
-
-**seaweedchan**:
-- Fix reply hiding with stubs enabled when Fit Width is disabled
-
-### v5.0.17
-*2013-07-17*
-
-**seaweedchan**:
-- New option: `Reduce Mascot Opacity`. Does what it says until hover. 
-  - Do not use with mascots that overlap replies because it needs to override pointer events (making buttons underneath it unclickable).
+- Small update for class change in latest 4chan X
+- Fix for /p/ users
 
 ### v5.0.16
 *2013-07-15*
