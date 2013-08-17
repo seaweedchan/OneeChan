@@ -692,6 +692,8 @@
               if (nodes[j].nodeType !== 3)
                 $("input[type=checkbox]", nodes[j]).riceCheck();
 
+          $SS.logoReflect.init();
+
           }
         });
 
@@ -719,7 +721,7 @@
       $SS.insertMascot()
       $SS.pages.init();
       $SS.riceInputs.init();
-      $SS.logoReflect.init();
+      
     },
     init: function(reload)
     {
