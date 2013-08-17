@@ -1,3 +1,9 @@
+### v5.0.20
+*2013-08-16*
+
+**seaweedchan**:
+- Fix ability to change banners in thread opened from index
+
 ### v5.0.19
 *2013-08-14*
 
