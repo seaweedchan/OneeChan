@@ -1,3 +1,9 @@
+### v5.0.21
+*2013-08-19*
+
+**seaweedchan**:
+- Fix issues with logo reflection in threads opened from index
+
 ### v5.0.20
 *2013-08-16*
 

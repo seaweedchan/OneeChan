@@ -25,10 +25,10 @@
 #banner {
   width: 100%;
 }
-#bBanner {
+.bBanner {
   margin-bottom: 40px;
 }
-#bBanner::after {
+.bBanner::after {
   width: 100% !important;
 }
 .qr-link-container {

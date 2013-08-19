@@ -373,10 +373,10 @@ hr {
 .boardBanner>img {
   border: none !important;
 }
-:root.banner-reflect.gecko:not(.hide-banner) #bBanner {
+:root.banner-reflect.gecko:not(.hide-banner) .bBanner {
     position: relative !important;
 }
-:root.banner-reflect.gecko:not(.hide-banner) #bBanner::after
+:root.banner-reflect.gecko:not(.hide-banner) .bBanner::after
 {
   background-image:-moz-element(#banner);
   bottom:-93%;

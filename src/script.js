@@ -2601,7 +2601,7 @@
       {
         if (this.hasInit) return;
 
-        var div = $("<div id=bBanner>").append($(".boardBanner>img").attr("id", "banner"));
+        var div = $("<div class=bBanner>").append($(".boardBanner>img").attr("id", "banner"));
         $(".boardBanner").prepend(div);
 
         return this.hasInit = true;
