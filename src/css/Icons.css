@@ -27,7 +27,7 @@
 #header-bar #thread-stats {
   margin-right: 6px !important;
 }
-.expand-all-shortcut, .contract-all-shortcut, .settings-link, .qr-shortcut, #watcher-link {
+.expand-all-shortcut, .contract-all-shortcut, .settings-link, .qr-shortcut, #watcher-link, #appchan-gal {
   z-index: 10 !important;
   font-size: 0px !important;
   padding: 8px !important;
@@ -36,14 +36,15 @@
   position: relative;
   bottom: 4px;
 }
-:root.bottom .expand-all-shortcut, :root.bottom .contract-all-shortcut, :root.bottom .settings-link, :root.bottom .qr-shortcut, :root.bottom #watcher-link {
+:root.bottom .expand-all-shortcut, :root.bottom .contract-all-shortcut, :root.bottom .settings-link, :root.bottom .qr-shortcut, :root.bottom #watcher-link, :root.bottom #appchan-gal {
   bottom: 4px !important;
 }
-#watcher-link {
+#watcher-link, #appchan-gal {
   padding: 10px !important;
 }
 .expand-all-shortcut:hover, 
-.contract-all-shortcut, 
+.contract-all-shortcut,
+#appchan-gal:hover, 
 .qr-shortcut:not(.disabled), 
 .qr-shortcut.disabled:hover, 
 #watcher-link:not(.disabled), 
@@ -65,5 +66,8 @@
 }
 #watcher-link {
   background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.threadWatcher+"\")!important;
+}
+#appchan-gal {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.gallery+"\")!important;
 }
 " : "") + ";

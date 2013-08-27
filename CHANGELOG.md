@@ -1,3 +1,9 @@
+### v5.0.23
+*2013-08-26*
+
+**seaweedchan**:
+- Add support for new gallery icon
+
 ### v5.0.22
 *2013-08-19*
 
