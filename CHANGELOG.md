@@ -1,3 +1,9 @@
+### v5.0.24
+*2013-09-21*
+
+**seaweedchan**:
+- Use button for OneeChan settings instead of menu link, due to Chrome 30 breaking menu API in 4chan X.
+
 ### v5.0.23
 *2013-08-26*
 
