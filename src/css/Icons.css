@@ -27,7 +27,7 @@
 #header-bar #thread-stats {
   margin-right: 6px !important;
 }
-.expand-all-shortcut, .contract-all-shortcut, .settings-link, .qr-shortcut, #watcher-link, #appchan-gal {
+.expand-all-shortcut, .contract-all-shortcut, .settings-link, .qr-shortcut, #watcher-link, #appchan-gal, #OneeChanLink {
   z-index: 10 !important;
   font-size: 0px !important;
   padding: 8px !important;
@@ -36,7 +36,7 @@
   position: relative;
   bottom: 4px;
 }
-:root.bottom .expand-all-shortcut, :root.bottom .contract-all-shortcut, :root.bottom .settings-link, :root.bottom .qr-shortcut, :root.bottom #watcher-link, :root.bottom #appchan-gal {
+:root.bottom .expand-all-shortcut, :root.bottom .contract-all-shortcut, :root.bottom .settings-link, :root.bottom .qr-shortcut, :root.bottom #watcher-link, :root.bottom #appchan-gal, #OneeChanLink {
   bottom: 4px !important;
 }
 #watcher-link, #appchan-gal {
@@ -49,6 +49,7 @@
 .qr-shortcut.disabled:hover, 
 #watcher-link:not(.disabled), 
 #watcher-link.disabled:hover, 
+#OneeChanLink:hover,
 .settings-link:hover {
   opacity: 1 !important;
 }
@@ -60,6 +61,9 @@
 }
 .settings-link {
   background-image: url(\"data:image/svg+xml,"+$SS.theme.icons._4chanX+"\")!important;
+}
+#OneeChanLink {
+  background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.OneeChan+"\")!important;
 }
 .qr-shortcut {
   background-image: url(\"data:image/svg+xml,"+$SS.theme.icons.quickReply+"\")!important;
