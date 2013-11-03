@@ -910,7 +910,7 @@
       saveAndClose  : false,
       init: function()
       {
-        var a = $("<a id='OneeChanLink' title='OneeChan Settings' href='javascript:;'>").bind("click", $SS.options.show);
+        var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' href='javascript:;'>OneeChan").bind("click", $SS.options.show);
         return $("#shortcuts>.shortcut:last-of-type").before(a);
       },
       show: function()

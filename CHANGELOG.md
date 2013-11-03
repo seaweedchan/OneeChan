@@ -1,3 +1,9 @@
+### v5.0.25
+*2013-11-02*
+
+**seaweedchan**:
+- Fix missing text option for settings menu
+
 ### v5.0.24
 *2013-09-21*
 
