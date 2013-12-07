@@ -1,3 +1,9 @@
+### v5.0.26
+*2013-12-06*
+
+**seaweedchan**:
+- Fix fileText markup change that increased its font size
+
 ### v5.0.25
 *2013-11-02*
 

@@ -9,7 +9,7 @@
 }
 
 /* Anything we need small */
-.fileInfo,
+.fileText,
 .summary {
   font-size: " + (($SS.conf["Font Size"] < 13) ? 11 : ($SS.conf["Font Size"] - 2)) + "px !important;
 }
