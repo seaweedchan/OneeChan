@@ -1,3 +1,6 @@
+**seaweedchan**:
+- Update for 4chan X v1.3.0
+
 ### v5.0.26
 *2013-12-06*
 
