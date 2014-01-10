@@ -131,7 +131,7 @@ body {
 .options-button,
 .qr-link,
 .pages strong>a {
-  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + "));
+  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
 .options-button:hover,
 .import-input:hover + .options-button,

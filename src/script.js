@@ -48,7 +48,6 @@
     "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
     "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
     "Show Reply to Thread Button": [ false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
-    "Show Shortcut Icons":         [ true, "Shows icons instead of text links for 4chan X shortcuts in the header bar"],
     "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "Show Header Background Gradient": [ true, "Gives the header bar a gradient background to be prettier" ],
     "Show 4chan Ads":                      [ false, "Opts into 4chan\'s banner ads", null, true ],
@@ -142,7 +141,7 @@
     "Hidden Themes"   : [],
     "Selected Theme"  : 5,
     "NSFW Theme"      : 5,
-    "Selected Mascots": 0,
+    "Selected Mascots": 1,
     "Mascots"         : [],
     "Hidden Mascots"  : []
   },
@@ -910,7 +909,7 @@
       saveAndClose  : false,
       init: function()
       {
-        var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' href='javascript:;'>OneeChan").bind("click", $SS.options.show);
+        var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan").bind("click", $SS.options.show);
         return $("#shortcuts>.shortcut:last-of-type").before(a);
       },
       show: function()

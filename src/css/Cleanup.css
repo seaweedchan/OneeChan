@@ -32,8 +32,9 @@ iframe[src='about:blank'],
 .forwarded,
 body>hr,
 :root.catalog hr,
-.navLinks,
+:root.thread .navLinks,
 .ad-plea,
+#mascot img[src=''],
 .exif:not([style]) {
   display: none;
 }

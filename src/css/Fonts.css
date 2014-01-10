@@ -2,8 +2,8 @@
 
 /* Anything we need 0px */
 .deleteform,
-.pagelist, 
-.pagelist input,
+.pages, 
+.pagelist button,
 #full-board-list {
   font-size: 0px !important;
 }

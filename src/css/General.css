@@ -119,6 +119,9 @@ body {
 .container {
   margin-left: -2px !important;
 }
+.reply>.postInfo>.menu-button + .container:not(:empty) {
+  margin-left: 2px !important;
+}
 :root:not(.reply-fit-width) .container {
   margin-left: 0px !important;
 }
@@ -424,28 +427,29 @@ hr {
   position: relative;
   width: 10px;
 }
-.prev span {
+.prev a {
   position: relative;
   right: 5px;
 }
-.prev span::after, .prev form::after {
+.prev a::after, .prev a::after {
   content: '<';
   position: absolute;
   top: 4px;
   left: 1px;
   pointer-events: none;
 }
-.next span::after, .next form::after {
+.next a::after, .next a::after {
   content: '>';
   position: absolute;
   top: 4px;
   right: 2px;
   pointer-events: none;
 }
-.pagelist input,
-.pagelist input:hover {
+.pagelist button,
+.pagelist button:hover {
   background: none !important;
   border: none !important;
+  pointer-events: none;
   box-shadow: none !important;
   -moz-appearance: none !important;
   -webkit-appearance: none !important;
@@ -551,3 +555,10 @@ table.flashListing .highlightPost::after {
   transition: opacity .3s ease-in 0s;
 }
 
+/* Navlinks */
+:root.index div.navLinks {
+  position: relative;
+  bottom: 12px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
